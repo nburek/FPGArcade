@@ -1,0 +1,22 @@
+//! **************************************************************************
+// Written by: Map M.81d on Thu Feb 17 18:43:20 2011
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "switches<0>" LOCATE = SITE "G18" LEVEL 1;
+COMP "switches<1>" LOCATE = SITE "H18" LEVEL 1;
+COMP "switches<2>" LOCATE = SITE "K18" LEVEL 1;
+COMP "switches<3>" LOCATE = SITE "K17" LEVEL 1;
+COMP "sevenseg<0>" LOCATE = SITE "L18" LEVEL 1;
+COMP "sevenseg<1>" LOCATE = SITE "F18" LEVEL 1;
+COMP "sevenseg<2>" LOCATE = SITE "D17" LEVEL 1;
+COMP "sevenseg<3>" LOCATE = SITE "D16" LEVEL 1;
+COMP "anodes<0>" LOCATE = SITE "F17" LEVEL 1;
+COMP "sevenseg<4>" LOCATE = SITE "G14" LEVEL 1;
+COMP "anodes<1>" LOCATE = SITE "H17" LEVEL 1;
+COMP "sevenseg<5>" LOCATE = SITE "J17" LEVEL 1;
+COMP "anodes<2>" LOCATE = SITE "C18" LEVEL 1;
+COMP "sevenseg<6>" LOCATE = SITE "H14" LEVEL 1;
+COMP "anodes<3>" LOCATE = SITE "F15" LEVEL 1;
+SCHEMATIC END;
+
