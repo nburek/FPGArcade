@@ -1,2 +1,4 @@
-EN top NULL "C:/Documents and Settings/nb418308/Desktop/FPGArcade/VGA_Driver/top.vhdl" sub00/vhpl00 1297989780
-AR top behavioral "C:/Documents and Settings/nb418308/Desktop/FPGArcade/VGA_Driver/top.vhdl" sub00/vhpl01 1297989781
+EN clk25mhz NULL "C:/Documents and Settings/nb418308/Desktop/FPGArcade/VGA_Driver/clk25MHz.vhd" sub00/vhpl02 1298154077
+AR clk25mhz behavioral "C:/Documents and Settings/nb418308/Desktop/FPGArcade/VGA_Driver/clk25MHz.vhd" sub00/vhpl03 1298154078
+EN top NULL "C:/Documents and Settings/nb418308/Desktop/FPGArcade/VGA_Driver/top.vhdl" sub00/vhpl00 1298154079
+AR top behavioral "C:/Documents and Settings/nb418308/Desktop/FPGArcade/VGA_Driver/top.vhdl" sub00/vhpl01 1298154080

@@ -19,6 +19,8 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -30,34 +32,92 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity top is
-    Port(switches : in STD_LOGIC_VECTOR (3 downto 0);
-			sevenseg : out STD_LOGIC_VECTOR (6 downto 0);
-			anodes : out STD_LOGIC_VECTOR (3 downto 0));
+    Port(
+			red : out STD_LOGIC_VECTOR (2 downto 0);
+			grn : out STD_LOGIC_VECTOR (2 downto 0);
+			blue : out STD_LOGIC_VECTOR (1 downto 0);
+			HS : out STD_LOGIC;
+			VS : out STD_LOGIC;
+			clk : in STD_LOGIC;
+			Led : out STD_LOGIC_VECTOR (7 downto 0);
+			sw : in STD_LOGIC_VECTOR (7 downto 0));
 end top;
 
 architecture Behavioral of top is
 
-begin 
+component clk25MHz
+	Port (clk : in STD_LOGIC;
+			sclk: out STD_LOGIC);
+end component;
 
-with switches select
-sevenseg <=
-"1000000" when x"0" ,
-"1111001" when x"1" ,
-"0100100" when x"2" ,
-"0110000" when x"3" ,
-"0011001" when x"4" ,
-"0010010" when x"5" ,
-"0000010" when x"6" ,
-"1111000" when x"7" ,
-"0000000" when x"8" ,
-"0010000" when x"9" ,
-"0001000" when x"A" ,
-"0000011" when x"B" ,
-"1000110" when x"C" ,
-"0100001" when x"D" ,
-"0000110" when x"E" ,
-"0001110" when others;
-anodes <= "1110";
+signal vCount : STD_LOGIC_VECTOR (9 downto 0);
+signal hCount : STD_LOGIC_VECTOR (9 downto 0);
+signal video_on_h, video_on_v : STD_LOGIC;
+signal clk25 : STD_LOGIC;
+
+begin 
+	clock25MHz: clk25MHz port map (clk,clk25);
+	
+	process
+	
+	begin
+	
+	wait until (clk25'EVENT) AND (clk25='1');
+	
+	IF (hCount = 799) THEN
+		hCount <= "0000000000";
+	ELSE
+		hCount <= hCount + 1;
+	END IF;
+	
+	IF (hCount <= 755) AND (hCount >= 659) THEN
+		HS <= '0';
+	ELSE
+		HS <= '1';
+	END IF;
+	
+	IF (vCount >=524) AND (hCount >= 699) THEN
+		vCount <= "0000000000";
+	ELSIF (hCount=699) THEN
+		vCount <= vCount+1;
+	END IF;
+	
+	IF (vCount<=494) AND (vCount>=493) THEN
+		VS <= '0';
+	ELSE
+		VS <= '1';
+	END IF;
+	
+	IF (hCount <= 639) THEN
+		video_on_h <= '1';
+	ELSE
+		video_on_h <= '0';
+	END IF;
+	
+	IF (vCount <= 479) THEN
+		video_on_v <= '1';
+	ELSE
+		video_on_v <= '0';
+	END IF;
+	
+	
+	IF (video_on_v = '1' AND video_on_h = '1') THEN
+		red <= "111";
+	Led(2 downto 0) <= "111";
+		grn <= "000";
+		blue <= "00";
+	ELSE
+		red <= "000";
+	Led(2 downto 0) <= "000";
+		grn <= "000";
+		blue <= "00";
+	END IF;
+	
+	Led(5 downto 3) <= "000";
+	Led(7 downto 6) <= "00";
+	
+	end process;
+	
 
 
 end Behavioral;

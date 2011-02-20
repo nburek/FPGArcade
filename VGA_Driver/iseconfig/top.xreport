@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2011-02-17T18:38:22</DateModified>
+  <DateModified>2011-02-19T12:25:25</DateModified>
   <ModuleName>top</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>C:/Documents and Settings/nb418308/Desktop/FPGArcade/VGA_Driver/iseconfig/top.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Documents and Settings/nb418308/Desktop/FPGArcade/VGA_Driver</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>C:/Documents and Settings/nb418308/Desktop/FPGArcade/VGA_Driver\</ImplementationReportsDirectory>
   <DateInitialized>2011-02-17T18:38:21</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

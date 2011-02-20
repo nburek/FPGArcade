@@ -5,14 +5,14 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Xst" timeStamp="Thu Feb 17 18:43:00 2011">
+  <application stringID="Xst" timeStamp="Sat Feb 19 16:21:17 2011">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
         <column stringID="value"/>
         <row stringID="row" value="0">
           <item stringID="variable" value="Path"/>
-          <item stringID="value" value="C:\Xilinx\12.4\ISE_DS\ISE\\lib\nt;C:\Xilinx\12.4\ISE_DS\ISE\\bin\nt;C:\Xilinx\12.4\ISE_DS\PlanAhead\bin;C:\Xilinx\12.4\ISE_DS\ISE\bin\nt;C:\Xilinx\12.4\ISE_DS\ISE\lib\nt;C:\Xilinx\12.4\ISE_DS\EDK\bin\nt;C:\Xilinx\12.4\ISE_DS\EDK\lib\nt;C:\Xilinx\12.4\ISE_DS\common\bin\nt;C:\Xilinx\12.4\ISE_DS\common\lib\nt;%CommonProgramFiles%\Microsoft Shared\Windows Live;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files\Common Files\Lenovo;C:\Program Files\Lenovo\Client Security Solution;C:\Program Files\Common Files\Roxio Shared\10.0\DLLShared\;C:\Program Files\Common Files\Roxio Shared\DLLShared\;C:\WINDOWS\system32\WindowsPowerShell\v1.0;C:\Program Files\ThinkPad\ConnectUtilities;C:\Program Files\ThinkPad Wireless LAN Adapter Software;C:\Program Files\QuickTime\QTSystem\;C:\Program Files\OpenSSH\bin;C:\Program Files\SlikSvn\bin\;C:\Program Files\Java\jdk1.6.0_23\bin;C:\Program Files\Git\cmd;C:\Program Files\Common Files\Microsoft Shared\Windows Live"/>
+          <item stringID="value" value="C:\Xilinx\12.4\ISE_DS\ISE\\lib\nt;C:\Xilinx\12.4\ISE_DS\ISE\\bin\nt;C:\Xilinx\12.4\ISE_DS\PlanAhead\bin;C:\Xilinx\12.4\ISE_DS\ISE\bin\nt;C:\Xilinx\12.4\ISE_DS\ISE\lib\nt;C:\Xilinx\12.4\ISE_DS\EDK\bin\nt;C:\Xilinx\12.4\ISE_DS\EDK\lib\nt;C:\Xilinx\12.4\ISE_DS\common\bin\nt;C:\Xilinx\12.4\ISE_DS\common\lib\nt;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files\Common Files\Lenovo;C:\Program Files\Lenovo\Client Security Solution;C:\Program Files\Common Files\Roxio Shared\10.0\DLLShared\;C:\Program Files\Common Files\Roxio Shared\DLLShared\;C:\WINDOWS\system32\WindowsPowerShell\v1.0;C:\Program Files\ThinkPad\ConnectUtilities;C:\Program Files\ThinkPad Wireless LAN Adapter Software;C:\Program Files\QuickTime\QTSystem\;C:\Program Files\OpenSSH\bin;C:\Program Files\SlikSvn\bin\;C:\Program Files\Java\jdk1.6.0_23\bin;C:\Program Files\Git\cmd"/>
         </row>
         <row stringID="row" value="1">
           <item stringID="variable" value="PATHEXT"/>
@@ -45,7 +45,7 @@
         <column stringID="speed"/>
         <row stringID="row" value="0">
           <item stringID="arch" value="Intel(R) Core(TM)2 Duo CPU     P8600  @ 2.40GHz"/>
-          <item stringID="speed" value="2394 MHz"/>
+          <item stringID="speed" value="2393 MHz"/>
         </row>
       </table>
     </section>
@@ -106,16 +106,29 @@
       <item DEFAULT="0%" label="-slice_utilization_ratio_maxmargin" stringID="XST_SLICEUTILIZATIONRATIOMAXMARGIN" value="5"/>
     </section>
     <section stringID="XST_HDL_SYNTHESIS_REPORT">
-      <item dataType="int" stringID="XST_ROMS" value="1">
-        <item dataType="int" stringID="XST_16X7BIT_ROM" value="1"/>
+      <item dataType="int" stringID="XST_COUNTERS" value="3">
+        <item dataType="int" stringID="XST_10BIT_UP_COUNTER" value="2"/>
       </item>
+      <item dataType="int" stringID="XST_REGISTERS" value="7">
+        <item dataType="int" stringID="XST_1BIT_REGISTER" value="6"/>
+        <item dataType="int" stringID="XST_3BIT_REGISTER" value="1"/>
+      </item>
+      <item dataType="int" stringID="XST_COMPARATORS" value="8"></item>
     </section>
     <section stringID="XST_ADVANCED_HDL_SYNTHESIS_REPORT">
-      <item dataType="int" stringID="XST_ROMS" value="1">
-        <item dataType="int" stringID="XST_16X7BIT_ROM" value="1"/>
+      <item dataType="int" stringID="XST_COUNTERS" value="3">
+        <item dataType="int" stringID="XST_10BIT_UP_COUNTER" value="2"/>
+      </item>
+      <item dataType="int" stringID="XST_REGISTERS" value="9">
+        <item dataType="int" stringID="XST_FLIPFLOPS" value="9"/>
+      </item>
+      <item dataType="int" stringID="XST_COMPARATORS" value="8"></item>
+    </section>
+    <section stringID="XST_FINAL_REGISTER_REPORT">
+      <item dataType="int" stringID="XST_REGISTERS" value="59">
+        <item dataType="int" stringID="XST_FLIPFLOPS" value="59"/>
       </item>
     </section>
-    <section stringID="XST_FINAL_REGISTER_REPORTFOUND_NO_MACRO"/>
     <section stringID="XST_PARTITION_REPORT">
       <section stringID="XST_PARTITION_IMPLEMENTATION_STATUS">
         <section stringID="XST_NO_PARTITIONS_WERE_FOUND_IN_THIS_DESIGN"/>
@@ -130,34 +143,53 @@
         <item stringID="XST_KEEP_HIERARCHY" value="No"/>
       </section>
       <section stringID="XST_DESIGN_STATISTICS">
-        <item stringID="XST_IOS" value="15"/>
+        <item stringID="XST_IOS" value="27"/>
       </section>
       <section stringID="XST_CELL_USAGE">
-        <item dataType="int" stringID="XST_BELS" value="9">
+        <item dataType="int" stringID="XST_BELS" value="196">
           <item dataType="int" stringID="XST_GND" value="1"/>
-          <item dataType="int" stringID="XST_LUT4" value="7"/>
+          <item dataType="int" stringID="XST_INV" value="5"/>
+          <item dataType="int" stringID="XST_LUT1" value="49"/>
+          <item dataType="int" stringID="XST_LUT2" value="3"/>
+          <item dataType="int" stringID="XST_LUT3" value="3"/>
+          <item dataType="int" stringID="XST_LUT3L" value="1"/>
+          <item dataType="int" stringID="XST_LUT4" value="19"/>
+          <item dataType="int" stringID="XST_LUT4D" value="2"/>
+          <item dataType="int" stringID="XST_LUT4L" value="3"/>
+          <item dataType="int" stringID="XST_MUXCY" value="57"/>
           <item dataType="int" stringID="XST_VCC" value="1"/>
+          <item dataType="int" stringID="XST_XORCY" value="52"/>
         </item>
-        <item dataType="int" stringID="XST_IO_BUFFERS" value="15">
-          <item dataType="int" stringID="XST_IBUF" value="4"/>
-          <item dataType="int" stringID="XST_OBUF" value="11"/>
+        <item dataType="int" stringID="XST_FLIPFLOPSLATCHES" value="59">
+          <item dataType="int" stringID="XST_FDE" value="1"/>
+          <item dataType="int" stringID="XST_FDR" value="48"/>
+          <item dataType="int" stringID="XST_FDRE" value="10"/>
+        </item>
+        <item dataType="int" stringID="XST_CLOCK_BUFFERS" value="2">
+          <item dataType="int" label="-bufg" stringID="XST_BUFG" value="1"/>
+          <item dataType="int" stringID="XST_BUFGP" value="1"/>
+        </item>
+        <item dataType="int" stringID="XST_IO_BUFFERS" value="18">
+          <item dataType="int" stringID="XST_OBUF" value="18"/>
         </item>
       </section>
     </section>
     <section stringID="XST_DEVICE_UTILIZATION_SUMMARY">
       <item stringID="XST_SELECTED_DEVICE" value="3s500efg320-4"/>
-      <item AVAILABLE="4656" dataType="int" label="Number of Slices" stringID="XST_NUMBER_OF_SLICES" value="4"/>
-      <item AVAILABLE="9312" dataType="int" label="Number of 4 input LUTs" stringID="XST_NUMBER_OF_4_INPUT_LUTS" value="7"/>
-      <item dataType="int" label="Number of IOs" stringID="XST_NUMBER_OF_IOS" value="15"/>
-      <item AVAILABLE="232" dataType="int" label="Number of bonded IOBs" stringID="XST_NUMBER_OF_BONDED_IOBS" value="15"/>
+      <item AVAILABLE="4656" dataType="int" label="Number of Slices" stringID="XST_NUMBER_OF_SLICES" value="45"/>
+      <item AVAILABLE="9312" dataType="int" label="Number of Slice Flip Flops" stringID="XST_NUMBER_OF_SLICE_FLIP_FLOPS" value="59"/>
+      <item AVAILABLE="9312" dataType="int" label="Number of 4 input LUTs" stringID="XST_NUMBER_OF_4_INPUT_LUTS" value="85"/>
+      <item dataType="int" label="Number of IOs" stringID="XST_NUMBER_OF_IOS" value="27"/>
+      <item AVAILABLE="232" dataType="int" label="Number of bonded IOBs" stringID="XST_NUMBER_OF_BONDED_IOBS" value="19"/>
+      <item AVAILABLE="24" dataType="int" label="Number of GCLKs" stringID="XST_NUMBER_OF_GCLKS" value="2"/>
     </section>
     <section stringID="XST_PARTITION_RESOURCE_SUMMARY">
       <section stringID="XST_NO_PARTITIONS_WERE_FOUND_IN_THIS_DESIGN"/>
     </section>
     <section stringID="XST_ERRORS_STATISTICS">
       <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_ERRORS" value="0"/>
-      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_WARNINGS" value="0"/>
-      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_INFOS" value="0"/>
+      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_WARNINGS" value="1"/>
+      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_INFOS" value="8"/>
     </section>
   </application>
 

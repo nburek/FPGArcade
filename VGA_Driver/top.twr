@@ -38,49 +38,23 @@ Data Sheet report:
 -----------------
 All values displayed in nanoseconds (ns)
 
-Pad to Pad
----------------+---------------+---------+
-Source Pad     |Destination Pad|  Delay  |
----------------+---------------+---------+
-switches<0>    |sevenseg<0>    |    7.421|
-switches<0>    |sevenseg<1>    |    6.828|
-switches<0>    |sevenseg<2>    |    7.296|
-switches<0>    |sevenseg<3>    |    7.545|
-switches<0>    |sevenseg<4>    |    7.661|
-switches<0>    |sevenseg<5>    |    7.214|
-switches<0>    |sevenseg<6>    |    6.308|
-switches<1>    |sevenseg<0>    |    7.016|
-switches<1>    |sevenseg<1>    |    7.145|
-switches<1>    |sevenseg<2>    |    7.640|
-switches<1>    |sevenseg<3>    |    7.115|
-switches<1>    |sevenseg<4>    |    7.420|
-switches<1>    |sevenseg<5>    |    6.966|
-switches<1>    |sevenseg<6>    |    6.804|
-switches<2>    |sevenseg<0>    |    7.412|
-switches<2>    |sevenseg<1>    |    7.667|
-switches<2>    |sevenseg<2>    |    8.193|
-switches<2>    |sevenseg<3>    |    7.571|
-switches<2>    |sevenseg<4>    |    7.609|
-switches<2>    |sevenseg<5>    |    7.193|
-switches<2>    |sevenseg<6>    |    7.314|
-switches<3>    |sevenseg<0>    |    8.262|
-switches<3>    |sevenseg<1>    |    7.891|
-switches<3>    |sevenseg<2>    |    8.424|
-switches<3>    |sevenseg<3>    |    8.426|
-switches<3>    |sevenseg<4>    |    8.611|
-switches<3>    |sevenseg<5>    |    8.222|
-switches<3>    |sevenseg<6>    |    7.381|
----------------+---------------+---------+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    5.493|         |         |         |
+---------------+---------+---------+---------+---------+
 
 
-Analysis completed Thu Feb 17 18:43:38 2011 
+Analysis completed Sat Feb 19 16:21:52 2011 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 94 MB
+Peak Memory Usage: 95 MB
 
 
 
