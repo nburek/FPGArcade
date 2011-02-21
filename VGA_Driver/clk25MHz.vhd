@@ -1,14 +1,14 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
+-- Company: Loras College
+-- Engineer: Nick Burek
 -- 
 -- Create Date:    12:25:23 02/19/2011 
 -- Design Name: 
 -- Module Name:    clk25MHz - Behavioral 
--- Project Name: 
--- Target Devices: 
+-- Project Name: VGA_Driver
+-- Target Devices: Nexys2
 -- Tool versions: 
--- Description: 
+-- Description: This module reduces a 50Mhz clock signal to a 25Mhz clock signal.
 --
 -- Dependencies: 
 --

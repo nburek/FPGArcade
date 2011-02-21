@@ -4,7 +4,7 @@ Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 Project Information
 --------------------
 ProjectID=1E0FBDFE269D49B981E027C11AC8DE41
-ProjectIteration=22
+ProjectIteration=24
 
 WebTalk Summary
 ----------------
@@ -13,4 +13,4 @@ INFO:WebTalk:2 - WebTalk is enabled.
 INFO:WebTalk:8 - WebTalk Install setting is ON.
 INFO:WebTalk:6 - WebTalk User setting is ON.
 
-INFO:WebTalk:4 - C:/Documents and Settings/nb418308/Desktop/FPGArcade/VGA_Driver/usage_statistics_webtalk.html WebTalk report has been successfully sent to Xilinx on 2011-02-21T09:06:50.  For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/12.4/ISE_DS/ISE/data/reports/webtalk_introduction.html
+INFO:WebTalk:4 - C:/Documents and Settings/nb418308/Desktop/FPGArcade/VGA_Driver/usage_statistics_webtalk.html WebTalk report has been successfully sent to Xilinx on 2011-02-21T11:15:56.  For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/12.4/ISE_DS/ISE/data/reports/webtalk_introduction.html

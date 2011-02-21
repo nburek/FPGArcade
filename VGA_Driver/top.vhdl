@@ -1,14 +1,15 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
+-- Company: Loras College
+-- Engineer: Nick Burek
 -- 
 -- Create Date:    18:38:20 02/17/2011 
 -- Design Name: 
 -- Module Name:    top - Behavioral 
--- Project Name: 
--- Target Devices: 
+-- Project Name: VGA_Driver
+-- Target Devices: nexys2
 -- Tool versions: 
--- Description: 
+-- Description: This module is meant to be a simple VGA driver example. It will 
+-- 		
 --
 -- Dependencies: 
 --
@@ -22,22 +23,13 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_ARITH.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx primitives in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
-
 entity top is
     Port(
-			red : out STD_LOGIC_VECTOR (2 downto 0);
-			grn : out STD_LOGIC_VECTOR (2 downto 0);
-			blue : out STD_LOGIC_VECTOR (1 downto 0);
-			HS : out STD_LOGIC;
-			VS : out STD_LOGIC;
+			VGA_Red : out STD_LOGIC_VECTOR (2 downto 0);
+			VGA_Green : out STD_LOGIC_VECTOR (2 downto 0);
+			VGA_Blue : out STD_LOGIC_VECTOR (1 downto 0);
+			HSync : out STD_LOGIC;
+			VSync : out STD_LOGIC;
 			clk : in STD_LOGIC;
 			Led : out STD_LOGIC_VECTOR (7 downto 0);
 			sw : in STD_LOGIC_VECTOR (7 downto 0));
@@ -52,7 +44,6 @@ end component;
 
 signal vCount : STD_LOGIC_VECTOR (9 downto 0);
 signal hCount : STD_LOGIC_VECTOR (9 downto 0);
-signal video_on_h, video_on_v : STD_LOGIC;
 signal clk25 : STD_LOGIC;
 
 begin 
@@ -64,58 +55,56 @@ begin
 	
 	begin
 	
-	--wait until (clk25'EVENT) AND (clk25='1');
+	-- timing diagram for the horizontal synch signal (HS)
+	-- 0                        656    752           799 (pixels)
+	-- -------------------------|______|-----------------
+	-- timing diagram for the vertical synch signal (VS)
+	-- 0                                  490    492  521 (lines)
+	-- -----------------------------------|______|-------
+
 	IF clk25'EVENT AND clk25='1' THEN
 	
 		IF (hCount = 799) THEN
-			hCount <= "0000000000";
+			-- done with this row, move down to the next one
+			hCount <= "0000000000"; 
+			
+			IF (vCount = 521) THEN
+				vCount <= "0000000000"; -- done outputing the screen, start over
+			ELSE
+				vCount <= vCount + 1; -- increment the row count to track which row you're on
+			END IF;
+			
 		ELSE
 			hCount <= hCount + 1;
 		END IF;
 		
-		IF (hCount <= 751) AND (hCount >= 656) THEN 
-			HS <= '0';
+		IF (hCount <= 751) AND (hCount >= 656) THEN -- is it time to pulse the horizontal sync signal low
+			HSync <= '0';
 		ELSE
-			HS <= '1';
+			HSync <= '1';
 		END IF;
 		
-		IF (vCount >=521) AND (hCount >= 799) THEN
-			vCount <= "0000000000";
-		ELSIF (hCount=799) THEN
-			vCount <= vCount+1;
-		END IF;
 		
-		IF (vCount<=491) AND (vCount>=490) THEN 
-			VS <= '0';
+		IF (vCount<=491) AND (vCount>=490) THEN -- is it time to pulse the vertical sync signal low
+			VSync <= '0';
 		ELSE
-			VS <= '1';
-		END IF;
-		
-		IF (hCount <= 639) THEN
-			video_on_h <= '1';
-		ELSE
-			video_on_h <= '0';
-		END IF;
-		
-		IF (vCount <= 479) THEN
-			video_on_v <= '1';
-		ELSE
-			video_on_v <= '0';
+			VSync <= '1';
 		END IF;
 		
 		
-		IF (video_on_v = '1' AND video_on_h = '1') THEN
-			red <= "111";
-			grn <= "000";
-			blue <= "00";
+		IF (hCount <= 639 AND vCount <= 479) THEN -- are we within the valid pixel range
+			VGA_Red <= "111";
+			VGA_Green <= "000";
+			VGA_Blue <= "00";
 			--red <= sw(2 downto 0);
 			--grn <= sw(5 downto 3);
 			--blue <= sw(7 downto 6);
 			--Led (7 downto 0) <= sw(7 downto 0);
 		ELSE
-			red <= "000";
-			grn <= "000";
-			blue <= "00";
+			-- turn off the pixel out data because it is either on the front/back porch or the pulse signal
+			VGA_Red <= "000";
+			VGA_Green <= "000";
+			VGA_Blue <= "00";
 			--Led(2 downto 0) <= "000";
 			--Led(5 downto 3) <= "000";
 			--Led(7 downto 6) <= "00";

@@ -1,7 +1,7 @@
 Release 12.4 Drc M.81d (nt)
 Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 
-Mon Feb 21 09:06:43 2011
+Mon Feb 21 11:15:49 2011
 
 drc -z top.ncd top.pcf
 
