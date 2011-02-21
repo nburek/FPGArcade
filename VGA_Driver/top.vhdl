@@ -57,7 +57,7 @@ signal clk25 : STD_LOGIC;
 
 begin 
 	clock25MHz: clk25MHz port map (clk,clk25);
-	
+	Led <= "00000000";
 	process
 	
 	begin
@@ -70,19 +70,19 @@ begin
 		hCount <= hCount + 1;
 	END IF;
 	
-	IF (hCount <= 755) AND (hCount >= 659) THEN
+	IF (hCount <= 751) AND (hCount >= 656) THEN 
 		HS <= '0';
 	ELSE
 		HS <= '1';
 	END IF;
 	
-	IF (vCount >=524) AND (hCount >= 699) THEN
+	IF (vCount >=521) AND (hCount >= 799) THEN
 		vCount <= "0000000000";
-	ELSIF (hCount=699) THEN
+	ELSIF (hCount=799) THEN
 		vCount <= vCount+1;
 	END IF;
 	
-	IF (vCount<=494) AND (vCount>=493) THEN
+	IF (vCount<=491) AND (vCount>=490) THEN -- 490 and 489
 		VS <= '0';
 	ELSE
 		VS <= '1';
@@ -103,18 +103,23 @@ begin
 	
 	IF (video_on_v = '1' AND video_on_h = '1') THEN
 		red <= "111";
-	Led(2 downto 0) <= "111";
 		grn <= "000";
 		blue <= "00";
+		--red <= sw(2 downto 0);
+		--grn <= sw(5 downto 3);
+		--blue <= sw(7 downto 6);
+		--Led (7 downto 0) <= sw(7 downto 0);
 	ELSE
 		red <= "000";
-	Led(2 downto 0) <= "000";
 		grn <= "000";
 		blue <= "00";
+		--Led(2 downto 0) <= "000";
+		--Led(5 downto 3) <= "000";
+		--Led(7 downto 6) <= "00";
 	END IF;
 	
-	Led(5 downto 3) <= "000";
-	Led(7 downto 6) <= "00";
+	
+	
 	
 	end process;
 	

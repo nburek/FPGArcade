@@ -43,11 +43,11 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    5.493|         |         |         |
+clk            |    5.401|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Sat Feb 19 16:21:52 2011 
+Analysis completed Sun Feb 20 20:14:27 2011 
 --------------------------------------------------------------------------------
 
 Trace Settings:
