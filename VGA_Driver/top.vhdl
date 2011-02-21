@@ -48,7 +48,6 @@ signal clk25 : STD_LOGIC;
 
 begin 
 	clock25MHz: clk25MHz port map (clk,clk25);
-	Led <= "00000000";
 	
 	
 	process (clk25)
@@ -56,11 +55,11 @@ begin
 	begin
 	
 	-- timing diagram for the horizontal synch signal (HS)
-	-- 0                        656    752           799 (pixels)
-	-- -------------------------|______|-----------------
+	-- 0                               656    752     799 (pixels)
+	-- --------------------------------|______|----------
 	-- timing diagram for the vertical synch signal (VS)
-	-- 0                                  490    492  521 (lines)
-	-- -----------------------------------|______|-------
+	-- 0                        490    492            521 (lines)
+	-- -------------------------|______|-----------------
 
 	IF clk25'EVENT AND clk25='1' THEN
 	
@@ -93,21 +92,18 @@ begin
 		
 		
 		IF (hCount <= 639 AND vCount <= 479) THEN -- are we within the valid pixel range
-			VGA_Red <= "111";
-			VGA_Green <= "000";
-			VGA_Blue <= "00";
-			--red <= sw(2 downto 0);
-			--grn <= sw(5 downto 3);
-			--blue <= sw(7 downto 6);
-			--Led (7 downto 0) <= sw(7 downto 0);
+			--VGA_Red <= "111";
+			--VGA_Green <= "000";
+			--VGA_Blue <= "00";
+			VGA_Red <= sw(2 downto 0);
+			VGA_Green <= sw(5 downto 3);
+			VGA_Blue <= sw(7 downto 6);
+			Led (7 downto 0) <= sw(7 downto 0);
 		ELSE
 			-- turn off the pixel out data because it is either on the front/back porch or the pulse signal
 			VGA_Red <= "000";
 			VGA_Green <= "000";
 			VGA_Blue <= "00";
-			--Led(2 downto 0) <= "000";
-			--Led(5 downto 3) <= "000";
-			--Led(7 downto 6) <= "00";
 		END IF;
 	
 	END IF;

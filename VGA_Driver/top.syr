@@ -122,8 +122,6 @@ Analyzing hierarchy for entity <clk25MHz> in library <work> (architecture <behav
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <top> in library <work> (Architecture <behavioral>).
-INFO:Xst:2679 - Register <VGA_Green> in unit <top> has a constant value of 000 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <VGA_Blue> in unit <top> has a constant value of 00 during circuit operation. The register is replaced by logic.
 Entity <top> analyzed. Unit <top> generated.
 
 Analyzing Entity <clk25MHz> in library <work> (Architecture <behavioral>).
@@ -146,21 +144,23 @@ Unit <clk25MHz> synthesized.
 
 Synthesizing Unit <top>.
     Related source file is "C:/Documents and Settings/nb418308/Desktop/FPGArcade/VGA_Driver/top.vhdl".
-WARNING:Xst:647 - Input <sw> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 3-bit register for signal <VGA_Red>.
+    Found 3-bit register for signal <VGA_Green>.
+    Found 2-bit register for signal <VGA_Blue>.
     Found 1-bit register for signal <HSync>.
     Found 1-bit register for signal <VSync>.
+    Found 8-bit register for signal <Led>.
     Found 10-bit up counter for signal <hCount>.
-    Found 11-bit comparator greatequal for signal <HSync$cmp_ge0000> created at line 81.
-    Found 11-bit comparator lessequal for signal <HSync$cmp_le0000> created at line 81.
+    Found 11-bit comparator greatequal for signal <HSync$cmp_ge0000> created at line 80.
+    Found 11-bit comparator lessequal for signal <HSync$cmp_le0000> created at line 80.
     Found 10-bit up counter for signal <vCount>.
-    Found 11-bit comparator lessequal for signal <VGA_Red$cmp_le0000> created at line 95.
-    Found 11-bit comparator lessequal for signal <VGA_Red$cmp_le0001> created at line 95.
-    Found 11-bit comparator greatequal for signal <VSync$cmp_ge0000> created at line 88.
-    Found 11-bit comparator lessequal for signal <VSync$cmp_le0000> created at line 88.
+    Found 11-bit comparator lessequal for signal <VGA_Blue$cmp_le0000> created at line 94.
+    Found 11-bit comparator lessequal for signal <VGA_Blue$cmp_le0001> created at line 94.
+    Found 11-bit comparator greatequal for signal <VSync$cmp_ge0000> created at line 87.
+    Found 11-bit comparator lessequal for signal <VSync$cmp_le0000> created at line 87.
     Summary:
 	inferred   2 Counter(s).
-	inferred   5 D-type flip-flop(s).
+	inferred  18 D-type flip-flop(s).
 	inferred   6 Comparator(s).
 Unit <top> synthesized.
 
@@ -171,9 +171,11 @@ HDL Synthesis Report
 Macro Statistics
 # Counters                                             : 2
  10-bit up counter                                     : 2
-# Registers                                            : 4
+# Registers                                            : 7
  1-bit register                                        : 3
- 3-bit register                                        : 1
+ 2-bit register                                        : 1
+ 3-bit register                                        : 2
+ 8-bit register                                        : 1
 # Comparators                                          : 6
  11-bit comparator greatequal                          : 2
  11-bit comparator lessequal                           : 4
@@ -191,8 +193,8 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # Counters                                             : 2
  10-bit up counter                                     : 2
-# Registers                                            : 6
- Flip-Flops                                            : 6
+# Registers                                            : 19
+ Flip-Flops                                            : 19
 # Comparators                                          : 6
  11-bit comparator greatequal                          : 2
  11-bit comparator lessequal                           : 4
@@ -202,7 +204,6 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-INFO:Xst:2261 - The FF/Latch <VGA_Red_0> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <VGA_Red_1> <VGA_Red_2> 
 
 Optimizing unit <top> ...
 
@@ -216,8 +217,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 24
- Flip-Flops                                            : 24
+# Registers                                            : 39
+ Flip-Flops                                            : 39
 
 =========================================================================
 
@@ -246,26 +247,29 @@ Design Statistics
 # IOs                              : 27
 
 Cell Usage :
-# BELS                             : 74
+# BELS                             : 75
 #      GND                         : 1
 #      INV                         : 2
 #      LUT1                        : 18
-#      LUT2_L                      : 1
-#      LUT3                        : 2
+#      LUT2_D                      : 1
+#      LUT3                        : 1
+#      LUT3_D                      : 1
 #      LUT3_L                      : 1
-#      LUT4                        : 7
+#      LUT4                        : 8
 #      LUT4_D                      : 2
 #      LUT4_L                      : 1
 #      MUXCY                       : 18
 #      VCC                         : 1
 #      XORCY                       : 20
-# FlipFlops/Latches                : 24
-#      FDR                         : 14
+# FlipFlops/Latches                : 39
+#      FDE                         : 8
+#      FDR                         : 21
 #      FDRE                        : 10
 # Clock Buffers                    : 2
 #      BUFG                        : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 18
+# IO Buffers                       : 26
+#      IBUF                        : 8
 #      OBUF                        : 18
 =========================================================================
 
@@ -274,11 +278,11 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-4 
 
- Number of Slices:                       20  out of   4656     0%  
- Number of Slice Flip Flops:             24  out of   9312     0%  
- Number of 4 input LUTs:                 34  out of   9312     0%  
+ Number of Slices:                       28  out of   4656     0%  
+ Number of Slice Flip Flops:             39  out of   9312     0%  
+ Number of 4 input LUTs:                 35  out of   9312     0%  
  Number of IOs:                          27
- Number of bonded IOBs:                  19  out of    232     8%  
+ Number of bonded IOBs:                  27  out of    232    11%  
  Number of GCLKs:                         2  out of     24     8%  
 
 ---------------------------
@@ -302,7 +306,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clock25MHz/slow_clk1               | BUFG                   | 23    |
+clock25MHz/slow_clk1               | BUFG                   | 38    |
 clk                                | BUFGP                  | 1     |
 -----------------------------------+------------------------+-------+
 
@@ -314,9 +318,9 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 5.677ns (Maximum Frequency: 176.149MHz)
-   Minimum input arrival time before clock: No path found
-   Maximum output required time after clock: 4.394ns
+   Minimum period: 5.688ns (Maximum Frequency: 175.809MHz)
+   Minimum input arrival time before clock: 1.973ns
+   Maximum output required time after clock: 4.283ns
    Maximum combinational path delay: No path found
 
 Timing Detail:
@@ -325,27 +329,27 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clock25MHz/slow_clk1'
-  Clock period: 5.677ns (frequency: 176.149MHz)
-  Total number of paths / destination ports: 533 / 53
+  Clock period: 5.688ns (frequency: 175.809MHz)
+  Total number of paths / destination ports: 653 / 68
 -------------------------------------------------------------------------
-Delay:               5.677ns (Levels of Logic = 3)
-  Source:            hCount_1 (FF)
+Delay:               5.688ns (Levels of Logic = 3)
+  Source:            hCount_9 (FF)
   Destination:       vCount_0 (FF)
   Source Clock:      clock25MHz/slow_clk1 rising
   Destination Clock: clock25MHz/slow_clk1 rising
 
-  Data Path: hCount_1 to vCount_0
+  Data Path: hCount_9 to vCount_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              2   0.591   0.622  hCount_1 (hCount_1)
-     LUT4_D:I0->O          1   0.704   0.455  vCount_and0000171 (vCount_and0000171)
-     LUT4_L:I2->LO         1   0.704   0.104  vCount_and0000127 (vCount_cmp_eq0000)
+     FDR:C->Q              5   0.591   0.637  hCount_9 (hCount_9)
+     LUT4:I3->O            2   0.704   0.451  vCount_and0000171 (vCount_and0000171)
+     LUT4_L:I3->LO         1   0.704   0.104  vCount_and0000127 (vCount_cmp_eq0000)
      LUT4:I3->O           10   0.704   0.882  vCount_and000034 (vCount_and0000)
      FDRE:R                    0.911          vCount_0
     ----------------------------------------
-    Total                      5.677ns (3.614ns logic, 2.063ns route)
-                                       (63.7% logic, 36.3% route)
+    Total                      5.688ns (3.614ns logic, 2.074ns route)
+                                       (63.5% logic, 36.5% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
@@ -369,35 +373,54 @@ Delay:               1.949ns (Levels of Logic = 0)
                                        (77.1% logic, 22.9% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'clock25MHz/slow_clk1'
-  Total number of paths / destination ports: 5 / 5
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock25MHz/slow_clk1'
+  Total number of paths / destination ports: 16 / 16
 -------------------------------------------------------------------------
-Offset:              4.394ns (Levels of Logic = 1)
-  Source:            VGA_Red_0 (FF)
-  Destination:       VGA_Red<2> (PAD)
-  Source Clock:      clock25MHz/slow_clk1 rising
+Offset:              1.973ns (Levels of Logic = 1)
+  Source:            sw<6> (PAD)
+  Destination:       VGA_Blue_0 (FF)
+  Destination Clock: clock25MHz/slow_clk1 rising
 
-  Data Path: VGA_Red_0 to VGA_Red<2>
+  Data Path: sw<6> to VGA_Blue_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              3   0.591   0.531  VGA_Red_0 (VGA_Red_0)
-     OBUF:I->O                 3.272          VGA_Red_2_OBUF (VGA_Red<2>)
+     IBUF:I->O             2   1.218   0.447  sw_6_IBUF (sw_6_IBUF)
+     FDR:D                     0.308          VGA_Blue_0
     ----------------------------------------
-    Total                      4.394ns (3.863ns logic, 0.531ns route)
-                                       (87.9% logic, 12.1% route)
+    Total                      1.973ns (1.526ns logic, 0.447ns route)
+                                       (77.3% logic, 22.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock25MHz/slow_clk1'
+  Total number of paths / destination ports: 18 / 18
+-------------------------------------------------------------------------
+Offset:              4.283ns (Levels of Logic = 1)
+  Source:            VSync (FF)
+  Destination:       VSync (PAD)
+  Source Clock:      clock25MHz/slow_clk1 rising
+
+  Data Path: VSync to VSync
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              1   0.591   0.420  VSync (VSync_OBUF)
+     OBUF:I->O                 3.272          VSync_OBUF (VSync)
+    ----------------------------------------
+    Total                      4.283ns (3.863ns logic, 0.420ns route)
+                                       (90.2% logic, 9.8% route)
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 3.00 secs
-Total CPU time to Xst completion: 3.38 secs
+Total CPU time to Xst completion: 3.45 secs
  
 --> 
 
 Total memory usage is 151460 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    1 (   0 filtered)
-Number of infos    :    3 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
 
