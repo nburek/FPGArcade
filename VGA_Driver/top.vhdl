@@ -58,67 +58,70 @@ signal clk25 : STD_LOGIC;
 begin 
 	clock25MHz: clk25MHz port map (clk,clk25);
 	Led <= "00000000";
-	process
+	
+	
+	process (clk25)
 	
 	begin
 	
-	wait until (clk25'EVENT) AND (clk25='1');
+	--wait until (clk25'EVENT) AND (clk25='1');
+	IF clk25'EVENT AND clk25='1' THEN
 	
-	IF (hCount = 799) THEN
-		hCount <= "0000000000";
-	ELSE
-		hCount <= hCount + 1;
+		IF (hCount = 799) THEN
+			hCount <= "0000000000";
+		ELSE
+			hCount <= hCount + 1;
+		END IF;
+		
+		IF (hCount <= 751) AND (hCount >= 656) THEN 
+			HS <= '0';
+		ELSE
+			HS <= '1';
+		END IF;
+		
+		IF (vCount >=521) AND (hCount >= 799) THEN
+			vCount <= "0000000000";
+		ELSIF (hCount=799) THEN
+			vCount <= vCount+1;
+		END IF;
+		
+		IF (vCount<=491) AND (vCount>=490) THEN 
+			VS <= '0';
+		ELSE
+			VS <= '1';
+		END IF;
+		
+		IF (hCount <= 639) THEN
+			video_on_h <= '1';
+		ELSE
+			video_on_h <= '0';
+		END IF;
+		
+		IF (vCount <= 479) THEN
+			video_on_v <= '1';
+		ELSE
+			video_on_v <= '0';
+		END IF;
+		
+		
+		IF (video_on_v = '1' AND video_on_h = '1') THEN
+			red <= "111";
+			grn <= "000";
+			blue <= "00";
+			--red <= sw(2 downto 0);
+			--grn <= sw(5 downto 3);
+			--blue <= sw(7 downto 6);
+			--Led (7 downto 0) <= sw(7 downto 0);
+		ELSE
+			red <= "000";
+			grn <= "000";
+			blue <= "00";
+			--Led(2 downto 0) <= "000";
+			--Led(5 downto 3) <= "000";
+			--Led(7 downto 6) <= "00";
+		END IF;
+	
 	END IF;
-	
-	IF (hCount <= 751) AND (hCount >= 656) THEN 
-		HS <= '0';
-	ELSE
-		HS <= '1';
-	END IF;
-	
-	IF (vCount >=521) AND (hCount >= 799) THEN
-		vCount <= "0000000000";
-	ELSIF (hCount=799) THEN
-		vCount <= vCount+1;
-	END IF;
-	
-	IF (vCount<=491) AND (vCount>=490) THEN -- 490 and 489
-		VS <= '0';
-	ELSE
-		VS <= '1';
-	END IF;
-	
-	IF (hCount <= 639) THEN
-		video_on_h <= '1';
-	ELSE
-		video_on_h <= '0';
-	END IF;
-	
-	IF (vCount <= 479) THEN
-		video_on_v <= '1';
-	ELSE
-		video_on_v <= '0';
-	END IF;
-	
-	
-	IF (video_on_v = '1' AND video_on_h = '1') THEN
-		red <= "111";
-		grn <= "000";
-		blue <= "00";
-		--red <= sw(2 downto 0);
-		--grn <= sw(5 downto 3);
-		--blue <= sw(7 downto 6);
-		--Led (7 downto 0) <= sw(7 downto 0);
-	ELSE
-		red <= "000";
-		grn <= "000";
-		blue <= "00";
-		--Led(2 downto 0) <= "000";
-		--Led(5 downto 3) <= "000";
-		--Led(7 downto 6) <= "00";
-	END IF;
-	
-	
 	
 	
 	end process;

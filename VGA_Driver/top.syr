@@ -4,13 +4,13 @@ Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Reading design: top.prj
 
@@ -105,7 +105,8 @@ Slice Utilization Ratio Delta      : 5
 *                          HDL Compilation                              *
 =========================================================================
 Compiling vhdl file "C:/Documents and Settings/nb418308/Desktop/FPGArcade/VGA_Driver/clk25MHz.vhd" in Library work.
-Architecture behavioral of Entity clk25mhz is up to date.
+Entity <clk25mhz> compiled.
+Entity <clk25mhz> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Documents and Settings/nb418308/Desktop/FPGArcade/VGA_Driver/top.vhdl" in Library work.
 Entity <top> compiled.
 Entity <top> (Architecture <behavioral>) compiled.
@@ -138,10 +139,8 @@ Performing bidirectional port resolution...
 
 Synthesizing Unit <clk25MHz>.
     Related source file is "C:/Documents and Settings/nb418308/Desktop/FPGArcade/VGA_Driver/clk25MHz.vhd".
-    Found 32-bit up counter for signal <count>.
     Found 1-bit register for signal <slow_clk>.
     Summary:
-	inferred   1 Counter(s).
 	inferred   1 D-type flip-flop(s).
 Unit <clk25MHz> synthesized.
 
@@ -153,17 +152,17 @@ WARNING:Xst:647 - Input <sw> is never used. This port will be preserved and left
     Found 1-bit register for signal <HS>.
     Found 1-bit register for signal <VS>.
     Found 10-bit up counter for signal <hCount>.
-    Found 11-bit comparator greatequal for signal <HS$cmp_ge0000> created at line 73.
-    Found 11-bit comparator lessequal for signal <HS$cmp_le0000> created at line 73.
+    Found 11-bit comparator greatequal for signal <HS$cmp_ge0000> created at line 76.
+    Found 11-bit comparator lessequal for signal <HS$cmp_le0000> created at line 76.
     Found 10-bit up counter for signal <vCount>.
-    Found 11-bit comparator greatequal for signal <vCount$cmp_ge0000> created at line 79.
-    Found 11-bit comparator greatequal for signal <vCount$cmp_ge0001> created at line 79.
+    Found 11-bit comparator greatequal for signal <vCount$cmp_ge0000> created at line 82.
+    Found 11-bit comparator greatequal for signal <vCount$cmp_ge0001> created at line 82.
     Found 1-bit register for signal <video_on_h>.
-    Found 11-bit comparator lessequal for signal <video_on_h$cmp_le0000> created at line 91.
+    Found 11-bit comparator lessequal for signal <video_on_h$cmp_le0000> created at line 94.
     Found 1-bit register for signal <video_on_v>.
-    Found 11-bit comparator lessequal for signal <video_on_v$cmp_le0000> created at line 97.
-    Found 11-bit comparator greatequal for signal <VS$cmp_ge0000> created at line 85.
-    Found 11-bit comparator lessequal for signal <VS$cmp_le0000> created at line 85.
+    Found 11-bit comparator lessequal for signal <video_on_v$cmp_le0000> created at line 100.
+    Found 11-bit comparator greatequal for signal <VS$cmp_ge0000> created at line 88.
+    Found 11-bit comparator lessequal for signal <VS$cmp_le0000> created at line 88.
     Summary:
 	inferred   2 Counter(s).
 	inferred   7 D-type flip-flop(s).
@@ -175,9 +174,8 @@ Unit <top> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Counters                                             : 3
+# Counters                                             : 2
  10-bit up counter                                     : 2
- 32-bit up counter                                     : 1
 # Registers                                            : 6
  1-bit register                                        : 5
  3-bit register                                        : 1
@@ -196,9 +194,8 @@ Macro Statistics
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Counters                                             : 3
+# Counters                                             : 2
  10-bit up counter                                     : 2
- 32-bit up counter                                     : 1
 # Registers                                            : 8
  Flip-Flops                                            : 8
 # Comparators                                          : 8
@@ -224,8 +221,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 58
- Flip-Flops                                            : 58
+# Registers                                            : 26
+ Flip-Flops                                            : 26
 
 =========================================================================
 
@@ -254,23 +251,22 @@ Design Statistics
 # IOs                              : 27
 
 Cell Usage :
-# BELS                             : 191
+# BELS                             : 79
 #      GND                         : 1
-#      INV                         : 4
-#      LUT1                        : 49
-#      LUT2                        : 3
+#      INV                         : 2
+#      LUT1                        : 18
+#      LUT2                        : 2
+#      LUT2_L                      : 1
 #      LUT3                        : 5
-#      LUT3_D                      : 1
 #      LUT3_L                      : 1
-#      LUT4                        : 14
-#      LUT4_D                      : 2
-#      LUT4_L                      : 1
-#      MUXCY                       : 57
+#      LUT4                        : 7
+#      LUT4_D                      : 1
+#      LUT4_L                      : 2
+#      MUXCY                       : 18
 #      VCC                         : 1
-#      XORCY                       : 52
-# FlipFlops/Latches                : 58
-#      FDE                         : 1
-#      FDR                         : 47
+#      XORCY                       : 20
+# FlipFlops/Latches                : 26
+#      FDR                         : 16
 #      FDRE                        : 10
 # Clock Buffers                    : 2
 #      BUFG                        : 1
@@ -284,9 +280,9 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-4 
 
- Number of Slices:                       43  out of   4656     0%  
- Number of Slice Flip Flops:             58  out of   9312     0%  
- Number of 4 input LUTs:                 80  out of   9312     0%  
+ Number of Slices:                       23  out of   4656     0%  
+ Number of Slice Flip Flops:             26  out of   9312     0%  
+ Number of 4 input LUTs:                 39  out of   9312     0%  
  Number of IOs:                          27
  Number of bonded IOBs:                  19  out of    232     8%  
  Number of GCLKs:                         2  out of     24     8%  
@@ -313,7 +309,7 @@ Clock Information:
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
 clock25MHz/slow_clk1               | BUFG                   | 25    |
-clk                                | BUFGP                  | 33    |
+clk                                | BUFGP                  | 1     |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -324,7 +320,7 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 5.993ns (Maximum Frequency: 166.861MHz)
+   Minimum period: 5.761ns (Maximum Frequency: 173.581MHz)
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: 4.394ns
    Maximum combinational path delay: No path found
@@ -335,10 +331,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clock25MHz/slow_clk1'
-  Clock period: 5.993ns (frequency: 166.861MHz)
+  Clock period: 5.761ns (frequency: 173.581MHz)
   Total number of paths / destination ports: 535 / 55
 -------------------------------------------------------------------------
-Delay:               5.993ns (Levels of Logic = 3)
+Delay:               5.761ns (Levels of Logic = 3)
   Source:            hCount_3 (FF)
   Destination:       vCount_0 (FF)
   Source Clock:      clock25MHz/slow_clk1 rising
@@ -348,44 +344,35 @@ Delay:               5.993ns (Levels of Logic = 3)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              2   0.591   0.622  hCount_3 (hCount_3)
-     LUT2:I0->O            1   0.704   0.424  vCount_cmp_eq00001_SW0 (N6)
-     LUT4_D:I3->O          2   0.704   0.451  vCount_cmp_eq00001 (N7)
-     LUT4:I3->O           10   0.704   0.882  vCount_and000037 (vCount_and0000)
+     FDR:C->Q              3   0.591   0.706  hCount_3 (hCount_3)
+     LUT2_L:I0->LO         1   0.704   0.104  vCount_cmp_eq00001_SW0 (N6)
+     LUT4:I3->O            1   0.704   0.455  vCount_cmp_eq00001 (N7)
+     LUT4:I2->O           10   0.704   0.882  vCount_and000037 (vCount_and0000)
      FDRE:R                    0.911          vCount_0
     ----------------------------------------
-    Total                      5.993ns (3.614ns logic, 2.379ns route)
-                                       (60.3% logic, 39.7% route)
+    Total                      5.761ns (3.614ns logic, 2.147ns route)
+                                       (62.7% logic, 37.3% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 5.240ns (frequency: 190.857MHz)
-  Total number of paths / destination ports: 1585 / 66
+  Clock period: 1.949ns (frequency: 513.084MHz)
+  Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Delay:               5.240ns (Levels of Logic = 9)
-  Source:            clock25MHz/count_8 (FF)
-  Destination:       clock25MHz/count_0 (FF)
+Delay:               1.949ns (Levels of Logic = 0)
+  Source:            clock25MHz/slow_clk (FF)
+  Destination:       clock25MHz/slow_clk (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: clock25MHz/count_8 to clock25MHz/count_0
+  Data Path: clock25MHz/slow_clk to clock25MHz/slow_clk
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              2   0.591   0.622  clock25MHz/count_8 (clock25MHz/count_8)
-     LUT4:I0->O            1   0.704   0.000  clock25MHz/slow_clk_cmp_eq0000_wg_lut<0> (clock25MHz/slow_clk_cmp_eq0000_wg_lut<0>)
-     MUXCY:S->O            1   0.464   0.000  clock25MHz/slow_clk_cmp_eq0000_wg_cy<0> (clock25MHz/slow_clk_cmp_eq0000_wg_cy<0>)
-     MUXCY:CI->O           1   0.059   0.000  clock25MHz/slow_clk_cmp_eq0000_wg_cy<1> (clock25MHz/slow_clk_cmp_eq0000_wg_cy<1>)
-     MUXCY:CI->O           1   0.059   0.000  clock25MHz/slow_clk_cmp_eq0000_wg_cy<2> (clock25MHz/slow_clk_cmp_eq0000_wg_cy<2>)
-     MUXCY:CI->O           1   0.059   0.000  clock25MHz/slow_clk_cmp_eq0000_wg_cy<3> (clock25MHz/slow_clk_cmp_eq0000_wg_cy<3>)
-     MUXCY:CI->O           1   0.059   0.000  clock25MHz/slow_clk_cmp_eq0000_wg_cy<4> (clock25MHz/slow_clk_cmp_eq0000_wg_cy<4>)
-     MUXCY:CI->O           1   0.059   0.000  clock25MHz/slow_clk_cmp_eq0000_wg_cy<5> (clock25MHz/slow_clk_cmp_eq0000_wg_cy<5>)
-     MUXCY:CI->O           1   0.059   0.000  clock25MHz/slow_clk_cmp_eq0000_wg_cy<6> (clock25MHz/slow_clk_cmp_eq0000_wg_cy<6>)
-     MUXCY:CI->O          33   0.331   1.263  clock25MHz/slow_clk_cmp_eq0000_wg_cy<7> (clock25MHz/slow_clk_cmp_eq0000)
-     FDR:R                     0.911          clock25MHz/count_0
+     FDR:C->Q              2   0.591   0.447  clock25MHz/slow_clk (clock25MHz/slow_clk1)
+     FDR:R                     0.911          clock25MHz/slow_clk
     ----------------------------------------
-    Total                      5.240ns (3.355ns logic, 1.885ns route)
-                                       (64.0% logic, 36.0% route)
+    Total                      1.949ns (1.502ns logic, 0.447ns route)
+                                       (77.1% logic, 22.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clock25MHz/slow_clk1'
@@ -409,8 +396,8 @@ Offset:              4.394ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 3.86 secs
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 3.50 secs
  
 --> 
 

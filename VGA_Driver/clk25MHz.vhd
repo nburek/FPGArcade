@@ -42,16 +42,14 @@ signal slow_clk: STD_LOGIC;
 begin
 
 	process(clk)
-	variable count : Integer := 0;
+	
 	begin
-		if rising_edge(clk) then
-			if (count = 1) then
-				slow_clk <= not slow_clk;
-				count := 0;
-			else
-				count := count + 1;
-			end if;
-		end if;
+		IF (clk'EVENT and clk = '1') THEN 
+		
+			slow_clk <= not slow_clk;
+			
+		END IF;
+		
 	end process;
 	
 	sclk <= slow_clk;
