@@ -3,14 +3,14 @@ Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.44 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.44 secs
  
 --> Reading design: top.prj
 
@@ -122,6 +122,10 @@ Analyzing hierarchy for entity <clk25MHz> in library <work> (architecture <behav
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <top> in library <work> (Architecture <behavioral>).
+WARNING:Xst:790 - "C:/Documents and Settings/nb418308/Desktop/FPGArcade/VGA_Driver/top.vhdl" line 105: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1433 - Contents of array <display> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:2679 - Register <VGA_Red<2>> in unit <top> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <VGA_Red<1>> in unit <top> has a constant value of 0 during circuit operation. The register is replaced by logic.
 Entity <top> analyzed. Unit <top> generated.
 
 Analyzing Entity <clk25MHz> in library <work> (Architecture <behavioral>).
@@ -144,23 +148,26 @@ Unit <clk25MHz> synthesized.
 
 Synthesizing Unit <top>.
     Related source file is "C:/Documents and Settings/nb418308/Desktop/FPGArcade/VGA_Driver/top.vhdl".
-    Found 3-bit register for signal <VGA_Red>.
+WARNING:Xst:1781 - Signal <display> is used but never assigned. Tied to default value.
+WARNING:Xst:646 - Signal <current_pixel<1:7>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit register for signal <VGA_Red<0>>.
     Found 3-bit register for signal <VGA_Green>.
     Found 2-bit register for signal <VGA_Blue>.
     Found 1-bit register for signal <HSync>.
     Found 1-bit register for signal <VSync>.
     Found 8-bit register for signal <Led>.
+    Found 8-bit register for signal <current_pixel>.
     Found 10-bit up counter for signal <hCount>.
-    Found 11-bit comparator greatequal for signal <HSync$cmp_ge0000> created at line 80.
-    Found 11-bit comparator lessequal for signal <HSync$cmp_le0000> created at line 80.
+    Found 11-bit comparator greatequal for signal <HSync$cmp_ge0000> created at line 87.
+    Found 11-bit comparator lessequal for signal <HSync$cmp_le0000> created at line 87.
     Found 10-bit up counter for signal <vCount>.
-    Found 11-bit comparator lessequal for signal <VGA_Blue$cmp_le0000> created at line 94.
-    Found 11-bit comparator lessequal for signal <VGA_Blue$cmp_le0001> created at line 94.
-    Found 11-bit comparator greatequal for signal <VSync$cmp_ge0000> created at line 87.
-    Found 11-bit comparator lessequal for signal <VSync$cmp_le0000> created at line 87.
+    Found 11-bit comparator lessequal for signal <VGA_Red_0$cmp_le0000> created at line 101.
+    Found 11-bit comparator lessequal for signal <VGA_Red_0$cmp_le0001> created at line 101.
+    Found 11-bit comparator greatequal for signal <VSync$cmp_ge0000> created at line 94.
+    Found 11-bit comparator lessequal for signal <VSync$cmp_le0000> created at line 94.
     Summary:
 	inferred   2 Counter(s).
-	inferred  18 D-type flip-flop(s).
+	inferred  24 D-type flip-flop(s).
 	inferred   6 Comparator(s).
 Unit <top> synthesized.
 
@@ -171,11 +178,11 @@ HDL Synthesis Report
 Macro Statistics
 # Counters                                             : 2
  10-bit up counter                                     : 2
-# Registers                                            : 7
- 1-bit register                                        : 3
+# Registers                                            : 8
+ 1-bit register                                        : 4
  2-bit register                                        : 1
- 3-bit register                                        : 2
- 8-bit register                                        : 1
+ 3-bit register                                        : 1
+ 8-bit register                                        : 2
 # Comparators                                          : 6
  11-bit comparator greatequal                          : 2
  11-bit comparator lessequal                           : 4
@@ -186,6 +193,16 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
+WARNING:Xst:1710 - FF/Latch <current_pixel_0> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <VGA_Red_0> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <current_pixel_7> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <current_pixel_6> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <current_pixel_5> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <current_pixel_4> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <current_pixel_3> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <current_pixel_2> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <current_pixel_1> of sequential type is unconnected in block <top>.
+WARNING:Xst:2404 -  FFs/Latches <current_pixel<0:-1>> (without init value) have a constant value of 0 in block <top>.
 
 =========================================================================
 Advanced HDL Synthesis Report
@@ -193,8 +210,8 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # Counters                                             : 2
  10-bit up counter                                     : 2
-# Registers                                            : 19
- Flip-Flops                                            : 19
+# Registers                                            : 17
+ Flip-Flops                                            : 17
 # Comparators                                          : 6
  11-bit comparator greatequal                          : 2
  11-bit comparator lessequal                           : 4
@@ -204,6 +221,7 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:1710 - FF/Latch <VGA_Red_0> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 
 Optimizing unit <top> ...
 
@@ -217,8 +235,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 39
- Flip-Flops                                            : 39
+# Registers                                            : 36
+ Flip-Flops                                            : 36
 
 =========================================================================
 
@@ -261,9 +279,9 @@ Cell Usage :
 #      MUXCY                       : 18
 #      VCC                         : 1
 #      XORCY                       : 20
-# FlipFlops/Latches                : 39
+# FlipFlops/Latches                : 36
 #      FDE                         : 8
-#      FDR                         : 21
+#      FDR                         : 18
 #      FDRE                        : 10
 # Clock Buffers                    : 2
 #      BUFG                        : 1
@@ -278,8 +296,8 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-4 
 
- Number of Slices:                       28  out of   4656     0%  
- Number of Slice Flip Flops:             39  out of   9312     0%  
+ Number of Slices:                       26  out of   4656     0%  
+ Number of Slice Flip Flops:             36  out of   9312     0%  
  Number of 4 input LUTs:                 35  out of   9312     0%  
  Number of IOs:                          27
  Number of bonded IOBs:                  27  out of    232    11%  
@@ -306,7 +324,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clock25MHz/slow_clk1               | BUFG                   | 38    |
+clock25MHz/slow_clk1               | BUFG                   | 35    |
 clk                                | BUFGP                  | 1     |
 -----------------------------------+------------------------+-------+
 
@@ -330,7 +348,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clock25MHz/slow_clk1'
   Clock period: 5.688ns (frequency: 175.809MHz)
-  Total number of paths / destination ports: 653 / 68
+  Total number of paths / destination ports: 629 / 65
 -------------------------------------------------------------------------
 Delay:               5.688ns (Levels of Logic = 3)
   Source:            hCount_9 (FF)
@@ -374,7 +392,7 @@ Delay:               1.949ns (Levels of Logic = 0)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clock25MHz/slow_clk1'
-  Total number of paths / destination ports: 16 / 16
+  Total number of paths / destination ports: 13 / 13
 -------------------------------------------------------------------------
 Offset:              1.973ns (Levels of Logic = 1)
   Source:            sw<6> (PAD)
@@ -393,7 +411,7 @@ Offset:              1.973ns (Levels of Logic = 1)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clock25MHz/slow_clk1'
-  Total number of paths / destination ports: 18 / 18
+  Total number of paths / destination ports: 15 / 15
 -------------------------------------------------------------------------
 Offset:              4.283ns (Levels of Logic = 1)
   Source:            VSync (FF)
@@ -413,14 +431,14 @@ Offset:              4.283ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 3.00 secs
-Total CPU time to Xst completion: 3.45 secs
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.56 secs
  
 --> 
 
-Total memory usage is 151460 kilobytes
+Total memory usage is 153508 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    0 (   0 filtered)
-Number of infos    :    0 (   0 filtered)
+Number of warnings :   14 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
 

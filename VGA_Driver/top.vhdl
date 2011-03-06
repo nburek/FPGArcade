@@ -45,10 +45,17 @@ end component;
 signal vCount : STD_LOGIC_VECTOR (9 downto 0);
 signal hCount : STD_LOGIC_VECTOR (9 downto 0);
 signal clk25 : STD_LOGIC;
+type pixel is array(0 to 7) of std_logic;
+type pixel_column is array(0 to 479) of pixel;
+--type pixel_map is array(0 to 639) of pixel_column;
+
+signal display : pixel_column;
+signal current_pixel : pixel;
+--signal pixel_map_green : STD_LOGIC_VECTOR (10 downto 0);
+--signal pixel_map_blue : STD_LOGIC_VECTOR (921599 downto 0);
 
 begin 
 	clock25MHz: clk25MHz port map (clk,clk25);
-	
 	
 	process (clk25)
 	
@@ -95,7 +102,9 @@ begin
 			--VGA_Red <= "111";
 			--VGA_Green <= "000";
 			--VGA_Blue <= "00";
-			VGA_Red <= sw(2 downto 0);
+			current_pixel <= display(conv_integer(hCount));
+			VGA_Red(0) <= current_pixel(0);
+			--VGA_Red <= sw(2 downto 0);
 			VGA_Green <= sw(5 downto 3);
 			VGA_Blue <= sw(7 downto 6);
 			Led (7 downto 0) <= sw(7 downto 0);

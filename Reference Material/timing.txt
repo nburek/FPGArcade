@@ -1,0 +1,6 @@
+time for one clock cycle at 25Mhz = 0.00000004 seconds = 40 ns
+Idle time between row outputs: 8000 ns
+read time from RAM = 70 ns
+Time it would take to read in a row 8 bits at a time: 44800 ns
+Time it would take to read in a row 16 bits at a time: 22400 ns
+Total time to display one row: 32000 ns  (800 clock cycles at 40 ns)
