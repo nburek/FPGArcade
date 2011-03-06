@@ -1,0 +1,8 @@
+Release 12.4 Drc M.81d (nt)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+Sat Mar 05 15:18:19 2011
+
+drc -z Simple_Video.ncd Simple_Video.pcf
+
+DRC detected 0 errors and 0 warnings.

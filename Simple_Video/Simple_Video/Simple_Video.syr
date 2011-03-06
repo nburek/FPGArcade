@@ -1,0 +1,453 @@
+Release 12.4 - xst M.81d (nt)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: Simple_Video.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Simple_Video.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Simple_Video"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : Simple_Video
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Documents and Settings/nb418308/Desktop/FPGArcade/Simple_Video/Simple_Video/clk25MHz.vhd" in Library work.
+Architecture behavioral of Entity clk25mhz is up to date.
+Compiling vhdl file "C:/Documents and Settings/nb418308/Desktop/FPGArcade/Simple_Video/Simple_Video/Simple_Video.vhd" in Library work.
+Entity <simple_video> compiled.
+Entity <simple_video> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <Simple_Video> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <clk25MHz> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <Simple_Video> in library <work> (Architecture <behavioral>).
+INFO:Xst:2679 - Register <VGA_Green> in unit <Simple_Video> has a constant value of 000 during circuit operation. The register is replaced by logic.
+Entity <Simple_Video> analyzed. Unit <Simple_Video> generated.
+
+Analyzing Entity <clk25MHz> in library <work> (Architecture <behavioral>).
+Entity <clk25MHz> analyzed. Unit <clk25MHz> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <clk25MHz>.
+    Related source file is "C:/Documents and Settings/nb418308/Desktop/FPGArcade/Simple_Video/Simple_Video/clk25MHz.vhd".
+    Found 1-bit register for signal <slow_clk>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <clk25MHz> synthesized.
+
+
+Synthesizing Unit <Simple_Video>.
+    Related source file is "C:/Documents and Settings/nb418308/Desktop/FPGArcade/Simple_Video/Simple_Video/Simple_Video.vhd".
+WARNING:Xst:653 - Signal <blockYPosition<4:9>> is used but never assigned. This sourceless signal will be automatically connected to value 000100.
+WARNING:Xst:653 - Signal <blockXPosition<8:9>> is used but never assigned. This sourceless signal will be automatically connected to value 00.
+    Found 3-bit register for signal <VGA_Red>.
+    Found 2-bit register for signal <VGA_Blue>.
+    Found 1-bit register for signal <HSync>.
+    Found 1-bit register for signal <VSync>.
+    Found 8-bit register for signal <blockXPosition<0:7>>.
+    Found 4-bit register for signal <blockYPosition<0:3>>.
+    Found 10-bit up counter for signal <hCount>.
+    Found 11-bit comparator greatequal for signal <HSync$cmp_ge0000> created at line 85.
+    Found 11-bit comparator lessequal for signal <HSync$cmp_le0000> created at line 85.
+    Found 10-bit up counter for signal <vCount>.
+    Found 10-bit adder carry out for signal <VGA_Blue$addsub0000> created at line 101.
+    Found 10-bit adder carry out for signal <VGA_Blue$addsub0001> created at line 102.
+    Found 11-bit comparator greater for signal <VGA_Blue$cmp_gt0000> created at line 99.
+    Found 11-bit comparator greater for signal <VGA_Blue$cmp_gt0001> created at line 99.
+    Found 11-bit comparator greater for signal <VGA_Blue$cmp_gt0002> created at line 101.
+    Found 11-bit comparator greater for signal <VGA_Blue$cmp_gt0003> created at line 102.
+    Found 10-bit comparator less for signal <VGA_Blue$cmp_lt0000> created at line 101.
+    Found 10-bit comparator less for signal <VGA_Blue$cmp_lt0001> created at line 102.
+    Found 11-bit comparator lessequal for signal <VGA_Red$cmp_le0000> created at line 99.
+    Found 11-bit comparator lessequal for signal <VGA_Red$cmp_le0001> created at line 99.
+    Found 11-bit comparator greatequal for signal <VSync$cmp_ge0000> created at line 92.
+    Found 11-bit comparator lessequal for signal <VSync$cmp_le0000> created at line 92.
+    Summary:
+	inferred   2 Counter(s).
+	inferred  19 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  12 Comparator(s).
+Unit <Simple_Video> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 10-bit adder carry out                                : 2
+# Counters                                             : 2
+ 10-bit up counter                                     : 2
+# Registers                                            : 17
+ 1-bit register                                        : 15
+ 2-bit register                                        : 1
+ 3-bit register                                        : 1
+# Comparators                                          : 12
+ 10-bit comparator less                                : 2
+ 11-bit comparator greatequal                          : 2
+ 11-bit comparator greater                             : 4
+ 11-bit comparator lessequal                           : 4
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 10-bit adder carry out                                : 2
+# Counters                                             : 2
+ 10-bit up counter                                     : 2
+# Registers                                            : 20
+ Flip-Flops                                            : 20
+# Comparators                                          : 12
+ 10-bit comparator less                                : 2
+ 11-bit comparator greatequal                          : 2
+ 11-bit comparator greater                             : 4
+ 11-bit comparator lessequal                           : 4
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <VGA_Red_0> in Unit <Simple_Video> is equivalent to the following 2 FFs/Latches, which will be removed : <VGA_Red_1> <VGA_Red_2> 
+INFO:Xst:2261 - The FF/Latch <VGA_Blue_0> in Unit <Simple_Video> is equivalent to the following FF/Latch, which will be removed : <VGA_Blue_1> 
+
+Optimizing unit <Simple_Video> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Simple_Video, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 37
+ Flip-Flops                                            : 37
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Simple_Video.ngr
+Top Level Output File Name         : Simple_Video
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 23
+
+Cell Usage :
+# BELS                             : 157
+#      GND                         : 1
+#      INV                         : 5
+#      LUT1                        : 22
+#      LUT2                        : 19
+#      LUT2_L                      : 1
+#      LUT3                        : 10
+#      LUT3_D                      : 2
+#      LUT3_L                      : 2
+#      LUT4                        : 21
+#      LUT4_D                      : 1
+#      LUT4_L                      : 1
+#      MUXCY                       : 51
+#      VCC                         : 1
+#      XORCY                       : 20
+# FlipFlops/Latches                : 37
+#      FD                          : 12
+#      FDR                         : 14
+#      FDRE                        : 10
+#      FDRS                        : 1
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 22
+#      IBUF                        : 12
+#      OBUF                        : 10
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                       50  out of   4656     1%  
+ Number of Slice Flip Flops:             37  out of   9312     0%  
+ Number of 4 input LUTs:                 84  out of   9312     0%  
+ Number of IOs:                          23
+ Number of bonded IOBs:                  23  out of    232     9%  
+ Number of GCLKs:                         2  out of     24     8%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clock25MHz/slow_clk1               | BUFG                   | 36    |
+clk50                              | BUFGP                  | 1     |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 7.591ns (Maximum Frequency: 131.735MHz)
+   Minimum input arrival time before clock: 1.946ns
+   Maximum output required time after clock: 4.394ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock25MHz/slow_clk1'
+  Clock period: 7.591ns (frequency: 131.735MHz)
+  Total number of paths / destination ports: 837 / 55
+-------------------------------------------------------------------------
+Delay:               7.591ns (Levels of Logic = 7)
+  Source:            blockXPosition_7 (FF)
+  Destination:       VGA_Blue_0 (FF)
+  Source Clock:      clock25MHz/slow_clk1 rising
+  Destination Clock: clock25MHz/slow_clk1 rising
+
+  Data Path: blockXPosition_7 to VGA_Blue_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              11   0.591   0.968  blockXPosition_7 (blockXPosition_7)
+     LUT3_D:I2->O          6   0.704   0.673  Madd_VGA_Blue_addsub0001_xor<9>111 (N0)
+     LUT4:I3->O            0   0.704   0.000  Madd_VGA_Blue_addsub0001_xor<7>12 (VGA_Blue_addsub0001<7>)
+     MUXCY:DI->O           1   0.888   0.000  Mcompar_VGA_Blue_cmp_gt0003_cy<7> (Mcompar_VGA_Blue_cmp_gt0003_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_VGA_Blue_cmp_gt0003_cy<8> (Mcompar_VGA_Blue_cmp_gt0003_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_VGA_Blue_cmp_gt0003_cy<9> (Mcompar_VGA_Blue_cmp_gt0003_cy<9>)
+     MUXCY:CI->O           2   0.459   0.451  Mcompar_VGA_Blue_cmp_gt0003_cy<10> (Mcompar_VGA_Blue_cmp_gt0003_cy<10>)
+     LUT4:I3->O            1   0.704   0.420  VGA_Red_or00001 (VGA_Red_or0000)
+     FDRS:S                    0.911          VGA_Red_0
+    ----------------------------------------
+    Total                      7.591ns (5.079ns logic, 2.512ns route)
+                                       (66.9% logic, 33.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk50'
+  Clock period: 1.949ns (frequency: 513.084MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.949ns (Levels of Logic = 0)
+  Source:            clock25MHz/slow_clk (FF)
+  Destination:       clock25MHz/slow_clk (FF)
+  Source Clock:      clk50 rising
+  Destination Clock: clk50 rising
+
+  Data Path: clock25MHz/slow_clk to clock25MHz/slow_clk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.591   0.447  clock25MHz/slow_clk (clock25MHz/slow_clk1)
+     FDR:R                     0.911          clock25MHz/slow_clk
+    ----------------------------------------
+    Total                      1.949ns (1.502ns logic, 0.447ns route)
+                                       (77.1% logic, 22.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock25MHz/slow_clk1'
+  Total number of paths / destination ports: 12 / 12
+-------------------------------------------------------------------------
+Offset:              1.946ns (Levels of Logic = 1)
+  Source:            btn<1> (PAD)
+  Destination:       blockYPosition_2 (FF)
+  Destination Clock: clock25MHz/slow_clk1 rising
+
+  Data Path: btn<1> to blockYPosition_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.218   0.420  btn_1_IBUF (btn_1_IBUF)
+     FD:D                      0.308          blockYPosition_2
+    ----------------------------------------
+    Total                      1.946ns (1.526ns logic, 0.420ns route)
+                                       (78.4% logic, 21.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock25MHz/slow_clk1'
+  Total number of paths / destination ports: 7 / 7
+-------------------------------------------------------------------------
+Offset:              4.394ns (Levels of Logic = 1)
+  Source:            VGA_Red_0 (FF)
+  Destination:       VGA_Red<2> (PAD)
+  Source Clock:      clock25MHz/slow_clk1 rising
+
+  Data Path: VGA_Red_0 to VGA_Red<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRS:C->Q             3   0.591   0.531  VGA_Red_0 (VGA_Red_0)
+     OBUF:I->O                 3.272          VGA_Red_2_OBUF (VGA_Red<2>)
+    ----------------------------------------
+    Total                      4.394ns (3.863ns logic, 0.531ns route)
+                                       (87.9% logic, 12.1% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 3.80 secs
+ 
+--> 
+
+Total memory usage is 152484 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
+

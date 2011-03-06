@@ -1,0 +1,31 @@
+//! **************************************************************************
+// Written by: Map M.81d on Sat Mar 05 15:17:53 2011
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk50" LOCATE = SITE "B8" LEVEL 1;
+COMP "btn<0>" LOCATE = SITE "B18" LEVEL 1;
+COMP "btn<1>" LOCATE = SITE "D18" LEVEL 1;
+COMP "btn<2>" LOCATE = SITE "E18" LEVEL 1;
+COMP "btn<3>" LOCATE = SITE "H13" LEVEL 1;
+COMP "VSync" LOCATE = SITE "U3" LEVEL 1;
+COMP "VGA_Red<0>" LOCATE = SITE "R9" LEVEL 1;
+COMP "VGA_Red<1>" LOCATE = SITE "T8" LEVEL 1;
+COMP "VGA_Red<2>" LOCATE = SITE "R8" LEVEL 1;
+COMP "VGA_Blue<0>" LOCATE = SITE "U5" LEVEL 1;
+COMP "VGA_Blue<1>" LOCATE = SITE "U4" LEVEL 1;
+COMP "sw<0>" LOCATE = SITE "G18" LEVEL 1;
+COMP "sw<1>" LOCATE = SITE "H18" LEVEL 1;
+COMP "sw<2>" LOCATE = SITE "K18" LEVEL 1;
+COMP "sw<3>" LOCATE = SITE "K17" LEVEL 1;
+COMP "sw<4>" LOCATE = SITE "L14" LEVEL 1;
+COMP "HSync" LOCATE = SITE "T4" LEVEL 1;
+COMP "sw<5>" LOCATE = SITE "L13" LEVEL 1;
+COMP "sw<6>" LOCATE = SITE "N17" LEVEL 1;
+COMP "sw<7>" LOCATE = SITE "R17" LEVEL 1;
+COMP "VGA_Green<0>" LOCATE = SITE "N8" LEVEL 1;
+COMP "VGA_Green<1>" LOCATE = SITE "P8" LEVEL 1;
+COMP "VGA_Green<2>" LOCATE = SITE "P6" LEVEL 1;
+NET "clk50_BUFGP/IBUFG" BEL "clk50_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+SCHEMATIC END;
+
