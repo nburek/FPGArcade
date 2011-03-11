@@ -65,7 +65,7 @@ int main(void)
 {
 	int Status;
 
-	Status = GpioOutputExample(XPAR_BLOCK_OUTPUT_DEVICE_ID,20);
+	Status = GpioOutputExample(XPAR_BLOCK_OUTPUT_DEVICE_ID,20); //call a function to move a block around
 	
 	if (Status != XST_SUCCESS) {
 		  return XST_FAILURE;
@@ -98,10 +98,10 @@ int GpioOutputExample(u16 DeviceId, u32 GpioWidth)
 	u32 Data;
 	volatile int Delay;
 	int Status;
-	u16 blockX = 0;
-	u16 blockY = 0;
-	u16 directionX = 1;
-	u16 directionY = 1;
+	u16 blockX = 0; //the blocks X coord
+	u16 blockY = 0; //the blocks Y coord
+	u16 directionX = 1; //should it move left or right (1=right, -1=left)
+	u16 directionY = 1; //should it move up or down (1=down, -1=up)
 
 	/*
 	 * Initialize the GPIO driver so that it's ready to use,
@@ -123,21 +123,32 @@ int GpioOutputExample(u16 DeviceId, u32 GpioWidth)
 	  */
 	 XGpio_DiscreteWrite(&GpioOutput, BLOCK_CHANNEL, 0x0);
 
+
 	while (1==1)
 	{
+		//move the blocks
 		blockX = blockX + directionX;
 		blockY = blockY + directionY;
+
+		//reverse the direction when it hits the edge
 		if (blockX >= 610 || blockX<=0)
 			directionX = directionX*(-1);
 		
 		if (blockY >= 450 || blockY<=0)
 			directionY = directionY*(-1);
 		
+		/*
+		 * Since both the X and Y coord's are sent on the same signal
+		 * vector we must combine the two into one variable to be 
+		 * written out. The 10 most significant bits are the X position
+		 * and the lower 10 bits are the Y position.
+		 */
 		Data = (blockX<<10) | blockY;
 		
+		//write out the values to the GIOP, which sends them to the VGA Driver
 		XGpio_DiscreteWrite(&GpioOutput, BLOCK_CHANNEL, Data);
 		
-		for (Delay = 0; Delay < LOOP_DELAY; Delay++);
+		for (Delay = 0; Delay < LOOP_DELAY; Delay++); //delay for a while
 		
 	}
 	

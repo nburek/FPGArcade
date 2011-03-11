@@ -78,6 +78,7 @@
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
     <transform xil_pn:end_ts="1299357683" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1299357682">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
     </transform>
     <transform xil_pn:end_ts="1299357683" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="2524634476764073701" xil_pn:start_ts="1299357683">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -103,7 +104,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1299359868" xil_pn:in_ck="1253439038432968464" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="5592860637056583932" xil_pn:start_ts="1299359862">
+    <transform xil_pn:end_ts="1299704243" xil_pn:in_ck="5783284527410191281" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="5592860637056583932" xil_pn:start_ts="1299704237">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -125,7 +126,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1299359871" xil_pn:in_ck="8918855640494715922" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-6991645749332883688" xil_pn:start_ts="1299359868">
+    <transform xil_pn:end_ts="1299704246" xil_pn:in_ck="8918855640494715922" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-6991645749332883688" xil_pn:start_ts="1299704243">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="Simple_Video.bld"/>
@@ -134,8 +135,9 @@
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1299359874" xil_pn:in_ck="5093526545281521171" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-5849673150125579957" xil_pn:start_ts="1299359871">
+    <transform xil_pn:end_ts="1299704250" xil_pn:in_ck="5093526545281521171" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-5849673150125579957" xil_pn:start_ts="1299704246">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
@@ -149,8 +151,9 @@
       <outfile xil_pn:name="Simple_Video_usage.xml"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1299359897" xil_pn:in_ck="-8069723372368977748" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="-5563652517805085498" xil_pn:start_ts="1299359874">
+    <transform xil_pn:end_ts="1299704272" xil_pn:in_ck="-8069723372368977748" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="-5563652517805085498" xil_pn:start_ts="1299704250">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="Simple_Video.ncd"/>
       <outfile xil_pn:name="Simple_Video.pad"/>
@@ -163,8 +166,9 @@
       <outfile xil_pn:name="Simple_Video_par.xrpt"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1299359906" xil_pn:in_ck="-725993931233721117" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="287829442711806529" xil_pn:start_ts="1299359897">
+    <transform xil_pn:end_ts="1299704281" xil_pn:in_ck="-725993931233721117" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="287829442711806529" xil_pn:start_ts="1299704272">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="Simple_Video.ut"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
@@ -175,7 +179,7 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1299359897" xil_pn:in_ck="-6471866950444216945" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1299359895">
+    <transform xil_pn:end_ts="1299704272" xil_pn:in_ck="-6471866950444216945" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1299704270">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="Simple_Video.twr"/>

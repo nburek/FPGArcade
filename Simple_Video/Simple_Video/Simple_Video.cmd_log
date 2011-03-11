@@ -50,3 +50,31 @@ map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Simple_
 par -w -intstyle ise -ol high -t 1 Simple_Video_map.ncd Simple_Video.ncd Simple_Video.pcf 
 trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Simple_Video.twx Simple_Video.ncd -o Simple_Video.twr Simple_Video.pcf -ucf Simple_Video.ucf 
 bitgen -intstyle ise -f Simple_Video.ut Simple_Video.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/nb418308/Desktop/FPGArcade/Simple_Video/Simple_Video/Simple_Video.xst" -ofn "C:/Documents and Settings/nb418308/Desktop/FPGArcade/Simple_Video/Simple_Video/Simple_Video.syr" 
+xst -intstyle ise -ifn "C:/Documents and Settings/nb418308/Desktop/FPGArcade/Simple_Video/Simple_Video/Simple_Video.xst" -ofn "C:/Documents and Settings/nb418308/Desktop/FPGArcade/Simple_Video/Simple_Video/Simple_Video.syr" 
+xst -intstyle ise -ifn "C:/Documents and Settings/nb418308/Desktop/FPGArcade/Simple_Video/Simple_Video/Simple_Video.xst" -ofn "C:/Documents and Settings/nb418308/Desktop/FPGArcade/Simple_Video/Simple_Video/Simple_Video.syr" 
+xst -intstyle ise -ifn "C:/Documents and Settings/nb418308/Desktop/FPGArcade/Simple_Video/Simple_Video/Simple_Video.xst" -ofn "C:/Documents and Settings/nb418308/Desktop/FPGArcade/Simple_Video/Simple_Video/Simple_Video.syr" 
+xst -intstyle ise -ifn "C:/Documents and Settings/nb418308/Desktop/FPGArcade/Simple_Video/Simple_Video/Simple_Video.xst" -ofn "C:/Documents and Settings/nb418308/Desktop/FPGArcade/Simple_Video/Simple_Video/Simple_Video.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Simple_Video.ucf -p xc3s500e-fg320-4 "Simple_Video.ngc" Simple_Video.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Simple_Video_map.ncd Simple_Video.ngd Simple_Video.pcf 
+par -w -intstyle ise -ol high -t 1 Simple_Video_map.ncd Simple_Video.ncd Simple_Video.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Simple_Video.twx Simple_Video.ncd -o Simple_Video.twr Simple_Video.pcf -ucf Simple_Video.ucf 
+bitgen -intstyle ise -f Simple_Video.ut Simple_Video.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/nb418308/Desktop/FPGArcade/Simple_Video/Simple_Video/Simple_Video.xst" -ofn "C:/Documents and Settings/nb418308/Desktop/FPGArcade/Simple_Video/Simple_Video/Simple_Video.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Simple_Video.ucf -p xc3s500e-fg320-4 "Simple_Video.ngc" Simple_Video.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Simple_Video_map.ncd Simple_Video.ngd Simple_Video.pcf 
+par -w -intstyle ise -ol high -t 1 Simple_Video_map.ncd Simple_Video.ncd Simple_Video.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Simple_Video.twx Simple_Video.ncd -o Simple_Video.twr Simple_Video.pcf -ucf Simple_Video.ucf 
+bitgen -intstyle ise -f Simple_Video.ut Simple_Video.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/nb418308/Desktop/FPGArcade/Simple_Video/Simple_Video/Simple_Video.xst" -ofn "C:/Documents and Settings/nb418308/Desktop/FPGArcade/Simple_Video/Simple_Video/Simple_Video.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Simple_Video.ucf -p xc3s500e-fg320-4 "Simple_Video.ngc" Simple_Video.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Simple_Video_map.ncd Simple_Video.ngd Simple_Video.pcf 
+par -w -intstyle ise -ol high -t 1 Simple_Video_map.ncd Simple_Video.ncd Simple_Video.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Simple_Video.twx Simple_Video.ncd -o Simple_Video.twr Simple_Video.pcf -ucf Simple_Video.ucf 
+bitgen -intstyle ise -f Simple_Video.ut Simple_Video.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/nb418308/Desktop/FPGArcade/Simple_Video/Simple_Video/Simple_Video.xst" -ofn "C:/Documents and Settings/nb418308/Desktop/FPGArcade/Simple_Video/Simple_Video/Simple_Video.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Simple_Video.ucf -p xc3s500e-fg320-4 "Simple_Video.ngc" Simple_Video.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Simple_Video_map.ncd Simple_Video.ngd Simple_Video.pcf 
+par -w -intstyle ise -ol high -t 1 Simple_Video_map.ncd Simple_Video.ncd Simple_Video.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Simple_Video.twx Simple_Video.ncd -o Simple_Video.twr Simple_Video.pcf -ucf Simple_Video.ucf 
+bitgen -intstyle ise -f Simple_Video.ut Simple_Video.ncd 

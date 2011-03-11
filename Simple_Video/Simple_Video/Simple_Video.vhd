@@ -44,14 +44,32 @@ component clk25MHz
 			sclk: out STD_LOGIC);
 end component;
 
+component slowClock
+    Port ( clk : in  STD_LOGIC;
+           sclk : out  STD_LOGIC);
+end component;
+
 signal vCount : STD_LOGIC_VECTOR (9 downto 0);
 signal hCount : STD_LOGIC_VECTOR (9 downto 0);
 signal clk25 : STD_LOGIC;
+signal clkSlow : STD_LOGIC;
 signal blockXPosition : std_logic_vector(0 to 9) := "0000000100";
 signal blockYPosition : std_logic_vector(0 to 9) := "0000000100";
 
 begin
 	clock25MHz: clk25MHz port map (clk50,clk25);
+	verySlowClock : slowClock port map(clk50, clkSlow);
+	
+	process (clkSlow)
+	begin
+		IF clkSlow'EVENT AND clkSlow='1' THEN
+			blockXPosition <= blockXPosition + 1;
+			
+			IF (blockXPosition = "0101000000") THEN
+				blockXPosition <= "0000000000";
+			END IF;
+		END IF;
+	end process;
 	
 	process (clk25)
 	
@@ -66,7 +84,7 @@ begin
 
 	IF clk25'EVENT AND clk25='1' THEN
 	
-		blockXPosition(0 to 7) <= sw;
+		--blockXPosition(0 to 7) <= sw;
 		blockYPosition(0 to 3) <= btn;
 		IF (hCount = 799) THEN
 			-- done with this row, move down to the next one

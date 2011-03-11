@@ -1,4 +1,6 @@
-EN clk25mhz NULL "C:/Documents and Settings/nb418308/Desktop/FPGArcade/Simple_Video/Simple_Video/clk25MHz.vhd" sub00/vhpl00 1299359864
-AR clk25mhz behavioral "C:/Documents and Settings/nb418308/Desktop/FPGArcade/Simple_Video/Simple_Video/clk25MHz.vhd" sub00/vhpl01 1299359865
-AR simple_video behavioral "C:/Documents and Settings/nb418308/Desktop/FPGArcade/Simple_Video/Simple_Video/Simple_Video.vhd" sub00/vhpl03 1299359867
-EN simple_video NULL "C:/Documents and Settings/nb418308/Desktop/FPGArcade/Simple_Video/Simple_Video/Simple_Video.vhd" sub00/vhpl02 1299359866
+EN clk25mhz NULL "C:/Documents and Settings/nb418308/Desktop/FPGArcade/Simple_Video/Simple_Video/clk25MHz.vhd" sub00/vhpl00 1299704240
+AR slowclock behavioral "C:/Documents and Settings/nb418308/Desktop/FPGArcade/Simple_Video/Simple_Video/slowClock.vhd" sub00/vhpl05 1299704243
+AR clk25mhz behavioral "C:/Documents and Settings/nb418308/Desktop/FPGArcade/Simple_Video/Simple_Video/clk25MHz.vhd" sub00/vhpl01 1299704241
+AR simple_video behavioral "C:/Documents and Settings/nb418308/Desktop/FPGArcade/Simple_Video/Simple_Video/Simple_Video.vhd" sub00/vhpl03 1299704245
+EN slowclock NULL "C:/Documents and Settings/nb418308/Desktop/FPGArcade/Simple_Video/Simple_Video/slowClock.vhd" sub00/vhpl04 1299704242
+EN simple_video NULL "C:/Documents and Settings/nb418308/Desktop/FPGArcade/Simple_Video/Simple_Video/Simple_Video.vhd" sub00/vhpl02 1299704244

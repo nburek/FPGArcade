@@ -5,55 +5,19 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/FPGArcade/VGA_Driver/top.vhdl</arg>&quot; line <arg fmt="%d" index="2">105</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/top</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Documents and Settings/nb418308/Desktop/FPGArcade/VGA_Driver/top.vhdl</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/FPGArcade/VGA_Driver/top.vhdl</arg>&quot;.
 </msg>
 
-<msg type="info" file="Xst" num="1433" delta="new" >Contents of array &lt;<arg fmt="%s" index="1">display</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/top/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Documents and Settings/nb418308/Desktop/FPGArcade/VGA_Driver/top.vhdl</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/FPGArcade/VGA_Driver/top.vhdl</arg>&quot;.
 </msg>
 
-<msg type="info" file="Xst" num="2679" delta="old" >Register &lt;<arg fmt="%s" index="1">VGA_Red&lt;2&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">top</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/clk25MHz</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Documents and Settings/nb418308/Desktop/FPGArcade/VGA_Driver/clk25MHz.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/FPGArcade/VGA_Driver/clk25MHz.vhd</arg>&quot;.
 </msg>
 
-<msg type="info" file="Xst" num="2679" delta="old" >Register &lt;<arg fmt="%s" index="1">VGA_Red&lt;1&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">top</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/clk25MHz/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Documents and Settings/nb418308/Desktop/FPGArcade/VGA_Driver/clk25MHz.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/FPGArcade/VGA_Driver/clk25MHz.vhd</arg>&quot;.
 </msg>
 
-<msg type="warning" file="Xst" num="1781" delta="new" >Signal &lt;<arg fmt="%s" index="1">display</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">current_pixel&lt;1:7&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">current_pixel_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">VGA_Red_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">current_pixel_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">current_pixel_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">current_pixel_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">current_pixel_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">current_pixel_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">current_pixel_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">current_pixel_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2404" delta="new" > FFs/Latches &lt;<arg fmt="%s" index="1">current_pixel</arg>&lt;<arg fmt="%d" index="2">0</arg>:<arg fmt="%d" index="3">-1</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">VGA_Red_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">VGA_Blue_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;VGA_Blue_1&gt; &lt;VGA_Green_0&gt; &lt;VGA_Green_1&gt; &lt;VGA_Green_2&gt; </arg>
 </msg>
 
 </messages>

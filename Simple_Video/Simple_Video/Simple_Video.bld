@@ -33,6 +33,6 @@ Total memory usage is 82064 kilobytes
 
 Writing NGD file "Simple_Video.ngd" ...
 Total REAL time to NGDBUILD completion:  2 sec
-Total CPU time to NGDBUILD completion:   1 sec
+Total CPU time to NGDBUILD completion:   2 sec
 
 Writing NGDBUILD log file "Simple_Video.bld"...

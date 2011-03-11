@@ -31,8 +31,7 @@ entity top is
 			HSync : out STD_LOGIC;
 			VSync : out STD_LOGIC;
 			clk : in STD_LOGIC;
-			Led : out STD_LOGIC_VECTOR (7 downto 0);
-			sw : in STD_LOGIC_VECTOR (7 downto 0));
+			BlockPosition : in STD_LOGIC_VECTOR (0 to 19));
 end top;
 
 architecture Behavioral of top is
@@ -45,14 +44,6 @@ end component;
 signal vCount : STD_LOGIC_VECTOR (9 downto 0);
 signal hCount : STD_LOGIC_VECTOR (9 downto 0);
 signal clk25 : STD_LOGIC;
-type pixel is array(0 to 7) of std_logic;
-type pixel_column is array(0 to 479) of pixel;
---type pixel_map is array(0 to 639) of pixel_column;
-
-signal display : pixel_column;
-signal current_pixel : pixel;
---signal pixel_map_green : STD_LOGIC_VECTOR (10 downto 0);
---signal pixel_map_blue : STD_LOGIC_VECTOR (921599 downto 0);
 
 begin 
 	clock25MHz: clk25MHz port map (clk,clk25);
@@ -70,6 +61,7 @@ begin
 
 	IF clk25'EVENT AND clk25='1' THEN
 	
+		
 		IF (hCount = 799) THEN
 			-- done with this row, move down to the next one
 			hCount <= "0000000000"; 
@@ -99,15 +91,23 @@ begin
 		
 		
 		IF (hCount <= 639 AND vCount <= 479) THEN -- are we within the valid pixel range
-			--VGA_Red <= "111";
-			--VGA_Green <= "000";
-			--VGA_Blue <= "00";
-			current_pixel <= display(conv_integer(hCount));
-			VGA_Red(0) <= current_pixel(0);
-			--VGA_Red <= sw(2 downto 0);
-			VGA_Green <= sw(5 downto 3);
-			VGA_Blue <= sw(7 downto 6);
-			Led (7 downto 0) <= sw(7 downto 0);
+			
+			IF (vCount >= BlockPosition(10 to 19) AND vCount <= (conv_integer(BlockPosition(10 to 19)) + 30)) THEN
+				IF (hCount>=BlockPosition(0 to 9) AND hCount <= (conv_integer(BlockPosition(0 to 9)) + 30)) THEN
+					VGA_Red <= "111";
+					VGA_Green <= "111";
+					VGA_Blue <= "11";
+				ELSE
+					VGA_Red <= "000";
+					VGA_Green <= "000";
+					VGA_Blue <= "00";
+				END IF;
+			ELSE
+				VGA_Red <= "000";
+				VGA_Green <= "000";
+				VGA_Blue <= "00";
+			END IF;
+			
 		ELSE
 			-- turn off the pixel out data because it is either on the front/back porch or the pulse signal
 			VGA_Red <= "000";
