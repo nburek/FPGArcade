@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="EDK" num="1560" delta="old" >IPNAME:<arg fmt="%s" index="1">plb_v46</arg> INSTANCE:<arg fmt="%s" index="2">mb_plb</arg> - <arg fmt="%s" index="3">C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data\plb_v46_v2_1_0.mpd line 69</arg> - <arg fmt="%s" index="4">tool</arg> is overriding <arg fmt="%s" index="5">PARAMETER</arg> <arg fmt="%s" index="6">C_PLBV46_NUM_MASTERS</arg> value to <arg fmt="%s" index="7">2</arg>
+</msg>
+
+<msg type="info" file="EDK" num="1560" delta="old" >IPNAME:<arg fmt="%s" index="1">plb_v46</arg> INSTANCE:<arg fmt="%s" index="2">mb_plb</arg> - <arg fmt="%s" index="3">C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data\plb_v46_v2_1_0.mpd line 70</arg> - <arg fmt="%s" index="4">tool</arg> is overriding <arg fmt="%s" index="5">PARAMETER</arg> <arg fmt="%s" index="6">C_PLBV46_NUM_SLAVES</arg> value to <arg fmt="%s" index="7">3</arg>
+</msg>
+
+<msg type="info" file="EDK" num="1560" delta="old" >IPNAME:<arg fmt="%s" index="1">plb_v46</arg> INSTANCE:<arg fmt="%s" index="2">mb_plb</arg> - <arg fmt="%s" index="3">C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data\plb_v46_v2_1_0.mpd line 71</arg> - <arg fmt="%s" index="4">tool</arg> is overriding <arg fmt="%s" index="5">PARAMETER</arg> <arg fmt="%s" index="6">C_PLBV46_MID_WIDTH</arg> value to <arg fmt="%s" index="7">1</arg>
+</msg>
+
+<msg type="info" file="EDK" num="1560" delta="old" >IPNAME:<arg fmt="%s" index="1">plb_v46</arg> INSTANCE:<arg fmt="%s" index="2">mb_plb</arg> - <arg fmt="%s" index="3">C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data\plb_v46_v2_1_0.mpd line 73</arg> - <arg fmt="%s" index="4">tool</arg> is overriding <arg fmt="%s" index="5">PARAMETER</arg> <arg fmt="%s" index="6">C_PLBV46_DWIDTH</arg> value to <arg fmt="%s" index="7">32</arg>
+</msg>
+
+<msg type="info" file="EDK" num="1560" delta="old" >IPNAME:<arg fmt="%s" index="1">lmb_v10</arg> INSTANCE:<arg fmt="%s" index="2">ilmb</arg> - <arg fmt="%s" index="3">C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data\lmb_v10_v2_1_0.mpd line 70</arg> - <arg fmt="%s" index="4">tool</arg> is overriding <arg fmt="%s" index="5">PARAMETER</arg> <arg fmt="%s" index="6">C_LMB_NUM_SLAVES</arg> value to <arg fmt="%s" index="7">1</arg>
+</msg>
+
+<msg type="info" file="EDK" num="1560" delta="old" >IPNAME:<arg fmt="%s" index="1">lmb_v10</arg> INSTANCE:<arg fmt="%s" index="2">dlmb</arg> - <arg fmt="%s" index="3">C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data\lmb_v10_v2_1_0.mpd line 70</arg> - <arg fmt="%s" index="4">tool</arg> is overriding <arg fmt="%s" index="5">PARAMETER</arg> <arg fmt="%s" index="6">C_LMB_NUM_SLAVES</arg> value to <arg fmt="%s" index="7">1</arg>
+</msg>
+
+<msg type="info" file="EDK" num="1560" delta="old" >IPNAME:<arg fmt="%s" index="1">bram_block</arg> INSTANCE:<arg fmt="%s" index="2">lmb_bram</arg> - <arg fmt="%s" index="3">C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_0.mpd line 67</arg> - <arg fmt="%s" index="4">tool</arg> is overriding <arg fmt="%s" index="5">PARAMETER</arg> <arg fmt="%s" index="6">C_MEMSIZE</arg> value to <arg fmt="%s" index="7">0x2000</arg>
+</msg>
+
+<msg type="info" file="EDK" num="1560" delta="old" >IPNAME:<arg fmt="%s" index="1">xps_gpio</arg> INSTANCE:<arg fmt="%s" index="2">LEDs_8Bit</arg> - <arg fmt="%s" index="3">C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\data\xps_gpio_v2_1_0.mpd line 72</arg> - <arg fmt="%s" index="4">tool</arg> is overriding <arg fmt="%s" index="5">PARAMETER</arg> <arg fmt="%s" index="6">C_SPLB_NUM_MASTERS</arg> value to <arg fmt="%s" index="7">2</arg>
+</msg>
+
+<msg type="info" file="EDK" num="1560" delta="old" >IPNAME:<arg fmt="%s" index="1">mdm</arg> INSTANCE:<arg fmt="%s" index="2">mdm_0</arg> - <arg fmt="%s" index="3">C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm_v2_1_0.mpd line 83</arg> - <arg fmt="%s" index="4">tool</arg> is overriding <arg fmt="%s" index="5">PARAMETER</arg> <arg fmt="%s" index="6">C_SPLB_MID_WIDTH</arg> value to <arg fmt="%s" index="7">1</arg>
+</msg>
+
+<msg type="info" file="EDK" num="1560" delta="old" >IPNAME:<arg fmt="%s" index="1">mdm</arg> INSTANCE:<arg fmt="%s" index="2">mdm_0</arg> - <arg fmt="%s" index="3">C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm_v2_1_0.mpd line 84</arg> - <arg fmt="%s" index="4">tool</arg> is overriding <arg fmt="%s" index="5">PARAMETER</arg> <arg fmt="%s" index="6">C_SPLB_NUM_MASTERS</arg> value to <arg fmt="%s" index="7">2</arg>
+</msg>
+
+<msg type="info" file="EDK" num="1560" delta="old" >IPNAME:<arg fmt="%s" index="1">xps_gpio</arg> INSTANCE:<arg fmt="%s" index="2">Block_Output</arg> - <arg fmt="%s" index="3">C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\data\xps_gpio_v2_1_0.mpd line 72</arg> - <arg fmt="%s" index="4">tool</arg> is overriding <arg fmt="%s" index="5">PARAMETER</arg> <arg fmt="%s" index="6">C_SPLB_NUM_MASTERS</arg> value to <arg fmt="%s" index="7">2</arg>
+</msg>
+
+</messages>
+

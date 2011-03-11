@@ -1,0 +1,22 @@
+microblaze_0
+BOUNCING_BALL_SOURCES = Bouncing_Ball/src/Bouncing_Ball.c 
+BOUNCING_BALL_HEADERS = Bouncing_Ball/src/Bouncing_Ball_header.h 
+BOUNCING_BALL_CC = mb-gcc
+BOUNCING_BALL_CC_SIZE = mb-size
+BOUNCING_BALL_CC_OPT = -O2
+BOUNCING_BALL_CFLAGS = 
+BOUNCING_BALL_CC_SEARCH = # -B
+BOUNCING_BALL_LIBPATH = -L./microblaze_0/lib/ # -L
+BOUNCING_BALL_INCLUDES = -I./microblaze_0/include/  -IBouncing_Ball/src/ # -I
+BOUNCING_BALL_LFLAGS = # -l
+BOUNCING_BALL_LINKER_SCRIPT = 
+BOUNCING_BALL_CC_DEBUG_FLAG =  -g 
+BOUNCING_BALL_CC_PROFILE_FLAG = # -pg
+BOUNCING_BALL_CC_GLOBPTR_FLAG= # -mxl-gp-opt
+BOUNCING_BALL_MODE = executable
+BOUNCING_BALL_LIBG_OPT = -$(BOUNCING_BALL_MODE) microblaze_0
+BOUNCING_BALL_CC_INFERRED_FLAGS= -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b 
+BOUNCING_BALL_CC_START_ADDR_FLAG=  # -Wl,-defsym -Wl,_TEXT_START_ADDR=
+BOUNCING_BALL_CC_STACK_SIZE_FLAG=  # -Wl,-defsym -Wl,_STACK_SIZE=
+BOUNCING_BALL_CC_HEAP_SIZE_FLAG=  # -Wl,-defsym -Wl,_HEAP_SIZE=
+                  $(BOUNCING_BALL_CC_INFERRED_FLAGS)  \

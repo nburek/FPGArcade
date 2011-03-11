@@ -1,0 +1,418 @@
+Release 12.4 - xst M.81d (nt)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+--> 
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "top_0_wrapper_xst.prj"
+Verilog Include Directory          : {"C:\FPGArcade\Bouncing_Ball\pcores\" "C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
+
+---- Target Parameters
+Target Device                      : xc3s500efg320-4
+Output File Name                   : "../implementation/top_0_wrapper.ngc"
+
+---- Source Options
+Top Module Name                    : top_0_wrapper
+
+---- Target Options
+Add IO Buffers                     : NO
+
+---- General Options
+Optimization Goal                  : speed
+Netlist Hierarchy                  : as_optimized
+Optimization Effort                : 1
+Hierarchy Separator                : /
+
+---- Other Options
+Cores Search Directories           : {../implementation/top_0_wrapper}
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/FPGArcade/Bouncing_Ball/pcores/top_v1_00_a/hdl/vhdl/clk25MHz.vhd" in Library top_v1_00_a.
+Entity <clk25MHz> compiled.
+Entity <clk25MHz> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/FPGArcade/Bouncing_Ball/pcores/top_v1_00_a/hdl/vhdl/top.vhdl" in Library top_v1_00_a.
+Entity <top> compiled.
+Entity <top> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/FPGArcade/Bouncing_Ball/hdl/top_0_wrapper.vhd" in Library work.
+Entity <top_0_wrapper> compiled.
+Entity <top_0_wrapper> (Architecture <STRUCTURE>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <top_0_wrapper> in library <work> (architecture <STRUCTURE>).
+
+Analyzing hierarchy for entity <top> in library <top_v1_00_a> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <clk25MHz> in library <top_v1_00_a> (architecture <Behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <top_0_wrapper> in library <work> (Architecture <STRUCTURE>).
+Entity <top_0_wrapper> analyzed. Unit <top_0_wrapper> generated.
+
+Analyzing Entity <top> in library <top_v1_00_a> (Architecture <Behavioral>).
+Entity <top> analyzed. Unit <top> generated.
+
+Analyzing Entity <clk25MHz> in library <top_v1_00_a> (Architecture <Behavioral>).
+Entity <clk25MHz> analyzed. Unit <clk25MHz> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <clk25MHz>.
+    Related source file is "C:/FPGArcade/Bouncing_Ball/pcores/top_v1_00_a/hdl/vhdl/clk25MHz.vhd".
+    Found 1-bit register for signal <slow_clk>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <clk25MHz> synthesized.
+
+
+Synthesizing Unit <top>.
+    Related source file is "C:/FPGArcade/Bouncing_Ball/pcores/top_v1_00_a/hdl/vhdl/top.vhdl".
+    Register <VGA_Red> equivalent to <VGA_Green> has been removed
+    Found 1-bit register for signal <VSync>.
+    Found 2-bit register for signal <VGA_Blue>.
+    Found 1-bit register for signal <HSync>.
+    Found 3-bit register for signal <VGA_Green>.
+    Found 10-bit up counter for signal <hCount>.
+    Found 11-bit comparator greatequal for signal <HSync$cmp_ge0000> created at line 79.
+    Found 11-bit comparator lessequal for signal <HSync$cmp_le0000> created at line 79.
+    Found 10-bit up counter for signal <vCount>.
+    Found 10-bit adder carry out for signal <VGA_Blue$addsub0002> created at line 95.
+    Found 10-bit adder carry out for signal <VGA_Blue$addsub0003> created at line 96.
+    Found 11-bit comparator greater for signal <VGA_Blue$cmp_gt0000> created at line 93.
+    Found 11-bit comparator greater for signal <VGA_Blue$cmp_gt0001> created at line 93.
+    Found 11-bit comparator greater for signal <VGA_Blue$cmp_gt0002> created at line 95.
+    Found 11-bit comparator greater for signal <VGA_Blue$cmp_gt0003> created at line 96.
+    Found 10-bit comparator less for signal <VGA_Blue$cmp_lt0000> created at line 95.
+    Found 10-bit comparator less for signal <VGA_Blue$cmp_lt0001> created at line 96.
+    Found 11-bit comparator greatequal for signal <VSync$cmp_ge0000> created at line 86.
+    Found 11-bit comparator lessequal for signal <VSync$cmp_le0000> created at line 86.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   7 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  10 Comparator(s).
+Unit <top> synthesized.
+
+
+Synthesizing Unit <top_0_wrapper>.
+    Related source file is "C:/FPGArcade/Bouncing_Ball/hdl/top_0_wrapper.vhd".
+Unit <top_0_wrapper> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 10-bit adder carry out                                : 2
+# Counters                                             : 2
+ 10-bit up counter                                     : 2
+# Registers                                            : 5
+ 1-bit register                                        : 3
+ 2-bit register                                        : 1
+ 3-bit register                                        : 1
+# Comparators                                          : 10
+ 10-bit comparator less                                : 2
+ 11-bit comparator greatequal                          : 2
+ 11-bit comparator greater                             : 4
+ 11-bit comparator lessequal                           : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 10-bit adder carry out                                : 2
+# Counters                                             : 2
+ 10-bit up counter                                     : 2
+# Registers                                            : 8
+ Flip-Flops                                            : 8
+# Comparators                                          : 10
+ 10-bit comparator less                                : 2
+ 11-bit comparator greatequal                          : 2
+ 11-bit comparator greater                             : 4
+ 11-bit comparator lessequal                           : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <VGA_Blue_0> in Unit <top> is equivalent to the following 4 FFs/Latches, which will be removed : <VGA_Blue_1> <VGA_Green_0> <VGA_Green_1> <VGA_Green_2> 
+
+Optimizing unit <top_0_wrapper> ...
+
+Optimizing unit <top> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 24
+ Flip-Flops                                            : 24
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+Top Level Output File Name         : ../implementation/top_0_wrapper.ngc
+Output Format                      : ngc
+Optimization Goal                  : speed
+Keep Hierarchy                     : no
+
+Design Statistics
+# IOs                              : 31
+
+Cell Usage :
+# BELS                             : 213
+#      GND                         : 1
+#      INV                         : 12
+#      LUT1                        : 28
+#      LUT2                        : 40
+#      LUT3                        : 3
+#      LUT3_L                      : 1
+#      LUT4                        : 7
+#      LUT4_D                      : 2
+#      LUT4_L                      : 2
+#      MUXCY                       : 78
+#      VCC                         : 1
+#      XORCY                       : 38
+# FlipFlops/Latches                : 24
+#      FDR                         : 14
+#      FDRE                        : 10
+# Clock Buffers                    : 1
+#      BUFG                        : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                       53  out of   4656     1%  
+ Number of Slice Flip Flops:             24  out of   9312     0%  
+ Number of 4 input LUTs:                 95  out of   9312     1%  
+ Number of IOs:                          31
+ Number of bonded IOBs:                   0  out of    232     0%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+--------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)          | Load  |
+-----------------------------------+--------------------------------+-------+
+top_0/clock25MHz/slow_clk1         | BUFG                           | 23    |
+clk                                | NONE(top_0/clock25MHz/slow_clk)| 1     |
+-----------------------------------+--------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 6.623ns (Maximum Frequency: 150.989MHz)
+   Minimum input arrival time before clock: 7.237ns
+   Maximum output required time after clock: 0.591ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'top_0/clock25MHz/slow_clk1'
+  Clock period: 6.623ns (frequency: 150.989MHz)
+  Total number of paths / destination ports: 593 / 53
+-------------------------------------------------------------------------
+Delay:               6.623ns (Levels of Logic = 13)
+  Source:            top_0/vCount_0 (FF)
+  Destination:       top_0/VGA_Blue_0 (FF)
+  Source Clock:      top_0/clock25MHz/slow_clk1 rising
+  Destination Clock: top_0/clock25MHz/slow_clk1 rising
+
+  Data Path: top_0/vCount_0 to top_0/VGA_Blue_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             4   0.591   0.666  top_0/vCount_0 (top_0/vCount_0)
+     LUT2:I1->O            1   0.704   0.000  top_0/Mcompar_VGA_Blue_cmp_lt0000_lut<0> (top_0/Mcompar_VGA_Blue_cmp_lt0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  top_0/Mcompar_VGA_Blue_cmp_lt0000_cy<0> (top_0/Mcompar_VGA_Blue_cmp_lt0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  top_0/Mcompar_VGA_Blue_cmp_lt0000_cy<1> (top_0/Mcompar_VGA_Blue_cmp_lt0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  top_0/Mcompar_VGA_Blue_cmp_lt0000_cy<2> (top_0/Mcompar_VGA_Blue_cmp_lt0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  top_0/Mcompar_VGA_Blue_cmp_lt0000_cy<3> (top_0/Mcompar_VGA_Blue_cmp_lt0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  top_0/Mcompar_VGA_Blue_cmp_lt0000_cy<4> (top_0/Mcompar_VGA_Blue_cmp_lt0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  top_0/Mcompar_VGA_Blue_cmp_lt0000_cy<5> (top_0/Mcompar_VGA_Blue_cmp_lt0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  top_0/Mcompar_VGA_Blue_cmp_lt0000_cy<6> (top_0/Mcompar_VGA_Blue_cmp_lt0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  top_0/Mcompar_VGA_Blue_cmp_lt0000_cy<7> (top_0/Mcompar_VGA_Blue_cmp_lt0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  top_0/Mcompar_VGA_Blue_cmp_lt0000_cy<8> (top_0/Mcompar_VGA_Blue_cmp_lt0000_cy<8>)
+     MUXCY:CI->O           1   0.459   0.424  top_0/Mcompar_VGA_Blue_cmp_lt0000_cy<9> (top_0/Mcompar_VGA_Blue_cmp_lt0000_cy<9>)
+     LUT4_L:I3->LO         1   0.704   0.104  top_0/VGA_Blue_or000027_SW0 (N4)
+     LUT4:I3->O            1   0.704   0.420  top_0/VGA_Blue_or000027 (top_0/VGA_Blue_or0000)
+     FDR:R                     0.911          top_0/VGA_Blue_0
+    ----------------------------------------
+    Total                      6.623ns (5.009ns logic, 1.614ns route)
+                                       (75.6% logic, 24.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 1.949ns (frequency: 513.084MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.949ns (Levels of Logic = 0)
+  Source:            top_0/clock25MHz/slow_clk (FF)
+  Destination:       top_0/clock25MHz/slow_clk (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: top_0/clock25MHz/slow_clk to top_0/clock25MHz/slow_clk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.591   0.447  top_0/clock25MHz/slow_clk (top_0/clock25MHz/slow_clk1)
+     FDR:R                     0.911          top_0/clock25MHz/slow_clk
+    ----------------------------------------
+    Total                      1.949ns (1.502ns logic, 0.447ns route)
+                                       (77.1% logic, 22.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'top_0/clock25MHz/slow_clk1'
+  Total number of paths / destination ports: 222 / 1
+-------------------------------------------------------------------------
+Offset:              7.237ns (Levels of Logic = 14)
+  Source:            BlockPosition<18> (PAD)
+  Destination:       top_0/VGA_Blue_0 (FF)
+  Destination Clock: top_0/clock25MHz/slow_clk1 rising
+
+  Data Path: BlockPosition<18> to top_0/VGA_Blue_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     INV:I->O              1   0.704   0.000  top_0/Madd_VGA_Blue_addsub0002_lut<1>_INV_0 (top_0/Madd_VGA_Blue_addsub0002_lut<1>)
+     MUXCY:S->O            1   0.464   0.000  top_0/Madd_VGA_Blue_addsub0002_cy<1> (top_0/Madd_VGA_Blue_addsub0002_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  top_0/Madd_VGA_Blue_addsub0002_cy<2> (top_0/Madd_VGA_Blue_addsub0002_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  top_0/Madd_VGA_Blue_addsub0002_cy<3> (top_0/Madd_VGA_Blue_addsub0002_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  top_0/Madd_VGA_Blue_addsub0002_cy<4> (top_0/Madd_VGA_Blue_addsub0002_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  top_0/Madd_VGA_Blue_addsub0002_cy<5> (top_0/Madd_VGA_Blue_addsub0002_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  top_0/Madd_VGA_Blue_addsub0002_cy<6> (top_0/Madd_VGA_Blue_addsub0002_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  top_0/Madd_VGA_Blue_addsub0002_cy<7> (top_0/Madd_VGA_Blue_addsub0002_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  top_0/Madd_VGA_Blue_addsub0002_cy<8> (top_0/Madd_VGA_Blue_addsub0002_cy<8>)
+     XORCY:CI->O           1   0.804   0.595  top_0/Madd_VGA_Blue_addsub0002_xor<9> (top_0/VGA_Blue_addsub0002<9>)
+     LUT2:I0->O            1   0.704   0.000  top_0/Mcompar_VGA_Blue_cmp_gt0002_lut<9> (top_0/Mcompar_VGA_Blue_cmp_gt0002_lut<9>)
+     MUXCY:S->O            1   0.464   0.000  top_0/Mcompar_VGA_Blue_cmp_gt0002_cy<9> (top_0/Mcompar_VGA_Blue_cmp_gt0002_cy<9>)
+     MUXCY:CI->O           1   0.459   0.595  top_0/Mcompar_VGA_Blue_cmp_gt0002_cy<10> (top_0/Mcompar_VGA_Blue_cmp_gt0002_cy<10>)
+     LUT4:I0->O            1   0.704   0.420  top_0/VGA_Blue_or000027 (top_0/VGA_Blue_or0000)
+     FDR:R                     0.911          top_0/VGA_Blue_0
+    ----------------------------------------
+    Total                      7.237ns (5.627ns logic, 1.610ns route)
+                                       (77.8% logic, 22.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'top_0/clock25MHz/slow_clk1'
+  Total number of paths / destination ports: 10 / 10
+-------------------------------------------------------------------------
+Offset:              0.591ns (Levels of Logic = 0)
+  Source:            top_0/VSync (FF)
+  Destination:       VSync (PAD)
+  Source Clock:      top_0/clock25MHz/slow_clk1 rising
+
+  Data Path: top_0/VSync to VSync
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              0   0.591   0.000  top_0/VSync (top_0/VSync)
+    ----------------------------------------
+    Total                      0.591ns (0.591ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 3.80 secs
+ 
+--> 
+
+Total memory usage is 154536 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

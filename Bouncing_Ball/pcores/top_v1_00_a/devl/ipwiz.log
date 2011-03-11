@@ -1,0 +1,57 @@
+Mapping logical library work (line 1) to current logical library top_v1_00_a ...
+Mapping logical library work (line 2) to current logical library top_v1_00_a ...
+Parsing XST project file successfully ...
+Analyzing HDL source files ...
+Analyzing HDL source files successfully ...
+HDL language for the peripheral (top level) design unit top is vhdl ...
+INFO:EDK:3391 - Create temporary xst project file:
+   C:\FPGArcade\Bouncing_Ball\pcores/top.prj
+Compiling vhdl file "C:/FPGArcade/VGA_Driver/clk25MHz.vhd" in Library
+top_v1_00_a.
+Entity <clk25MHz> compiled.
+Entity <clk25MHz> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/FPGArcade/VGA_Driver/top.vhdl" in Library top_v1_00_a.
+Entity <top> compiled.
+Entity <top> (Architecture <Behavioral>) compiled.
+
+
+Analyzing HDL attributes ...
+Entity name = top
+INFO:EDK:1607 - IPTYPE set to value : PERIPHERAL
+INFO:EDK:1511 - IMP_NETLIST set to value : TRUE
+INFO:EDK:1486 - HDL set to value : VHDL
+WARNING:EDK:3590 - Unable to delete temporary project file
+   C:\FPGArcade\Bouncing_Ball\pcores\top.prj : 13
+Copying file clk25MHz.vhd to
+C:\FPGArcade\Bouncing_Ball\pcores/top_v1_00_a/hdl/vhdl/ ...
+Copying file top.vhdl to C:\FPGArcade\Bouncing_Ball\pcores/top_v1_00_a/hdl/vhdl/
+...
+
+Thank you for using Create and Import Peripheral Wizard! Please find your
+imported peripheral under C:\FPGArcade\Bouncing_Ball\pcores\top_v1_00_a.
+
+Summary:
+
+  Logical library     : top_v1_00_a
+  Version             : 1.00.a
+  Bus interface(s)    : None
+
+The following sub-directories will be created:
+
+  - top_v1_00_a\data
+  - top_v1_00_a\hdl
+  - top_v1_00_a\hdl\vhdl
+
+
+The following HDL source files will be copied into the top_v1_00_a\hdl\vhdl
+directory:
+
+  - clk25MHz.vhd
+  - top.vhdl
+
+The following files will be created under the top_v1_00_a\data directory:
+
+  - top_v2_1_0.mpd
+  - top_v2_1_0.pao
+
+
