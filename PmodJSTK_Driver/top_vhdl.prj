@@ -1,0 +1,3 @@
+vhdl work "C:\FPGArcade\PmodJSTK_Driver\clock1Mhz.vhd"
+vhdl work "C:\FPGArcade\PmodJSTK_Driver\PmodJSTK_Driver.vhd"
+vhdl work "C:\FPGArcade\PmodJSTK_Driver\top.vhd"

@@ -98,7 +98,7 @@ int GpioOutputExample(u16 DeviceId, u32 GpioWidth)
 	u32 Data;
 	volatile int Delay;
 	int Status;
-	u16 blockX = 0; //the blocks X coord
+	u16 blockX = 10; //the blocks X coord
 	u16 blockY = 0; //the blocks Y coord
 	u16 directionX = 1; //should it move left or right (1=right, -1=left)
 	u16 directionY = 1; //should it move up or down (1=down, -1=up)

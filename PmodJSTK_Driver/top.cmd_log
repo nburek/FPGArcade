@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn "C:/FPGArcade/PmodJSTK_Driver/top.xst" -ofn "C:/FPGArcade/PmodJSTK_Driver/top.syr" 
+xst -intstyle ise -ifn "C:/FPGArcade/PmodJSTK_Driver/top.xst" -ofn "C:/FPGArcade/PmodJSTK_Driver/top.syr" 
+xst -intstyle ise -ifn "C:/FPGArcade/PmodJSTK_Driver/top.xst" -ofn "C:/FPGArcade/PmodJSTK_Driver/top.syr" 
+xst -intstyle ise -ifn "C:/FPGArcade/PmodJSTK_Driver/top.xst" -ofn "C:/FPGArcade/PmodJSTK_Driver/top.syr" 
+xst -intstyle ise -ifn "C:/FPGArcade/PmodJSTK_Driver/top.xst" -ofn "C:/FPGArcade/PmodJSTK_Driver/top.syr" 

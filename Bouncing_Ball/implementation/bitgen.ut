@@ -2,7 +2,7 @@
 -g TdoPin:PULLNONE
 -g M1Pin:PULLDOWN
 -g DonePin:PULLUP
--g StartUpClk:JTAGCLK
+-g StartUpClk:CCLK
 -g M0Pin:PULLUP
 -g M2Pin:PULLUP
 -g ProgPin:PULLUP

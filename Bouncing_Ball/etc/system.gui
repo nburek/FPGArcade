@@ -71,9 +71,7 @@
       <SET ID="gpio_0" IS_EXPANDED="TRUE"/>
     </SET>
     <STATUS>
-      <SELECTIONS>
-        <VARIABLE ID="GPIO_IO_O" INSTANCE="Block_Output" PARENT="gpio_0"/>
-      </SELECTIONS>
+      <SELECTIONS/>
     </STATUS>
     <SEQUENCES IS_DEF_SEQUENCES="TRUE">
       <VARIABLE ID="ExternalPorts" IS_EXPANDED="TRUE" ROW_INDEX="0"/>

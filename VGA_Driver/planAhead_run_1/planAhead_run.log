@@ -1,0 +1,13 @@
+
+****** PlanAhead v12.4
+  **** Build 108585 by hdbuild on Tue Nov  9 17:32:56 MST 2010
+    ** Copyright 1986-1999, 2001-2010 Xilinx, Inc. All Rights Reserved.
+
+INFO: [HD-Licensing 0] Attempting to get a license: PlanAhead
+INFO: [HD-Licensing 1] Got a license: PlanAhead
+INFO: [HD-ArchReader 0] Loading parts and site information from C:\Xilinx\12.4\ISE_DS\PlanAhead\parts\arch.xml
+INFO: [HD-RTPRIM 0] Parsing RTL primitives file 'C:\Xilinx\12.4\ISE_DS\PlanAhead\parts\xilinx\rtl\prims\rtl_prims.xml'
+INFO: [HD-RTPRIM 1] Finished Parsing RTL primitives file 'C:\Xilinx\12.4\ISE_DS\PlanAhead\parts\xilinx\rtl\prims\rtl_prims.xml'
+starting gui ...
+INFO: [HD-Application 0] Exiting PlanAhead...
+INFO: [HD-Licensing 2] Releasing license: PlanAhead

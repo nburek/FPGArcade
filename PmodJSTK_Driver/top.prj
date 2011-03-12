@@ -1,0 +1,3 @@
+vhdl work "clock1Mhz.vhd"
+vhdl work "PmodJSTK_Driver.vhd"
+vhdl work "top.vhd"
