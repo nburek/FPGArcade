@@ -35,7 +35,8 @@ entity top is
 				SS : out STD_LOGIC;
 				MOSI : out STD_LOGIC;
 				MISO : in STD_LOGIC;
-				SCK : out STD_LOGIC
+				SCK : out STD_LOGIC;
+				sw : in STD_LOGIC_VECTOR(0 to 7)
 				);
 end top;
 
@@ -68,7 +69,26 @@ clk_Signal <= clk50Mhz;
 
 jstk : PmodJSTK_Driver port map(clk_Signal,LEDs,jstkData,SS_Signal,MOSI_Signal,MISO_Signal,SCK_Signal);
 
-Led <= jstkData(0 to 7);
+process (clk50Mhz)
+begin
+IF (sw(7) = '1') THEN
+Led(0 to 7) <= jstkData(0 to 7);
+ELSIF (sw(6) = '1') THEN
+Led(0 to 5) <= "000000";
+Led(6 to 7) <= jstkData(8 to 9);
+ELSIF (sw(5) = '1') THEN
+Led(0 to 7) <= jstkData(10 to 17);
+ELSIF (sw(4) = '1') THEN
+Led(0 to 5) <= "000000";
+Led(6 to 7) <= jstkData(18 to 19);
+ELSIF (sw(3) = '1') THEN
+Led(0 to 4) <= "00000";
+Led(5 to 7) <= jstkData(20 to 22);
+ELSE
+Led <= "00000001";
+END IF;
+
+end process;
 
 end Behavioral;
 

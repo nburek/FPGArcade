@@ -43,9 +43,11 @@ end PmodJSTK_Driver;
 
 architecture Behavioral of PmodJSTK_Driver is
 
-signal counter : STD_LOGIC_VECTOR(0 to 6);
+signal bitCounter : STD_LOGIC_VECTOR(3 downto 0) := "0000";
+signal byteCounter : STD_LOGIC_VECTOR(3 downto 0):= "0000";
 signal clk1Mhz : STD_LOGIC;
-signal bufferSignal : STD_LOGIC_VECTOR(0 to 9);
+signal bufferSignal : STD_LOGIC_VECTOR(0 to 9):= "0000000000";
+signal betweenBytes : STD_LOGIC := '0';
 
 component clock1Mhz
 	Port (clk50Mhz : in STD_LOGIC;
@@ -62,16 +64,82 @@ SCK <= clk1Mhz;
 process (clk1Mhz)
 begin
 	IF (clk1Mhz'EVENT AND clk1Mhz='1') THEN
-		IF (counter = 0) THEN
-			SS <= '1'; -- turns it off since it's active low
-		ELSIF (counter = 10) THEN
-			SS <= '0'; -- turns it on since it's active low
-		ELSIF (counter >= 25 AND counter < 33) THEN
-			bufferSignal(32-counter) <= MISO;
-		ELSIF (counter >=39 AND counter < 41) THEN --33 through 38 can be ignored since they're junk, 39 and 40 are the upper bits
-			bufferSignal(48-counter) <= MISO;
+		
+		IF (byteCounter = 0) THEN
+			Data(0) <= '1';
+			IF (bitCounter < 10) THEN
+				SS <= '1'; --inactive high
+			ELSIF (bitCounter < 25) THEN
+				SS <= '0'; --active low
+			END IF;
+			bitCounter <= bitCounter + 1;
+			
+			IF (bitCounter = 25) THEN
+				bitCounter <= "0000";
+				byteCounter <= byteCounter + 1;
+			END IF;
+		
+		ELSIF (betweenBytes = '1') THEN -- if you need to wait between bytes
+		Data(1) <= '1';
+			IF (bitCounter<10) THEN
+				bitCounter <= bitCounter + 1;
+			ELSE
+				bitCounter <= "0000";
+				betweenBytes <= '0';
+			END IF;
+		
+		ELSIF (byteCounter = 1 OR byteCounter = 3) THEN
+		Data(2) <= '1';
+			bufferSignal(conv_integer(7-bitCounter)) <= MISO;
+			bitCounter <= bitCounter + 1;
+			
+			IF (bitCounter = 8) THEN
+				bitCounter <= "0000";
+				betweenBytes <= '1';
+				byteCounter <= byteCounter + 1;
+			END IF;
+		ELSIF (byteCounter = 2 OR byteCounter = 4) THEN
+		Data(3) <= '1';
+			IF (bitCounter = 6) THEN
+				bufferSignal(9) <= MISO;
+			ELSIF (bitCounter = 8) THEN
+				bufferSignal(8) <= MISO;
+			END IF;
+			
+			bitCounter <= bitCounter + 1;
+			
+			IF (bitCounter = 8) THEN
+				IF (byteCounter = 2) THEN
+--					Data(0 to 9) <= bufferSignal(0 to 9);
+					--Data(0 to 9) <= "1010101010";
+				ELSIF (byteCounter = 4) THEN
+					Data(10 to 19) <= bufferSignal(0 to 9);
+					--Data(0 to 9) <= "0101010101";
+				END IF;
+				bitCounter <= "0000";
+				betweenBytes <= '1';
+				byteCounter <= byteCounter + 1;
+			END IF;
+		ELSIF (byteCounter = 5) THEN
+		Data(4) <= '1';
+			IF (bitCounter = 5) THEN
+				Data(20) <= MISO;
+			ELSIF (bitCounter = 6) THEN
+				Data(21) <= MISO;
+			ELSIF (bitCounter = 7) THEN
+				Data(22) <= MISO;
+			END IF;
+			
+			bitCounter <= bitCounter + 1;
+			
+			IF (bitCounter = 8) THEN
+				bitCounter <= "0000";
+				byteCounter <= "0000";
+			END IF;
 		END IF;
-		counter <= counter + 1;
+			
+		
+		
 	END IF;
 
 end process;
