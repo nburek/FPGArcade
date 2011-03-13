@@ -38,23 +38,24 @@ end clock1Mhz;
 architecture Behavioral of clock1Mhz is
 
 signal slow_clk: STD_LOGIC;
-signal count : STD_LOGIC_VECTOR(4 downto 0) := "00000";
+signal count : STD_LOGIC_VECTOR(9 downto 0) := "0000000000";
 
 begin
-
+	clk1Mhz <= count(9);
 	process (clk50Mhz)
 	begin
 		IF (clk50Mhz'EVENT AND clk50Mhz='1') THEN
-			IF (count = "11001") THEN -- if count = 25
-				count <= "00000";
-				slow_clk <= not slow_clk;
-			ELSE
-				count <= count + 1;
-			END IF;
+--			IF (count = "11001") THEN -- if count = 25
+--				count <= "000000";
+--				slow_clk <= not slow_clk;
+--			ELSE
+--				count <= count + 1;
+--			END IF;
+count <= count + 1;
 		END IF;
 	end process;
 
-	clk1Mhz <= slow_clk;
+	--clk1Mhz <= slow_clk;
 
 end Behavioral;
 

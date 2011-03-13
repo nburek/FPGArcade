@@ -1,10 +1,10 @@
 ----------------------------------------------------------------------------------
 -- Company: 
--- Engineer: 
+-- Engineer: Chirap Claudiu - Teodor
 -- 
--- Create Date:    14:54:57 03/11/2011 
+-- Create Date:    18:24:43 04/20/2010 
 -- Design Name: 
--- Module Name:    PmodJSTK_Driver - Behavioral 
+-- Module Name:    jstkInterface - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -22,127 +22,100 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_ARITH.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx primitives in this code.
+---- Uncomment the following library declaration if instantiating
+---- any Xilinx primitives in this code.
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity PmodJSTK_Driver is
+entity jstkModule is
+    Port ( CLK: in std_logic;
+			  MOSI : out  STD_LOGIC;
+           SS : out  STD_LOGIC;
+           MISO : in  STD_LOGIC;
+			  Data : out STD_LOGIC_VECTOR(22 downto 0);
+           SCK : out  STD_LOGIC);
+end jstkModule;
+
+architecture Behavioral of jstkModule is
+
+component clock1Mhz 
     Port ( clk50Mhz : in  STD_LOGIC;
-           LED : in  STD_LOGIC_VECTOR(0 to 2);
-           Data : out  STD_LOGIC_VECTOR(0 to 22);
-			  SS : out STD_LOGIC;
-			  MOSI : out STD_LOGIC;
-			  MISO : in STD_LOGIC;
-			  SCK : out STD_LOGIC);
-end PmodJSTK_Driver;
-
-architecture Behavioral of PmodJSTK_Driver is
-
-signal bitCounter : STD_LOGIC_VECTOR(3 downto 0) := "0000";
-signal byteCounter : STD_LOGIC_VECTOR(3 downto 0):= "0000";
-signal clk1Mhz : STD_LOGIC;
-signal bufferSignal : STD_LOGIC_VECTOR(0 to 9):= "0000000000";
-signal betweenBytes : STD_LOGIC := '0';
-
-component clock1Mhz
-	Port (clk50Mhz : in STD_LOGIC;
-			clk1Mhz : out STD_LOGIC);
+           clk1Mhz : out  STD_LOGIC);
 end component;
 
+signal clk1Mhz : STD_LOGIC;
+signal counter : STD_LOGIC_VECTOR(9 downto 0);
+signal saveBuffer : STD_LOGIC_VECTOR(39 downto 0);
+signal inputBuffer : STD_LOGIC_VECTOR(39 downto 0);
+
 
 begin
-
-clkGen1Mhz: clock1Mhz port map (clk50Mhz,clk1Mhz);
-
-SCK <= clk1Mhz;
-
-process (clk1Mhz)
-begin
-	IF (clk1Mhz'EVENT AND clk1Mhz='1') THEN
-		
-		IF (byteCounter = 0) THEN
-			Data(0) <= '1';
-			IF (bitCounter < 10) THEN
-				SS <= '1'; --inactive high
-			ELSIF (bitCounter < 25) THEN
-				SS <= '0'; --active low
-			END IF;
-			bitCounter <= bitCounter + 1;
 			
-			IF (bitCounter = 25) THEN
-				bitCounter <= "0000";
-				byteCounter <= byteCounter + 1;
-			END IF;
+	clkGen1Mhz : clock1Mhz port map(CLK,clk1Mhz);
+
+	Data(9) <= saveBuffer(14);
+	Data(8) <= saveBuffer(15);
+	Data(7) <= saveBuffer(0);
+	Data(6) <= saveBuffer(1);
+	Data(5) <= saveBuffer(2);
+	Data(4) <= saveBuffer(3);
+	Data(3) <= saveBuffer(4);
+	Data(2) <= saveBuffer(5);
+	Data(1) <= saveBuffer(6);
+	Data(0) <= saveBuffer(7);
+
+	Data(19) <= saveBuffer(30);
+	Data(18) <= saveBuffer(31);
+	Data(17) <= saveBuffer(16);
+	Data(16) <= saveBuffer(17);
+	Data(15) <= saveBuffer(18);
+	Data(14) <= saveBuffer(19);
+	Data(13) <= saveBuffer(20);
+	Data(12) <= saveBuffer(21);
+	Data(11) <= saveBuffer(22);
+	Data(10) <= saveBuffer(23);
+
+	Data(20)<=saveBuffer(39);
+	Data(21)<=saveBuffer(38);
+	Data(22)<=saveBuffer(37);
+
+	SCK <= clk1Mhz;
+
+	process (clk1Mhz)
+	begin
+		IF (clk1Mhz'EVENT AND clk1Mhz = '1') THEN
 		
-		ELSIF (betweenBytes = '1') THEN -- if you need to wait between bytes
-		Data(1) <= '1';
-			IF (bitCounter<10) THEN
-				bitCounter <= bitCounter + 1;
+--			IF (counter < 10) THEN
+--				SS <= '1';
+--			ELSIF (counter < 25) THEN
+--				SS <= '0';
+--			ELSIF (counter < 65) THEN
+--				inputBuffer(conv_integer(counter)-25) <= MISO;
+--			END IF;
+--			
+--			IF (counter<65) THEN
+--				counter <= counter + 1;
+--			ELSE
+--				saveBuffer <= inputBuffer;
+--				counter <= "0000000000";
+--			END IF;
+			
+			IF (counter = 0) THEN
+				SS <= '1';
+			ELSIF (counter = 1) THEN
+				ss <= '0';
+			ELSIF (counter < 42) THEN
+				inputBuffer(conv_integer(counter)-2) <= MISO;
+			END IF;
+			
+			IF (counter < 42) THEN
+				counter <= counter + 1;
 			ELSE
-				bitCounter <= "0000";
-				betweenBytes <= '0';
-			END IF;
-		
-		ELSIF (byteCounter = 1 OR byteCounter = 3) THEN
-		Data(2) <= '1';
-			bufferSignal(conv_integer(7-bitCounter)) <= MISO;
-			bitCounter <= bitCounter + 1;
-			
-			IF (bitCounter = 8) THEN
-				bitCounter <= "0000";
-				betweenBytes <= '1';
-				byteCounter <= byteCounter + 1;
-			END IF;
-		ELSIF (byteCounter = 2 OR byteCounter = 4) THEN
-		Data(3) <= '1';
-			IF (bitCounter = 6) THEN
-				bufferSignal(9) <= MISO;
-			ELSIF (bitCounter = 8) THEN
-				bufferSignal(8) <= MISO;
+				counter <= "0000000000";
+				saveBuffer <= inputBuffer;
 			END IF;
 			
-			bitCounter <= bitCounter + 1;
-			
-			IF (bitCounter = 8) THEN
-				IF (byteCounter = 2) THEN
---					Data(0 to 9) <= bufferSignal(0 to 9);
-					--Data(0 to 9) <= "1010101010";
-				ELSIF (byteCounter = 4) THEN
-					Data(10 to 19) <= bufferSignal(0 to 9);
-					--Data(0 to 9) <= "0101010101";
-				END IF;
-				bitCounter <= "0000";
-				betweenBytes <= '1';
-				byteCounter <= byteCounter + 1;
-			END IF;
-		ELSIF (byteCounter = 5) THEN
-		Data(4) <= '1';
-			IF (bitCounter = 5) THEN
-				Data(20) <= MISO;
-			ELSIF (bitCounter = 6) THEN
-				Data(21) <= MISO;
-			ELSIF (bitCounter = 7) THEN
-				Data(22) <= MISO;
-			END IF;
-			
-			bitCounter <= bitCounter + 1;
-			
-			IF (bitCounter = 8) THEN
-				bitCounter <= "0000";
-				byteCounter <= "0000";
-			END IF;
 		END IF;
-			
-		
-		
-	END IF;
-
-end process;
+	end process;
 
 end Behavioral;
-

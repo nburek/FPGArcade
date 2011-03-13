@@ -107,17 +107,17 @@ Slice Utilization Ratio Delta      : 5
 Compiling vhdl file "C:/FPGArcade/PmodJSTK_Driver/clock1Mhz.vhd" in Library work.
 Architecture behavioral of Entity clock1mhz is up to date.
 Compiling vhdl file "C:/FPGArcade/PmodJSTK_Driver/PmodJSTK_Driver.vhd" in Library work.
-Architecture behavioral of Entity pmodjstk_driver is up to date.
+Entity <jstkmodule> compiled.
+Entity <jstkmodule> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/FPGArcade/PmodJSTK_Driver/top.vhd" in Library work.
-Entity <top> compiled.
-Entity <top> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity top is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
 =========================================================================
 Analyzing hierarchy for entity <top> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <PmodJSTK_Driver> in library <work> (architecture <behavioral>).
+Analyzing hierarchy for entity <jstkModule> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for entity <clock1Mhz> in library <work> (architecture <behavioral>).
 
@@ -126,18 +126,12 @@ Analyzing hierarchy for entity <clock1Mhz> in library <work> (architecture <beha
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <top> in library <work> (Architecture <behavioral>).
-WARNING:Xst:819 - "C:/FPGArcade/PmodJSTK_Driver/top.vhd" line 72: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:819 - "C:/FPGArcade/PmodJSTK_Driver/top.vhd" line 71: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <sw>, <jstkData>
 Entity <top> analyzed. Unit <top> generated.
 
-Analyzing Entity <PmodJSTK_Driver> in library <work> (Architecture <behavioral>).
-WARNING:Xst:790 - "C:/FPGArcade/PmodJSTK_Driver/PmodJSTK_Driver.vhd" line 93: Index value(s) does not match array range, simulation mismatch.
-INFO:Xst:2679 - Register <Data<0>> in unit <PmodJSTK_Driver> has a constant value of 1 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <Data<1>> in unit <PmodJSTK_Driver> has a constant value of 1 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <Data<2>> in unit <PmodJSTK_Driver> has a constant value of 1 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <Data<3>> in unit <PmodJSTK_Driver> has a constant value of 1 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <Data<4>> in unit <PmodJSTK_Driver> has a constant value of 1 during circuit operation. The register is replaced by logic.
-Entity <PmodJSTK_Driver> analyzed. Unit <PmodJSTK_Driver> generated.
+Analyzing Entity <jstkModule> in library <work> (Architecture <behavioral>).
+Entity <jstkModule> analyzed. Unit <jstkModule> generated.
 
 Analyzing Entity <clock1Mhz> in library <work> (Architecture <behavioral>).
 Entity <clock1Mhz> analyzed. Unit <clock1Mhz> generated.
@@ -151,57 +145,51 @@ Performing bidirectional port resolution...
 
 Synthesizing Unit <clock1Mhz>.
     Related source file is "C:/FPGArcade/PmodJSTK_Driver/clock1Mhz.vhd".
-    Found 5-bit up counter for signal <count>.
-    Found 1-bit register for signal <slow_clk>.
+WARNING:Xst:1780 - Signal <slow_clk> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 10-bit up counter for signal <count>.
     Summary:
 	inferred   1 Counter(s).
-	inferred   1 D-type flip-flop(s).
 Unit <clock1Mhz> synthesized.
 
 
-Synthesizing Unit <PmodJSTK_Driver>.
+Synthesizing Unit <jstkModule>.
     Related source file is "C:/FPGArcade/PmodJSTK_Driver/PmodJSTK_Driver.vhd".
 WARNING:Xst:1305 - Output <MOSI> is never assigned. Tied to value 0.
-WARNING:Xst:1305 - Output <Data<5:9>> is never assigned. Tied to value 00000.
-WARNING:Xst:647 - Input <LED> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <saveBuffer<36:32>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <saveBuffer<29:24>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <saveBuffer<13:8>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
     Found 1-bit register for signal <SS>.
-    Found 13-bit register for signal <Data<10:22>>.
-    Found 1-bit register for signal <betweenBytes>.
-    Found 4-bit register for signal <bitCounter>.
-    Found 4-bit adder for signal <bitCounter$add0000> created at line 133.
-    Found 5-bit comparator less for signal <bitCounter$cmp_lt0000> created at line 84.
-    Found 10-bit register for signal <bufferSignal>.
-    Found 4-bit adder for signal <bufferSignal$sub0000> created at line 93.
-    Found 4-bit register for signal <byteCounter>.
-    Found 4-bit adder for signal <byteCounter$addsub0000>.
+    Found 10-bit up counter for signal <counter>.
+    Found 40-bit register for signal <inputBuffer>.
+    Found 11-bit comparator greatequal for signal <inputBuffer_4$cmp_ge0000> created at line 106.
+    Found 40-bit register for signal <saveBuffer>.
+    Found 11-bit comparator less for signal <saveBuffer$cmp_lt0000> created at line 111.
     Summary:
-	inferred  33 D-type flip-flop(s).
-	inferred   3 Adder/Subtractor(s).
-	inferred   1 Comparator(s).
-Unit <PmodJSTK_Driver> synthesized.
+	inferred   1 Counter(s).
+	inferred  81 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+Unit <jstkModule> synthesized.
 
 
 Synthesizing Unit <top>.
     Related source file is "C:/FPGArcade/PmodJSTK_Driver/top.vhd".
 WARNING:Xst:647 - Input <sw<0:2>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:653 - Signal <LEDs> is used but never assigned. This sourceless signal will be automatically connected to value 000.
+WARNING:Xst:1780 - Signal <LEDs> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 Unit <top> synthesized.
 
-INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
 
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 3
- 4-bit adder                                           : 3
-# Counters                                             : 1
- 5-bit up counter                                      : 1
-# Registers                                            : 28
- 1-bit register                                        : 26
- 4-bit register                                        : 2
-# Comparators                                          : 1
- 5-bit comparator less                                 : 1
+# Counters                                             : 2
+ 10-bit up counter                                     : 2
+# Registers                                            : 42
+ 1-bit register                                        : 41
+ 40-bit register                                       : 1
+# Comparators                                          : 2
+ 11-bit comparator greatequal                          : 1
+ 11-bit comparator less                                : 1
 
 =========================================================================
 
@@ -209,19 +197,86 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
+WARNING:Xst:2677 - Node <inputBuffer_8> of sequential type is unconnected in block <jstk>.
+WARNING:Xst:2677 - Node <inputBuffer_25> of sequential type is unconnected in block <jstk>.
+WARNING:Xst:2677 - Node <inputBuffer_24> of sequential type is unconnected in block <jstk>.
+WARNING:Xst:2677 - Node <inputBuffer_9> of sequential type is unconnected in block <jstk>.
+WARNING:Xst:2677 - Node <inputBuffer_26> of sequential type is unconnected in block <jstk>.
+WARNING:Xst:2677 - Node <inputBuffer_27> of sequential type is unconnected in block <jstk>.
+WARNING:Xst:2677 - Node <inputBuffer_32> of sequential type is unconnected in block <jstk>.
+WARNING:Xst:2677 - Node <inputBuffer_29> of sequential type is unconnected in block <jstk>.
+WARNING:Xst:2677 - Node <inputBuffer_28> of sequential type is unconnected in block <jstk>.
+WARNING:Xst:2677 - Node <inputBuffer_33> of sequential type is unconnected in block <jstk>.
+WARNING:Xst:2677 - Node <inputBuffer_36> of sequential type is unconnected in block <jstk>.
+WARNING:Xst:2677 - Node <inputBuffer_34> of sequential type is unconnected in block <jstk>.
+WARNING:Xst:2677 - Node <inputBuffer_35> of sequential type is unconnected in block <jstk>.
+WARNING:Xst:2677 - Node <inputBuffer_11> of sequential type is unconnected in block <jstk>.
+WARNING:Xst:2677 - Node <inputBuffer_10> of sequential type is unconnected in block <jstk>.
+WARNING:Xst:2677 - Node <inputBuffer_12> of sequential type is unconnected in block <jstk>.
+WARNING:Xst:2677 - Node <inputBuffer_13> of sequential type is unconnected in block <jstk>.
+WARNING:Xst:2677 - Node <saveBuffer_8> of sequential type is unconnected in block <jstk>.
+WARNING:Xst:2677 - Node <saveBuffer_9> of sequential type is unconnected in block <jstk>.
+WARNING:Xst:2677 - Node <saveBuffer_10> of sequential type is unconnected in block <jstk>.
+WARNING:Xst:2677 - Node <saveBuffer_11> of sequential type is unconnected in block <jstk>.
+WARNING:Xst:2677 - Node <saveBuffer_12> of sequential type is unconnected in block <jstk>.
+WARNING:Xst:2677 - Node <saveBuffer_13> of sequential type is unconnected in block <jstk>.
+WARNING:Xst:2677 - Node <saveBuffer_24> of sequential type is unconnected in block <jstk>.
+WARNING:Xst:2677 - Node <saveBuffer_25> of sequential type is unconnected in block <jstk>.
+WARNING:Xst:2677 - Node <saveBuffer_26> of sequential type is unconnected in block <jstk>.
+WARNING:Xst:2677 - Node <saveBuffer_27> of sequential type is unconnected in block <jstk>.
+WARNING:Xst:2677 - Node <saveBuffer_28> of sequential type is unconnected in block <jstk>.
+WARNING:Xst:2677 - Node <saveBuffer_29> of sequential type is unconnected in block <jstk>.
+WARNING:Xst:2677 - Node <saveBuffer_32> of sequential type is unconnected in block <jstk>.
+WARNING:Xst:2677 - Node <saveBuffer_33> of sequential type is unconnected in block <jstk>.
+WARNING:Xst:2677 - Node <saveBuffer_34> of sequential type is unconnected in block <jstk>.
+WARNING:Xst:2677 - Node <saveBuffer_35> of sequential type is unconnected in block <jstk>.
+WARNING:Xst:2677 - Node <saveBuffer_36> of sequential type is unconnected in block <jstk>.
+WARNING:Xst:2677 - Node <inputBuffer_8> of sequential type is unconnected in block <jstkModule>.
+WARNING:Xst:2677 - Node <inputBuffer_9> of sequential type is unconnected in block <jstkModule>.
+WARNING:Xst:2677 - Node <inputBuffer_24> of sequential type is unconnected in block <jstkModule>.
+WARNING:Xst:2677 - Node <inputBuffer_26> of sequential type is unconnected in block <jstkModule>.
+WARNING:Xst:2677 - Node <inputBuffer_25> of sequential type is unconnected in block <jstkModule>.
+WARNING:Xst:2677 - Node <inputBuffer_27> of sequential type is unconnected in block <jstkModule>.
+WARNING:Xst:2677 - Node <inputBuffer_33> of sequential type is unconnected in block <jstkModule>.
+WARNING:Xst:2677 - Node <inputBuffer_32> of sequential type is unconnected in block <jstkModule>.
+WARNING:Xst:2677 - Node <inputBuffer_28> of sequential type is unconnected in block <jstkModule>.
+WARNING:Xst:2677 - Node <inputBuffer_35> of sequential type is unconnected in block <jstkModule>.
+WARNING:Xst:2677 - Node <inputBuffer_29> of sequential type is unconnected in block <jstkModule>.
+WARNING:Xst:2677 - Node <inputBuffer_34> of sequential type is unconnected in block <jstkModule>.
+WARNING:Xst:2677 - Node <inputBuffer_36> of sequential type is unconnected in block <jstkModule>.
+WARNING:Xst:2677 - Node <inputBuffer_11> of sequential type is unconnected in block <jstkModule>.
+WARNING:Xst:2677 - Node <inputBuffer_10> of sequential type is unconnected in block <jstkModule>.
+WARNING:Xst:2677 - Node <inputBuffer_12> of sequential type is unconnected in block <jstkModule>.
+WARNING:Xst:2677 - Node <inputBuffer_13> of sequential type is unconnected in block <jstkModule>.
+WARNING:Xst:2677 - Node <saveBuffer_8> of sequential type is unconnected in block <jstkModule>.
+WARNING:Xst:2677 - Node <saveBuffer_9> of sequential type is unconnected in block <jstkModule>.
+WARNING:Xst:2677 - Node <saveBuffer_10> of sequential type is unconnected in block <jstkModule>.
+WARNING:Xst:2677 - Node <saveBuffer_11> of sequential type is unconnected in block <jstkModule>.
+WARNING:Xst:2677 - Node <saveBuffer_12> of sequential type is unconnected in block <jstkModule>.
+WARNING:Xst:2677 - Node <saveBuffer_13> of sequential type is unconnected in block <jstkModule>.
+WARNING:Xst:2677 - Node <saveBuffer_24> of sequential type is unconnected in block <jstkModule>.
+WARNING:Xst:2677 - Node <saveBuffer_25> of sequential type is unconnected in block <jstkModule>.
+WARNING:Xst:2677 - Node <saveBuffer_26> of sequential type is unconnected in block <jstkModule>.
+WARNING:Xst:2677 - Node <saveBuffer_27> of sequential type is unconnected in block <jstkModule>.
+WARNING:Xst:2677 - Node <saveBuffer_28> of sequential type is unconnected in block <jstkModule>.
+WARNING:Xst:2677 - Node <saveBuffer_29> of sequential type is unconnected in block <jstkModule>.
+WARNING:Xst:2677 - Node <saveBuffer_32> of sequential type is unconnected in block <jstkModule>.
+WARNING:Xst:2677 - Node <saveBuffer_33> of sequential type is unconnected in block <jstkModule>.
+WARNING:Xst:2677 - Node <saveBuffer_34> of sequential type is unconnected in block <jstkModule>.
+WARNING:Xst:2677 - Node <saveBuffer_35> of sequential type is unconnected in block <jstkModule>.
+WARNING:Xst:2677 - Node <saveBuffer_36> of sequential type is unconnected in block <jstkModule>.
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 3
- 4-bit adder                                           : 3
-# Counters                                             : 1
- 5-bit up counter                                      : 1
-# Registers                                            : 34
- Flip-Flops                                            : 34
-# Comparators                                          : 1
- 5-bit comparator less                                 : 1
+# Counters                                             : 2
+ 10-bit up counter                                     : 2
+# Registers                                            : 47
+ Flip-Flops                                            : 47
+# Comparators                                          : 2
+ 11-bit comparator greatequal                          : 1
+ 11-bit comparator less                                : 1
 
 =========================================================================
 
@@ -231,15 +286,12 @@ Macro Statistics
 
 Optimizing unit <top> ...
 
-Optimizing unit <PmodJSTK_Driver> ...
-WARNING:Xst:1293 - FF/Latch <byteCounter_3> has a constant value of 0 in block <PmodJSTK_Driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <byteCounter_3> has a constant value of 0 in block <PmodJSTK_Driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <byteCounter_3> has a constant value of 0 in block <PmodJSTK_Driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <byteCounter_3> has a constant value of 0 in block <PmodJSTK_Driver>. This FF/Latch will be trimmed during the optimization process.
+Optimizing unit <jstkModule> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 0.
+FlipFlop jstk/counter_1 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -247,8 +299,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 38
- Flip-Flops                                            : 38
+# Registers                                            : 68
+ Flip-Flops                                            : 68
 
 =========================================================================
 
@@ -277,22 +329,25 @@ Design Statistics
 # IOs                              : 21
 
 Cell Usage :
-# BELS                             : 75
+# BELS                             : 121
 #      GND                         : 1
-#      INV                         : 2
-#      LUT2                        : 3
-#      LUT2_L                      : 4
-#      LUT3                        : 9
-#      LUT3_D                      : 3
-#      LUT3_L                      : 1
-#      LUT4                        : 45
-#      LUT4_D                      : 2
+#      INV                         : 3
+#      LUT1                        : 18
+#      LUT2                        : 2
+#      LUT2_L                      : 1
+#      LUT3                        : 2
+#      LUT3_D                      : 1
+#      LUT4                        : 41
+#      LUT4_D                      : 10
 #      LUT4_L                      : 1
-#      MUXF5                       : 4
-# FlipFlops/Latches                : 38
-#      FD                          : 4
-#      FDE                         : 29
-#      FDR                         : 5
+#      MUXCY                       : 18
+#      MUXF5                       : 2
+#      VCC                         : 1
+#      XORCY                       : 20
+# FlipFlops/Latches                : 68
+#      FD                          : 11
+#      FDE                         : 46
+#      FDR                         : 11
 # Clock Buffers                    : 2
 #      BUFG                        : 1
 #      BUFGP                       : 1
@@ -306,9 +361,9 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-4 
 
- Number of Slices:                       39  out of   4656     0%  
- Number of Slice Flip Flops:             38  out of   9312     0%  
- Number of 4 input LUTs:                 70  out of   9312     0%  
+ Number of Slices:                       56  out of   4656     1%  
+ Number of Slice Flip Flops:             68  out of   9312     0%  
+ Number of 4 input LUTs:                 79  out of   9312     0%  
  Number of IOs:                          21
  Number of bonded IOBs:                  18  out of    232     7%  
  Number of GCLKs:                         2  out of     24     8%  
@@ -334,8 +389,8 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk50Mhz                           | BUFGP                  | 6     |
-jstk/clkGen1Mhz/slow_clk1          | BUFG                   | 32    |
+jstk/clkGen1Mhz/count_91           | BUFG                   | 58    |
+clk50Mhz                           | BUFGP                  | 10    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -346,120 +401,124 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 5.824ns (Maximum Frequency: 171.703MHz)
-   Minimum input arrival time before clock: 5.543ns
-   Maximum output required time after clock: 6.710ns
-   Maximum combinational path delay: 7.776ns
+   Minimum period: 5.266ns (Maximum Frequency: 189.897MHz)
+   Minimum input arrival time before clock: 2.728ns
+   Maximum output required time after clock: 7.817ns
+   Maximum combinational path delay: 8.651ns
 
 Timing Detail:
 --------------
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'clk50Mhz'
-  Clock period: 4.305ns (frequency: 232.288MHz)
-  Total number of paths / destination ports: 46 / 12
+Timing constraint: Default period analysis for Clock 'jstk/clkGen1Mhz/count_91'
+  Clock period: 5.266ns (frequency: 189.897MHz)
+  Total number of paths / destination ports: 632 / 92
 -------------------------------------------------------------------------
-Delay:               4.305ns (Levels of Logic = 2)
-  Source:            jstk/clkGen1Mhz/count_4 (FF)
-  Destination:       jstk/clkGen1Mhz/count_4 (FF)
+Delay:               5.266ns (Levels of Logic = 2)
+  Source:            jstk/counter_2 (FF)
+  Destination:       jstk/saveBuffer_39 (FF)
+  Source Clock:      jstk/clkGen1Mhz/count_91 rising
+  Destination Clock: jstk/clkGen1Mhz/count_91 rising
+
+  Data Path: jstk/counter_2 to jstk/saveBuffer_39
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             17   0.591   1.086  jstk/counter_2 (jstk/counter_2)
+     LUT3_D:I2->O          1   0.704   0.424  jstk/inputBuffer_4_cmp_ge000025 (jstk/inputBuffer_4_cmp_ge000025)
+     LUT4:I3->O           23   0.704   1.202  jstk/inputBuffer_4_cmp_ge0000213_1 (jstk/inputBuffer_4_cmp_ge0000213)
+     FDE:CE                    0.555          jstk/saveBuffer_37
+    ----------------------------------------
+    Total                      5.266ns (2.554ns logic, 2.712ns route)
+                                       (48.5% logic, 51.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk50Mhz'
+  Clock period: 3.879ns (frequency: 257.798MHz)
+  Total number of paths / destination ports: 55 / 10
+-------------------------------------------------------------------------
+Delay:               3.879ns (Levels of Logic = 10)
+  Source:            jstk/clkGen1Mhz/count_1 (FF)
+  Destination:       jstk/clkGen1Mhz/count_9 (FF)
   Source Clock:      clk50Mhz rising
   Destination Clock: clk50Mhz rising
 
-  Data Path: jstk/clkGen1Mhz/count_4 to jstk/clkGen1Mhz/count_4
+  Data Path: jstk/clkGen1Mhz/count_1 to jstk/clkGen1Mhz/count_9
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              2   0.591   0.622  jstk/clkGen1Mhz/count_4 (jstk/clkGen1Mhz/count_4)
-     LUT2_L:I0->LO         1   0.704   0.104  jstk/clkGen1Mhz/slow_clk_cmp_eq0000_SW0 (N12)
-     LUT4:I3->O            6   0.704   0.669  jstk/clkGen1Mhz/slow_clk_cmp_eq0000 (jstk/clkGen1Mhz/slow_clk_cmp_eq0000)
-     FDR:R                     0.911          jstk/clkGen1Mhz/count_0
+     FD:C->Q               1   0.591   0.595  jstk/clkGen1Mhz/count_1 (jstk/clkGen1Mhz/count_1)
+     LUT1:I0->O            1   0.704   0.000  jstk/clkGen1Mhz/Mcount_count_cy<1>_rt (jstk/clkGen1Mhz/Mcount_count_cy<1>_rt)
+     MUXCY:S->O            1   0.464   0.000  jstk/clkGen1Mhz/Mcount_count_cy<1> (jstk/clkGen1Mhz/Mcount_count_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  jstk/clkGen1Mhz/Mcount_count_cy<2> (jstk/clkGen1Mhz/Mcount_count_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  jstk/clkGen1Mhz/Mcount_count_cy<3> (jstk/clkGen1Mhz/Mcount_count_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  jstk/clkGen1Mhz/Mcount_count_cy<4> (jstk/clkGen1Mhz/Mcount_count_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  jstk/clkGen1Mhz/Mcount_count_cy<5> (jstk/clkGen1Mhz/Mcount_count_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  jstk/clkGen1Mhz/Mcount_count_cy<6> (jstk/clkGen1Mhz/Mcount_count_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  jstk/clkGen1Mhz/Mcount_count_cy<7> (jstk/clkGen1Mhz/Mcount_count_cy<7>)
+     MUXCY:CI->O           0   0.059   0.000  jstk/clkGen1Mhz/Mcount_count_cy<8> (jstk/clkGen1Mhz/Mcount_count_cy<8>)
+     XORCY:CI->O           1   0.804   0.000  jstk/clkGen1Mhz/Mcount_count_xor<9> (jstk/Result<9>)
+     FD:D                      0.308          jstk/clkGen1Mhz/count_9
     ----------------------------------------
-    Total                      4.305ns (2.910ns logic, 1.395ns route)
-                                       (67.6% logic, 32.4% route)
+    Total                      3.879ns (3.284ns logic, 0.595ns route)
+                                       (84.7% logic, 15.3% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'jstk/clkGen1Mhz/slow_clk1'
-  Clock period: 5.824ns (frequency: 171.703MHz)
-  Total number of paths / destination ports: 357 / 49
+Timing constraint: Default OFFSET IN BEFORE for Clock 'jstk/clkGen1Mhz/count_91'
+  Total number of paths / destination ports: 23 / 23
 -------------------------------------------------------------------------
-Delay:               5.824ns (Levels of Logic = 4)
-  Source:            jstk/bitCounter_3 (FF)
-  Destination:       jstk/bufferSignal_8 (FF)
-  Source Clock:      jstk/clkGen1Mhz/slow_clk1 rising
-  Destination Clock: jstk/clkGen1Mhz/slow_clk1 rising
-
-  Data Path: jstk/bitCounter_3 to jstk/bufferSignal_8
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FD:C->Q              12   0.591   1.136  jstk/bitCounter_3 (jstk/bitCounter_3)
-     LUT4_D:I0->O          8   0.704   0.932  jstk/bitCounter_cmp_eq00001 (jstk/bitCounter_cmp_eq0000)
-     LUT4:I0->O            1   0.704   0.000  jstk/bufferSignal_8_mux000156_F (N38)
-     MUXF5:I0->O           1   0.321   0.424  jstk/bufferSignal_8_mux000156 (jstk/bufferSignal_8_mux000156)
-     LUT4:I3->O            1   0.704   0.000  jstk/bufferSignal_8_mux000163 (jstk/bufferSignal_8_mux0001)
-     FDE:D                     0.308          jstk/bufferSignal_8
-    ----------------------------------------
-    Total                      5.824ns (3.332ns logic, 2.492ns route)
-                                       (57.2% logic, 42.8% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'jstk/clkGen1Mhz/slow_clk1'
-  Total number of paths / destination ports: 14 / 13
--------------------------------------------------------------------------
-Offset:              5.543ns (Levels of Logic = 4)
+Offset:              2.728ns (Levels of Logic = 1)
   Source:            MISO (PAD)
-  Destination:       jstk/bufferSignal_9 (FF)
-  Destination Clock: jstk/clkGen1Mhz/slow_clk1 rising
+  Destination:       jstk/inputBuffer_3 (FF)
+  Destination Clock: jstk/clkGen1Mhz/count_91 rising
 
-  Data Path: MISO to jstk/bufferSignal_9
+  Data Path: MISO to jstk/inputBuffer_3
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            14   1.218   1.175  MISO_IBUF (MISO_IBUF)
-     LUT4:I0->O            1   0.704   0.595  jstk/bufferSignal_9_mux000158 (jstk/bufferSignal_9_mux000158)
-     LUT2_L:I0->LO         1   0.704   0.135  jstk/bufferSignal_9_mux000162 (jstk/bufferSignal_9_mux000162)
-     LUT4:I2->O            1   0.704   0.000  jstk/bufferSignal_9_mux000169 (jstk/bufferSignal_9_mux0001)
-     FDE:D                     0.308          jstk/bufferSignal_9
+     IBUF:I->O            23   1.218   1.202  MISO_IBUF (MISO_IBUF)
+     FDE:D                     0.308          jstk/inputBuffer_4
     ----------------------------------------
-    Total                      5.543ns (3.638ns logic, 1.905ns route)
-                                       (65.6% logic, 34.4% route)
+    Total                      2.728ns (1.526ns logic, 1.202ns route)
+                                       (55.9% logic, 44.1% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'jstk/clkGen1Mhz/slow_clk1'
-  Total number of paths / destination ports: 14 / 9
+Timing constraint: Default OFFSET OUT AFTER for Clock 'jstk/clkGen1Mhz/count_91'
+  Total number of paths / destination ports: 24 / 9
 -------------------------------------------------------------------------
-Offset:              6.710ns (Levels of Logic = 3)
-  Source:            jstk/Data_15 (FF)
-  Destination:       Led<5> (PAD)
-  Source Clock:      jstk/clkGen1Mhz/slow_clk1 rising
+Offset:              7.817ns (Levels of Logic = 4)
+  Source:            jstk/saveBuffer_31 (FF)
+  Destination:       Led<7> (PAD)
+  Source Clock:      jstk/clkGen1Mhz/count_91 rising
 
-  Data Path: jstk/Data_15 to Led<5>
+  Data Path: jstk/saveBuffer_31 to Led<7>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              1   0.591   0.595  jstk/Data_15 (jstk/Data_15)
-     LUT3:I0->O            1   0.704   0.424  Led_5_mux0004_SW0 (N7)
-     LUT4:I3->O            1   0.704   0.420  Led_5_mux0004 (Led_5_OBUF)
-     OBUF:I->O                 3.272          Led_5_OBUF (Led<5>)
+     FDE:C->Q              1   0.591   0.499  jstk/saveBuffer_31 (jstk/saveBuffer_31)
+     LUT4:I1->O            1   0.704   0.424  Led_7_mux000442_SW0 (N77)
+     LUT4:I3->O            1   0.704   0.499  Led_7_mux000442 (Led_7_mux000442)
+     LUT4:I1->O            1   0.704   0.420  Led_7_mux000484 (Led_7_OBUF)
+     OBUF:I->O                 3.272          Led_7_OBUF (Led<7>)
     ----------------------------------------
-    Total                      6.710ns (5.271ns logic, 1.439ns route)
-                                       (78.6% logic, 21.4% route)
+    Total                      7.817ns (5.975ns logic, 1.842ns route)
+                                       (76.4% logic, 23.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk50Mhz'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
 Offset:              4.394ns (Levels of Logic = 1)
-  Source:            jstk/clkGen1Mhz/slow_clk (FF)
+  Source:            jstk/clkGen1Mhz/count_9 (FF)
   Destination:       SCK (PAD)
   Source Clock:      clk50Mhz rising
 
-  Data Path: jstk/clkGen1Mhz/slow_clk to SCK
+  Data Path: jstk/clkGen1Mhz/count_9 to SCK
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              3   0.591   0.531  jstk/clkGen1Mhz/slow_clk (jstk/clkGen1Mhz/slow_clk1)
+     FD:C->Q               3   0.591   0.531  jstk/clkGen1Mhz/count_9 (jstk/clkGen1Mhz/count_91)
      OBUF:I->O                 3.272          SCK_OBUF (SCK)
     ----------------------------------------
     Total                      4.394ns (3.863ns logic, 0.531ns route)
@@ -467,35 +526,36 @@ Offset:              4.394ns (Levels of Logic = 1)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 32 / 8
+  Total number of paths / destination ports: 37 / 8
 -------------------------------------------------------------------------
-Delay:               7.776ns (Levels of Logic = 4)
-  Source:            sw<6> (PAD)
+Delay:               8.651ns (Levels of Logic = 5)
+  Source:            sw<4> (PAD)
   Destination:       Led<6> (PAD)
 
-  Data Path: sw<6> to Led<6>
+  Data Path: sw<4> to Led<6>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             8   1.218   0.932  sw_6_IBUF (sw_6_IBUF)
-     LUT2:I0->O            2   0.704   0.526  Led_6_mux000433 (Led_6_mux000433)
-     LUT4:I1->O            1   0.704   0.420  Led_6_mux000437 (Led_6_OBUF)
+     IBUF:I->O             3   1.218   0.706  sw_4_IBUF (sw_4_IBUF)
+     LUT4:I0->O            1   0.704   0.424  Led_6_mux000437_SW0 (N75)
+     LUT4:I3->O            1   0.704   0.499  Led_6_mux000437 (Led_6_mux000437)
+     LUT4:I1->O            1   0.704   0.420  Led_6_mux000476 (Led_6_OBUF)
      OBUF:I->O                 3.272          Led_6_OBUF (Led<6>)
     ----------------------------------------
-    Total                      7.776ns (5.898ns logic, 1.878ns route)
-                                       (75.8% logic, 24.2% route)
+    Total                      8.651ns (6.602ns logic, 2.049ns route)
+                                       (76.3% logic, 23.7% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 4.17 secs
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.23 secs
  
 --> 
 
 Total memory usage is 152484 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   11 (   0 filtered)
-Number of infos    :    6 (   0 filtered)
+Number of warnings :   76 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
 

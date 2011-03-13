@@ -42,18 +42,17 @@ end top;
 
 architecture Behavioral of top is
 
-component PmodJSTK_Driver
-    Port ( clk50Mhz : in  STD_LOGIC;
-           LED : in  STD_LOGIC_VECTOR(0 to 2);
-           Data : out  STD_LOGIC_VECTOR(0 to 22);
-			  SS : out STD_LOGIC;
-			  MOSI : out STD_LOGIC;
-			  MISO : in STD_LOGIC;
-			  SCK : out STD_LOGIC);
+component jstkModule 
+    Port ( CLK: in std_logic;
+			  MOSI : out  STD_LOGIC;
+           SS : out  STD_LOGIC;
+           MISO : in  STD_LOGIC;
+           SCK : out  STD_LOGIC;
+			  Data : out STD_LOGIC_VECTOR(22 downto 0));
 end component;
 
 signal LEDs : STD_LOGIC_VECTOR(0 to 2);
-signal jstkData : STD_LOGIC_VECTOR(0 to 22);
+signal jstkData : STD_LOGIC_VECTOR(22 downto 0);
 signal SS_Signal : STD_LOGIC;
 signal MOSI_Signal : STD_LOGIC;
 signal MISO_Signal : STD_LOGIC;
@@ -66,24 +65,24 @@ MOSI <= MOSI_Signal;
 MISO_Signal <= MISO;
 SCK <= SCK_Signal;
 clk_Signal <= clk50Mhz;
+jstk : jstkModule port map (clk_Signal,MOSI_Signal,SS_Signal,MISO_Signal,SCK_Signal,jstkData);
 
-jstk : PmodJSTK_Driver port map(clk_Signal,LEDs,jstkData,SS_Signal,MOSI_Signal,MISO_Signal,SCK_Signal);
 
 process (clk50Mhz)
 begin
 IF (sw(7) = '1') THEN
-Led(0 to 7) <= jstkData(0 to 7);
+Led(0 to 7) <= jstkData(7 downto 0);
 ELSIF (sw(6) = '1') THEN
 Led(0 to 5) <= "000000";
-Led(6 to 7) <= jstkData(8 to 9);
+Led(6 to 7) <= jstkData(9 downto 8);
 ELSIF (sw(5) = '1') THEN
-Led(0 to 7) <= jstkData(10 to 17);
+Led(0 to 7) <= jstkData(17 downto 10);
 ELSIF (sw(4) = '1') THEN
 Led(0 to 5) <= "000000";
-Led(6 to 7) <= jstkData(18 to 19);
+Led(6 to 7) <= jstkData(19 downto 18);
 ELSIF (sw(3) = '1') THEN
 Led(0 to 4) <= "00000";
-Led(5 to 7) <= jstkData(20 to 22);
+Led(5 to 7) <= jstkData(22 downto 20);
 ELSE
 Led <= "00000001";
 END IF;
