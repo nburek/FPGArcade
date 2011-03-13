@@ -4,8 +4,7 @@ Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 Command Line: C:\Xilinx\12.4\ISE_DS\ISE\bin\nt\unwrapped\ngdbuild.exe -intstyle
 ise -dd _ngo -nt timestamp -uc top.ucf -p xc3s500e-fg320-4 top.ngc top.ngd
 
-Reading NGO file "C:/Documents and
-Settings/nb418308/Desktop/FPGArcade/VGA_Driver/top.ngc" ...
+Reading NGO file "C:/FPGArcade/VGA_Driver/top.ngc" ...
 Gathering constraint information from source properties...
 Done.
 

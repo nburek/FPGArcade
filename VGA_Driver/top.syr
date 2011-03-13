@@ -4,13 +4,13 @@ Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.17 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.19 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Reading design: top.prj
 
@@ -104,10 +104,6 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-WARNING:HDLParsers:3607 - Unit work/top is now defined in a different file.  It was defined in "C:/Documents and Settings/nb418308/Desktop/FPGArcade/VGA_Driver/top.vhdl", and is now defined in "C:/FPGArcade/VGA_Driver/top.vhdl".
-WARNING:HDLParsers:3607 - Unit work/top/Behavioral is now defined in a different file.  It was defined in "C:/Documents and Settings/nb418308/Desktop/FPGArcade/VGA_Driver/top.vhdl", and is now defined in "C:/FPGArcade/VGA_Driver/top.vhdl".
-WARNING:HDLParsers:3607 - Unit work/clk25MHz is now defined in a different file.  It was defined in "C:/Documents and Settings/nb418308/Desktop/FPGArcade/VGA_Driver/clk25MHz.vhd", and is now defined in "C:/FPGArcade/VGA_Driver/clk25MHz.vhd".
-WARNING:HDLParsers:3607 - Unit work/clk25MHz/Behavioral is now defined in a different file.  It was defined in "C:/Documents and Settings/nb418308/Desktop/FPGArcade/VGA_Driver/clk25MHz.vhd", and is now defined in "C:/FPGArcade/VGA_Driver/clk25MHz.vhd".
 Compiling vhdl file "C:/FPGArcade/VGA_Driver/clk25MHz.vhd" in Library work.
 Architecture behavioral of Entity clk25mhz is up to date.
 Compiling vhdl file "C:/FPGArcade/VGA_Driver/top.vhdl" in Library work.
@@ -153,25 +149,32 @@ Synthesizing Unit <top>.
     Found 2-bit register for signal <VGA_Blue>.
     Found 1-bit register for signal <HSync>.
     Found 1-bit register for signal <VSync>.
+    Found 9-bit adder carry out for signal <add0000$addsub0000> created at line 96.
     Found 10-bit up counter for signal <hCount>.
-    Found 11-bit comparator greatequal for signal <HSync$cmp_ge0000> created at line 79.
-    Found 11-bit comparator lessequal for signal <HSync$cmp_le0000> created at line 79.
+    Found 11-bit comparator greatequal for signal <HSync$cmp_ge0000> created at line 80.
+    Found 11-bit comparator lessequal for signal <HSync$cmp_le0000> created at line 80.
     Found 10-bit up counter for signal <vCount>.
-    Found 10-bit adder carry out for signal <VGA_Blue$addsub0002> created at line 95.
-    Found 10-bit adder carry out for signal <VGA_Blue$addsub0003> created at line 96.
-    Found 11-bit comparator greater for signal <VGA_Blue$cmp_gt0000> created at line 93.
-    Found 11-bit comparator greater for signal <VGA_Blue$cmp_gt0001> created at line 93.
-    Found 11-bit comparator greater for signal <VGA_Blue$cmp_gt0002> created at line 95.
-    Found 11-bit comparator greater for signal <VGA_Blue$cmp_gt0003> created at line 96.
-    Found 10-bit comparator less for signal <VGA_Blue$cmp_lt0000> created at line 95.
-    Found 10-bit comparator less for signal <VGA_Blue$cmp_lt0001> created at line 96.
-    Found 11-bit comparator greatequal for signal <VSync$cmp_ge0000> created at line 86.
-    Found 11-bit comparator lessequal for signal <VSync$cmp_le0000> created at line 86.
+    Found 10-bit adder carry out for signal <VGA_Blue$addsub0000> created at line 97.
+    Found 9-bit adder carry out for signal <VGA_Blue$addsub0001> created at line 104.
+    Found 9-bit adder carry out for signal <VGA_Blue$addsub0002> created at line 109.
+    Found 10-bit comparator greatequal for signal <VGA_Blue$cmp_ge0000> created at line 96.
+    Found 10-bit comparator greatequal for signal <VGA_Blue$cmp_ge0001> created at line 97.
+    Found 10-bit comparator greatequal for signal <VGA_Blue$cmp_ge0002> created at line 104.
+    Found 10-bit comparator greatequal for signal <VGA_Blue$cmp_ge0003> created at line 109.
+    Found 11-bit comparator lessequal for signal <VGA_Blue$cmp_le0000> created at line 94.
+    Found 11-bit comparator lessequal for signal <VGA_Blue$cmp_le0001> created at line 94.
+    Found 11-bit comparator lessequal for signal <VGA_Blue$cmp_le0002> created at line 96.
+    Found 11-bit comparator lessequal for signal <VGA_Blue$cmp_le0003> created at line 97.
+    Found 11-bit comparator lessequal for signal <VGA_Blue$cmp_le0004> created at line 104.
+    Found 10-bit comparator lessequal for signal <VGA_Blue$cmp_le0005> created at line 104.
+    Found 10-bit comparator lessequal for signal <VGA_Blue$cmp_le0006> created at line 109.
+    Found 11-bit comparator greatequal for signal <VSync$cmp_ge0000> created at line 87.
+    Found 11-bit comparator lessequal for signal <VSync$cmp_le0000> created at line 87.
     Summary:
 	inferred   2 Counter(s).
 	inferred   7 D-type flip-flop(s).
-	inferred   2 Adder/Subtractor(s).
-	inferred  10 Comparator(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred  15 Comparator(s).
 Unit <top> synthesized.
 
 
@@ -179,19 +182,20 @@ Unit <top> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 2
- 10-bit adder carry out                                : 2
+# Adders/Subtractors                                   : 4
+ 10-bit adder carry out                                : 1
+ 9-bit adder carry out                                 : 3
 # Counters                                             : 2
  10-bit up counter                                     : 2
 # Registers                                            : 5
  1-bit register                                        : 3
  2-bit register                                        : 1
  3-bit register                                        : 1
-# Comparators                                          : 10
- 10-bit comparator less                                : 2
+# Comparators                                          : 15
+ 10-bit comparator greatequal                          : 4
+ 10-bit comparator lessequal                           : 2
  11-bit comparator greatequal                          : 2
- 11-bit comparator greater                             : 4
- 11-bit comparator lessequal                           : 2
+ 11-bit comparator lessequal                           : 7
 
 =========================================================================
 
@@ -204,17 +208,18 @@ Macro Statistics
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 2
- 10-bit adder carry out                                : 2
+# Adders/Subtractors                                   : 4
+ 10-bit adder carry out                                : 1
+ 9-bit adder carry out                                 : 3
 # Counters                                             : 2
  10-bit up counter                                     : 2
 # Registers                                            : 8
  Flip-Flops                                            : 8
-# Comparators                                          : 10
- 10-bit comparator less                                : 2
+# Comparators                                          : 15
+ 10-bit comparator greatequal                          : 4
+ 10-bit comparator lessequal                           : 2
  11-bit comparator greatequal                          : 2
- 11-bit comparator greater                             : 4
- 11-bit comparator lessequal                           : 2
+ 11-bit comparator lessequal                           : 7
 
 =========================================================================
 
@@ -262,30 +267,33 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 31
+# IOs                              : 48
 
 Cell Usage :
-# BELS                             : 213
+# BELS                             : 294
 #      GND                         : 1
-#      INV                         : 12
-#      LUT1                        : 28
-#      LUT2                        : 40
-#      LUT3                        : 3
+#      INV                         : 11
+#      LUT1                        : 23
+#      LUT2                        : 69
+#      LUT3                        : 18
+#      LUT3_D                      : 1
 #      LUT3_L                      : 1
-#      LUT4                        : 7
-#      LUT4_D                      : 2
-#      LUT4_L                      : 2
-#      MUXCY                       : 78
+#      LUT4                        : 27
+#      LUT4_D                      : 3
+#      LUT4_L                      : 3
+#      MULT_AND                    : 1
+#      MUXCY                       : 106
 #      VCC                         : 1
-#      XORCY                       : 38
+#      XORCY                       : 29
 # FlipFlops/Latches                : 24
-#      FDR                         : 14
+#      FDR                         : 13
 #      FDRE                        : 10
+#      FDRS                        : 1
 # Clock Buffers                    : 2
 #      BUFG                        : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 30
-#      IBUF                        : 20
+# IO Buffers                       : 47
+#      IBUF                        : 37
 #      OBUF                        : 10
 =========================================================================
 
@@ -294,11 +302,11 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-4 
 
- Number of Slices:                       53  out of   4656     1%  
+ Number of Slices:                       83  out of   4656     1%  
  Number of Slice Flip Flops:             24  out of   9312     0%  
- Number of 4 input LUTs:                 95  out of   9312     1%  
- Number of IOs:                          31
- Number of bonded IOBs:                  31  out of    232    13%  
+ Number of 4 input LUTs:                156  out of   9312     1%  
+ Number of IOs:                          48
+ Number of bonded IOBs:                  48  out of    232    20%  
  Number of GCLKs:                         2  out of     24     8%  
 
 ---------------------------
@@ -334,8 +342,8 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 6.623ns (Maximum Frequency: 150.989MHz)
-   Minimum input arrival time before clock: 8.902ns
+   Minimum period: 6.188ns (Maximum Frequency: 161.603MHz)
+   Minimum input arrival time before clock: 10.190ns
    Maximum output required time after clock: 4.620ns
    Maximum combinational path delay: No path found
 
@@ -345,37 +353,27 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clock25MHz/slow_clk1'
-  Clock period: 6.623ns (frequency: 150.989MHz)
-  Total number of paths / destination ports: 593 / 53
+  Clock period: 6.188ns (frequency: 161.603MHz)
+  Total number of paths / destination ports: 685 / 55
 -------------------------------------------------------------------------
-Delay:               6.623ns (Levels of Logic = 13)
-  Source:            vCount_0 (FF)
-  Destination:       VGA_Blue_0 (FF)
+Delay:               6.188ns (Levels of Logic = 3)
+  Source:            hCount_4 (FF)
+  Destination:       vCount_0 (FF)
   Source Clock:      clock25MHz/slow_clk1 rising
   Destination Clock: clock25MHz/slow_clk1 rising
 
-  Data Path: vCount_0 to VGA_Blue_0
+  Data Path: hCount_4 to vCount_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             4   0.591   0.666  vCount_0 (vCount_0)
-     LUT2:I1->O            1   0.704   0.000  Mcompar_VGA_Blue_cmp_lt0000_lut<0> (Mcompar_VGA_Blue_cmp_lt0000_lut<0>)
-     MUXCY:S->O            1   0.464   0.000  Mcompar_VGA_Blue_cmp_lt0000_cy<0> (Mcompar_VGA_Blue_cmp_lt0000_cy<0>)
-     MUXCY:CI->O           1   0.059   0.000  Mcompar_VGA_Blue_cmp_lt0000_cy<1> (Mcompar_VGA_Blue_cmp_lt0000_cy<1>)
-     MUXCY:CI->O           1   0.059   0.000  Mcompar_VGA_Blue_cmp_lt0000_cy<2> (Mcompar_VGA_Blue_cmp_lt0000_cy<2>)
-     MUXCY:CI->O           1   0.059   0.000  Mcompar_VGA_Blue_cmp_lt0000_cy<3> (Mcompar_VGA_Blue_cmp_lt0000_cy<3>)
-     MUXCY:CI->O           1   0.059   0.000  Mcompar_VGA_Blue_cmp_lt0000_cy<4> (Mcompar_VGA_Blue_cmp_lt0000_cy<4>)
-     MUXCY:CI->O           1   0.059   0.000  Mcompar_VGA_Blue_cmp_lt0000_cy<5> (Mcompar_VGA_Blue_cmp_lt0000_cy<5>)
-     MUXCY:CI->O           1   0.059   0.000  Mcompar_VGA_Blue_cmp_lt0000_cy<6> (Mcompar_VGA_Blue_cmp_lt0000_cy<6>)
-     MUXCY:CI->O           1   0.059   0.000  Mcompar_VGA_Blue_cmp_lt0000_cy<7> (Mcompar_VGA_Blue_cmp_lt0000_cy<7>)
-     MUXCY:CI->O           1   0.059   0.000  Mcompar_VGA_Blue_cmp_lt0000_cy<8> (Mcompar_VGA_Blue_cmp_lt0000_cy<8>)
-     MUXCY:CI->O           1   0.459   0.424  Mcompar_VGA_Blue_cmp_lt0000_cy<9> (Mcompar_VGA_Blue_cmp_lt0000_cy<9>)
-     LUT4_L:I3->LO         1   0.704   0.104  VGA_Blue_or000027_SW0 (N2)
-     LUT4:I3->O            1   0.704   0.420  VGA_Blue_or000027 (VGA_Blue_or0000)
-     FDR:R                     0.911          VGA_Blue_0
+     FDR:C->Q              6   0.591   0.844  hCount_4 (hCount_4)
+     LUT4_D:I0->O          1   0.704   0.424  vCount_and0000171 (vCount_and0000171)
+     LUT4:I3->O            1   0.704   0.424  vCount_and0000124 (vCount_cmp_eq0000)
+     LUT4:I3->O           10   0.704   0.882  vCount_and000034 (vCount_and0000)
+     FDRE:R                    0.911          vCount_0
     ----------------------------------------
-    Total                      6.623ns (5.009ns logic, 1.614ns route)
-                                       (75.6% logic, 24.4% route)
+    Total                      6.188ns (3.614ns logic, 2.574ns route)
+                                       (58.4% logic, 41.6% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
@@ -400,36 +398,29 @@ Delay:               1.949ns (Levels of Logic = 0)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clock25MHz/slow_clk1'
-  Total number of paths / destination ports: 222 / 1
+  Total number of paths / destination ports: 461 / 2
 -------------------------------------------------------------------------
-Offset:              8.902ns (Levels of Logic = 15)
-  Source:            BlockPosition<18> (PAD)
+Offset:              10.190ns (Levels of Logic = 8)
+  Source:            BlockPosition<15> (PAD)
   Destination:       VGA_Blue_0 (FF)
   Destination Clock: clock25MHz/slow_clk1 rising
 
-  Data Path: BlockPosition<18> to VGA_Blue_0
+  Data Path: BlockPosition<15> to VGA_Blue_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             2   1.218   0.447  BlockPosition_18_IBUF (BlockPosition_18_IBUF)
-     INV:I->O              1   0.704   0.000  Madd_VGA_Blue_addsub0002_lut<1>_INV_0 (Madd_VGA_Blue_addsub0002_lut<1>)
-     MUXCY:S->O            1   0.464   0.000  Madd_VGA_Blue_addsub0002_cy<1> (Madd_VGA_Blue_addsub0002_cy<1>)
-     MUXCY:CI->O           1   0.059   0.000  Madd_VGA_Blue_addsub0002_cy<2> (Madd_VGA_Blue_addsub0002_cy<2>)
-     MUXCY:CI->O           1   0.059   0.000  Madd_VGA_Blue_addsub0002_cy<3> (Madd_VGA_Blue_addsub0002_cy<3>)
-     MUXCY:CI->O           1   0.059   0.000  Madd_VGA_Blue_addsub0002_cy<4> (Madd_VGA_Blue_addsub0002_cy<4>)
-     MUXCY:CI->O           1   0.059   0.000  Madd_VGA_Blue_addsub0002_cy<5> (Madd_VGA_Blue_addsub0002_cy<5>)
-     MUXCY:CI->O           1   0.059   0.000  Madd_VGA_Blue_addsub0002_cy<6> (Madd_VGA_Blue_addsub0002_cy<6>)
-     MUXCY:CI->O           1   0.059   0.000  Madd_VGA_Blue_addsub0002_cy<7> (Madd_VGA_Blue_addsub0002_cy<7>)
-     MUXCY:CI->O           1   0.059   0.000  Madd_VGA_Blue_addsub0002_cy<8> (Madd_VGA_Blue_addsub0002_cy<8>)
-     XORCY:CI->O           1   0.804   0.595  Madd_VGA_Blue_addsub0002_xor<9> (VGA_Blue_addsub0002<9>)
-     LUT2:I0->O            1   0.704   0.000  Mcompar_VGA_Blue_cmp_gt0002_lut<9> (Mcompar_VGA_Blue_cmp_gt0002_lut<9>)
-     MUXCY:S->O            1   0.464   0.000  Mcompar_VGA_Blue_cmp_gt0002_cy<9> (Mcompar_VGA_Blue_cmp_gt0002_cy<9>)
-     MUXCY:CI->O           1   0.459   0.595  Mcompar_VGA_Blue_cmp_gt0002_cy<10> (Mcompar_VGA_Blue_cmp_gt0002_cy<10>)
-     LUT4:I0->O            1   0.704   0.420  VGA_Blue_or000027 (VGA_Blue_or0000)
-     FDR:R                     0.911          VGA_Blue_0
+     IBUF:I->O             5   1.218   0.808  BlockPosition_15_IBUF (BlockPosition_15_IBUF)
+     LUT4:I0->O            7   0.704   0.787  Madd_add0000_addsub0000_xor<8>111 (N01)
+     LUT2:I1->O            2   0.704   0.526  Madd_add0000_addsub0000_xor<6>111 (N20)
+     LUT4:I1->O            1   0.704   0.595  Madd_add0000_addsub0000_xor<8>12 (add0000_addsub0000<8>)
+     LUT2:I0->O            1   0.704   0.000  Mcompar_VGA_Blue_cmp_le0002_lut<8> (Mcompar_VGA_Blue_cmp_le0002_lut<8>)
+     MUXCY:S->O            1   0.464   0.000  Mcompar_VGA_Blue_cmp_le0002_cy<8> (Mcompar_VGA_Blue_cmp_le0002_cy<8>)
+     MUXCY:CI->O           2   0.459   0.482  Mcompar_VGA_Blue_cmp_le0002_cy<9> (VGA_Blue_cmp_le0002)
+     LUT4:I2->O            1   0.704   0.420  VGA_Blue_mux0005<0>5 (VGA_Blue_mux0005<0>5)
+     FDRS:S                    0.911          VGA_Blue_0
     ----------------------------------------
-    Total                      8.902ns (6.845ns logic, 2.057ns route)
-                                       (76.9% logic, 23.1% route)
+    Total                     10.190ns (6.572ns logic, 3.618ns route)
+                                       (64.5% logic, 35.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clock25MHz/slow_clk1'
@@ -444,7 +435,7 @@ Offset:              4.620ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              8   0.591   0.757  VGA_Blue_0 (VGA_Blue_0)
+     FDRS:C->Q             8   0.591   0.757  VGA_Blue_0 (VGA_Blue_0)
      OBUF:I->O                 3.272          VGA_Blue_1_OBUF (VGA_Blue<1>)
     ----------------------------------------
     Total                      4.620ns (3.863ns logic, 0.757ns route)
@@ -454,13 +445,13 @@ Offset:              4.620ns (Levels of Logic = 1)
 
 
 Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 3.91 secs
+Total CPU time to Xst completion: 4.64 secs
  
 --> 
 
-Total memory usage is 151460 kilobytes
+Total memory usage is 152484 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    4 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
 Number of infos    :    1 (   0 filtered)
 

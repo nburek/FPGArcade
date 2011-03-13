@@ -5,18 +5,6 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/top</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Documents and Settings/nb418308/Desktop/FPGArcade/VGA_Driver/top.vhdl</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/FPGArcade/VGA_Driver/top.vhdl</arg>&quot;.
-</msg>
-
-<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/top/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Documents and Settings/nb418308/Desktop/FPGArcade/VGA_Driver/top.vhdl</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/FPGArcade/VGA_Driver/top.vhdl</arg>&quot;.
-</msg>
-
-<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/clk25MHz</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Documents and Settings/nb418308/Desktop/FPGArcade/VGA_Driver/clk25MHz.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/FPGArcade/VGA_Driver/clk25MHz.vhd</arg>&quot;.
-</msg>
-
-<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/clk25MHz/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Documents and Settings/nb418308/Desktop/FPGArcade/VGA_Driver/clk25MHz.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/FPGArcade/VGA_Driver/clk25MHz.vhd</arg>&quot;.
-</msg>
-
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">VGA_Blue_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;VGA_Blue_1&gt; &lt;VGA_Green_0&gt; &lt;VGA_Green_1&gt; &lt;VGA_Green_2&gt; </arg>
 </msg>
 

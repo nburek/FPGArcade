@@ -9,72 +9,61 @@ Target Device  : xc3s500e
 Target Package : fg320
 Target Speed   : -4
 Mapper Version : spartan3e -- $Revision: 1.52.76.2 $
-Mapped Date    : Mon Feb 21 13:45:54 2011
+Mapped Date    : Sat Mar 12 14:52:09 2011
 
 Design Summary
 --------------
-Number of errors:      0
-Number of warnings:    0
-Logic Utilization:
-  Number of Slice Flip Flops:            39 out of   9,312    1%
-  Number of 4 input LUTs:                17 out of   9,312    1%
-Logic Distribution:
-  Number of occupied Slices:             31 out of   4,656    1%
-    Number of Slices containing only related logic:      31 out of      31 100%
-    Number of Slices containing unrelated logic:          0 out of      31   0%
-      *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:          35 out of   9,312    1%
-    Number used as logic:                17
-    Number used as a route-thru:         18
-
-  The Slice Logic Distribution report is not meaningful if the design is
-  over-mapped for a non-slice resource or if Placement fails.
-
-  Number of bonded IOBs:                 27 out of     232   11%
-  Number of BUFGMUXs:                     2 out of      24    8%
-
-Average Fanout of Non-Clock Nets:                2.39
-
-Peak Memory Usage:  167 MB
-Total REAL time to MAP completion:  2 secs 
-Total CPU time to MAP completion:   2 secs 
-
-NOTES:
-
-   Related logic is defined as being logic that shares connectivity - e.g. two
-   LUTs are "related" if they share common inputs.  When assembling slices,
-   Map gives priority to combine logic that is related.  Doing so results in
-   the best timing performance.
-
-   Unrelated logic shares no connectivity.  Map will only begin packing
-   unrelated logic into a slice once 99% of the slices are occupied through
-   related logic packing.
-
-   Note that once logic distribution reaches the 99% level through related
-   logic packing, this does not mean the device is completely utilized.
-   Unrelated logic packing will then begin, continuing until all usable LUTs
-   and FFs are occupied.  Depending on your timing budget, increased levels of
-   unrelated logic packing may adversely affect the overall timing performance
-   of your design.
-
-Table of Contents
------------------
-Section 1 - Errors
-Section 2 - Warnings
-Section 3 - Informational
-Section 4 - Removed Logic Summary
-Section 5 - Removed Logic
-Section 6 - IOB Properties
-Section 7 - RPMs
-Section 8 - Guide Report
-Section 9 - Area Group and Partition Summary
-Section 10 - Timing Report
-Section 11 - Configuration String Information
-Section 12 - Control Set Information
-Section 13 - Utilization by Hierarchy
+Number of errors   :   1
+Number of warnings :   0
 
 Section 1 - Errors
 ------------------
+ERROR:Pack:2811 - Directed packing was unable to obey the user design
+   constraints (LOC=B8) which requires the combination of the symbols listed
+   below to be packed into a single IBUF component.
+
+   The directed pack was not possible because: There is more than one pad
+   symbol.
+   The symbols involved are:
+   	BUF symbol "PaddlePosition_7_IBUF" (Output Signal = PaddlePosition_7_IBUF)
+   	PAD symbol "PaddlePosition<7>" (Pad Signal = PaddlePosition<7>)
+   	PAD symbol "BlockPosition<15>" (Pad Signal = BlockPosition<15>)
+   	PAD symbol "PaddlePosition<8>" (Pad Signal = PaddlePosition<8>)
+   	PAD symbol "BlockPosition<16>" (Pad Signal = BlockPosition<16>)
+   	PAD symbol "PaddlePosition<9>" (Pad Signal = PaddlePosition<9>)
+   	PAD symbol "BlockPosition<17>" (Pad Signal = BlockPosition<17>)
+   	PAD symbol "BlockPosition<18>" (Pad Signal = BlockPosition<18>)
+   	PAD symbol "PaddlePosition<10>" (Pad Signal = PaddlePosition<10>)
+   	PAD symbol "clk" (Pad Signal = clk)
+   	PAD symbol "PaddlePosition<11>" (Pad Signal = PaddlePosition<11>)
+   	PAD symbol "PaddlePosition<12>" (Pad Signal = PaddlePosition<12>)
+   	PAD symbol "PaddlePosition<13>" (Pad Signal = PaddlePosition<13>)
+   	PAD symbol "PaddlePosition<14>" (Pad Signal = PaddlePosition<14>)
+   	PAD symbol "PaddlePosition<15>" (Pad Signal = PaddlePosition<15>)
+   	PAD symbol "PaddlePosition<16>" (Pad Signal = PaddlePosition<16>)
+   	PAD symbol "PaddlePosition<17>" (Pad Signal = PaddlePosition<17>)
+   	PAD symbol "BlockPosition<0>" (Pad Signal = BlockPosition<0>)
+   	PAD symbol "BlockPosition<1>" (Pad Signal = BlockPosition<1>)
+   	PAD symbol "BlockPosition<2>" (Pad Signal = BlockPosition<2>)
+   	PAD symbol "BlockPosition<3>" (Pad Signal = BlockPosition<3>)
+   	PAD symbol "BlockPosition<4>" (Pad Signal = BlockPosition<4>)
+   	PAD symbol "BlockPosition<5>" (Pad Signal = BlockPosition<5>)
+   	PAD symbol "BlockPosition<6>" (Pad Signal = BlockPosition<6>)
+   	PAD symbol "BlockPosition<7>" (Pad Signal = BlockPosition<7>)
+   	PAD symbol "BlockPosition<8>" (Pad Signal = BlockPosition<8>)
+   	PAD symbol "BlockPosition<9>" (Pad Signal = BlockPosition<9>)
+   	PAD symbol "PaddlePosition<0>" (Pad Signal = PaddlePosition<0>)
+   	PAD symbol "PaddlePosition<1>" (Pad Signal = PaddlePosition<1>)
+   	PAD symbol "PaddlePosition<2>" (Pad Signal = PaddlePosition<2>)
+   	PAD symbol "BlockPosition<10>" (Pad Signal = BlockPosition<10>)
+   	PAD symbol "PaddlePosition<3>" (Pad Signal = PaddlePosition<3>)
+   	PAD symbol "BlockPosition<11>" (Pad Signal = BlockPosition<11>)
+   	PAD symbol "PaddlePosition<4>" (Pad Signal = PaddlePosition<4>)
+   	PAD symbol "BlockPosition<12>" (Pad Signal = BlockPosition<12>)
+   	PAD symbol "PaddlePosition<5>" (Pad Signal = PaddlePosition<5>)
+   	PAD symbol "BlockPosition<13>" (Pad Signal = BlockPosition<13>)
+   	PAD symbol "PaddlePosition<6>" (Pad Signal = PaddlePosition<6>)
+   	PAD symbol "BlockPosition<14>" (Pad Signal = BlockPosition<14>)
 
 Section 2 - Warnings
 --------------------
@@ -85,94 +74,3 @@ INFO:MapLib:562 - No environment variables are currently set.
 INFO:LIT:244 - All of the single ended outputs in this design are using slew
    rate limited output drivers. The delay on speed critical single ended outputs
    can be dramatically reduced by designating them as fast outputs.
-
-Section 4 - Removed Logic Summary
----------------------------------
-   2 block(s) optimized away
-
-Section 5 - Removed Logic
--------------------------
-
-Optimized Block(s):
-TYPE 		BLOCK
-GND 		XST_GND
-VCC 		XST_VCC
-
-To enable printing of redundant blocks removed and signals merged, set the
-detailed map report option and rerun map.
-
-Section 6 - IOB Properties
---------------------------
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
-|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
-+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-| HSync                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
-| Led<0>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
-| Led<1>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
-| Led<2>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
-| Led<3>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
-| Led<4>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
-| Led<5>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
-| Led<6>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
-| Led<7>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
-| VGA_Blue<0>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
-| VGA_Blue<1>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
-| VGA_Green<0>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
-| VGA_Green<1>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
-| VGA_Green<2>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
-| VGA_Red<0>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
-| VGA_Red<1>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
-| VGA_Red<2>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
-| VSync                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
-| clk                                | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
-| sw<0>                              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
-| sw<1>                              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
-| sw<2>                              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
-| sw<3>                              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
-| sw<4>                              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
-| sw<5>                              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
-| sw<6>                              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
-| sw<7>                              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
-+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-Section 7 - RPMs
-----------------
-
-Section 8 - Guide Report
-------------------------
-Guide not run on this design.
-
-Section 9 - Area Group and Partition Summary
---------------------------------------------
-
-Partition Implementation Status
--------------------------------
-
-  No Partitions were found in this design.
-
--------------------------------
-
-Area Group Information
-----------------------
-
-  No area groups were found in this design.
-
-----------------------
-
-Section 10 - Timing Report
---------------------------
-This design was not run using timing mode.
-
-Section 11 - Configuration String Details
------------------------------------------
-Use the "-detail" map option to print out Configuration Strings
-
-Section 12 - Control Set Information
-------------------------------------
-No control set information for this architecture.
-
-Section 13 - Utilization by Hierarchy
--------------------------------------
-Use the "-detail" map option to print out the Utilization by Hierarchy section.

@@ -9,61 +9,62 @@ Target Device  : xc3s500e
 Target Package : fg320
 Target Speed   : -4
 Mapper Version : spartan3e -- $Revision: 1.52.76.2 $
-Mapped Date    : Mon Feb 21 13:45:54 2011
+Mapped Date    : Sat Mar 12 14:52:09 2011
 
 Mapping design into LUTs...
 Running directed packing...
-Running delay-based LUT packing...
-Running related packing...
-Updating timing models...
+ERROR:Pack:2811 - Directed packing was unable to obey the user design
+   constraints (LOC=B8) which requires the combination of the symbols listed
+   below to be packed into a single IBUF component.
 
-Design Summary
---------------
-
-Design Summary:
-Number of errors:      0
-Number of warnings:    0
-Logic Utilization:
-  Number of Slice Flip Flops:            39 out of   9,312    1%
-  Number of 4 input LUTs:                17 out of   9,312    1%
-Logic Distribution:
-  Number of occupied Slices:             31 out of   4,656    1%
-    Number of Slices containing only related logic:      31 out of      31 100%
-    Number of Slices containing unrelated logic:          0 out of      31   0%
-      *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:          35 out of   9,312    1%
-    Number used as logic:                17
-    Number used as a route-thru:         18
-
-  The Slice Logic Distribution report is not meaningful if the design is
-  over-mapped for a non-slice resource or if Placement fails.
-
-  Number of bonded IOBs:                 27 out of     232   11%
-  Number of BUFGMUXs:                     2 out of      24    8%
-
-Average Fanout of Non-Clock Nets:                2.39
-
-Peak Memory Usage:  167 MB
-Total REAL time to MAP completion:  2 secs 
-Total CPU time to MAP completion:   2 secs 
-
-NOTES:
-
-   Related logic is defined as being logic that shares connectivity - e.g. two
-   LUTs are "related" if they share common inputs.  When assembling slices,
-   Map gives priority to combine logic that is related.  Doing so results in
-   the best timing performance.
-
-   Unrelated logic shares no connectivity.  Map will only begin packing
-   unrelated logic into a slice once 99% of the slices are occupied through
-   related logic packing.
-
-   Note that once logic distribution reaches the 99% level through related
-   logic packing, this does not mean the device is completely utilized.
-   Unrelated logic packing will then begin, continuing until all usable LUTs
-   and FFs are occupied.  Depending on your timing budget, increased levels of
-   unrelated logic packing may adversely affect the overall timing performance
-   of your design.
+   The directed pack was not possible because: There is more than one pad
+   symbol.
+   The symbols involved are:
+   	BUF symbol "PaddlePosition_7_IBUF" (Output Signal = PaddlePosition_7_IBUF)
+   	PAD symbol "PaddlePosition<7>" (Pad Signal = PaddlePosition<7>)
+   	PAD symbol "BlockPosition<15>" (Pad Signal = BlockPosition<15>)
+   	PAD symbol "PaddlePosition<8>" (Pad Signal = PaddlePosition<8>)
+   	PAD symbol "BlockPosition<16>" (Pad Signal = BlockPosition<16>)
+   	PAD symbol "PaddlePosition<9>" (Pad Signal = PaddlePosition<9>)
+   	PAD symbol "BlockPosition<17>" (Pad Signal = BlockPosition<17>)
+   	PAD symbol "BlockPosition<18>" (Pad Signal = BlockPosition<18>)
+   	PAD symbol "PaddlePosition<10>" (Pad Signal = PaddlePosition<10>)
+   	PAD symbol "clk" (Pad Signal = clk)
+   	PAD symbol "PaddlePosition<11>" (Pad Signal = PaddlePosition<11>)
+   	PAD symbol "PaddlePosition<12>" (Pad Signal = PaddlePosition<12>)
+   	PAD symbol "PaddlePosition<13>" (Pad Signal = PaddlePosition<13>)
+   	PAD symbol "PaddlePosition<14>" (Pad Signal = PaddlePosition<14>)
+   	PAD symbol "PaddlePosition<15>" (Pad Signal = PaddlePosition<15>)
+   	PAD symbol "PaddlePosition<16>" (Pad Signal = PaddlePosition<16>)
+   	PAD symbol "PaddlePosition<17>" (Pad Signal = PaddlePosition<17>)
+   	PAD symbol "BlockPosition<0>" (Pad Signal = BlockPosition<0>)
+   	PAD symbol "BlockPosition<1>" (Pad Signal = BlockPosition<1>)
+   	PAD symbol "BlockPosition<2>" (Pad Signal = BlockPosition<2>)
+   	PAD symbol "BlockPosition<3>" (Pad Signal = BlockPosition<3>)
+   	PAD symbol "BlockPosition<4>" (Pad Signal = BlockPosition<4>)
+   	PAD symbol "BlockPosition<5>" (Pad Signal = BlockPosition<5>)
+   	PAD symbol "BlockPosition<6>" (Pad Signal = BlockPosition<6>)
+   	PAD symbol "BlockPosition<7>" (Pad Signal = BlockPosition<7>)
+   	PAD symbol "BlockPosition<8>" (Pad Signal = BlockPosition<8>)
+   	PAD symbol "BlockPosition<9>" (Pad Signal = BlockPosition<9>)
+   	PAD symbol "PaddlePosition<0>" (Pad Signal = PaddlePosition<0>)
+   	PAD symbol "PaddlePosition<1>" (Pad Signal = PaddlePosition<1>)
+   	PAD symbol "PaddlePosition<2>" (Pad Signal = PaddlePosition<2>)
+   	PAD symbol "BlockPosition<10>" (Pad Signal = BlockPosition<10>)
+   	PAD symbol "PaddlePosition<3>" (Pad Signal = PaddlePosition<3>)
+   	PAD symbol "BlockPosition<11>" (Pad Signal = BlockPosition<11>)
+   	PAD symbol "PaddlePosition<4>" (Pad Signal = PaddlePosition<4>)
+   	PAD symbol "BlockPosition<12>" (Pad Signal = BlockPosition<12>)
+   	PAD symbol "PaddlePosition<5>" (Pad Signal = PaddlePosition<5>)
+   	PAD symbol "BlockPosition<13>" (Pad Signal = BlockPosition<13>)
+   	PAD symbol "PaddlePosition<6>" (Pad Signal = PaddlePosition<6>)
+   	PAD symbol "BlockPosition<14>" (Pad Signal = BlockPosition<14>)
 
 Mapping completed.
 See MAP report file "top_map.mrp" for details.
+Problem encountered during the packing phase.
+
+Design Summary
+--------------
+Number of errors   :   1
+Number of warnings :   0
