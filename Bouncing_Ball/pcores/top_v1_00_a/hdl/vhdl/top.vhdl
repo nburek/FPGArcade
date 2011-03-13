@@ -31,7 +31,8 @@ entity top is
 			HSync : out STD_LOGIC;
 			VSync : out STD_LOGIC;
 			clk : in STD_LOGIC;
-			BlockPosition : in STD_LOGIC_VECTOR (0 to 19));
+			BlockPosition : in STD_LOGIC_VECTOR (0 to 18);
+			PaddlePosition : in STD_LOGIC_VECTOR(0 to 17));
 end top;
 
 architecture Behavioral of top is
@@ -92,16 +93,18 @@ begin
 		
 		IF (hCount <= 639 AND vCount <= 479) THEN -- are we within the valid pixel range
 			
-			IF (vCount >= BlockPosition(10 to 19) AND vCount <= (conv_integer(BlockPosition(10 to 19)) + 30)) THEN
-				IF (hCount>=BlockPosition(0 to 9) AND hCount <= (conv_integer(BlockPosition(0 to 9)) + 30)) THEN
-					VGA_Red <= "111";
-					VGA_Green <= "111";
-					VGA_Blue <= "11";
-				ELSE
-					VGA_Red <= "000";
-					VGA_Green <= "000";
-					VGA_Blue <= "00";
-				END IF;
+			IF (vCount >= BlockPosition(10 to 18) AND vCount <= (conv_integer(BlockPosition(10 to 18)) + 30) AND hCount>=BlockPosition(0 to 9) AND hCount <= (conv_integer(BlockPosition(0 to 9)) + 30)) THEN
+				VGA_Red <= "111";
+				VGA_Green <= "111";
+				VGA_Blue <= "11";
+			ELSIF (hCount<=14 AND vCount(8 downto 0) >= conv_integer(PaddlePosition(0 to 8)) AND vCount(8 downto 0) <= (conv_integer(PaddlePosition(0 to 8))+100)) THEN
+				VGA_Red <= "111";
+				VGA_Green <= "111";
+				VGA_Blue <= "11";
+			ELSIF (hCount>=624 AND vCount(8 downto 0) >= conv_integer(PaddlePosition(9 to 17)) AND vCount(8 downto 0) <= (conv_integer(PaddlePosition(9 to 17))+100)) THEN
+				VGA_Red <= "111";
+				VGA_Green <= "111";
+				VGA_Blue <= "11";
 			ELSE
 				VGA_Red <= "000";
 				VGA_Green <= "000";

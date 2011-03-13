@@ -1083,18 +1083,6 @@ architecture STRUCTURE of system is
     );
   end component;
 
-  component top_0_wrapper is
-    port (
-      VGA_Red : out std_logic_vector(2 downto 0);
-      VGA_Green : out std_logic_vector(2 downto 0);
-      VGA_Blue : out std_logic_vector(1 downto 0);
-      HSync : out std_logic;
-      VSync : out std_logic;
-      clk : in std_logic;
-      BlockPosition : in std_logic_vector(0 to 19)
-    );
-  end component;
-
   component block_output_wrapper is
     port (
       SPLB_Clk : in std_logic;
@@ -1140,12 +1128,25 @@ architecture STRUCTURE of system is
       Sl_MRdErr : out std_logic_vector(0 to 1);
       Sl_MIRQ : out std_logic_vector(0 to 1);
       IP2INTC_Irpt : out std_logic;
-      GPIO_IO_I : in std_logic_vector(0 to 19);
-      GPIO_IO_O : out std_logic_vector(0 to 19);
-      GPIO_IO_T : out std_logic_vector(0 to 19);
-      GPIO2_IO_I : in std_logic_vector(0 to 31);
-      GPIO2_IO_O : out std_logic_vector(0 to 31);
-      GPIO2_IO_T : out std_logic_vector(0 to 31)
+      GPIO_IO_I : in std_logic_vector(0 to 18);
+      GPIO_IO_O : out std_logic_vector(0 to 18);
+      GPIO_IO_T : out std_logic_vector(0 to 18);
+      GPIO2_IO_I : in std_logic_vector(0 to 17);
+      GPIO2_IO_O : out std_logic_vector(0 to 17);
+      GPIO2_IO_T : out std_logic_vector(0 to 17)
+    );
+  end component;
+
+  component top_0_wrapper is
+    port (
+      VGA_Red : out std_logic_vector(2 downto 0);
+      VGA_Green : out std_logic_vector(2 downto 0);
+      VGA_Blue : out std_logic_vector(1 downto 0);
+      HSync : out std_logic;
+      VSync : out std_logic;
+      clk : in std_logic;
+      BlockPosition : in std_logic_vector(0 to 18);
+      PaddlePosition : in std_logic_vector(0 to 17)
     );
   end component;
 
@@ -1288,12 +1289,14 @@ architecture STRUCTURE of system is
   signal net_gnd4 : std_logic_vector(0 to 3);
   signal net_gnd8 : std_logic_vector(0 to 7);
   signal net_gnd10 : std_logic_vector(0 to 9);
-  signal net_gnd20 : std_logic_vector(0 to 19);
+  signal net_gnd18 : std_logic_vector(0 to 17);
+  signal net_gnd19 : std_logic_vector(0 to 18);
   signal net_gnd32 : std_logic_vector(0 to 31);
   signal sys_bus_reset : std_logic_vector(0 to 0);
   signal sys_rst_s : std_logic;
-  signal top_0_BlockPosition : std_logic_vector(0 to 19);
+  signal top_0_BlockPosition : std_logic_vector(0 to 18);
   signal top_0_HSync : std_logic;
+  signal top_0_PaddlePosition : std_logic_vector(0 to 17);
   signal top_0_VGA_Blue : std_logic_vector(1 downto 0);
   signal top_0_VGA_Green : std_logic_vector(2 downto 0);
   signal top_0_VGA_Red : std_logic_vector(2 downto 0);
@@ -1311,8 +1314,8 @@ architecture STRUCTURE of system is
   attribute BOX_TYPE of clock_generator_0_wrapper : component is "user_black_box";
   attribute BOX_TYPE of mdm_0_wrapper : component is "user_black_box";
   attribute BOX_TYPE of proc_sys_reset_0_wrapper : component is "user_black_box";
-  attribute BOX_TYPE of top_0_wrapper : component is "user_black_box";
   attribute BOX_TYPE of block_output_wrapper : component is "user_black_box";
+  attribute BOX_TYPE of top_0_wrapper : component is "user_black_box";
 
 begin
 
@@ -1328,8 +1331,9 @@ begin
   net_gnd0 <= '0';
   net_gnd1(0 downto 0) <= B"0";
   net_gnd10(0 to 9) <= B"0000000000";
+  net_gnd18(0 to 17) <= B"000000000000000000";
+  net_gnd19(0 to 18) <= B"0000000000000000000";
   net_gnd2(1 downto 0) <= B"00";
-  net_gnd20(0 to 19) <= B"00000000000000000000";
   net_gnd32(0 to 31) <= B"00000000000000000000000000000000";
   net_gnd4(0 to 3) <= B"0000";
   net_gnd8(0 to 7) <= B"00000000";
@@ -2384,17 +2388,6 @@ begin
       Peripheral_aresetn => open
     );
 
-  top_0 : top_0_wrapper
-    port map (
-      VGA_Red => top_0_VGA_Red,
-      VGA_Green => top_0_VGA_Green,
-      VGA_Blue => top_0_VGA_Blue,
-      HSync => top_0_HSync,
-      VSync => top_0_VSync,
-      clk => dcm_clk_s,
-      BlockPosition => top_0_BlockPosition
-    );
-
   Block_Output : block_output_wrapper
     port map (
       SPLB_Clk => clk_50_0000MHz,
@@ -2440,12 +2433,24 @@ begin
       Sl_MRdErr => mb_plb_Sl_MRdErr(4 to 5),
       Sl_MIRQ => mb_plb_Sl_MIRQ(4 to 5),
       IP2INTC_Irpt => open,
-      GPIO_IO_I => net_gnd20,
+      GPIO_IO_I => net_gnd19,
       GPIO_IO_O => top_0_BlockPosition,
       GPIO_IO_T => open,
-      GPIO2_IO_I => net_gnd32,
-      GPIO2_IO_O => open,
+      GPIO2_IO_I => net_gnd18,
+      GPIO2_IO_O => top_0_PaddlePosition,
       GPIO2_IO_T => open
+    );
+
+  top_0 : top_0_wrapper
+    port map (
+      VGA_Red => top_0_VGA_Red,
+      VGA_Green => top_0_VGA_Green,
+      VGA_Blue => top_0_VGA_Blue,
+      HSync => top_0_HSync,
+      VSync => top_0_VSync,
+      clk => dcm_clk_s,
+      BlockPosition => top_0_BlockPosition,
+      PaddlePosition => top_0_PaddlePosition
     );
 
 end architecture STRUCTURE;

@@ -55,12 +55,12 @@ entity block_output_wrapper is
     Sl_MRdErr : out std_logic_vector(0 to 1);
     Sl_MIRQ : out std_logic_vector(0 to 1);
     IP2INTC_Irpt : out std_logic;
-    GPIO_IO_I : in std_logic_vector(0 to 19);
-    GPIO_IO_O : out std_logic_vector(0 to 19);
-    GPIO_IO_T : out std_logic_vector(0 to 19);
-    GPIO2_IO_I : in std_logic_vector(0 to 31);
-    GPIO2_IO_O : out std_logic_vector(0 to 31);
-    GPIO2_IO_T : out std_logic_vector(0 to 31)
+    GPIO_IO_I : in std_logic_vector(0 to 18);
+    GPIO_IO_O : out std_logic_vector(0 to 18);
+    GPIO_IO_T : out std_logic_vector(0 to 18);
+    GPIO2_IO_I : in std_logic_vector(0 to 17);
+    GPIO2_IO_O : out std_logic_vector(0 to 17);
+    GPIO2_IO_T : out std_logic_vector(0 to 17)
   );
 
   attribute x_core_info : STRING;
@@ -162,12 +162,12 @@ begin
       C_FAMILY => "spartan3e",
       C_ALL_INPUTS => 0,
       C_ALL_INPUTS_2 => 0,
-      C_GPIO_WIDTH => 20,
-      C_GPIO2_WIDTH => 32,
+      C_GPIO_WIDTH => 19,
+      C_GPIO2_WIDTH => 18,
       C_INTERRUPT_PRESENT => 0,
       C_DOUT_DEFAULT => X"00000000",
       C_TRI_DEFAULT => X"ffffffff",
-      C_IS_DUAL => 0,
+      C_IS_DUAL => 1,
       C_DOUT_DEFAULT_2 => X"00000000",
       C_TRI_DEFAULT_2 => X"ffffffff"
     )

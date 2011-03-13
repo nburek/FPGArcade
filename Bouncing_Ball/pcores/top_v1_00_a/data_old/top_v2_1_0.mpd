@@ -26,7 +26,6 @@ PORT VGA_Blue = "", DIR = O, VEC = [1:0]
 PORT HSync = "", DIR = O
 PORT VSync = "", DIR = O
 PORT clk = "", DIR = I
-PORT BlockPosition = "", DIR = I, VEC = [0:18]
-PORT PaddlePosition = "", DIR = I, VEC = [0:17]
+PORT BlockPosition = "", DIR = I, VEC = [0:19]
 
 END

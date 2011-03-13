@@ -1,10 +1,8 @@
 //! **************************************************************************
-// Written by: Map M.81d on Thu Mar 10 22:44:18 2011
+// Written by: Map M.81d on Sat Mar 12 15:28:59 2011
 //! **************************************************************************
 
 SCHEMATIC START;
-NET "microblaze_0/microblaze_0/Area.Data_Flow_I/PC_Module_I/pc_write_I"
-        USELOWSKEWLINES;
 COMP "top_0_VGA_Blue_pin<0>" LOCATE = SITE "U5" LEVEL 1;
 COMP "top_0_VGA_Blue_pin<1>" LOCATE = SITE "U4" LEVEL 1;
 COMP "top_0_HSync_pin" LOCATE = SITE "T4" LEVEL 1;
@@ -25,6 +23,8 @@ COMP "fpga_0_LEDs_8Bit_GPIO_IO_O_pin<5>" LOCATE = SITE "K15" LEVEL 1;
 COMP "fpga_0_LEDs_8Bit_GPIO_IO_O_pin<6>" LOCATE = SITE "J15" LEVEL 1;
 COMP "fpga_0_LEDs_8Bit_GPIO_IO_O_pin<7>" LOCATE = SITE "J14" LEVEL 1;
 COMP "top_0_VSync_pin" LOCATE = SITE "U3" LEVEL 1;
+NET "microblaze_0/microblaze_0/Area.Data_Flow_I/PC_Module_I/pc_write_I"
+        USELOWSKEWLINES;
 PIN lmb_bram/lmb_bram/ramb16_s9_s9_0.A_pins<12> = BEL
         "lmb_bram/lmb_bram/ramb16_s9_s9_0.A" PINNAME CLKA;
 PIN lmb_bram/lmb_bram/ramb16_s9_s9_0.B_pins<12> = BEL
@@ -67,8 +67,6 @@ TIMEGRP clock_generator_0_clock_generator_0_SIG_DCM0_CLK0 = PIN
         "microblaze_0/microblaze_0/sync_reset" BEL
         "microblaze_0/microblaze_0/mem_access" BEL
         "microblaze_0/microblaze_0/Area.Using_Ext_Databus.Using_D_PLB.DPLB_Interface_I1/active_access_d1"
-        BEL
-        "microblaze_0/microblaze_0/Area.Using_Ext_Databus.Using_D_PLB.DPLB_Interface_I1/WB_DPLB_Read_Data_12"
         BEL
         "microblaze_0/microblaze_0/Area.Using_Ext_Databus.Using_D_PLB.DPLB_Interface_I1/WB_DPLB_Read_Data_13"
         BEL
@@ -133,16 +131,6 @@ TIMEGRP clock_generator_0_clock_generator_0_SIG_DCM0_CLK0 = PIN
         "microblaze_0/microblaze_0/Area.Using_Ext_Databus.Using_D_PLB.DPLB_Interface_I1/dplb_m_wrdbus_i_6"
         BEL
         "microblaze_0/microblaze_0/Area.Using_Ext_Databus.Using_D_PLB.DPLB_Interface_I1/dplb_m_wrdbus_i_7"
-        BEL
-        "microblaze_0/microblaze_0/Area.Using_Ext_Databus.Using_D_PLB.DPLB_Interface_I1/dplb_m_wrdbus_i_8"
-        BEL
-        "microblaze_0/microblaze_0/Area.Using_Ext_Databus.Using_D_PLB.DPLB_Interface_I1/dplb_m_wrdbus_i_9"
-        BEL
-        "microblaze_0/microblaze_0/Area.Using_Ext_Databus.Using_D_PLB.DPLB_Interface_I1/dplb_m_wrdbus_i_10"
-        BEL
-        "microblaze_0/microblaze_0/Area.Using_Ext_Databus.Using_D_PLB.DPLB_Interface_I1/dplb_m_wrdbus_i_11"
-        BEL
-        "microblaze_0/microblaze_0/Area.Using_Ext_Databus.Using_D_PLB.DPLB_Interface_I1/dplb_m_wrdbus_i_12"
         BEL
         "microblaze_0/microblaze_0/Area.Using_Ext_Databus.Using_D_PLB.DPLB_Interface_I1/dplb_m_wrdbus_i_13"
         BEL
@@ -307,8 +295,6 @@ TIMEGRP clock_generator_0_clock_generator_0_SIG_DCM0_CLK0 = PIN
         "microblaze_0/microblaze_0/Area.Using_I_PLB.IPLB_Interface_I1/instr_addr_29"
         BEL
         "microblaze_0/microblaze_0/Area.Using_I_PLB.IPLB_Interface_I1/IPLB_M_request"
-        BEL
-        "microblaze_0/microblaze_0/Area.Using_I_PLB.IPLB_Interface_I1/IPLB_Data_12"
         BEL
         "microblaze_0/microblaze_0/Area.Using_I_PLB.IPLB_Interface_I1/IPLB_Data_13"
         BEL
@@ -2140,26 +2126,55 @@ TIMEGRP clock_generator_0_clock_generator_0_SIG_DCM0_CLK0 = PIN
         "proc_sys_reset_0/proc_sys_reset_0/SEQ/bsr_dec_0" BEL
         "proc_sys_reset_0/proc_sys_reset_0/EXT_LPF/POR_SRL_I/SRL16E" BEL
         "proc_sys_reset_0/proc_sys_reset_0/EXT_LPF/Mshreg_asr_lpf_0/SRL16E"
-        BEL "Block_Output/Block_Output/gpio_core_1/gpio_Data_In_0" BEL
+        BEL "Block_Output/Block_Output/gpio_core_1/gpio2_Data_In_0" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_Data_In_1" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_Data_In_2" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_Data_In_3" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_Data_In_4" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_Data_In_5" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_Data_In_7" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_Data_In_8" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_Data_In_6" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_Data_In_9" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_Data_In_10" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_Data_In_11" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_Data_In_12" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_Data_In_13" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_Data_In_14" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_Data_In_16" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_Data_In_17" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_Data_In_15" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio_Data_In_0" BEL
         "Block_Output/Block_Output/gpio_core_1/gpio_Data_In_1" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio_Data_In_2" BEL
         "Block_Output/Block_Output/gpio_core_1/gpio_Data_In_3" BEL
         "Block_Output/Block_Output/gpio_core_1/gpio_Data_In_4" BEL
-        "Block_Output/Block_Output/gpio_core_1/gpio_Data_In_2" BEL
         "Block_Output/Block_Output/gpio_core_1/gpio_Data_In_5" BEL
-        "Block_Output/Block_Output/gpio_core_1/gpio_Data_In_6" BEL
-        "Block_Output/Block_Output/gpio_core_1/gpio_Data_In_8" BEL
-        "Block_Output/Block_Output/gpio_core_1/gpio_Data_In_9" BEL
         "Block_Output/Block_Output/gpio_core_1/gpio_Data_In_7" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio_Data_In_8" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio_Data_In_6" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio_Data_In_9" BEL
         "Block_Output/Block_Output/gpio_core_1/gpio_Data_In_10" BEL
-        "Block_Output/Block_Output/gpio_core_1/gpio_Data_In_11" BEL
-        "Block_Output/Block_Output/gpio_core_1/gpio_Data_In_13" BEL
-        "Block_Output/Block_Output/gpio_core_1/gpio_Data_In_14" BEL
         "Block_Output/Block_Output/gpio_core_1/gpio_Data_In_12" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio_Data_In_13" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio_Data_In_11" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio_Data_In_14" BEL
         "Block_Output/Block_Output/gpio_core_1/gpio_Data_In_15" BEL
-        "Block_Output/Block_Output/gpio_core_1/gpio_Data_In_16" BEL
-        "Block_Output/Block_Output/gpio_core_1/gpio_Data_In_18" BEL
-        "Block_Output/Block_Output/gpio_core_1/gpio_Data_In_19" BEL
         "Block_Output/Block_Output/gpio_core_1/gpio_Data_In_17" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio_Data_In_18" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio_Data_In_16" BEL
+        "Block_Output/Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/bus2ip_rnw_i_1"
+        BEL
+        "Block_Output/Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_out_i_0_3"
+        BEL
+        "Block_Output/Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_28_2"
+        BEL
+        "Block_Output/Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_out_i_0_2"
+        BEL
+        "Block_Output/Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_out_i_0_1"
+        BEL
+        "Block_Output/Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_28_1"
+        BEL
         "Block_Output/Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/rd_clear_sl_busy"
         BEL
         "Block_Output/Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/sl_wrcomp_i"
@@ -2180,46 +2195,80 @@ TIMEGRP clock_generator_0_clock_generator_0_SIG_DCM0_CLK0 = PIN
         BEL
         "Block_Output/Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/INCLUDE_DATA_PHASE_WDT.I_DPTO_COUNTER/icount_out_7"
         BEL "Block_Output/Block_Output/gpio_core_1/gpio_xferAck_Reg" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_Data_Out_8" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_OE_9" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_Data_Out_9" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_Data_Out_7" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_OE_8" BEL
         "Block_Output/Block_Output/gpio_core_1/gpio_Data_Out_9" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_Data_Out_6" BEL
         "Block_Output/Block_Output/gpio_core_1/gpio_Data_Out_8" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_Data_Out_5" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_OE_7" BEL
         "Block_Output/Block_Output/gpio_core_1/GPIO_DBus_i_29" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_OE_6" BEL
         "Block_Output/Block_Output/gpio_core_1/gpio_Data_Out_7" BEL
-        "Block_Output/Block_Output/gpio_core_1/GPIO_DBus_i_28" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_Data_Out_4" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_OE_5" BEL
         "Block_Output/Block_Output/gpio_core_1/gpio_Data_Out_6" BEL
+        "Block_Output/Block_Output/gpio_core_1/GPIO_DBus_i_28" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_Data_Out_3" BEL
         "Block_Output/Block_Output/gpio_core_1/GPIO_DBus_i_27" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_OE_4" BEL
         "Block_Output/Block_Output/gpio_core_1/gpio_Data_Out_5" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_Data_Out_2" BEL
         "Block_Output/Block_Output/gpio_core_1/GPIO_DBus_i_26" BEL
         "Block_Output/Block_Output/gpio_core_1/GPIO_DBus_i_31" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_OE_3" BEL
         "Block_Output/Block_Output/gpio_core_1/gpio_Data_Out_4" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_Data_Out_1" BEL
         "Block_Output/Block_Output/gpio_core_1/GPIO_DBus_i_25" BEL
         "Block_Output/Block_Output/gpio_core_1/GPIO_DBus_i_30" BEL
         "Block_Output/Block_Output/gpio_core_1/gpio_Data_Out_3" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_Data_Out_0" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_OE_2" BEL
         "Block_Output/Block_Output/gpio_core_1/GPIO_DBus_i_19" BEL
         "Block_Output/Block_Output/gpio_core_1/GPIO_DBus_i_24" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_OE_1" BEL
         "Block_Output/Block_Output/gpio_core_1/gpio_Data_Out_2" BEL
         "Block_Output/Block_Output/gpio_core_1/GPIO_DBus_i_18" BEL
         "Block_Output/Block_Output/gpio_core_1/GPIO_DBus_i_23" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_OE_0" BEL
         "Block_Output/Block_Output/gpio_core_1/gpio_Data_Out_1" BEL
         "Block_Output/Block_Output/gpio_core_1/GPIO_DBus_i_17" BEL
         "Block_Output/Block_Output/gpio_core_1/GPIO_DBus_i_22" BEL
-        "Block_Output/Block_Output/gpio_core_1/gpio_Data_Out_0" BEL
         "Block_Output/Block_Output/gpio_core_1/GPIO_DBus_i_16" BEL
         "Block_Output/Block_Output/gpio_core_1/GPIO_DBus_i_21" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio_Data_Out_0" BEL
         "Block_Output/Block_Output/gpio_core_1/GPIO_DBus_i_15" BEL
         "Block_Output/Block_Output/gpio_core_1/GPIO_DBus_i_20" BEL
         "Block_Output/Block_Output/gpio_core_1/GPIO_DBus_i_14" BEL
         "Block_Output/Block_Output/gpio_core_1/GPIO_DBus_i_13" BEL
-        "Block_Output/Block_Output/gpio_core_1/GPIO_DBus_i_12" BEL
-        "Block_Output/Block_Output/gpio_core_1/gpio_Data_Out_19" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_OE_17" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_Data_Out_17" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_OE_16" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_Data_Out_16" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_OE_15" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_Data_Out_15" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_OE_14" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_Data_Out_14" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_Data_Out_13" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_OE_12" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_OE_13" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_Data_Out_12" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_OE_11" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_Data_Out_11" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_OE_10" BEL
         "Block_Output/Block_Output/gpio_core_1/gpio_Data_Out_18" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio2_Data_Out_10" BEL
         "Block_Output/Block_Output/gpio_core_1/gpio_OE_9" BEL
         "Block_Output/Block_Output/gpio_core_1/gpio_Data_Out_17" BEL
         "Block_Output/Block_Output/gpio_core_1/gpio_Data_Out_16" BEL
         "Block_Output/Block_Output/gpio_core_1/gpio_OE_8" BEL
         "Block_Output/Block_Output/gpio_core_1/gpio_OE_7" BEL
-        "Block_Output/Block_Output/gpio_core_1/gpio_Data_Out_15" BEL
         "Block_Output/Block_Output/gpio_core_1/gpio_OE_6" BEL
         "Block_Output/Block_Output/gpio_core_1/gpio_Data_Out_14" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio_Data_Out_15" BEL
         "Block_Output/Block_Output/gpio_core_1/gpio_OE_5" BEL
         "Block_Output/Block_Output/gpio_core_1/gpio_Data_Out_13" BEL
         "Block_Output/Block_Output/gpio_core_1/gpio_OE_4" BEL
@@ -2231,7 +2280,24 @@ TIMEGRP clock_generator_0_clock_generator_0_SIG_DCM0_CLK0 = PIN
         "Block_Output/Block_Output/gpio_core_1/gpio_OE_1" BEL
         "Block_Output/Block_Output/gpio_core_1/gpio_OE_0" BEL
         "Block_Output/Block_Output/gpio_core_1/iGPIO_xferAck" BEL
-        "Block_Output/Block_Output/gpio_core_1/gpio_OE_19" BEL
+        "Block_Output/Block_Output/gpio_core_1/GPIO2_DBus_i_29" BEL
+        "Block_Output/Block_Output/gpio_core_1/GPIO2_DBus_i_27" BEL
+        "Block_Output/Block_Output/gpio_core_1/GPIO2_DBus_i_28" BEL
+        "Block_Output/Block_Output/gpio_core_1/GPIO2_DBus_i_31" BEL
+        "Block_Output/Block_Output/gpio_core_1/GPIO2_DBus_i_26" BEL
+        "Block_Output/Block_Output/gpio_core_1/GPIO2_DBus_i_30" BEL
+        "Block_Output/Block_Output/gpio_core_1/GPIO2_DBus_i_25" BEL
+        "Block_Output/Block_Output/gpio_core_1/GPIO2_DBus_i_24" BEL
+        "Block_Output/Block_Output/gpio_core_1/GPIO2_DBus_i_19" BEL
+        "Block_Output/Block_Output/gpio_core_1/GPIO2_DBus_i_23" BEL
+        "Block_Output/Block_Output/gpio_core_1/GPIO2_DBus_i_18" BEL
+        "Block_Output/Block_Output/gpio_core_1/GPIO2_DBus_i_22" BEL
+        "Block_Output/Block_Output/gpio_core_1/GPIO2_DBus_i_17" BEL
+        "Block_Output/Block_Output/gpio_core_1/GPIO2_DBus_i_21" BEL
+        "Block_Output/Block_Output/gpio_core_1/GPIO2_DBus_i_16" BEL
+        "Block_Output/Block_Output/gpio_core_1/GPIO2_DBus_i_15" BEL
+        "Block_Output/Block_Output/gpio_core_1/GPIO2_DBus_i_20" BEL
+        "Block_Output/Block_Output/gpio_core_1/GPIO2_DBus_i_14" BEL
         "Block_Output/Block_Output/gpio_core_1/gpio_OE_18" BEL
         "Block_Output/Block_Output/gpio_core_1/gpio_OE_17" BEL
         "Block_Output/Block_Output/gpio_core_1/gpio_OE_16" BEL
@@ -2239,8 +2305,8 @@ TIMEGRP clock_generator_0_clock_generator_0_SIG_DCM0_CLK0 = PIN
         "Block_Output/Block_Output/gpio_core_1/gpio_OE_14" BEL
         "Block_Output/Block_Output/gpio_core_1/gpio_OE_13" BEL
         "Block_Output/Block_Output/gpio_core_1/gpio_OE_12" BEL
-        "Block_Output/Block_Output/gpio_core_1/gpio_OE_10" BEL
         "Block_Output/Block_Output/gpio_core_1/gpio_OE_11" BEL
+        "Block_Output/Block_Output/gpio_core_1/gpio_OE_10" BEL
         "Block_Output/Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_out_s_h_0"
         BEL
         "Block_Output/Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_out_i_0"
@@ -2336,8 +2402,6 @@ TIMEGRP clock_generator_0_clock_generator_0_SIG_DCM0_CLK0 = PIN
         BEL
         "Block_Output/Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/plb_abus_reg_29"
         BEL
-        "Block_Output/Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_12"
-        BEL
         "Block_Output/Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_13"
         BEL
         "Block_Output/Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_14"
@@ -2380,32 +2444,6 @@ TIMEGRP clock_generator_0_clock_generator_0_SIG_DCM0_CLK0 = PIN
         BEL
         "Block_Output/Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/plb_pavalid_reg"
         BEL
-        "Block_Output/Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_0"
-        BEL
-        "Block_Output/Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_1"
-        BEL
-        "Block_Output/Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_2"
-        BEL
-        "Block_Output/Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_3"
-        BEL
-        "Block_Output/Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_4"
-        BEL
-        "Block_Output/Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_5"
-        BEL
-        "Block_Output/Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_6"
-        BEL
-        "Block_Output/Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_7"
-        BEL
-        "Block_Output/Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_8"
-        BEL
-        "Block_Output/Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_9"
-        BEL
-        "Block_Output/Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_10"
-        BEL
-        "Block_Output/Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_11"
-        BEL
-        "Block_Output/Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_12"
-        BEL
         "Block_Output/Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_13"
         BEL
         "Block_Output/Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_14"
@@ -2444,45 +2482,79 @@ TIMEGRP clock_generator_0_clock_generator_0_SIG_DCM0_CLK0 = PIN
         BEL
         "Block_Output/Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_31"
         BEL
-        "Block_Output/Block_Output/gpio_core_1/Mshreg_gpio_Data_In_17/SRL16E"
-        BEL
-        "Block_Output/Block_Output/gpio_core_1/Mshreg_gpio_Data_In_19/SRL16E"
+        "Block_Output/Block_Output/gpio_core_1/Mshreg_gpio_Data_In_16/SRL16E"
         BEL
         "Block_Output/Block_Output/gpio_core_1/Mshreg_gpio_Data_In_18/SRL16E"
         BEL
-        "Block_Output/Block_Output/gpio_core_1/Mshreg_gpio_Data_In_16/SRL16E"
+        "Block_Output/Block_Output/gpio_core_1/Mshreg_gpio_Data_In_17/SRL16E"
         BEL
         "Block_Output/Block_Output/gpio_core_1/Mshreg_gpio_Data_In_15/SRL16E"
         BEL
-        "Block_Output/Block_Output/gpio_core_1/Mshreg_gpio_Data_In_12/SRL16E"
-        BEL
         "Block_Output/Block_Output/gpio_core_1/Mshreg_gpio_Data_In_14/SRL16E"
-        BEL
-        "Block_Output/Block_Output/gpio_core_1/Mshreg_gpio_Data_In_13/SRL16E"
         BEL
         "Block_Output/Block_Output/gpio_core_1/Mshreg_gpio_Data_In_11/SRL16E"
         BEL
-        "Block_Output/Block_Output/gpio_core_1/Mshreg_gpio_Data_In_10/SRL16E"
+        "Block_Output/Block_Output/gpio_core_1/Mshreg_gpio_Data_In_13/SRL16E"
         BEL
-        "Block_Output/Block_Output/gpio_core_1/Mshreg_gpio_Data_In_7/SRL16E"
+        "Block_Output/Block_Output/gpio_core_1/Mshreg_gpio_Data_In_12/SRL16E"
+        BEL
+        "Block_Output/Block_Output/gpio_core_1/Mshreg_gpio_Data_In_10/SRL16E"
         BEL
         "Block_Output/Block_Output/gpio_core_1/Mshreg_gpio_Data_In_9/SRL16E"
         BEL
-        "Block_Output/Block_Output/gpio_core_1/Mshreg_gpio_Data_In_8/SRL16E"
-        BEL
         "Block_Output/Block_Output/gpio_core_1/Mshreg_gpio_Data_In_6/SRL16E"
         BEL
-        "Block_Output/Block_Output/gpio_core_1/Mshreg_gpio_Data_In_5/SRL16E"
+        "Block_Output/Block_Output/gpio_core_1/Mshreg_gpio_Data_In_8/SRL16E"
         BEL
-        "Block_Output/Block_Output/gpio_core_1/Mshreg_gpio_Data_In_2/SRL16E"
+        "Block_Output/Block_Output/gpio_core_1/Mshreg_gpio_Data_In_7/SRL16E"
+        BEL
+        "Block_Output/Block_Output/gpio_core_1/Mshreg_gpio_Data_In_5/SRL16E"
         BEL
         "Block_Output/Block_Output/gpio_core_1/Mshreg_gpio_Data_In_4/SRL16E"
         BEL
         "Block_Output/Block_Output/gpio_core_1/Mshreg_gpio_Data_In_3/SRL16E"
         BEL
+        "Block_Output/Block_Output/gpio_core_1/Mshreg_gpio_Data_In_2/SRL16E"
+        BEL
         "Block_Output/Block_Output/gpio_core_1/Mshreg_gpio_Data_In_1/SRL16E"
         BEL
         "Block_Output/Block_Output/gpio_core_1/Mshreg_gpio_Data_In_0/SRL16E"
+        BEL
+        "Block_Output/Block_Output/gpio_core_1/Mshreg_gpio2_Data_In_15/SRL16E"
+        BEL
+        "Block_Output/Block_Output/gpio_core_1/Mshreg_gpio2_Data_In_17/SRL16E"
+        BEL
+        "Block_Output/Block_Output/gpio_core_1/Mshreg_gpio2_Data_In_16/SRL16E"
+        BEL
+        "Block_Output/Block_Output/gpio_core_1/Mshreg_gpio2_Data_In_14/SRL16E"
+        BEL
+        "Block_Output/Block_Output/gpio_core_1/Mshreg_gpio2_Data_In_13/SRL16E"
+        BEL
+        "Block_Output/Block_Output/gpio_core_1/Mshreg_gpio2_Data_In_12/SRL16E"
+        BEL
+        "Block_Output/Block_Output/gpio_core_1/Mshreg_gpio2_Data_In_11/SRL16E"
+        BEL
+        "Block_Output/Block_Output/gpio_core_1/Mshreg_gpio2_Data_In_10/SRL16E"
+        BEL
+        "Block_Output/Block_Output/gpio_core_1/Mshreg_gpio2_Data_In_9/SRL16E"
+        BEL
+        "Block_Output/Block_Output/gpio_core_1/Mshreg_gpio2_Data_In_6/SRL16E"
+        BEL
+        "Block_Output/Block_Output/gpio_core_1/Mshreg_gpio2_Data_In_8/SRL16E"
+        BEL
+        "Block_Output/Block_Output/gpio_core_1/Mshreg_gpio2_Data_In_7/SRL16E"
+        BEL
+        "Block_Output/Block_Output/gpio_core_1/Mshreg_gpio2_Data_In_5/SRL16E"
+        BEL
+        "Block_Output/Block_Output/gpio_core_1/Mshreg_gpio2_Data_In_4/SRL16E"
+        BEL
+        "Block_Output/Block_Output/gpio_core_1/Mshreg_gpio2_Data_In_3/SRL16E"
+        BEL
+        "Block_Output/Block_Output/gpio_core_1/Mshreg_gpio2_Data_In_2/SRL16E"
+        BEL
+        "Block_Output/Block_Output/gpio_core_1/Mshreg_gpio2_Data_In_1/SRL16E"
+        BEL
+        "Block_Output/Block_Output/gpio_core_1/Mshreg_gpio2_Data_In_0/SRL16E"
         BEL "clock_generator_0/clock_generator_0/DCM0_CLK0_BUFG_INST.GCLKMUX"
         BEL "clock_generator_0/clock_generator_0/DCM0_CLK0_BUFG_INST";
 PIN

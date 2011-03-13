@@ -15,20 +15,62 @@
  * used if there are 2 channels supported in the GPIO.
  */
 #define BLOCK_CHANNEL 1
+#define PADDLE_CHANNEL 2
 
-#define GPIO_BITWIDTH	20	/* This is the width of the GPIO */
+#define GPIO_BLOCK_BITWIDTH	19	/* This is the width of the GPIO */
+#define GPIO_PADDLE_BITWIDTH	18	/* This is the width of the GPIO */
 
 #define printf xil_printf	/* A smaller footprint printf */
+
 
 /*
  * The following constants map to the XPAR parameters created in the
  * xparameters.h file. They are defined here such that a user can easily
  * change all the needed parameters in one place.
  */
+ 
+ #define STAGE_WIDTH 640
+ #define STAGE_HEIGHT 480
 
 
 /**************************** Type Definitions ******************************/
 
+typedef struct{
+
+	u16 x;
+	u16 y;//centered at upper left corner
+	u16 width;
+	u16 height;
+	u16 x_spd;
+	u16 y_spd;
+
+}Ball;
+Ball ball; 
+
+typedef struct{//yeah, its the same as the ball for right now, but that may change
+
+	u16 x;
+	u16 y;
+	u16 width;
+	u16 height;
+	u16 x_spd;
+	u16 y_spd;
+
+}Paddle;
+Paddle paddle1, paddle2; 
+
+typedef struct{
+
+	u16 x;
+	u16 y;//centered at upper left corner
+
+	u8 btn1;
+	u8 btn2;
+	u8 btn3;
+
+
+}joystick;
+joystick joy1, joy2; 
 
 /***************** Macros (Inline Functions) Definitions *******************/
 
@@ -38,6 +80,17 @@
 int GpioOutputExample(u16 DeviceId, u32 GpioWidth);
 
 void GpioDriverHandler(void *CallBackRef);
+
+void initBall(){
+
+	ball.x = 300;
+	ball.y = 200;
+	ball.width = 30;
+	ball.height = 30;
+	ball.x_spd = 1;
+	ball.y_spd = 1;
+}
+
 
 
 /************************** Variable Definitions **************************/
@@ -65,12 +118,11 @@ int main(void)
 {
 	int Status;
 
-	Status = GpioOutputExample(XPAR_BLOCK_OUTPUT_DEVICE_ID,20); //call a function to move a block around
+	Status = GpioOutputExample(XPAR_BLOCK_OUTPUT_DEVICE_ID,GPIO_BLOCK_BITWIDTH); //call a function to move a block around
 	
 	if (Status != XST_SUCCESS) {
 		  return XST_FAILURE;
 	}
-
 
 
 	return XST_SUCCESS;
@@ -98,10 +150,14 @@ int GpioOutputExample(u16 DeviceId, u32 GpioWidth)
 	u32 Data;
 	volatile int Delay;
 	int Status;
-	u16 blockX = 10; //the blocks X coord
-	u16 blockY = 0; //the blocks Y coord
-	u16 directionX = 1; //should it move left or right (1=right, -1=left)
-	u16 directionY = 1; //should it move up or down (1=down, -1=up)
+	
+	initBall();
+	
+	/*ball.x = 0; //the blocks X coord
+	ball.y = 0; //the blocks Y coord
+	ball.x_spd = 1; //should it move left or right (1=right, -1=left)
+	ball.y_spd = 1; //should it move up or down (1=down, -1=up)
+	*/
 
 	/*
 	 * Initialize the GPIO driver so that it's ready to use,
@@ -112,30 +168,32 @@ int GpioOutputExample(u16 DeviceId, u32 GpioWidth)
 		  return XST_FAILURE;
 	 }
 
+	
 
 	 /*
 	  * Set the direction for all signals to be outputs
 	  */
 	 XGpio_SetDataDirection(&GpioOutput, BLOCK_CHANNEL, 0x0);
+	 XGpio_SetDataDirection(&GpioOutput, PADDLE_CHANNEL, 0x0);
 
 	 /*
 	  * Set the GPIO outputs to low
 	  */
 	 XGpio_DiscreteWrite(&GpioOutput, BLOCK_CHANNEL, 0x0);
+	 XGpio_DiscreteWrite(&GpioOutput, PADDLE_CHANNEL, 0x17CBE);
 
-
-	while (1==1)
+	while (1)
 	{
 		//move the blocks
-		blockX = blockX + directionX;
-		blockY = blockY + directionY;
+		ball.x += ball.x_spd;
+		ball.y += ball.y_spd;
 
 		//reverse the direction when it hits the edge
-		if (blockX >= 610 || blockX<=0)
-			directionX = directionX*(-1);
+		if (ball.x >= (STAGE_WIDTH - ball.width) || ball.x<=0)
+			ball.x_spd *= -1;
 		
-		if (blockY >= 450 || blockY<=0)
-			directionY = directionY*(-1);
+		if (ball.y >= (STAGE_HEIGHT - ball.height) || ball.y<=0)
+			ball.y_spd *= -1;
 		
 		/*
 		 * Since both the X and Y coord's are sent on the same signal
@@ -143,12 +201,12 @@ int GpioOutputExample(u16 DeviceId, u32 GpioWidth)
 		 * written out. The 10 most significant bits are the X position
 		 * and the lower 10 bits are the Y position.
 		 */
-		Data = (blockX<<10) | blockY;
+		Data = (ball.x<<9) | ball.y;
 		
 		//write out the values to the GIOP, which sends them to the VGA Driver
 		XGpio_DiscreteWrite(&GpioOutput, BLOCK_CHANNEL, Data);
 		
-		for (Delay = 0; Delay < LOOP_DELAY; Delay++); //delay for a while
+		for (Delay = 0; Delay < LOOP_DELAY; ++Delay); //delay for a while
 		
 	}
 	

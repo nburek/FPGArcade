@@ -138,6 +138,19 @@ BEGIN proc_sys_reset
  PORT Peripheral_Reset = sys_periph_reset
 END
 
+BEGIN xps_gpio
+ PARAMETER INSTANCE = Block_Output
+ PARAMETER HW_VER = 2.00.a
+ PARAMETER C_GPIO_WIDTH = 19
+ PARAMETER C_IS_DUAL = 1
+ PARAMETER C_GPIO2_WIDTH = 18
+ PARAMETER C_BASEADDR = 0x81420000
+ PARAMETER C_HIGHADDR = 0x8142ffff
+ BUS_INTERFACE SPLB = mb_plb
+ PORT GPIO_IO_O = top_0_BlockPosition
+ PORT GPIO2_IO_O = top_0_PaddlePosition
+END
+
 BEGIN top
  PARAMETER INSTANCE = top_0
  PARAMETER HW_VER = 1.00.a
@@ -148,15 +161,6 @@ BEGIN top
  PORT VSync = top_0_VSync
  PORT clk = dcm_clk_s
  PORT BlockPosition = top_0_BlockPosition
-END
-
-BEGIN xps_gpio
- PARAMETER INSTANCE = Block_Output
- PARAMETER HW_VER = 2.00.a
- PARAMETER C_GPIO_WIDTH = 20
- PARAMETER C_BASEADDR = 0x81420000
- PARAMETER C_HIGHADDR = 0x8142ffff
- BUS_INTERFACE SPLB = mb_plb
- PORT GPIO_IO_O = top_0_BlockPosition
+ PORT PaddlePosition = top_0_PaddlePosition
 END
 

@@ -18,7 +18,8 @@ entity top_0_wrapper is
     HSync : out std_logic;
     VSync : out std_logic;
     clk : in std_logic;
-    BlockPosition : in std_logic_vector(0 to 19)
+    BlockPosition : in std_logic_vector(0 to 18);
+    PaddlePosition : in std_logic_vector(0 to 17)
   );
 end top_0_wrapper;
 
@@ -32,7 +33,8 @@ architecture STRUCTURE of top_0_wrapper is
       HSync : out std_logic;
       VSync : out std_logic;
       clk : in std_logic;
-      BlockPosition : in std_logic_vector(0 to 19)
+      BlockPosition : in std_logic_vector(0 to 18);
+      PaddlePosition : in std_logic_vector(0 to 17)
     );
   end component;
 
@@ -46,7 +48,8 @@ begin
       HSync => HSync,
       VSync => VSync,
       clk => clk,
-      BlockPosition => BlockPosition
+      BlockPosition => BlockPosition,
+      PaddlePosition => PaddlePosition
     );
 
 end architecture STRUCTURE;

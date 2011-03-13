@@ -261,11 +261,11 @@ Analyzing hierarchy for entity <xps_gpio> in library <xps_gpio_v2_00_a> (archite
 	C_DOUT_DEFAULT = "00000000000000000000000000000000"
 	C_DOUT_DEFAULT_2 = "00000000000000000000000000000000"
 	C_FAMILY = "spartan3e"
-	C_GPIO2_WIDTH = 32
-	C_GPIO_WIDTH = 20
+	C_GPIO2_WIDTH = 18
+	C_GPIO_WIDTH = 19
 	C_HIGHADDR = "10000001010000101111111111111111"
 	C_INTERRUPT_PRESENT = 0
-	C_IS_DUAL = 0
+	C_IS_DUAL = 1
 	C_SPLB_AWIDTH = 32
 	C_SPLB_DWIDTH = 32
 	C_SPLB_MID_WIDTH = 1
@@ -298,11 +298,11 @@ Analyzing hierarchy for entity <GPIO_Core> in library <xps_gpio_v2_00_a> (archit
 	C_DOUT_DEFAULT_2 = "00000000000000000000000000000000"
 	C_DW = 32
 	C_FAMILY = "spartan3e"
-	C_GPIO2_WIDTH = 32
-	C_GPIO_WIDTH = 20
+	C_GPIO2_WIDTH = 18
+	C_GPIO_WIDTH = 19
 	C_INTERRUPT_PRESENT = 0
-	C_IS_DUAL = 0
-	C_MAX_GPIO_WIDTH = 20
+	C_IS_DUAL = 1
+	C_MAX_GPIO_WIDTH = 19
 	C_TRI_DEFAULT = "11111111111111111111111111111111"
 	C_TRI_DEFAULT_2 = "11111111111111111111111111111111"
 
@@ -397,11 +397,11 @@ Analyzing generic Entity <xps_gpio> in library <xps_gpio_v2_00_a> (Architecture 
 	C_DOUT_DEFAULT = "00000000000000000000000000000000"
 	C_DOUT_DEFAULT_2 = "00000000000000000000000000000000"
 	C_FAMILY = "spartan3e"
-	C_GPIO2_WIDTH = 32
-	C_GPIO_WIDTH = 20
+	C_GPIO2_WIDTH = 18
+	C_GPIO_WIDTH = 19
 	C_HIGHADDR = "10000001010000101111111111111111"
 	C_INTERRUPT_PRESENT = 0
-	C_IS_DUAL = 0
+	C_IS_DUAL = 1
 	C_SPLB_AWIDTH = 32
 	C_SPLB_DWIDTH = 32
 	C_SPLB_MID_WIDTH = 1
@@ -520,11 +520,11 @@ Analyzing generic Entity <GPIO_Core> in library <xps_gpio_v2_00_a> (Architecture
 	C_DOUT_DEFAULT_2 = "00000000000000000000000000000000"
 	C_DW = 32
 	C_FAMILY = "spartan3e"
-	C_GPIO2_WIDTH = 32
-	C_GPIO_WIDTH = 20
+	C_GPIO2_WIDTH = 18
+	C_GPIO_WIDTH = 19
 	C_INTERRUPT_PRESENT = 0
-	C_IS_DUAL = 0
-	C_MAX_GPIO_WIDTH = 20
+	C_IS_DUAL = 1
+	C_MAX_GPIO_WIDTH = 19
 	C_TRI_DEFAULT = "11111111111111111111111111111111"
 	C_TRI_DEFAULT_2 = "11111111111111111111111111111111"
 Entity <GPIO_Core> analyzed. Unit <GPIO_Core> generated.
@@ -538,13 +538,9 @@ Performing bidirectional port resolution...
 
 Synthesizing Unit <GPIO_Core>.
     Related source file is "C:/Xilinx/12.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_gpio_v2_00_a/hdl/vhdl/gpio_core.vhd".
-WARNING:Xst:647 - Input <ABus_Reg<0:28>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ABus_Reg<0:27>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <ABus_Reg<30:31>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <GPIO2_IO_I> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <BE_Reg<0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:1305 - Output <GPIO2_IO_O> is never assigned. Tied to value 00000000000000000000000000000000.
-WARNING:Xst:1305 - Output <GPIO2_IO_T> is never assigned. Tied to value 00000000000000000000000000000000.
-WARNING:Xst:646 - Signal <tri2_default_i> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <reset_zeros> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <reset2_zeros> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <or_ints2> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
@@ -553,17 +549,26 @@ WARNING:Xst:1780 - Signal <gpio_in_d2> is never used or assigned. This unconnect
 WARNING:Xst:1780 - Signal <gpio_in_d1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <gpio_data_in_xor_reg> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <gpio_data_in_xor> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <dout2_default_i> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-    Found 20-bit register for signal <gpio_Data_In>.
-    Found 20-bit register for signal <gpio_Data_Out>.
-    Found 20-bit register for signal <GPIO_DBus_i<12:31>>.
-    Found 20-bit register for signal <gpio_io_i_d1>.
-    Found 20-bit register for signal <gpio_io_i_d2>.
-    Found 20-bit register for signal <gpio_OE>.
+WARNING:Xst:1780 - Signal <gpio2_in_d2> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <gpio2_in_d1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <gpio2_data_in_xor_reg> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <gpio2_data_in_xor> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 18-bit register for signal <gpio2_Data_In>.
+    Found 18-bit register for signal <gpio2_Data_Out>.
+    Found 18-bit register for signal <GPIO2_DBus_i<14:31>>.
+    Found 18-bit register for signal <gpio2_io_i_d1>.
+    Found 18-bit register for signal <gpio2_io_i_d2>.
+    Found 18-bit register for signal <gpio2_OE>.
+    Found 19-bit register for signal <gpio_Data_In>.
+    Found 19-bit register for signal <gpio_Data_Out>.
+    Found 19-bit register for signal <GPIO_DBus_i<13:31>>.
+    Found 19-bit register for signal <gpio_io_i_d1>.
+    Found 19-bit register for signal <gpio_io_i_d2>.
+    Found 19-bit register for signal <gpio_OE>.
     Found 1-bit register for signal <gpio_xferAck_Reg>.
     Found 1-bit register for signal <iGPIO_xferAck>.
     Summary:
-	inferred 122 D-type flip-flop(s).
+	inferred 224 D-type flip-flop(s).
 Unit <GPIO_Core> synthesized.
 
 
@@ -717,8 +722,10 @@ Synthesizing Unit <xps_gpio>.
 WARNING:Xst:646 - Signal <ip2bus_intrevent> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <bus2ip_wrce> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <bus2ip_rdce> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <Bus2IP_Data_i<20:31>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:653 - Signal <Bus2IP1_Data_i<20:31>> is used but never assigned. This sourceless signal will be automatically connected to value 000000000000.
+WARNING:Xst:646 - Signal <bus2ip_data<0:12>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Bus2IP_Data_i<19:31>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <Bus2IP2_Data_i<18:31>> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000.
+WARNING:Xst:653 - Signal <Bus2IP1_Data_i<19:31>> is used but never assigned. This sourceless signal will be automatically connected to value 0000000000000.
 Unit <xps_gpio> synthesized.
 
 
@@ -733,9 +740,10 @@ HDL Synthesis Report
 Macro Statistics
 # Adders/Subtractors                                   : 1
  9-bit subtractor                                      : 1
-# Registers                                            : 108
- 1-bit register                                        : 95
- 20-bit register                                       : 3
+# Registers                                            : 162
+ 1-bit register                                        : 146
+ 18-bit register                                       : 3
+ 19-bit register                                       : 3
  3-bit register                                        : 1
  32-bit register                                       : 4
  4-bit register                                        : 3
@@ -757,8 +765,8 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # Adders/Subtractors                                   : 1
  9-bit subtractor                                      : 1
-# Registers                                            : 310
- Flip-Flops                                            : 310
+# Registers                                            : 412
+ Flip-Flops                                            : 412
 
 =========================================================================
 
@@ -782,7 +790,8 @@ Optimizing unit <plb_address_decoder> ...
 Optimizing unit <plb_slave_attachment> ...
 
 Optimizing unit <xps_gpio> ...
-WARNING:Xst:1710 - FF/Latch <Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_11> (without init value) has a constant value of 0 in block <block_output_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_12> (without init value) has a constant value of 0 in block <block_output_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_11> (without init value) has a constant value of 0 in block <block_output_wrapper>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_10> (without init value) has a constant value of 0 in block <block_output_wrapper>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_9> (without init value) has a constant value of 0 in block <block_output_wrapper>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_8> (without init value) has a constant value of 0 in block <block_output_wrapper>. This FF/Latch will be trimmed during the optimization process.
@@ -794,6 +803,19 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Block_Output/PLBV46
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_2> (without init value) has a constant value of 0 in block <block_output_wrapper>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_1> (without init value) has a constant value of 0 in block <block_output_wrapper>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_0> (without init value) has a constant value of 0 in block <block_output_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_12> of sequential type is unconnected in block <block_output_wrapper>.
+WARNING:Xst:2677 - Node <Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_11> of sequential type is unconnected in block <block_output_wrapper>.
+WARNING:Xst:2677 - Node <Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_10> of sequential type is unconnected in block <block_output_wrapper>.
+WARNING:Xst:2677 - Node <Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_9> of sequential type is unconnected in block <block_output_wrapper>.
+WARNING:Xst:2677 - Node <Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_8> of sequential type is unconnected in block <block_output_wrapper>.
+WARNING:Xst:2677 - Node <Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_7> of sequential type is unconnected in block <block_output_wrapper>.
+WARNING:Xst:2677 - Node <Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_6> of sequential type is unconnected in block <block_output_wrapper>.
+WARNING:Xst:2677 - Node <Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_5> of sequential type is unconnected in block <block_output_wrapper>.
+WARNING:Xst:2677 - Node <Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_4> of sequential type is unconnected in block <block_output_wrapper>.
+WARNING:Xst:2677 - Node <Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_3> of sequential type is unconnected in block <block_output_wrapper>.
+WARNING:Xst:2677 - Node <Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_2> of sequential type is unconnected in block <block_output_wrapper>.
+WARNING:Xst:2677 - Node <Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_1> of sequential type is unconnected in block <block_output_wrapper>.
+WARNING:Xst:2677 - Node <Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_0> of sequential type is unconnected in block <block_output_wrapper>.
 WARNING:Xst:2677 - Node <Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/plb_abus_reg_31> of sequential type is unconnected in block <block_output_wrapper>.
 WARNING:Xst:2677 - Node <Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/plb_abus_reg_30> of sequential type is unconnected in block <block_output_wrapper>.
 WARNING:Xst:2677 - Node <Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/plb_be_reg_0> of sequential type is unconnected in block <block_output_wrapper>.
@@ -845,11 +867,13 @@ WARNING:Xst:2677 - Node <Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/rnw_
 
 Mapping all equations...
 Building and optimizing final netlist ...
+FlipFlop Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_out_i_0 has been replicated 3 time(s)
+FlipFlop Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_28 has been replicated 2 time(s)
+FlipFlop Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/bus2ip_rnw_i has been replicated 1 time(s)
 
 Final Macro Processing ...
 
 Processing Unit <block_output_wrapper> :
-	Found 3-bit shift register for signal <Block_Output/gpio_core_1/gpio_Data_In_19>.
 	Found 3-bit shift register for signal <Block_Output/gpio_core_1/gpio_Data_In_18>.
 	Found 3-bit shift register for signal <Block_Output/gpio_core_1/gpio_Data_In_17>.
 	Found 3-bit shift register for signal <Block_Output/gpio_core_1/gpio_Data_In_16>.
@@ -869,16 +893,34 @@ Processing Unit <block_output_wrapper> :
 	Found 3-bit shift register for signal <Block_Output/gpio_core_1/gpio_Data_In_2>.
 	Found 3-bit shift register for signal <Block_Output/gpio_core_1/gpio_Data_In_1>.
 	Found 3-bit shift register for signal <Block_Output/gpio_core_1/gpio_Data_In_0>.
+	Found 3-bit shift register for signal <Block_Output/gpio_core_1/gpio2_Data_In_17>.
+	Found 3-bit shift register for signal <Block_Output/gpio_core_1/gpio2_Data_In_16>.
+	Found 3-bit shift register for signal <Block_Output/gpio_core_1/gpio2_Data_In_15>.
+	Found 3-bit shift register for signal <Block_Output/gpio_core_1/gpio2_Data_In_14>.
+	Found 3-bit shift register for signal <Block_Output/gpio_core_1/gpio2_Data_In_13>.
+	Found 3-bit shift register for signal <Block_Output/gpio_core_1/gpio2_Data_In_12>.
+	Found 3-bit shift register for signal <Block_Output/gpio_core_1/gpio2_Data_In_11>.
+	Found 3-bit shift register for signal <Block_Output/gpio_core_1/gpio2_Data_In_10>.
+	Found 3-bit shift register for signal <Block_Output/gpio_core_1/gpio2_Data_In_9>.
+	Found 3-bit shift register for signal <Block_Output/gpio_core_1/gpio2_Data_In_8>.
+	Found 3-bit shift register for signal <Block_Output/gpio_core_1/gpio2_Data_In_7>.
+	Found 3-bit shift register for signal <Block_Output/gpio_core_1/gpio2_Data_In_6>.
+	Found 3-bit shift register for signal <Block_Output/gpio_core_1/gpio2_Data_In_5>.
+	Found 3-bit shift register for signal <Block_Output/gpio_core_1/gpio2_Data_In_4>.
+	Found 3-bit shift register for signal <Block_Output/gpio_core_1/gpio2_Data_In_3>.
+	Found 3-bit shift register for signal <Block_Output/gpio_core_1/gpio2_Data_In_2>.
+	Found 3-bit shift register for signal <Block_Output/gpio_core_1/gpio2_Data_In_1>.
+	Found 3-bit shift register for signal <Block_Output/gpio_core_1/gpio2_Data_In_0>.
 Unit <block_output_wrapper> processed.
 
 =========================================================================
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 185
- Flip-Flops                                            : 185
-# Shift Registers                                      : 20
- 3-bit shift register                                  : 20
+# Registers                                            : 228
+ Flip-Flops                                            : 228
+# Shift Registers                                      : 37
+ 3-bit shift register                                  : 37
 
 =========================================================================
 
@@ -903,29 +945,31 @@ Optimization Goal                  : speed
 Keep Hierarchy                     : no
 
 Design Statistics
-# IOs                              : 358
+# IOs                              : 313
 
 Cell Usage :
-# BELS                             : 100
+# BELS                             : 149
 #      GND                         : 1
 #      INV                         : 1
 #      LUT2                        : 12
-#      LUT3                        : 9
+#      LUT2_D                      : 1
+#      LUT3                        : 34
+#      LUT3_D                      : 7
 #      LUT3_L                      : 1
-#      LUT4                        : 63
+#      LUT4                        : 79
 #      LUT4_D                      : 2
 #      LUT4_L                      : 2
 #      MUXCY                       : 8
 #      VCC                         : 1
-# FlipFlops/Latches                : 205
-#      FD                          : 21
-#      FDR                         : 103
-#      FDRE                        : 52
+# FlipFlops/Latches                : 265
+#      FD                          : 38
+#      FDR                         : 89
+#      FDRE                        : 92
 #      FDRS                        : 2
 #      FDS                         : 7
-#      FDSE                        : 20
-# Shift Registers                  : 20
-#      SRL16                       : 20
+#      FDSE                        : 37
+# Shift Registers                  : 37
+#      SRL16                       : 37
 =========================================================================
 
 Device utilization summary:
@@ -933,12 +977,12 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-4 
 
- Number of Slices:                      125  out of   4656     2%  
- Number of Slice Flip Flops:            205  out of   9312     2%  
- Number of 4 input LUTs:                110  out of   9312     1%  
-    Number used as logic:                90
-    Number used as Shift registers:      20
- Number of IOs:                         358
+ Number of Slices:                      166  out of   4656     3%  
+ Number of Slice Flip Flops:            265  out of   9312     2%  
+ Number of 4 input LUTs:                176  out of   9312     1%  
+    Number used as logic:               139
+    Number used as Shift registers:      37
+ Number of IOs:                         313
  Number of bonded IOBs:                   0  out of    232     0%  
 
 ---------------------------
@@ -962,7 +1006,7 @@ Clock Information:
 -----------------------------------+-----------------------------------------------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)                                           | Load  |
 -----------------------------------+-----------------------------------------------------------------+-------+
-SPLB_Clk                           | NONE(Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_31)| 225   |
+SPLB_Clk                           | NONE(Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_31)| 302   |
 -----------------------------------+-----------------------------------------------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
@@ -975,7 +1019,7 @@ Timing Summary:
 Speed Grade: -4
 
    Minimum period: 4.973ns (Maximum Frequency: 201.086MHz)
-   Minimum input arrival time before clock: 2.892ns
+   Minimum input arrival time before clock: 2.773ns
    Maximum output required time after clock: 0.591ns
    Maximum combinational path delay: No path found
 
@@ -986,7 +1030,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'SPLB_Clk'
   Clock period: 4.973ns (frequency: 201.086MHz)
-  Total number of paths / destination ports: 926 / 263
+  Total number of paths / destination ports: 1683 / 415
 -------------------------------------------------------------------------
 Delay:               4.973ns (Levels of Logic = 2)
   Source:            Block_Output/gpio_core_1/iGPIO_xferAck (FF)
@@ -1008,26 +1052,26 @@ Delay:               4.973ns (Levels of Logic = 2)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'SPLB_Clk'
-  Total number of paths / destination ports: 251 / 251
+  Total number of paths / destination ports: 281 / 281
 -------------------------------------------------------------------------
-Offset:              2.892ns (Levels of Logic = 1)
+Offset:              2.773ns (Levels of Logic = 1)
   Source:            SPLB_Rst (PAD)
-  Destination:       Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_31 (FF)
+  Destination:       Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/bus2ip_rnw_i (FF)
   Destination Clock: SPLB_Clk rising
 
-  Data Path: SPLB_Rst to Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_31
+  Data Path: SPLB_Rst to Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/bus2ip_rnw_i
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LUT4:I0->O           20   0.704   1.102  Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_or00001 (Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_or0000)
-     FDR:R                     0.911          Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_31
+     LUT3:I0->O           13   0.704   0.983  Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/bus2ip_rnw_i_or00001 (Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_out_i_0_or0000)
+     FDRE:R                    0.911          Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_out_i_0
     ----------------------------------------
-    Total                      2.892ns (1.790ns logic, 1.102ns route)
-                                       (61.9% logic, 38.1% route)
+    Total                      2.773ns (1.790ns logic, 0.983ns route)
+                                       (64.6% logic, 35.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'SPLB_Clk'
-  Total number of paths / destination ports: 68 / 68
+  Total number of paths / destination ports: 101 / 101
 -------------------------------------------------------------------------
 Offset:              0.591ns (Levels of Logic = 0)
   Source:            Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rearbitrate_i (FF)
@@ -1047,13 +1091,13 @@ Offset:              0.591ns (Levels of Logic = 0)
 
 
 Total REAL time to Xst completion: 11.00 secs
-Total CPU time to Xst completion: 11.11 secs
+Total CPU time to Xst completion: 11.28 secs
  
 --> 
 
-Total memory usage is 215628 kilobytes
+Total memory usage is 216652 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  140 (   0 filtered)
+Number of warnings :  155 (   0 filtered)
 Number of infos    :    2 (   0 filtered)
 

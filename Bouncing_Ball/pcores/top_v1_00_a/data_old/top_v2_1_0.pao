@@ -1,7 +1,7 @@
 ##############################################################################
 ## Filename:          C:\FPGArcade\Bouncing_Ball\pcores/top_v1_00_a/data/top_v2_1_0.pao
 ## Description:       Peripheral Analysis Order
-## Date:              Sat Mar 12 14:54:41 2011 (by Create and Import Peripheral Wizard)
+## Date:              Thu Mar 10 22:36:24 2011 (by Create and Import Peripheral Wizard)
 ##############################################################################
 
 lib top_v1_00_a clk25MHz vhdl

@@ -204,27 +204,6 @@ Creating hardware output directories ...
 Managing hardware (BBD-specified) netlist files ...
 
 Managing cache ...
-IPNAME:microblaze INSTANCE:microblaze_0 - C:\FPGArcade\Bouncing_Ball\system.mhs
-line 28 - Copying cache implementation netlist
-IPNAME:lmb_v10 INSTANCE:ilmb - C:\FPGArcade\Bouncing_Ball\system.mhs line 49 -
-Copying cache implementation netlist
-IPNAME:lmb_v10 INSTANCE:dlmb - C:\FPGArcade\Bouncing_Ball\system.mhs line 56 -
-Copying cache implementation netlist
-IPNAME:lmb_bram_if_cntlr INSTANCE:dlmb_cntlr -
-C:\FPGArcade\Bouncing_Ball\system.mhs line 63 - Copying cache implementation
-netlist
-IPNAME:lmb_bram_if_cntlr INSTANCE:ilmb_cntlr -
-C:\FPGArcade\Bouncing_Ball\system.mhs line 72 - Copying cache implementation
-netlist
-IPNAME:bram_block INSTANCE:lmb_bram - C:\FPGArcade\Bouncing_Ball\system.mhs line
-81 - Copying cache implementation netlist
-IPNAME:xps_gpio INSTANCE:leds_8bit - C:\FPGArcade\Bouncing_Ball\system.mhs line
-88 - Copying cache implementation netlist
-IPNAME:mdm INSTANCE:mdm_0 - C:\FPGArcade\Bouncing_Ball\system.mhs line 116 -
-Copying cache implementation netlist
-IPNAME:proc_sys_reset INSTANCE:proc_sys_reset_0 -
-C:\FPGArcade\Bouncing_Ball\system.mhs line 128 - Copying cache implementation
-netlist
 
 Elaborating instances ...
 IPNAME:bram_block INSTANCE:lmb_bram - C:\FPGArcade\Bouncing_Ball\system.mhs line
@@ -253,19 +232,45 @@ Running XST synthesis ...
 INFO:EDK:2502 - The following instances are synthesized with XST. The MPD option
    IMP_NETLIST=TRUE indicates that a NGC file is to be produced using XST
    synthesis. IMP_NETLIST=FALSE (default) instances are not synthesized. 
+INSTANCE:microblaze_0 - C:\FPGArcade\Bouncing_Ball\system.mhs line 28 - Running
+XST synthesis
 INSTANCE:mb_plb - C:\FPGArcade\Bouncing_Ball\system.mhs line 42 - Running XST
 synthesis
+INSTANCE:ilmb - C:\FPGArcade\Bouncing_Ball\system.mhs line 49 - Running XST
+synthesis
+INSTANCE:dlmb - C:\FPGArcade\Bouncing_Ball\system.mhs line 56 - Running XST
+synthesis
+INSTANCE:dlmb_cntlr - C:\FPGArcade\Bouncing_Ball\system.mhs line 63 - Running
+XST synthesis
+INSTANCE:ilmb_cntlr - C:\FPGArcade\Bouncing_Ball\system.mhs line 72 - Running
+XST synthesis
+INSTANCE:lmb_bram - C:\FPGArcade\Bouncing_Ball\system.mhs line 81 - Running XST
+synthesis
+INSTANCE:leds_8bit - C:\FPGArcade\Bouncing_Ball\system.mhs line 88 - Running XST
+synthesis
+WARNING:EDK:2631 - Unable to remove directory
+   'C:\FPGArcade\Bouncing_Ball\synthesis\xst\'
 INSTANCE:clock_generator_0 - C:\FPGArcade\Bouncing_Ball\system.mhs line 101 -
 Running XST synthesis
-INSTANCE:top_0 - C:\FPGArcade\Bouncing_Ball\system.mhs line 141 - Running XST
+INSTANCE:mdm_0 - C:\FPGArcade\Bouncing_Ball\system.mhs line 116 - Running XST
 synthesis
-INSTANCE:block_output - C:\FPGArcade\Bouncing_Ball\system.mhs line 153 - Running
+INSTANCE:proc_sys_reset_0 - C:\FPGArcade\Bouncing_Ball\system.mhs line 128 -
+Running XST synthesis
+INSTANCE:block_output - C:\FPGArcade\Bouncing_Ball\system.mhs line 141 - Running
 XST synthesis
+INSTANCE:top_0 - C:\FPGArcade\Bouncing_Ball\system.mhs line 154 - Running XST
+synthesis
 
 Running NGCBUILD ...
+IPNAME:microblaze_0_wrapper INSTANCE:microblaze_0 -
+C:\FPGArcade\Bouncing_Ball\system.mhs line 28 - Running NGCBUILD
+IPNAME:ilmb_wrapper INSTANCE:ilmb - C:\FPGArcade\Bouncing_Ball\system.mhs line
+49 - Running NGCBUILD
+IPNAME:dlmb_wrapper INSTANCE:dlmb - C:\FPGArcade\Bouncing_Ball\system.mhs line
+56 - Running NGCBUILD
 IPNAME:clock_generator_0_wrapper INSTANCE:clock_generator_0 -
 C:\FPGArcade\Bouncing_Ball\system.mhs line 101 - Running NGCBUILD
 
 Rebuilding cache ...
 
-Total run time: 46.00 seconds
+Total run time: 146.00 seconds
