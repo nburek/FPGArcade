@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/FPGArcade/PmodJSTK_Module/jstkModule.xst" -ofn "C:/FPGArcade/PmodJSTK_Module/jstkModule.syr" 

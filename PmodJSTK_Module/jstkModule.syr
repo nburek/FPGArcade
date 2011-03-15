@@ -1,0 +1,151 @@
+Release 12.4 - xst M.81d (nt)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Reading design: jstkModule.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "jstkModule.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "jstkModule"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : jstkModule
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/FPGArcade/PmodJSTK_Module/clock50Khz.vhd" in Library work.
+Entity <clock50Khz> compiled.
+Entity <clock50Khz> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/FPGArcade/PmodJSTK_Module/PmodJSTK_Driver.vhd" in Library work.
+Entity <top> compiled.
+ERROR:HDLParsers:3010 - "C:/FPGArcade/PmodJSTK_Module/PmodJSTK_Driver.vhd" Line 44. Entity jstkModule does not exist.
+ERROR:HDLParsers:3312 - "C:/FPGArcade/PmodJSTK_Module/PmodJSTK_Driver.vhd" Line 47. Undefined symbol 'STD_LOGIC'.
+ERROR:HDLParsers:1209 - "C:/FPGArcade/PmodJSTK_Module/PmodJSTK_Driver.vhd" Line 47. STD_LOGIC: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/FPGArcade/PmodJSTK_Module/PmodJSTK_Driver.vhd" Line 51. Undefined symbol 'STD_LOGIC'.
+ERROR:HDLParsers:1209 - "C:/FPGArcade/PmodJSTK_Module/PmodJSTK_Driver.vhd" Line 51. STD_LOGIC: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/FPGArcade/PmodJSTK_Module/PmodJSTK_Driver.vhd" Line 52. Undefined symbol 'STD_LOGIC_VECTOR'.
+ERROR:HDLParsers:1209 - "C:/FPGArcade/PmodJSTK_Module/PmodJSTK_Driver.vhd" Line 52. STD_LOGIC_VECTOR: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/FPGArcade/PmodJSTK_Module/PmodJSTK_Driver.vhd" Line 59. Undefined symbol 'CLK'.
+ERROR:HDLParsers:1209 - "C:/FPGArcade/PmodJSTK_Module/PmodJSTK_Driver.vhd" Line 59. CLK: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/FPGArcade/PmodJSTK_Module/PmodJSTK_Driver.vhd" Line 59. Undefined symbol 'clk50Khz'.
+ERROR:HDLParsers:1209 - "C:/FPGArcade/PmodJSTK_Module/PmodJSTK_Driver.vhd" Line 59. clk50Khz: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/FPGArcade/PmodJSTK_Module/PmodJSTK_Driver.vhd" Line 61. Undefined symbol 'Data'.
+ERROR:HDLParsers:1209 - "C:/FPGArcade/PmodJSTK_Module/PmodJSTK_Driver.vhd" Line 61. Data: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/FPGArcade/PmodJSTK_Module/PmodJSTK_Driver.vhd" Line 61. Undefined symbol 'saveBuffer'.
+ERROR:HDLParsers:1209 - "C:/FPGArcade/PmodJSTK_Module/PmodJSTK_Driver.vhd" Line 61. saveBuffer: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3313 - "C:/FPGArcade/PmodJSTK_Module/PmodJSTK_Driver.vhd" Line 87. Undefined symbol 'SCK'.  Should it be: aCK?
+ERROR:HDLParsers:808 - "C:/FPGArcade/PmodJSTK_Module/PmodJSTK_Driver.vhd" Line 91. = can not have such operands in this context.
+ERROR:HDLParsers:808 - "C:/FPGArcade/PmodJSTK_Module/PmodJSTK_Driver.vhd" Line 93. = can not have such operands in this context.
+ERROR:HDLParsers:3313 - "C:/FPGArcade/PmodJSTK_Module/PmodJSTK_Driver.vhd" Line 94. Undefined symbol 'SS'.  Should it be: uS, pS, nS, mS, iS, fS or bS?
+ERROR:HDLParsers:808 - "C:/FPGArcade/PmodJSTK_Module/PmodJSTK_Driver.vhd" Line 95. = can not have such operands in this context.
+ERROR:HDLParsers:3313 - "C:/FPGArcade/PmodJSTK_Module/PmodJSTK_Driver.vhd" Line 96. Undefined symbol 'ss'.  Should it be: us, ps, ns, ms, is, fs or bs?
+ERROR:HDLParsers:808 - "C:/FPGArcade/PmodJSTK_Module/PmodJSTK_Driver.vhd" Line 97. < can not have such operands in this context.
+ERROR:HDLParsers:3312 - "C:/FPGArcade/PmodJSTK_Module/PmodJSTK_Driver.vhd" Line 98. Undefined symbol 'inputBuffer'.
+ERROR:HDLParsers:1209 - "C:/FPGArcade/PmodJSTK_Module/PmodJSTK_Driver.vhd" Line 98. inputBuffer: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/FPGArcade/PmodJSTK_Module/PmodJSTK_Driver.vhd" Line 98. Undefined symbol 'conv_integer'.
+ERROR:HDLParsers:1209 - "C:/FPGArcade/PmodJSTK_Module/PmodJSTK_Driver.vhd" Line 98. conv_integer: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/FPGArcade/PmodJSTK_Module/PmodJSTK_Driver.vhd" Line 98. Undefined symbol 'counter'.
+ERROR:HDLParsers:1209 - "C:/FPGArcade/PmodJSTK_Module/PmodJSTK_Driver.vhd" Line 98. counter: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/FPGArcade/PmodJSTK_Module/PmodJSTK_Driver.vhd" Line 98. Undefined symbol 'MISO'.
+ERROR:HDLParsers:1209 - "C:/FPGArcade/PmodJSTK_Module/PmodJSTK_Driver.vhd" Line 98. MISO: Undefined symbol (last report in this block)
+ERROR:HDLParsers:808 - "C:/FPGArcade/PmodJSTK_Module/PmodJSTK_Driver.vhd" Line 101. < can not have such operands in this context.
+WARNING:HDLParsers:1406 - "C:/FPGArcade/PmodJSTK_Module/PmodJSTK_Driver.vhd" Line 89. No sensitivity list and no wait in the process
+--> 
+
+Total memory usage is 145120 kilobytes
+
+Number of errors   :   31 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

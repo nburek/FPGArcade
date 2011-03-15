@@ -1,0 +1,515 @@
+Release 12.4 - xst M.81d (nt)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/FPGArcade/PmodJSTK_Module/clock50Khz.vhd" in Library work.
+Architecture behavioral of Entity clock50khz is up to date.
+Compiling vhdl file "C:/FPGArcade/PmodJSTK_Module/PmodJSTK_Driver.vhd" in Library work.
+Entity <top> compiled.
+Entity <top> (Architecture <Behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <top> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <clock50Khz> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <top> in library <work> (Architecture <Behavioral>).
+Entity <top> analyzed. Unit <top> generated.
+
+Analyzing Entity <clock50Khz> in library <work> (Architecture <behavioral>).
+Entity <clock50Khz> analyzed. Unit <clock50Khz> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <clock50Khz>.
+    Related source file is "C:/FPGArcade/PmodJSTK_Module/clock50Khz.vhd".
+    Found 10-bit up counter for signal <count>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <clock50Khz> synthesized.
+
+
+Synthesizing Unit <top>.
+    Related source file is "C:/FPGArcade/PmodJSTK_Module/PmodJSTK_Driver.vhd".
+WARNING:Xst:1306 - Output <MOSI> is never assigned.
+WARNING:Xst:646 - Signal <saveBuffer<36:32>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <saveBuffer<29:24>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <saveBuffer<13:8>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit register for signal <SS>.
+    Found 10-bit up counter for signal <counter>.
+    Found 40-bit register for signal <inputBuffer>.
+    Found 11-bit comparator greatequal for signal <inputBuffer_4$cmp_ge0000> created at line 96.
+    Found 40-bit register for signal <saveBuffer>.
+    Found 11-bit comparator less for signal <saveBuffer$cmp_lt0000> created at line 101.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  81 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+Unit <top> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 2
+ 10-bit up counter                                     : 2
+# Registers                                            : 42
+ 1-bit register                                        : 41
+ 40-bit register                                       : 1
+# Comparators                                          : 2
+ 11-bit comparator greatequal                          : 1
+ 11-bit comparator less                                : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:2677 - Node <inputBuffer_8> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <inputBuffer_25> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <inputBuffer_24> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <inputBuffer_9> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <inputBuffer_26> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <inputBuffer_27> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <inputBuffer_32> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <inputBuffer_29> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <inputBuffer_28> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <inputBuffer_33> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <inputBuffer_36> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <inputBuffer_34> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <inputBuffer_35> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <inputBuffer_11> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <inputBuffer_10> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <inputBuffer_12> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <inputBuffer_13> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <saveBuffer_8> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <saveBuffer_9> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <saveBuffer_10> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <saveBuffer_11> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <saveBuffer_12> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <saveBuffer_13> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <saveBuffer_24> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <saveBuffer_25> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <saveBuffer_26> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <saveBuffer_27> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <saveBuffer_28> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <saveBuffer_29> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <saveBuffer_32> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <saveBuffer_33> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <saveBuffer_34> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <saveBuffer_35> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <saveBuffer_36> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <inputBuffer_8> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <inputBuffer_9> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <inputBuffer_24> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <inputBuffer_26> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <inputBuffer_25> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <inputBuffer_27> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <inputBuffer_33> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <inputBuffer_32> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <inputBuffer_28> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <inputBuffer_35> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <inputBuffer_29> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <inputBuffer_34> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <inputBuffer_36> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <inputBuffer_11> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <inputBuffer_10> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <inputBuffer_12> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <inputBuffer_13> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <saveBuffer_8> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <saveBuffer_9> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <saveBuffer_10> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <saveBuffer_11> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <saveBuffer_12> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <saveBuffer_13> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <saveBuffer_24> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <saveBuffer_25> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <saveBuffer_26> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <saveBuffer_27> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <saveBuffer_28> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <saveBuffer_29> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <saveBuffer_32> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <saveBuffer_33> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <saveBuffer_34> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <saveBuffer_35> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <saveBuffer_36> of sequential type is unconnected in block <top>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 2
+ 10-bit up counter                                     : 2
+# Registers                                            : 47
+ Flip-Flops                                            : 47
+# Comparators                                          : 2
+ 11-bit comparator greatequal                          : 1
+ 11-bit comparator less                                : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <top> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 0.
+FlipFlop counter_1 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 68
+ Flip-Flops                                            : 68
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : top.ngr
+Top Level Output File Name         : top
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 28
+
+Cell Usage :
+# BELS                             : 101
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 18
+#      LUT2_L                      : 1
+#      LUT3_L                      : 1
+#      LUT4                        : 29
+#      LUT4_D                      : 9
+#      MUXCY                       : 18
+#      MUXF5                       : 1
+#      VCC                         : 1
+#      XORCY                       : 20
+# FlipFlops/Latches                : 68
+#      FD                          : 11
+#      FDE                         : 46
+#      FDR                         : 11
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 26
+#      IBUF                        : 1
+#      OBUF                        : 25
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                       53  out of   4656     1%  
+ Number of Slice Flip Flops:             68  out of   9312     0%  
+ Number of 4 input LUTs:                 60  out of   9312     0%  
+ Number of IOs:                          28
+ Number of bonded IOBs:                  27  out of    232    11%  
+ Number of GCLKs:                         2  out of     24     8%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clkGen50Khz/count_91               | BUFG                   | 58    |
+CLK                                | BUFGP                  | 10    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 5.476ns (Maximum Frequency: 182.620MHz)
+   Minimum input arrival time before clock: 2.728ns
+   Maximum output required time after clock: 4.394ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clkGen50Khz/count_91'
+  Clock period: 5.476ns (frequency: 182.620MHz)
+  Total number of paths / destination ports: 632 / 92
+-------------------------------------------------------------------------
+Delay:               5.476ns (Levels of Logic = 2)
+  Source:            counter_2 (FF)
+  Destination:       counter_0 (FF)
+  Source Clock:      clkGen50Khz/count_91 rising
+  Destination Clock: clkGen50Khz/count_91 rising
+
+  Data Path: counter_2 to counter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             22   0.591   1.199  counter_2 (counter_2)
+     LUT3_L:I2->LO         1   0.704   0.104  inputBuffer_4_cmp_ge0000211_SW0 (N63)
+     LUT4:I3->O           34   0.704   1.263  inputBuffer_4_cmp_ge0000211 (inputBuffer_4_cmp_ge0000)
+     FDR:R                     0.911          counter_0
+    ----------------------------------------
+    Total                      5.476ns (2.910ns logic, 2.566ns route)
+                                       (53.1% logic, 46.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 3.879ns (frequency: 257.798MHz)
+  Total number of paths / destination ports: 55 / 10
+-------------------------------------------------------------------------
+Delay:               3.879ns (Levels of Logic = 10)
+  Source:            clkGen50Khz/count_1 (FF)
+  Destination:       clkGen50Khz/count_9 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: clkGen50Khz/count_1 to clkGen50Khz/count_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.591   0.595  clkGen50Khz/count_1 (clkGen50Khz/count_1)
+     LUT1:I0->O            1   0.704   0.000  clkGen50Khz/Mcount_count_cy<1>_rt (clkGen50Khz/Mcount_count_cy<1>_rt)
+     MUXCY:S->O            1   0.464   0.000  clkGen50Khz/Mcount_count_cy<1> (clkGen50Khz/Mcount_count_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  clkGen50Khz/Mcount_count_cy<2> (clkGen50Khz/Mcount_count_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  clkGen50Khz/Mcount_count_cy<3> (clkGen50Khz/Mcount_count_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  clkGen50Khz/Mcount_count_cy<4> (clkGen50Khz/Mcount_count_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  clkGen50Khz/Mcount_count_cy<5> (clkGen50Khz/Mcount_count_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  clkGen50Khz/Mcount_count_cy<6> (clkGen50Khz/Mcount_count_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  clkGen50Khz/Mcount_count_cy<7> (clkGen50Khz/Mcount_count_cy<7>)
+     MUXCY:CI->O           0   0.059   0.000  clkGen50Khz/Mcount_count_cy<8> (clkGen50Khz/Mcount_count_cy<8>)
+     XORCY:CI->O           1   0.804   0.000  clkGen50Khz/Mcount_count_xor<9> (Result<9>)
+     FD:D                      0.308          clkGen50Khz/count_9
+    ----------------------------------------
+    Total                      3.879ns (3.284ns logic, 0.595ns route)
+                                       (84.7% logic, 15.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clkGen50Khz/count_91'
+  Total number of paths / destination ports: 23 / 23
+-------------------------------------------------------------------------
+Offset:              2.728ns (Levels of Logic = 1)
+  Source:            MISO (PAD)
+  Destination:       inputBuffer_4 (FF)
+  Destination Clock: clkGen50Khz/count_91 rising
+
+  Data Path: MISO to inputBuffer_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            23   1.218   1.202  MISO_IBUF (MISO_IBUF)
+     FDE:D                     0.308          inputBuffer_4
+    ----------------------------------------
+    Total                      2.728ns (1.526ns logic, 1.202ns route)
+                                       (55.9% logic, 44.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clkGen50Khz/count_91'
+  Total number of paths / destination ports: 24 / 24
+-------------------------------------------------------------------------
+Offset:              4.394ns (Levels of Logic = 1)
+  Source:            SS (FF)
+  Destination:       SS (PAD)
+  Source Clock:      clkGen50Khz/count_91 rising
+
+  Data Path: SS to SS
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.591   0.531  SS (SS_OBUF)
+     OBUF:I->O                 3.272          SS_OBUF (SS)
+    ----------------------------------------
+    Total                      4.394ns (3.863ns logic, 0.531ns route)
+                                       (87.9% logic, 12.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.394ns (Levels of Logic = 1)
+  Source:            clkGen50Khz/count_9 (FF)
+  Destination:       SCK (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: clkGen50Khz/count_9 to SCK
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.591   0.531  clkGen50Khz/count_9 (clkGen50Khz/count_91)
+     OBUF:I->O                 3.272          SCK_OBUF (SCK)
+    ----------------------------------------
+    Total                      4.394ns (3.863ns logic, 0.531ns route)
+                                       (87.9% logic, 12.1% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 3.89 secs
+ 
+--> 
+
+Total memory usage is 152484 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   72 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
