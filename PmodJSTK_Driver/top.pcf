@@ -1,9 +1,8 @@
 //! **************************************************************************
-// Written by: Map M.81d on Sat Mar 12 17:59:55 2011
+// Written by: Map M.81d on Tue Mar 15 10:26:07 2011
 //! **************************************************************************
 
 SCHEMATIC START;
-NET "clk50Mhz_BUFGP/IBUFG" BEL "clk50Mhz_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
 COMP "Led<3>" LOCATE = SITE "K14" LEVEL 1;
 COMP "Led<4>" LOCATE = SITE "E17" LEVEL 1;
 COMP "Led<5>" LOCATE = SITE "P15" LEVEL 1;
@@ -25,5 +24,6 @@ COMP "sw<7>" LOCATE = SITE "R17" LEVEL 1;
 COMP "Led<0>" LOCATE = SITE "J14" LEVEL 1;
 COMP "Led<1>" LOCATE = SITE "J15" LEVEL 1;
 COMP "Led<2>" LOCATE = SITE "K15" LEVEL 1;
+NET "clk50Mhz_BUFGP/IBUFG" BEL "clk50Mhz_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
 SCHEMATIC END;
 

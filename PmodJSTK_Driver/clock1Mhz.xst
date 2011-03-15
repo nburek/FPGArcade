@@ -1,5 +1,0 @@
-set -tmpdir "C:/FPGArcade/PmodJSTK_Driver/xst/projnav.tmp"
-set -xsthdpdir "C:/FPGArcade/PmodJSTK_Driver/xst"
-elaborate
--ifn clock1Mhz.prj
--ifmt mixed

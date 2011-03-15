@@ -4,13 +4,13 @@ Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.53 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.53 secs
  
 --> Reading design: top.prj
 
@@ -104,8 +104,9 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/FPGArcade/PmodJSTK_Driver/clock1Mhz.vhd" in Library work.
-Architecture behavioral of Entity clock1mhz is up to date.
+Compiling vhdl file "C:/FPGArcade/PmodJSTK_Driver/clock50Khz.vhd" in Library work.
+Entity <clock50Khz> compiled.
+Entity <clock50Khz> (Architecture <Behavioral>) compiled.
 Compiling vhdl file "C:/FPGArcade/PmodJSTK_Driver/PmodJSTK_Driver.vhd" in Library work.
 Entity <jstkmodule> compiled.
 Entity <jstkmodule> (Architecture <behavioral>) compiled.
@@ -119,7 +120,7 @@ Analyzing hierarchy for entity <top> in library <work> (architecture <behavioral
 
 Analyzing hierarchy for entity <jstkModule> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <clock1Mhz> in library <work> (architecture <behavioral>).
+Analyzing hierarchy for entity <clock50Khz> in library <work> (architecture <Behavioral>).
 
 
 =========================================================================
@@ -133,8 +134,8 @@ Entity <top> analyzed. Unit <top> generated.
 Analyzing Entity <jstkModule> in library <work> (Architecture <behavioral>).
 Entity <jstkModule> analyzed. Unit <jstkModule> generated.
 
-Analyzing Entity <clock1Mhz> in library <work> (Architecture <behavioral>).
-Entity <clock1Mhz> analyzed. Unit <clock1Mhz> generated.
+Analyzing Entity <clock50Khz> in library <work> (Architecture <Behavioral>).
+Entity <clock50Khz> analyzed. Unit <clock50Khz> generated.
 
 
 =========================================================================
@@ -143,13 +144,12 @@ Entity <clock1Mhz> analyzed. Unit <clock1Mhz> generated.
 
 Performing bidirectional port resolution...
 
-Synthesizing Unit <clock1Mhz>.
-    Related source file is "C:/FPGArcade/PmodJSTK_Driver/clock1Mhz.vhd".
-WARNING:Xst:1780 - Signal <slow_clk> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+Synthesizing Unit <clock50Khz>.
+    Related source file is "C:/FPGArcade/PmodJSTK_Driver/clock50Khz.vhd".
     Found 10-bit up counter for signal <count>.
     Summary:
 	inferred   1 Counter(s).
-Unit <clock1Mhz> synthesized.
+Unit <clock50Khz> synthesized.
 
 
 Synthesizing Unit <jstkModule>.
@@ -389,7 +389,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-jstk/clkGen1Mhz/count_91           | BUFG                   | 58    |
+jstk/clkGen50Khz/count_91          | BUFG                   | 58    |
 clk50Mhz                           | BUFGP                  | 10    |
 -----------------------------------+------------------------+-------+
 
@@ -411,15 +411,15 @@ Timing Detail:
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'jstk/clkGen1Mhz/count_91'
+Timing constraint: Default period analysis for Clock 'jstk/clkGen50Khz/count_91'
   Clock period: 5.266ns (frequency: 189.897MHz)
   Total number of paths / destination ports: 632 / 92
 -------------------------------------------------------------------------
 Delay:               5.266ns (Levels of Logic = 2)
   Source:            jstk/counter_2 (FF)
   Destination:       jstk/saveBuffer_39 (FF)
-  Source Clock:      jstk/clkGen1Mhz/count_91 rising
-  Destination Clock: jstk/clkGen1Mhz/count_91 rising
+  Source Clock:      jstk/clkGen50Khz/count_91 rising
+  Destination Clock: jstk/clkGen50Khz/count_91 rising
 
   Data Path: jstk/counter_2 to jstk/saveBuffer_39
                                 Gate     Net
@@ -439,39 +439,39 @@ Timing constraint: Default period analysis for Clock 'clk50Mhz'
   Total number of paths / destination ports: 55 / 10
 -------------------------------------------------------------------------
 Delay:               3.879ns (Levels of Logic = 10)
-  Source:            jstk/clkGen1Mhz/count_1 (FF)
-  Destination:       jstk/clkGen1Mhz/count_9 (FF)
+  Source:            jstk/clkGen50Khz/count_1 (FF)
+  Destination:       jstk/clkGen50Khz/count_9 (FF)
   Source Clock:      clk50Mhz rising
   Destination Clock: clk50Mhz rising
 
-  Data Path: jstk/clkGen1Mhz/count_1 to jstk/clkGen1Mhz/count_9
+  Data Path: jstk/clkGen50Khz/count_1 to jstk/clkGen50Khz/count_9
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               1   0.591   0.595  jstk/clkGen1Mhz/count_1 (jstk/clkGen1Mhz/count_1)
-     LUT1:I0->O            1   0.704   0.000  jstk/clkGen1Mhz/Mcount_count_cy<1>_rt (jstk/clkGen1Mhz/Mcount_count_cy<1>_rt)
-     MUXCY:S->O            1   0.464   0.000  jstk/clkGen1Mhz/Mcount_count_cy<1> (jstk/clkGen1Mhz/Mcount_count_cy<1>)
-     MUXCY:CI->O           1   0.059   0.000  jstk/clkGen1Mhz/Mcount_count_cy<2> (jstk/clkGen1Mhz/Mcount_count_cy<2>)
-     MUXCY:CI->O           1   0.059   0.000  jstk/clkGen1Mhz/Mcount_count_cy<3> (jstk/clkGen1Mhz/Mcount_count_cy<3>)
-     MUXCY:CI->O           1   0.059   0.000  jstk/clkGen1Mhz/Mcount_count_cy<4> (jstk/clkGen1Mhz/Mcount_count_cy<4>)
-     MUXCY:CI->O           1   0.059   0.000  jstk/clkGen1Mhz/Mcount_count_cy<5> (jstk/clkGen1Mhz/Mcount_count_cy<5>)
-     MUXCY:CI->O           1   0.059   0.000  jstk/clkGen1Mhz/Mcount_count_cy<6> (jstk/clkGen1Mhz/Mcount_count_cy<6>)
-     MUXCY:CI->O           1   0.059   0.000  jstk/clkGen1Mhz/Mcount_count_cy<7> (jstk/clkGen1Mhz/Mcount_count_cy<7>)
-     MUXCY:CI->O           0   0.059   0.000  jstk/clkGen1Mhz/Mcount_count_cy<8> (jstk/clkGen1Mhz/Mcount_count_cy<8>)
-     XORCY:CI->O           1   0.804   0.000  jstk/clkGen1Mhz/Mcount_count_xor<9> (jstk/Result<9>)
-     FD:D                      0.308          jstk/clkGen1Mhz/count_9
+     FD:C->Q               1   0.591   0.595  jstk/clkGen50Khz/count_1 (jstk/clkGen50Khz/count_1)
+     LUT1:I0->O            1   0.704   0.000  jstk/clkGen50Khz/Mcount_count_cy<1>_rt (jstk/clkGen50Khz/Mcount_count_cy<1>_rt)
+     MUXCY:S->O            1   0.464   0.000  jstk/clkGen50Khz/Mcount_count_cy<1> (jstk/clkGen50Khz/Mcount_count_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  jstk/clkGen50Khz/Mcount_count_cy<2> (jstk/clkGen50Khz/Mcount_count_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  jstk/clkGen50Khz/Mcount_count_cy<3> (jstk/clkGen50Khz/Mcount_count_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  jstk/clkGen50Khz/Mcount_count_cy<4> (jstk/clkGen50Khz/Mcount_count_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  jstk/clkGen50Khz/Mcount_count_cy<5> (jstk/clkGen50Khz/Mcount_count_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  jstk/clkGen50Khz/Mcount_count_cy<6> (jstk/clkGen50Khz/Mcount_count_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  jstk/clkGen50Khz/Mcount_count_cy<7> (jstk/clkGen50Khz/Mcount_count_cy<7>)
+     MUXCY:CI->O           0   0.059   0.000  jstk/clkGen50Khz/Mcount_count_cy<8> (jstk/clkGen50Khz/Mcount_count_cy<8>)
+     XORCY:CI->O           1   0.804   0.000  jstk/clkGen50Khz/Mcount_count_xor<9> (jstk/Result<9>)
+     FD:D                      0.308          jstk/clkGen50Khz/count_9
     ----------------------------------------
     Total                      3.879ns (3.284ns logic, 0.595ns route)
                                        (84.7% logic, 15.3% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'jstk/clkGen1Mhz/count_91'
+Timing constraint: Default OFFSET IN BEFORE for Clock 'jstk/clkGen50Khz/count_91'
   Total number of paths / destination ports: 23 / 23
 -------------------------------------------------------------------------
 Offset:              2.728ns (Levels of Logic = 1)
   Source:            MISO (PAD)
   Destination:       jstk/inputBuffer_3 (FF)
-  Destination Clock: jstk/clkGen1Mhz/count_91 rising
+  Destination Clock: jstk/clkGen50Khz/count_91 rising
 
   Data Path: MISO to jstk/inputBuffer_3
                                 Gate     Net
@@ -484,13 +484,13 @@ Offset:              2.728ns (Levels of Logic = 1)
                                        (55.9% logic, 44.1% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'jstk/clkGen1Mhz/count_91'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'jstk/clkGen50Khz/count_91'
   Total number of paths / destination ports: 24 / 9
 -------------------------------------------------------------------------
 Offset:              7.817ns (Levels of Logic = 4)
   Source:            jstk/saveBuffer_31 (FF)
   Destination:       Led<7> (PAD)
-  Source Clock:      jstk/clkGen1Mhz/count_91 rising
+  Source Clock:      jstk/clkGen50Khz/count_91 rising
 
   Data Path: jstk/saveBuffer_31 to Led<7>
                                 Gate     Net
@@ -510,15 +510,15 @@ Timing constraint: Default OFFSET OUT AFTER for Clock 'clk50Mhz'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
 Offset:              4.394ns (Levels of Logic = 1)
-  Source:            jstk/clkGen1Mhz/count_9 (FF)
+  Source:            jstk/clkGen50Khz/count_9 (FF)
   Destination:       SCK (PAD)
   Source Clock:      clk50Mhz rising
 
-  Data Path: jstk/clkGen1Mhz/count_9 to SCK
+  Data Path: jstk/clkGen50Khz/count_9 to SCK
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               3   0.591   0.531  jstk/clkGen1Mhz/count_9 (jstk/clkGen1Mhz/count_91)
+     FD:C->Q               3   0.591   0.531  jstk/clkGen50Khz/count_9 (jstk/clkGen50Khz/count_91)
      OBUF:I->O                 3.272          SCK_OBUF (SCK)
     ----------------------------------------
     Total                      4.394ns (3.863ns logic, 0.531ns route)
@@ -548,14 +548,14 @@ Delay:               8.651ns (Levels of Logic = 5)
 =========================================================================
 
 
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.23 secs
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 6.05 secs
  
 --> 
 
 Total memory usage is 152484 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   76 (   0 filtered)
+Number of warnings :   75 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

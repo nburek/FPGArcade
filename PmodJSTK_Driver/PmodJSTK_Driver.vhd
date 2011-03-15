@@ -6,10 +6,15 @@
 -- Design Name: 
 -- Module Name:    jstkInterface - Behavioral 
 -- Project Name: 
--- Target Devices: 
+-- Target Devices: Nexys2
 -- Tool versions: 
 -- Description: 
---
+--		Designed to be an easy interface between the PmodJSTK and the Microblaze
+--		processor core. It handles the SPI protocol required to communicate with
+--		the PmodJSTK and outputs the data on the Data(22 downto 0) signal
+--				- bits 0 to 9 are the X position of the joystick
+--				- bits 10 to 19 are the Y position of the joystick
+--				- bits 20 to 22 are the button positions
 -- Dependencies: 
 --
 -- Revision: 
@@ -38,12 +43,12 @@ end jstkModule;
 
 architecture Behavioral of jstkModule is
 
-component clock1Mhz 
+component clock50Khz 
     Port ( clk50Mhz : in  STD_LOGIC;
-           clk1Mhz : out  STD_LOGIC);
+           clk50Khz : out  STD_LOGIC);
 end component;
 
-signal clk1Mhz : STD_LOGIC;
+signal clk50Khz : STD_LOGIC;
 signal counter : STD_LOGIC_VECTOR(9 downto 0);
 signal saveBuffer : STD_LOGIC_VECTOR(39 downto 0);
 signal inputBuffer : STD_LOGIC_VECTOR(39 downto 0);
@@ -51,7 +56,7 @@ signal inputBuffer : STD_LOGIC_VECTOR(39 downto 0);
 
 begin
 			
-	clkGen1Mhz : clock1Mhz port map(CLK,clk1Mhz);
+	clkGen50Khz : clock50Khz port map(CLK,clk50Khz);
 
 	Data(9) <= saveBuffer(14);
 	Data(8) <= saveBuffer(15);
@@ -79,26 +84,11 @@ begin
 	Data(21)<=saveBuffer(38);
 	Data(22)<=saveBuffer(37);
 
-	SCK <= clk1Mhz;
+	SCK <= clk50Khz;
 
-	process (clk1Mhz)
+	process (clk50Khz)
 	begin
-		IF (clk1Mhz'EVENT AND clk1Mhz = '1') THEN
-		
---			IF (counter < 10) THEN
---				SS <= '1';
---			ELSIF (counter < 25) THEN
---				SS <= '0';
---			ELSIF (counter < 65) THEN
---				inputBuffer(conv_integer(counter)-25) <= MISO;
---			END IF;
---			
---			IF (counter<65) THEN
---				counter <= counter + 1;
---			ELSE
---				saveBuffer <= inputBuffer;
---				counter <= "0000000000";
---			END IF;
+		IF (clk50Khz'EVENT AND clk50Khz = '1') THEN
 			
 			IF (counter = 0) THEN
 				SS <= '1';

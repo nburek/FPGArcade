@@ -6,10 +6,12 @@
 -- Design Name: 
 -- Module Name:    top - Behavioral 
 -- Project Name: 
--- Target Devices: 
+-- Target Devices: Nexys2
 -- Tool versions: 
 -- Description: 
---
+--		This top level design exists only for testing the pmodJstk module IP.
+--		Flipping different switches will show you the different byte outputs of
+--		the joystick.
 -- Dependencies: 
 --
 -- Revision: 
