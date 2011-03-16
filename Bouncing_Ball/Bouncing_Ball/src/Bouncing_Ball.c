@@ -20,6 +20,9 @@
 #define GPIO_BLOCK_BITWIDTH	19	/* This is the width of the GPIO */
 #define GPIO_PADDLE_BITWIDTH	18	/* This is the width of the GPIO */
 
+#define JOYSTICK_1_CHANNEL 1
+#define JOYSTICK_2_CHANNEL 2
+
 #define printf xil_printf	/* A smaller footprint printf */
 
 
@@ -77,10 +80,6 @@ joystick joy1, joy2;
 
 /************************** Function Prototypes ****************************/
 
-int GpioOutputExample(u16 DeviceId, u32 GpioWidth);
-
-void GpioDriverHandler(void *CallBackRef);
-
 void initBall(){
 
 	ball.x = 300;
@@ -91,6 +90,8 @@ void initBall(){
 	ball.y_spd = 1;
 }
 
+void initJoysticks();
+void getJoystickData(joystick *jstkData, int joystickChannel);
 
 
 /************************** Variable Definitions **************************/
@@ -100,6 +101,7 @@ void initBall(){
  * easily accessible from a debugger
  */
 XGpio GpioOutput; /* The driver instance for GPIO Device configured as O/P */
+XGpio joystickGPIO;
 
 /*****************************************************************************/
 /**
@@ -113,45 +115,14 @@ XGpio GpioOutput; /* The driver instance for GPIO Device configured as O/P */
 * @note		None
 *
 ******************************************************************************/
-
 int main(void)
-{
-	int Status;
-
-	Status = GpioOutputExample(XPAR_BLOCK_OUTPUT_DEVICE_ID,GPIO_BLOCK_BITWIDTH); //call a function to move a block around
-	
-	if (Status != XST_SUCCESS) {
-		  return XST_FAILURE;
-	}
-
-
-	return XST_SUCCESS;
-}
-
-
-/*****************************************************************************/
-/**
-*
-* This function does a minimal test on the GPIO device configured as OUTPUT
-* and driver as a  example.
-*
-*
-* @param	DeviceId is the XPAR_<GPIO_instance>_DEVICE_ID value from
-*		xparameters.h
-* @param	GpioWidth is the width of the GPIO
-*
-* @return	XST_SUCCESS if successful, XST_FAILURE if unsuccessful
-*
-* @note		None
-*
-****************************************************************************/
-int GpioOutputExample(u16 DeviceId, u32 GpioWidth)
 {
 	u32 Data;
 	volatile int Delay;
 	int Status;
 	
 	initBall();
+	initJoysticks();
 	
 	/*ball.x = 0; //the blocks X coord
 	ball.y = 0; //the blocks Y coord
@@ -163,7 +134,7 @@ int GpioOutputExample(u16 DeviceId, u32 GpioWidth)
 	 * Initialize the GPIO driver so that it's ready to use,
 	 * specify the device ID that is generated in xparameters.h
 	 */
-	 Status = XGpio_Initialize(&GpioOutput, DeviceId);
+	 Status = XGpio_Initialize(&GpioOutput, XPAR_BLOCK_OUTPUT_DEVICE_ID);
 	 if (Status != XST_SUCCESS)  {
 		  return XST_FAILURE;
 	 }
@@ -206,14 +177,73 @@ int GpioOutputExample(u16 DeviceId, u32 GpioWidth)
 		//write out the values to the GIOP, which sends them to the VGA Driver
 		XGpio_DiscreteWrite(&GpioOutput, BLOCK_CHANNEL, Data);
 		
+		getJoystickData(&joy1, JOYSTICK_1_CHANNEL);
+		XGpio_DiscreteWrite(&GpioOutput, PADDLE_CHANNEL, (joy1.y>>1));
+		
+		
 		for (Delay = 0; Delay < LOOP_DELAY; ++Delay); //delay for a while
 		
 	}
+
+	return XST_SUCCESS;
+}
+
+
+
+/*****************************************************************************/
+/**
+*
+* This function initializes the joystick GPIO device and channels
+*
+*
+* @param		None
+*
+* @return	None
+*
+* @note		None
+*
+****************************************************************************/
+void initJoysticks()
+{
+	XGpio_Initialize(&joystickGPIO, XPAR_JOYSTICK_GPIO_DEVICE_ID);
+	XGpio_SetDataDirection(&joystickGPIO, JOYSTICK_1_CHANNEL, 0xFFFFFFFF);
+	XGpio_SetDataDirection(&joystickGPIO, JOYSTICK_2_CHANNEL, 0xFFFFFFFF);
+}
+
+
+/*****************************************************************************/
+/**
+*
+* This function reads the data from joystick GPIO device on the channel 
+* specified. It then seperates that data out and stores it back into the
+* joystick structure that was passed by reference.
+*
+*
+* @param	jstkData is where the joystick data is saved back to
+*
+* @param	joystickChannel is the channel that is read on the joystick GPIO 
+*
+* @return	None
+*
+* @note		None
+*
+****************************************************************************/
+void getJoystickData(joystick *jstkData, int joystickChannel)
+{
+	u32 Data;
+	u8 Buttons;
 	
-
-
-	 return XST_SUCCESS;
-
+	Data = XGpio_DiscreteRead(&joystickGPIO, joystickChannel);
+	
+	(*jstkData).x = (Data & 0x3FF); //read bits 0-9 into X
+	
+	(*jstkData).y = (Data>>10) & 0x3FF;
+	
+	(*jstkData).btn1 = (Data >> 20) & 0x1;
+	
+	(*jstkData).btn2 = (Data >> 21) & 0x1;
+	
+	(*jstkData).btn3 = (Data >> 22) & 0x1;
 }
 
 

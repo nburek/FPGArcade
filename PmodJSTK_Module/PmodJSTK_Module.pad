@@ -1,7 +1,7 @@
 Release 12.4 - par M.81d (nt)
 Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 
-Tue Mar 15 17:04:43 2011
+Tue Mar 15 17:10:37 2011
 
 
 # NOTE: This file is designed to be imported into a spreadsheet program
@@ -9,8 +9,8 @@ Tue Mar 15 17:04:43 2011
 # character is used as the data field separator. This file is also designed
 # to support parsing.
 #
-INPUT FILE:       top_map.ncd
-OUTPUT FILE:      top.pad
+INPUT FILE:       PmodJSTK_Module_map.ncd
+OUTPUT FILE:      PmodJSTK_Module.pad
 PART TYPE:        xc3s500e
 SPEED GRADE:      -4
 PACKAGE:          fg320

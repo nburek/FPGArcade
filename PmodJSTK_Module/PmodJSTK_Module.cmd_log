@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn "C:/FPGArcade/PmodJSTK_Module/PmodJSTK_Module.xst" -ofn "C:/FPGArcade/PmodJSTK_Module/PmodJSTK_Module.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 PmodJSTK_Module.ngc PmodJSTK_Module.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o PmodJSTK_Module_map.ncd PmodJSTK_Module.ngd PmodJSTK_Module.pcf 
+par -w -intstyle ise -ol high -t 1 PmodJSTK_Module_map.ncd PmodJSTK_Module.ncd PmodJSTK_Module.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml PmodJSTK_Module.twx PmodJSTK_Module.ncd -o PmodJSTK_Module.twr PmodJSTK_Module.pcf 

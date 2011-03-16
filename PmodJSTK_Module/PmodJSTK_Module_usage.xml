@@ -5,7 +5,7 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <DeviceUsageSummary rev="1">
-<DesignStatistics TimeStamp="Tue Mar 15 17:04:23 2011"><group name="MiscellaneousStatistics">
+<DesignStatistics TimeStamp="Tue Mar 15 17:10:16 2011"><group name="MiscellaneousStatistics">
 <item name="AGG_BONDED_IO" rev="1">
 <attrib name="value" value="27"/></item>
 <item name="AGG_IO" rev="1">

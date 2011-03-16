@@ -66,439 +66,444 @@ Analyzing hierarchy for entity <system> in library <work> (architecture <STRUCTU
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <system> in library <work> (Architecture <STRUCTURE>).
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'MB_Halted' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'MB_Error' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IP_AWID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IP_AWADDR' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IP_AWLEN' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IP_AWSIZE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IP_AWBURST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IP_AWLOCK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IP_AWCACHE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IP_AWPROT' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IP_AWQOS' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IP_AWVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IP_WDATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IP_WSTRB' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IP_WLAST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IP_WVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IP_BREADY' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IP_ARID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IP_ARADDR' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IP_ARLEN' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IP_ARSIZE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IP_ARBURST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IP_ARLOCK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IP_ARCACHE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IP_ARPROT' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IP_ARQOS' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IP_ARVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IP_RREADY' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DP_AWID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DP_AWADDR' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DP_AWLEN' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DP_AWSIZE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DP_AWBURST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DP_AWLOCK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DP_AWCACHE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DP_AWPROT' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DP_AWQOS' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DP_AWVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DP_WDATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DP_WSTRB' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DP_WLAST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DP_WVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DP_BREADY' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DP_ARID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DP_ARADDR' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DP_ARLEN' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DP_ARSIZE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DP_ARBURST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DP_ARLOCK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DP_ARCACHE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DP_ARPROT' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DP_ARQOS' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DP_ARVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DP_RREADY' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IC_AWID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IC_AWADDR' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IC_AWLEN' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IC_AWSIZE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IC_AWBURST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IC_AWLOCK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IC_AWCACHE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IC_AWPROT' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IC_AWQOS' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IC_AWVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IC_WDATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IC_WSTRB' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IC_WLAST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IC_WVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IC_BREADY' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IC_ARID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IC_ARADDR' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IC_ARLEN' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IC_ARSIZE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IC_ARBURST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IC_ARLOCK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IC_ARCACHE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IC_ARPROT' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IC_ARQOS' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IC_ARVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_IC_RREADY' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DC_AWID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DC_AWADDR' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DC_AWLEN' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DC_AWSIZE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DC_AWBURST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DC_AWLOCK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DC_AWCACHE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DC_AWPROT' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DC_AWQOS' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DC_AWVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DC_WDATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DC_WSTRB' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DC_WLAST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DC_WVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DC_BREADY' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DC_ARID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DC_ARADDR' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DC_ARLEN' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DC_ARSIZE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DC_ARBURST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DC_ARLOCK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DC_ARCACHE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DC_ARPROT' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DC_ARQOS' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DC_ARVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M_AXI_DC_RREADY' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'Trace_Instruction' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'Trace_Valid_Instr' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'Trace_PC' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'Trace_Reg_Write' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'Trace_Reg_Addr' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'Trace_MSR_Reg' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'Trace_PID_Reg' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'Trace_New_Reg_Value' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'Trace_Exception_Taken' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'Trace_Exception_Kind' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'Trace_Jump_Taken' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'Trace_Delay_Slot' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'Trace_Data_Address' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'Trace_Data_Access' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'Trace_Data_Read' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'Trace_Data_Write' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'Trace_Data_Write_Value' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'Trace_Data_Byte_Enable' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'Trace_DCache_Req' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'Trace_DCache_Hit' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'Trace_DCache_Rdy' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'Trace_DCache_Read' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'Trace_ICache_Req' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'Trace_ICache_Hit' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'Trace_ICache_Rdy' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'Trace_OF_PipeRun' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'Trace_EX_PipeRun' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'Trace_MEM_PipeRun' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'Trace_MB_Halted' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'Trace_Jump_Hit' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL0_S_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL0_S_READ' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL0_M_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL0_M_WRITE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL0_M_DATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL0_M_CONTROL' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL1_S_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL1_S_READ' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL1_M_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL1_M_WRITE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL1_M_DATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL1_M_CONTROL' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL2_S_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL2_S_READ' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL2_M_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL2_M_WRITE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL2_M_DATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL2_M_CONTROL' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL3_S_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL3_S_READ' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL3_M_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL3_M_WRITE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL3_M_DATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL3_M_CONTROL' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL4_S_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL4_S_READ' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL4_M_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL4_M_WRITE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL4_M_DATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL4_M_CONTROL' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL5_S_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL5_S_READ' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL5_M_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL5_M_WRITE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL5_M_DATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL5_M_CONTROL' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL6_S_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL6_S_READ' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL6_M_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL6_M_WRITE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL6_M_DATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL6_M_CONTROL' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL7_S_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL7_S_READ' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL7_M_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL7_M_WRITE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL7_M_DATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL7_M_CONTROL' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL8_S_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL8_S_READ' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL8_M_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL8_M_WRITE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL8_M_DATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL8_M_CONTROL' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL9_S_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL9_S_READ' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL9_M_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL9_M_WRITE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL9_M_DATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL9_M_CONTROL' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL10_S_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL10_S_READ' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL10_M_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL10_M_WRITE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL10_M_DATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL10_M_CONTROL' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL11_S_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL11_S_READ' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL11_M_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL11_M_WRITE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL11_M_DATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL11_M_CONTROL' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL12_S_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL12_S_READ' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL12_M_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL12_M_WRITE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL12_M_DATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL12_M_CONTROL' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL13_S_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL13_S_READ' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL13_M_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL13_M_WRITE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL13_M_DATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL13_M_CONTROL' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL14_S_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL14_S_READ' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL14_M_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL14_M_WRITE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL14_M_DATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL14_M_CONTROL' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL15_S_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL15_S_READ' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL15_M_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL15_M_WRITE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL15_M_DATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'FSL15_M_CONTROL' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M0_AXIS_TLAST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M0_AXIS_TDATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M0_AXIS_TVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'S0_AXIS_TREADY' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M1_AXIS_TLAST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M1_AXIS_TDATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M1_AXIS_TVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'S1_AXIS_TREADY' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M2_AXIS_TLAST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M2_AXIS_TDATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M2_AXIS_TVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'S2_AXIS_TREADY' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M3_AXIS_TLAST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M3_AXIS_TDATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M3_AXIS_TVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'S3_AXIS_TREADY' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M4_AXIS_TLAST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M4_AXIS_TDATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M4_AXIS_TVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'S4_AXIS_TREADY' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M5_AXIS_TLAST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M5_AXIS_TDATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M5_AXIS_TVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'S5_AXIS_TREADY' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M6_AXIS_TLAST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M6_AXIS_TDATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M6_AXIS_TVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'S6_AXIS_TREADY' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M7_AXIS_TLAST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M7_AXIS_TDATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M7_AXIS_TVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'S7_AXIS_TREADY' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M8_AXIS_TLAST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M8_AXIS_TDATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M8_AXIS_TVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'S8_AXIS_TREADY' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M9_AXIS_TLAST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M9_AXIS_TDATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M9_AXIS_TVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'S9_AXIS_TREADY' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M10_AXIS_TLAST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M10_AXIS_TDATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M10_AXIS_TVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'S10_AXIS_TREADY' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M11_AXIS_TLAST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M11_AXIS_TDATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M11_AXIS_TVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'S11_AXIS_TREADY' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M12_AXIS_TLAST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M12_AXIS_TDATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M12_AXIS_TVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'S12_AXIS_TREADY' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M13_AXIS_TLAST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M13_AXIS_TDATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M13_AXIS_TVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'S13_AXIS_TREADY' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M14_AXIS_TLAST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M14_AXIS_TDATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M14_AXIS_TVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'S14_AXIS_TREADY' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M15_AXIS_TLAST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M15_AXIS_TDATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'M15_AXIS_TVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'S15_AXIS_TREADY' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'ICACHE_FSL_IN_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'ICACHE_FSL_IN_READ' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'ICACHE_FSL_OUT_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'ICACHE_FSL_OUT_WRITE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'ICACHE_FSL_OUT_DATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'ICACHE_FSL_OUT_CONTROL' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'DCACHE_FSL_IN_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'DCACHE_FSL_IN_READ' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'DCACHE_FSL_OUT_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'DCACHE_FSL_OUT_WRITE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'DCACHE_FSL_OUT_DATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1341: Unconnected output port 'DCACHE_FSL_OUT_CONTROL' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1927: Unconnected output port 'PLB_Rst' of component 'mb_plb_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1927: Unconnected output port 'MPLB_Rst' of component 'mb_plb_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1927: Unconnected output port 'PLB_dcrAck' of component 'mb_plb_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1927: Unconnected output port 'PLB_dcrDBus' of component 'mb_plb_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1927: Unconnected output port 'PLB_SaddrAck' of component 'mb_plb_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1927: Unconnected output port 'PLB_SMRdErr' of component 'mb_plb_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1927: Unconnected output port 'PLB_SMWrErr' of component 'mb_plb_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1927: Unconnected output port 'PLB_SMBusy' of component 'mb_plb_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1927: Unconnected output port 'PLB_SrdBTerm' of component 'mb_plb_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1927: Unconnected output port 'PLB_SrdComp' of component 'mb_plb_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1927: Unconnected output port 'PLB_SrdDAck' of component 'mb_plb_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1927: Unconnected output port 'PLB_SrdDBus' of component 'mb_plb_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1927: Unconnected output port 'PLB_SrdWdAddr' of component 'mb_plb_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1927: Unconnected output port 'PLB_Srearbitrate' of component 'mb_plb_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1927: Unconnected output port 'PLB_Sssize' of component 'mb_plb_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1927: Unconnected output port 'PLB_Swait' of component 'mb_plb_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1927: Unconnected output port 'PLB_SwrBTerm' of component 'mb_plb_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1927: Unconnected output port 'PLB_SwrComp' of component 'mb_plb_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1927: Unconnected output port 'PLB_SwrDAck' of component 'mb_plb_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1927: Unconnected output port 'Bus_Error_Det' of component 'mb_plb_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2134: Unconnected output port 'IP2INTC_Irpt' of component 'leds_8bit_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2134: Unconnected output port 'GPIO_IO_T' of component 'leds_8bit_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2134: Unconnected output port 'GPIO2_IO_O' of component 'leds_8bit_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2134: Unconnected output port 'GPIO2_IO_T' of component 'leds_8bit_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2187: Unconnected output port 'CLKOUT1' of component 'clock_generator_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2187: Unconnected output port 'CLKOUT2' of component 'clock_generator_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2187: Unconnected output port 'CLKOUT3' of component 'clock_generator_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2187: Unconnected output port 'CLKOUT4' of component 'clock_generator_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2187: Unconnected output port 'CLKOUT5' of component 'clock_generator_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2187: Unconnected output port 'CLKOUT6' of component 'clock_generator_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2187: Unconnected output port 'CLKOUT7' of component 'clock_generator_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2187: Unconnected output port 'CLKOUT8' of component 'clock_generator_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2187: Unconnected output port 'CLKOUT9' of component 'clock_generator_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2187: Unconnected output port 'CLKOUT10' of component 'clock_generator_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2187: Unconnected output port 'CLKOUT11' of component 'clock_generator_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2187: Unconnected output port 'CLKOUT12' of component 'clock_generator_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2187: Unconnected output port 'CLKOUT13' of component 'clock_generator_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2187: Unconnected output port 'CLKOUT14' of component 'clock_generator_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2187: Unconnected output port 'CLKOUT15' of component 'clock_generator_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2187: Unconnected output port 'CLKFBOUT' of component 'clock_generator_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2187: Unconnected output port 'PSDONE' of component 'clock_generator_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Interrupt' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'S_AXI_AWREADY' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'S_AXI_WREADY' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'S_AXI_BRESP' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'S_AXI_BVALID' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'S_AXI_ARREADY' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'S_AXI_RDATA' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'S_AXI_RRESP' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'S_AXI_RVALID' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Dbg_Clk_1' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Dbg_TDI_1' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Dbg_Reg_En_1' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Dbg_Capture_1' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Dbg_Shift_1' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Dbg_Update_1' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Dbg_Rst_1' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Dbg_Clk_2' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Dbg_TDI_2' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Dbg_Reg_En_2' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Dbg_Capture_2' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Dbg_Shift_2' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Dbg_Update_2' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Dbg_Rst_2' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Dbg_Clk_3' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Dbg_TDI_3' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Dbg_Reg_En_3' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Dbg_Capture_3' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Dbg_Shift_3' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Dbg_Update_3' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Dbg_Rst_3' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Dbg_Clk_4' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Dbg_TDI_4' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Dbg_Reg_En_4' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Dbg_Capture_4' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Dbg_Shift_4' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Dbg_Update_4' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Dbg_Rst_4' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Dbg_Clk_5' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Dbg_TDI_5' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Dbg_Reg_En_5' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Dbg_Capture_5' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Dbg_Shift_5' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Dbg_Update_5' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Dbg_Rst_5' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Dbg_Clk_6' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Dbg_TDI_6' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Dbg_Reg_En_6' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Dbg_Capture_6' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Dbg_Shift_6' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Dbg_Update_6' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Dbg_Rst_6' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Dbg_Clk_7' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Dbg_TDI_7' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Dbg_Reg_En_7' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Dbg_Capture_7' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Dbg_Shift_7' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Dbg_Update_7' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Dbg_Rst_7' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'bscan_tdi' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'bscan_reset' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'bscan_shift' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'bscan_update' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'bscan_capture' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'bscan_sel1' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'bscan_drck1' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Ext_JTAG_DRCK' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Ext_JTAG_RESET' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Ext_JTAG_SEL' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Ext_JTAG_CAPTURE' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Ext_JTAG_SHIFT' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Ext_JTAG_UPDATE' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2216: Unconnected output port 'Ext_JTAG_TDI' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2365: Unconnected output port 'RstcPPCresetcore_0' of component 'proc_sys_reset_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2365: Unconnected output port 'RstcPPCresetchip_0' of component 'proc_sys_reset_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2365: Unconnected output port 'RstcPPCresetsys_0' of component 'proc_sys_reset_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2365: Unconnected output port 'RstcPPCresetcore_1' of component 'proc_sys_reset_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2365: Unconnected output port 'RstcPPCresetchip_1' of component 'proc_sys_reset_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2365: Unconnected output port 'RstcPPCresetsys_1' of component 'proc_sys_reset_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2365: Unconnected output port 'Peripheral_Reset' of component 'proc_sys_reset_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2365: Unconnected output port 'Interconnect_aresetn' of component 'proc_sys_reset_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2365: Unconnected output port 'Peripheral_aresetn' of component 'proc_sys_reset_0_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2391: Unconnected output port 'IP2INTC_Irpt' of component 'block_output_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2391: Unconnected output port 'GPIO_IO_T' of component 'block_output_wrapper'.
-WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2391: Unconnected output port 'GPIO2_IO_T' of component 'block_output_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'MB_Halted' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'MB_Error' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IP_AWID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IP_AWADDR' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IP_AWLEN' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IP_AWSIZE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IP_AWBURST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IP_AWLOCK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IP_AWCACHE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IP_AWPROT' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IP_AWQOS' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IP_AWVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IP_WDATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IP_WSTRB' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IP_WLAST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IP_WVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IP_BREADY' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IP_ARID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IP_ARADDR' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IP_ARLEN' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IP_ARSIZE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IP_ARBURST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IP_ARLOCK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IP_ARCACHE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IP_ARPROT' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IP_ARQOS' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IP_ARVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IP_RREADY' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DP_AWID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DP_AWADDR' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DP_AWLEN' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DP_AWSIZE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DP_AWBURST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DP_AWLOCK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DP_AWCACHE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DP_AWPROT' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DP_AWQOS' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DP_AWVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DP_WDATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DP_WSTRB' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DP_WLAST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DP_WVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DP_BREADY' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DP_ARID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DP_ARADDR' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DP_ARLEN' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DP_ARSIZE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DP_ARBURST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DP_ARLOCK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DP_ARCACHE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DP_ARPROT' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DP_ARQOS' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DP_ARVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DP_RREADY' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IC_AWID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IC_AWADDR' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IC_AWLEN' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IC_AWSIZE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IC_AWBURST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IC_AWLOCK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IC_AWCACHE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IC_AWPROT' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IC_AWQOS' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IC_AWVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IC_WDATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IC_WSTRB' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IC_WLAST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IC_WVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IC_BREADY' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IC_ARID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IC_ARADDR' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IC_ARLEN' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IC_ARSIZE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IC_ARBURST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IC_ARLOCK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IC_ARCACHE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IC_ARPROT' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IC_ARQOS' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IC_ARVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_IC_RREADY' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DC_AWID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DC_AWADDR' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DC_AWLEN' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DC_AWSIZE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DC_AWBURST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DC_AWLOCK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DC_AWCACHE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DC_AWPROT' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DC_AWQOS' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DC_AWVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DC_WDATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DC_WSTRB' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DC_WLAST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DC_WVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DC_BREADY' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DC_ARID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DC_ARADDR' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DC_ARLEN' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DC_ARSIZE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DC_ARBURST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DC_ARLOCK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DC_ARCACHE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DC_ARPROT' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DC_ARQOS' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DC_ARVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M_AXI_DC_RREADY' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'Trace_Instruction' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'Trace_Valid_Instr' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'Trace_PC' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'Trace_Reg_Write' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'Trace_Reg_Addr' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'Trace_MSR_Reg' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'Trace_PID_Reg' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'Trace_New_Reg_Value' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'Trace_Exception_Taken' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'Trace_Exception_Kind' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'Trace_Jump_Taken' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'Trace_Delay_Slot' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'Trace_Data_Address' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'Trace_Data_Access' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'Trace_Data_Read' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'Trace_Data_Write' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'Trace_Data_Write_Value' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'Trace_Data_Byte_Enable' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'Trace_DCache_Req' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'Trace_DCache_Hit' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'Trace_DCache_Rdy' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'Trace_DCache_Read' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'Trace_ICache_Req' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'Trace_ICache_Hit' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'Trace_ICache_Rdy' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'Trace_OF_PipeRun' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'Trace_EX_PipeRun' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'Trace_MEM_PipeRun' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'Trace_MB_Halted' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'Trace_Jump_Hit' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL0_S_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL0_S_READ' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL0_M_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL0_M_WRITE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL0_M_DATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL0_M_CONTROL' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL1_S_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL1_S_READ' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL1_M_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL1_M_WRITE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL1_M_DATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL1_M_CONTROL' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL2_S_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL2_S_READ' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL2_M_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL2_M_WRITE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL2_M_DATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL2_M_CONTROL' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL3_S_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL3_S_READ' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL3_M_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL3_M_WRITE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL3_M_DATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL3_M_CONTROL' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL4_S_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL4_S_READ' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL4_M_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL4_M_WRITE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL4_M_DATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL4_M_CONTROL' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL5_S_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL5_S_READ' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL5_M_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL5_M_WRITE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL5_M_DATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL5_M_CONTROL' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL6_S_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL6_S_READ' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL6_M_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL6_M_WRITE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL6_M_DATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL6_M_CONTROL' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL7_S_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL7_S_READ' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL7_M_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL7_M_WRITE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL7_M_DATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL7_M_CONTROL' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL8_S_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL8_S_READ' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL8_M_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL8_M_WRITE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL8_M_DATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL8_M_CONTROL' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL9_S_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL9_S_READ' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL9_M_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL9_M_WRITE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL9_M_DATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL9_M_CONTROL' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL10_S_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL10_S_READ' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL10_M_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL10_M_WRITE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL10_M_DATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL10_M_CONTROL' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL11_S_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL11_S_READ' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL11_M_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL11_M_WRITE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL11_M_DATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL11_M_CONTROL' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL12_S_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL12_S_READ' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL12_M_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL12_M_WRITE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL12_M_DATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL12_M_CONTROL' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL13_S_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL13_S_READ' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL13_M_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL13_M_WRITE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL13_M_DATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL13_M_CONTROL' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL14_S_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL14_S_READ' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL14_M_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL14_M_WRITE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL14_M_DATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL14_M_CONTROL' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL15_S_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL15_S_READ' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL15_M_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL15_M_WRITE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL15_M_DATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'FSL15_M_CONTROL' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M0_AXIS_TLAST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M0_AXIS_TDATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M0_AXIS_TVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'S0_AXIS_TREADY' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M1_AXIS_TLAST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M1_AXIS_TDATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M1_AXIS_TVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'S1_AXIS_TREADY' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M2_AXIS_TLAST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M2_AXIS_TDATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M2_AXIS_TVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'S2_AXIS_TREADY' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M3_AXIS_TLAST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M3_AXIS_TDATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M3_AXIS_TVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'S3_AXIS_TREADY' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M4_AXIS_TLAST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M4_AXIS_TDATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M4_AXIS_TVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'S4_AXIS_TREADY' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M5_AXIS_TLAST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M5_AXIS_TDATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M5_AXIS_TVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'S5_AXIS_TREADY' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M6_AXIS_TLAST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M6_AXIS_TDATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M6_AXIS_TVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'S6_AXIS_TREADY' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M7_AXIS_TLAST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M7_AXIS_TDATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M7_AXIS_TVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'S7_AXIS_TREADY' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M8_AXIS_TLAST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M8_AXIS_TDATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M8_AXIS_TVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'S8_AXIS_TREADY' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M9_AXIS_TLAST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M9_AXIS_TDATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M9_AXIS_TVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'S9_AXIS_TREADY' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M10_AXIS_TLAST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M10_AXIS_TDATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M10_AXIS_TVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'S10_AXIS_TREADY' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M11_AXIS_TLAST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M11_AXIS_TDATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M11_AXIS_TVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'S11_AXIS_TREADY' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M12_AXIS_TLAST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M12_AXIS_TDATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M12_AXIS_TVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'S12_AXIS_TREADY' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M13_AXIS_TLAST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M13_AXIS_TDATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M13_AXIS_TVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'S13_AXIS_TREADY' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M14_AXIS_TLAST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M14_AXIS_TDATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M14_AXIS_TVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'S14_AXIS_TREADY' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M15_AXIS_TLAST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M15_AXIS_TDATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'M15_AXIS_TVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'S15_AXIS_TREADY' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'ICACHE_FSL_IN_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'ICACHE_FSL_IN_READ' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'ICACHE_FSL_OUT_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'ICACHE_FSL_OUT_WRITE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'ICACHE_FSL_OUT_DATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'ICACHE_FSL_OUT_CONTROL' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'DCACHE_FSL_IN_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'DCACHE_FSL_IN_READ' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'DCACHE_FSL_OUT_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'DCACHE_FSL_OUT_WRITE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'DCACHE_FSL_OUT_DATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 1446: Unconnected output port 'DCACHE_FSL_OUT_CONTROL' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2032: Unconnected output port 'PLB_Rst' of component 'mb_plb_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2032: Unconnected output port 'MPLB_Rst' of component 'mb_plb_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2032: Unconnected output port 'PLB_dcrAck' of component 'mb_plb_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2032: Unconnected output port 'PLB_dcrDBus' of component 'mb_plb_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2032: Unconnected output port 'PLB_SaddrAck' of component 'mb_plb_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2032: Unconnected output port 'PLB_SMRdErr' of component 'mb_plb_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2032: Unconnected output port 'PLB_SMWrErr' of component 'mb_plb_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2032: Unconnected output port 'PLB_SMBusy' of component 'mb_plb_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2032: Unconnected output port 'PLB_SrdBTerm' of component 'mb_plb_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2032: Unconnected output port 'PLB_SrdComp' of component 'mb_plb_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2032: Unconnected output port 'PLB_SrdDAck' of component 'mb_plb_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2032: Unconnected output port 'PLB_SrdDBus' of component 'mb_plb_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2032: Unconnected output port 'PLB_SrdWdAddr' of component 'mb_plb_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2032: Unconnected output port 'PLB_Srearbitrate' of component 'mb_plb_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2032: Unconnected output port 'PLB_Sssize' of component 'mb_plb_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2032: Unconnected output port 'PLB_Swait' of component 'mb_plb_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2032: Unconnected output port 'PLB_SwrBTerm' of component 'mb_plb_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2032: Unconnected output port 'PLB_SwrComp' of component 'mb_plb_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2032: Unconnected output port 'PLB_SwrDAck' of component 'mb_plb_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2032: Unconnected output port 'Bus_Error_Det' of component 'mb_plb_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2239: Unconnected output port 'IP2INTC_Irpt' of component 'leds_8bit_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2239: Unconnected output port 'GPIO_IO_T' of component 'leds_8bit_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2239: Unconnected output port 'GPIO2_IO_O' of component 'leds_8bit_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2239: Unconnected output port 'GPIO2_IO_T' of component 'leds_8bit_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2292: Unconnected output port 'CLKOUT1' of component 'clock_generator_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2292: Unconnected output port 'CLKOUT2' of component 'clock_generator_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2292: Unconnected output port 'CLKOUT3' of component 'clock_generator_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2292: Unconnected output port 'CLKOUT4' of component 'clock_generator_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2292: Unconnected output port 'CLKOUT5' of component 'clock_generator_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2292: Unconnected output port 'CLKOUT6' of component 'clock_generator_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2292: Unconnected output port 'CLKOUT7' of component 'clock_generator_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2292: Unconnected output port 'CLKOUT8' of component 'clock_generator_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2292: Unconnected output port 'CLKOUT9' of component 'clock_generator_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2292: Unconnected output port 'CLKOUT10' of component 'clock_generator_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2292: Unconnected output port 'CLKOUT11' of component 'clock_generator_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2292: Unconnected output port 'CLKOUT12' of component 'clock_generator_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2292: Unconnected output port 'CLKOUT13' of component 'clock_generator_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2292: Unconnected output port 'CLKOUT14' of component 'clock_generator_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2292: Unconnected output port 'CLKOUT15' of component 'clock_generator_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2292: Unconnected output port 'CLKFBOUT' of component 'clock_generator_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2292: Unconnected output port 'PSDONE' of component 'clock_generator_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Interrupt' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'S_AXI_AWREADY' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'S_AXI_WREADY' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'S_AXI_BRESP' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'S_AXI_BVALID' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'S_AXI_ARREADY' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'S_AXI_RDATA' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'S_AXI_RRESP' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'S_AXI_RVALID' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Dbg_Clk_1' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Dbg_TDI_1' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Dbg_Reg_En_1' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Dbg_Capture_1' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Dbg_Shift_1' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Dbg_Update_1' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Dbg_Rst_1' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Dbg_Clk_2' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Dbg_TDI_2' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Dbg_Reg_En_2' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Dbg_Capture_2' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Dbg_Shift_2' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Dbg_Update_2' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Dbg_Rst_2' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Dbg_Clk_3' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Dbg_TDI_3' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Dbg_Reg_En_3' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Dbg_Capture_3' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Dbg_Shift_3' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Dbg_Update_3' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Dbg_Rst_3' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Dbg_Clk_4' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Dbg_TDI_4' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Dbg_Reg_En_4' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Dbg_Capture_4' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Dbg_Shift_4' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Dbg_Update_4' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Dbg_Rst_4' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Dbg_Clk_5' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Dbg_TDI_5' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Dbg_Reg_En_5' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Dbg_Capture_5' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Dbg_Shift_5' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Dbg_Update_5' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Dbg_Rst_5' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Dbg_Clk_6' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Dbg_TDI_6' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Dbg_Reg_En_6' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Dbg_Capture_6' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Dbg_Shift_6' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Dbg_Update_6' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Dbg_Rst_6' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Dbg_Clk_7' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Dbg_TDI_7' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Dbg_Reg_En_7' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Dbg_Capture_7' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Dbg_Shift_7' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Dbg_Update_7' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Dbg_Rst_7' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'bscan_tdi' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'bscan_reset' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'bscan_shift' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'bscan_update' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'bscan_capture' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'bscan_sel1' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'bscan_drck1' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Ext_JTAG_DRCK' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Ext_JTAG_RESET' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Ext_JTAG_SEL' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Ext_JTAG_CAPTURE' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Ext_JTAG_SHIFT' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Ext_JTAG_UPDATE' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2321: Unconnected output port 'Ext_JTAG_TDI' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2470: Unconnected output port 'RstcPPCresetcore_0' of component 'proc_sys_reset_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2470: Unconnected output port 'RstcPPCresetchip_0' of component 'proc_sys_reset_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2470: Unconnected output port 'RstcPPCresetsys_0' of component 'proc_sys_reset_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2470: Unconnected output port 'RstcPPCresetcore_1' of component 'proc_sys_reset_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2470: Unconnected output port 'RstcPPCresetchip_1' of component 'proc_sys_reset_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2470: Unconnected output port 'RstcPPCresetsys_1' of component 'proc_sys_reset_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2470: Unconnected output port 'Peripheral_Reset' of component 'proc_sys_reset_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2470: Unconnected output port 'Interconnect_aresetn' of component 'proc_sys_reset_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2470: Unconnected output port 'Peripheral_aresetn' of component 'proc_sys_reset_0_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2496: Unconnected output port 'IP2INTC_Irpt' of component 'block_output_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2496: Unconnected output port 'GPIO_IO_T' of component 'block_output_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2496: Unconnected output port 'GPIO2_IO_T' of component 'block_output_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2561: Unconnected output port 'IP2INTC_Irpt' of component 'joystick_gpio_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2561: Unconnected output port 'GPIO_IO_O' of component 'joystick_gpio_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2561: Unconnected output port 'GPIO_IO_T' of component 'joystick_gpio_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2561: Unconnected output port 'GPIO2_IO_O' of component 'joystick_gpio_wrapper'.
+WARNING:Xst:753 - "C:/FPGArcade/Bouncing_Ball/hdl/system.vhd" line 2561: Unconnected output port 'GPIO2_IO_T' of component 'joystick_gpio_wrapper'.
 Entity <system> analyzed. Unit <system> generated.
 
 
@@ -535,7 +540,10 @@ Reading core <../implementation/clock_generator_0_wrapper.ngc>.
 Reading core <../implementation/mdm_0_wrapper.ngc>.
 Reading core <../implementation/proc_sys_reset_0_wrapper.ngc>.
 Reading core <../implementation/block_output_wrapper.ngc>.
-Reading core <../implementation/top_0_wrapper.ngc>.
+Reading core <../implementation/vga_driver_wrapper.ngc>.
+Reading core <../implementation/joystick_gpio_wrapper.ngc>.
+Reading core <../implementation/pmodjstk_module_0_wrapper.ngc>.
+Reading core <../implementation/pmodjstk_module_1_wrapper.ngc>.
 Loading core <microblaze_0_wrapper> for timing and area information for instance <microblaze_0>.
 Loading core <mb_plb_wrapper> for timing and area information for instance <mb_plb>.
 Loading core <ilmb_wrapper> for timing and area information for instance <ilmb>.
@@ -548,7 +556,10 @@ Loading core <clock_generator_0_wrapper> for timing and area information for ins
 Loading core <mdm_0_wrapper> for timing and area information for instance <mdm_0>.
 Loading core <proc_sys_reset_0_wrapper> for timing and area information for instance <proc_sys_reset_0>.
 Loading core <block_output_wrapper> for timing and area information for instance <Block_Output>.
-Loading core <top_0_wrapper> for timing and area information for instance <top_0>.
+Loading core <vga_driver_wrapper> for timing and area information for instance <VGA_Driver>.
+Loading core <joystick_gpio_wrapper> for timing and area information for instance <Joystick_GPIO>.
+Loading core <pmodjstk_module_0_wrapper> for timing and area information for instance <PmodJSTK_Module_0>.
+Loading core <pmodjstk_module_1_wrapper> for timing and area information for instance <PmodJSTK_Module_1>.
 
 =========================================================================
 Advanced HDL Synthesis Report
@@ -565,21 +576,25 @@ Optimizing unit <system> ...
 Mapping all equations...
 Building and optimizing final netlist ...
 INFO:Xst:2260 - The FF/Latch <mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/arbctrl_sm_cs_FSM_FFd2> in Unit <mb_plb> is equivalent to the following FF/Latch : <mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/arbctrl_sm_cs_FSM_FFd2_1> 
-INFO:Xst:2260 - The FF/Latch <mb_plb/GEN_MPLB_RST[1].I_MPLB_RST> in Unit <mb_plb> is equivalent to the following 5 FFs/Latches : <mb_plb/GEN_MPLB_RST[0].I_MPLB_RST> <mb_plb/GEN_SPLB_RST[2].I_SPLB_RST> <mb_plb/GEN_SPLB_RST[1].I_SPLB_RST> <mb_plb/GEN_SPLB_RST[0].I_SPLB_RST> <mb_plb/I_PLB_RST> 
+INFO:Xst:2260 - The FF/Latch <mb_plb/GEN_MPLB_RST[1].I_MPLB_RST> in Unit <mb_plb> is equivalent to the following 6 FFs/Latches : <mb_plb/GEN_MPLB_RST[0].I_MPLB_RST> <mb_plb/GEN_SPLB_RST[3].I_SPLB_RST> <mb_plb/GEN_SPLB_RST[2].I_SPLB_RST> <mb_plb/GEN_SPLB_RST[1].I_SPLB_RST> <mb_plb/GEN_SPLB_RST[0].I_SPLB_RST> <mb_plb/I_PLB_RST> 
 INFO:Xst:2260 - The FF/Latch <mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/arbctrl_sm_cs_FSM_FFd3> in Unit <mb_plb> is equivalent to the following FF/Latch : <mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/arbctrl_sm_cs_FSM_FFd3_1> 
 INFO:Xst:2260 - The FF/Latch <mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_1> in Unit <mb_plb> is equivalent to the following 3 FFs/Latches : <mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_1_1> <mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_1_2> <mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_1_3> 
 INFO:Xst:2260 - The FF/Latch <mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_0> in Unit <mb_plb> is equivalent to the following 3 FFs/Latches : <mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_0_1> <mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_0_2> <mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_0_3> 
 INFO:Xst:2260 - The FF/Latch <Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/bus2ip_rnw_i> in Unit <Block_Output> is equivalent to the following FF/Latch : <Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/bus2ip_rnw_i_1> 
 INFO:Xst:2260 - The FF/Latch <Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_28> in Unit <Block_Output> is equivalent to the following 2 FFs/Latches : <Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_28_1> <Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_28_2> 
 INFO:Xst:2260 - The FF/Latch <Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_out_i_0> in Unit <Block_Output> is equivalent to the following 3 FFs/Latches : <Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_out_i_0_1> <Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_out_i_0_2> <Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_out_i_0_3> 
+INFO:Xst:2260 - The FF/Latch <PmodJSTK_Module_0/counter_1> in Unit <PmodJSTK_Module_0> is equivalent to the following FF/Latch : <PmodJSTK_Module_0/counter_1_1> 
+INFO:Xst:2260 - The FF/Latch <PmodJSTK_Module_1/counter_1> in Unit <PmodJSTK_Module_1> is equivalent to the following FF/Latch : <PmodJSTK_Module_1/counter_1_1> 
 INFO:Xst:2260 - The FF/Latch <mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_0> in Unit <mb_plb> is equivalent to the following 3 FFs/Latches : <mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_0_1> <mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_0_2> <mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_0_3> 
 INFO:Xst:2260 - The FF/Latch <mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/arbctrl_sm_cs_FSM_FFd2> in Unit <mb_plb> is equivalent to the following FF/Latch : <mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/arbctrl_sm_cs_FSM_FFd2_1> 
 INFO:Xst:2260 - The FF/Latch <mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_1> in Unit <mb_plb> is equivalent to the following 3 FFs/Latches : <mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_1_1> <mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_1_2> <mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_1_3> 
 INFO:Xst:2260 - The FF/Latch <mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/arbctrl_sm_cs_FSM_FFd3> in Unit <mb_plb> is equivalent to the following FF/Latch : <mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/arbctrl_sm_cs_FSM_FFd3_1> 
-INFO:Xst:2260 - The FF/Latch <mb_plb/GEN_MPLB_RST[1].I_MPLB_RST> in Unit <mb_plb> is equivalent to the following 5 FFs/Latches : <mb_plb/GEN_MPLB_RST[0].I_MPLB_RST> <mb_plb/GEN_SPLB_RST[2].I_SPLB_RST> <mb_plb/GEN_SPLB_RST[1].I_SPLB_RST> <mb_plb/GEN_SPLB_RST[0].I_SPLB_RST> <mb_plb/I_PLB_RST> 
+INFO:Xst:2260 - The FF/Latch <mb_plb/GEN_MPLB_RST[1].I_MPLB_RST> in Unit <mb_plb> is equivalent to the following 6 FFs/Latches : <mb_plb/GEN_MPLB_RST[0].I_MPLB_RST> <mb_plb/GEN_SPLB_RST[3].I_SPLB_RST> <mb_plb/GEN_SPLB_RST[2].I_SPLB_RST> <mb_plb/GEN_SPLB_RST[1].I_SPLB_RST> <mb_plb/GEN_SPLB_RST[0].I_SPLB_RST> <mb_plb/I_PLB_RST> 
 INFO:Xst:2260 - The FF/Latch <Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/bus2ip_rnw_i> in Unit <Block_Output> is equivalent to the following FF/Latch : <Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/bus2ip_rnw_i_1> 
 INFO:Xst:2260 - The FF/Latch <Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_28> in Unit <Block_Output> is equivalent to the following 2 FFs/Latches : <Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_28_1> <Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_28_2> 
 INFO:Xst:2260 - The FF/Latch <Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_out_i_0> in Unit <Block_Output> is equivalent to the following 3 FFs/Latches : <Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_out_i_0_1> <Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_out_i_0_2> <Block_Output/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_out_i_0_3> 
+INFO:Xst:2260 - The FF/Latch <PmodJSTK_Module_0/counter_1> in Unit <PmodJSTK_Module_0> is equivalent to the following FF/Latch : <PmodJSTK_Module_0/counter_1_1> 
+INFO:Xst:2260 - The FF/Latch <PmodJSTK_Module_1/counter_1> in Unit <PmodJSTK_Module_1> is equivalent to the following FF/Latch : <PmodJSTK_Module_1/counter_1_1> 
 
 Final Macro Processing ...
 
@@ -610,59 +625,59 @@ Optimization Goal                  : speed
 Keep Hierarchy                     : no
 
 Design Statistics
-# IOs                              : 20
+# IOs                              : 28
 
 Cell Usage :
-# BELS                             : 3154
-#      GND                         : 15
-#      INV                         : 44
-#      LUT1                        : 66
-#      LUT2                        : 271
-#      LUT2_D                      : 13
-#      LUT2_L                      : 8
-#      LUT3                        : 683
-#      LUT3_D                      : 54
-#      LUT3_L                      : 15
-#      LUT4                        : 1110
-#      LUT4_D                      : 14
+# BELS                             : 3498
+#      GND                         : 18
+#      INV                         : 49
+#      LUT1                        : 102
+#      LUT2                        : 306
+#      LUT2_D                      : 14
+#      LUT2_L                      : 10
+#      LUT3                        : 668
+#      LUT3_D                      : 60
+#      LUT3_L                      : 17
+#      LUT4                        : 1268
+#      LUT4_D                      : 34
 #      LUT4_L                      : 31
 #      MULT_AND                    : 35
-#      MUXCY                       : 230
+#      MUXCY                       : 274
 #      MUXCY_L                     : 126
-#      MUXF5                       : 278
+#      MUXF5                       : 282
 #      MUXF6                       : 5
 #      MUXF7                       : 2
 #      MUXF8                       : 1
-#      VCC                         : 9
-#      XORCY                       : 144
-# FlipFlops/Latches                : 1724
-#      FD                          : 296
+#      VCC                         : 12
+#      XORCY                       : 184
+# FlipFlops/Latches                : 2164
+#      FD                          : 365
 #      FDC                         : 19
 #      FDC_1                       : 5
 #      FDCE                        : 14
-#      FDE                         : 278
+#      FDE                         : 370
 #      FDE_1                       : 8
 #      FDP                         : 9
-#      FDR                         : 529
-#      FDRE                        : 370
+#      FDR                         : 648
+#      FDRE                        : 474
 #      FDRE_1                      : 1
-#      FDRS                        : 22
+#      FDRS                        : 24
 #      FDRSE                       : 43
-#      FDS                         : 37
-#      FDSE                        : 93
+#      FDS                         : 45
+#      FDSE                        : 139
 # RAMS                             : 132
 #      RAM16X1D                    : 128
 #      RAMB16_S9_S9                : 4
-# Shift Registers                  : 158
-#      SRL16                       : 54
+# Shift Registers                  : 204
+#      SRL16                       : 100
 #      SRL16E                      : 96
 #      SRLC16E                     : 8
-# Clock Buffers                    : 5
-#      BUFG                        : 5
-# IO Buffers                       : 20
-#      IBUF                        : 1
+# Clock Buffers                    : 8
+#      BUFG                        : 8
+# IO Buffers                       : 28
+#      IBUF                        : 3
 #      IBUFG                       : 1
-#      OBUF                        : 18
+#      OBUF                        : 24
 # DCMs                             : 1
 #      DCM_SP                      : 1
 # MULTs                            : 3
@@ -676,17 +691,17 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-4 
 
- Number of Slices:                     1611  out of   4656    34%  
- Number of Slice Flip Flops:           1724  out of   9312    18%  
- Number of 4 input LUTs:               2723  out of   9312    29%  
-    Number used as logic:              2309
-    Number used as Shift registers:     158
+ Number of Slices:                     1888  out of   4656    40%  
+ Number of Slice Flip Flops:           2164  out of   9312    23%  
+ Number of 4 input LUTs:               3019  out of   9312    32%  
+    Number used as logic:              2559
+    Number used as Shift registers:     204
     Number used as RAMs:                256
- Number of IOs:                          20
- Number of bonded IOBs:                  20  out of    232     8%  
+ Number of IOs:                          28
+ Number of bonded IOBs:                  28  out of    232    12%  
  Number of BRAMs:                         4  out of     20    20%  
  Number of MULT18X18SIOs:                 3  out of     20    15%  
- Number of GCLKs:                         5  out of     24    20%  
+ Number of GCLKs:                         8  out of     24    33%  
  Number of DCMs:                          1  out of      4    25%  
 
 ---------------------------
@@ -707,14 +722,16 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+-------------------------------------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)                                 | Load  |
------------------------------------+-------------------------------------------------------+-------+
-fpga_0_clk_1_sys_clk_pin           | clock_generator_0/DCM0_INST/Using_Virtex.DCM_INST:CLK0| 1748  |
-mdm_0/mdm_0/drck_i                 | BUFG                                                  | 205   |
-mdm_0/bscan_update1                | BUFG                                                  | 41    |
-top_0/top_0/clock25MHz/slow_clk1   | BUFG                                                  | 23    |
------------------------------------+-------------------------------------------------------+-------+
+--------------------------------------------------------+-------------------------------------------------------+-------+
+Clock Signal                                            | Clock buffer(FF name)                                 | Load  |
+--------------------------------------------------------+-------------------------------------------------------+-------+
+fpga_0_clk_1_sys_clk_pin                                | clock_generator_0/DCM0_INST/Using_Virtex.DCM_INST:CLK0| 2118  |
+mdm_0/mdm_0/drck_i                                      | BUFG                                                  | 205   |
+mdm_0/bscan_update1                                     | BUFG                                                  | 41    |
+VGA_Driver/VGA_Driver/clock25MHz/slow_clk1              | BUFG                                                  | 23    |
+PmodJSTK_Module_0/PmodJSTK_Module_0/clkGen50Khz/count<9>| BUFG                                                  | 58    |
+PmodJSTK_Module_1/PmodJSTK_Module_1/clkGen50Khz/count<9>| BUFG                                                  | 58    |
+--------------------------------------------------------+-------------------------------------------------------+-------+
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -749,7 +766,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'fpga_0_clk_1_sys_clk_pin'
   Clock period: 10.894ns (frequency: 91.791MHz)
-  Total number of paths / destination ports: 114961 / 5081
+  Total number of paths / destination ports: 117261 / 5818
 -------------------------------------------------------------------------
 Delay:               10.894ns (Levels of Logic = 29)
   Source:            microblaze_0/microblaze_0/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[1].FDS_I (FF)
@@ -855,37 +872,83 @@ Delay:               7.900ns (Levels of Logic = 6)
                                        (50.2% logic, 49.8% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'top_0/top_0/clock25MHz/slow_clk1'
+Timing constraint: Default period analysis for Clock 'VGA_Driver/VGA_Driver/clock25MHz/slow_clk1'
   Clock period: 7.288ns (frequency: 137.212MHz)
   Total number of paths / destination ports: 662 / 54
 -------------------------------------------------------------------------
 Delay:               7.288ns (Levels of Logic = 12)
-  Source:            top_0/top_0/vCount_1 (FF)
-  Destination:       top_0/top_0/VGA_Blue_0 (FF)
-  Source Clock:      top_0/top_0/clock25MHz/slow_clk1 rising
-  Destination Clock: top_0/top_0/clock25MHz/slow_clk1 rising
+  Source:            VGA_Driver/VGA_Driver/vCount_1 (FF)
+  Destination:       VGA_Driver/VGA_Driver/VGA_Blue_0 (FF)
+  Source Clock:      VGA_Driver/VGA_Driver/clock25MHz/slow_clk1 rising
+  Destination Clock: VGA_Driver/VGA_Driver/clock25MHz/slow_clk1 rising
 
-  Data Path: top_0/top_0/vCount_1 to top_0/top_0/VGA_Blue_0
+  Data Path: VGA_Driver/VGA_Driver/vCount_1 to VGA_Driver/VGA_Driver/VGA_Blue_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             9   0.591   0.899  top_0/vCount_1 (top_0/vCount<1>)
-     LUT2:I1->O            1   0.704   0.000  top_0/Mcompar_VGA_Blue_cmp_le0005_lut<1> (top_0/Mcompar_VGA_Blue_cmp_le0005_lut<1>)
-     MUXCY:S->O            1   0.464   0.000  top_0/Mcompar_VGA_Blue_cmp_le0005_cy<1> (top_0/Mcompar_VGA_Blue_cmp_le0005_cy<1>)
-     MUXCY:CI->O           1   0.059   0.000  top_0/Mcompar_VGA_Blue_cmp_le0005_cy<2> (top_0/Mcompar_VGA_Blue_cmp_le0005_cy<2>)
-     MUXCY:CI->O           1   0.059   0.000  top_0/Mcompar_VGA_Blue_cmp_le0005_cy<3> (top_0/Mcompar_VGA_Blue_cmp_le0005_cy<3>)
-     MUXCY:CI->O           1   0.059   0.000  top_0/Mcompar_VGA_Blue_cmp_le0005_cy<4> (top_0/Mcompar_VGA_Blue_cmp_le0005_cy<4>)
-     MUXCY:CI->O           1   0.059   0.000  top_0/Mcompar_VGA_Blue_cmp_le0005_cy<5> (top_0/Mcompar_VGA_Blue_cmp_le0005_cy<5>)
-     MUXCY:CI->O           1   0.059   0.000  top_0/Mcompar_VGA_Blue_cmp_le0005_cy<6> (top_0/Mcompar_VGA_Blue_cmp_le0005_cy<6>)
-     MUXCY:CI->O           1   0.059   0.000  top_0/Mcompar_VGA_Blue_cmp_le0005_cy<7> (top_0/Mcompar_VGA_Blue_cmp_le0005_cy<7>)
-     MUXCY:CI->O           1   0.059   0.000  top_0/Mcompar_VGA_Blue_cmp_le0005_cy<8> (top_0/Mcompar_VGA_Blue_cmp_le0005_cy<8>)
-     MUXCY:CI->O           1   0.459   0.595  top_0/Mcompar_VGA_Blue_cmp_le0005_cy<9> (top_0/VGA_Blue_cmp_le0005)
-     LUT3:I0->O            1   0.704   0.424  top_0/VGA_Blue_or000094 (top_0/VGA_Blue_or000094)
-     LUT4:I3->O            1   0.704   0.420  top_0/VGA_Blue_or0000128 (top_0/VGA_Blue_or0000)
-     FDRS:S                    0.911          top_0/VGA_Blue_0
+     FDRE:C->Q             9   0.591   0.899  VGA_Driver/vCount_1 (VGA_Driver/vCount<1>)
+     LUT2:I1->O            1   0.704   0.000  VGA_Driver/Mcompar_VGA_Blue_cmp_le0005_lut<1> (VGA_Driver/Mcompar_VGA_Blue_cmp_le0005_lut<1>)
+     MUXCY:S->O            1   0.464   0.000  VGA_Driver/Mcompar_VGA_Blue_cmp_le0005_cy<1> (VGA_Driver/Mcompar_VGA_Blue_cmp_le0005_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  VGA_Driver/Mcompar_VGA_Blue_cmp_le0005_cy<2> (VGA_Driver/Mcompar_VGA_Blue_cmp_le0005_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  VGA_Driver/Mcompar_VGA_Blue_cmp_le0005_cy<3> (VGA_Driver/Mcompar_VGA_Blue_cmp_le0005_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  VGA_Driver/Mcompar_VGA_Blue_cmp_le0005_cy<4> (VGA_Driver/Mcompar_VGA_Blue_cmp_le0005_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  VGA_Driver/Mcompar_VGA_Blue_cmp_le0005_cy<5> (VGA_Driver/Mcompar_VGA_Blue_cmp_le0005_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  VGA_Driver/Mcompar_VGA_Blue_cmp_le0005_cy<6> (VGA_Driver/Mcompar_VGA_Blue_cmp_le0005_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  VGA_Driver/Mcompar_VGA_Blue_cmp_le0005_cy<7> (VGA_Driver/Mcompar_VGA_Blue_cmp_le0005_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  VGA_Driver/Mcompar_VGA_Blue_cmp_le0005_cy<8> (VGA_Driver/Mcompar_VGA_Blue_cmp_le0005_cy<8>)
+     MUXCY:CI->O           1   0.459   0.595  VGA_Driver/Mcompar_VGA_Blue_cmp_le0005_cy<9> (VGA_Driver/VGA_Blue_cmp_le0005)
+     LUT3:I0->O            1   0.704   0.424  VGA_Driver/VGA_Blue_or000094 (VGA_Driver/VGA_Blue_or000094)
+     LUT4:I3->O            1   0.704   0.420  VGA_Driver/VGA_Blue_or0000128 (VGA_Driver/VGA_Blue_or0000)
+     FDRS:S                    0.911          VGA_Driver/VGA_Blue_0
     ----------------------------------------
     Total                      7.288ns (4.950ns logic, 2.338ns route)
                                        (67.9% logic, 32.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'PmodJSTK_Module_0/PmodJSTK_Module_0/clkGen50Khz/count<9>'
+  Clock period: 5.476ns (frequency: 182.620MHz)
+  Total number of paths / destination ports: 632 / 92
+-------------------------------------------------------------------------
+Delay:               5.476ns (Levels of Logic = 2)
+  Source:            PmodJSTK_Module_0/PmodJSTK_Module_0/counter_2 (FF)
+  Destination:       PmodJSTK_Module_0/PmodJSTK_Module_0/counter_9 (FF)
+  Source Clock:      PmodJSTK_Module_0/PmodJSTK_Module_0/clkGen50Khz/count<9> rising
+  Destination Clock: PmodJSTK_Module_0/PmodJSTK_Module_0/clkGen50Khz/count<9> rising
+
+  Data Path: PmodJSTK_Module_0/PmodJSTK_Module_0/counter_2 to PmodJSTK_Module_0/PmodJSTK_Module_0/counter_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             22   0.591   1.199  PmodJSTK_Module_0/counter_2 (PmodJSTK_Module_0/counter<2>)
+     LUT3_L:I2->LO         1   0.704   0.104  PmodJSTK_Module_0/inputBuffer_4_cmp_ge0000211_SW0 (N51)
+     LUT4:I3->O           34   0.704   1.263  PmodJSTK_Module_0/inputBuffer_4_cmp_ge0000211 (PmodJSTK_Module_0/inputBuffer_4_cmp_ge0000)
+     FDR:R                     0.911          PmodJSTK_Module_0/counter_0
+    ----------------------------------------
+    Total                      5.476ns (2.910ns logic, 2.566ns route)
+                                       (53.1% logic, 46.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'PmodJSTK_Module_1/PmodJSTK_Module_1/clkGen50Khz/count<9>'
+  Clock period: 5.476ns (frequency: 182.620MHz)
+  Total number of paths / destination ports: 632 / 92
+-------------------------------------------------------------------------
+Delay:               5.476ns (Levels of Logic = 2)
+  Source:            PmodJSTK_Module_1/PmodJSTK_Module_1/counter_2 (FF)
+  Destination:       PmodJSTK_Module_1/PmodJSTK_Module_1/counter_9 (FF)
+  Source Clock:      PmodJSTK_Module_1/PmodJSTK_Module_1/clkGen50Khz/count<9> rising
+  Destination Clock: PmodJSTK_Module_1/PmodJSTK_Module_1/clkGen50Khz/count<9> rising
+
+  Data Path: PmodJSTK_Module_1/PmodJSTK_Module_1/counter_2 to PmodJSTK_Module_1/PmodJSTK_Module_1/counter_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             22   0.591   1.199  PmodJSTK_Module_1/counter_2 (PmodJSTK_Module_1/counter<2>)
+     LUT3_L:I2->LO         1   0.704   0.104  PmodJSTK_Module_1/inputBuffer_4_cmp_ge0000211_SW0 (N51)
+     LUT4:I3->O           34   0.704   1.263  PmodJSTK_Module_1/inputBuffer_4_cmp_ge0000211 (PmodJSTK_Module_1/inputBuffer_4_cmp_ge0000)
+     FDR:R                     0.911          PmodJSTK_Module_1/counter_0
+    ----------------------------------------
+    Total                      5.476ns (2.910ns logic, 2.566ns route)
+                                       (53.1% logic, 46.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'mdm_0/mdm_0/drck_i'
@@ -955,20 +1018,60 @@ Offset:              2.762ns (Levels of Logic = 2)
                                        (77.1% logic, 22.9% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'top_0/top_0/clock25MHz/slow_clk1'
-  Total number of paths / destination ports: 10 / 10
+Timing constraint: Default OFFSET IN BEFORE for Clock 'PmodJSTK_Module_0/PmodJSTK_Module_0/clkGen50Khz/count<9>'
+  Total number of paths / destination ports: 23 / 23
 -------------------------------------------------------------------------
-Offset:              4.620ns (Levels of Logic = 2)
-  Source:            top_0/top_0/VGA_Blue_0 (FF)
-  Destination:       top_0_VGA_Blue_pin<1> (PAD)
-  Source Clock:      top_0/top_0/clock25MHz/slow_clk1 rising
+Offset:              2.728ns (Levels of Logic = 2)
+  Source:            PmodJSTK_Module_0_MISO_pin (PAD)
+  Destination:       PmodJSTK_Module_0/PmodJSTK_Module_0/inputBuffer_3 (FF)
+  Destination Clock: PmodJSTK_Module_0/PmodJSTK_Module_0/clkGen50Khz/count<9> rising
 
-  Data Path: top_0/top_0/VGA_Blue_0 to top_0_VGA_Blue_pin<1>
+  Data Path: PmodJSTK_Module_0_MISO_pin to PmodJSTK_Module_0/PmodJSTK_Module_0/inputBuffer_3
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRS:C->Q             8   0.591   0.757  top_0/VGA_Blue_0 (VGA_Green<0>)
-     end scope: 'top_0'
+     IBUF:I->O            23   1.218   1.202  PmodJSTK_Module_0_MISO_pin_IBUF (PmodJSTK_Module_0_MISO_pin_IBUF)
+     begin scope: 'PmodJSTK_Module_0'
+     FDE:D                     0.308          PmodJSTK_Module_0/inputBuffer_4
+    ----------------------------------------
+    Total                      2.728ns (1.526ns logic, 1.202ns route)
+                                       (55.9% logic, 44.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'PmodJSTK_Module_1/PmodJSTK_Module_1/clkGen50Khz/count<9>'
+  Total number of paths / destination ports: 23 / 23
+-------------------------------------------------------------------------
+Offset:              2.728ns (Levels of Logic = 2)
+  Source:            PmodJSTK_Module_1_MISO_pin (PAD)
+  Destination:       PmodJSTK_Module_1/PmodJSTK_Module_1/inputBuffer_3 (FF)
+  Destination Clock: PmodJSTK_Module_1/PmodJSTK_Module_1/clkGen50Khz/count<9> rising
+
+  Data Path: PmodJSTK_Module_1_MISO_pin to PmodJSTK_Module_1/PmodJSTK_Module_1/inputBuffer_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            23   1.218   1.202  PmodJSTK_Module_1_MISO_pin_IBUF (PmodJSTK_Module_1_MISO_pin_IBUF)
+     begin scope: 'PmodJSTK_Module_1'
+     FDE:D                     0.308          PmodJSTK_Module_1/inputBuffer_4
+    ----------------------------------------
+    Total                      2.728ns (1.526ns logic, 1.202ns route)
+                                       (55.9% logic, 44.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'VGA_Driver/VGA_Driver/clock25MHz/slow_clk1'
+  Total number of paths / destination ports: 10 / 10
+-------------------------------------------------------------------------
+Offset:              4.620ns (Levels of Logic = 2)
+  Source:            VGA_Driver/VGA_Driver/VGA_Blue_0 (FF)
+  Destination:       top_0_VGA_Blue_pin<1> (PAD)
+  Source Clock:      VGA_Driver/VGA_Driver/clock25MHz/slow_clk1 rising
+
+  Data Path: VGA_Driver/VGA_Driver/VGA_Blue_0 to top_0_VGA_Blue_pin<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRS:C->Q             8   0.591   0.757  VGA_Driver/VGA_Blue_0 (VGA_Green<0>)
+     end scope: 'VGA_Driver'
      OBUF:I->O                 3.272          top_0_VGA_Blue_pin_0_OBUF (top_0_VGA_Blue_pin<0>)
     ----------------------------------------
     Total                      4.620ns (3.863ns logic, 0.757ns route)
@@ -976,23 +1079,64 @@ Offset:              4.620ns (Levels of Logic = 2)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'fpga_0_clk_1_sys_clk_pin'
-  Total number of paths / destination ports: 8 / 8
+  Total number of paths / destination ports: 10 / 10
 -------------------------------------------------------------------------
-Offset:              4.283ns (Levels of Logic = 2)
-  Source:            LEDs_8Bit/LEDs_8Bit/gpio_core_1/gpio_Data_Out_0 (FF)
-  Destination:       fpga_0_LEDs_8Bit_GPIO_IO_O_pin<0> (PAD)
+Offset:              7.038ns (Levels of Logic = 3)
+  Source:            PmodJSTK_Module_1/PmodJSTK_Module_1/clkGen50Khz/count_9 (FF)
+  Destination:       PmodJSTK_Module_1_SCK_pin (PAD)
   Source Clock:      fpga_0_clk_1_sys_clk_pin rising
 
-  Data Path: LEDs_8Bit/LEDs_8Bit/gpio_core_1/gpio_Data_Out_0 to fpga_0_LEDs_8Bit_GPIO_IO_O_pin<0>
+  Data Path: PmodJSTK_Module_1/PmodJSTK_Module_1/clkGen50Khz/count_9 to PmodJSTK_Module_1_SCK_pin
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             1   0.591   0.420  LEDs_8Bit/gpio_core_1/gpio_Data_Out_0 (GPIO_IO_O<0>)
-     end scope: 'LEDs_8Bit'
-     OBUF:I->O                 3.272          fpga_0_LEDs_8Bit_GPIO_IO_O_pin_0_OBUF (fpga_0_LEDs_8Bit_GPIO_IO_O_pin<0>)
+     FD:C->Q               2   0.591   0.447  PmodJSTK_Module_1/clkGen50Khz/count_9 (PmodJSTK_Module_1/clkGen50Khz/count<9>)
+     BUFG:I->O            59   1.457   1.271  PmodJSTK_Module_1/clkGen50Khz/count_9_BUFG (SCK)
+     end scope: 'PmodJSTK_Module_1'
+     OBUF:I->O                 3.272          PmodJSTK_Module_1_SCK_pin_OBUF (PmodJSTK_Module_1_SCK_pin)
     ----------------------------------------
-    Total                      4.283ns (3.863ns logic, 0.420ns route)
-                                       (90.2% logic, 9.8% route)
+    Total                      7.038ns (5.320ns logic, 1.718ns route)
+                                       (75.6% logic, 24.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'PmodJSTK_Module_1/PmodJSTK_Module_1/clkGen50Khz/count<9>'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.394ns (Levels of Logic = 2)
+  Source:            PmodJSTK_Module_1/PmodJSTK_Module_1/SS (FF)
+  Destination:       PmodJSTK_Module_1_SS_pin (PAD)
+  Source Clock:      PmodJSTK_Module_1/PmodJSTK_Module_1/clkGen50Khz/count<9> rising
+
+  Data Path: PmodJSTK_Module_1/PmodJSTK_Module_1/SS to PmodJSTK_Module_1_SS_pin
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.591   0.531  PmodJSTK_Module_1/SS (SS)
+     end scope: 'PmodJSTK_Module_1'
+     OBUF:I->O                 3.272          PmodJSTK_Module_1_SS_pin_OBUF (PmodJSTK_Module_1_SS_pin)
+    ----------------------------------------
+    Total                      4.394ns (3.863ns logic, 0.531ns route)
+                                       (87.9% logic, 12.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'PmodJSTK_Module_0/PmodJSTK_Module_0/clkGen50Khz/count<9>'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.394ns (Levels of Logic = 2)
+  Source:            PmodJSTK_Module_0/PmodJSTK_Module_0/SS (FF)
+  Destination:       PmodJSTK_Module_0_SS_pin (PAD)
+  Source Clock:      PmodJSTK_Module_0/PmodJSTK_Module_0/clkGen50Khz/count<9> rising
+
+  Data Path: PmodJSTK_Module_0/PmodJSTK_Module_0/SS to PmodJSTK_Module_0_SS_pin
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.591   0.531  PmodJSTK_Module_0/SS (SS)
+     end scope: 'PmodJSTK_Module_0'
+     OBUF:I->O                 3.272          PmodJSTK_Module_0_SS_pin_OBUF (PmodJSTK_Module_0_SS_pin)
+    ----------------------------------------
+    Total                      4.394ns (3.863ns logic, 0.531ns route)
+                                       (87.9% logic, 12.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'mdm_0/mdm_0/drck_i'
@@ -1059,14 +1203,14 @@ Offset:              9.063ns (Levels of Logic = 10)
 =========================================================================
 
 
-Total REAL time to Xst completion: 13.00 secs
-Total CPU time to Xst completion: 13.16 secs
+Total REAL time to Xst completion: 14.00 secs
+Total CPU time to Xst completion: 14.47 secs
  
 --> 
 
-Total memory usage is 160328 kilobytes
+Total memory usage is 164488 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  433 (   0 filtered)
-Number of infos    :   16 (   0 filtered)
+Number of warnings :  438 (   0 filtered)
+Number of infos    :   20 (   0 filtered)
 

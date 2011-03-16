@@ -1,0 +1,3 @@
+vhdl top_v1_00_a "C:\FPGArcade\Bouncing_Ball\pcores\top_v1_00_a\hdl\vhdl\clk25MHz.vhd"
+vhdl top_v1_00_a "C:\FPGArcade\Bouncing_Ball\pcores\top_v1_00_a\hdl\vhdl\top.vhdl"
+vhdl work "C:\FPGArcade\Bouncing_Ball\hdl\vga_driver_wrapper.vhd"

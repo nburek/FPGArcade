@@ -1,0 +1,13 @@
+run
+-opt_mode speed
+-netlist_hierarchy as_optimized
+-opt_level 1
+-p xc3s500efg320-4
+-top pmodjstk_module_1_wrapper
+-ifmt MIXED
+-ifn pmodjstk_module_1_wrapper_xst.prj
+-ofn ../implementation/pmodjstk_module_1_wrapper.ngc
+-hierarchy_separator /
+-iobuf NO
+-sd {../implementation/pmodjstk_module_1_wrapper}
+-vlgincdir {"C:\FPGArcade\Bouncing_Ball\pcores\" "C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }

@@ -16,7 +16,15 @@ entity system_stub is
     top_0_VGA_Green_pin : out std_logic_vector(2 downto 0);
     top_0_VGA_Blue_pin : out std_logic_vector(1 downto 0);
     top_0_HSync_pin : out std_logic;
-    top_0_VSync_pin : out std_logic
+    top_0_VSync_pin : out std_logic;
+    PmodJSTK_Module_0_MOSI_pin : out std_logic;
+    PmodJSTK_Module_0_SS_pin : out std_logic;
+    PmodJSTK_Module_0_MISO_pin : in std_logic;
+    PmodJSTK_Module_0_SCK_pin : out std_logic;
+    PmodJSTK_Module_1_MOSI_pin : out std_logic;
+    PmodJSTK_Module_1_SS_pin : out std_logic;
+    PmodJSTK_Module_1_MISO_pin : in std_logic;
+    PmodJSTK_Module_1_SCK_pin : out std_logic
   );
 end system_stub;
 
@@ -31,7 +39,15 @@ architecture STRUCTURE of system_stub is
       top_0_VGA_Green_pin : out std_logic_vector(2 downto 0);
       top_0_VGA_Blue_pin : out std_logic_vector(1 downto 0);
       top_0_HSync_pin : out std_logic;
-      top_0_VSync_pin : out std_logic
+      top_0_VSync_pin : out std_logic;
+      PmodJSTK_Module_0_MOSI_pin : out std_logic;
+      PmodJSTK_Module_0_SS_pin : out std_logic;
+      PmodJSTK_Module_0_MISO_pin : in std_logic;
+      PmodJSTK_Module_0_SCK_pin : out std_logic;
+      PmodJSTK_Module_1_MOSI_pin : out std_logic;
+      PmodJSTK_Module_1_SS_pin : out std_logic;
+      PmodJSTK_Module_1_MISO_pin : in std_logic;
+      PmodJSTK_Module_1_SCK_pin : out std_logic
     );
   end component;
 
@@ -49,7 +65,15 @@ begin
       top_0_VGA_Green_pin => top_0_VGA_Green_pin,
       top_0_VGA_Blue_pin => top_0_VGA_Blue_pin,
       top_0_HSync_pin => top_0_HSync_pin,
-      top_0_VSync_pin => top_0_VSync_pin
+      top_0_VSync_pin => top_0_VSync_pin,
+      PmodJSTK_Module_0_MOSI_pin => PmodJSTK_Module_0_MOSI_pin,
+      PmodJSTK_Module_0_SS_pin => PmodJSTK_Module_0_SS_pin,
+      PmodJSTK_Module_0_MISO_pin => PmodJSTK_Module_0_MISO_pin,
+      PmodJSTK_Module_0_SCK_pin => PmodJSTK_Module_0_SCK_pin,
+      PmodJSTK_Module_1_MOSI_pin => PmodJSTK_Module_1_MOSI_pin,
+      PmodJSTK_Module_1_SS_pin => PmodJSTK_Module_1_SS_pin,
+      PmodJSTK_Module_1_MISO_pin => PmodJSTK_Module_1_MISO_pin,
+      PmodJSTK_Module_1_SCK_pin => PmodJSTK_Module_1_SCK_pin
     );
 
 end architecture STRUCTURE;

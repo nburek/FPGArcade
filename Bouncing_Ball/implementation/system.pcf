@@ -1,19 +1,13 @@
 //! **************************************************************************
-// Written by: Map M.81d on Sat Mar 12 15:28:59 2011
+// Written by: Map M.81d on Wed Mar 16 01:59:05 2011
 //! **************************************************************************
 
 SCHEMATIC START;
 COMP "top_0_VGA_Blue_pin<0>" LOCATE = SITE "U5" LEVEL 1;
 COMP "top_0_VGA_Blue_pin<1>" LOCATE = SITE "U4" LEVEL 1;
-COMP "top_0_HSync_pin" LOCATE = SITE "T4" LEVEL 1;
-COMP "fpga_0_clk_1_sys_clk_pin" LOCATE = SITE "B8" LEVEL 1;
-COMP "fpga_0_rst_1_sys_rst_pin" LOCATE = SITE "B18" LEVEL 1;
-COMP "top_0_VGA_Red_pin<0>" LOCATE = SITE "R9" LEVEL 1;
-COMP "top_0_VGA_Red_pin<1>" LOCATE = SITE "T8" LEVEL 1;
-COMP "top_0_VGA_Red_pin<2>" LOCATE = SITE "R8" LEVEL 1;
-COMP "top_0_VGA_Green_pin<0>" LOCATE = SITE "N8" LEVEL 1;
-COMP "top_0_VGA_Green_pin<1>" LOCATE = SITE "P8" LEVEL 1;
-COMP "top_0_VGA_Green_pin<2>" LOCATE = SITE "P6" LEVEL 1;
+COMP "PmodJSTK_Module_0_MISO_pin" LOCATE = SITE "L17" LEVEL 1;
+COMP "PmodJSTK_Module_0_MOSI_pin" LOCATE = SITE "K12" LEVEL 1;
+COMP "PmodJSTK_Module_1_MISO_pin" LOCATE = SITE "R15" LEVEL 1;
 COMP "fpga_0_LEDs_8Bit_GPIO_IO_O_pin<0>" LOCATE = SITE "R4" LEVEL 1;
 COMP "fpga_0_LEDs_8Bit_GPIO_IO_O_pin<1>" LOCATE = SITE "F4" LEVEL 1;
 COMP "fpga_0_LEDs_8Bit_GPIO_IO_O_pin<2>" LOCATE = SITE "P15" LEVEL 1;
@@ -22,7 +16,23 @@ COMP "fpga_0_LEDs_8Bit_GPIO_IO_O_pin<4>" LOCATE = SITE "K14" LEVEL 1;
 COMP "fpga_0_LEDs_8Bit_GPIO_IO_O_pin<5>" LOCATE = SITE "K15" LEVEL 1;
 COMP "fpga_0_LEDs_8Bit_GPIO_IO_O_pin<6>" LOCATE = SITE "J15" LEVEL 1;
 COMP "fpga_0_LEDs_8Bit_GPIO_IO_O_pin<7>" LOCATE = SITE "J14" LEVEL 1;
+COMP "PmodJSTK_Module_1_MOSI_pin" LOCATE = SITE "R18" LEVEL 1;
+COMP "top_0_HSync_pin" LOCATE = SITE "T4" LEVEL 1;
+COMP "PmodJSTK_Module_0_SS_pin" LOCATE = SITE "L15" LEVEL 1;
+COMP "PmodJSTK_Module_1_SS_pin" LOCATE = SITE "M13" LEVEL 1;
 COMP "top_0_VSync_pin" LOCATE = SITE "U3" LEVEL 1;
+COMP "PmodJSTK_Module_0_SCK_pin" LOCATE = SITE "M15" LEVEL 1;
+COMP "PmodJSTK_Module_1_SCK_pin" LOCATE = SITE "T17" LEVEL 1;
+COMP "fpga_0_clk_1_sys_clk_pin" LOCATE = SITE "B8" LEVEL 1;
+COMP "fpga_0_rst_1_sys_rst_pin" LOCATE = SITE "B18" LEVEL 1;
+COMP "top_0_VGA_Red_pin<0>" LOCATE = SITE "R9" LEVEL 1;
+COMP "top_0_VGA_Red_pin<1>" LOCATE = SITE "T8" LEVEL 1;
+COMP "top_0_VGA_Red_pin<2>" LOCATE = SITE "R8" LEVEL 1;
+COMP "top_0_VGA_Green_pin<0>" LOCATE = SITE "N8" LEVEL 1;
+COMP "top_0_VGA_Green_pin<1>" LOCATE = SITE "P8" LEVEL 1;
+COMP "top_0_VGA_Green_pin<2>" LOCATE = SITE "P6" LEVEL 1;
+NET "fpga_0_clk_1_sys_clk_pin_IBUFG1" BEL
+        "fpga_0_clk_1_sys_clk_pin_IBUFG_BUFG.GCLKMUX" USELOCALCONNECT;
 NET "microblaze_0/microblaze_0/Area.Data_Flow_I/PC_Module_I/pc_write_I"
         USELOWSKEWLINES;
 PIN lmb_bram/lmb_bram/ramb16_s9_s9_0.A_pins<12> = BEL
@@ -67,6 +77,14 @@ TIMEGRP clock_generator_0_clock_generator_0_SIG_DCM0_CLK0 = PIN
         "microblaze_0/microblaze_0/sync_reset" BEL
         "microblaze_0/microblaze_0/mem_access" BEL
         "microblaze_0/microblaze_0/Area.Using_Ext_Databus.Using_D_PLB.DPLB_Interface_I1/active_access_d1"
+        BEL
+        "microblaze_0/microblaze_0/Area.Using_Ext_Databus.Using_D_PLB.DPLB_Interface_I1/WB_DPLB_Read_Data_9"
+        BEL
+        "microblaze_0/microblaze_0/Area.Using_Ext_Databus.Using_D_PLB.DPLB_Interface_I1/WB_DPLB_Read_Data_10"
+        BEL
+        "microblaze_0/microblaze_0/Area.Using_Ext_Databus.Using_D_PLB.DPLB_Interface_I1/WB_DPLB_Read_Data_11"
+        BEL
+        "microblaze_0/microblaze_0/Area.Using_Ext_Databus.Using_D_PLB.DPLB_Interface_I1/WB_DPLB_Read_Data_12"
         BEL
         "microblaze_0/microblaze_0/Area.Using_Ext_Databus.Using_D_PLB.DPLB_Interface_I1/WB_DPLB_Read_Data_13"
         BEL
@@ -131,6 +149,14 @@ TIMEGRP clock_generator_0_clock_generator_0_SIG_DCM0_CLK0 = PIN
         "microblaze_0/microblaze_0/Area.Using_Ext_Databus.Using_D_PLB.DPLB_Interface_I1/dplb_m_wrdbus_i_6"
         BEL
         "microblaze_0/microblaze_0/Area.Using_Ext_Databus.Using_D_PLB.DPLB_Interface_I1/dplb_m_wrdbus_i_7"
+        BEL
+        "microblaze_0/microblaze_0/Area.Using_Ext_Databus.Using_D_PLB.DPLB_Interface_I1/dplb_m_wrdbus_i_9"
+        BEL
+        "microblaze_0/microblaze_0/Area.Using_Ext_Databus.Using_D_PLB.DPLB_Interface_I1/dplb_m_wrdbus_i_10"
+        BEL
+        "microblaze_0/microblaze_0/Area.Using_Ext_Databus.Using_D_PLB.DPLB_Interface_I1/dplb_m_wrdbus_i_11"
+        BEL
+        "microblaze_0/microblaze_0/Area.Using_Ext_Databus.Using_D_PLB.DPLB_Interface_I1/dplb_m_wrdbus_i_12"
         BEL
         "microblaze_0/microblaze_0/Area.Using_Ext_Databus.Using_D_PLB.DPLB_Interface_I1/dplb_m_wrdbus_i_13"
         BEL
@@ -295,6 +321,14 @@ TIMEGRP clock_generator_0_clock_generator_0_SIG_DCM0_CLK0 = PIN
         "microblaze_0/microblaze_0/Area.Using_I_PLB.IPLB_Interface_I1/instr_addr_29"
         BEL
         "microblaze_0/microblaze_0/Area.Using_I_PLB.IPLB_Interface_I1/IPLB_M_request"
+        BEL
+        "microblaze_0/microblaze_0/Area.Using_I_PLB.IPLB_Interface_I1/IPLB_Data_9"
+        BEL
+        "microblaze_0/microblaze_0/Area.Using_I_PLB.IPLB_Interface_I1/IPLB_Data_10"
+        BEL
+        "microblaze_0/microblaze_0/Area.Using_I_PLB.IPLB_Interface_I1/IPLB_Data_11"
+        BEL
+        "microblaze_0/microblaze_0/Area.Using_I_PLB.IPLB_Interface_I1/IPLB_Data_12"
         BEL
         "microblaze_0/microblaze_0/Area.Using_I_PLB.IPLB_Interface_I1/IPLB_Data_13"
         BEL
@@ -1786,6 +1820,7 @@ TIMEGRP clock_generator_0_clock_generator_0_SIG_DCM0_CLK0 = PIN
         "mb_plb/mb_plb/GEN_SPLB_RST[0].I_SPLB_RST" BEL
         "mb_plb/mb_plb/GEN_SPLB_RST[1].I_SPLB_RST" BEL
         "mb_plb/mb_plb/GEN_SPLB_RST[2].I_SPLB_RST" BEL
+        "mb_plb/mb_plb/GEN_SPLB_RST[3].I_SPLB_RST" BEL
         "mb_plb/mb_plb/GEN_SHARED.I_PLB_ADDRPATH/PLB_ABus_0" BEL
         "mb_plb/mb_plb/GEN_SHARED.I_PLB_ADDRPATH/PLB_ABus_1" BEL
         "mb_plb/mb_plb/GEN_SHARED.I_PLB_ADDRPATH/PLB_ABus_2" BEL
@@ -2555,6 +2590,447 @@ TIMEGRP clock_generator_0_clock_generator_0_SIG_DCM0_CLK0 = PIN
         "Block_Output/Block_Output/gpio_core_1/Mshreg_gpio2_Data_In_1/SRL16E"
         BEL
         "Block_Output/Block_Output/gpio_core_1/Mshreg_gpio2_Data_In_0/SRL16E"
+        BEL "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio2_Data_In_0" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio2_Data_In_1" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio2_Data_In_3" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio2_Data_In_4" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio2_Data_In_2" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio2_Data_In_6" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio2_Data_In_7" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio2_Data_In_5" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio2_Data_In_9" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio2_Data_In_10" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio2_Data_In_8" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio2_Data_In_12" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio2_Data_In_13" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio2_Data_In_11" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio2_Data_In_15" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio2_Data_In_16" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio2_Data_In_14" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio2_Data_In_18" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio2_Data_In_19" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio2_Data_In_17" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio2_Data_In_21" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio2_Data_In_22" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio2_Data_In_20" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio_Data_In_0" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio_Data_In_1" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio_Data_In_3" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio_Data_In_4" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio_Data_In_2" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio_Data_In_6" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio_Data_In_7" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio_Data_In_5" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio_Data_In_9" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio_Data_In_10" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio_Data_In_8" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio_Data_In_12" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio_Data_In_13" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio_Data_In_11" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio_Data_In_15" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio_Data_In_16" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio_Data_In_14" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio_Data_In_18" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio_Data_In_19" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio_Data_In_17" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio_Data_In_21" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio_Data_In_22" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio_Data_In_20" BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/rd_clear_sl_busy"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/sl_wrcomp_i"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/INCLUDE_DATA_PHASE_WDT.I_DPTO_COUNTER/icount_out_0"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/INCLUDE_DATA_PHASE_WDT.I_DPTO_COUNTER/icount_out_1"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/INCLUDE_DATA_PHASE_WDT.I_DPTO_COUNTER/icount_out_2"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/INCLUDE_DATA_PHASE_WDT.I_DPTO_COUNTER/icount_out_3"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/INCLUDE_DATA_PHASE_WDT.I_DPTO_COUNTER/icount_out_4"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/INCLUDE_DATA_PHASE_WDT.I_DPTO_COUNTER/icount_out_5"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/INCLUDE_DATA_PHASE_WDT.I_DPTO_COUNTER/icount_out_6"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/INCLUDE_DATA_PHASE_WDT.I_DPTO_COUNTER/icount_out_7"
+        BEL "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio_xferAck_Reg" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/GPIO2_DBus_i_9" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio2_OE_9" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio2_OE_8" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio2_OE_7" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/GPIO_DBus_i_29" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio2_OE_6" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio2_OE_5" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/GPIO_DBus_i_28" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/GPIO_DBus_i_27" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio2_OE_4" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/GPIO_DBus_i_26" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio2_OE_3" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/GPIO_DBus_i_31" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/GPIO_DBus_i_25" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/GPIO_DBus_i_30" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio2_OE_2" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/GPIO_DBus_i_24" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio2_OE_1" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/GPIO_DBus_i_19" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/GPIO_DBus_i_18" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/GPIO_DBus_i_23" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio2_OE_0" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/GPIO_DBus_i_22" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/GPIO_DBus_i_17" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/GPIO_DBus_i_16" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/GPIO_DBus_i_21" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/GPIO_DBus_i_15" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/GPIO_DBus_i_20" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/GPIO_DBus_i_14" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/GPIO_DBus_i_9" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/GPIO_DBus_i_13" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio2_OE_19" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio2_OE_18" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/GPIO_DBus_i_12" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio2_OE_17" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio2_OE_22" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/GPIO_DBus_i_11" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio2_OE_16" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio2_OE_21" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/GPIO_DBus_i_10" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio2_OE_15" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio2_OE_20" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio2_OE_14" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio2_OE_13" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio2_OE_12" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio2_OE_11" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio2_OE_10" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio_OE_9" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio_OE_8" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio_OE_7" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio_OE_6" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio_OE_5" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio_OE_4" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio_OE_3" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio_OE_2" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio_OE_1" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio_OE_0" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/GPIO2_DBus_i_29" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/GPIO2_DBus_i_28" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/iGPIO_xferAck" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/GPIO2_DBus_i_27" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/GPIO2_DBus_i_31" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/GPIO2_DBus_i_26" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/GPIO2_DBus_i_30" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/GPIO2_DBus_i_25" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/GPIO2_DBus_i_19" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/GPIO2_DBus_i_23" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/GPIO2_DBus_i_24" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/GPIO2_DBus_i_18" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/GPIO2_DBus_i_22" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/GPIO2_DBus_i_17" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/GPIO2_DBus_i_21" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/GPIO2_DBus_i_16" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/GPIO2_DBus_i_20" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/GPIO2_DBus_i_15" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/GPIO2_DBus_i_14" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/GPIO2_DBus_i_13" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/GPIO2_DBus_i_12" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/GPIO2_DBus_i_11" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/GPIO2_DBus_i_10" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio_OE_19" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio_OE_22" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio_OE_17" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio_OE_18" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio_OE_21" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio_OE_16" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio_OE_15" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio_OE_14" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio_OE_20" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio_OE_13" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio_OE_12" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio_OE_10" BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/gpio_OE_11" BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_out_s_h_0"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_out_i_0"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/decode_hit_reg"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/INCLUDE_DATA_PHASE_WDT.I_DPTO_COUNTER/icount_out_8"
+        BEL "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/sl_busy"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_28"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_29"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/bus2ip_be_i_1"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/bus2ip_be_i_2"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/bus2ip_be_i_3"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/data_timeout"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/bus2ip_rnw_i"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/set_sl_busy"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_be_reg_1"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_be_reg_2"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_be_reg_3"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_rnw_reg"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rearbitrate_i"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_abus_reg_0"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_abus_reg_1"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_abus_reg_2"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_abus_reg_3"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_abus_reg_4"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_abus_reg_5"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_abus_reg_6"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_abus_reg_7"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_abus_reg_8"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_abus_reg_9"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_abus_reg_10"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_abus_reg_11"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_abus_reg_12"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_abus_reg_13"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_abus_reg_14"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_abus_reg_15"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_abus_reg_16"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_abus_reg_17"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_abus_reg_18"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_abus_reg_19"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_abus_reg_20"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_abus_reg_21"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_abus_reg_22"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_abus_reg_23"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_abus_reg_24"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_abus_reg_25"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_abus_reg_26"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_abus_reg_27"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_abus_reg_28"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_abus_reg_29"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_9"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_10"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_11"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_12"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_13"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_14"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_15"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_16"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_17"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_18"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_19"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_20"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_21"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_22"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_23"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_24"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_25"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_26"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_27"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_28"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_29"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_30"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_31"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/addr_cntl_cs_0"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_pavalid_reg"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_9"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_10"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_11"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_12"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_13"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_14"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_15"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_16"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_17"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_18"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_19"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_20"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_21"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_22"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_23"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_24"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_25"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_26"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_27"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_28"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_29"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_30"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_31"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/Mshreg_gpio_Data_In_20/SRL16E"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/Mshreg_gpio_Data_In_22/SRL16E"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/Mshreg_gpio_Data_In_21/SRL16E"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/Mshreg_gpio_Data_In_17/SRL16E"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/Mshreg_gpio_Data_In_19/SRL16E"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/Mshreg_gpio_Data_In_18/SRL16E"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/Mshreg_gpio_Data_In_14/SRL16E"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/Mshreg_gpio_Data_In_16/SRL16E"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/Mshreg_gpio_Data_In_15/SRL16E"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/Mshreg_gpio_Data_In_11/SRL16E"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/Mshreg_gpio_Data_In_13/SRL16E"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/Mshreg_gpio_Data_In_12/SRL16E"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/Mshreg_gpio_Data_In_8/SRL16E"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/Mshreg_gpio_Data_In_10/SRL16E"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/Mshreg_gpio_Data_In_9/SRL16E"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/Mshreg_gpio_Data_In_5/SRL16E"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/Mshreg_gpio_Data_In_7/SRL16E"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/Mshreg_gpio_Data_In_6/SRL16E"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/Mshreg_gpio_Data_In_2/SRL16E"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/Mshreg_gpio_Data_In_4/SRL16E"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/Mshreg_gpio_Data_In_3/SRL16E"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/Mshreg_gpio_Data_In_1/SRL16E"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/Mshreg_gpio_Data_In_0/SRL16E"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/Mshreg_gpio2_Data_In_20/SRL16E"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/Mshreg_gpio2_Data_In_22/SRL16E"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/Mshreg_gpio2_Data_In_21/SRL16E"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/Mshreg_gpio2_Data_In_17/SRL16E"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/Mshreg_gpio2_Data_In_19/SRL16E"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/Mshreg_gpio2_Data_In_18/SRL16E"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/Mshreg_gpio2_Data_In_14/SRL16E"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/Mshreg_gpio2_Data_In_16/SRL16E"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/Mshreg_gpio2_Data_In_15/SRL16E"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/Mshreg_gpio2_Data_In_11/SRL16E"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/Mshreg_gpio2_Data_In_13/SRL16E"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/Mshreg_gpio2_Data_In_12/SRL16E"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/Mshreg_gpio2_Data_In_8/SRL16E"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/Mshreg_gpio2_Data_In_10/SRL16E"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/Mshreg_gpio2_Data_In_9/SRL16E"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/Mshreg_gpio2_Data_In_5/SRL16E"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/Mshreg_gpio2_Data_In_7/SRL16E"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/Mshreg_gpio2_Data_In_6/SRL16E"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/Mshreg_gpio2_Data_In_2/SRL16E"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/Mshreg_gpio2_Data_In_4/SRL16E"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/Mshreg_gpio2_Data_In_3/SRL16E"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/Mshreg_gpio2_Data_In_1/SRL16E"
+        BEL
+        "Joystick_GPIO/Joystick_GPIO/gpio_core_1/Mshreg_gpio2_Data_In_0/SRL16E"
         BEL "clock_generator_0/clock_generator_0/DCM0_CLK0_BUFG_INST.GCLKMUX"
         BEL "clock_generator_0/clock_generator_0/DCM0_CLK0_BUFG_INST";
 PIN
@@ -2566,7 +3042,29 @@ TIMEGRP sys_clk_pin = BEL "clock_generator_0/clock_generator_0/DCM0_INST/rsti"
         BEL "clock_generator_0/clock_generator_0/DCM0_INST/rst_delay_0" BEL
         "clock_generator_0/clock_generator_0/DCM0_INST/rst_delay_1" BEL
         "clock_generator_0/clock_generator_0/DCM0_INST/rst_delay_2" BEL
-        "top_0/top_0/clock25MHz/slow_clk" PIN
+        "VGA_Driver/VGA_Driver/clock25MHz/slow_clk" BEL
+        "PmodJSTK_Module_0/PmodJSTK_Module_0/clkGen50Khz/count_0" BEL
+        "PmodJSTK_Module_0/PmodJSTK_Module_0/clkGen50Khz/count_1" BEL
+        "PmodJSTK_Module_0/PmodJSTK_Module_0/clkGen50Khz/count_2" BEL
+        "PmodJSTK_Module_0/PmodJSTK_Module_0/clkGen50Khz/count_3" BEL
+        "PmodJSTK_Module_0/PmodJSTK_Module_0/clkGen50Khz/count_4" BEL
+        "PmodJSTK_Module_0/PmodJSTK_Module_0/clkGen50Khz/count_5" BEL
+        "PmodJSTK_Module_0/PmodJSTK_Module_0/clkGen50Khz/count_6" BEL
+        "PmodJSTK_Module_0/PmodJSTK_Module_0/clkGen50Khz/count_7" BEL
+        "PmodJSTK_Module_0/PmodJSTK_Module_0/clkGen50Khz/count_8" BEL
+        "PmodJSTK_Module_0/PmodJSTK_Module_0/clkGen50Khz/count_9" BEL
+        "PmodJSTK_Module_1/PmodJSTK_Module_1/clkGen50Khz/count_0" BEL
+        "PmodJSTK_Module_1/PmodJSTK_Module_1/clkGen50Khz/count_1" BEL
+        "PmodJSTK_Module_1/PmodJSTK_Module_1/clkGen50Khz/count_2" BEL
+        "PmodJSTK_Module_1/PmodJSTK_Module_1/clkGen50Khz/count_3" BEL
+        "PmodJSTK_Module_1/PmodJSTK_Module_1/clkGen50Khz/count_4" BEL
+        "PmodJSTK_Module_1/PmodJSTK_Module_1/clkGen50Khz/count_5" BEL
+        "PmodJSTK_Module_1/PmodJSTK_Module_1/clkGen50Khz/count_6" BEL
+        "PmodJSTK_Module_1/PmodJSTK_Module_1/clkGen50Khz/count_7" BEL
+        "PmodJSTK_Module_1/PmodJSTK_Module_1/clkGen50Khz/count_8" BEL
+        "PmodJSTK_Module_1/PmodJSTK_Module_1/clkGen50Khz/count_9" BEL
+        "fpga_0_clk_1_sys_clk_pin_IBUFG_BUFG.GCLKMUX" BEL
+        "fpga_0_clk_1_sys_clk_pin_IBUFG_BUFG" PIN
         "clock_generator_0/clock_generator_0/DCM0_INST/Using_Virtex.DCM_INST_pins<2>";
 TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 50 MHz HIGH 50%;
 TS_clock_generator_0_clock_generator_0_SIG_DCM0_CLK0 = PERIOD TIMEGRP

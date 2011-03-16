@@ -1,0 +1,66 @@
+Mapping logical library work (line 1) to current logical library
+PmodJSTK_Module_v1_00_a ...
+Mapping logical library work (line 2) to current logical library
+PmodJSTK_Module_v1_00_a ...
+Parsing XST project file successfully ...
+Analyzing HDL source files ...
+Analyzing HDL source files successfully ...
+HDL language for the peripheral (top level) design unit PmodJSTK_Driver is vhdl
+...
+WARNING:EDK:2221 - Project file
+   C:\FPGArcade\Bouncing_Ball\pcores/PmodJSTK_Module.prj already exists, will be
+   overwrite and removed afterward ...
+INFO:EDK:3391 - Create temporary xst project file:
+   C:\FPGArcade\Bouncing_Ball\pcores/PmodJSTK_Module.prj
+Compiling vhdl file "C:/FPGArcade/PmodJSTK_Module/clock50Khz.vhd" in Library
+PmodJSTK_Module_v1_00_a.
+Entity <clock50Khz> compiled.
+Entity <clock50Khz> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/FPGArcade/PmodJSTK_Module/PmodJSTK_Driver.vhd" in
+Library PmodJSTK_Module_v1_00_a.
+Entity <PmodJSTK_Module> compiled.
+Entity <PmodJSTK_Module> (Architecture <Behavioral>) compiled.
+
+
+Analyzing HDL attributes ...
+Entity name = PmodJSTK_Module
+INFO:EDK:1607 - IPTYPE set to value : PERIPHERAL
+INFO:EDK:1511 - IMP_NETLIST set to value : TRUE
+INFO:EDK:1486 - HDL set to value : VHDL
+WARNING:EDK:3590 - Unable to delete temporary project file
+   C:\FPGArcade\Bouncing_Ball\pcores\PmodJSTK_Module.prj : 13
+Copying file clock50Khz.vhd to
+C:\FPGArcade\Bouncing_Ball\pcores/PmodJSTK_Module_v1_00_a/hdl/vhdl/ ...
+Copying file PmodJSTK_Driver.vhd to
+C:\FPGArcade\Bouncing_Ball\pcores/PmodJSTK_Module_v1_00_a/hdl/vhdl/ ...
+
+Thank you for using Create and Import Peripheral Wizard! Please find your
+imported peripheral under
+C:\FPGArcade\Bouncing_Ball\pcores\PmodJSTK_Module_v1_00_a.
+
+Summary:
+
+  Logical library     : PmodJSTK_Module_v1_00_a
+  Version             : 1.00.a
+  Bus interface(s)    : None
+
+The following sub-directories will be created:
+
+  - PmodJSTK_Module_v1_00_a\data
+  - PmodJSTK_Module_v1_00_a\hdl
+  - PmodJSTK_Module_v1_00_a\hdl\vhdl
+
+
+The following HDL source files will be copied into the
+pmodjstk_module_v1_00_a\hdl\vhdl directory:
+
+  - clock50Khz.vhd
+  - PmodJSTK_Driver.vhd
+
+The following files will be created under the PmodJSTK_Module_v1_00_a\data
+directory:
+
+  - PmodJSTK_Module_v2_1_0.mpd
+  - PmodJSTK_Module_v2_1_0.pao
+
+

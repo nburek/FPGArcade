@@ -8,7 +8,13 @@
 <!-- Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Documents and Settings/nb418308/Desktop/FPGArcade/Simple_Video/Simple_Video/slowClock.vhd&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGArcade/Simple_Video/Simple_Video/Simple_Video.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGArcade/Simple_Video/Simple_Video/clk25MHz.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGArcade/Simple_Video/Simple_Video/slowClock.vhd&quot; into library work</arg>
 </msg>
 
 </messages>

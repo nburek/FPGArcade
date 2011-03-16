@@ -1,0 +1,2 @@
+vhdl work "clock50Khz.vhd"
+vhdl work "PmodJSTK_Driver.vhd"

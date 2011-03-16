@@ -23,6 +23,14 @@
  PORT top_0_VGA_Blue_pin = top_0_VGA_Blue, DIR = O, VEC = [1:0]
  PORT top_0_HSync_pin = top_0_HSync, DIR = O
  PORT top_0_VSync_pin = top_0_VSync, DIR = O
+ PORT PmodJSTK_Module_0_MOSI_pin = PmodJSTK_Module_0_MOSI, DIR = O
+ PORT PmodJSTK_Module_0_SS_pin = PmodJSTK_Module_0_SS, DIR = O
+ PORT PmodJSTK_Module_0_MISO_pin = PmodJSTK_Module_0_MISO, DIR = I
+ PORT PmodJSTK_Module_0_SCK_pin = PmodJSTK_Module_0_SCK, DIR = O
+ PORT PmodJSTK_Module_1_MOSI_pin = PmodJSTK_Module_1_MOSI, DIR = O
+ PORT PmodJSTK_Module_1_SS_pin = PmodJSTK_Module_1_SS, DIR = O
+ PORT PmodJSTK_Module_1_MISO_pin = PmodJSTK_Module_1_MISO, DIR = I
+ PORT PmodJSTK_Module_1_SCK_pin = PmodJSTK_Module_1_SCK, DIR = O
 
 
 BEGIN microblaze
@@ -144,15 +152,15 @@ BEGIN xps_gpio
  PARAMETER C_GPIO_WIDTH = 19
  PARAMETER C_IS_DUAL = 1
  PARAMETER C_GPIO2_WIDTH = 18
- PARAMETER C_BASEADDR = 0x81420000
- PARAMETER C_HIGHADDR = 0x8142ffff
+ PARAMETER C_BASEADDR = 0x81440000
+ PARAMETER C_HIGHADDR = 0x8144ffff
  BUS_INTERFACE SPLB = mb_plb
  PORT GPIO_IO_O = top_0_BlockPosition
  PORT GPIO2_IO_O = top_0_PaddlePosition
 END
 
 BEGIN top
- PARAMETER INSTANCE = top_0
+ PARAMETER INSTANCE = VGA_Driver
  PARAMETER HW_VER = 1.00.a
  PORT VGA_Red = top_0_VGA_Red
  PORT VGA_Green = top_0_VGA_Green
@@ -162,5 +170,42 @@ BEGIN top
  PORT clk = dcm_clk_s
  PORT BlockPosition = top_0_BlockPosition
  PORT PaddlePosition = top_0_PaddlePosition
+END
+
+BEGIN xps_gpio
+ PARAMETER INSTANCE = Joystick_GPIO
+ PARAMETER HW_VER = 2.00.a
+ PARAMETER C_GPIO_WIDTH = 23
+ PARAMETER C_IS_DUAL = 1
+ PARAMETER C_GPIO2_WIDTH = 23
+ PARAMETER C_BASEADDR = 0x81420000
+ PARAMETER C_HIGHADDR = 0x8142ffff
+ PARAMETER C_ALL_INPUTS = 0
+ PARAMETER C_ALL_INPUTS_2 = 0
+ BUS_INTERFACE SPLB = mb_plb
+ PORT GPIO2_IO_I = PmodJSTK_Module_1_Data
+ PORT GPIO_IO_I = PmodJSTK_Module_0_Data
+END
+
+BEGIN PmodJSTK_Module
+ PARAMETER INSTANCE = PmodJSTK_Module_0
+ PARAMETER HW_VER = 1.00.a
+ PORT CLK = dcm_clk_s
+ PORT MOSI = PmodJSTK_Module_0_MOSI
+ PORT SS = PmodJSTK_Module_0_SS
+ PORT MISO = PmodJSTK_Module_0_MISO
+ PORT SCK = PmodJSTK_Module_0_SCK
+ PORT Data = PmodJSTK_Module_0_Data
+END
+
+BEGIN PmodJSTK_Module
+ PARAMETER INSTANCE = PmodJSTK_Module_1
+ PARAMETER HW_VER = 1.00.a
+ PORT CLK = dcm_clk_s
+ PORT MOSI = PmodJSTK_Module_1_MOSI
+ PORT SS = PmodJSTK_Module_1_SS
+ PORT MISO = PmodJSTK_Module_1_MISO
+ PORT SCK = PmodJSTK_Module_1_SCK
+ PORT Data = PmodJSTK_Module_1_Data
 END
 

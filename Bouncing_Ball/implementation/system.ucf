@@ -25,3 +25,15 @@ NET "top_0_VGA_Blue_pin<1>"  LOC = "U4"; # Bank = 2, Pin name = IO_L03P_2/DOUT/B
 
 NET "top_0_HSync_pin" LOC = "T4"; # Bank = 2, Pin name = IO_L03N_2/MOSI/CSI_B, Type = DUAL, Sch name = HSYNC
 NET "top_0_VSync_pin" LOC = "U3"; # Bank = 2, Pin name = IO_L01P_2/CSO_B, Type = DUAL, Sch name = VSYNC
+
+#Joystick 1
+NET "PmodJSTK_Module_0_SS_pin" LOC = "L15" | IOSTANDARD = LVCMOS33; # Bank = 1, Pin name = IO_L09N_1/A11, Type = DUAL, Sch name = JA1
+NET "PmodJSTK_Module_0_MOSI_pin" LOC = "K12" | IOSTANDARD = LVCMOS33; # Bank = 1, Pin name = IO_L11N_1/A9/RHCLK1, Type = RHCLK/DUAL, Sch name = JA2
+NET "PmodJSTK_Module_0_MISO_pin" LOC = "L17" | IOSTANDARD = LVCMOS33; # Bank = 1, Pin name = IO_L10N_1/VREF_1, Type = VREF, Sch name = JA3
+NET "PmodJSTK_Module_0_SCK_pin" LOC = "M15" | IOSTANDARD = LVCMOS33; # Bank = 1, Pin name = IO_L07P_1, Type = I/O, Sch name = JA4
+
+#Joystick 2
+NET "PmodJSTK_Module_1_SS_pin" LOC = "M13" | IOSTANDARD = LVCMOS33; # Bank = 1, Pin name = IO_L05N_1/VREF_1, Type = VREF, Sch name = JB1
+NET "PmodJSTK_Module_1_MOSI_pin" LOC = "R18" | IOSTANDARD = LVCMOS33; # Bank = 1, Pin name = IO_L02P_1/A14, Type = DUAL, Sch name = JB2
+NET "PmodJSTK_Module_1_MISO_pin" LOC = "R15" | IOSTANDARD = LVCMOS33; # Bank = 1, Pin name = IO_L03P_1, Type = I/O, Sch name = JB3
+NET "PmodJSTK_Module_1_SCK_pin" LOC = "T17" | IOSTANDARD = LVCMOS33; # Bank = 1, Pin name = IO_L01N_1/A15, Type = DUAL, Sch name = JB4

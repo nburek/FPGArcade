@@ -1,10 +1,10 @@
 
 Checking platform configuration ...
-IPNAME:plb_v46 INSTANCE:mb_plb - C:\FPGArcade\Bouncing_Ball\system.mhs line 42 -
-2 master(s) : 3 slave(s)
-IPNAME:lmb_v10 INSTANCE:ilmb - C:\FPGArcade\Bouncing_Ball\system.mhs line 49 - 1
+IPNAME:plb_v46 INSTANCE:mb_plb - C:\FPGArcade\Bouncing_Ball\system.mhs line 50 -
+2 master(s) : 4 slave(s)
+IPNAME:lmb_v10 INSTANCE:ilmb - C:\FPGArcade\Bouncing_Ball\system.mhs line 57 - 1
 master(s) : 1 slave(s)
-IPNAME:lmb_v10 INSTANCE:dlmb - C:\FPGArcade\Bouncing_Ball\system.mhs line 56 - 1
+IPNAME:lmb_v10 INSTANCE:dlmb - C:\FPGArcade\Bouncing_Ball\system.mhs line 64 - 1
 master(s) : 1 slave(s)
 
 Checking port drivers...
@@ -57,7 +57,7 @@ WARNING:EDK:2099 - PORT:bscan_drck1 CONNECTOR:bscan_drck1 -
    C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
    _v2_1_0.mpd line 229 - floating connection!
 WARNING:EDK:2099 - PORT:Peripheral_Reset CONNECTOR:sys_periph_reset -
-   C:\FPGArcade\Bouncing_Ball\system.mhs line 138 - floating connection!
+   C:\FPGArcade\Bouncing_Ball\system.mhs line 146 - floating connection!
 
 Performing Clock DRCs...
 

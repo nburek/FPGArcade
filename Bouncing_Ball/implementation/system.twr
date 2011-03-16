@@ -35,7 +35,7 @@ INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and
 Timing constraint: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 50 MHz HIGH 
 50%;
 
- 4 paths analyzed, 4 endpoints analyzed, 0 failing endpoints
+ 114 paths analyzed, 50 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
  Minimum period is   6.000ns.
 --------------------------------------------------------------------------------
@@ -45,9 +45,9 @@ Timing constraint: TS_clock_generator_0_clock_generator_0_SIG_DCM0_CLK0 =
 PERIOD TIMEGRP         "clock_generator_0_clock_generator_0_SIG_DCM0_CLK0" 
 TS_sys_clk_pin         HIGH 50%;
 
- 132617 paths analyzed, 6388 endpoints analyzed, 0 failing endpoints
+ 134799 paths analyzed, 7197 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is  14.436ns.
+ Minimum period is  13.958ns.
 --------------------------------------------------------------------------------
 
 
@@ -58,8 +58,8 @@ Derived Constraints for TS_sys_clk_pin
 |           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
 |                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|TS_sys_clk_pin                 |     20.000ns|      6.000ns|     14.436ns|            0|            0|            4|       132617|
-| TS_clock_generator_0_clock_gen|     20.000ns|     14.436ns|          N/A|            0|            0|       132617|            0|
+|TS_sys_clk_pin                 |     20.000ns|      6.000ns|     13.958ns|            0|            0|          114|       134799|
+| TS_clock_generator_0_clock_gen|     20.000ns|     13.958ns|          N/A|            0|            0|       134799|            0|
 | erator_0_SIG_DCM0_CLK0        |             |             |             |             |             |             |             |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
@@ -75,7 +75,7 @@ Clock to Setup on destination clock fpga_0_clk_1_sys_clk_pin
                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
-fpga_0_clk_1_sys_clk_pin|   14.436|         |         |         |
+fpga_0_clk_1_sys_clk_pin|   13.958|         |         |         |
 ------------------------+---------+---------+---------+---------+
 
 
@@ -84,20 +84,20 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 132621 paths, 0 nets, and 10220 connections
+Constraints cover 134913 paths, 0 nets, and 11218 connections
 
 Design statistics:
-   Minimum period:  14.436ns   (Maximum frequency:  69.271MHz)
+   Minimum period:  13.958ns   (Maximum frequency:  71.644MHz)
 
 
-Analysis completed Sat Mar 12 15:29:36 2011 
+Analysis completed Wed Mar 16 01:59:45 2011 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 117 MB
+Peak Memory Usage: 120 MB
 
 
 

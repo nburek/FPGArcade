@@ -22,6 +22,40 @@
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="PmodJSTK_Module.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="PmodJSTK_Module.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="PmodJSTK_Module.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="PmodJSTK_Module.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="PmodJSTK_Module.ncd" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="PmodJSTK_Module.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="PmodJSTK_Module.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="PmodJSTK_Module.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="PmodJSTK_Module.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="PmodJSTK_Module.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="PmodJSTK_Module.pcf" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="PmodJSTK_Module.prj"/>
+    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="PmodJSTK_Module.ptwx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="PmodJSTK_Module.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="PmodJSTK_Module.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="PmodJSTK_Module.twr" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="PmodJSTK_Module.twx" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="PmodJSTK_Module.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XPI" xil_pn:name="PmodJSTK_Module.xpi"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="PmodJSTK_Module.xst"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="PmodJSTK_Module_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="PmodJSTK_Module_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="PmodJSTK_Module_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="PmodJSTK_Module_map.ncd" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="PmodJSTK_Module_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="PmodJSTK_Module_map.xrpt"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="PmodJSTK_Module_ngdbuild.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="PmodJSTK_Module_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="PmodJSTK_Module_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="PmodJSTK_Module_par.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="PmodJSTK_Module_summary.html"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="PmodJSTK_Module_summary.xml"/>
+    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="PmodJSTK_Module_usage.xml"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="PmodJSTK_Module_vhdl.prj"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="PmodJSTK_Module_xst.xrpt"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
@@ -43,31 +77,23 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="top.ngc"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="top.ngd"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="top.ngr"/>
-    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="top.pad"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="top.par" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="top.pcf" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="top.prj"/>
-    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="top.ptwx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="top.stx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="top.syr"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="top.twr" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="top.twx" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="top.unroutes" xil_pn:subbranch="Par"/>
-    <file xil_pn:fileType="FILE_XPI" xil_pn:name="top.xpi"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="top.xst"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="top_guide.ncd" xil_pn:origination="imported"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="top_map.map" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="top_map.mrp" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="top_map.ncd" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="top_map.ngm" xil_pn:subbranch="Map"/>
-    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="top_map.xrpt"/>
-    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="top_ngdbuild.xrpt"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="top_pad.csv" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="top_pad.txt" xil_pn:subbranch="Par"/>
-    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="top_par.xrpt"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="top_summary.html"/>
-    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="top_summary.xml"/>
-    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="top_usage.xml"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="top_vhdl.prj"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="top_xst.xrpt"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
@@ -80,11 +106,11 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1300226650" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="4504852337161361688" xil_pn:start_ts="1300226650">
+    <transform xil_pn:end_ts="1300227004" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="6067600585030728374" xil_pn:start_ts="1300227004">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1300226650" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="6569805506385592702" xil_pn:start_ts="1300226650">
+    <transform xil_pn:end_ts="1300227004" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-4887125716279220004" xil_pn:start_ts="1300227004">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -92,7 +118,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1300226650" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-9042377951913232490" xil_pn:start_ts="1300226650">
+    <transform xil_pn:end_ts="1300227004" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-7902828865846442444" xil_pn:start_ts="1300227004">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -100,73 +126,73 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1300226650" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-1748382806773257784" xil_pn:start_ts="1300226650">
+    <transform xil_pn:end_ts="1300227004" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-8498585008427937754" xil_pn:start_ts="1300227004">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1300226655" xil_pn:in_ck="-2027749428123151083" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-7160995334612905905" xil_pn:start_ts="1300226650">
+    <transform xil_pn:end_ts="1300227010" xil_pn:in_ck="-2027749428123151083" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="1989159666016888813" xil_pn:start_ts="1300227004">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="PmodJSTK_Module.lso"/>
+      <outfile xil_pn:name="PmodJSTK_Module.ngc"/>
+      <outfile xil_pn:name="PmodJSTK_Module.ngr"/>
+      <outfile xil_pn:name="PmodJSTK_Module.prj"/>
+      <outfile xil_pn:name="PmodJSTK_Module.stx"/>
+      <outfile xil_pn:name="PmodJSTK_Module.syr"/>
+      <outfile xil_pn:name="PmodJSTK_Module.xst"/>
+      <outfile xil_pn:name="PmodJSTK_Module_vhdl.prj"/>
+      <outfile xil_pn:name="PmodJSTK_Module_xst.xrpt"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
-      <outfile xil_pn:name="top.lso"/>
-      <outfile xil_pn:name="top.ngc"/>
-      <outfile xil_pn:name="top.ngr"/>
-      <outfile xil_pn:name="top.prj"/>
-      <outfile xil_pn:name="top.stx"/>
-      <outfile xil_pn:name="top.syr"/>
-      <outfile xil_pn:name="top.xst"/>
-      <outfile xil_pn:name="top_vhdl.prj"/>
-      <outfile xil_pn:name="top_xst.xrpt"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>
-    <transform xil_pn:end_ts="1300226657" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="6693835875156060939" xil_pn:start_ts="1300226657">
+    <transform xil_pn:end_ts="1300227010" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-8453111340357852183" xil_pn:start_ts="1300227010">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1300226660" xil_pn:in_ck="154288912569" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="6632346422876668555" xil_pn:start_ts="1300226657">
+    <transform xil_pn:end_ts="1300227013" xil_pn:in_ck="-2831028215073363536" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-2007305442901606615" xil_pn:start_ts="1300227010">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="PmodJSTK_Module.bld"/>
+      <outfile xil_pn:name="PmodJSTK_Module.ngd"/>
+      <outfile xil_pn:name="PmodJSTK_Module_ngdbuild.xrpt"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
-      <outfile xil_pn:name="top.bld"/>
-      <outfile xil_pn:name="top.ngd"/>
-      <outfile xil_pn:name="top_ngdbuild.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1300226663" xil_pn:in_ck="154288912570" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-5849673150125579957" xil_pn:start_ts="1300226660">
+    <transform xil_pn:end_ts="1300227016" xil_pn:in_ck="-2831028172454920558" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-5849673150125579957" xil_pn:start_ts="1300227013">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="PmodJSTK_Module.pcf"/>
+      <outfile xil_pn:name="PmodJSTK_Module_map.map"/>
+      <outfile xil_pn:name="PmodJSTK_Module_map.mrp"/>
+      <outfile xil_pn:name="PmodJSTK_Module_map.ncd"/>
+      <outfile xil_pn:name="PmodJSTK_Module_map.ngm"/>
+      <outfile xil_pn:name="PmodJSTK_Module_map.xrpt"/>
+      <outfile xil_pn:name="PmodJSTK_Module_summary.xml"/>
+      <outfile xil_pn:name="PmodJSTK_Module_usage.xml"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
-      <outfile xil_pn:name="top.pcf"/>
-      <outfile xil_pn:name="top_map.map"/>
-      <outfile xil_pn:name="top_map.mrp"/>
-      <outfile xil_pn:name="top_map.ncd"/>
-      <outfile xil_pn:name="top_map.ngm"/>
-      <outfile xil_pn:name="top_map.xrpt"/>
-      <outfile xil_pn:name="top_summary.xml"/>
-      <outfile xil_pn:name="top_usage.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1300226686" xil_pn:in_ck="182976548277359827" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="-5563652517805085498" xil_pn:start_ts="1300226663">
+    <transform xil_pn:end_ts="1300227040" xil_pn:in_ck="-3513966901078786012" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="-5563652517805085498" xil_pn:start_ts="1300227016">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="PmodJSTK_Module.ncd"/>
+      <outfile xil_pn:name="PmodJSTK_Module.pad"/>
+      <outfile xil_pn:name="PmodJSTK_Module.par"/>
+      <outfile xil_pn:name="PmodJSTK_Module.ptwx"/>
+      <outfile xil_pn:name="PmodJSTK_Module.unroutes"/>
+      <outfile xil_pn:name="PmodJSTK_Module.xpi"/>
+      <outfile xil_pn:name="PmodJSTK_Module_pad.csv"/>
+      <outfile xil_pn:name="PmodJSTK_Module_pad.txt"/>
+      <outfile xil_pn:name="PmodJSTK_Module_par.xrpt"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
-      <outfile xil_pn:name="top.ncd"/>
-      <outfile xil_pn:name="top.pad"/>
-      <outfile xil_pn:name="top.par"/>
-      <outfile xil_pn:name="top.ptwx"/>
-      <outfile xil_pn:name="top.unroutes"/>
-      <outfile xil_pn:name="top.xpi"/>
-      <outfile xil_pn:name="top_pad.csv"/>
-      <outfile xil_pn:name="top_pad.txt"/>
-      <outfile xil_pn:name="top_par.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1300226686" xil_pn:in_ck="154288912438" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1300226683">
+    <transform xil_pn:end_ts="1300227040" xil_pn:in_ck="-2831033798089393654" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1300227037">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="PmodJSTK_Module.twr"/>
+      <outfile xil_pn:name="PmodJSTK_Module.twx"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
-      <outfile xil_pn:name="top.twr"/>
-      <outfile xil_pn:name="top.twx"/>
     </transform>
   </transforms>
 

@@ -1,4 +1,6 @@
-EN clock50khz NULL C:/FPGArcade/PmodJSTK_Module/clock50Khz.vhd sub00/vhpl00 1300226652
+AR pmodjstk_module behavioral C:/FPGArcade/PmodJSTK_Module/PmodJSTK_Driver.vhd sub00/vhpl05 1300227009
+EN clock50khz NULL C:/FPGArcade/PmodJSTK_Module/clock50Khz.vhd sub00/vhpl00 1300227006
 EN top NULL C:/FPGArcade/PmodJSTK_Module/PmodJSTK_Driver.vhd sub00/vhpl02 1300226654
 AR top behavioral C:/FPGArcade/PmodJSTK_Module/PmodJSTK_Driver.vhd sub00/vhpl03 1300226655
-AR clock50khz behavioral C:/FPGArcade/PmodJSTK_Module/clock50Khz.vhd sub00/vhpl01 1300226653
+EN pmodjstk_module NULL C:/FPGArcade/PmodJSTK_Module/PmodJSTK_Driver.vhd sub00/vhpl04 1300227008
+AR clock50khz behavioral C:/FPGArcade/PmodJSTK_Module/clock50Khz.vhd sub00/vhpl01 1300227007

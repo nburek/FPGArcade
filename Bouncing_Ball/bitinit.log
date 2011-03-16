@@ -15,7 +15,8 @@ Address Map for Processor microblaze_0
   (0000000000-0x00001fff) dlmb_cntlr	dlmb
   (0000000000-0x00001fff) ilmb_cntlr	ilmb
   (0x81400000-0x8140ffff) LEDs_8Bit	mb_plb
-  (0x81420000-0x8142ffff) Block_Output	mb_plb
+  (0x81420000-0x8142ffff) Joystick_GPIO	mb_plb
+  (0x81440000-0x8144ffff) Block_Output	mb_plb
   (0x84400000-0x8440ffff) mdm_0	mb_plb
 INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
    C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
@@ -24,7 +25,7 @@ INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
 INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
    C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
    \plb_v46_v2_1_0.mpd line 70 - tool is overriding PARAMETER
-   C_PLBV46_NUM_SLAVES value to 3
+   C_PLBV46_NUM_SLAVES value to 4
 INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
    C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
    \plb_v46_v2_1_0.mpd line 71 - tool is overriding PARAMETER C_PLBV46_MID_WIDTH
@@ -58,6 +59,10 @@ INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
    _v2_1_0.mpd line 84 - tool is overriding PARAMETER C_SPLB_NUM_MASTERS value
    to 2
 INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Block_Output -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Joystick_GPIO -
    C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
    a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
    C_SPLB_NUM_MASTERS value to 2
