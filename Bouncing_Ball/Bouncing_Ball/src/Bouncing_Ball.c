@@ -11,7 +11,8 @@
  */
 #define LOOP_DELAY	  10000
 
-/* following constant is used to determine which channel of the GPIO is
+/* 
+ *following constant is used to determine which channel of the GPIO is
  * used if there are 2 channels supported in the GPIO.
  */
 #define BLOCK_CHANNEL 1
@@ -171,12 +172,16 @@ int main(void)
 			case MISS:default:
 				if (ball.x >= STAGE_WIDTH || ball.x<= -ball.width){
 					initBall(&ball);
+					longDelayCount = 0; //set to 0 so that the game will delay for a while
+					ball.y = ((joy1.y & 0x1)<<1) | (joy2.y & 0x1); //set a random ball speed between 0 and 3
+
 				}
 				if (ball.y >= STAGE_HEIGHT || ball.y<= -ball.height){
 					initBall(&ball);
+					longDelayCount = 0; //set to 0 so that the game will delay for a while
+					ball.y = ((joy1.y & 0x1)<<1) | (joy2.y & 0x1); //set a random ball speed between 0 and 3
+
 				}
-				longDelayCount = 0; //set to 0 so that the game will delay for a while
-				ball.y = ((joy1.y & 0x1)<<1) | (joy2.y & 0x1); //set a random ball speed between 0 and 3
 				break;
 		
 		}
