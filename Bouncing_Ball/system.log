@@ -11479,3 +11479,1067 @@ Done writing filter settings to:
 	C:\FPGArcade\Bouncing_Ball\etc\system.filters
 Done writing Tab View settings to:
 	C:\FPGArcade\Bouncing_Ball\etc\system.gui
+Xilinx Platform Studio (XPS)
+Xilinx EDK 12.4 Build EDK_MS4.81d
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+Generated Block Diagram.
+Diagram Controls
+Zoom In/Out = ALT + (Mouse + Left Button) or ARROW UP/DOWN.
+Pan = SHIFT + (Mouse + Left Button) or ARROW UP/DOWN/LEFT/RIGHT.
+
+********************************************************************************
+At Local date and time: Wed Mar 16 11:06:49 2011
+ make -f system.make Bouncing_Ball_program started...
+make: Nothing to be done for `Bouncing_Ball_program'.
+Done!
+
+********************************************************************************
+At Local date and time: Wed Mar 16 11:07:04 2011
+ make -f system.make Bouncing_Ball_program started...
+mb-gcc -O2 Bouncing_Ball/src/Bouncing_Ball.c  -o Bouncing_Ball/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b   -g    -I./microblaze_0/include/  -IBouncing_Ball/src/  -L./microblaze_0/lib/  \
+	  
+Bouncing_Ball/src/Bouncing_Ball.c:86: error: expected ‘;’, ‘,’ or ‘)’ before ‘&’ token
+Bouncing_Ball/src/Bouncing_Ball.c:87: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘classify_point’
+Bouncing_Ball/src/Bouncing_Ball.c:88: error: expected ‘;’, ‘,’ or ‘)’ before ‘&’ token
+Bouncing_Ball/src/Bouncing_Ball.c:262: error: expected ‘;’, ‘,’ or ‘)’ before ‘&’ token
+Bouncing_Ball/src/Bouncing_Ball.c:271: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘classify_point’
+Bouncing_Ball/src/Bouncing_Ball.c:279: error: expected ‘;’, ‘,’ or ‘)’ before ‘&’ token
+Bouncing_Ball/src/Bouncing_Ball.c:290:2: warning: no newline at end of file
+make: *** [Bouncing_Ball/executable.elf] Error 1
+Done!
+
+********************************************************************************
+At Local date and time: Wed Mar 16 11:08:53 2011
+ make -f system.make Bouncing_Ball_program started...
+mb-gcc -O2 Bouncing_Ball/src/Bouncing_Ball.c  -o Bouncing_Ball/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b   -g    -I./microblaze_0/include/  -IBouncing_Ball/src/  -L./microblaze_0/lib/  \
+	  
+Bouncing_Ball/src/Bouncing_Ball.c:87: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘classify_point’
+Bouncing_Ball/src/Bouncing_Ball.c: In function ‘main’:
+Bouncing_Ball/src/Bouncing_Ball.c:124: error: incompatible type for argument 1 of ‘initBall’
+Bouncing_Ball/src/Bouncing_Ball.c:163: error: incompatible type for argument 1 of ‘find_hitBound’
+Bouncing_Ball/src/Bouncing_Ball.c:163: error: incompatible type for argument 2 of ‘find_hitBound’
+Bouncing_Ball/src/Bouncing_Ball.c: At top level:
+Bouncing_Ball/src/Bouncing_Ball.c:262: error: expected ‘;’, ‘,’ or ‘)’ before ‘&’ token
+Bouncing_Ball/src/Bouncing_Ball.c:271: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘classify_point’
+Bouncing_Ball/src/Bouncing_Ball.c: In function ‘find_hitBound’:
+Bouncing_Ball/src/Bouncing_Ball.c:281: error: request for member ‘x’ in something not a structure or union
+Bouncing_Ball/src/Bouncing_Ball.c:281: error: request for member ‘y’ in something not a structure or union
+Bouncing_Ball/src/Bouncing_Ball.c:281: error: request for member ‘x’ in something not a structure or union
+Bouncing_Ball/src/Bouncing_Ball.c:281: error: request for member ‘height’ in something not a structure or union
+Bouncing_Ball/src/Bouncing_Ball.c:284: error: request for member ‘width’ in something not a structure or union
+Bouncing_Ball/src/Bouncing_Ball.c:284: error: request for member ‘y’ in something not a structure or union
+Bouncing_Ball/src/Bouncing_Ball.c:284: error: request for member ‘width’ in something not a structure or union
+Bouncing_Ball/src/Bouncing_Ball.c:284: error: request for member ‘height’ in something not a structure or union
+Bouncing_Ball/src/Bouncing_Ball.c:290:2: warning: no newline at end of file
+make: *** [Bouncing_Ball/executable.elf] Error 1
+Done!
+
+********************************************************************************
+At Local date and time: Wed Mar 16 11:10:10 2011
+ make -f system.make Bouncing_Ball_program started...
+mb-gcc -O2 Bouncing_Ball/src/Bouncing_Ball.c  -o Bouncing_Ball/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b   -g    -I./microblaze_0/include/  -IBouncing_Ball/src/  -L./microblaze_0/lib/  \
+	  
+Bouncing_Ball/src/Bouncing_Ball.c:87: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘classify_point’
+Bouncing_Ball/src/Bouncing_Ball.c: In function ‘main’:
+Bouncing_Ball/src/Bouncing_Ball.c:124: error: incompatible type for argument 1 of ‘initBall’
+Bouncing_Ball/src/Bouncing_Ball.c:163: error: incompatible type for argument 1 of ‘find_hitBound’
+Bouncing_Ball/src/Bouncing_Ball.c:163: error: incompatible type for argument 2 of ‘find_hitBound’
+Bouncing_Ball/src/Bouncing_Ball.c: At top level:
+Bouncing_Ball/src/Bouncing_Ball.c:262: error: expected ‘;’, ‘,’ or ‘)’ before ‘&’ token
+Bouncing_Ball/src/Bouncing_Ball.c:271: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘classify_point’
+Bouncing_Ball/src/Bouncing_Ball.c:290:2: warning: no newline at end of file
+make: *** [Bouncing_Ball/executable.elf] Error 1
+Done!
+
+********************************************************************************
+At Local date and time: Wed Mar 16 11:10:19 2011
+ make -f system.make Bouncing_Ball_program started...
+mb-gcc -O2 Bouncing_Ball/src/Bouncing_Ball.c  -o Bouncing_Ball/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b   -g    -I./microblaze_0/include/  -IBouncing_Ball/src/  -L./microblaze_0/lib/  \
+	  
+Bouncing_Ball/src/Bouncing_Ball.c:87: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘classify_point’
+Bouncing_Ball/src/Bouncing_Ball.c: In function ‘main’:
+Bouncing_Ball/src/Bouncing_Ball.c:124: error: incompatible type for argument 1 of ‘initBall’
+Bouncing_Ball/src/Bouncing_Ball.c:163: error: incompatible type for argument 1 of ‘find_hitBound’
+Bouncing_Ball/src/Bouncing_Ball.c:163: error: incompatible type for argument 2 of ‘find_hitBound’
+Bouncing_Ball/src/Bouncing_Ball.c: At top level:
+Bouncing_Ball/src/Bouncing_Ball.c:262: error: expected ‘;’, ‘,’ or ‘)’ before ‘&’ token
+Bouncing_Ball/src/Bouncing_Ball.c:271: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘classify_point’
+Bouncing_Ball/src/Bouncing_Ball.c:290:2: warning: no newline at end of file
+make: *** [Bouncing_Ball/executable.elf] Error 1
+Done!
+
+********************************************************************************
+At Local date and time: Wed Mar 16 11:11:20 2011
+ make -f system.make Bouncing_Ball_program started...
+mb-gcc -O2 Bouncing_Ball/src/Bouncing_Ball.c  -o Bouncing_Ball/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b   -g    -I./microblaze_0/include/  -IBouncing_Ball/src/  -L./microblaze_0/lib/  \
+	  
+Bouncing_Ball/src/Bouncing_Ball.c:87: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘classify_point’
+Bouncing_Ball/src/Bouncing_Ball.c: In function ‘main’:
+Bouncing_Ball/src/Bouncing_Ball.c:124: error: incompatible type for argument 1 of ‘initBall’
+Bouncing_Ball/src/Bouncing_Ball.c: At top level:
+Bouncing_Ball/src/Bouncing_Ball.c:262: error: expected ‘;’, ‘,’ or ‘)’ before ‘&’ token
+Bouncing_Ball/src/Bouncing_Ball.c:271: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘classify_point’
+Bouncing_Ball/src/Bouncing_Ball.c:290:2: warning: no newline at end of file
+make: *** [Bouncing_Ball/executable.elf] Error 1
+Done!
+
+********************************************************************************
+At Local date and time: Wed Mar 16 11:12:14 2011
+ make -f system.make Bouncing_Ball_program started...
+mb-gcc -O2 Bouncing_Ball/src/Bouncing_Ball.c  -o Bouncing_Ball/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b   -g    -I./microblaze_0/include/  -IBouncing_Ball/src/  -L./microblaze_0/lib/  \
+	  
+Bouncing_Ball/src/Bouncing_Ball.c:87: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘classify_point’
+Bouncing_Ball/src/Bouncing_Ball.c: In function ‘main’:
+Bouncing_Ball/src/Bouncing_Ball.c:124: error: incompatible type for argument 1 of ‘initBall’
+Bouncing_Ball/src/Bouncing_Ball.c: At top level:
+Bouncing_Ball/src/Bouncing_Ball.c:262: error: expected ‘;’, ‘,’ or ‘)’ before ‘&’ token
+Bouncing_Ball/src/Bouncing_Ball.c:271: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘classify_point’
+Bouncing_Ball/src/Bouncing_Ball.c:290:2: warning: no newline at end of file
+make: *** [Bouncing_Ball/executable.elf] Error 1
+Done!
+
+********************************************************************************
+At Local date and time: Wed Mar 16 11:12:40 2011
+ make -f system.make Bouncing_Ball_program started...
+mb-gcc -O2 Bouncing_Ball/src/Bouncing_Ball.c  -o Bouncing_Ball/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b   -g    -I./microblaze_0/include/  -IBouncing_Ball/src/  -L./microblaze_0/lib/  \
+	  
+Bouncing_Ball/src/Bouncing_Ball.c:87: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘classify_point’
+Bouncing_Ball/src/Bouncing_Ball.c: In function ‘main’:
+Bouncing_Ball/src/Bouncing_Ball.c:124: error: incompatible type for argument 1 of ‘initBall’
+Bouncing_Ball/src/Bouncing_Ball.c: At top level:
+Bouncing_Ball/src/Bouncing_Ball.c:262: error: expected ‘;’, ‘,’ or ‘)’ before ‘&’ token
+Bouncing_Ball/src/Bouncing_Ball.c:271: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘classify_point’
+Bouncing_Ball/src/Bouncing_Ball.c:290:2: warning: no newline at end of file
+make: *** [Bouncing_Ball/executable.elf] Error 1
+Done!
+
+********************************************************************************
+At Local date and time: Wed Mar 16 11:13:24 2011
+ make -f system.make Bouncing_Ball_program started...
+mb-gcc -O2 Bouncing_Ball/src/Bouncing_Ball.c  -o Bouncing_Ball/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b   -g    -I./microblaze_0/include/  -IBouncing_Ball/src/  -L./microblaze_0/lib/  \
+	  
+Bouncing_Ball/src/Bouncing_Ball.c: In function ‘main’:
+Bouncing_Ball/src/Bouncing_Ball.c:124: error: incompatible type for argument 1 of ‘initBall’
+Bouncing_Ball/src/Bouncing_Ball.c: At top level:
+Bouncing_Ball/src/Bouncing_Ball.c:262: error: expected ‘;’, ‘,’ or ‘)’ before ‘&’ token
+Bouncing_Ball/src/Bouncing_Ball.c:290:2: warning: no newline at end of file
+make: *** [Bouncing_Ball/executable.elf] Error 1
+Done!
+
+********************************************************************************
+At Local date and time: Wed Mar 16 11:14:54 2011
+ make -f system.make Bouncing_Ball_program started...
+mb-gcc -O2 Bouncing_Ball/src/Bouncing_Ball.c  -o Bouncing_Ball/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b   -g    -I./microblaze_0/include/  -IBouncing_Ball/src/  -L./microblaze_0/lib/  \
+	  
+Bouncing_Ball/src/Bouncing_Ball.c:262: warning: ‘struct Ball’ declared inside parameter list
+Bouncing_Ball/src/Bouncing_Ball.c:262: warning: its scope is only this definition or declaration, which is probably not what you want
+Bouncing_Ball/src/Bouncing_Ball.c:262: error: conflicting types for ‘initBall’
+Bouncing_Ball/src/Bouncing_Ball.c:86: error: previous declaration of ‘initBall’ was here
+Bouncing_Ball/src/Bouncing_Ball.c: In function ‘initBall’:
+Bouncing_Ball/src/Bouncing_Ball.c:264: error: dereferencing pointer to incomplete type
+Bouncing_Ball/src/Bouncing_Ball.c:265: error: dereferencing pointer to incomplete type
+Bouncing_Ball/src/Bouncing_Ball.c:266: error: dereferencing pointer to incomplete type
+Bouncing_Ball/src/Bouncing_Ball.c:267: error: dereferencing pointer to incomplete type
+Bouncing_Ball/src/Bouncing_Ball.c:268: error: dereferencing pointer to incomplete type
+Bouncing_Ball/src/Bouncing_Ball.c:269: error: dereferencing pointer to incomplete type
+Bouncing_Ball/src/Bouncing_Ball.c:290:2: warning: no newline at end of file
+make: *** [Bouncing_Ball/executable.elf] Error 1
+Done!
+
+********************************************************************************
+At Local date and time: Wed Mar 16 11:15:35 2011
+ make -f system.make Bouncing_Ball_program started...
+mb-gcc -O2 Bouncing_Ball/src/Bouncing_Ball.c  -o Bouncing_Ball/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b   -g    -I./microblaze_0/include/  -IBouncing_Ball/src/  -L./microblaze_0/lib/  \
+	  
+Bouncing_Ball/src/Bouncing_Ball.c:290:2: warning: no newline at end of file
+/cygdrive/c/DOCUME~1/nb418308/LOCALS~1/Temp/ccF2bv6f.o: In function `main':
+/cygdrive/c/FPGArcade/Bouncing_Ball/Bouncing_Ball/src/Bouncing_Ball.c:163: undefined reference to `initball'
+/cygdrive/c/FPGArcade/Bouncing_Ball/Bouncing_Ball/src/Bouncing_Ball.c:172: undefined reference to `initball'
+collect2: ld returned 1 exit status
+make: *** [Bouncing_Ball/executable.elf] Error 1
+Done!
+
+********************************************************************************
+At Local date and time: Wed Mar 16 11:17:47 2011
+ make -f system.make Bouncing_Ball_program started...
+mb-gcc -O2 Bouncing_Ball/src/Bouncing_Ball.c  -o Bouncing_Ball/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b   -g    -I./microblaze_0/include/  -IBouncing_Ball/src/  -L./microblaze_0/lib/  \
+	  
+Bouncing_Ball/src/Bouncing_Ball.c: In function ‘main’:
+Bouncing_Ball/src/Bouncing_Ball.c:173: error: incompatible type for argument 1 of ‘initBall’
+Bouncing_Ball/src/Bouncing_Ball.c:176: error: incompatible type for argument 1 of ‘initBall’
+Bouncing_Ball/src/Bouncing_Ball.c:290:2: warning: no newline at end of file
+make: *** [Bouncing_Ball/executable.elf] Error 1
+Done!
+
+********************************************************************************
+At Local date and time: Wed Mar 16 11:18:06 2011
+ make -f system.make Bouncing_Ball_program started...
+mb-gcc -O2 Bouncing_Ball/src/Bouncing_Ball.c  -o Bouncing_Ball/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b   -g    -I./microblaze_0/include/  -IBouncing_Ball/src/  -L./microblaze_0/lib/  \
+	  
+Bouncing_Ball/src/Bouncing_Ball.c:290:2: warning: no newline at end of file
+mb-size Bouncing_Ball/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3394	    348	   1104	   4846	   12ee	Bouncing_Ball/executable.elf
+
+WARNING:EDK:3915 - Process successfully completed but error message(s) were generated. Please verify that the messages are only warnings.Done!
+
+********************************************************************************
+At Local date and time: Wed Mar 16 11:18:25 2011
+ make -f system.make Bouncing_Ball_program started...
+mb-gcc -O2 Bouncing_Ball/src/Bouncing_Ball.c  -o Bouncing_Ball/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b   -g    -I./microblaze_0/include/  -IBouncing_Ball/src/  -L./microblaze_0/lib/  \
+	  
+mb-size Bouncing_Ball/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3394	    348	   1104	   4846	   12ee	Bouncing_Ball/executable.elf
+
+Done!
+
+********************************************************************************
+At Local date and time: Wed Mar 16 11:18:35 2011
+ make -f system.make Bouncing_Ball_program started...
+make: Nothing to be done for `Bouncing_Ball_program'.
+Done!
+Writing filter settings....
+Done writing filter settings to:
+	C:\FPGArcade\Bouncing_Ball\etc\system.filters
+Done writing Tab View settings to:
+	C:\FPGArcade\Bouncing_Ball\etc\system.gui
+Xilinx Platform Studio (XPS)
+Xilinx EDK 12.4 Build EDK_MS4.81d
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+Generated Block Diagram.
+Diagram Controls
+Zoom In/Out = ALT + (Mouse + Left Button) or ARROW UP/DOWN.
+Pan = SHIFT + (Mouse + Left Button) or ARROW UP/DOWN/LEFT/RIGHT.
+
+********************************************************************************
+At Local date and time: Wed Mar 16 12:20:49 2011
+ make -f system.make Bouncing_Ball_program started...
+mb-gcc -O2 Bouncing_Ball/src/Bouncing_Ball.c  -o Bouncing_Ball/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b   -g    -I./microblaze_0/include/  -IBouncing_Ball/src/  -L./microblaze_0/lib/  \
+	  
+mb-size Bouncing_Ball/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3542	    348	   1104	   4994	   1382	Bouncing_Ball/executable.elf
+
+Done!
+
+********************************************************************************
+At Local date and time: Wed Mar 16 12:20:54 2011
+ make -f system.make init_bram started...
+*********************************************
+Initializing BRAM contents of the bitstream
+*********************************************
+bitinit -p xc3s500efg320-4 system.mhs -lp C:/Xilinx/12.4/ISE_DS/ISE/Digilent_Nexys_EDK_Board_Support_Files_V_2_1/lib/  -pe microblaze_0 Bouncing_Ball/executable.elf  \
+	-bt implementation/system.bit -o implementation/download.bit
+
+bitinit version Xilinx EDK 12.4 Build EDK_MS4.81d
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+
+Overriding IP level properties ...
+
+Computing clock values...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00001fff) dlmb_cntlr	dlmb
+  (0000000000-0x00001fff) ilmb_cntlr	ilmb
+  (0x81400000-0x8140ffff) LEDs_8Bit	mb_plb
+  (0x81420000-0x8142ffff) Joystick_GPIO	mb_plb
+  (0x81440000-0x8144ffff) Block_Output	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 69 - tool is overriding PARAMETER
+   C_PLBV46_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 70 - tool is overriding PARAMETER
+   C_PLBV46_NUM_SLAVES value to 4
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 71 - tool is overriding PARAMETER C_PLBV46_MID_WIDTH
+   value to 1
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 73 - tool is overriding PARAMETER C_PLBV46_DWIDTH
+   value to 32
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:ilmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:dlmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:lmb_bram -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 67 - tool is overriding PARAMETER C_MEMSIZE
+   value to 0x2000
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:LEDs_8Bit -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 83 - tool is overriding PARAMETER C_SPLB_MID_WIDTH value to
+   1
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 84 - tool is overriding PARAMETER C_SPLB_NUM_MASTERS value
+   to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Block_Output -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Joystick_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+
+Checking platform address map ...
+
+Initializing Memory...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -p xc3s500efg320-4 -bt
+"implementation/system.bit"  -bd "Bouncing_Ball/executable.elf" tag microblaze_0
+ -o b implementation/download.bit 
+Memory Initialization completed successfully.
+
+Done!
+
+********************************************************************************
+At Local date and time: Wed Mar 16 12:23:30 2011
+ make -f system.make Bouncing_Ball_program started...
+mb-gcc -O2 Bouncing_Ball/src/Bouncing_Ball.c  -o Bouncing_Ball/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b   -g    -I./microblaze_0/include/  -IBouncing_Ball/src/  -L./microblaze_0/lib/  \
+	  
+mb-size Bouncing_Ball/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3538	    348	   1104	   4990	   137e	Bouncing_Ball/executable.elf
+
+Done!
+
+********************************************************************************
+At Local date and time: Wed Mar 16 12:23:36 2011
+ make -f system.make init_bram started...
+*********************************************
+Initializing BRAM contents of the bitstream
+*********************************************
+bitinit -p xc3s500efg320-4 system.mhs -lp C:/Xilinx/12.4/ISE_DS/ISE/Digilent_Nexys_EDK_Board_Support_Files_V_2_1/lib/  -pe microblaze_0 Bouncing_Ball/executable.elf  \
+	-bt implementation/system.bit -o implementation/download.bit
+
+bitinit version Xilinx EDK 12.4 Build EDK_MS4.81d
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+
+Overriding IP level properties ...
+
+Computing clock values...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00001fff) dlmb_cntlr	dlmb
+  (0000000000-0x00001fff) ilmb_cntlr	ilmb
+  (0x81400000-0x8140ffff) LEDs_8Bit	mb_plb
+  (0x81420000-0x8142ffff) Joystick_GPIO	mb_plb
+  (0x81440000-0x8144ffff) Block_Output	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 69 - tool is overriding PARAMETER
+   C_PLBV46_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 70 - tool is overriding PARAMETER
+   C_PLBV46_NUM_SLAVES value to 4
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 71 - tool is overriding PARAMETER C_PLBV46_MID_WIDTH
+   value to 1
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 73 - tool is overriding PARAMETER C_PLBV46_DWIDTH
+   value to 32
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:ilmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:dlmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:lmb_bram -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 67 - tool is overriding PARAMETER C_MEMSIZE
+   value to 0x2000
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:LEDs_8Bit -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 83 - tool is overriding PARAMETER C_SPLB_MID_WIDTH value to
+   1
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 84 - tool is overriding PARAMETER C_SPLB_NUM_MASTERS value
+   to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Block_Output -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Joystick_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+
+Checking platform address map ...
+
+Initializing Memory...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -p xc3s500efg320-4 -bt
+"implementation/system.bit"  -bd "Bouncing_Ball/executable.elf" tag microblaze_0
+ -o b implementation/download.bit 
+Memory Initialization completed successfully.
+
+Done!
+
+********************************************************************************
+At Local date and time: Wed Mar 16 12:26:50 2011
+ make -f system.make Bouncing_Ball_program started...
+mb-gcc -O2 Bouncing_Ball/src/Bouncing_Ball.c  -o Bouncing_Ball/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b   -g    -I./microblaze_0/include/  -IBouncing_Ball/src/  -L./microblaze_0/lib/  \
+	  
+mb-size Bouncing_Ball/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3546	    348	   1104	   4998	   1386	Bouncing_Ball/executable.elf
+
+Done!
+
+********************************************************************************
+At Local date and time: Wed Mar 16 12:27:00 2011
+ make -f system.make init_bram started...
+*********************************************
+Initializing BRAM contents of the bitstream
+*********************************************
+bitinit -p xc3s500efg320-4 system.mhs -lp C:/Xilinx/12.4/ISE_DS/ISE/Digilent_Nexys_EDK_Board_Support_Files_V_2_1/lib/  -pe microblaze_0 Bouncing_Ball/executable.elf  \
+	-bt implementation/system.bit -o implementation/download.bit
+
+bitinit version Xilinx EDK 12.4 Build EDK_MS4.81d
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+
+Overriding IP level properties ...
+
+Computing clock values...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00001fff) dlmb_cntlr	dlmb
+  (0000000000-0x00001fff) ilmb_cntlr	ilmb
+  (0x81400000-0x8140ffff) LEDs_8Bit	mb_plb
+  (0x81420000-0x8142ffff) Joystick_GPIO	mb_plb
+  (0x81440000-0x8144ffff) Block_Output	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 69 - tool is overriding PARAMETER
+   C_PLBV46_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 70 - tool is overriding PARAMETER
+   C_PLBV46_NUM_SLAVES value to 4
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 71 - tool is overriding PARAMETER C_PLBV46_MID_WIDTH
+   value to 1
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 73 - tool is overriding PARAMETER C_PLBV46_DWIDTH
+   value to 32
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:ilmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:dlmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:lmb_bram -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 67 - tool is overriding PARAMETER C_MEMSIZE
+   value to 0x2000
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:LEDs_8Bit -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 83 - tool is overriding PARAMETER C_SPLB_MID_WIDTH value to
+   1
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 84 - tool is overriding PARAMETER C_SPLB_NUM_MASTERS value
+   to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Block_Output -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Joystick_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+
+Checking platform address map ...
+
+Initializing Memory...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -p xc3s500efg320-4 -bt
+"implementation/system.bit"  -bd "Bouncing_Ball/executable.elf" tag microblaze_0
+ -o b implementation/download.bit 
+Memory Initialization completed successfully.
+
+Done!
+
+********************************************************************************
+At Local date and time: Wed Mar 16 12:35:16 2011
+ make -f system.make Bouncing_Ball_program started...
+mb-gcc -O2 Bouncing_Ball/src/Bouncing_Ball.c  -o Bouncing_Ball/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b   -g    -I./microblaze_0/include/  -IBouncing_Ball/src/  -L./microblaze_0/lib/  \
+	  
+mb-size Bouncing_Ball/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3550	    348	   1104	   5002	   138a	Bouncing_Ball/executable.elf
+
+Done!
+
+********************************************************************************
+At Local date and time: Wed Mar 16 12:35:23 2011
+ make -f system.make init_bram started...
+*********************************************
+Initializing BRAM contents of the bitstream
+*********************************************
+bitinit -p xc3s500efg320-4 system.mhs -lp C:/Xilinx/12.4/ISE_DS/ISE/Digilent_Nexys_EDK_Board_Support_Files_V_2_1/lib/  -pe microblaze_0 Bouncing_Ball/executable.elf  \
+	-bt implementation/system.bit -o implementation/download.bit
+
+bitinit version Xilinx EDK 12.4 Build EDK_MS4.81d
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+
+Overriding IP level properties ...
+
+Computing clock values...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00001fff) dlmb_cntlr	dlmb
+  (0000000000-0x00001fff) ilmb_cntlr	ilmb
+  (0x81400000-0x8140ffff) LEDs_8Bit	mb_plb
+  (0x81420000-0x8142ffff) Joystick_GPIO	mb_plb
+  (0x81440000-0x8144ffff) Block_Output	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 69 - tool is overriding PARAMETER
+   C_PLBV46_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 70 - tool is overriding PARAMETER
+   C_PLBV46_NUM_SLAVES value to 4
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 71 - tool is overriding PARAMETER C_PLBV46_MID_WIDTH
+   value to 1
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 73 - tool is overriding PARAMETER C_PLBV46_DWIDTH
+   value to 32
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:ilmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:dlmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:lmb_bram -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 67 - tool is overriding PARAMETER C_MEMSIZE
+   value to 0x2000
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:LEDs_8Bit -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 83 - tool is overriding PARAMETER C_SPLB_MID_WIDTH value to
+   1
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 84 - tool is overriding PARAMETER C_SPLB_NUM_MASTERS value
+   to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Block_Output -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Joystick_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+
+Checking platform address map ...
+
+Initializing Memory...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -p xc3s500efg320-4 -bt
+"implementation/system.bit"  -bd "Bouncing_Ball/executable.elf" tag microblaze_0
+ -o b implementation/download.bit 
+Memory Initialization completed successfully.
+
+Done!
+
+********************************************************************************
+At Local date and time: Wed Mar 16 12:39:49 2011
+ make -f system.make Bouncing_Ball_program started...
+mb-gcc -O2 Bouncing_Ball/src/Bouncing_Ball.c  -o Bouncing_Ball/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b   -g    -I./microblaze_0/include/  -IBouncing_Ball/src/  -L./microblaze_0/lib/  \
+	  
+mb-size Bouncing_Ball/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3550	    348	   1104	   5002	   138a	Bouncing_Ball/executable.elf
+
+Done!
+
+********************************************************************************
+At Local date and time: Wed Mar 16 12:39:55 2011
+ make -f system.make init_bram started...
+*********************************************
+Initializing BRAM contents of the bitstream
+*********************************************
+bitinit -p xc3s500efg320-4 system.mhs -lp C:/Xilinx/12.4/ISE_DS/ISE/Digilent_Nexys_EDK_Board_Support_Files_V_2_1/lib/  -pe microblaze_0 Bouncing_Ball/executable.elf  \
+	-bt implementation/system.bit -o implementation/download.bit
+
+bitinit version Xilinx EDK 12.4 Build EDK_MS4.81d
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+
+Overriding IP level properties ...
+
+Computing clock values...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00001fff) dlmb_cntlr	dlmb
+  (0000000000-0x00001fff) ilmb_cntlr	ilmb
+  (0x81400000-0x8140ffff) LEDs_8Bit	mb_plb
+  (0x81420000-0x8142ffff) Joystick_GPIO	mb_plb
+  (0x81440000-0x8144ffff) Block_Output	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 69 - tool is overriding PARAMETER
+   C_PLBV46_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 70 - tool is overriding PARAMETER
+   C_PLBV46_NUM_SLAVES value to 4
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 71 - tool is overriding PARAMETER C_PLBV46_MID_WIDTH
+   value to 1
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 73 - tool is overriding PARAMETER C_PLBV46_DWIDTH
+   value to 32
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:ilmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:dlmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:lmb_bram -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 67 - tool is overriding PARAMETER C_MEMSIZE
+   value to 0x2000
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:LEDs_8Bit -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 83 - tool is overriding PARAMETER C_SPLB_MID_WIDTH value to
+   1
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 84 - tool is overriding PARAMETER C_SPLB_NUM_MASTERS value
+   to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Block_Output -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Joystick_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+
+Checking platform address map ...
+
+Initializing Memory...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -p xc3s500efg320-4 -bt
+"implementation/system.bit"  -bd "Bouncing_Ball/executable.elf" tag microblaze_0
+ -o b implementation/download.bit 
+Memory Initialization completed successfully.
+
+Done!
+
+********************************************************************************
+At Local date and time: Wed Mar 16 12:52:24 2011
+ make -f system.make Bouncing_Ball_program started...
+mb-gcc -O2 Bouncing_Ball/src/Bouncing_Ball.c  -o Bouncing_Ball/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b   -g    -I./microblaze_0/include/  -IBouncing_Ball/src/  -L./microblaze_0/lib/  \
+	  
+mb-size Bouncing_Ball/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3606	    348	   1104	   5058	   13c2	Bouncing_Ball/executable.elf
+
+Done!
+
+********************************************************************************
+At Local date and time: Wed Mar 16 12:52:29 2011
+ make -f system.make init_bram started...
+*********************************************
+Initializing BRAM contents of the bitstream
+*********************************************
+bitinit -p xc3s500efg320-4 system.mhs -lp C:/Xilinx/12.4/ISE_DS/ISE/Digilent_Nexys_EDK_Board_Support_Files_V_2_1/lib/  -pe microblaze_0 Bouncing_Ball/executable.elf  \
+	-bt implementation/system.bit -o implementation/download.bit
+
+bitinit version Xilinx EDK 12.4 Build EDK_MS4.81d
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+
+Overriding IP level properties ...
+
+Computing clock values...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00001fff) dlmb_cntlr	dlmb
+  (0000000000-0x00001fff) ilmb_cntlr	ilmb
+  (0x81400000-0x8140ffff) LEDs_8Bit	mb_plb
+  (0x81420000-0x8142ffff) Joystick_GPIO	mb_plb
+  (0x81440000-0x8144ffff) Block_Output	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 69 - tool is overriding PARAMETER
+   C_PLBV46_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 70 - tool is overriding PARAMETER
+   C_PLBV46_NUM_SLAVES value to 4
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 71 - tool is overriding PARAMETER C_PLBV46_MID_WIDTH
+   value to 1
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 73 - tool is overriding PARAMETER C_PLBV46_DWIDTH
+   value to 32
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:ilmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:dlmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:lmb_bram -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 67 - tool is overriding PARAMETER C_MEMSIZE
+   value to 0x2000
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:LEDs_8Bit -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 83 - tool is overriding PARAMETER C_SPLB_MID_WIDTH value to
+   1
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 84 - tool is overriding PARAMETER C_SPLB_NUM_MASTERS value
+   to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Block_Output -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Joystick_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+
+Checking platform address map ...
+
+Initializing Memory...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -p xc3s500efg320-4 -bt
+"implementation/system.bit"  -bd "Bouncing_Ball/executable.elf" tag microblaze_0
+ -o b implementation/download.bit 
+Memory Initialization completed successfully.
+
+Done!
+
+********************************************************************************
+At Local date and time: Wed Mar 16 12:55:47 2011
+ make -f system.make Bouncing_Ball_program started...
+mb-gcc -O2 Bouncing_Ball/src/Bouncing_Ball.c  -o Bouncing_Ball/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b   -g    -I./microblaze_0/include/  -IBouncing_Ball/src/  -L./microblaze_0/lib/  \
+	  
+mb-size Bouncing_Ball/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3622	    348	   1104	   5074	   13d2	Bouncing_Ball/executable.elf
+
+Done!
+
+********************************************************************************
+At Local date and time: Wed Mar 16 12:55:52 2011
+ make -f system.make init_bram started...
+*********************************************
+Initializing BRAM contents of the bitstream
+*********************************************
+bitinit -p xc3s500efg320-4 system.mhs -lp C:/Xilinx/12.4/ISE_DS/ISE/Digilent_Nexys_EDK_Board_Support_Files_V_2_1/lib/  -pe microblaze_0 Bouncing_Ball/executable.elf  \
+	-bt implementation/system.bit -o implementation/download.bit
+
+bitinit version Xilinx EDK 12.4 Build EDK_MS4.81d
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+
+Overriding IP level properties ...
+
+Computing clock values...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00001fff) dlmb_cntlr	dlmb
+  (0000000000-0x00001fff) ilmb_cntlr	ilmb
+  (0x81400000-0x8140ffff) LEDs_8Bit	mb_plb
+  (0x81420000-0x8142ffff) Joystick_GPIO	mb_plb
+  (0x81440000-0x8144ffff) Block_Output	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 69 - tool is overriding PARAMETER
+   C_PLBV46_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 70 - tool is overriding PARAMETER
+   C_PLBV46_NUM_SLAVES value to 4
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 71 - tool is overriding PARAMETER C_PLBV46_MID_WIDTH
+   value to 1
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 73 - tool is overriding PARAMETER C_PLBV46_DWIDTH
+   value to 32
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:ilmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:dlmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:lmb_bram -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 67 - tool is overriding PARAMETER C_MEMSIZE
+   value to 0x2000
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:LEDs_8Bit -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 83 - tool is overriding PARAMETER C_SPLB_MID_WIDTH value to
+   1
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 84 - tool is overriding PARAMETER C_SPLB_NUM_MASTERS value
+   to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Block_Output -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Joystick_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+
+Checking platform address map ...
+
+Initializing Memory...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -p xc3s500efg320-4 -bt
+"implementation/system.bit"  -bd "Bouncing_Ball/executable.elf" tag microblaze_0
+ -o b implementation/download.bit 
+Memory Initialization completed successfully.
+
+Done!
+
+********************************************************************************
+At Local date and time: Wed Mar 16 13:24:03 2011
+ make -f system.make Bouncing_Ball_program started...
+mb-gcc -O2 Bouncing_Ball/src/Bouncing_Ball.c  -o Bouncing_Ball/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b   -g    -I./microblaze_0/include/  -IBouncing_Ball/src/  -L./microblaze_0/lib/  \
+	  
+mb-size Bouncing_Ball/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3698	    348	   1104	   5150	   141e	Bouncing_Ball/executable.elf
+
+Done!
+
+********************************************************************************
+At Local date and time: Wed Mar 16 13:30:15 2011
+ make -f system.make Bouncing_Ball_program started...
+mb-gcc -O2 Bouncing_Ball/src/Bouncing_Ball.c  -o Bouncing_Ball/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b   -g    -I./microblaze_0/include/  -IBouncing_Ball/src/  -L./microblaze_0/lib/  \
+	  
+mb-size Bouncing_Ball/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3722	    348	   1104	   5174	   1436	Bouncing_Ball/executable.elf
+
+Done!
+
+********************************************************************************
+At Local date and time: Wed Mar 16 13:30:22 2011
+ make -f system.make init_bram started...
+*********************************************
+Initializing BRAM contents of the bitstream
+*********************************************
+bitinit -p xc3s500efg320-4 system.mhs -lp C:/Xilinx/12.4/ISE_DS/ISE/Digilent_Nexys_EDK_Board_Support_Files_V_2_1/lib/  -pe microblaze_0 Bouncing_Ball/executable.elf  \
+	-bt implementation/system.bit -o implementation/download.bit
+
+bitinit version Xilinx EDK 12.4 Build EDK_MS4.81d
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+
+Overriding IP level properties ...
+
+Computing clock values...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00001fff) dlmb_cntlr	dlmb
+  (0000000000-0x00001fff) ilmb_cntlr	ilmb
+  (0x81400000-0x8140ffff) LEDs_8Bit	mb_plb
+  (0x81420000-0x8142ffff) Joystick_GPIO	mb_plb
+  (0x81440000-0x8144ffff) Block_Output	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 69 - tool is overriding PARAMETER
+   C_PLBV46_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 70 - tool is overriding PARAMETER
+   C_PLBV46_NUM_SLAVES value to 4
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 71 - tool is overriding PARAMETER C_PLBV46_MID_WIDTH
+   value to 1
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 73 - tool is overriding PARAMETER C_PLBV46_DWIDTH
+   value to 32
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:ilmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:dlmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:lmb_bram -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 67 - tool is overriding PARAMETER C_MEMSIZE
+   value to 0x2000
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:LEDs_8Bit -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 83 - tool is overriding PARAMETER C_SPLB_MID_WIDTH value to
+   1
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 84 - tool is overriding PARAMETER C_SPLB_NUM_MASTERS value
+   to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Block_Output -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Joystick_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+
+Checking platform address map ...
+
+Initializing Memory...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -p xc3s500efg320-4 -bt
+"implementation/system.bit"  -bd "Bouncing_Ball/executable.elf" tag microblaze_0
+ -o b implementation/download.bit 
+Memory Initialization completed successfully.
+
+Done!
+Writing filter settings....
+Done writing filter settings to:
+	C:\FPGArcade\Bouncing_Ball\etc\system.filters
+Done writing Tab View settings to:
+	C:\FPGArcade\Bouncing_Ball\etc\system.gui

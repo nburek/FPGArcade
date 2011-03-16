@@ -25,6 +25,11 @@
 
 #define printf xil_printf	/* A smaller footprint printf */
 
+//to classify collision
+#define LBOUND 1
+#define RBOUND 2
+#define MISS   0
+
 
 /*
  * The following constants map to the XPAR parameters created in the
@@ -38,31 +43,35 @@
 
 /**************************** Type Definitions ******************************/
 
-typedef struct{
+typedef struct ball_struct{
 
 	u16 x;
 	u16 y;//centered at upper left corner
+	u16 x1;
+	u16 y1;
 	u16 width;
 	u16 height;
 	u16 x_spd;
 	u16 y_spd;
 
 }Ball;
-Ball ball; 
+ 
 
-typedef struct{//yeah, its the same as the ball for right now, but that may change
+typedef struct paddle_struct{//yeah, its the same as the ball for right now, but that may change
 
 	u16 x;
 	u16 y;
+	u16 x1;
+	u16 y1;
 	u16 width;
 	u16 height;
 	u16 x_spd;
 	u16 y_spd;
 
 }Paddle;
-Paddle paddle1, paddle2; 
 
-typedef struct{
+
+typedef struct joystick_struct{
 
 	u16 x;
 	u16 y;//centered at upper left corner
@@ -70,28 +79,22 @@ typedef struct{
 	u8 btn1;
 	u8 btn2;
 	u8 btn3;
-
-
-}joystick;
-joystick joy1, joy2; 
+	
+}Joystick;
 
 /***************** Macros (Inline Functions) Definitions *******************/
 
 
 /************************** Function Prototypes ****************************/
 
-void initBall(){
-
-	ball.x = 300;
-	ball.y = 200;
-	ball.width = 30;
-	ball.height = 30;
-	ball.x_spd = 1;
-	ball.y_spd = 1;
-}
-
+void initBall(Ball*);
+void initPaddle(Paddle*);
+void reCalcBallBounds(Ball *ball);
+void reCalcPaddleBounds(Paddle *paddle);
+int classify_point(u16 x, u16 y, Paddle*);
+u16 find_hitBound(Ball*, Paddle*);
 void initJoysticks();
-void getJoystickData(joystick *jstkData, int joystickChannel);
+void getJoystickData(Joystick *jstkData, int joystickChannel);
 
 
 /************************** Variable Definitions **************************/
@@ -119,67 +122,81 @@ int main(void)
 {
 	u32 Data;
 	volatile int Delay;
+	volatile int longDelayCount = 0;
 	int Status;
 	
-	initBall();
+	Ball ball;
+	Paddle paddle1, paddle2; 
+	Joystick joy1, joy2;
+
+	//initialize data structures
+	initBall(&ball);
 	initJoysticks();
-	
-	/*ball.x = 0; //the blocks X coord
-	ball.y = 0; //the blocks Y coord
-	ball.x_spd = 1; //should it move left or right (1=right, -1=left)
-	ball.y_spd = 1; //should it move up or down (1=down, -1=up)
-	*/
-
-	/*
-	 * Initialize the GPIO driver so that it's ready to use,
-	 * specify the device ID that is generated in xparameters.h
-	 */
-	 Status = XGpio_Initialize(&GpioOutput, XPAR_BLOCK_OUTPUT_DEVICE_ID);
-	 if (Status != XST_SUCCESS)  {
-		  return XST_FAILURE;
-	 }
-
+	initPaddle(&paddle2);
+	initPaddle(&paddle1);
 	
 
-	 /*
-	  * Set the direction for all signals to be outputs
-	  */
-	 XGpio_SetDataDirection(&GpioOutput, BLOCK_CHANNEL, 0x0);
-	 XGpio_SetDataDirection(&GpioOutput, PADDLE_CHANNEL, 0x0);
+	//initialize the block and paddle GPIO
+	XGpio_Initialize(&GpioOutput, XPAR_BLOCK_OUTPUT_DEVICE_ID);
 
-	 /*
-	  * Set the GPIO outputs to low
-	  */
-	 XGpio_DiscreteWrite(&GpioOutput, BLOCK_CHANNEL, 0x0);
-	 XGpio_DiscreteWrite(&GpioOutput, PADDLE_CHANNEL, 0x17CBE);
+	//Set the direction for block and paddle signals to be outputs
+	XGpio_SetDataDirection(&GpioOutput, BLOCK_CHANNEL, 0x0);
+	XGpio_SetDataDirection(&GpioOutput, PADDLE_CHANNEL, 0x0);
 
+	//delay for a while so that the screen can initialize and turn on
+	for (longDelayCount=0; longDelayCount<100000; ++longDelayCount);
+	
 	while (1)
 	{
-		//move the blocks
+		//get joystick data and map it to paddles
+		getJoystickData(&joy1, JOYSTICK_1_CHANNEL);
+		paddle2.y = (joy1.y) >> 1;
+		getJoystickData(&joy2, JOYSTICK_2_CHANNEL);
+		paddle1.y = (joy2.y) >> 1;
+		
+		//move the ball
 		ball.x += ball.x_spd;
 		ball.y += ball.y_spd;
 
-		//reverse the direction when it hits the edge
-		if (ball.x >= (STAGE_WIDTH - ball.width) || ball.x<=0)
-			ball.x_spd *= -1;
 		
-		if (ball.y >= (STAGE_HEIGHT - ball.height) || ball.y<=0)
-			ball.y_spd *= -1;
+		//check to see if the ball hits the paddles
+		u16 hit_value = find_hitBound(&ball, &paddle2) | find_hitBound(&ball, &paddle1);
+
+		//!watch for special casses such as when leftbound is less than paddle and rightbound is greater
+		switch (hit_value){
+		
+			case LBOUND:case RBOUND:
+				ball.x_spd *= -1;
+				break;		
+			case MISS:default:
+				if (ball.x >= STAGE_WIDTH || ball.x<= -ball.width){
+					initBall(&ball);
+				}
+				if (ball.y >= STAGE_HEIGHT || ball.y<= -ball.height){
+					initBall(&ball);
+				}
+				longDelayCount = 0; //set to 0 so that the game will delay for a while
+				ball.y = ((joy1.y & 0x1)<<1) | (joy2.y & 0x1); //set a random ball speed between 0 and 3
+				break;
+		
+		}
 		
 		/*
-		 * Since both the X and Y coord's are sent on the same signal
-		 * vector we must combine the two into one variable to be 
-		 * written out. The 10 most significant bits are the X position
-		 * and the lower 10 bits are the Y position.
-		 */
+		* Since both the X and Y coord's are sent on the same signal
+		* vector we must combine the two into one variable to be 
+		* written out. The 10 most significant bits are the X position
+		* and the lower 10 bits are the Y position.
+		*/
 		Data = (ball.x<<9) | ball.y;
 		
 		//write out the values to the GIOP, which sends them to the VGA Driver
 		XGpio_DiscreteWrite(&GpioOutput, BLOCK_CHANNEL, Data);
 		
-		getJoystickData(&joy1, JOYSTICK_1_CHANNEL);
-		XGpio_DiscreteWrite(&GpioOutput, PADDLE_CHANNEL, (joy1.y>>1));
+		//write out the paddle positions
+		Data = (paddle1.y<<9) | paddle2.y;
+		XGpio_DiscreteWrite(&GpioOutput, PADDLE_CHANNEL, Data);
 		
+		for (;longDelayCount < 100000; ++longDelayCount);
 		
 		for (Delay = 0; Delay < LOOP_DELAY; ++Delay); //delay for a while
 		
@@ -228,7 +245,7 @@ void initJoysticks()
 * @note		None
 *
 ****************************************************************************/
-void getJoystickData(joystick *jstkData, int joystickChannel)
+void getJoystickData(Joystick *jstkData, int joystickChannel)
 {
 	u32 Data;
 	u8 Buttons;
@@ -244,6 +261,79 @@ void getJoystickData(joystick *jstkData, int joystickChannel)
 	(*jstkData).btn2 = (Data >> 21) & 0x1;
 	
 	(*jstkData).btn3 = (Data >> 22) & 0x1;
+}
+
+void initBall(Ball *ball)
+{
+
+	(*ball).x = 300;
+	(*ball).y = 200;
+	(*ball).width = 30;
+	(*ball).height = 30;
+	
+	(*ball).x1 = (*ball).x + (*ball).width;
+	(*ball).y1 = (*ball).y + (*ball).height;//absolute points
+	
+	(*ball).x_spd = 1;
+	(*ball).y_spd = 1;
+}
+
+void initPaddle(Paddle *paddle)
+{
+
+	(*paddle).x = 625;
+	(*paddle).y = 100;
+	(*paddle).width = 15;
+	(*paddle).height = 100;
+	
+	(*paddle).x1 = (*paddle).x + (*paddle).width;
+	(*paddle).y1 = (*paddle).y + (*paddle).height;
+	
+	(*paddle).x_spd = 1;
+	(*paddle).y_spd = 1;
+}
+
+//determine the lower right coordinate of the ball
+void reCalcBallBounds(Ball *ball)
+{
+	(*ball).x1 = (*ball).x + (*ball).width;
+	(*ball).y1 = (*ball).y + (*ball).height;
+}
+
+//determine the lower right coordinates of the paddle
+void reCalcPaddleBounds(Paddle *paddle)
+{
+	(*paddle).x1 = (*paddle).x + (*paddle).width;
+	(*paddle).y1 = (*paddle).y + (*paddle).height;
+}
+
+//Determines if the x and y coordinates are inside the paddle
+int classify_point(u16 x, u16 y, Paddle *p)
+{
+
+	if((x > (*p).x) && (x < (*p).x1) && (y > (*p).y) && (y < (*p).y1)){
+		return 1;
+	}else{
+		return 0;
+	}
+}
+
+//determines if the ball has hit the paddle and where
+u16 find_hitBound(Ball *ball, Paddle *paddle)
+{
+	//recalculate lower right points for the ball and given paddle
+	reCalcBallBounds(ball);
+	reCalcPaddleBounds(paddle);
+	
+	if(classify_point((*ball).x, (*ball).y, paddle) && classify_point((*ball).x, (*ball).y1, paddle)){
+		return LBOUND; //left bound collision
+	}
+	else if(classify_point((*ball).x1, (*ball).y, paddle) && classify_point((*ball).x1, (*ball).y1, paddle)){
+		return RBOUND; // right bound collision
+	}else{
+		return MISS;//no collision
+	}
+
 }
 
 
