@@ -89,7 +89,7 @@ typedef struct joystick_struct{
 /************************** Function Prototypes ****************************/
 
 void initBall(Ball*);
-void initPaddle(Paddle*);
+void initPaddle(Paddle*,int paddleNumber);
 void reCalcBallBounds(Ball *ball);
 void reCalcPaddleBounds(Paddle *paddle);
 int classify_point(u16 x, u16 y, Paddle*);
@@ -133,8 +133,8 @@ int main(void)
 	//initialize data structures
 	initBall(&ball);
 	initJoysticks();
-	initPaddle(&paddle2);
-	initPaddle(&paddle1);
+	initPaddle(&paddle2,2);
+	initPaddle(&paddle1,1);
 	
 
 	//initialize the block and paddle GPIO
@@ -144,8 +144,18 @@ int main(void)
 	XGpio_SetDataDirection(&GpioOutput, BLOCK_CHANNEL, 0x0);
 	XGpio_SetDataDirection(&GpioOutput, PADDLE_CHANNEL, 0x0);
 
+	//do a quick write to initialize positions of objects
+	getJoystickData(&joy1, JOYSTICK_1_CHANNEL);
+	paddle2.y = (joy1.y) >> 1;
+	getJoystickData(&joy2, JOYSTICK_2_CHANNEL);
+	paddle1.y = (joy2.y) >> 1;
+	Data = (ball.x<<9) | ball.y;
+	XGpio_DiscreteWrite(&GpioOutput, BLOCK_CHANNEL, Data);
+	Data = (paddle1.y<<9) | paddle2.y;
+	XGpio_DiscreteWrite(&GpioOutput, PADDLE_CHANNEL, Data);
+	
 	//delay for a while so that the screen can initialize and turn on
-	for (longDelayCount=0; longDelayCount<100000; ++longDelayCount);
+	for (longDelayCount=0; longDelayCount<10000000; ++longDelayCount);
 	
 	while (1)
 	{
@@ -156,8 +166,13 @@ int main(void)
 		paddle1.y = (joy2.y) >> 1;
 		
 		//move the ball
-		ball.x += ball.x_spd;
-		ball.y += ball.y_spd;
+		if (longDelayCount>300)
+		{
+			ball.x += ball.x_spd;
+			ball.y += ball.y_spd;
+		}
+		else
+			longDelayCount++;
 
 		
 		//check to see if the ball hits the paddles
@@ -170,18 +185,20 @@ int main(void)
 				ball.x_spd *= -1;
 				break;		
 			case MISS:default:
-				if (ball.x >= STAGE_WIDTH || ball.x<= -ball.width){
+				if (ball.x >= STAGE_WIDTH || ball.x<= -ball.width)
+				{
 					initBall(&ball);
 					longDelayCount = 0; //set to 0 so that the game will delay for a while
-					ball.y = ((joy1.y & 0x1)<<1) | (joy2.y & 0x1); //set a random ball speed between 0 and 3
-
+					ball.y_spd = (joy1.y & 0x1) + (joy2.y & 0x1); //set a random ball speed between 0 and 2
+					ball.y_spd = (ball.y_spd==0)?((joy1.y & 0x2)>>1) + ((joy2.y & 0x2)>>1):ball.y_spd;
+					ball.x_spd = (joy1.x & 0x1) + (joy2.x & 0x1); //set a random ball speed between 0 and 2
+					ball.x_spd = (ball.x_spd==0)?1:ball.x_spd;
 				}
-				if (ball.y >= STAGE_HEIGHT || ball.y<= -ball.height){
-					initBall(&ball);
-					longDelayCount = 0; //set to 0 so that the game will delay for a while
-					ball.y = ((joy1.y & 0x1)<<1) | (joy2.y & 0x1); //set a random ball speed between 0 and 3
-
+				if (ball.y >= (STAGE_HEIGHT-ball.height) || ball.y<= 0)
+				{
+					ball.y_spd *= -1;
 				}
+				
 				break;
 		
 		}
@@ -200,8 +217,6 @@ int main(void)
 		//write out the paddle positions
 		Data = (paddle1.y<<9) | paddle2.y;
 		XGpio_DiscreteWrite(&GpioOutput, PADDLE_CHANNEL, Data);
-		
-		for (;longDelayCount < 100000; ++longDelayCount);
 		
 		for (Delay = 0; Delay < LOOP_DELAY; ++Delay); //delay for a while
 		
@@ -271,8 +286,8 @@ void getJoystickData(Joystick *jstkData, int joystickChannel)
 void initBall(Ball *ball)
 {
 
-	(*ball).x = 300;
-	(*ball).y = 200;
+	(*ball).x = 30;
+	(*ball).y = 15;
 	(*ball).width = 30;
 	(*ball).height = 30;
 	
@@ -283,10 +298,9 @@ void initBall(Ball *ball)
 	(*ball).y_spd = 1;
 }
 
-void initPaddle(Paddle *paddle)
+void initPaddle(Paddle *paddle,int paddleNumber)
 {
-
-	(*paddle).x = 625;
+	(*paddle).x = (paddleNumber == 1)?0:625;
 	(*paddle).y = 100;
 	(*paddle).width = 15;
 	(*paddle).height = 100;
