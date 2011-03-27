@@ -1,0 +1,7 @@
+EN video_ram NULL "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" sub00/vhpl02 1301187721
+EN clk25mhz NULL "C:/Documents and Settings/nb418308/Desktop/VGA_Module/clk25Mhz.vhd" sub00/vhpl00 1301166062
+AR video_ram behavioral "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" sub00/vhpl03 1301187722
+AR clk25mhz behavioral "C:/Documents and Settings/nb418308/Desktop/VGA_Module/clk25Mhz.vhd" sub00/vhpl01 1301166063
+EN vga_module NULL "C:/Documents and Settings/nb418308/Desktop/VGA_Module/VGA_Module.vhd" sub00/vhpl04 1300972647
+EN top NULL "C:/Documents and Settings/nb418308/Desktop/VGA_Module/VGA_Module.vhd" sub00/vhpl05 1301166066
+AR top behavioral "C:/Documents and Settings/nb418308/Desktop/VGA_Module/VGA_Module.vhd" sub00/vhpl06 1301166067

@@ -1,0 +1,780 @@
+Release 12.4 - xst M.81d (nt)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Reading design: top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Documents and Settings/nb418308/Desktop/VGA_Module/clk25Mhz.vhd" in Library work.
+Architecture behavioral of Entity clk25mhz is up to date.
+Compiling vhdl file "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" in Library work.
+Entity <video_ram> compiled.
+Entity <video_ram> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Documents and Settings/nb418308/Desktop/VGA_Module/VGA_Module.vhd" in Library work.
+Architecture behavioral of Entity top is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <top> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <clk25MHz> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Video_RAM> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <top> in library <work> (Architecture <behavioral>).
+Entity <top> analyzed. Unit <top> generated.
+
+Analyzing Entity <clk25MHz> in library <work> (Architecture <behavioral>).
+Entity <clk25MHz> analyzed. Unit <clk25MHz> generated.
+
+Analyzing Entity <Video_RAM> in library <work> (Architecture <behavioral>).
+WARNING:Xst:790 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 115: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 115: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 124: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1433 - Contents of array <movingTilesTransparencyMap> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+WARNING:Xst:1610 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 126: Width mismatch. <pixelX> has a width of 3 bits but assigned expression is 10-bit wide.
+WARNING:Xst:1610 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 127: Width mismatch. <pixelY> has a width of 3 bits but assigned expression is 9-bit wide.
+WARNING:Xst:790 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 124: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1433 - Contents of array <movingTilesTransparencyMap> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+WARNING:Xst:1610 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 126: Width mismatch. <pixelX> has a width of 3 bits but assigned expression is 10-bit wide.
+WARNING:Xst:1610 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 127: Width mismatch. <pixelY> has a width of 3 bits but assigned expression is 9-bit wide.
+WARNING:Xst:790 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 124: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1433 - Contents of array <movingTilesTransparencyMap> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+WARNING:Xst:1610 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 126: Width mismatch. <pixelX> has a width of 3 bits but assigned expression is 10-bit wide.
+WARNING:Xst:1610 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 127: Width mismatch. <pixelY> has a width of 3 bits but assigned expression is 9-bit wide.
+WARNING:Xst:790 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 124: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1433 - Contents of array <movingTilesTransparencyMap> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+WARNING:Xst:1610 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 126: Width mismatch. <pixelX> has a width of 3 bits but assigned expression is 10-bit wide.
+WARNING:Xst:1610 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 127: Width mismatch. <pixelY> has a width of 3 bits but assigned expression is 9-bit wide.
+WARNING:Xst:790 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 124: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1433 - Contents of array <movingTilesTransparencyMap> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+WARNING:Xst:1610 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 126: Width mismatch. <pixelX> has a width of 3 bits but assigned expression is 10-bit wide.
+WARNING:Xst:1610 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 127: Width mismatch. <pixelY> has a width of 3 bits but assigned expression is 9-bit wide.
+WARNING:Xst:790 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 124: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1433 - Contents of array <movingTilesTransparencyMap> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+WARNING:Xst:1610 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 126: Width mismatch. <pixelX> has a width of 3 bits but assigned expression is 10-bit wide.
+WARNING:Xst:1610 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 127: Width mismatch. <pixelY> has a width of 3 bits but assigned expression is 9-bit wide.
+WARNING:Xst:790 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 124: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1433 - Contents of array <movingTilesTransparencyMap> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+WARNING:Xst:1610 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 126: Width mismatch. <pixelX> has a width of 3 bits but assigned expression is 10-bit wide.
+WARNING:Xst:1610 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 127: Width mismatch. <pixelY> has a width of 3 bits but assigned expression is 9-bit wide.
+WARNING:Xst:790 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 124: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1433 - Contents of array <movingTilesTransparencyMap> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+WARNING:Xst:1610 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 126: Width mismatch. <pixelX> has a width of 3 bits but assigned expression is 10-bit wide.
+WARNING:Xst:1610 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 127: Width mismatch. <pixelY> has a width of 3 bits but assigned expression is 9-bit wide.
+WARNING:Xst:790 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 124: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1433 - Contents of array <movingTilesTransparencyMap> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+WARNING:Xst:1610 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 126: Width mismatch. <pixelX> has a width of 3 bits but assigned expression is 10-bit wide.
+WARNING:Xst:1610 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 127: Width mismatch. <pixelY> has a width of 3 bits but assigned expression is 9-bit wide.
+WARNING:Xst:790 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 124: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1433 - Contents of array <movingTilesTransparencyMap> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+WARNING:Xst:1610 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 126: Width mismatch. <pixelX> has a width of 3 bits but assigned expression is 10-bit wide.
+WARNING:Xst:1610 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 127: Width mismatch. <pixelY> has a width of 3 bits but assigned expression is 9-bit wide.
+WARNING:Xst:790 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 124: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1433 - Contents of array <movingTilesTransparencyMap> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+WARNING:Xst:1610 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 126: Width mismatch. <pixelX> has a width of 3 bits but assigned expression is 10-bit wide.
+WARNING:Xst:1610 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 127: Width mismatch. <pixelY> has a width of 3 bits but assigned expression is 9-bit wide.
+WARNING:Xst:790 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 124: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1433 - Contents of array <movingTilesTransparencyMap> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+WARNING:Xst:1610 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 126: Width mismatch. <pixelX> has a width of 3 bits but assigned expression is 10-bit wide.
+WARNING:Xst:1610 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 127: Width mismatch. <pixelY> has a width of 3 bits but assigned expression is 9-bit wide.
+WARNING:Xst:790 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 124: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1433 - Contents of array <movingTilesTransparencyMap> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+WARNING:Xst:1610 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 126: Width mismatch. <pixelX> has a width of 3 bits but assigned expression is 10-bit wide.
+WARNING:Xst:1610 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 127: Width mismatch. <pixelY> has a width of 3 bits but assigned expression is 9-bit wide.
+WARNING:Xst:790 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 124: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1433 - Contents of array <movingTilesTransparencyMap> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+WARNING:Xst:1610 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 126: Width mismatch. <pixelX> has a width of 3 bits but assigned expression is 10-bit wide.
+WARNING:Xst:1610 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 127: Width mismatch. <pixelY> has a width of 3 bits but assigned expression is 9-bit wide.
+WARNING:Xst:790 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 124: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1433 - Contents of array <movingTilesTransparencyMap> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+WARNING:Xst:1610 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 126: Width mismatch. <pixelX> has a width of 3 bits but assigned expression is 10-bit wide.
+WARNING:Xst:1610 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 127: Width mismatch. <pixelY> has a width of 3 bits but assigned expression is 9-bit wide.
+WARNING:Xst:790 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 124: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1433 - Contents of array <movingTilesTransparencyMap> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+WARNING:Xst:1610 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 126: Width mismatch. <pixelX> has a width of 3 bits but assigned expression is 10-bit wide.
+WARNING:Xst:1610 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 127: Width mismatch. <pixelY> has a width of 3 bits but assigned expression is 9-bit wide.
+WARNING:Xst:819 - "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd" line 111: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <movingTilesTransparencyMap>, <movingTilesMap>
+Entity <Video_RAM> analyzed. Unit <Video_RAM> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <clk25MHz>.
+    Related source file is "C:/Documents and Settings/nb418308/Desktop/VGA_Module/clk25Mhz.vhd".
+    Found 1-bit register for signal <slow_clk>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <clk25MHz> synthesized.
+
+
+Synthesizing Unit <Video_RAM>.
+    Related source file is "C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd".
+WARNING:Xst:647 - Input <clk50Mhz> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <instruction> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1781 - Signal <tileMap<4095:192>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <tileMap<62:55>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <tileMap<53:46>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <tileMap<44:37>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <tileMap<35:28>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <tileMap<26:19>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <tileMap<17:10>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <tileMap<8:1>> is used but never assigned. Tied to default value.
+WARNING:Xst:1780 - Signal <tempY> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <tempX> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <temp> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1781 - Signal <movingTilesY<15:2>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <movingTilesX<15:2>> is used but never assigned. Tied to default value.
+WARNING:Xst:653 - Signal <movingTilesTransparencyMap<1023:32>> is used but never assigned. This sourceless signal will be automatically connected to value
+   00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+WARNING:Xst:1781 - Signal <movingTilesMap<15:2>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<9>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<8>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<7>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<79>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<78>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<77>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<76>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<75>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<74>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<73>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<72>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<71>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<70>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<6>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<69>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<68>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<67>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<66>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<65>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<64>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<63>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<62>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<61>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<60>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<5>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<59>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<58>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<57>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<56>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<55>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<54>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<53>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<52>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<51>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<50>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<4>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<49>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<48>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<47>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<46>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<45>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<44>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<43>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<42>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<41>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<40>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<3>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<39>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<38>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<37>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<36>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<35>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<34>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<33>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<32>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<31>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<30>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<2>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<29>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<28>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<27>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<26>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<25>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<24>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<23>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<22>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<21>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<20>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<1>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<19>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<18>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<17>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<16>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<15><59:16>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<15><14:0>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<14>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<13>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<12>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<11>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<10>> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <backgroundMap<0>> is used but never assigned. Tied to default value.
+    Found 4096x8-bit ROM for signal <currentPixel>.
+    Found 1-bit 1024-to-1 multiplexer for signal <$varindex0000> created at line 124.
+    Found 1-bit 1024-to-1 multiplexer for signal <$varindex0001> created at line 124.
+    Found 1-bit 1024-to-1 multiplexer for signal <$varindex0002> created at line 124.
+    Found 1-bit 1024-to-1 multiplexer for signal <$varindex0003> created at line 124.
+    Found 1-bit 1024-to-1 multiplexer for signal <$varindex0004> created at line 124.
+    Found 1-bit 1024-to-1 multiplexer for signal <$varindex0005> created at line 124.
+    Found 1-bit 1024-to-1 multiplexer for signal <$varindex0006> created at line 124.
+    Found 1-bit 1024-to-1 multiplexer for signal <$varindex0007> created at line 124.
+    Found 1-bit 1024-to-1 multiplexer for signal <$varindex0008> created at line 124.
+    Found 1-bit 1024-to-1 multiplexer for signal <$varindex0009> created at line 124.
+    Found 1-bit 1024-to-1 multiplexer for signal <$varindex0010> created at line 124.
+    Found 1-bit 1024-to-1 multiplexer for signal <$varindex0011> created at line 124.
+    Found 1-bit 1024-to-1 multiplexer for signal <$varindex0012> created at line 124.
+    Found 1-bit 1024-to-1 multiplexer for signal <$varindex0013> created at line 124.
+    Found 1-bit 1024-to-1 multiplexer for signal <$varindex0014> created at line 124.
+    Found 1-bit 1024-to-1 multiplexer for signal <$varindex0015> created at line 124.
+    Found 9-bit subtractor for signal <movingTilesTransparencyMap$sub0000> created at line 124.
+    Found 10-bit subtractor for signal <movingTilesTransparencyMap$sub0001> created at line 124.
+    Found 9-bit subtractor for signal <movingTilesTransparencyMap$sub0002> created at line 124.
+    Found 10-bit subtractor for signal <movingTilesTransparencyMap$sub0003> created at line 124.
+    Found 9-bit subtractor for signal <movingTilesTransparencyMap$sub0004> created at line 124.
+    Found 10-bit subtractor for signal <movingTilesTransparencyMap$sub0005> created at line 124.
+    Found 9-bit subtractor for signal <movingTilesTransparencyMap$sub0006> created at line 124.
+    Found 10-bit subtractor for signal <movingTilesTransparencyMap$sub0007> created at line 124.
+    Found 9-bit subtractor for signal <movingTilesTransparencyMap$sub0008> created at line 124.
+    Found 10-bit subtractor for signal <movingTilesTransparencyMap$sub0009> created at line 124.
+    Found 9-bit subtractor for signal <movingTilesTransparencyMap$sub0010> created at line 124.
+    Found 10-bit subtractor for signal <movingTilesTransparencyMap$sub0011> created at line 124.
+    Found 9-bit subtractor for signal <movingTilesTransparencyMap$sub0012> created at line 124.
+    Found 10-bit subtractor for signal <movingTilesTransparencyMap$sub0013> created at line 124.
+    Found 9-bit subtractor for signal <movingTilesTransparencyMap$sub0014> created at line 124.
+    Found 10-bit subtractor for signal <movingTilesTransparencyMap$sub0015> created at line 124.
+    Found 9-bit subtractor for signal <movingTilesTransparencyMap$sub0016> created at line 124.
+    Found 10-bit subtractor for signal <movingTilesTransparencyMap$sub0017> created at line 124.
+    Found 9-bit subtractor for signal <movingTilesTransparencyMap$sub0018> created at line 124.
+    Found 10-bit subtractor for signal <movingTilesTransparencyMap$sub0019> created at line 124.
+    Found 9-bit subtractor for signal <movingTilesTransparencyMap$sub0020> created at line 124.
+    Found 10-bit subtractor for signal <movingTilesTransparencyMap$sub0021> created at line 124.
+    Found 9-bit subtractor for signal <movingTilesTransparencyMap$sub0022> created at line 124.
+    Found 10-bit subtractor for signal <movingTilesTransparencyMap$sub0023> created at line 124.
+    Found 9-bit subtractor for signal <movingTilesTransparencyMap$sub0024> created at line 124.
+    Found 10-bit subtractor for signal <movingTilesTransparencyMap$sub0025> created at line 124.
+    Found 9-bit subtractor for signal <movingTilesTransparencyMap$sub0026> created at line 124.
+    Found 10-bit subtractor for signal <movingTilesTransparencyMap$sub0027> created at line 124.
+    Found 9-bit subtractor for signal <movingTilesTransparencyMap$sub0028> created at line 124.
+    Found 10-bit subtractor for signal <movingTilesTransparencyMap$sub0029> created at line 124.
+    Found 9-bit subtractor for signal <movingTilesTransparencyMap$sub0030> created at line 124.
+    Found 3-bit subtractor for signal <pixelX$addsub0000> created at line 126.
+    Found 3-bit subtractor for signal <pixelX$addsub0001> created at line 126.
+    Found 3-bit subtractor for signal <pixelX$addsub0002> created at line 126.
+    Found 3-bit subtractor for signal <pixelX$addsub0003> created at line 126.
+    Found 3-bit subtractor for signal <pixelX$addsub0004> created at line 126.
+    Found 3-bit subtractor for signal <pixelX$addsub0005> created at line 126.
+    Found 3-bit subtractor for signal <pixelX$addsub0006> created at line 126.
+    Found 3-bit subtractor for signal <pixelX$addsub0007> created at line 126.
+    Found 3-bit subtractor for signal <pixelX$addsub0008> created at line 126.
+    Found 3-bit subtractor for signal <pixelX$addsub0009> created at line 126.
+    Found 3-bit subtractor for signal <pixelX$addsub0010> created at line 126.
+    Found 3-bit subtractor for signal <pixelX$addsub0011> created at line 126.
+    Found 3-bit subtractor for signal <pixelX$addsub0012> created at line 126.
+    Found 3-bit subtractor for signal <pixelX$addsub0013> created at line 126.
+    Found 11-bit comparator greatequal for signal <pixelX$cmp_ge0000> created at line 122.
+    Found 10-bit comparator greatequal for signal <pixelX$cmp_ge0001> created at line 122.
+    Found 11-bit comparator lessequal for signal <pixelX$cmp_le0000> created at line 122.
+    Found 10-bit comparator lessequal for signal <pixelX$cmp_le0001> created at line 122.
+    Found 3-bit subtractor for signal <pixelX$sub0000> created at line 126.
+    Found 3-bit subtractor for signal <pixelY$addsub0000> created at line 127.
+    Found 3-bit subtractor for signal <pixelY$addsub0001> created at line 127.
+    Found 3-bit subtractor for signal <pixelY$addsub0002> created at line 127.
+    Found 3-bit subtractor for signal <pixelY$addsub0003> created at line 127.
+    Found 3-bit subtractor for signal <pixelY$addsub0004> created at line 127.
+    Found 3-bit subtractor for signal <pixelY$addsub0005> created at line 127.
+    Found 3-bit subtractor for signal <pixelY$addsub0006> created at line 127.
+    Found 3-bit subtractor for signal <pixelY$addsub0007> created at line 127.
+    Found 3-bit subtractor for signal <pixelY$addsub0008> created at line 127.
+    Found 3-bit subtractor for signal <pixelY$addsub0009> created at line 127.
+    Found 3-bit subtractor for signal <pixelY$addsub0010> created at line 127.
+    Found 3-bit subtractor for signal <pixelY$addsub0011> created at line 127.
+    Found 3-bit subtractor for signal <pixelY$addsub0012> created at line 127.
+    Found 3-bit subtractor for signal <pixelY$addsub0013> created at line 127.
+    Found 3-bit subtractor for signal <pixelY$sub0000> created at line 127.
+    Found 10-bit adder carry out for signal <tileNumber$addsub0000> created at line 122.
+    Found 9-bit adder carry out for signal <tileNumber$addsub0001> created at line 122.
+    Found 10-bit adder carry out for signal <tileNumber$addsub0002> created at line 122.
+    Found 9-bit adder carry out for signal <tileNumber$addsub0003> created at line 122.
+    Found 10-bit adder carry out for signal <tileNumber$addsub0004> created at line 122.
+    Found 9-bit adder carry out for signal <tileNumber$addsub0005> created at line 122.
+    Found 10-bit adder carry out for signal <tileNumber$addsub0006> created at line 122.
+    Found 9-bit adder carry out for signal <tileNumber$addsub0007> created at line 122.
+    Found 10-bit adder carry out for signal <tileNumber$addsub0008> created at line 122.
+    Found 9-bit adder carry out for signal <tileNumber$addsub0009> created at line 122.
+    Found 10-bit adder carry out for signal <tileNumber$addsub0010> created at line 122.
+    Found 9-bit adder carry out for signal <tileNumber$addsub0011> created at line 122.
+    Found 10-bit adder carry out for signal <tileNumber$addsub0012> created at line 122.
+    Found 9-bit adder carry out for signal <tileNumber$addsub0013> created at line 122.
+    Found 10-bit adder carry out for signal <tileNumber$addsub0014> created at line 122.
+    Found 9-bit adder carry out for signal <tileNumber$addsub0015> created at line 122.
+    Found 10-bit adder carry out for signal <tileNumber$addsub0016> created at line 122.
+    Found 9-bit adder carry out for signal <tileNumber$addsub0017> created at line 122.
+    Found 10-bit adder carry out for signal <tileNumber$addsub0018> created at line 122.
+    Found 9-bit adder carry out for signal <tileNumber$addsub0019> created at line 122.
+    Found 10-bit adder carry out for signal <tileNumber$addsub0020> created at line 122.
+    Found 9-bit adder carry out for signal <tileNumber$addsub0021> created at line 122.
+    Found 10-bit adder carry out for signal <tileNumber$addsub0022> created at line 122.
+    Found 9-bit adder carry out for signal <tileNumber$addsub0023> created at line 122.
+    Found 10-bit adder carry out for signal <tileNumber$addsub0024> created at line 122.
+    Found 9-bit adder carry out for signal <tileNumber$addsub0025> created at line 122.
+    Found 10-bit adder carry out for signal <tileNumber$addsub0026> created at line 122.
+    Found 9-bit adder carry out for signal <tileNumber$addsub0027> created at line 122.
+    Found 11-bit comparator greatequal for signal <tileNumber$cmp_ge0000> created at line 122.
+    Found 11-bit comparator greatequal for signal <tileNumber$cmp_ge0002> created at line 122.
+    Found 11-bit comparator greatequal for signal <tileNumber$cmp_ge0004> created at line 122.
+    Found 11-bit comparator greatequal for signal <tileNumber$cmp_ge0006> created at line 122.
+    Found 11-bit comparator greatequal for signal <tileNumber$cmp_ge0008> created at line 122.
+    Found 11-bit comparator greatequal for signal <tileNumber$cmp_ge0010> created at line 122.
+    Found 11-bit comparator greatequal for signal <tileNumber$cmp_ge0012> created at line 122.
+    Found 11-bit comparator greatequal for signal <tileNumber$cmp_ge0014> created at line 122.
+    Found 11-bit comparator greatequal for signal <tileNumber$cmp_ge0016> created at line 122.
+    Found 11-bit comparator greatequal for signal <tileNumber$cmp_ge0018> created at line 122.
+    Found 11-bit comparator greatequal for signal <tileNumber$cmp_ge0020> created at line 122.
+    Found 11-bit comparator greatequal for signal <tileNumber$cmp_ge0022> created at line 122.
+    Found 11-bit comparator greatequal for signal <tileNumber$cmp_ge0024> created at line 122.
+    Found 11-bit comparator greatequal for signal <tileNumber$cmp_ge0026> created at line 122.
+    Found 10-bit comparator greatequal for signal <tileNumber$cmp_ge0028> created at line 122.
+    Found 11-bit comparator lessequal for signal <tileNumber$cmp_le0000> created at line 122.
+    Found 10-bit comparator lessequal for signal <tileNumber$cmp_le0001> created at line 122.
+    Found 11-bit comparator lessequal for signal <tileNumber$cmp_le0002> created at line 122.
+    Found 10-bit comparator lessequal for signal <tileNumber$cmp_le0003> created at line 122.
+    Found 11-bit comparator lessequal for signal <tileNumber$cmp_le0004> created at line 122.
+    Found 10-bit comparator lessequal for signal <tileNumber$cmp_le0005> created at line 122.
+    Found 11-bit comparator lessequal for signal <tileNumber$cmp_le0006> created at line 122.
+    Found 10-bit comparator lessequal for signal <tileNumber$cmp_le0007> created at line 122.
+    Found 11-bit comparator lessequal for signal <tileNumber$cmp_le0008> created at line 122.
+    Found 10-bit comparator lessequal for signal <tileNumber$cmp_le0009> created at line 122.
+    Found 11-bit comparator lessequal for signal <tileNumber$cmp_le0010> created at line 122.
+    Found 10-bit comparator lessequal for signal <tileNumber$cmp_le0011> created at line 122.
+    Found 11-bit comparator lessequal for signal <tileNumber$cmp_le0012> created at line 122.
+    Found 10-bit comparator lessequal for signal <tileNumber$cmp_le0013> created at line 122.
+    Found 11-bit comparator lessequal for signal <tileNumber$cmp_le0014> created at line 122.
+    Found 10-bit comparator lessequal for signal <tileNumber$cmp_le0015> created at line 122.
+    Found 11-bit comparator lessequal for signal <tileNumber$cmp_le0016> created at line 122.
+    Found 10-bit comparator lessequal for signal <tileNumber$cmp_le0017> created at line 122.
+    Found 11-bit comparator lessequal for signal <tileNumber$cmp_le0018> created at line 122.
+    Found 10-bit comparator lessequal for signal <tileNumber$cmp_le0019> created at line 122.
+    Found 11-bit comparator lessequal for signal <tileNumber$cmp_le0020> created at line 122.
+    Found 10-bit comparator lessequal for signal <tileNumber$cmp_le0021> created at line 122.
+    Found 11-bit comparator lessequal for signal <tileNumber$cmp_le0022> created at line 122.
+    Found 10-bit comparator lessequal for signal <tileNumber$cmp_le0023> created at line 122.
+    Found 11-bit comparator lessequal for signal <tileNumber$cmp_le0024> created at line 122.
+    Found 10-bit comparator lessequal for signal <tileNumber$cmp_le0025> created at line 122.
+    Found 11-bit comparator lessequal for signal <tileNumber$cmp_le0026> created at line 122.
+    Found 10-bit comparator lessequal for signal <tileNumber$cmp_le0027> created at line 122.
+    Found 10-bit comparator lessequal for signal <tileNumber$cmp_le0028> created at line 122.
+    Summary:
+	inferred   1 ROM(s).
+	inferred  89 Adder/Subtractor(s).
+	inferred  48 Comparator(s).
+	inferred  16 Multiplexer(s).
+Unit <Video_RAM> synthesized.
+
+
+Synthesizing Unit <top>.
+    Related source file is "C:/Documents and Settings/nb418308/Desktop/VGA_Module/VGA_Module.vhd".
+WARNING:Xst:653 - Signal <instruction> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000000000.
+    Found 3-bit register for signal <VGA_Red>.
+    Found 3-bit register for signal <VGA_Green>.
+    Found 2-bit register for signal <VGA_Blue>.
+    Found 1-bit register for signal <HSync>.
+    Found 1-bit register for signal <VSync>.
+    Found 10-bit up counter for signal <hCount>.
+    Found 11-bit comparator greatequal for signal <HSync$cmp_ge0000> created at line 92.
+    Found 11-bit comparator lessequal for signal <HSync$cmp_le0000> created at line 92.
+    Found 10-bit register for signal <pixelX>.
+    Found 11-bit comparator lessequal for signal <pixelX$cmp_le0000> created at line 106.
+    Found 10-bit comparator lessequal for signal <pixelX$cmp_le0001> created at line 106.
+    Found 9-bit register for signal <pixelY>.
+    Found 9-bit up counter for signal <vCount>.
+    Found 10-bit comparator greatequal for signal <VSync$cmp_ge0000> created at line 99.
+    Found 10-bit comparator lessequal for signal <VSync$cmp_le0000> created at line 99.
+    Summary:
+	inferred   2 Counter(s).
+	inferred  29 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+Unit <top> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 4096x8-bit ROM                                        : 1
+# Adders/Subtractors                                   : 89
+ 10-bit adder carry out                                : 14
+ 10-bit subtractor                                     : 15
+ 3-bit subtractor                                      : 30
+ 9-bit adder carry out                                 : 14
+ 9-bit subtractor                                      : 16
+# Counters                                             : 2
+ 10-bit up counter                                     : 1
+ 9-bit up counter                                      : 1
+# Registers                                            : 8
+ 1-bit register                                        : 3
+ 10-bit register                                       : 1
+ 2-bit register                                        : 1
+ 3-bit register                                        : 2
+ 9-bit register                                        : 1
+# Comparators                                          : 54
+ 10-bit comparator greatequal                          : 3
+ 10-bit comparator lessequal                           : 18
+ 11-bit comparator greatequal                          : 16
+ 11-bit comparator lessequal                           : 17
+# Multiplexers                                         : 16
+ 1-bit 1024-to-1 multiplexer                           : 16
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 4096x8-bit ROM                                        : 1
+# Adders/Subtractors                                   : 89
+ 10-bit adder carry out                                : 14
+ 3-bit subtractor                                      : 61
+ 9-bit adder carry out                                 : 14
+# Counters                                             : 2
+ 10-bit up counter                                     : 1
+ 9-bit up counter                                      : 1
+# Registers                                            : 30
+ Flip-Flops                                            : 30
+# Comparators                                          : 54
+ 10-bit comparator greatequal                          : 3
+ 10-bit comparator lessequal                           : 18
+ 11-bit comparator greatequal                          : 16
+ 11-bit comparator lessequal                           : 17
+# Multiplexers                                         : 16
+ 1-bit 1024-to-1 multiplexer                           : 16
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <top> ...
+
+Optimizing unit <Video_RAM> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+INFO:Xst:2261 - The FF/Latch <VGA_Red_0> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <VGA_Red_1> <VGA_Red_2> 
+INFO:Xst:2261 - The FF/Latch <VGA_Blue_0> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <VGA_Blue_1> 
+INFO:Xst:2261 - The FF/Latch <VGA_Green_0> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <VGA_Green_1> <VGA_Green_2> 
+Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 44
+ Flip-Flops                                            : 44
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : top.ngr
+Top Level Output File Name         : top
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 11
+
+Cell Usage :
+# BELS                             : 104
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 17
+#      LUT2                        : 2
+#      LUT2_D                      : 1
+#      LUT3                        : 5
+#      LUT3_L                      : 1
+#      LUT4                        : 29
+#      LUT4_D                      : 1
+#      LUT4_L                      : 3
+#      MUXCY                       : 17
+#      MUXF5                       : 5
+#      VCC                         : 1
+#      XORCY                       : 19
+# FlipFlops/Latches                : 44
+#      FDE                         : 28
+#      FDR                         : 16
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 10
+#      OBUF                        : 10
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                       40  out of   4656     0%  
+ Number of Slice Flip Flops:             44  out of   9312     0%  
+ Number of 4 input LUTs:                 61  out of   9312     0%  
+ Number of IOs:                          11
+ Number of bonded IOBs:                  11  out of    232     4%  
+ Number of GCLKs:                         2  out of     24     8%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clock25MHz/slow_clk1               | BUFG                   | 43    |
+clk50Mhz                           | BUFGP                  | 1     |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 8.762ns (Maximum Frequency: 114.129MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 4.394ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock25MHz/slow_clk1'
+  Clock period: 8.762ns (frequency: 114.129MHz)
+  Total number of paths / destination ports: 1029 / 84
+-------------------------------------------------------------------------
+Delay:               8.762ns (Levels of Logic = 7)
+  Source:            pixelY_0 (FF)
+  Destination:       VGA_Red_0 (FF)
+  Source Clock:      clock25MHz/slow_clk1 rising
+  Destination Clock: clock25MHz/slow_clk1 rising
+
+  Data Path: pixelY_0 to VGA_Red_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             12   0.591   1.040  pixelY_0 (pixelY_0)
+     LUT2_D:I1->O          2   0.704   0.451  videoRam/pixelX_and0000211 (videoRam/N11)
+     LUT4_D:I3->LO         1   0.704   0.135  videoRam/pixelX_and0000319 (N46)
+     LUT4:I2->O            3   0.704   0.535  videoRam/pixelX_and00003108 (videoRam/N17)
+     LUT4:I3->O            3   0.704   0.535  videoRam/tileNumber<0>53 (currentPixel<6>)
+     LUT4:I3->O            2   0.704   0.622  videoRam/tileNumber<1>13 (videoRam/N20)
+     LUT4:I0->O            1   0.704   0.000  videoRam/tileNumber<1>31_F (N35)
+     MUXF5:I0->O           1   0.321   0.000  videoRam/tileNumber<1>31 (currentPixel<0>)
+     FDR:D                     0.308          VGA_Red_0
+    ----------------------------------------
+    Total                      8.762ns (5.444ns logic, 3.318ns route)
+                                       (62.1% logic, 37.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk50Mhz'
+  Clock period: 1.949ns (frequency: 513.084MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.949ns (Levels of Logic = 0)
+  Source:            clock25MHz/slow_clk (FF)
+  Destination:       clock25MHz/slow_clk (FF)
+  Source Clock:      clk50Mhz rising
+  Destination Clock: clk50Mhz rising
+
+  Data Path: clock25MHz/slow_clk to clock25MHz/slow_clk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.591   0.447  clock25MHz/slow_clk (clock25MHz/slow_clk1)
+     FDR:R                     0.911          clock25MHz/slow_clk
+    ----------------------------------------
+    Total                      1.949ns (1.502ns logic, 0.447ns route)
+                                       (77.1% logic, 22.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock25MHz/slow_clk1'
+  Total number of paths / destination ports: 10 / 10
+-------------------------------------------------------------------------
+Offset:              4.394ns (Levels of Logic = 1)
+  Source:            VGA_Red_0 (FF)
+  Destination:       VGA_Red<2> (PAD)
+  Source Clock:      clock25MHz/slow_clk1 rising
+
+  Data Path: VGA_Red_0 to VGA_Red<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              3   0.591   0.531  VGA_Red_0 (VGA_Red_0)
+     OBUF:I->O                 3.272          VGA_Red_0_OBUF (VGA_Red<0>)
+    ----------------------------------------
+    Total                      4.394ns (3.863ns logic, 0.531ns route)
+                                       (87.9% logic, 12.1% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 34.00 secs
+Total CPU time to Xst completion: 33.50 secs
+ 
+--> 
+
+Total memory usage is 194504 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  150 (   0 filtered)
+Number of infos    :   19 (   0 filtered)
+

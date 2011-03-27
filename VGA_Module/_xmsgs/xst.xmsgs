@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">115</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">115</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">124</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="info" file="Xst" num="1433" delta="old" >Contents of array &lt;<arg fmt="%s" index="1">movingTilesTransparencyMap</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="1610" delta="new" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">126</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">pixelX</arg>&gt; has a width of <arg fmt="%d" index="4">3</arg> bits but assigned expression is <arg fmt="%d" index="5">10</arg>-bit wide.
+</msg>
+
+<msg type="warning" file="Xst" num="1610" delta="new" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">127</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">pixelY</arg>&gt; has a width of <arg fmt="%d" index="4">3</arg> bits but assigned expression is <arg fmt="%d" index="5">9</arg>-bit wide.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">124</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="info" file="Xst" num="1433" delta="old" >Contents of array &lt;<arg fmt="%s" index="1">movingTilesTransparencyMap</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="1610" delta="new" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">126</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">pixelX</arg>&gt; has a width of <arg fmt="%d" index="4">3</arg> bits but assigned expression is <arg fmt="%d" index="5">10</arg>-bit wide.
+</msg>
+
+<msg type="warning" file="Xst" num="1610" delta="new" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">127</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">pixelY</arg>&gt; has a width of <arg fmt="%d" index="4">3</arg> bits but assigned expression is <arg fmt="%d" index="5">9</arg>-bit wide.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">124</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="info" file="Xst" num="1433" delta="old" >Contents of array &lt;<arg fmt="%s" index="1">movingTilesTransparencyMap</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="1610" delta="new" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">126</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">pixelX</arg>&gt; has a width of <arg fmt="%d" index="4">3</arg> bits but assigned expression is <arg fmt="%d" index="5">10</arg>-bit wide.
+</msg>
+
+<msg type="warning" file="Xst" num="1610" delta="new" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">127</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">pixelY</arg>&gt; has a width of <arg fmt="%d" index="4">3</arg> bits but assigned expression is <arg fmt="%d" index="5">9</arg>-bit wide.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">124</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="info" file="Xst" num="1433" delta="old" >Contents of array &lt;<arg fmt="%s" index="1">movingTilesTransparencyMap</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="1610" delta="new" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">126</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">pixelX</arg>&gt; has a width of <arg fmt="%d" index="4">3</arg> bits but assigned expression is <arg fmt="%d" index="5">10</arg>-bit wide.
+</msg>
+
+<msg type="warning" file="Xst" num="1610" delta="new" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">127</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">pixelY</arg>&gt; has a width of <arg fmt="%d" index="4">3</arg> bits but assigned expression is <arg fmt="%d" index="5">9</arg>-bit wide.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">124</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="info" file="Xst" num="1433" delta="old" >Contents of array &lt;<arg fmt="%s" index="1">movingTilesTransparencyMap</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="1610" delta="new" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">126</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">pixelX</arg>&gt; has a width of <arg fmt="%d" index="4">3</arg> bits but assigned expression is <arg fmt="%d" index="5">10</arg>-bit wide.
+</msg>
+
+<msg type="warning" file="Xst" num="1610" delta="new" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">127</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">pixelY</arg>&gt; has a width of <arg fmt="%d" index="4">3</arg> bits but assigned expression is <arg fmt="%d" index="5">9</arg>-bit wide.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">124</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="info" file="Xst" num="1433" delta="old" >Contents of array &lt;<arg fmt="%s" index="1">movingTilesTransparencyMap</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="1610" delta="new" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">126</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">pixelX</arg>&gt; has a width of <arg fmt="%d" index="4">3</arg> bits but assigned expression is <arg fmt="%d" index="5">10</arg>-bit wide.
+</msg>
+
+<msg type="warning" file="Xst" num="1610" delta="new" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">127</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">pixelY</arg>&gt; has a width of <arg fmt="%d" index="4">3</arg> bits but assigned expression is <arg fmt="%d" index="5">9</arg>-bit wide.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">124</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="info" file="Xst" num="1433" delta="old" >Contents of array &lt;<arg fmt="%s" index="1">movingTilesTransparencyMap</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="1610" delta="new" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">126</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">pixelX</arg>&gt; has a width of <arg fmt="%d" index="4">3</arg> bits but assigned expression is <arg fmt="%d" index="5">10</arg>-bit wide.
+</msg>
+
+<msg type="warning" file="Xst" num="1610" delta="new" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">127</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">pixelY</arg>&gt; has a width of <arg fmt="%d" index="4">3</arg> bits but assigned expression is <arg fmt="%d" index="5">9</arg>-bit wide.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">124</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="info" file="Xst" num="1433" delta="old" >Contents of array &lt;<arg fmt="%s" index="1">movingTilesTransparencyMap</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="1610" delta="new" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">126</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">pixelX</arg>&gt; has a width of <arg fmt="%d" index="4">3</arg> bits but assigned expression is <arg fmt="%d" index="5">10</arg>-bit wide.
+</msg>
+
+<msg type="warning" file="Xst" num="1610" delta="new" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">127</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">pixelY</arg>&gt; has a width of <arg fmt="%d" index="4">3</arg> bits but assigned expression is <arg fmt="%d" index="5">9</arg>-bit wide.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">124</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="info" file="Xst" num="1433" delta="old" >Contents of array &lt;<arg fmt="%s" index="1">movingTilesTransparencyMap</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="1610" delta="new" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">126</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">pixelX</arg>&gt; has a width of <arg fmt="%d" index="4">3</arg> bits but assigned expression is <arg fmt="%d" index="5">10</arg>-bit wide.
+</msg>
+
+<msg type="warning" file="Xst" num="1610" delta="new" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">127</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">pixelY</arg>&gt; has a width of <arg fmt="%d" index="4">3</arg> bits but assigned expression is <arg fmt="%d" index="5">9</arg>-bit wide.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">124</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="info" file="Xst" num="1433" delta="old" >Contents of array &lt;<arg fmt="%s" index="1">movingTilesTransparencyMap</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="1610" delta="new" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">126</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">pixelX</arg>&gt; has a width of <arg fmt="%d" index="4">3</arg> bits but assigned expression is <arg fmt="%d" index="5">10</arg>-bit wide.
+</msg>
+
+<msg type="warning" file="Xst" num="1610" delta="new" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">127</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">pixelY</arg>&gt; has a width of <arg fmt="%d" index="4">3</arg> bits but assigned expression is <arg fmt="%d" index="5">9</arg>-bit wide.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">124</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="info" file="Xst" num="1433" delta="old" >Contents of array &lt;<arg fmt="%s" index="1">movingTilesTransparencyMap</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="1610" delta="new" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">126</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">pixelX</arg>&gt; has a width of <arg fmt="%d" index="4">3</arg> bits but assigned expression is <arg fmt="%d" index="5">10</arg>-bit wide.
+</msg>
+
+<msg type="warning" file="Xst" num="1610" delta="new" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">127</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">pixelY</arg>&gt; has a width of <arg fmt="%d" index="4">3</arg> bits but assigned expression is <arg fmt="%d" index="5">9</arg>-bit wide.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">124</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="info" file="Xst" num="1433" delta="old" >Contents of array &lt;<arg fmt="%s" index="1">movingTilesTransparencyMap</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="1610" delta="new" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">126</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">pixelX</arg>&gt; has a width of <arg fmt="%d" index="4">3</arg> bits but assigned expression is <arg fmt="%d" index="5">10</arg>-bit wide.
+</msg>
+
+<msg type="warning" file="Xst" num="1610" delta="new" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">127</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">pixelY</arg>&gt; has a width of <arg fmt="%d" index="4">3</arg> bits but assigned expression is <arg fmt="%d" index="5">9</arg>-bit wide.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">124</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="info" file="Xst" num="1433" delta="old" >Contents of array &lt;<arg fmt="%s" index="1">movingTilesTransparencyMap</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="1610" delta="new" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">126</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">pixelX</arg>&gt; has a width of <arg fmt="%d" index="4">3</arg> bits but assigned expression is <arg fmt="%d" index="5">10</arg>-bit wide.
+</msg>
+
+<msg type="warning" file="Xst" num="1610" delta="new" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">127</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">pixelY</arg>&gt; has a width of <arg fmt="%d" index="4">3</arg> bits but assigned expression is <arg fmt="%d" index="5">9</arg>-bit wide.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">124</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="info" file="Xst" num="1433" delta="old" >Contents of array &lt;<arg fmt="%s" index="1">movingTilesTransparencyMap</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="1610" delta="new" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">126</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">pixelX</arg>&gt; has a width of <arg fmt="%d" index="4">3</arg> bits but assigned expression is <arg fmt="%d" index="5">10</arg>-bit wide.
+</msg>
+
+<msg type="warning" file="Xst" num="1610" delta="new" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">127</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">pixelY</arg>&gt; has a width of <arg fmt="%d" index="4">3</arg> bits but assigned expression is <arg fmt="%d" index="5">9</arg>-bit wide.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">124</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="info" file="Xst" num="1433" delta="old" >Contents of array &lt;<arg fmt="%s" index="1">movingTilesTransparencyMap</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="1610" delta="new" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">126</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">pixelX</arg>&gt; has a width of <arg fmt="%d" index="4">3</arg> bits but assigned expression is <arg fmt="%d" index="5">10</arg>-bit wide.
+</msg>
+
+<msg type="warning" file="Xst" num="1610" delta="new" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">127</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">pixelY</arg>&gt; has a width of <arg fmt="%d" index="4">3</arg> bits but assigned expression is <arg fmt="%d" index="5">9</arg>-bit wide.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">124</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="info" file="Xst" num="1433" delta="old" >Contents of array &lt;<arg fmt="%s" index="1">movingTilesTransparencyMap</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="1610" delta="new" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">126</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">pixelX</arg>&gt; has a width of <arg fmt="%d" index="4">3</arg> bits but assigned expression is <arg fmt="%d" index="5">10</arg>-bit wide.
+</msg>
+
+<msg type="warning" file="Xst" num="1610" delta="new" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">127</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">pixelY</arg>&gt; has a width of <arg fmt="%d" index="4">3</arg> bits but assigned expression is <arg fmt="%d" index="5">9</arg>-bit wide.
+</msg>
+
+<msg type="warning" file="Xst" num="819" delta="old" >&quot;<arg fmt="%s" index="1">C:/Documents and Settings/nb418308/Desktop/VGA_Module/Video_RAM.vhd</arg>&quot; line <arg fmt="%d" index="2">111</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+<arg fmt="%s" index="3">&lt;movingTilesTransparencyMap&gt;, &lt;movingTilesMap&gt;</arg>
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">clk50Mhz</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">instruction</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">tileMap&lt;4095:192&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">tileMap&lt;62:55&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">tileMap&lt;53:46&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">tileMap&lt;44:37&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">tileMap&lt;35:28&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">tileMap&lt;26:19&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">tileMap&lt;17:10&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">tileMap&lt;8:1&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">tempY</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">tempX</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">temp</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">movingTilesY&lt;15:2&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">movingTilesX&lt;15:2&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">movingTilesTransparencyMap&lt;1023:32&gt;</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">movingTilesMap&lt;15:2&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;9&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;8&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;7&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;79&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;78&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;77&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;76&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;75&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;74&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;73&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;72&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;71&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;70&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;6&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;69&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;68&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;67&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;66&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;65&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;64&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;63&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;62&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;61&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;60&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;5&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;59&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;58&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;57&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;56&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;55&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;54&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;53&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;52&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;51&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;50&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;4&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;49&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;48&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;47&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;46&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;45&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;44&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;43&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;42&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;41&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;40&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;3&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;39&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;38&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;37&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;36&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;35&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;34&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;33&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;32&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;31&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;30&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;2&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;29&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;28&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;27&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;26&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;25&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;24&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;23&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;22&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;21&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;20&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;1&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;19&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;18&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;17&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;16&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;15&gt;&lt;59:16&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;15&gt;&lt;14:0&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;14&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;13&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;12&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;11&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;10&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">backgroundMap&lt;0&gt;</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">instruction</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">00000000000000000000000000000000</arg>.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">VGA_Red_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;VGA_Red_1&gt; &lt;VGA_Red_2&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">VGA_Blue_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;VGA_Blue_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">VGA_Green_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;VGA_Green_1&gt; &lt;VGA_Green_2&gt; </arg>
+</msg>
+
+</messages>
+
