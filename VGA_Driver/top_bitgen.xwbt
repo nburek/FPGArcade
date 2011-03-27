@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=C:\Documents and Settings\nb418308\Desktop\FPGArcade\VGA_Driver\top.ncd
-OUTFILE=C:\Documents and Settings\nb418308\Desktop\FPGArcade\VGA_Driver\top.bit
-FAMILY=Spartan3E
-PART=xc3s500e-4fg320
-WORKINGDIR=C:\Documents and Settings\nb418308\Desktop\FPGArcade\VGA_Driver
-LICENSE=ISE
-USER_INFO=203016751_205335005_505

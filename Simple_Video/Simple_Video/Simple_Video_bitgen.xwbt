@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=C:\Documents and Settings\nb418308\Desktop\FPGArcade\Simple_Video\Simple_Video\Simple_Video.ncd
-OUTFILE=C:\Documents and Settings\nb418308\Desktop\FPGArcade\Simple_Video\Simple_Video\Simple_Video.bit
-FAMILY=Spartan3E
-PART=xc3s500e-4fg320
-WORKINGDIR=C:\Documents and Settings\nb418308\Desktop\FPGArcade\Simple_Video\Simple_Video
-LICENSE=ISE
-USER_INFO=203016751_205335005_505

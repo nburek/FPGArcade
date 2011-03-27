@@ -1,3 +1,0 @@
-vhdl work "slowClock.vhd"
-vhdl work "clk25MHz.vhd"
-vhdl work "Simple_Video.vhd"
