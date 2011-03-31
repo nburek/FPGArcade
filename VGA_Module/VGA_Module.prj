@@ -1,0 +1,5 @@
+vhdl work "ipcore_dir/tile_graphics_bram.vhd"
+vhdl work "ipcore_dir/block_graphics_bram.vhd"
+vhdl work "Video_Ram.vhd"
+vhdl work "clk25Mhz.vhd"
+vhdl work "VGA_Module.vhd"

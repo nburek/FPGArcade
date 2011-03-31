@@ -1,0 +1,878 @@
+Release 12.4 par M.81d (nt)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+T4Y0022681F3474::  Tue Mar 29 12:24:47 2011
+
+par -w -intstyle ise -ol high -t 1 VGA_Module_map.ncd VGA_Module.ncd
+VGA_Module.pcf 
+
+
+Constraints file: VGA_Module.pcf.
+Loading device for application Rf_Device from file '3s500e.nph' in environment C:\Xilinx\12.4\ISE_DS\ISE\.
+   "VGA_Module" is an NCD, version 3.2, device xc3s500e, package fg320, speed -4
+
+Initializing temperature to 85.000 Celsius. (default - Range: -40.000 to 100.000 Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.320 Volts)
+
+INFO:Par:282 - No user timing constraints were detected or you have set the option to ignore timing constraints ("par
+   -x"). Place and Route will run in "Performance Evaluation Mode" to automatically improve the performance of all
+   internal clocks in this design. Because there are not defined timing requirements, a timing score will not be
+   reported in the PAR report in this mode. The PAR timing summary will list the performance achieved for each clock.
+   Note: For the fastest runtime, set the effort level to "std".  For best performance, set the effort level to "high".
+
+Device speed data version:  "PRODUCTION 1.27 2010-11-18".
+
+
+Design Summary Report:
+
+ Number of External IOBs                          37 out of 232    15%
+
+   Number of External Input IOBs                 27
+
+      Number of External Input IBUFs             27
+        Number of LOCed External Input IBUFs      1 out of 27      3%
+
+
+   Number of External Output IOBs                10
+
+      Number of External Output IOBs             10
+        Number of LOCed External Output IOBs     10 out of 10    100%
+
+
+   Number of External Bidir IOBs                  0
+
+
+   Number of BUFGMUXs                        3 out of 24     12%
+   Number of MULT18X18SIOs                   1 out of 20      5%
+   Number of RAMB16s                         5 out of 20     25%
+   Number of Slices                       1686 out of 4656   36%
+      Number of SLICEMs                    128 out of 2328    5%
+
+
+
+Overall effort level (-ol):   High 
+Placer effort level (-pl):    High 
+Placer cost table entry (-t): 1
+Router effort level (-rl):    High 
+
+Starting initial Timing Analysis.  REAL time: 3 secs 
+Finished initial Timing Analysis.  REAL time: 3 secs 
+
+
+Starting Placer
+Total REAL time at the beginning of Placer: 3 secs 
+Total CPU  time at the beginning of Placer: 2 secs 
+
+Phase 1.1  Initial Placement Analysis
+Phase 1.1  Initial Placement Analysis (Checksum:faefebd0) REAL time: 4 secs 
+
+Phase 2.7  Design Feasibility Check
+Phase 2.7  Design Feasibility Check (Checksum:faefebd0) REAL time: 4 secs 
+
+Phase 3.31  Local Placement Optimization
+Phase 3.31  Local Placement Optimization (Checksum:faefebd0) REAL time: 4 secs 
+
+Phase 4.2  Initial Clock and IO Placement
+.......
+Phase 4.2  Initial Clock and IO Placement (Checksum:91c4dd29) REAL time: 4 secs 
+
+Phase 5.30  Global Clock Region Assignment
+Phase 5.30  Global Clock Region Assignment (Checksum:91c4dd29) REAL time: 4 secs 
+
+Phase 6.36  Local Placement Optimization
+Phase 6.36  Local Placement Optimization (Checksum:91c4dd29) REAL time: 4 secs 
+
+Phase 7.3  Local Placement Optimization
+......
+Phase 7.3  Local Placement Optimization (Checksum:a0760df9) REAL time: 4 secs 
+
+Phase 8.5  Local Placement Optimization
+Phase 8.5  Local Placement Optimization (Checksum:a0760df9) REAL time: 4 secs 
+
+Phase 9.8  Global Placement
+............................
+........................................
+....
+...............................................
+...
+....
+Phase 9.8  Global Placement (Checksum:85ce84d) REAL time: 14 secs 
+
+Phase 10.5  Local Placement Optimization
+Phase 10.5  Local Placement Optimization (Checksum:85ce84d) REAL time: 14 secs 
+
+Phase 11.18  Placement Optimization
+Phase 11.18  Placement Optimization (Checksum:7b2cc74b) REAL time: 15 secs 
+
+Phase 12.5  Local Placement Optimization
+Phase 12.5  Local Placement Optimization (Checksum:7b2cc74b) REAL time: 15 secs 
+
+Total REAL time to Placer completion: 15 secs 
+Total CPU  time to Placer completion: 15 secs 
+Writing design to file VGA_Module.ncd
+
+
+
+Starting Router
+
+
+Phase  1  : 10796 unrouted;      REAL time: 21 secs 
+
+Phase  2  : 10079 unrouted;      REAL time: 25 secs 
+
+Phase  3  : 2662 unrouted;      REAL time: 26 secs 
+
+Phase  4  : 2667 unrouted; (Par is working to improve performance)     REAL time: 27 secs 
+
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 31 secs 
+
+Updating file: VGA_Module.ncd with current fully routed design.
+
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 32 secs 
+
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 20 secs 
+
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 20 secs 
+
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 20 secs 
+
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 20 secs 
+WARNING:Route:455 - CLK Net:videoRam/movingBlocksTransparencyMap_592_not0001 may have excessive skew because 
+      4 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:videoRam/movingBlocksTransparencyMap_680_not0001 may have excessive skew because 
+      4 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:videoRam/movingBlocksTransparencyMap_736_not0001 may have excessive skew because 
+      1 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:videoRam/movingBlocksTransparencyMap_744_not0001 may have excessive skew because 
+      3 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:videoRam/movingBlocksTransparencyMap_808_not0001 may have excessive skew because 
+      4 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:videoRam/movingBlocksTransparencyMap_768_not0001 may have excessive skew because 
+      4 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:videoRam/movingBlocksTransparencyMap_848_not0001 may have excessive skew because 
+      4 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:videoRam/movingBlocksTransparencyMap_928_not0001 may have excessive skew because 
+      1 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:videoRam/movingBlocksTransparencyMap_776_not0001 may have excessive skew because 
+      2 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:videoRam/movingBlocksTransparencyMap_936_not0001 may have excessive skew because 
+      2 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:videoRam/movingBlocksTransparencyMap_784_not0001 may have excessive skew because 
+      1 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:videoRam/movingBlocksTransparencyMap_880_not0001 may have excessive skew because 
+      1 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:videoRam/movingBlocksTransparencyMap_952_not0001 may have excessive skew because 
+      4 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:videoRam/movingBlocksTransparencyMap_464_not0001 may have excessive skew because 
+      4 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:videoRam/movingBlocksTransparencyMap_16_not0001 may have excessive skew because 
+      3 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:videoRam/movingBlocksTransparencyMap_24_not0001 may have excessive skew because 
+      3 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:videoRam/movingBlocksTransparencyMap_40_not0001 may have excessive skew because 
+      4 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:videoRam/movingBlocksTransparencyMap_64_not0001 may have excessive skew because 
+      3 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:videoRam/movingBlocksTransparencyMap_72_not0001 may have excessive skew because 
+      4 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:videoRam/movingBlocksTransparencyMap_1008_not0001 may have excessive skew because 
+      3 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:videoRam/movingBlocksX_13_cmp_eq0000 may have excessive skew because 
+      3 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:videoRam/movingBlocksTransparencyMap_296_not0001 may have excessive skew because 
+      4 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:videoRam/movingBlocksTransparencyMap_392_not0001 may have excessive skew because 
+      4 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:videoRam/movingBlocksTransparencyMap_472_not0001 may have excessive skew because 
+      4 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:videoRam/movingBlocksTransparencyMap_528_not0001 may have excessive skew because 
+      2 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:videoRam/movingBlocksTransparencyMap_552_not0001 may have excessive skew because 
+      4 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:videoRam/movingBlocksTransparencyMap_544_not0001 may have excessive skew because 
+      2 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:videoRam/movingBlocksTransparencyMap_104_not0001 may have excessive skew because 
+      4 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:videoRam/movingBlocksTransparencyMap_624_not0001 may have excessive skew because 
+      3 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:videoRam/movingBlocksTransparencyMap_640_not0001 may have excessive skew because 
+      2 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:videoRam/movingBlocksTransparencyMap_704_not0001 may have excessive skew because 
+      3 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:videoRam/movingBlocksTransparencyMap_192_not0001 may have excessive skew because 
+      2 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:videoRam/movingBlocksTransparencyMap_0_not0001 may have excessive skew because 
+      4 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:videoRam/movingBlocksTransparencyMap_632_not0001 may have excessive skew because 
+      4 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:videoRam/movingBlocksX_4_cmp_eq0000 may have excessive skew because 
+      1 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:videoRam/movingBlocksTransparencyMap_152_not0001 may have excessive skew because 
+      3 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:videoRam/movingBlocksTransparencyMap_144_not0001 may have excessive skew because 
+      4 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:videoRam/movingBlocksTransparencyMap_200_not0001 may have excessive skew because 
+      2 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:videoRam/movingBlocksTransparencyMap_208_not0001 may have excessive skew because 
+      4 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:videoRam/movingBlocksTransparencyMap_216_not0001 may have excessive skew because 
+      2 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:videoRam/movingBlocksTransparencyMap_232_not0001 may have excessive skew because 
+      2 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:videoRam/movingBlocksTransparencyMap_248_not0001 may have excessive skew because 
+      4 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:videoRam/movingBlocksTransparencyMap_312_not0001 may have excessive skew because 
+      4 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:videoRam/movingBlocksTransparencyMap_408_not0001 may have excessive skew because 
+      4 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:videoRam/movingBlocksX_14_cmp_eq0000 may have excessive skew because 
+      4 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:videoRam/movingBlocksX_2_cmp_eq0000 may have excessive skew because 
+      10 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:videoRam/movingBlocksX_5_cmp_eq0000 may have excessive skew because 
+      10 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:videoRam/movingBlocksTransparencyMap_272_not0001 may have excessive skew because 
+      3 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:videoRam/movingBlocksTransparencyMap_344_not0001 may have excessive skew because 
+      4 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:videoRam/movingBlocksTransparencyMap_440_not0001 may have excessive skew because 
+      4 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+
+Total REAL time to Router completion: 1 mins 20 secs 
+Total CPU time to Router completion: 1 mins 14 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+| clock25MHz/slow_clk | BUFGMUX_X1Y10| No   |   32 |  0.046     |  0.166      |
++---------------------+--------------+------+------+------------+-------------+
+|      clk50Mhz_BUFGP | BUFGMUX_X2Y11| No   |   13 |  0.045     |  0.186      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/tileSetInpu |              |      |      |            |             |
+|       tData_not0001 |  BUFGMUX_X1Y0| No   |   10 |  0.047     |  0.178      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_592 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.023     |  0.855      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_648 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.043     |  1.798      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_656 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.020     |  1.529      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_664 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.025     |  2.014      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_672 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.000     |  0.641      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_680 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.285     |  1.159      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_728 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.005     |  1.453      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_736 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.343     |  0.648      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_744 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.827     |  1.135      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_752 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.115     |  1.937      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_760 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.439     |  2.208      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_808 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.780     |  1.082      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_816 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.209     |  2.091      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_824 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.014     |  1.580      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_832 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.096     |  1.829      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_840 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.341     |  2.206      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_904 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.000     |  1.696      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_912 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.001     |  1.515      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_920 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.000     |  2.043      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_488 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.000     |  0.641      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_496 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.000     |  0.657      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_568 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.017     |  1.529      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_576 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.003     |  1.271      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_584 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.041     |  1.874      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_688 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.004     |  2.012      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_768 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.216     |  0.884      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_848 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.019     |  0.860      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_928 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.662     |  1.537      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_776 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.093     |  0.655      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_856 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.000     |  1.651      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_936 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  1.149     |  1.519      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_784 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.044     |  0.665      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_864 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.004     |  0.655      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_944 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.000     |  1.913      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_696 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.006     |  1.993      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_792 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.147     |  1.968      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_872 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.003     |  1.471      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_880 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.408     |  1.504      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_952 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.504     |  1.386      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_960 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.123     |  1.909      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_888 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.000     |  1.662      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_968 |              |      |      |            |             |
+|            _not0001 |         Local|      |    5 |  0.038     |  1.510      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_976 |              |      |      |            |             |
+|            _not0001 |         Local|      |    5 |  0.025     |  1.775      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_448 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.070     |  1.965      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_456 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.000     |  1.451      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_984 |              |      |      |            |             |
+|            _not0001 |         Local|      |    5 |  0.103     |  1.829      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_464 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.113     |  0.926      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_896 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.000     |  2.014      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_992 |              |      |      |            |             |
+|            _not0001 |         Local|      |    5 |  0.148     |  1.962      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_100 |              |      |      |            |             |
+|           0_not0001 |         Local|      |    4 |  0.000     |  1.504      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_10_ |              |      |      |            |             |
+|             not0001 |         Local|      |    5 |  0.418     |  2.175      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_16_ |              |      |      |            |             |
+|             not0001 |         Local|      |    4 |  0.304     |  0.889      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_24_ |              |      |      |            |             |
+|             not0001 |         Local|      |    4 |  0.536     |  1.165      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_32_ |              |      |      |            |             |
+|             not0001 |         Local|      |    4 |  0.009     |  0.355      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_40_ |              |      |      |            |             |
+|             not0001 |         Local|      |    4 |  0.575     |  1.452      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_48_ |              |      |      |            |             |
+|             not0001 |         Local|      |    4 |  0.002     |  1.562      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_56_ |              |      |      |            |             |
+|             not0001 |         Local|      |    4 |  0.108     |  1.858      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_64_ |              |      |      |            |             |
+|             not0001 |         Local|      |    4 |  0.662     |  2.171      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_72_ |              |      |      |            |             |
+|             not0001 |         Local|      |    4 |  1.061     |  1.935      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_80_ |              |      |      |            |             |
+|             not0001 |         Local|      |    5 |  0.144     |  1.875      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_88_ |              |      |      |            |             |
+|             not0001 |         Local|      |    5 |  0.185     |  2.118      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_100 |              |      |      |            |             |
+|            _not0001 |         Local|      |    5 |  0.013     |  1.942      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_100 |              |      |      |            |             |
+|           8_not0001 |         Local|      |    4 |  0.873     |  1.481      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_101 |              |      |      |            |             |
+|           6_not0001 |         Local|      |    4 |  0.000     |  1.882      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|        sX_0_not0001 |         Local|      |   10 |  0.032     |  1.518      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|     sX_6_cmp_eq0000 |         Local|      |   10 |  0.065     |  1.802      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|    sX_10_cmp_eq0000 |         Local|      |   10 |  0.264     |  2.093      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|    sX_13_cmp_eq0000 |         Local|      |   10 |  1.203     |  3.061      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_296 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.284     |  1.118      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_288 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.087     |  1.822      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_352 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.050     |  1.935      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_368 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.101     |  1.830      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_360 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.045     |  1.787      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_376 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.076     |  1.821      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_392 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.260     |  1.345      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_384 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.653     |  2.545      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_472 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.007     |  0.845      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_480 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.042     |  1.469      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_512 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.066     |  1.821      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_528 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.051     |  0.661      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_552 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.582     |  1.168      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_544 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.495     |  1.118      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_560 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.005     |  0.351      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_616 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.000     |  1.142      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_608 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.000     |  1.429      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_104 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.915     |  1.453      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_624 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.830     |  1.453      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_640 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.328     |  1.459      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_712 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.000     |  0.352      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_704 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.538     |  1.148      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_192 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.388     |  2.242      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_720 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.006     |  2.017      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_800 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.009     |  1.540      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_0_n |              |      |      |            |             |
+|              ot0001 |         Local|      |    4 |  0.518     |  1.133      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_632 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.657     |  1.367      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|    sX_11_cmp_eq0000 |         Local|      |   10 |  0.066     |  2.167      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|     sX_4_cmp_eq0000 |         Local|      |   10 |  0.447     |  2.210      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|    sX_12_cmp_eq0000 |         Local|      |   10 |  0.077     |  1.993      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|     sX_9_cmp_eq0000 |         Local|      |   10 |  0.175     |  2.030      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_136 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.633     |  2.462      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_128 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.113     |  1.955      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_152 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.425     |  1.586      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_144 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.787     |  1.402      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_168 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.038     |  1.221      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_160 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.093     |  2.075      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_200 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.781     |  1.443      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_208 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.409     |  0.710      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_112 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.000     |  1.261      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_216 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.855     |  2.040      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_232 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  1.005     |  1.589      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_224 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.449     |  2.535      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_248 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.319     |  1.178      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_240 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.192     |  2.172      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_312 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.285     |  1.430      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_304 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.000     |  0.641      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_328 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.003     |  1.445      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_320 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.016     |  1.435      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_408 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.263     |  1.370      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_400 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.132     |  1.864      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|    sX_14_cmp_eq0000 |         Local|      |   10 |  1.500     |  3.242      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|     sX_2_cmp_eq0000 |         Local|      |   10 |  1.328     |  2.297      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|    sX_15_cmp_eq0001 |         Local|      |   10 |  0.061     |  1.794      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|     sX_7_cmp_eq0000 |         Local|      |   10 |  0.151     |  2.051      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|     sX_1_cmp_eq0000 |         Local|      |   10 |  0.195     |  2.134      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|     sX_3_cmp_eq0000 |         Local|      |   10 |  0.258     |  2.131      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|     sX_5_cmp_eq0000 |         Local|      |   10 |  1.441     |  2.872      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|     sX_8_cmp_eq0000 |         Local|      |   10 |  0.163     |  2.070      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_600 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.005     |  0.356      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_520 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.068     |  1.910      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_184 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.000     |  0.352      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_176 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.000     |  0.641      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_264 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.019     |  1.224      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_256 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.066     |  1.809      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_280 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.086     |  1.819      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_272 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.855     |  1.465      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_344 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.310     |  1.184      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_336 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.000     |  0.352      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_424 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.004     |  1.509      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_416 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.003     |  1.572      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_440 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.526     |  1.428      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_432 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.041     |  1.524      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_536 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.003     |  0.644      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_504 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.005     |  0.356      |
++---------------------+--------------+------+------+------------+-------------+
+|videoRam/movingBlock |              |      |      |            |             |
+|sTransparencyMap_120 |              |      |      |            |             |
+|            _not0001 |         Local|      |    4 |  0.004     |  1.465      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+Timing Score: 0 (Setup: 0, Hold: 0)
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net clo | SETUP       |         N/A|     8.597ns|     N/A|           0
+  ck25MHz/slow_clk                          | HOLD        |     1.418ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net clk | SETUP       |         N/A|     6.421ns|     N/A|           0
+  50Mhz_BUFGP                               | HOLD        |     1.549ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+
+
+All constraints were met.
+INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the 
+   constraint is not analyzed due to the following: No paths covered by this 
+   constraint; Other constraints intersect with this constraint; or This 
+   constraint was disabled by a Path Tracing Control. Please run the Timespec 
+   Interaction Report (TSI) via command line (trce tsi) or Timing Analyzer GUI.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 1 mins 21 secs 
+Total CPU time to PAR completion: 1 mins 15 secs 
+
+Peak Memory Usage:  179 MB
+
+Placement: Completed - No errors found.
+Routing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 50
+Number of info messages: 1
+
+Writing design to file VGA_Module.ncd
+
+
+
+PAR done!
