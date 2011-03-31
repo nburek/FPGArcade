@@ -1,0 +1,194 @@
+
+# ##############################################################################
+# Created by Base System Builder Wizard for Xilinx EDK 12.4 Build EDK_MS4.81d
+# Sat Mar 26 20:44:32 2011
+# Target Board:  Digilent Nexys 2-500 Board Rev C
+# Family:    spartan3e
+# Device:    XC3S500E
+# Package:   FG320
+# Speed Grade:  -4
+# Processor number: 1
+# Processor 1: microblaze_0
+# System clock frequency: 50.0
+# Debug Interface: On-Chip HW Debug Module
+# ##############################################################################
+ PARAMETER VERSION = 2.1.0
+
+
+ PORT fpga_0_clk_1_sys_clk_pin = dcm_clk_s, DIR = I, SIGIS = CLK, CLK_FREQ = 50000000
+ PORT fpga_0_rst_1_sys_rst_pin = sys_rst_s, DIR = I, SIGIS = RST, RST_POLARITY = 1
+ PORT PmodJSTK_Module_0_MOSI_pin = PmodJSTK_Module_0_MOSI, DIR = O
+ PORT PmodJSTK_Module_0_SS_pin = PmodJSTK_Module_0_SS, DIR = O
+ PORT PmodJSTK_Module_0_MISO_pin = PmodJSTK_Module_0_MISO, DIR = I
+ PORT PmodJSTK_Module_0_SCK_pin = PmodJSTK_Module_0_SCK, DIR = O
+ PORT PmodJSTK_Module_1_MOSI_pin = PmodJSTK_Module_1_MOSI, DIR = O
+ PORT PmodJSTK_Module_1_SS_pin = PmodJSTK_Module_1_SS, DIR = O
+ PORT PmodJSTK_Module_1_MISO_pin = PmodJSTK_Module_1_MISO, DIR = I
+ PORT PmodJSTK_Module_1_SCK_pin = PmodJSTK_Module_1_SCK, DIR = O
+ PORT VGA_Module_0_VSync_pin = VGA_Module_0_VSync, DIR = O
+ PORT VGA_Module_0_HSync_pin = VGA_Module_0_HSync, DIR = O
+ PORT VGA_Module_0_VGA_Blue_pin = VGA_Module_0_VGA_Blue, DIR = O, VEC = [1:0]
+ PORT VGA_Module_0_VGA_Green_pin = VGA_Module_0_VGA_Green, DIR = O, VEC = [2:0]
+ PORT VGA_Module_0_VGA_Red_pin = VGA_Module_0_VGA_Red, DIR = O, VEC = [2:0]
+
+
+BEGIN microblaze
+ PARAMETER INSTANCE = microblaze_0
+ PARAMETER C_AREA_OPTIMIZED = 1
+ PARAMETER C_USE_BARREL = 1
+ PARAMETER C_DEBUG_ENABLED = 1
+ PARAMETER HW_VER = 8.00.b
+ BUS_INTERFACE DLMB = dlmb
+ BUS_INTERFACE ILMB = ilmb
+ BUS_INTERFACE DPLB = mb_plb
+ BUS_INTERFACE IPLB = mb_plb
+ BUS_INTERFACE DEBUG = microblaze_0_mdm_bus
+ PORT MB_RESET = mb_reset
+END
+
+BEGIN plb_v46
+ PARAMETER INSTANCE = mb_plb
+ PARAMETER HW_VER = 1.05.a
+ PORT PLB_Clk = clk_50_0000MHz
+ PORT SYS_Rst = sys_bus_reset
+END
+
+BEGIN lmb_v10
+ PARAMETER INSTANCE = ilmb
+ PARAMETER HW_VER = 1.00.a
+ PORT LMB_Clk = clk_50_0000MHz
+ PORT SYS_Rst = sys_bus_reset
+END
+
+BEGIN lmb_v10
+ PARAMETER INSTANCE = dlmb
+ PARAMETER HW_VER = 1.00.a
+ PORT LMB_Clk = clk_50_0000MHz
+ PORT SYS_Rst = sys_bus_reset
+END
+
+BEGIN lmb_bram_if_cntlr
+ PARAMETER INSTANCE = dlmb_cntlr
+ PARAMETER HW_VER = 2.10.b
+ PARAMETER C_BASEADDR = 0x00000000
+ PARAMETER C_HIGHADDR = 0x00003fff
+ BUS_INTERFACE SLMB = dlmb
+ BUS_INTERFACE BRAM_PORT = dlmb_port
+END
+
+BEGIN lmb_bram_if_cntlr
+ PARAMETER INSTANCE = ilmb_cntlr
+ PARAMETER HW_VER = 2.10.b
+ PARAMETER C_BASEADDR = 0x00000000
+ PARAMETER C_HIGHADDR = 0x00003fff
+ BUS_INTERFACE SLMB = ilmb
+ BUS_INTERFACE BRAM_PORT = ilmb_port
+END
+
+BEGIN bram_block
+ PARAMETER INSTANCE = lmb_bram
+ PARAMETER HW_VER = 1.00.a
+ BUS_INTERFACE PORTA = ilmb_port
+ BUS_INTERFACE PORTB = dlmb_port
+END
+
+BEGIN clock_generator
+ PARAMETER INSTANCE = clock_generator_0
+ PARAMETER C_CLKIN_FREQ = 50000000
+ PARAMETER C_CLKOUT0_FREQ = 50000000
+ PARAMETER C_CLKOUT0_PHASE = 0
+ PARAMETER C_CLKOUT0_GROUP = NONE
+ PARAMETER C_CLKOUT0_BUF = TRUE
+ PARAMETER C_EXT_RESET_HIGH = 1
+ PARAMETER HW_VER = 4.01.a
+ PORT CLKIN = dcm_clk_s
+ PORT CLKOUT0 = clk_50_0000MHz
+ PORT RST = sys_rst_s
+ PORT LOCKED = Dcm_all_locked
+END
+
+BEGIN mdm
+ PARAMETER INSTANCE = mdm_0
+ PARAMETER C_MB_DBG_PORTS = 1
+ PARAMETER C_USE_UART = 1
+ PARAMETER HW_VER = 2.00.a
+ PARAMETER C_BASEADDR = 0x84400000
+ PARAMETER C_HIGHADDR = 0x8440ffff
+ BUS_INTERFACE SPLB = mb_plb
+ BUS_INTERFACE MBDEBUG_0 = microblaze_0_mdm_bus
+ PORT Debug_SYS_Rst = Debug_SYS_Rst
+END
+
+BEGIN proc_sys_reset
+ PARAMETER INSTANCE = proc_sys_reset_0
+ PARAMETER C_EXT_RESET_HIGH = 1
+ PARAMETER HW_VER = 3.00.a
+ PORT Slowest_sync_clk = clk_50_0000MHz
+ PORT Ext_Reset_In = sys_rst_s
+ PORT MB_Debug_Sys_Rst = Debug_SYS_Rst
+ PORT Dcm_locked = Dcm_all_locked
+ PORT MB_Reset = mb_reset
+ PORT Bus_Struct_Reset = sys_bus_reset
+ PORT Peripheral_Reset = sys_periph_reset
+END
+
+BEGIN PmodJSTK_Module
+ PARAMETER INSTANCE = PmodJSTK_Module_0
+ PARAMETER HW_VER = 1.00.a
+ PORT CLK = dcm_clk_s
+ PORT MOSI = PmodJSTK_Module_0_MOSI
+ PORT SS = PmodJSTK_Module_0_SS
+ PORT MISO = PmodJSTK_Module_0_MISO
+ PORT SCK = PmodJSTK_Module_0_SCK
+ PORT Data = PmodJSTK_Module_0_Data
+END
+
+BEGIN PmodJSTK_Module
+ PARAMETER INSTANCE = PmodJSTK_Module_1
+ PARAMETER HW_VER = 1.00.a
+ PORT CLK = dcm_clk_s
+ PORT MOSI = PmodJSTK_Module_1_MOSI
+ PORT SS = PmodJSTK_Module_1_SS
+ PORT MISO = PmodJSTK_Module_1_MISO
+ PORT SCK = PmodJSTK_Module_1_SCK
+ PORT Data = PmodJSTK_Module_1_Data
+END
+
+BEGIN xps_gpio
+ PARAMETER INSTANCE = Joystick_GPIO
+ PARAMETER HW_VER = 2.00.a
+ PARAMETER C_IS_DUAL = 1
+ PARAMETER C_GPIO_WIDTH = 23
+ PARAMETER C_GPIO2_WIDTH = 23
+ PARAMETER C_BASEADDR = 0x81400000
+ PARAMETER C_HIGHADDR = 0x8140ffff
+ BUS_INTERFACE SPLB = mb_plb
+ PORT GPIO_IO_I = PmodJSTK_Module_0_Data
+ PORT GPIO2_IO_I = PmodJSTK_Module_1_Data
+END
+
+BEGIN xps_gpio
+ PARAMETER INSTANCE = Graphics_GPIO
+ PARAMETER HW_VER = 2.00.a
+ PARAMETER C_BASEADDR = 0x81420000
+ PARAMETER C_HIGHADDR = 0x8142ffff
+ PARAMETER C_IS_DUAL = 1
+ PARAMETER C_GPIO2_WIDTH = 1
+ BUS_INTERFACE SPLB = mb_plb
+ PORT GPIO_IO_O = VGA_Module_0_graphicsInstruction
+ PORT GPIO2_IO_O = VGA_Module_0_instructionClk
+END
+
+BEGIN VGA_Module
+ PARAMETER INSTANCE = VGA_Module_0
+ PARAMETER HW_VER = 1.00.a
+ PORT clk50Mhz = dcm_clk_s
+ PORT graphicsInstruction = VGA_Module_0_graphicsInstruction
+ PORT VSync = VGA_Module_0_VSync
+ PORT HSync = VGA_Module_0_HSync
+ PORT VGA_Blue = VGA_Module_0_VGA_Blue
+ PORT VGA_Green = VGA_Module_0_VGA_Green
+ PORT VGA_Red = VGA_Module_0_VGA_Red
+ PORT instructionClk = VGA_Module_0_instructionClk
+END
+

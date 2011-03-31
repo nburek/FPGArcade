@@ -1,0 +1,437 @@
+Release 12.4 - xst M.81d (nt)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+--> 
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "pmodjstk_module_0_wrapper_xst.prj"
+Verilog Include Directory          : {"C:\FPGArcade\FPGArcade\pcores\" "C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
+
+---- Target Parameters
+Target Device                      : xc3s500efg320-4
+Output File Name                   : "../implementation/pmodjstk_module_0_wrapper.ngc"
+
+---- Source Options
+Top Module Name                    : pmodjstk_module_0_wrapper
+
+---- Target Options
+Add IO Buffers                     : NO
+
+---- General Options
+Optimization Goal                  : speed
+Netlist Hierarchy                  : as_optimized
+Optimization Effort                : 1
+Hierarchy Separator                : /
+
+---- Other Options
+Cores Search Directories           : {../implementation/pmodjstk_module_0_wrapper}
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/FPGArcade/FPGArcade/pcores/PmodJSTK_Module_v1_00_a/hdl/vhdl/clock50Khz.vhd" in Library PmodJSTK_Module_v1_00_a.
+Entity <clock50Khz> compiled.
+Entity <clock50Khz> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/FPGArcade/FPGArcade/pcores/PmodJSTK_Module_v1_00_a/hdl/vhdl/PmodJSTK_Driver.vhd" in Library PmodJSTK_Module_v1_00_a.
+Entity <PmodJSTK_Module> compiled.
+Entity <PmodJSTK_Module> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/FPGArcade/FPGArcade/hdl/pmodjstk_module_0_wrapper.vhd" in Library work.
+Entity <pmodjstk_module_0_wrapper> compiled.
+Entity <pmodjstk_module_0_wrapper> (Architecture <STRUCTURE>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <pmodjstk_module_0_wrapper> in library <work> (architecture <STRUCTURE>).
+
+Analyzing hierarchy for entity <pmodjstk_module> in library <PmodJSTK_Module_v1_00_a> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <clock50Khz> in library <PmodJSTK_Module_v1_00_a> (architecture <Behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <pmodjstk_module_0_wrapper> in library <work> (Architecture <STRUCTURE>).
+Entity <pmodjstk_module_0_wrapper> analyzed. Unit <pmodjstk_module_0_wrapper> generated.
+
+Analyzing Entity <pmodjstk_module> in library <PmodJSTK_Module_v1_00_a> (Architecture <Behavioral>).
+Entity <pmodjstk_module> analyzed. Unit <pmodjstk_module> generated.
+
+Analyzing Entity <clock50Khz> in library <PmodJSTK_Module_v1_00_a> (Architecture <Behavioral>).
+Entity <clock50Khz> analyzed. Unit <clock50Khz> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <clock50Khz>.
+    Related source file is "C:/FPGArcade/FPGArcade/pcores/PmodJSTK_Module_v1_00_a/hdl/vhdl/clock50Khz.vhd".
+    Found 10-bit up counter for signal <count>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <clock50Khz> synthesized.
+
+
+Synthesizing Unit <pmodjstk_module>.
+    Related source file is "C:/FPGArcade/FPGArcade/pcores/PmodJSTK_Module_v1_00_a/hdl/vhdl/PmodJSTK_Driver.vhd".
+WARNING:Xst:1305 - Output <MOSI> is never assigned. Tied to value 0.
+WARNING:Xst:646 - Signal <saveBuffer<36:32>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <saveBuffer<29:24>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <saveBuffer<13:8>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit register for signal <SS>.
+    Found 10-bit up counter for signal <counter>.
+    Found 40-bit register for signal <inputBuffer>.
+    Found 11-bit comparator greatequal for signal <inputBuffer_4$cmp_ge0000> created at line 96.
+    Found 40-bit register for signal <saveBuffer>.
+    Found 11-bit comparator less for signal <saveBuffer$cmp_lt0000> created at line 101.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  81 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+Unit <pmodjstk_module> synthesized.
+
+
+Synthesizing Unit <pmodjstk_module_0_wrapper>.
+    Related source file is "C:/FPGArcade/FPGArcade/hdl/pmodjstk_module_0_wrapper.vhd".
+Unit <pmodjstk_module_0_wrapper> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 2
+ 10-bit up counter                                     : 2
+# Registers                                            : 42
+ 1-bit register                                        : 41
+ 40-bit register                                       : 1
+# Comparators                                          : 2
+ 11-bit comparator greatequal                          : 1
+ 11-bit comparator less                                : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:2677 - Node <inputBuffer_8> of sequential type is unconnected in block <pmodjstk_module>.
+WARNING:Xst:2677 - Node <inputBuffer_9> of sequential type is unconnected in block <pmodjstk_module>.
+WARNING:Xst:2677 - Node <inputBuffer_24> of sequential type is unconnected in block <pmodjstk_module>.
+WARNING:Xst:2677 - Node <inputBuffer_26> of sequential type is unconnected in block <pmodjstk_module>.
+WARNING:Xst:2677 - Node <inputBuffer_25> of sequential type is unconnected in block <pmodjstk_module>.
+WARNING:Xst:2677 - Node <inputBuffer_27> of sequential type is unconnected in block <pmodjstk_module>.
+WARNING:Xst:2677 - Node <inputBuffer_33> of sequential type is unconnected in block <pmodjstk_module>.
+WARNING:Xst:2677 - Node <inputBuffer_32> of sequential type is unconnected in block <pmodjstk_module>.
+WARNING:Xst:2677 - Node <inputBuffer_28> of sequential type is unconnected in block <pmodjstk_module>.
+WARNING:Xst:2677 - Node <inputBuffer_35> of sequential type is unconnected in block <pmodjstk_module>.
+WARNING:Xst:2677 - Node <inputBuffer_29> of sequential type is unconnected in block <pmodjstk_module>.
+WARNING:Xst:2677 - Node <inputBuffer_34> of sequential type is unconnected in block <pmodjstk_module>.
+WARNING:Xst:2677 - Node <inputBuffer_36> of sequential type is unconnected in block <pmodjstk_module>.
+WARNING:Xst:2677 - Node <inputBuffer_11> of sequential type is unconnected in block <pmodjstk_module>.
+WARNING:Xst:2677 - Node <inputBuffer_10> of sequential type is unconnected in block <pmodjstk_module>.
+WARNING:Xst:2677 - Node <inputBuffer_12> of sequential type is unconnected in block <pmodjstk_module>.
+WARNING:Xst:2677 - Node <inputBuffer_13> of sequential type is unconnected in block <pmodjstk_module>.
+WARNING:Xst:2677 - Node <saveBuffer_8> of sequential type is unconnected in block <pmodjstk_module>.
+WARNING:Xst:2677 - Node <saveBuffer_9> of sequential type is unconnected in block <pmodjstk_module>.
+WARNING:Xst:2677 - Node <saveBuffer_10> of sequential type is unconnected in block <pmodjstk_module>.
+WARNING:Xst:2677 - Node <saveBuffer_11> of sequential type is unconnected in block <pmodjstk_module>.
+WARNING:Xst:2677 - Node <saveBuffer_12> of sequential type is unconnected in block <pmodjstk_module>.
+WARNING:Xst:2677 - Node <saveBuffer_13> of sequential type is unconnected in block <pmodjstk_module>.
+WARNING:Xst:2677 - Node <saveBuffer_24> of sequential type is unconnected in block <pmodjstk_module>.
+WARNING:Xst:2677 - Node <saveBuffer_25> of sequential type is unconnected in block <pmodjstk_module>.
+WARNING:Xst:2677 - Node <saveBuffer_26> of sequential type is unconnected in block <pmodjstk_module>.
+WARNING:Xst:2677 - Node <saveBuffer_27> of sequential type is unconnected in block <pmodjstk_module>.
+WARNING:Xst:2677 - Node <saveBuffer_28> of sequential type is unconnected in block <pmodjstk_module>.
+WARNING:Xst:2677 - Node <saveBuffer_29> of sequential type is unconnected in block <pmodjstk_module>.
+WARNING:Xst:2677 - Node <saveBuffer_32> of sequential type is unconnected in block <pmodjstk_module>.
+WARNING:Xst:2677 - Node <saveBuffer_33> of sequential type is unconnected in block <pmodjstk_module>.
+WARNING:Xst:2677 - Node <saveBuffer_34> of sequential type is unconnected in block <pmodjstk_module>.
+WARNING:Xst:2677 - Node <saveBuffer_35> of sequential type is unconnected in block <pmodjstk_module>.
+WARNING:Xst:2677 - Node <saveBuffer_36> of sequential type is unconnected in block <pmodjstk_module>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 2
+ 10-bit up counter                                     : 2
+# Registers                                            : 47
+ Flip-Flops                                            : 47
+# Comparators                                          : 2
+ 11-bit comparator greatequal                          : 1
+ 11-bit comparator less                                : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <pmodjstk_module_0_wrapper> ...
+
+Optimizing unit <pmodjstk_module> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+FlipFlop PmodJSTK_Module_0/counter_1 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 68
+ Flip-Flops                                            : 68
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+Top Level Output File Name         : ../implementation/pmodjstk_module_0_wrapper.ngc
+Output Format                      : ngc
+Optimization Goal                  : speed
+Keep Hierarchy                     : no
+
+Design Statistics
+# IOs                              : 28
+
+Cell Usage :
+# BELS                             : 101
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 18
+#      LUT2_L                      : 1
+#      LUT3_L                      : 1
+#      LUT4                        : 29
+#      LUT4_D                      : 9
+#      MUXCY                       : 18
+#      MUXF5                       : 1
+#      VCC                         : 1
+#      XORCY                       : 20
+# FlipFlops/Latches                : 68
+#      FD                          : 11
+#      FDE                         : 46
+#      FDR                         : 11
+# Clock Buffers                    : 1
+#      BUFG                        : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                       53  out of   4656     1%  
+ Number of Slice Flip Flops:             68  out of   9312     0%  
+ Number of 4 input LUTs:                 60  out of   9312     0%  
+ Number of IOs:                          28
+ Number of bonded IOBs:                   0  out of    232     0%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------+--------------------------------------------+-------+
+Clock Signal                         | Clock buffer(FF name)                      | Load  |
+-------------------------------------+--------------------------------------------+-------+
+PmodJSTK_Module_0/clkGen50Khz/count_9| BUFG                                       | 58    |
+CLK                                  | NONE(PmodJSTK_Module_0/clkGen50Khz/count_9)| 10    |
+-------------------------------------+--------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 5.476ns (Maximum Frequency: 182.620MHz)
+   Minimum input arrival time before clock: 0.308ns
+   Maximum output required time after clock: 2.495ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'PmodJSTK_Module_0/clkGen50Khz/count_9'
+  Clock period: 5.476ns (frequency: 182.620MHz)
+  Total number of paths / destination ports: 632 / 92
+-------------------------------------------------------------------------
+Delay:               5.476ns (Levels of Logic = 2)
+  Source:            PmodJSTK_Module_0/counter_2 (FF)
+  Destination:       PmodJSTK_Module_0/counter_9 (FF)
+  Source Clock:      PmodJSTK_Module_0/clkGen50Khz/count_9 rising
+  Destination Clock: PmodJSTK_Module_0/clkGen50Khz/count_9 rising
+
+  Data Path: PmodJSTK_Module_0/counter_2 to PmodJSTK_Module_0/counter_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             22   0.591   1.199  PmodJSTK_Module_0/counter_2 (PmodJSTK_Module_0/counter_2)
+     LUT3_L:I2->LO         1   0.704   0.104  PmodJSTK_Module_0/inputBuffer_4_cmp_ge0000211_SW0 (N51)
+     LUT4:I3->O           34   0.704   1.263  PmodJSTK_Module_0/inputBuffer_4_cmp_ge0000211 (PmodJSTK_Module_0/inputBuffer_4_cmp_ge0000)
+     FDR:R                     0.911          PmodJSTK_Module_0/counter_0
+    ----------------------------------------
+    Total                      5.476ns (2.910ns logic, 2.566ns route)
+                                       (53.1% logic, 46.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 3.879ns (frequency: 257.798MHz)
+  Total number of paths / destination ports: 55 / 10
+-------------------------------------------------------------------------
+Delay:               3.879ns (Levels of Logic = 10)
+  Source:            PmodJSTK_Module_0/clkGen50Khz/count_1 (FF)
+  Destination:       PmodJSTK_Module_0/clkGen50Khz/count_9 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: PmodJSTK_Module_0/clkGen50Khz/count_1 to PmodJSTK_Module_0/clkGen50Khz/count_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.591   0.595  PmodJSTK_Module_0/clkGen50Khz/count_1 (PmodJSTK_Module_0/clkGen50Khz/count_1)
+     LUT1:I0->O            1   0.704   0.000  PmodJSTK_Module_0/clkGen50Khz/Mcount_count_cy<1>_rt (PmodJSTK_Module_0/clkGen50Khz/Mcount_count_cy<1>_rt)
+     MUXCY:S->O            1   0.464   0.000  PmodJSTK_Module_0/clkGen50Khz/Mcount_count_cy<1> (PmodJSTK_Module_0/clkGen50Khz/Mcount_count_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  PmodJSTK_Module_0/clkGen50Khz/Mcount_count_cy<2> (PmodJSTK_Module_0/clkGen50Khz/Mcount_count_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  PmodJSTK_Module_0/clkGen50Khz/Mcount_count_cy<3> (PmodJSTK_Module_0/clkGen50Khz/Mcount_count_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  PmodJSTK_Module_0/clkGen50Khz/Mcount_count_cy<4> (PmodJSTK_Module_0/clkGen50Khz/Mcount_count_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  PmodJSTK_Module_0/clkGen50Khz/Mcount_count_cy<5> (PmodJSTK_Module_0/clkGen50Khz/Mcount_count_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  PmodJSTK_Module_0/clkGen50Khz/Mcount_count_cy<6> (PmodJSTK_Module_0/clkGen50Khz/Mcount_count_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  PmodJSTK_Module_0/clkGen50Khz/Mcount_count_cy<7> (PmodJSTK_Module_0/clkGen50Khz/Mcount_count_cy<7>)
+     MUXCY:CI->O           0   0.059   0.000  PmodJSTK_Module_0/clkGen50Khz/Mcount_count_cy<8> (PmodJSTK_Module_0/clkGen50Khz/Mcount_count_cy<8>)
+     XORCY:CI->O           1   0.804   0.000  PmodJSTK_Module_0/clkGen50Khz/Mcount_count_xor<9> (PmodJSTK_Module_0/Result<9>)
+     FD:D                      0.308          PmodJSTK_Module_0/clkGen50Khz/count_9
+    ----------------------------------------
+    Total                      3.879ns (3.284ns logic, 0.595ns route)
+                                       (84.7% logic, 15.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'PmodJSTK_Module_0/clkGen50Khz/count_9'
+  Total number of paths / destination ports: 23 / 23
+-------------------------------------------------------------------------
+Offset:              0.308ns (Levels of Logic = 0)
+  Source:            MISO (PAD)
+  Destination:       PmodJSTK_Module_0/inputBuffer_3 (FF)
+  Destination Clock: PmodJSTK_Module_0/clkGen50Khz/count_9 rising
+
+  Data Path: MISO to PmodJSTK_Module_0/inputBuffer_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:D                     0.308          PmodJSTK_Module_0/inputBuffer_4
+    ----------------------------------------
+    Total                      0.308ns (0.308ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'PmodJSTK_Module_0/clkGen50Khz/count_9'
+  Total number of paths / destination ports: 24 / 24
+-------------------------------------------------------------------------
+Offset:              0.591ns (Levels of Logic = 0)
+  Source:            PmodJSTK_Module_0/SS (FF)
+  Destination:       SS (PAD)
+  Source Clock:      PmodJSTK_Module_0/clkGen50Khz/count_9 rising
+
+  Data Path: PmodJSTK_Module_0/SS to SS
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.591   0.000  PmodJSTK_Module_0/SS (PmodJSTK_Module_0/SS)
+    ----------------------------------------
+    Total                      0.591ns (0.591ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              2.495ns (Levels of Logic = 1)
+  Source:            PmodJSTK_Module_0/clkGen50Khz/count_9 (FF)
+  Destination:       SCK (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: PmodJSTK_Module_0/clkGen50Khz/count_9 to SCK
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.591   0.447  PmodJSTK_Module_0/clkGen50Khz/count_9 (PmodJSTK_Module_0/clkGen50Khz/count_9)
+     BUFG:I->O            58   1.457   0.000  PmodJSTK_Module_0/clkGen50Khz/count_9_BUFG (SCK)
+    ----------------------------------------
+    Total                      2.495ns (2.048ns logic, 0.447ns route)
+                                       (82.1% logic, 17.9% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 3.91 secs
+ 
+--> 
+
+Total memory usage is 154536 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   38 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

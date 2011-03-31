@@ -1,0 +1,9 @@
+##############################################################################
+## Filename:          C:\FPGArcade\FPGArcade\pcores/top_v1_00_a/data/top_v2_1_0.pao
+## Description:       Peripheral Analysis Order
+## Date:              Sun Mar 27 08:17:31 2011 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+lib top_v1_00_a Video_RAM vhdl
+lib top_v1_00_a clk25Mhz vhdl
+lib top_v1_00_a VGA_Module vhdl

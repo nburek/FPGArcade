@@ -1,0 +1,109 @@
+Mapping logical library work (line 1) to current logical library
+VGA_Module_v1_00_a ...
+Mapping logical library work (line 2) to current logical library
+VGA_Module_v1_00_a ...
+Mapping logical library work (line 3) to current logical library
+VGA_Module_v1_00_a ...
+Mapping logical library work (line 4) to current logical library
+VGA_Module_v1_00_a ...
+Mapping logical library work (line 5) to current logical library
+VGA_Module_v1_00_a ...
+Parsing XST project file successfully ...
+Analyzing HDL source files ...
+Analyzing HDL source files successfully ...
+HDL language for the peripheral (top level) design unit VGA_Module is vhdl ...
+WARNING:EDK:2221 - Project file C:\FPGArcade\FPGArcade\pcores/VGA_Module.prj
+   already exists, will be overwrite and removed afterward ...
+INFO:EDK:3391 - Create temporary xst project file:
+   C:\FPGArcade\FPGArcade\pcores/VGA_Module.prj
+Compiling vhdl file "C:/FPGArcade/VGA_Module/ipcore_dir/tile_graphics_bram.vhd"
+in Library VGA_Module_v1_00_a.
+Entity <tile_graphics_bram> compiled.
+Entity <tile_graphics_bram> (Architecture <tile_graphics_bram_a>) compiled.
+Compiling vhdl file "C:/FPGArcade/VGA_Module/ipcore_dir/block_graphics_bram.vhd"
+in Library VGA_Module_v1_00_a.
+Entity <block_graphics_bram> compiled.
+Entity <block_graphics_bram> (Architecture <block_graphics_bram_a>) compiled.
+Compiling vhdl file "C:/FPGArcade/VGA_Module/clk25Mhz.vhd" in Library
+VGA_Module_v1_00_a.
+Entity <clk25MHz> compiled.
+Entity <clk25MHz> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/FPGArcade/VGA_Module/Video_Ram.vhd" in Library
+VGA_Module_v1_00_a.
+Entity <Video_Ram> compiled.
+Entity <Video_Ram> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/FPGArcade/VGA_Module/VGA_Module.vhd" in Library
+VGA_Module_v1_00_a.
+Entity <VGA_Module> compiled.
+Entity <VGA_Module> (Architecture <Behavioral>) compiled.
+
+
+Analyzing HDL attributes ...
+Entity name = VGA_Module
+INFO:EDK:1607 - IPTYPE set to value : PERIPHERAL
+INFO:EDK:1511 - IMP_NETLIST set to value : TRUE
+INFO:EDK:1486 - HDL set to value : VHDL
+WARNING:EDK:3590 - Unable to delete temporary project file
+   C:\FPGArcade\FPGArcade\pcores\VGA_Module.prj : 13
+Copying file tile_graphics_bram.vhd to
+C:\FPGArcade\FPGArcade\pcores/VGA_Module_v1_00_a/hdl/vhdl/ ...
+Copying file block_graphics_bram.vhd to
+C:\FPGArcade\FPGArcade\pcores/VGA_Module_v1_00_a/hdl/vhdl/ ...
+Copying file Video_Ram.vhd to
+C:\FPGArcade\FPGArcade\pcores/VGA_Module_v1_00_a/hdl/vhdl/ ...
+Copying file clk25Mhz.vhd to
+C:\FPGArcade\FPGArcade\pcores/VGA_Module_v1_00_a/hdl/vhdl/ ...
+Copying file VGA_Module.vhd to
+C:\FPGArcade\FPGArcade\pcores/VGA_Module_v1_00_a/hdl/vhdl/ ...
+
+Thank you for using Create and Import Peripheral Wizard! Please find your
+imported peripheral under C:\FPGArcade\FPGArcade\pcores\VGA_Module_v1_00_a.
+
+Summary:
+
+  Logical library     : VGA_Module_v1_00_a
+  Version             : 1.00.a
+  Bus interface(s)    : None
+
+The following sub-directories will be created:
+
+  - VGA_Module_v1_00_a\data
+  - VGA_Module_v1_00_a\doc
+  - VGA_Module_v1_00_a\hdl
+  - VGA_Module_v1_00_a\hdl\vhdl
+  - VGA_Module_v1_00_a\netlist
+
+
+The following HDL source files will be copied into the
+vga_module_v1_00_a\hdl\vhdl directory:
+
+  - tile_graphics_bram.vhd
+  - block_graphics_bram.vhd
+  - Video_Ram.vhd
+  - clk25Mhz.vhd
+  - VGA_Module.vhd
+
+The following files will be created under the VGA_Module_v1_00_a\data directory:
+
+  - VGA_Module_v2_1_0.mpd
+  - VGA_Module_v2_1_0.pao
+
+  - VGA_Module_v2_1_0.bbd
+
+The following netlist file(s) will be copied into the VGA_Module_v1_00_a\netlist
+directory:
+
+  - VGA_Module.ngc
+  - tile_graphics_bram.ngc
+  - block_graphics_bram.ngc
+
+The following document file(s) will be copied into the VGA_Module_v1_00_a\doc
+directory:
+
+  - VGA_Module_pad.txt
+  - tile_graphics_bram_flist.txt
+  - blk_mem_gen_ds512.pdf
+  - blk_mem_gen_readme.txt
+  - block_graphics_bram_flist.txt
+
+

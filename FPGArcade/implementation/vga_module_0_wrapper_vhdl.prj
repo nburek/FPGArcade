@@ -1,0 +1,6 @@
+vhdl VGA_Module_v1_00_a "C:\FPGArcade\FPGArcade\pcores\VGA_Module_v1_00_a\hdl\vhdl\tile_graphics_bram.vhd"
+vhdl VGA_Module_v1_00_a "C:\FPGArcade\FPGArcade\pcores\VGA_Module_v1_00_a\hdl\vhdl\block_graphics_bram.vhd"
+vhdl VGA_Module_v1_00_a "C:\FPGArcade\FPGArcade\pcores\VGA_Module_v1_00_a\hdl\vhdl\Video_Ram.vhd"
+vhdl VGA_Module_v1_00_a "C:\FPGArcade\FPGArcade\pcores\VGA_Module_v1_00_a\hdl\vhdl\clk25Mhz.vhd"
+vhdl VGA_Module_v1_00_a "C:\FPGArcade\FPGArcade\pcores\VGA_Module_v1_00_a\hdl\vhdl\VGA_Module.vhd"
+vhdl work "C:\FPGArcade\FPGArcade\hdl\vga_module_0_wrapper.vhd"

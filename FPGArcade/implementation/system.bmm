@@ -1,0 +1,18 @@
+// File: C:\FPGArcade\FPGArcade\implementation\system.bmm
+
+ADDRESS_MAP microblaze_0 MICROBLAZE 100
+	ADDRESS_SPACE lmb_bram_combined COMBINED [0x00000000:0x00003fff]
+		ADDRESS_RANGE RAMB16
+		BUS_BLOCK
+			lmb_bram/lmb_bram/ramb16_s4_s4_0 [31:28] ;
+			lmb_bram/lmb_bram/ramb16_s4_s4_1 [27:24] ;
+			lmb_bram/lmb_bram/ramb16_s4_s4_2 [23:20] ;
+			lmb_bram/lmb_bram/ramb16_s4_s4_3 [19:16] ;
+			lmb_bram/lmb_bram/ramb16_s4_s4_4 [15:12] ;
+			lmb_bram/lmb_bram/ramb16_s4_s4_5 [11:8] ;
+			lmb_bram/lmb_bram/ramb16_s4_s4_6 [7:4] ;
+			lmb_bram/lmb_bram/ramb16_s4_s4_7 [3:0] ;
+		END_BUS_BLOCK;
+		END_ADDRESS_RANGE;
+	END_ADDRESS_SPACE;
+END_ADDRESS_MAP;

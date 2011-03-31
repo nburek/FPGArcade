@@ -1,0 +1,105 @@
+Release 12.4 Map M.81d (nt)
+Xilinx Map Application Log File for Design 'system'
+
+Design Information
+------------------
+Command Line   : map -o system_map.ncd -pr b -ol high -timing -detail system.ngd
+system.pcf 
+Target Device  : xc3s500e
+Target Package : fg320
+Target Speed   : -4
+Mapper Version : spartan3e -- $Revision: 1.52.76.2 $
+Mapped Date    : Wed Mar 30 19:08:47 2011
+
+Mapping design into LUTs...
+Writing file system_map.ngm...
+Running directed packing...
+Running delay-based LUT packing...
+Updating timing models...
+Running timing-driven placement...
+Total REAL time at the beginning of Placer: 13 secs 
+Total CPU  time at the beginning of Placer: 10 secs 
+
+Phase 1.1  Initial Placement Analysis
+Phase 1.1  Initial Placement Analysis (Checksum:2fbe5e6b) REAL time: 16 secs 
+
+Phase 2.7  Design Feasibility Check
+Phase 2.7  Design Feasibility Check (Checksum:2fbe5e6b) REAL time: 16 secs 
+
+Phase 3.31  Local Placement Optimization
+Phase 3.31  Local Placement Optimization (Checksum:81225108) REAL time: 16 secs 
+
+Phase 4.2  Initial Clock and IO Placement
+
+Phase 4.2  Initial Clock and IO Placement (Checksum:39568528) REAL time: 17 secs 
+
+Phase 5.30  Global Clock Region Assignment
+Phase 5.30  Global Clock Region Assignment (Checksum:39568528) REAL time: 17 secs 
+
+Phase 6.36  Local Placement Optimization
+Phase 6.36  Local Placement Optimization (Checksum:39568528) REAL time: 17 secs 
+
+Phase 7.8  Global Placement
+..............................
+..............................................................................
+...
+.............................
+Phase 7.8  Global Placement (Checksum:81e87a5c) REAL time: 44 secs 
+
+Phase 8.5  Local Placement Optimization
+Phase 8.5  Local Placement Optimization (Checksum:81e87a5c) REAL time: 44 secs 
+
+Phase 9.18  Placement Optimization
+Phase 9.18  Placement Optimization (Checksum:20614b3f) REAL time: 58 secs 
+
+Phase 10.5  Local Placement Optimization
+Phase 10.5  Local Placement Optimization (Checksum:20614b3f) REAL time: 58 secs 
+
+Total REAL time to Placer completion: 58 secs 
+Total CPU  time to Placer completion: 50 secs 
+Running post-placement packing...
+WARNING:PhysDesignRules:367 - The signal <dlmb_LMB_ABus<30>> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <dlmb_LMB_ABus<31>> is incomplete. The
+   signal does not drive any load pins in the design.
+
+Design Summary
+--------------
+
+Design Summary:
+Number of errors:      0
+Number of warnings:    2
+Logic Utilization:
+  Number of Slice Flip Flops:         3,012 out of   9,312   32%
+  Number of 4 input LUTs:             5,115 out of   9,312   54%
+Logic Distribution:
+  Number of occupied Slices:          3,410 out of   4,656   73%
+    Number of Slices containing only related logic:   3,410 out of   3,410 100%
+    Number of Slices containing unrelated logic:          0 out of   3,410   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:       5,460 out of   9,312   58%
+    Number used as logic:             4,669
+    Number used as a route-thru:        345
+    Number used for Dual Port RAMs:     256
+      (Two LUTs used per Dual Port RAM)
+    Number used as Shift registers:     190
+
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+  Number of bonded IOBs:                 20 out of     232    8%
+    IOB Flip Flops:                      12
+  Number of RAMB16s:                     13 out of      20   65%
+  Number of BUFGMUXs:                     6 out of      24   25%
+  Number of DCMs:                         1 out of       4   25%
+  Number of BSCANs:                       1 out of       1  100%
+  Number of MULT18X18SIOs:                5 out of      20   25%
+
+Average Fanout of Non-Clock Nets:                3.68
+
+Peak Memory Usage:  227 MB
+Total REAL time to MAP completion:  1 mins 3 secs 
+Total CPU time to MAP completion:   54 secs 
+
+Mapping completed.
+See MAP report file "system_map.mrp" for details.

@@ -1,0 +1,11 @@
+##############################################################################
+## Filename:          C:\FPGArcade\FPGArcade\pcores/VGA_Module_v1_00_a/data/VGA_Module_v2_1_0.pao
+## Description:       Peripheral Analysis Order
+## Date:              Tue Mar 29 15:30:30 2011 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+lib VGA_Module_v1_00_a tile_graphics_bram vhdl
+lib VGA_Module_v1_00_a block_graphics_bram vhdl
+lib VGA_Module_v1_00_a Video_Ram vhdl
+lib VGA_Module_v1_00_a clk25Mhz vhdl
+lib VGA_Module_v1_00_a VGA_Module vhdl
