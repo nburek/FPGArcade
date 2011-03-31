@@ -1,5 +1,0 @@
-set -tmpdir "C:/Documents and Settings/nb418308/Desktop/VGA_Module/xst/projnav.tmp"
-set -xsthdpdir "C:/Documents and Settings/nb418308/Desktop/VGA_Module/xst"
-elaborate
--ifn Video_RAM.prj
--ifmt mixed

@@ -1,3 +1,0 @@
-vhdl work "Video_RAM.vhd"
-vhdl work "clk25Mhz.vhd"
-vhdl work "VGA_Module.vhd"
