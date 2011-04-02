@@ -12,6 +12,13 @@
 #define GRAPHICS_OUTPUT_CHANNEL 1
 #define GRAPHICS_CLOCK_CHANNEL 2
 
+#define RED 0x07
+#define GREEN 0x38
+#define BLUE 0xC0
+#define WHITE 0xFF
+#define BLACK 0x00
+#define YELLOW 0x3F
+#define PURPLE 0xC7
 
 XGpio graphicsGPIO;
 

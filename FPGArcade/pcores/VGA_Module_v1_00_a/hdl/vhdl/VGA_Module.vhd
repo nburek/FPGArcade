@@ -102,9 +102,15 @@ begin
 		END IF;
 		
 		IF ((hCount<=640) AND (vCount<=480)) THEN -- are we within the valid pixel range
-			VGA_Red <= currentPixel(2 downto 0);
-			VGA_Green <= currentPixel(5 downto 3);
-			VGA_Blue <= currentPixel(7 downto 6);
+			IF (hCount=0) THEN
+				VGA_Red <= "000";
+				VGA_Green <= "000";
+				VGA_Blue <= "00";
+			ELSE
+				VGA_Red <= currentPixel(2 downto 0);
+				VGA_Green <= currentPixel(5 downto 3);
+				VGA_Blue <= currentPixel(7 downto 6);
+			END IF;
 			
 			IF (hCount=640) THEN 
 				pixelX <= "0000000000";

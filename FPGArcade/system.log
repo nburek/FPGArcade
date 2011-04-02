@@ -5787,3 +5787,2276 @@ Done writing filter settings to:
 	C:\FPGArcade\FPGArcade\etc\system.filters
 Done writing Tab View settings to:
 	C:\FPGArcade\FPGArcade\etc\system.gui
+Xilinx Platform Studio (XPS)
+Xilinx EDK 12.4 Build EDK_MS4.81d
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+
+********************************************************************************
+At Local date and time: Thu Mar 31 04:20:41 2011
+ make -f system.make Frogger_program started...
+mb-gcc -O2 Frogger/src/Frogger.c  -o Frogger/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b  -T Frogger/Frogger_linker_script.ld  -g    -I./microblaze_0/include/  -IFrogger/lib/  -L./microblaze_0/lib/  \
+	  
+mb-size Frogger/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3826	    332	   2134	   6292	   1894	Frogger/executable.elf
+
+Done!
+
+********************************************************************************
+At Local date and time: Thu Mar 31 04:21:05 2011
+ make -f system.make init_bram started...
+*********************************************
+Initializing BRAM contents of the bitstream
+*********************************************
+bitinit -p xc3s500efg320-4 system.mhs -lp C:/Xilinx/12.4/ISE_DS/ISE/Digilent_Nexys_EDK_Board_Support_Files_V_2_1/lib/  -pe microblaze_0 Frogger/executable.elf  \
+	-bt implementation/system.bit -o implementation/download.bit
+
+bitinit version Xilinx EDK 12.4 Build EDK_MS4.81d
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+
+Overriding IP level properties ...
+
+Computing clock values...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) dlmb_cntlr	dlmb
+  (0000000000-0x00003fff) ilmb_cntlr	ilmb
+  (0x81400000-0x8140ffff) Joystick_GPIO	mb_plb
+  (0x81420000-0x8142ffff) Graphics_GPIO	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 69 - tool is overriding PARAMETER
+   C_PLBV46_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 70 - tool is overriding PARAMETER
+   C_PLBV46_NUM_SLAVES value to 3
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 71 - tool is overriding PARAMETER C_PLBV46_MID_WIDTH
+   value to 1
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 73 - tool is overriding PARAMETER C_PLBV46_DWIDTH
+   value to 32
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:ilmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:dlmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:lmb_bram -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 67 - tool is overriding PARAMETER C_MEMSIZE
+   value to 0x4000
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 83 - tool is overriding PARAMETER C_SPLB_MID_WIDTH value to
+   1
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 84 - tool is overriding PARAMETER C_SPLB_NUM_MASTERS value
+   to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Joystick_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Graphics_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+
+Checking platform address map ...
+
+Initializing Memory...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -p xc3s500efg320-4 -bt
+"implementation/system.bit"  -bd "Frogger/executable.elf" tag microblaze_0  -o b
+implementation/download.bit 
+Memory Initialization completed successfully.
+
+Done!
+
+********************************************************************************
+At Local date and time: Thu Mar 31 04:24:26 2011
+ make -f system.make Frogger_program started...
+mb-gcc -O2 Frogger/src/Frogger.c  -o Frogger/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b  -T Frogger/Frogger_linker_script.ld  -g    -I./microblaze_0/include/  -IFrogger/lib/  -L./microblaze_0/lib/  \
+	  
+mb-size Frogger/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3826	    332	   2134	   6292	   1894	Frogger/executable.elf
+
+Done!
+
+********************************************************************************
+At Local date and time: Thu Mar 31 04:24:30 2011
+ make -f system.make init_bram started...
+*********************************************
+Initializing BRAM contents of the bitstream
+*********************************************
+bitinit -p xc3s500efg320-4 system.mhs -lp C:/Xilinx/12.4/ISE_DS/ISE/Digilent_Nexys_EDK_Board_Support_Files_V_2_1/lib/  -pe microblaze_0 Frogger/executable.elf  \
+	-bt implementation/system.bit -o implementation/download.bit
+
+bitinit version Xilinx EDK 12.4 Build EDK_MS4.81d
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+
+Overriding IP level properties ...
+
+Computing clock values...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) dlmb_cntlr	dlmb
+  (0000000000-0x00003fff) ilmb_cntlr	ilmb
+  (0x81400000-0x8140ffff) Joystick_GPIO	mb_plb
+  (0x81420000-0x8142ffff) Graphics_GPIO	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 69 - tool is overriding PARAMETER
+   C_PLBV46_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 70 - tool is overriding PARAMETER
+   C_PLBV46_NUM_SLAVES value to 3
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 71 - tool is overriding PARAMETER C_PLBV46_MID_WIDTH
+   value to 1
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 73 - tool is overriding PARAMETER C_PLBV46_DWIDTH
+   value to 32
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:ilmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:dlmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:lmb_bram -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 67 - tool is overriding PARAMETER C_MEMSIZE
+   value to 0x4000
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 83 - tool is overriding PARAMETER C_SPLB_MID_WIDTH value to
+   1
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 84 - tool is overriding PARAMETER C_SPLB_NUM_MASTERS value
+   to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Joystick_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Graphics_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+
+Checking platform address map ...
+
+Initializing Memory...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -p xc3s500efg320-4 -bt
+"implementation/system.bit"  -bd "Frogger/executable.elf" tag microblaze_0  -o b
+implementation/download.bit 
+Memory Initialization completed successfully.
+
+Done!
+
+********************************************************************************
+At Local date and time: Thu Mar 31 04:28:29 2011
+ make -f system.make init_bram started...
+mb-gcc -O2 Frogger/src/Frogger.c  -o Frogger/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b  -T Frogger/Frogger_linker_script.ld  -g    -I./microblaze_0/include/  -IFrogger/lib/  -L./microblaze_0/lib/  \
+	  
+mb-size Frogger/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3954	    332	   2134	   6420	   1914	Frogger/executable.elf
+
+*********************************************
+Initializing BRAM contents of the bitstream
+*********************************************
+bitinit -p xc3s500efg320-4 system.mhs -lp C:/Xilinx/12.4/ISE_DS/ISE/Digilent_Nexys_EDK_Board_Support_Files_V_2_1/lib/  -pe microblaze_0 Frogger/executable.elf  \
+	-bt implementation/system.bit -o implementation/download.bit
+
+bitinit version Xilinx EDK 12.4 Build EDK_MS4.81d
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+
+Overriding IP level properties ...
+
+Computing clock values...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) dlmb_cntlr	dlmb
+  (0000000000-0x00003fff) ilmb_cntlr	ilmb
+  (0x81400000-0x8140ffff) Joystick_GPIO	mb_plb
+  (0x81420000-0x8142ffff) Graphics_GPIO	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 69 - tool is overriding PARAMETER
+   C_PLBV46_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 70 - tool is overriding PARAMETER
+   C_PLBV46_NUM_SLAVES value to 3
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 71 - tool is overriding PARAMETER C_PLBV46_MID_WIDTH
+   value to 1
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 73 - tool is overriding PARAMETER C_PLBV46_DWIDTH
+   value to 32
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:ilmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:dlmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:lmb_bram -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 67 - tool is overriding PARAMETER C_MEMSIZE
+   value to 0x4000
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 83 - tool is overriding PARAMETER C_SPLB_MID_WIDTH value to
+   1
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 84 - tool is overriding PARAMETER C_SPLB_NUM_MASTERS value
+   to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Joystick_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Graphics_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+
+Checking platform address map ...
+
+Initializing Memory...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -p xc3s500efg320-4 -bt
+"implementation/system.bit"  -bd "Frogger/executable.elf" tag microblaze_0  -o b
+implementation/download.bit 
+Memory Initialization completed successfully.
+
+Done!
+
+********************************************************************************
+At Local date and time: Thu Mar 31 04:29:15 2011
+ make -f system.make init_bram started...
+mb-gcc -O2 Frogger/src/Frogger.c  -o Frogger/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b  -T Frogger/Frogger_linker_script.ld  -g    -I./microblaze_0/include/  -IFrogger/lib/  -L./microblaze_0/lib/  \
+	  
+mb-size Frogger/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3914	    332	   2134	   6380	   18ec	Frogger/executable.elf
+
+*********************************************
+Initializing BRAM contents of the bitstream
+*********************************************
+bitinit -p xc3s500efg320-4 system.mhs -lp C:/Xilinx/12.4/ISE_DS/ISE/Digilent_Nexys_EDK_Board_Support_Files_V_2_1/lib/  -pe microblaze_0 Frogger/executable.elf  \
+	-bt implementation/system.bit -o implementation/download.bit
+
+bitinit version Xilinx EDK 12.4 Build EDK_MS4.81d
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+
+Overriding IP level properties ...
+
+Computing clock values...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) dlmb_cntlr	dlmb
+  (0000000000-0x00003fff) ilmb_cntlr	ilmb
+  (0x81400000-0x8140ffff) Joystick_GPIO	mb_plb
+  (0x81420000-0x8142ffff) Graphics_GPIO	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 69 - tool is overriding PARAMETER
+   C_PLBV46_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 70 - tool is overriding PARAMETER
+   C_PLBV46_NUM_SLAVES value to 3
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 71 - tool is overriding PARAMETER C_PLBV46_MID_WIDTH
+   value to 1
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 73 - tool is overriding PARAMETER C_PLBV46_DWIDTH
+   value to 32
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:ilmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:dlmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:lmb_bram -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 67 - tool is overriding PARAMETER C_MEMSIZE
+   value to 0x4000
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 83 - tool is overriding PARAMETER C_SPLB_MID_WIDTH value to
+   1
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 84 - tool is overriding PARAMETER C_SPLB_NUM_MASTERS value
+   to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Joystick_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Graphics_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+
+Checking platform address map ...
+
+Initializing Memory...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -p xc3s500efg320-4 -bt
+"implementation/system.bit"  -bd "Frogger/executable.elf" tag microblaze_0  -o b
+implementation/download.bit 
+Memory Initialization completed successfully.
+
+Done!
+Writing filter settings....
+Done writing filter settings to:
+	C:\FPGArcade\FPGArcade\etc\system.filters
+Done writing Tab View settings to:
+	C:\FPGArcade\FPGArcade\etc\system.gui
+Xilinx Platform Studio (XPS)
+Xilinx EDK 12.4 Build EDK_MS4.81d
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+
+********************************************************************************
+At Local date and time: Thu Mar 31 04:46:59 2011
+ make -f system.make Frogger_program started...
+mb-gcc -O2 Frogger/src/Frogger.c  -o Frogger/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b  -T Frogger/Frogger_linker_script.ld  -g    -I./microblaze_0/include/  -IFrogger/lib/  -L./microblaze_0/lib/  \
+	  
+mb-size Frogger/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3450	    332	   2134	   5916	   171c	Frogger/executable.elf
+
+Done!
+
+********************************************************************************
+At Local date and time: Thu Mar 31 04:47:02 2011
+ make -f system.make init_bram started...
+*********************************************
+Initializing BRAM contents of the bitstream
+*********************************************
+bitinit -p xc3s500efg320-4 system.mhs -lp C:/Xilinx/12.4/ISE_DS/ISE/Digilent_Nexys_EDK_Board_Support_Files_V_2_1/lib/  -pe microblaze_0 Frogger/executable.elf  \
+	-bt implementation/system.bit -o implementation/download.bit
+
+bitinit version Xilinx EDK 12.4 Build EDK_MS4.81d
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+
+Overriding IP level properties ...
+
+Computing clock values...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) dlmb_cntlr	dlmb
+  (0000000000-0x00003fff) ilmb_cntlr	ilmb
+  (0x81400000-0x8140ffff) Joystick_GPIO	mb_plb
+  (0x81420000-0x8142ffff) Graphics_GPIO	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 69 - tool is overriding PARAMETER
+   C_PLBV46_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 70 - tool is overriding PARAMETER
+   C_PLBV46_NUM_SLAVES value to 3
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 71 - tool is overriding PARAMETER C_PLBV46_MID_WIDTH
+   value to 1
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 73 - tool is overriding PARAMETER C_PLBV46_DWIDTH
+   value to 32
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:ilmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:dlmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:lmb_bram -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 67 - tool is overriding PARAMETER C_MEMSIZE
+   value to 0x4000
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 83 - tool is overriding PARAMETER C_SPLB_MID_WIDTH value to
+   1
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 84 - tool is overriding PARAMETER C_SPLB_NUM_MASTERS value
+   to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Joystick_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Graphics_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+
+Checking platform address map ...
+
+Initializing Memory...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -p xc3s500efg320-4 -bt
+"implementation/system.bit"  -bd "Frogger/executable.elf" tag microblaze_0  -o b
+implementation/download.bit 
+Memory Initialization completed successfully.
+
+Done!
+
+********************************************************************************
+At Local date and time: Thu Mar 31 04:49:20 2011
+ make -f system.make init_bram started...
+mb-gcc -O2 Frogger/src/Frogger.c  -o Frogger/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b  -T Frogger/Frogger_linker_script.ld  -g    -I./microblaze_0/include/  -IFrogger/lib/  -L./microblaze_0/lib/  \
+	  
+mb-size Frogger/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3914	    332	   2134	   6380	   18ec	Frogger/executable.elf
+
+*********************************************
+Initializing BRAM contents of the bitstream
+*********************************************
+bitinit -p xc3s500efg320-4 system.mhs -lp C:/Xilinx/12.4/ISE_DS/ISE/Digilent_Nexys_EDK_Board_Support_Files_V_2_1/lib/  -pe microblaze_0 Frogger/executable.elf  \
+	-bt implementation/system.bit -o implementation/download.bit
+
+bitinit version Xilinx EDK 12.4 Build EDK_MS4.81d
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+
+Overriding IP level properties ...
+
+Computing clock values...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) dlmb_cntlr	dlmb
+  (0000000000-0x00003fff) ilmb_cntlr	ilmb
+  (0x81400000-0x8140ffff) Joystick_GPIO	mb_plb
+  (0x81420000-0x8142ffff) Graphics_GPIO	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 69 - tool is overriding PARAMETER
+   C_PLBV46_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 70 - tool is overriding PARAMETER
+   C_PLBV46_NUM_SLAVES value to 3
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 71 - tool is overriding PARAMETER C_PLBV46_MID_WIDTH
+   value to 1
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 73 - tool is overriding PARAMETER C_PLBV46_DWIDTH
+   value to 32
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:ilmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:dlmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:lmb_bram -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 67 - tool is overriding PARAMETER C_MEMSIZE
+   value to 0x4000
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 83 - tool is overriding PARAMETER C_SPLB_MID_WIDTH value to
+   1
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 84 - tool is overriding PARAMETER C_SPLB_NUM_MASTERS value
+   to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Joystick_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Graphics_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+
+Checking platform address map ...
+
+Initializing Memory...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -p xc3s500efg320-4 -bt
+"implementation/system.bit"  -bd "Frogger/executable.elf" tag microblaze_0  -o b
+implementation/download.bit 
+Memory Initialization completed successfully.
+
+Done!
+Writing filter settings....
+Done writing filter settings to:
+	C:\FPGArcade\FPGArcade\etc\system.filters
+Done writing Tab View settings to:
+	C:\FPGArcade\FPGArcade\etc\system.gui
+Xilinx Platform Studio (XPS)
+Xilinx EDK 12.4 Build EDK_MS4.81d
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+
+********************************************************************************
+At Local date and time: Fri Apr 01 11:48:24 2011
+ make -f system.make Frogger_program started...
+mb-gcc -O2 Frogger/src/Frogger.c  -o Frogger/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b  -T Frogger/Frogger_linker_script.ld  -g    -I./microblaze_0/include/  -IFrogger/lib/  -L./microblaze_0/lib/  \
+	  
+mb-size Frogger/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3914	    340	   2134	   6388	   18f4	Frogger/executable.elf
+
+Done!
+
+********************************************************************************
+At Local date and time: Fri Apr 01 11:48:32 2011
+ make -f system.make Frogger_program started...
+mb-gcc -O2 Frogger/src/Frogger.c  -o Frogger/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b  -T Frogger/Frogger_linker_script.ld  -g    -I./microblaze_0/include/  -IFrogger/lib/  -L./microblaze_0/lib/  \
+	  
+In file included from Frogger/src/Frogger.c:5:
+Frogger/lib/graphicsLibrary.h:23: error: ‘RD’ undeclared here (not in a function)
+make: *** [Frogger/executable.elf] Error 1
+Done!
+
+********************************************************************************
+At Local date and time: Fri Apr 01 11:48:40 2011
+ make -f system.make Frogger_program started...
+mb-gcc -O2 Frogger/src/Frogger.c  -o Frogger/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b  -T Frogger/Frogger_linker_script.ld  -g    -I./microblaze_0/include/  -IFrogger/lib/  -L./microblaze_0/lib/  \
+	  
+mb-size Frogger/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3914	    340	   2134	   6388	   18f4	Frogger/executable.elf
+
+Done!
+
+********************************************************************************
+At Local date and time: Fri Apr 01 12:06:58 2011
+ make -f system.make Frogger_program started...
+mb-gcc -O2 Frogger/src/Frogger.c  -o Frogger/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b  -T Frogger/Frogger_linker_script.ld  -g    -I./microblaze_0/include/  -IFrogger/lib/  -L./microblaze_0/lib/  \
+	  
+Frogger/src/Frogger.c: In function ‘outputFrogger’:
+Frogger/src/Frogger.c:99: error: array type has incomplete element type
+make: *** [Frogger/executable.elf] Error 1
+Done!
+
+********************************************************************************
+At Local date and time: Fri Apr 01 12:14:28 2011
+ make -f system.make Frogger_program started...
+mb-gcc -O2 Frogger/src/Frogger.c  -o Frogger/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b  -T Frogger/Frogger_linker_script.ld  -g    -I./microblaze_0/include/  -IFrogger/lib/  -L./microblaze_0/lib/  \
+	  
+mb-size Frogger/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3922	    340	   2134	   6396	   18fc	Frogger/executable.elf
+
+Done!
+
+********************************************************************************
+At Local date and time: Fri Apr 01 15:34:33 2011
+ make -f system.make Frogger_program started...
+mb-gcc -O2 Frogger/src/Frogger.c  -o Frogger/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b  -T Frogger/Frogger_linker_script.ld  -g    -I./microblaze_0/include/  -IFrogger/lib/  -L./microblaze_0/lib/  \
+	  
+mb-size Frogger/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4894	    340	   2130	   7364	   1cc4	Frogger/executable.elf
+
+Done!
+
+********************************************************************************
+At Local date and time: Fri Apr 01 15:34:41 2011
+ make -f system.make init_bram started...
+*********************************************
+Initializing BRAM contents of the bitstream
+*********************************************
+bitinit -p xc3s500efg320-4 system.mhs -lp C:/Xilinx/12.4/ISE_DS/ISE/Digilent_Nexys_EDK_Board_Support_Files_V_2_1/lib/  -pe microblaze_0 Frogger/executable.elf  \
+	-bt implementation/system.bit -o implementation/download.bit
+
+bitinit version Xilinx EDK 12.4 Build EDK_MS4.81d
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+
+Overriding IP level properties ...
+
+Computing clock values...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) dlmb_cntlr	dlmb
+  (0000000000-0x00003fff) ilmb_cntlr	ilmb
+  (0x81400000-0x8140ffff) Joystick_GPIO	mb_plb
+  (0x81420000-0x8142ffff) Graphics_GPIO	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 69 - tool is overriding PARAMETER
+   C_PLBV46_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 70 - tool is overriding PARAMETER
+   C_PLBV46_NUM_SLAVES value to 3
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 71 - tool is overriding PARAMETER C_PLBV46_MID_WIDTH
+   value to 1
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 73 - tool is overriding PARAMETER C_PLBV46_DWIDTH
+   value to 32
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:ilmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:dlmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:lmb_bram -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 67 - tool is overriding PARAMETER C_MEMSIZE
+   value to 0x4000
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 83 - tool is overriding PARAMETER C_SPLB_MID_WIDTH value to
+   1
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 84 - tool is overriding PARAMETER C_SPLB_NUM_MASTERS value
+   to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Joystick_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Graphics_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+
+Checking platform address map ...
+
+Initializing Memory...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -p xc3s500efg320-4 -bt
+"implementation/system.bit"  -bd "Frogger/executable.elf" tag microblaze_0  -o b
+implementation/download.bit 
+Memory Initialization completed successfully.
+
+Done!
+
+********************************************************************************
+At Local date and time: Fri Apr 01 15:38:20 2011
+ make -f system.make Frogger_program started...
+mb-gcc -O2 Frogger/src/Frogger.c  -o Frogger/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b  -T Frogger/Frogger_linker_script.ld  -g    -I./microblaze_0/include/  -IFrogger/lib/  -L./microblaze_0/lib/  \
+	  
+Frogger/src/Frogger.c: In function ‘outputFrogger’:
+Frogger/src/Frogger.c:159: error: called object ‘colors’ is not a function
+Frogger/src/Frogger.c:160: error: called object ‘colors’ is not a function
+Frogger/src/Frogger.c:161: error: called object ‘colors’ is not a function
+Frogger/src/Frogger.c:162: error: called object ‘colors’ is not a function
+Frogger/src/Frogger.c:176: error: called object ‘colors’ is not a function
+Frogger/src/Frogger.c:177: error: called object ‘colors’ is not a function
+Frogger/src/Frogger.c:178: error: called object ‘colors’ is not a function
+Frogger/src/Frogger.c:179: error: called object ‘colors’ is not a function
+make: *** [Frogger/executable.elf] Error 1
+Done!
+
+********************************************************************************
+At Local date and time: Fri Apr 01 15:39:05 2011
+ make -f system.make Frogger_program started...
+mb-gcc -O2 Frogger/src/Frogger.c  -o Frogger/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b  -T Frogger/Frogger_linker_script.ld  -g    -I./microblaze_0/include/  -IFrogger/lib/  -L./microblaze_0/lib/  \
+	  
+Frogger/src/Frogger.c: In function ‘outputFrogger’:
+Frogger/src/Frogger.c:161: error: called object ‘colors’ is not a function
+Frogger/src/Frogger.c:162: error: called object ‘colors’ is not a function
+Frogger/src/Frogger.c:163: error: called object ‘colors’ is not a function
+Frogger/src/Frogger.c:164: error: called object ‘colors’ is not a function
+Frogger/src/Frogger.c:178: error: called object ‘colors’ is not a function
+Frogger/src/Frogger.c:179: error: called object ‘colors’ is not a function
+Frogger/src/Frogger.c:180: error: called object ‘colors’ is not a function
+Frogger/src/Frogger.c:181: error: called object ‘colors’ is not a function
+make: *** [Frogger/executable.elf] Error 1
+Done!
+
+********************************************************************************
+At Local date and time: Fri Apr 01 15:39:44 2011
+ make -f system.make Frogger_program started...
+mb-gcc -O2 Frogger/src/Frogger.c  -o Frogger/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b  -T Frogger/Frogger_linker_script.ld  -g    -I./microblaze_0/include/  -IFrogger/lib/  -L./microblaze_0/lib/  \
+	  
+mb-size Frogger/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5026	    332	   2134	   7492	   1d44	Frogger/executable.elf
+
+Done!
+
+********************************************************************************
+At Local date and time: Fri Apr 01 15:39:49 2011
+ make -f system.make init_bram started...
+*********************************************
+Initializing BRAM contents of the bitstream
+*********************************************
+bitinit -p xc3s500efg320-4 system.mhs -lp C:/Xilinx/12.4/ISE_DS/ISE/Digilent_Nexys_EDK_Board_Support_Files_V_2_1/lib/  -pe microblaze_0 Frogger/executable.elf  \
+	-bt implementation/system.bit -o implementation/download.bit
+
+bitinit version Xilinx EDK 12.4 Build EDK_MS4.81d
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+
+Overriding IP level properties ...
+
+Computing clock values...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) dlmb_cntlr	dlmb
+  (0000000000-0x00003fff) ilmb_cntlr	ilmb
+  (0x81400000-0x8140ffff) Joystick_GPIO	mb_plb
+  (0x81420000-0x8142ffff) Graphics_GPIO	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 69 - tool is overriding PARAMETER
+   C_PLBV46_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 70 - tool is overriding PARAMETER
+   C_PLBV46_NUM_SLAVES value to 3
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 71 - tool is overriding PARAMETER C_PLBV46_MID_WIDTH
+   value to 1
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 73 - tool is overriding PARAMETER C_PLBV46_DWIDTH
+   value to 32
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:ilmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:dlmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:lmb_bram -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 67 - tool is overriding PARAMETER C_MEMSIZE
+   value to 0x4000
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 83 - tool is overriding PARAMETER C_SPLB_MID_WIDTH value to
+   1
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 84 - tool is overriding PARAMETER C_SPLB_NUM_MASTERS value
+   to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Joystick_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Graphics_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+
+Checking platform address map ...
+
+Initializing Memory...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -p xc3s500efg320-4 -bt
+"implementation/system.bit"  -bd "Frogger/executable.elf" tag microblaze_0  -o b
+implementation/download.bit 
+Memory Initialization completed successfully.
+
+Done!
+
+********************************************************************************
+At Local date and time: Fri Apr 01 15:42:35 2011
+ make -f system.make Frogger_program started...
+mb-gcc -O2 Frogger/src/Frogger.c  -o Frogger/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b  -T Frogger/Frogger_linker_script.ld  -g    -I./microblaze_0/include/  -IFrogger/lib/  -L./microblaze_0/lib/  \
+	  
+Frogger/src/Frogger.c: In function ‘outputFrogger’:
+Frogger/src/Frogger.c:119: error: expected declaration specifiers or ‘...’ before numeric constant
+Frogger/src/Frogger.c:119: error: expected declaration specifiers or ‘...’ before numeric constant
+Frogger/src/Frogger.c: In function ‘setMoveableBlock’:
+Frogger/src/Frogger.c:120: error: expected declaration specifiers or ‘...’ before numeric constant
+Frogger/src/Frogger.c:120: error: expected declaration specifiers or ‘...’ before numeric constant
+Frogger/src/Frogger.c:121: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘void’
+Frogger/src/Frogger.c:131: error: expected declaration specifiers before ‘;’ token
+Frogger/src/Frogger.c:132: error: parameter ‘frog2’ is initialized
+Frogger/src/Frogger.c:132: warning: braces around scalar initializer
+Frogger/src/Frogger.c:132: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:132: warning: initialization makes pointer from integer without a cast
+Frogger/src/Frogger.c:132: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:132: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:132: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:132: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:132: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:132: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:132: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:132: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:132: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:132: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:132: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:132: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:132: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:132: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:133: warning: braces around scalar initializer
+Frogger/src/Frogger.c:133: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:133: warning: initialization makes pointer from integer without a cast
+Frogger/src/Frogger.c:133: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:133: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:133: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:133: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:133: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:133: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:133: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:133: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:133: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:133: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:133: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:133: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:133: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:133: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:133: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:133: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:134: warning: braces around scalar initializer
+Frogger/src/Frogger.c:134: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:134: warning: initialization makes pointer from integer without a cast
+Frogger/src/Frogger.c:134: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:134: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:134: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:134: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:134: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:134: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:134: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:134: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:134: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:134: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:134: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:134: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:134: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:134: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:134: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:134: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:135: warning: braces around scalar initializer
+Frogger/src/Frogger.c:135: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:135: warning: initialization makes pointer from integer without a cast
+Frogger/src/Frogger.c:135: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:135: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:135: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:135: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:135: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:135: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:135: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:135: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:135: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:135: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:135: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:135: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:135: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:135: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:135: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:135: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:136: warning: braces around scalar initializer
+Frogger/src/Frogger.c:136: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:136: warning: initialization makes pointer from integer without a cast
+Frogger/src/Frogger.c:136: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:136: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:136: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:136: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:136: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:136: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:136: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:136: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:136: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:136: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:136: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:136: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:136: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:136: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:136: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:136: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:137: warning: braces around scalar initializer
+Frogger/src/Frogger.c:137: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:137: warning: initialization makes pointer from integer without a cast
+Frogger/src/Frogger.c:137: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:137: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:137: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:137: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:137: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:137: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:137: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:137: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:137: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:137: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:137: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:137: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:137: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:137: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:137: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:137: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:138: warning: braces around scalar initializer
+Frogger/src/Frogger.c:138: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:138: warning: initialization makes pointer from integer without a cast
+Frogger/src/Frogger.c:138: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:138: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:138: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:138: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:138: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:138: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:138: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:138: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:138: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:138: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:138: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:138: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:138: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:138: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:138: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:138: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:139: warning: braces around scalar initializer
+Frogger/src/Frogger.c:139: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:139: warning: initialization makes pointer from integer without a cast
+Frogger/src/Frogger.c:139: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:139: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:139: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:139: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:139: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:139: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:139: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:139: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:139: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:139: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:139: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:139: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:139: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:139: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:139: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:139: warning: (near initialization for ‘frog2’)
+Frogger/src/Frogger.c:140: error: parameter ‘frog3’ is initialized
+Frogger/src/Frogger.c:140: warning: braces around scalar initializer
+Frogger/src/Frogger.c:140: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:140: warning: initialization makes pointer from integer without a cast
+Frogger/src/Frogger.c:140: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:140: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:140: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:140: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:140: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:140: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:140: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:140: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:140: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:140: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:140: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:140: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:140: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:140: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:141: warning: braces around scalar initializer
+Frogger/src/Frogger.c:141: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:141: warning: initialization makes pointer from integer without a cast
+Frogger/src/Frogger.c:141: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:141: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:141: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:141: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:141: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:141: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:141: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:141: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:141: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:141: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:141: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:141: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:141: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:141: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:141: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:141: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:142: warning: braces around scalar initializer
+Frogger/src/Frogger.c:142: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:142: warning: initialization makes pointer from integer without a cast
+Frogger/src/Frogger.c:142: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:142: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:142: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:142: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:142: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:142: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:142: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:142: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:142: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:142: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:142: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:142: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:142: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:142: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:142: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:142: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:143: warning: braces around scalar initializer
+Frogger/src/Frogger.c:143: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:143: warning: initialization makes pointer from integer without a cast
+Frogger/src/Frogger.c:143: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:143: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:143: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:143: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:143: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:143: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:143: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:143: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:143: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:143: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:143: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:143: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:143: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:143: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:143: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:143: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:144: warning: braces around scalar initializer
+Frogger/src/Frogger.c:144: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:144: warning: initialization makes pointer from integer without a cast
+Frogger/src/Frogger.c:144: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:144: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:144: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:144: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:144: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:144: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:144: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:144: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:144: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:144: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:144: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:144: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:144: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:144: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:144: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:144: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:145: warning: braces around scalar initializer
+Frogger/src/Frogger.c:145: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:145: warning: initialization makes pointer from integer without a cast
+Frogger/src/Frogger.c:145: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:145: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:145: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:145: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:145: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:145: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:145: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:145: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:145: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:145: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:145: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:145: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:145: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:145: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:145: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:145: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:146: warning: braces around scalar initializer
+Frogger/src/Frogger.c:146: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:146: warning: initialization makes pointer from integer without a cast
+Frogger/src/Frogger.c:146: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:146: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:146: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:146: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:146: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:146: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:146: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:146: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:146: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:146: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:146: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:146: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:146: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:146: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:146: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:146: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:147: warning: braces around scalar initializer
+Frogger/src/Frogger.c:147: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:147: warning: initialization makes pointer from integer without a cast
+Frogger/src/Frogger.c:147: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:147: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:147: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:147: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:147: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:147: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:147: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:147: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:147: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:147: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:147: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:147: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:147: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:147: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:147: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:147: warning: (near initialization for ‘frog3’)
+Frogger/src/Frogger.c:148: error: parameter ‘frog4’ is initialized
+Frogger/src/Frogger.c:148: warning: braces around scalar initializer
+Frogger/src/Frogger.c:148: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:148: warning: initialization makes pointer from integer without a cast
+Frogger/src/Frogger.c:148: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:148: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:148: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:148: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:148: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:148: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:148: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:148: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:148: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:148: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:148: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:148: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:148: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:148: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:149: warning: braces around scalar initializer
+Frogger/src/Frogger.c:149: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:149: warning: initialization makes pointer from integer without a cast
+Frogger/src/Frogger.c:149: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:149: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:149: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:149: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:149: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:149: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:149: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:149: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:149: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:149: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:149: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:149: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:149: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:149: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:149: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:149: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:150: warning: braces around scalar initializer
+Frogger/src/Frogger.c:150: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:150: warning: initialization makes pointer from integer without a cast
+Frogger/src/Frogger.c:150: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:150: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:150: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:150: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:150: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:150: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:150: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:150: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:150: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:150: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:150: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:150: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:150: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:150: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:150: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:150: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:151: warning: braces around scalar initializer
+Frogger/src/Frogger.c:151: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:151: warning: initialization makes pointer from integer without a cast
+Frogger/src/Frogger.c:151: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:151: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:151: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:151: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:151: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:151: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:151: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:151: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:151: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:151: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:151: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:151: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:151: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:151: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:151: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:151: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:152: warning: braces around scalar initializer
+Frogger/src/Frogger.c:152: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:152: warning: initialization makes pointer from integer without a cast
+Frogger/src/Frogger.c:152: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:152: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:152: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:152: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:152: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:152: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:152: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:152: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:152: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:152: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:152: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:152: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:152: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:152: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:152: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:152: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:153: warning: braces around scalar initializer
+Frogger/src/Frogger.c:153: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:153: warning: initialization makes pointer from integer without a cast
+Frogger/src/Frogger.c:153: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:153: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:153: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:153: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:153: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:153: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:153: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:153: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:153: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:153: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:153: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:153: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:153: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:153: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:153: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:153: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:154: warning: braces around scalar initializer
+Frogger/src/Frogger.c:154: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:154: warning: initialization makes pointer from integer without a cast
+Frogger/src/Frogger.c:154: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:154: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:154: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:154: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:154: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:154: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:154: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:154: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:154: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:154: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:154: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:154: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:154: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:154: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:154: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:154: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:155: warning: braces around scalar initializer
+Frogger/src/Frogger.c:155: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:155: warning: initialization makes pointer from integer without a cast
+Frogger/src/Frogger.c:155: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:155: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:155: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:155: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:155: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:155: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:155: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:155: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:155: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:155: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:155: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:155: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:155: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:155: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:155: warning: excess elements in scalar initializer
+Frogger/src/Frogger.c:155: warning: (near initialization for ‘frog4’)
+Frogger/src/Frogger.c:157: error: expected declaration specifiers before ‘if’
+Frogger/src/Frogger.c:175: error: expected declaration specifiers before ‘else’
+Frogger/src/Frogger.c:192: error: expected declaration specifiers before ‘else’
+Frogger/src/Frogger.c:196: error: expected declaration specifiers before ‘else’
+Frogger/src/Frogger.c:200: error: expected declaration specifiers before ‘}’ token
+Frogger/src/Frogger.c:203: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+Frogger/src/Frogger.c:148: error: declaration for parameter ‘frog4’ but no such parameter
+Frogger/src/Frogger.c:140: error: declaration for parameter ‘frog3’ but no such parameter
+Frogger/src/Frogger.c:132: error: declaration for parameter ‘frog2’ but no such parameter
+Frogger/src/Frogger.c:208: error: argument ‘frog4’ doesn’t match prototype
+Frogger/lib/graphicsLibrary.h:55: error: prototype declaration
+Frogger/src/Frogger.c:208: error: argument ‘frog3’ doesn’t match prototype
+Frogger/lib/graphicsLibrary.h:55: error: prototype declaration
+Frogger/src/Frogger.c:208: error: number of arguments doesn’t match prototype
+Frogger/lib/graphicsLibrary.h:55: error: prototype declaration
+Frogger/src/Frogger.c:208: error: expected ‘{’ at end of input
+Frogger/src/Frogger.c: In function ‘outputFrogger’:
+Frogger/src/Frogger.c:208: error: expected declaration or statement at end of input
+make: *** [Frogger/executable.elf] Error 1
+Done!
+
+********************************************************************************
+At Local date and time: Fri Apr 01 15:42:51 2011
+ make -f system.make Frogger_program started...
+mb-gcc -O2 Frogger/src/Frogger.c  -o Frogger/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b  -T Frogger/Frogger_linker_script.ld  -g    -I./microblaze_0/include/  -IFrogger/lib/  -L./microblaze_0/lib/  \
+	  
+Frogger/src/Frogger.c: In function ‘outputFrogger’:
+Frogger/src/Frogger.c:120: error: expected ‘;’ before ‘setMoveableBlock’
+Frogger/src/Frogger.c:166: error: ‘frog1’ undeclared (first use in this function)
+Frogger/src/Frogger.c:166: error: (Each undeclared identifier is reported only once
+Frogger/src/Frogger.c:166: error: for each function it appears in.)
+make: *** [Frogger/executable.elf] Error 1
+Done!
+
+********************************************************************************
+At Local date and time: Fri Apr 01 15:43:02 2011
+ make -f system.make Frogger_program started...
+mb-gcc -O2 Frogger/src/Frogger.c  -o Frogger/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b  -T Frogger/Frogger_linker_script.ld  -g    -I./microblaze_0/include/  -IFrogger/lib/  -L./microblaze_0/lib/  \
+	  
+mb-size Frogger/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5074	    332	   2134	   7540	   1d74	Frogger/executable.elf
+
+Done!
+
+********************************************************************************
+At Local date and time: Fri Apr 01 15:43:06 2011
+ make -f system.make init_bram started...
+*********************************************
+Initializing BRAM contents of the bitstream
+*********************************************
+bitinit -p xc3s500efg320-4 system.mhs -lp C:/Xilinx/12.4/ISE_DS/ISE/Digilent_Nexys_EDK_Board_Support_Files_V_2_1/lib/  -pe microblaze_0 Frogger/executable.elf  \
+	-bt implementation/system.bit -o implementation/download.bit
+
+bitinit version Xilinx EDK 12.4 Build EDK_MS4.81d
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+
+Overriding IP level properties ...
+
+Computing clock values...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) dlmb_cntlr	dlmb
+  (0000000000-0x00003fff) ilmb_cntlr	ilmb
+  (0x81400000-0x8140ffff) Joystick_GPIO	mb_plb
+  (0x81420000-0x8142ffff) Graphics_GPIO	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 69 - tool is overriding PARAMETER
+   C_PLBV46_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 70 - tool is overriding PARAMETER
+   C_PLBV46_NUM_SLAVES value to 3
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 71 - tool is overriding PARAMETER C_PLBV46_MID_WIDTH
+   value to 1
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 73 - tool is overriding PARAMETER C_PLBV46_DWIDTH
+   value to 32
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:ilmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:dlmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:lmb_bram -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 67 - tool is overriding PARAMETER C_MEMSIZE
+   value to 0x4000
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 83 - tool is overriding PARAMETER C_SPLB_MID_WIDTH value to
+   1
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 84 - tool is overriding PARAMETER C_SPLB_NUM_MASTERS value
+   to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Joystick_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Graphics_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+
+Checking platform address map ...
+
+Initializing Memory...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -p xc3s500efg320-4 -bt
+"implementation/system.bit"  -bd "Frogger/executable.elf" tag microblaze_0  -o b
+implementation/download.bit 
+Memory Initialization completed successfully.
+
+Done!
+
+********************************************************************************
+At Local date and time: Fri Apr 01 15:45:11 2011
+ make -f system.make init_bram started...
+mb-gcc -O2 Frogger/src/Frogger.c  -o Frogger/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b  -T Frogger/Frogger_linker_script.ld  -g    -I./microblaze_0/include/  -IFrogger/lib/  -L./microblaze_0/lib/  \
+	  
+mb-size Frogger/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5078	    332	   2130	   7540	   1d74	Frogger/executable.elf
+
+*********************************************
+Initializing BRAM contents of the bitstream
+*********************************************
+bitinit -p xc3s500efg320-4 system.mhs -lp C:/Xilinx/12.4/ISE_DS/ISE/Digilent_Nexys_EDK_Board_Support_Files_V_2_1/lib/  -pe microblaze_0 Frogger/executable.elf  \
+	-bt implementation/system.bit -o implementation/download.bit
+
+bitinit version Xilinx EDK 12.4 Build EDK_MS4.81d
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+
+Overriding IP level properties ...
+
+Computing clock values...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) dlmb_cntlr	dlmb
+  (0000000000-0x00003fff) ilmb_cntlr	ilmb
+  (0x81400000-0x8140ffff) Joystick_GPIO	mb_plb
+  (0x81420000-0x8142ffff) Graphics_GPIO	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 69 - tool is overriding PARAMETER
+   C_PLBV46_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 70 - tool is overriding PARAMETER
+   C_PLBV46_NUM_SLAVES value to 3
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 71 - tool is overriding PARAMETER C_PLBV46_MID_WIDTH
+   value to 1
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 73 - tool is overriding PARAMETER C_PLBV46_DWIDTH
+   value to 32
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:ilmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:dlmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:lmb_bram -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 67 - tool is overriding PARAMETER C_MEMSIZE
+   value to 0x4000
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 83 - tool is overriding PARAMETER C_SPLB_MID_WIDTH value to
+   1
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 84 - tool is overriding PARAMETER C_SPLB_NUM_MASTERS value
+   to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Joystick_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Graphics_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+
+Checking platform address map ...
+
+Initializing Memory...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -p xc3s500efg320-4 -bt
+"implementation/system.bit"  -bd "Frogger/executable.elf" tag microblaze_0  -o b
+implementation/download.bit 
+Memory Initialization completed successfully.
+
+Done!
+
+********************************************************************************
+At Local date and time: Fri Apr 01 18:59:01 2011
+ make -f system.make init_bram started...
+mb-gcc -O2 Frogger/src/Frogger.c  -o Frogger/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b  -T Frogger/Frogger_linker_script.ld  -g    -I./microblaze_0/include/  -IFrogger/lib/  -L./microblaze_0/lib/  \
+	  
+mb-size Frogger/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5078	    332	   2130	   7540	   1d74	Frogger/executable.elf
+
+*********************************************
+Initializing BRAM contents of the bitstream
+*********************************************
+bitinit -p xc3s500efg320-4 system.mhs -lp C:/Xilinx/12.4/ISE_DS/ISE/Digilent_Nexys_EDK_Board_Support_Files_V_2_1/lib/  -pe microblaze_0 Frogger/executable.elf  \
+	-bt implementation/system.bit -o implementation/download.bit
+
+bitinit version Xilinx EDK 12.4 Build EDK_MS4.81d
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+
+Overriding IP level properties ...
+
+Computing clock values...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) dlmb_cntlr	dlmb
+  (0000000000-0x00003fff) ilmb_cntlr	ilmb
+  (0x81400000-0x8140ffff) Joystick_GPIO	mb_plb
+  (0x81420000-0x8142ffff) Graphics_GPIO	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 69 - tool is overriding PARAMETER
+   C_PLBV46_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 70 - tool is overriding PARAMETER
+   C_PLBV46_NUM_SLAVES value to 3
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 71 - tool is overriding PARAMETER C_PLBV46_MID_WIDTH
+   value to 1
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 73 - tool is overriding PARAMETER C_PLBV46_DWIDTH
+   value to 32
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:ilmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:dlmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:lmb_bram -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 67 - tool is overriding PARAMETER C_MEMSIZE
+   value to 0x4000
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 83 - tool is overriding PARAMETER C_SPLB_MID_WIDTH value to
+   1
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 84 - tool is overriding PARAMETER C_SPLB_NUM_MASTERS value
+   to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Joystick_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Graphics_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+
+Checking platform address map ...
+
+Initializing Memory...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -p xc3s500efg320-4 -bt
+"implementation/system.bit"  -bd "Frogger/executable.elf" tag microblaze_0  -o b
+implementation/download.bit 
+Memory Initialization completed successfully.
+
+Done!
+
+********************************************************************************
+At Local date and time: Fri Apr 01 19:02:39 2011
+ make -f system.make init_bram started...
+mb-gcc -O2 Frogger/src/Frogger.c  -o Frogger/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b  -T Frogger/Frogger_linker_script.ld  -g    -I./microblaze_0/include/  -IFrogger/lib/  -L./microblaze_0/lib/  \
+	  
+mb-size Frogger/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5198	    332	   2130	   7660	   1dec	Frogger/executable.elf
+
+*********************************************
+Initializing BRAM contents of the bitstream
+*********************************************
+bitinit -p xc3s500efg320-4 system.mhs -lp C:/Xilinx/12.4/ISE_DS/ISE/Digilent_Nexys_EDK_Board_Support_Files_V_2_1/lib/  -pe microblaze_0 Frogger/executable.elf  \
+	-bt implementation/system.bit -o implementation/download.bit
+
+bitinit version Xilinx EDK 12.4 Build EDK_MS4.81d
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+
+Overriding IP level properties ...
+
+Computing clock values...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) dlmb_cntlr	dlmb
+  (0000000000-0x00003fff) ilmb_cntlr	ilmb
+  (0x81400000-0x8140ffff) Joystick_GPIO	mb_plb
+  (0x81420000-0x8142ffff) Graphics_GPIO	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 69 - tool is overriding PARAMETER
+   C_PLBV46_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 70 - tool is overriding PARAMETER
+   C_PLBV46_NUM_SLAVES value to 3
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 71 - tool is overriding PARAMETER C_PLBV46_MID_WIDTH
+   value to 1
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 73 - tool is overriding PARAMETER C_PLBV46_DWIDTH
+   value to 32
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:ilmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:dlmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:lmb_bram -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 67 - tool is overriding PARAMETER C_MEMSIZE
+   value to 0x4000
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 83 - tool is overriding PARAMETER C_SPLB_MID_WIDTH value to
+   1
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 84 - tool is overriding PARAMETER C_SPLB_NUM_MASTERS value
+   to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Joystick_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Graphics_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+
+Checking platform address map ...
+
+Initializing Memory...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -p xc3s500efg320-4 -bt
+"implementation/system.bit"  -bd "Frogger/executable.elf" tag microblaze_0  -o b
+implementation/download.bit 
+Memory Initialization completed successfully.
+
+Done!
+
+********************************************************************************
+At Local date and time: Fri Apr 01 19:04:48 2011
+ make -f system.make init_bram started...
+mb-gcc -O2 Frogger/src/Frogger.c  -o Frogger/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b  -T Frogger/Frogger_linker_script.ld  -g    -I./microblaze_0/include/  -IFrogger/lib/  -L./microblaze_0/lib/  \
+	  
+mb-size Frogger/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5206	    332	   2130	   7668	   1df4	Frogger/executable.elf
+
+*********************************************
+Initializing BRAM contents of the bitstream
+*********************************************
+bitinit -p xc3s500efg320-4 system.mhs -lp C:/Xilinx/12.4/ISE_DS/ISE/Digilent_Nexys_EDK_Board_Support_Files_V_2_1/lib/  -pe microblaze_0 Frogger/executable.elf  \
+	-bt implementation/system.bit -o implementation/download.bit
+
+bitinit version Xilinx EDK 12.4 Build EDK_MS4.81d
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+
+Overriding IP level properties ...
+
+Computing clock values...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) dlmb_cntlr	dlmb
+  (0000000000-0x00003fff) ilmb_cntlr	ilmb
+  (0x81400000-0x8140ffff) Joystick_GPIO	mb_plb
+  (0x81420000-0x8142ffff) Graphics_GPIO	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 69 - tool is overriding PARAMETER
+   C_PLBV46_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 70 - tool is overriding PARAMETER
+   C_PLBV46_NUM_SLAVES value to 3
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 71 - tool is overriding PARAMETER C_PLBV46_MID_WIDTH
+   value to 1
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 73 - tool is overriding PARAMETER C_PLBV46_DWIDTH
+   value to 32
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:ilmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:dlmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:lmb_bram -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 67 - tool is overriding PARAMETER C_MEMSIZE
+   value to 0x4000
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 83 - tool is overriding PARAMETER C_SPLB_MID_WIDTH value to
+   1
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 84 - tool is overriding PARAMETER C_SPLB_NUM_MASTERS value
+   to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Joystick_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Graphics_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+
+Checking platform address map ...
+
+Initializing Memory...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -p xc3s500efg320-4 -bt
+"implementation/system.bit"  -bd "Frogger/executable.elf" tag microblaze_0  -o b
+implementation/download.bit 
+Memory Initialization completed successfully.
+
+Done!
+
+********************************************************************************
+At Local date and time: Fri Apr 01 19:13:58 2011
+ make -f system.make init_bram started...
+mb-gcc -O2 Frogger/src/Frogger.c  -o Frogger/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b  -T Frogger/Frogger_linker_script.ld  -g    -I./microblaze_0/include/  -IFrogger/lib/  -L./microblaze_0/lib/  \
+	  
+mb-size Frogger/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5270	    332	   2130	   7732	   1e34	Frogger/executable.elf
+
+*********************************************
+Initializing BRAM contents of the bitstream
+*********************************************
+bitinit -p xc3s500efg320-4 system.mhs -lp C:/Xilinx/12.4/ISE_DS/ISE/Digilent_Nexys_EDK_Board_Support_Files_V_2_1/lib/  -pe microblaze_0 Frogger/executable.elf  \
+	-bt implementation/system.bit -o implementation/download.bit
+
+bitinit version Xilinx EDK 12.4 Build EDK_MS4.81d
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+
+Overriding IP level properties ...
+
+Computing clock values...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) dlmb_cntlr	dlmb
+  (0000000000-0x00003fff) ilmb_cntlr	ilmb
+  (0x81400000-0x8140ffff) Joystick_GPIO	mb_plb
+  (0x81420000-0x8142ffff) Graphics_GPIO	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 69 - tool is overriding PARAMETER
+   C_PLBV46_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 70 - tool is overriding PARAMETER
+   C_PLBV46_NUM_SLAVES value to 3
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 71 - tool is overriding PARAMETER C_PLBV46_MID_WIDTH
+   value to 1
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 73 - tool is overriding PARAMETER C_PLBV46_DWIDTH
+   value to 32
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:ilmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:dlmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:lmb_bram -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 67 - tool is overriding PARAMETER C_MEMSIZE
+   value to 0x4000
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 83 - tool is overriding PARAMETER C_SPLB_MID_WIDTH value to
+   1
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 84 - tool is overriding PARAMETER C_SPLB_NUM_MASTERS value
+   to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Joystick_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Graphics_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+
+Checking platform address map ...
+
+Initializing Memory...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -p xc3s500efg320-4 -bt
+"implementation/system.bit"  -bd "Frogger/executable.elf" tag microblaze_0  -o b
+implementation/download.bit 
+Memory Initialization completed successfully.
+
+Done!
+
+********************************************************************************
+At Local date and time: Fri Apr 01 19:15:39 2011
+ make -f system.make init_bram started...
+mb-gcc -O2 Frogger/src/Frogger.c  -o Frogger/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b  -T Frogger/Frogger_linker_script.ld  -g    -I./microblaze_0/include/  -IFrogger/lib/  -L./microblaze_0/lib/  \
+	  
+mb-size Frogger/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5270	    332	   2130	   7732	   1e34	Frogger/executable.elf
+
+*********************************************
+Initializing BRAM contents of the bitstream
+*********************************************
+bitinit -p xc3s500efg320-4 system.mhs -lp C:/Xilinx/12.4/ISE_DS/ISE/Digilent_Nexys_EDK_Board_Support_Files_V_2_1/lib/  -pe microblaze_0 Frogger/executable.elf  \
+	-bt implementation/system.bit -o implementation/download.bit
+
+bitinit version Xilinx EDK 12.4 Build EDK_MS4.81d
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+
+Overriding IP level properties ...
+
+Computing clock values...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) dlmb_cntlr	dlmb
+  (0000000000-0x00003fff) ilmb_cntlr	ilmb
+  (0x81400000-0x8140ffff) Joystick_GPIO	mb_plb
+  (0x81420000-0x8142ffff) Graphics_GPIO	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 69 - tool is overriding PARAMETER
+   C_PLBV46_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 70 - tool is overriding PARAMETER
+   C_PLBV46_NUM_SLAVES value to 3
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 71 - tool is overriding PARAMETER C_PLBV46_MID_WIDTH
+   value to 1
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 73 - tool is overriding PARAMETER C_PLBV46_DWIDTH
+   value to 32
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:ilmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:dlmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:lmb_bram -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 67 - tool is overriding PARAMETER C_MEMSIZE
+   value to 0x4000
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 83 - tool is overriding PARAMETER C_SPLB_MID_WIDTH value to
+   1
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 84 - tool is overriding PARAMETER C_SPLB_NUM_MASTERS value
+   to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Joystick_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Graphics_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+
+Checking platform address map ...
+
+Initializing Memory...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -p xc3s500efg320-4 -bt
+"implementation/system.bit"  -bd "Frogger/executable.elf" tag microblaze_0  -o b
+implementation/download.bit 
+Memory Initialization completed successfully.
+
+Done!
+
+********************************************************************************
+At Local date and time: Fri Apr 01 19:24:02 2011
+ make -f system.make init_bram started...
+mb-gcc -O2 Frogger/src/Frogger.c  -o Frogger/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b  -T Frogger/Frogger_linker_script.ld  -g    -I./microblaze_0/include/  -IFrogger/lib/  -L./microblaze_0/lib/  \
+	  
+mb-size Frogger/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5270	    332	   2130	   7732	   1e34	Frogger/executable.elf
+
+*********************************************
+Initializing BRAM contents of the bitstream
+*********************************************
+bitinit -p xc3s500efg320-4 system.mhs -lp C:/Xilinx/12.4/ISE_DS/ISE/Digilent_Nexys_EDK_Board_Support_Files_V_2_1/lib/  -pe microblaze_0 Frogger/executable.elf  \
+	-bt implementation/system.bit -o implementation/download.bit
+
+bitinit version Xilinx EDK 12.4 Build EDK_MS4.81d
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+
+Overriding IP level properties ...
+
+Computing clock values...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) dlmb_cntlr	dlmb
+  (0000000000-0x00003fff) ilmb_cntlr	ilmb
+  (0x81400000-0x8140ffff) Joystick_GPIO	mb_plb
+  (0x81420000-0x8142ffff) Graphics_GPIO	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 69 - tool is overriding PARAMETER
+   C_PLBV46_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 70 - tool is overriding PARAMETER
+   C_PLBV46_NUM_SLAVES value to 3
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 71 - tool is overriding PARAMETER C_PLBV46_MID_WIDTH
+   value to 1
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 73 - tool is overriding PARAMETER C_PLBV46_DWIDTH
+   value to 32
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:ilmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:dlmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:lmb_bram -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 67 - tool is overriding PARAMETER C_MEMSIZE
+   value to 0x4000
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 83 - tool is overriding PARAMETER C_SPLB_MID_WIDTH value to
+   1
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 84 - tool is overriding PARAMETER C_SPLB_NUM_MASTERS value
+   to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Joystick_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Graphics_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+
+Checking platform address map ...
+
+Initializing Memory...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -p xc3s500efg320-4 -bt
+"implementation/system.bit"  -bd "Frogger/executable.elf" tag microblaze_0  -o b
+implementation/download.bit 
+Memory Initialization completed successfully.
+
+Done!
+
+********************************************************************************
+At Local date and time: Fri Apr 01 19:30:56 2011
+ make -f system.make init_bram started...
+mb-gcc -O2 Frogger/src/Frogger.c  -o Frogger/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b  -T Frogger/Frogger_linker_script.ld  -g    -I./microblaze_0/include/  -IFrogger/lib/  -L./microblaze_0/lib/  \
+	  
+mb-size Frogger/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5302	    332	   2130	   7764	   1e54	Frogger/executable.elf
+
+*********************************************
+Initializing BRAM contents of the bitstream
+*********************************************
+bitinit -p xc3s500efg320-4 system.mhs -lp C:/Xilinx/12.4/ISE_DS/ISE/Digilent_Nexys_EDK_Board_Support_Files_V_2_1/lib/  -pe microblaze_0 Frogger/executable.elf  \
+	-bt implementation/system.bit -o implementation/download.bit
+
+bitinit version Xilinx EDK 12.4 Build EDK_MS4.81d
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+
+Overriding IP level properties ...
+
+Computing clock values...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) dlmb_cntlr	dlmb
+  (0000000000-0x00003fff) ilmb_cntlr	ilmb
+  (0x81400000-0x8140ffff) Joystick_GPIO	mb_plb
+  (0x81420000-0x8142ffff) Graphics_GPIO	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 69 - tool is overriding PARAMETER
+   C_PLBV46_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 70 - tool is overriding PARAMETER
+   C_PLBV46_NUM_SLAVES value to 3
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 71 - tool is overriding PARAMETER C_PLBV46_MID_WIDTH
+   value to 1
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 73 - tool is overriding PARAMETER C_PLBV46_DWIDTH
+   value to 32
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:ilmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:dlmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:lmb_bram -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 67 - tool is overriding PARAMETER C_MEMSIZE
+   value to 0x4000
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 83 - tool is overriding PARAMETER C_SPLB_MID_WIDTH value to
+   1
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 84 - tool is overriding PARAMETER C_SPLB_NUM_MASTERS value
+   to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Joystick_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Graphics_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+
+Checking platform address map ...
+
+Initializing Memory...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -p xc3s500efg320-4 -bt
+"implementation/system.bit"  -bd "Frogger/executable.elf" tag microblaze_0  -o b
+implementation/download.bit 
+Memory Initialization completed successfully.
+
+Done!
+
+********************************************************************************
+At Local date and time: Fri Apr 01 19:32:23 2011
+ make -f system.make init_bram started...
+mb-gcc -O2 Frogger/src/Frogger.c  -o Frogger/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b  -T Frogger/Frogger_linker_script.ld  -g    -I./microblaze_0/include/  -IFrogger/lib/  -L./microblaze_0/lib/  \
+	  
+mb-size Frogger/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5302	    332	   2130	   7764	   1e54	Frogger/executable.elf
+
+*********************************************
+Initializing BRAM contents of the bitstream
+*********************************************
+bitinit -p xc3s500efg320-4 system.mhs -lp C:/Xilinx/12.4/ISE_DS/ISE/Digilent_Nexys_EDK_Board_Support_Files_V_2_1/lib/  -pe microblaze_0 Frogger/executable.elf  \
+	-bt implementation/system.bit -o implementation/download.bit
+
+bitinit version Xilinx EDK 12.4 Build EDK_MS4.81d
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+
+Overriding IP level properties ...
+
+Computing clock values...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) dlmb_cntlr	dlmb
+  (0000000000-0x00003fff) ilmb_cntlr	ilmb
+  (0x81400000-0x8140ffff) Joystick_GPIO	mb_plb
+  (0x81420000-0x8142ffff) Graphics_GPIO	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 69 - tool is overriding PARAMETER
+   C_PLBV46_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 70 - tool is overriding PARAMETER
+   C_PLBV46_NUM_SLAVES value to 3
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 71 - tool is overriding PARAMETER C_PLBV46_MID_WIDTH
+   value to 1
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 73 - tool is overriding PARAMETER C_PLBV46_DWIDTH
+   value to 32
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:ilmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:dlmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:lmb_bram -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 67 - tool is overriding PARAMETER C_MEMSIZE
+   value to 0x4000
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 83 - tool is overriding PARAMETER C_SPLB_MID_WIDTH value to
+   1
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 84 - tool is overriding PARAMETER C_SPLB_NUM_MASTERS value
+   to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Joystick_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Graphics_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+
+Checking platform address map ...
+
+Initializing Memory...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -p xc3s500efg320-4 -bt
+"implementation/system.bit"  -bd "Frogger/executable.elf" tag microblaze_0  -o b
+implementation/download.bit 
+Memory Initialization completed successfully.
+
+Done!
+Writing filter settings....
+Done writing filter settings to:
+	C:\FPGArcade\FPGArcade\etc\system.filters
+Done writing Tab View settings to:
+	C:\FPGArcade\FPGArcade\etc\system.gui
