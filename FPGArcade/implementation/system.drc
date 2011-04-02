@@ -1,13 +1,13 @@
-Release 12.4 Drc M.81d (nt)
+Release 12.4 Drc M.81d (nt64)
 Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 
-Sat Apr 02 10:42:03 2011
+Sat Apr 02 15:37:11 2011
 
 drc -z system.ncd system.pcf
 
-WARNING:PhysDesignRules:367 - The signal <dlmb_LMB_ABus<31>> is incomplete. The
-   signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <dlmb_LMB_ABus<30>> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <dlmb_LMB_ABus<31>> is incomplete. The
    signal does not drive any load pins in the design.
 DRC detected 0 errors and 2 warnings.  Please see the previously displayed
 individual error or warning messages for more details.

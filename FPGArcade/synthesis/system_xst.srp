@@ -1,4 +1,4 @@
-Release 12.4 - xst M.81d (nt)
+Release 12.4 - xst M.81d (nt64)
 Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 --> 
 TABLE OF CONTENTS
@@ -620,19 +620,19 @@ Design Statistics
 # IOs                              : 20
 
 Cell Usage :
-# BELS                             : 8045
+# BELS                             : 8035
 #      GND                         : 18
-#      INV                         : 169
+#      INV                         : 170
 #      LUT1                        : 309
 #      LUT2                        : 850
-#      LUT2_D                      : 15
-#      LUT2_L                      : 13
+#      LUT2_D                      : 14
+#      LUT2_L                      : 10
 #      LUT3                        : 911
-#      LUT3_D                      : 59
-#      LUT3_L                      : 20
-#      LUT4                        : 2929
-#      LUT4_D                      : 34
-#      LUT4_L                      : 30
+#      LUT3_D                      : 61
+#      LUT3_L                      : 18
+#      LUT4                        : 2923
+#      LUT4_D                      : 35
+#      LUT4_L                      : 28
 #      MULT_AND                    : 37
 #      MUXCY                       : 1198
 #      MUXCY_L                     : 126
@@ -684,10 +684,10 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-4 
 
- Number of Slices:                     3351  out of   4656    71%  
+ Number of Slices:                     3345  out of   4656    71%  
  Number of Slice Flip Flops:           3440  out of   9312    36%  
- Number of 4 input LUTs:               5787  out of   9312    62%  
-    Number used as logic:              5339
+ Number of 4 input LUTs:               5777  out of   9312    62%  
+    Number used as logic:              5329
     Number used as Shift registers:     192
     Number used as RAMs:                256
  Number of IOs:                          20
@@ -718,7 +718,7 @@ Clock Information:
 --------------------------------------------------------+-------------------------------------------------------+-------+
 Clock Signal                                            | Clock buffer(FF name)                                 | Load  |
 --------------------------------------------------------+-------------------------------------------------------+-------+
-fpga_0_clk_1_sys_clk_pin                                | clock_generator_0/DCM0_INST/Using_Virtex.DCM_INST:CLK0| 1998  |
+fpga_0_clk_1_sys_clk_pin                                | clock_generator_0/DCM0_INST/Using_Virtex.DCM_INST:CLK0| 2000  |
 mdm_0/mdm_0/drck_i                                      | BUFG                                                  | 205   |
 mdm_0/bscan_update1                                     | BUFG                                                  | 41    |
 PmodJSTK_Module_0/PmodJSTK_Module_0/clkGen50Khz/count<9>| BUFG                                                  | 58    |
@@ -913,10 +913,10 @@ Delay:               5.476ns (Levels of Logic = 2)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'VGA_Module_0/VGA_Module_0/clock25MHz/slow_clk1'
-  Clock period: 10.040ns (frequency: 99.601MHz)
-  Total number of paths / destination ports: 13726 / 95
+  Clock period: 10.395ns (frequency: 96.202MHz)
+  Total number of paths / destination ports: 14186 / 95
 -------------------------------------------------------------------------
-Delay:               10.040ns (Levels of Logic = 6)
+Delay:               10.395ns (Levels of Logic = 7)
   Source:            VGA_Module_0/VGA_Module_0/hCount_2 (FF)
   Destination:       VGA_Module_0/VGA_Module_0/videoRam/Mmult_blockSetReAddr_mult0000 (MULT)
   Source Clock:      VGA_Module_0/VGA_Module_0/clock25MHz/slow_clk1 rising
@@ -927,16 +927,17 @@ Delay:               10.040ns (Levels of Logic = 6)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDR:C->Q              2   0.591   0.622  VGA_Module_0/hCount_2 (VGA_Module_0/hCount<2>)
-     LUT4:I0->O            1   0.704   0.424  VGA_Module_0/vCount_cmp_eq000012 (VGA_Module_0/vCount_cmp_eq000012)
-     LUT4:I3->O           60   0.704   1.306  VGA_Module_0/vCount_cmp_eq000024 (VGA_Module_0/vCount_cmp_eq0000)
-     LUT3:I2->O            1   0.704   0.424  VGA_Module_0/pixelX_cmp_le0001117_SW1_SW0 (N65)
-     LUT4_L:I3->LO         1   0.704   0.104  VGA_Module_0/pixelX_cmp_le0001117 (VGA_Module_0/pixelX_cmp_le0001117)
-     LUT4:I3->O            2   0.704   0.482  VGA_Module_0/pixelX_cmp_le0001132 (VGA_Module_0/pixelX_cmp_le00012)
-     LUT3:I2->O           21   0.704   1.128  VGA_Module_0/pixelX_and00001 (VGA_Module_0/pixelX_and0000)
-     MULT18X18SIO:CEA          0.735          VGA_Module_0/videoRam/Mmult_blockSetReAddr_mult0000
+     LUT4:I0->O            1   0.704   0.455  VGA_Module_0/vCount_cmp_eq000012 (VGA_Module_0/vCount_cmp_eq000012)
+     LUT4:I2->O           56   0.704   1.305  VGA_Module_0/vCount_cmp_eq000024 (VGA_Module_0/vCount_cmp_eq0000)
+     LUT3:I2->O            3   0.704   0.535  VGA_Module_0/vCount_mux0000<0>1 (VGA_Module_0/vCount_mux0000<0>)
+     LUT4_L:I3->LO         1   0.704   0.104  VGA_Module_0/pixelY_mux0002<0>115 (VGA_Module_0/pixelY_mux0002<0>115)
+     LUT4:I3->O            1   0.704   0.424  VGA_Module_0/pixelY_mux0002<0>129 (VGA_Module_0/pixelY_mux0002<0>129)
+     LUT4_D:I3->O          8   0.704   0.761  VGA_Module_0/pixelY_mux0002<0>146 (VGA_Module_0/N33)
+     LUT4:I3->O            2   0.704   0.447  VGA_Module_0/pixelY_mux0002<4>1 (VGA_Module_0/pixelY_mux0002<4>)
+     MULT18X18SIO:A1           0.223          VGA_Module_0/videoRam/Mmult_blockSetReAddr_mult0000
     ----------------------------------------
-    Total                     10.040ns (5.550ns logic, 4.490ns route)
-                                       (55.3% logic, 44.7% route)
+    Total                     10.395ns (5.742ns logic, 4.653ns route)
+                                       (55.2% logic, 44.8% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Graphics_GPIO/GPIO2_IO_O<0>1'
@@ -954,7 +955,7 @@ Delay:               2.169ns (Levels of Logic = 1)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDS:C->Q              3   0.591   0.531  VGA_Module_0/videoRam/blockSetInputData_5 (VGA_Module_0/videoRam/blockSetInputData<5>)
-     MUXF5:S->O            1   0.739   0.000  VGA_Module_0/videoRam/blockSetInputData_mux0000<5>351 (VGA_Module_0/videoRam/blockSetInputData_mux0000<5>35)
+     MUXF5:S->O            1   0.739   0.000  VGA_Module_0/videoRam/blockSetInputData_mux0000<5>321 (VGA_Module_0/videoRam/blockSetInputData_mux0000<5>32)
      FDS:D                     0.308          VGA_Module_0/videoRam/blockSetInputData_5
     ----------------------------------------
     Total                      2.169ns (1.638ns logic, 0.531ns route)
@@ -1213,12 +1214,12 @@ Offset:              9.063ns (Levels of Logic = 10)
 =========================================================================
 
 
-Total REAL time to Xst completion: 20.00 secs
-Total CPU time to Xst completion: 20.00 secs
+Total REAL time to Xst completion: 35.00 secs
+Total CPU time to Xst completion: 35.69 secs
  
 --> 
 
-Total memory usage is 176840 kilobytes
+Total memory usage is 354240 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  434 (   0 filtered)

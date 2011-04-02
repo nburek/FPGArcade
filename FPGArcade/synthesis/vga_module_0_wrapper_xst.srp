@@ -1,4 +1,4 @@
-Release 12.4 - xst M.81d (nt)
+Release 12.4 - xst M.81d (nt64)
 Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 --> 
 TABLE OF CONTENTS
@@ -95,52 +95,52 @@ Analyzing Entity <clk25MHz> in library <VGA_Module_v1_00_a> (Architecture <Behav
 Entity <clk25MHz> analyzed. Unit <clk25MHz> generated.
 
 Analyzing Entity <Video_RAM> in library <VGA_Module_v1_00_a> (Architecture <Behavioral>).
-WARNING:Xst:2211 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 98: Instantiating black box module <tile_graphics_bram>.
-WARNING:Xst:2211 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 108: Instantiating black box module <block_graphics_bram>.
-WARNING:Xst:790 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 134: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:2211 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 101: Instantiating black box module <tile_graphics_bram>.
+WARNING:Xst:2211 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 111: Instantiating black box module <block_graphics_bram>.
+WARNING:Xst:790 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 137: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <movingBlocksTransparencyMap> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 134: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 137: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <movingBlocksTransparencyMap> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 134: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 137: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <movingBlocksTransparencyMap> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 134: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 137: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <movingBlocksTransparencyMap> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 134: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 137: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <movingBlocksTransparencyMap> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 134: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 137: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <movingBlocksTransparencyMap> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 134: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 137: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <movingBlocksTransparencyMap> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 134: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 137: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <movingBlocksTransparencyMap> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 134: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 137: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <movingBlocksTransparencyMap> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 134: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 137: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <movingBlocksTransparencyMap> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 134: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 137: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <movingBlocksTransparencyMap> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 134: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 137: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <movingBlocksTransparencyMap> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 134: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 137: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <movingBlocksTransparencyMap> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 134: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 137: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <movingBlocksTransparencyMap> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 134: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 137: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <movingBlocksTransparencyMap> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 134: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 137: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <movingBlocksTransparencyMap> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:819 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 118: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:819 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 121: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <movingBlocksTransparencyMap>
-WARNING:Xst:819 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 144: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:819 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 147: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <tileX>, <tileY>
-WARNING:Xst:790 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 157: Index value(s) does not match array range, simulation mismatch.
-WARNING:Xst:790 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 158: Index value(s) does not match array range, simulation mismatch.
-WARNING:Xst:790 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 159: Index value(s) does not match array range, simulation mismatch.
 WARNING:Xst:790 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 160: Index value(s) does not match array range, simulation mismatch.
 WARNING:Xst:790 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 161: Index value(s) does not match array range, simulation mismatch.
 WARNING:Xst:790 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 162: Index value(s) does not match array range, simulation mismatch.
 WARNING:Xst:790 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 163: Index value(s) does not match array range, simulation mismatch.
 WARNING:Xst:790 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 164: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 165: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 166: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/FPGArcade/FPGArcade/pcores/VGA_Module_v1_00_a/hdl/vhdl/Video_Ram.vhd" line 167: Index value(s) does not match array range, simulation mismatch.
 Entity <Video_RAM> analyzed. Unit <Video_RAM> generated.
 
 
@@ -163,161 +163,161 @@ Synthesizing Unit <Video_RAM>.
 WARNING:Xst:647 - Input <instruction<28:23>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:1780 - Signal <tileSetOutputData> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:653 - Signal <WEA<0>> is used but never assigned. This sourceless signal will be automatically connected to value 1.
-    Found 1-bit 1024-to-1 multiplexer for signal <$varindex0000> created at line 134.
-    Found 1-bit 1024-to-1 multiplexer for signal <$varindex0001> created at line 134.
-    Found 1-bit 1024-to-1 multiplexer for signal <$varindex0002> created at line 134.
-    Found 1-bit 1024-to-1 multiplexer for signal <$varindex0003> created at line 134.
-    Found 1-bit 1024-to-1 multiplexer for signal <$varindex0004> created at line 134.
-    Found 1-bit 1024-to-1 multiplexer for signal <$varindex0005> created at line 134.
-    Found 1-bit 1024-to-1 multiplexer for signal <$varindex0006> created at line 134.
-    Found 1-bit 1024-to-1 multiplexer for signal <$varindex0007> created at line 134.
-    Found 1-bit 1024-to-1 multiplexer for signal <$varindex0008> created at line 134.
-    Found 1-bit 1024-to-1 multiplexer for signal <$varindex0009> created at line 134.
-    Found 1-bit 1024-to-1 multiplexer for signal <$varindex0010> created at line 134.
-    Found 1-bit 1024-to-1 multiplexer for signal <$varindex0011> created at line 134.
-    Found 1-bit 1024-to-1 multiplexer for signal <$varindex0012> created at line 134.
-    Found 1-bit 1024-to-1 multiplexer for signal <$varindex0013> created at line 134.
-    Found 1-bit 1024-to-1 multiplexer for signal <$varindex0014> created at line 134.
-    Found 1-bit 1024-to-1 multiplexer for signal <$varindex0015> created at line 134.
+    Found 1-bit 1024-to-1 multiplexer for signal <$varindex0000> created at line 137.
+    Found 1-bit 1024-to-1 multiplexer for signal <$varindex0001> created at line 137.
+    Found 1-bit 1024-to-1 multiplexer for signal <$varindex0002> created at line 137.
+    Found 1-bit 1024-to-1 multiplexer for signal <$varindex0003> created at line 137.
+    Found 1-bit 1024-to-1 multiplexer for signal <$varindex0004> created at line 137.
+    Found 1-bit 1024-to-1 multiplexer for signal <$varindex0005> created at line 137.
+    Found 1-bit 1024-to-1 multiplexer for signal <$varindex0006> created at line 137.
+    Found 1-bit 1024-to-1 multiplexer for signal <$varindex0007> created at line 137.
+    Found 1-bit 1024-to-1 multiplexer for signal <$varindex0008> created at line 137.
+    Found 1-bit 1024-to-1 multiplexer for signal <$varindex0009> created at line 137.
+    Found 1-bit 1024-to-1 multiplexer for signal <$varindex0010> created at line 137.
+    Found 1-bit 1024-to-1 multiplexer for signal <$varindex0011> created at line 137.
+    Found 1-bit 1024-to-1 multiplexer for signal <$varindex0012> created at line 137.
+    Found 1-bit 1024-to-1 multiplexer for signal <$varindex0013> created at line 137.
+    Found 1-bit 1024-to-1 multiplexer for signal <$varindex0014> created at line 137.
+    Found 1-bit 1024-to-1 multiplexer for signal <$varindex0015> created at line 137.
     Found 6-bit register for signal <blockSetInputData>.
-    Found 6x7-bit multiplier for signal <blockSetReAddr$mult0000> created at line 130.
-    Found 13-bit adder for signal <blockSetReAddr$share0000> created at line 130.
+    Found 6x7-bit multiplier for signal <blockSetReAddr$mult0000> created at line 133.
+    Found 13-bit adder for signal <blockSetReAddr$share0000> created at line 133.
     Found 13-bit register for signal <blockSetWrAddr>.
-    Found 6x7-bit multiplier for signal <blockSetWrAddr$mult0000> created at line 172.
+    Found 6x7-bit multiplier for signal <blockSetWrAddr$mult0000> created at line 175.
     Found 13-bit adder for signal <blockSetWrAddr$mux0000>.
     Found 1024-bit register for signal <movingBlocksTransparencyMap>.
-    Found 9-bit subtractor for signal <movingBlocksTransparencyMap$sub0000> created at line 134.
-    Found 10-bit subtractor for signal <movingBlocksTransparencyMap$sub0001> created at line 134.
-    Found 9-bit subtractor for signal <movingBlocksTransparencyMap$sub0002> created at line 134.
-    Found 10-bit subtractor for signal <movingBlocksTransparencyMap$sub0003> created at line 134.
-    Found 9-bit subtractor for signal <movingBlocksTransparencyMap$sub0004> created at line 134.
-    Found 10-bit subtractor for signal <movingBlocksTransparencyMap$sub0005> created at line 134.
-    Found 9-bit subtractor for signal <movingBlocksTransparencyMap$sub0006> created at line 134.
-    Found 10-bit subtractor for signal <movingBlocksTransparencyMap$sub0007> created at line 134.
-    Found 9-bit subtractor for signal <movingBlocksTransparencyMap$sub0008> created at line 134.
-    Found 10-bit subtractor for signal <movingBlocksTransparencyMap$sub0009> created at line 134.
-    Found 9-bit subtractor for signal <movingBlocksTransparencyMap$sub0010> created at line 134.
-    Found 10-bit subtractor for signal <movingBlocksTransparencyMap$sub0011> created at line 134.
-    Found 9-bit subtractor for signal <movingBlocksTransparencyMap$sub0012> created at line 134.
-    Found 10-bit subtractor for signal <movingBlocksTransparencyMap$sub0013> created at line 134.
-    Found 9-bit subtractor for signal <movingBlocksTransparencyMap$sub0014> created at line 134.
-    Found 10-bit subtractor for signal <movingBlocksTransparencyMap$sub0015> created at line 134.
-    Found 9-bit subtractor for signal <movingBlocksTransparencyMap$sub0016> created at line 134.
-    Found 10-bit subtractor for signal <movingBlocksTransparencyMap$sub0017> created at line 134.
-    Found 9-bit subtractor for signal <movingBlocksTransparencyMap$sub0018> created at line 134.
-    Found 10-bit subtractor for signal <movingBlocksTransparencyMap$sub0019> created at line 134.
-    Found 9-bit subtractor for signal <movingBlocksTransparencyMap$sub0020> created at line 134.
-    Found 10-bit subtractor for signal <movingBlocksTransparencyMap$sub0021> created at line 134.
-    Found 9-bit subtractor for signal <movingBlocksTransparencyMap$sub0022> created at line 134.
-    Found 10-bit subtractor for signal <movingBlocksTransparencyMap$sub0023> created at line 134.
-    Found 9-bit subtractor for signal <movingBlocksTransparencyMap$sub0024> created at line 134.
-    Found 10-bit subtractor for signal <movingBlocksTransparencyMap$sub0025> created at line 134.
-    Found 9-bit subtractor for signal <movingBlocksTransparencyMap$sub0026> created at line 134.
-    Found 10-bit subtractor for signal <movingBlocksTransparencyMap$sub0027> created at line 134.
-    Found 9-bit subtractor for signal <movingBlocksTransparencyMap$sub0028> created at line 134.
-    Found 10-bit subtractor for signal <movingBlocksTransparencyMap$sub0029> created at line 134.
-    Found 9-bit subtractor for signal <movingBlocksTransparencyMap$sub0030> created at line 134.
-    Found 10-bit subtractor for signal <movingBlocksTransparencyMap$sub0031> created at line 134.
+    Found 9-bit subtractor for signal <movingBlocksTransparencyMap$sub0000> created at line 137.
+    Found 10-bit subtractor for signal <movingBlocksTransparencyMap$sub0001> created at line 137.
+    Found 9-bit subtractor for signal <movingBlocksTransparencyMap$sub0002> created at line 137.
+    Found 10-bit subtractor for signal <movingBlocksTransparencyMap$sub0003> created at line 137.
+    Found 9-bit subtractor for signal <movingBlocksTransparencyMap$sub0004> created at line 137.
+    Found 10-bit subtractor for signal <movingBlocksTransparencyMap$sub0005> created at line 137.
+    Found 9-bit subtractor for signal <movingBlocksTransparencyMap$sub0006> created at line 137.
+    Found 10-bit subtractor for signal <movingBlocksTransparencyMap$sub0007> created at line 137.
+    Found 9-bit subtractor for signal <movingBlocksTransparencyMap$sub0008> created at line 137.
+    Found 10-bit subtractor for signal <movingBlocksTransparencyMap$sub0009> created at line 137.
+    Found 9-bit subtractor for signal <movingBlocksTransparencyMap$sub0010> created at line 137.
+    Found 10-bit subtractor for signal <movingBlocksTransparencyMap$sub0011> created at line 137.
+    Found 9-bit subtractor for signal <movingBlocksTransparencyMap$sub0012> created at line 137.
+    Found 10-bit subtractor for signal <movingBlocksTransparencyMap$sub0013> created at line 137.
+    Found 9-bit subtractor for signal <movingBlocksTransparencyMap$sub0014> created at line 137.
+    Found 10-bit subtractor for signal <movingBlocksTransparencyMap$sub0015> created at line 137.
+    Found 9-bit subtractor for signal <movingBlocksTransparencyMap$sub0016> created at line 137.
+    Found 10-bit subtractor for signal <movingBlocksTransparencyMap$sub0017> created at line 137.
+    Found 9-bit subtractor for signal <movingBlocksTransparencyMap$sub0018> created at line 137.
+    Found 10-bit subtractor for signal <movingBlocksTransparencyMap$sub0019> created at line 137.
+    Found 9-bit subtractor for signal <movingBlocksTransparencyMap$sub0020> created at line 137.
+    Found 10-bit subtractor for signal <movingBlocksTransparencyMap$sub0021> created at line 137.
+    Found 9-bit subtractor for signal <movingBlocksTransparencyMap$sub0022> created at line 137.
+    Found 10-bit subtractor for signal <movingBlocksTransparencyMap$sub0023> created at line 137.
+    Found 9-bit subtractor for signal <movingBlocksTransparencyMap$sub0024> created at line 137.
+    Found 10-bit subtractor for signal <movingBlocksTransparencyMap$sub0025> created at line 137.
+    Found 9-bit subtractor for signal <movingBlocksTransparencyMap$sub0026> created at line 137.
+    Found 10-bit subtractor for signal <movingBlocksTransparencyMap$sub0027> created at line 137.
+    Found 9-bit subtractor for signal <movingBlocksTransparencyMap$sub0028> created at line 137.
+    Found 10-bit subtractor for signal <movingBlocksTransparencyMap$sub0029> created at line 137.
+    Found 9-bit subtractor for signal <movingBlocksTransparencyMap$sub0030> created at line 137.
+    Found 10-bit subtractor for signal <movingBlocksTransparencyMap$sub0031> created at line 137.
     Found 160-bit register for signal <movingBlocksX>.
     Found 144-bit register for signal <movingBlocksY>.
     Found 8-bit register for signal <tileSetInputData>.
     Found 12-bit register for signal <tileSetWrAddr>.
-    Found 10-bit adder carry out for signal <tileX$addsub0000> created at line 130.
-    Found 9-bit adder carry out for signal <tileX$addsub0001> created at line 130.
-    Found 10-bit adder carry out for signal <tileX$addsub0002> created at line 130.
-    Found 9-bit adder carry out for signal <tileX$addsub0003> created at line 130.
-    Found 10-bit adder carry out for signal <tileX$addsub0004> created at line 130.
-    Found 9-bit adder carry out for signal <tileX$addsub0005> created at line 130.
-    Found 10-bit adder carry out for signal <tileX$addsub0006> created at line 130.
-    Found 9-bit adder carry out for signal <tileX$addsub0007> created at line 130.
-    Found 10-bit adder carry out for signal <tileX$addsub0008> created at line 130.
-    Found 9-bit adder carry out for signal <tileX$addsub0009> created at line 130.
-    Found 10-bit adder carry out for signal <tileX$addsub0010> created at line 130.
-    Found 9-bit adder carry out for signal <tileX$addsub0011> created at line 130.
-    Found 10-bit adder carry out for signal <tileX$addsub0012> created at line 130.
-    Found 9-bit adder carry out for signal <tileX$addsub0013> created at line 130.
-    Found 10-bit adder carry out for signal <tileX$addsub0014> created at line 130.
-    Found 9-bit adder carry out for signal <tileX$addsub0015> created at line 130.
-    Found 10-bit adder carry out for signal <tileX$addsub0016> created at line 130.
-    Found 9-bit adder carry out for signal <tileX$addsub0017> created at line 130.
-    Found 10-bit adder carry out for signal <tileX$addsub0018> created at line 130.
-    Found 9-bit adder carry out for signal <tileX$addsub0019> created at line 130.
-    Found 10-bit adder carry out for signal <tileX$addsub0020> created at line 130.
-    Found 9-bit adder carry out for signal <tileX$addsub0021> created at line 130.
-    Found 10-bit adder carry out for signal <tileX$addsub0022> created at line 130.
-    Found 9-bit adder carry out for signal <tileX$addsub0023> created at line 130.
-    Found 10-bit adder carry out for signal <tileX$addsub0024> created at line 130.
-    Found 9-bit adder carry out for signal <tileX$addsub0025> created at line 130.
-    Found 10-bit adder carry out for signal <tileX$addsub0026> created at line 130.
-    Found 9-bit adder carry out for signal <tileX$addsub0027> created at line 130.
-    Found 10-bit adder carry out for signal <tileX$addsub0028> created at line 130.
-    Found 9-bit adder carry out for signal <tileX$addsub0029> created at line 130.
-    Found 10-bit adder carry out for signal <tileX$addsub0030> created at line 130.
-    Found 9-bit adder carry out for signal <tileX$addsub0031> created at line 130.
-    Found 11-bit comparator greatequal for signal <tileX$cmp_ge0000> created at line 130.
-    Found 10-bit comparator greatequal for signal <tileX$cmp_ge0001> created at line 130.
-    Found 11-bit comparator greatequal for signal <tileX$cmp_ge0002> created at line 130.
-    Found 10-bit comparator greatequal for signal <tileX$cmp_ge0003> created at line 130.
-    Found 11-bit comparator greatequal for signal <tileX$cmp_ge0004> created at line 130.
-    Found 10-bit comparator greatequal for signal <tileX$cmp_ge0005> created at line 130.
-    Found 11-bit comparator greatequal for signal <tileX$cmp_ge0006> created at line 130.
-    Found 10-bit comparator greatequal for signal <tileX$cmp_ge0007> created at line 130.
-    Found 11-bit comparator greatequal for signal <tileX$cmp_ge0008> created at line 130.
-    Found 10-bit comparator greatequal for signal <tileX$cmp_ge0009> created at line 130.
-    Found 11-bit comparator greatequal for signal <tileX$cmp_ge0010> created at line 130.
-    Found 10-bit comparator greatequal for signal <tileX$cmp_ge0011> created at line 130.
-    Found 11-bit comparator greatequal for signal <tileX$cmp_ge0012> created at line 130.
-    Found 10-bit comparator greatequal for signal <tileX$cmp_ge0013> created at line 130.
-    Found 11-bit comparator greatequal for signal <tileX$cmp_ge0014> created at line 130.
-    Found 10-bit comparator greatequal for signal <tileX$cmp_ge0015> created at line 130.
-    Found 11-bit comparator greatequal for signal <tileX$cmp_ge0016> created at line 130.
-    Found 10-bit comparator greatequal for signal <tileX$cmp_ge0017> created at line 130.
-    Found 11-bit comparator greatequal for signal <tileX$cmp_ge0018> created at line 130.
-    Found 10-bit comparator greatequal for signal <tileX$cmp_ge0019> created at line 130.
-    Found 11-bit comparator greatequal for signal <tileX$cmp_ge0020> created at line 130.
-    Found 10-bit comparator greatequal for signal <tileX$cmp_ge0021> created at line 130.
-    Found 11-bit comparator greatequal for signal <tileX$cmp_ge0022> created at line 130.
-    Found 10-bit comparator greatequal for signal <tileX$cmp_ge0023> created at line 130.
-    Found 11-bit comparator greatequal for signal <tileX$cmp_ge0024> created at line 130.
-    Found 10-bit comparator greatequal for signal <tileX$cmp_ge0025> created at line 130.
-    Found 11-bit comparator greatequal for signal <tileX$cmp_ge0026> created at line 130.
-    Found 10-bit comparator greatequal for signal <tileX$cmp_ge0027> created at line 130.
-    Found 11-bit comparator greatequal for signal <tileX$cmp_ge0028> created at line 130.
-    Found 10-bit comparator greatequal for signal <tileX$cmp_ge0029> created at line 130.
-    Found 11-bit comparator greatequal for signal <tileX$cmp_ge0030> created at line 130.
-    Found 10-bit comparator greatequal for signal <tileX$cmp_ge0031> created at line 130.
-    Found 11-bit comparator lessequal for signal <tileX$cmp_le0000> created at line 130.
-    Found 10-bit comparator lessequal for signal <tileX$cmp_le0001> created at line 130.
-    Found 11-bit comparator lessequal for signal <tileX$cmp_le0002> created at line 130.
-    Found 10-bit comparator lessequal for signal <tileX$cmp_le0003> created at line 130.
-    Found 11-bit comparator lessequal for signal <tileX$cmp_le0004> created at line 130.
-    Found 10-bit comparator lessequal for signal <tileX$cmp_le0005> created at line 130.
-    Found 11-bit comparator lessequal for signal <tileX$cmp_le0006> created at line 130.
-    Found 10-bit comparator lessequal for signal <tileX$cmp_le0007> created at line 130.
-    Found 11-bit comparator lessequal for signal <tileX$cmp_le0008> created at line 130.
-    Found 10-bit comparator lessequal for signal <tileX$cmp_le0009> created at line 130.
-    Found 11-bit comparator lessequal for signal <tileX$cmp_le0010> created at line 130.
-    Found 10-bit comparator lessequal for signal <tileX$cmp_le0011> created at line 130.
-    Found 11-bit comparator lessequal for signal <tileX$cmp_le0012> created at line 130.
-    Found 10-bit comparator lessequal for signal <tileX$cmp_le0013> created at line 130.
-    Found 11-bit comparator lessequal for signal <tileX$cmp_le0014> created at line 130.
-    Found 10-bit comparator lessequal for signal <tileX$cmp_le0015> created at line 130.
-    Found 11-bit comparator lessequal for signal <tileX$cmp_le0016> created at line 130.
-    Found 10-bit comparator lessequal for signal <tileX$cmp_le0017> created at line 130.
-    Found 11-bit comparator lessequal for signal <tileX$cmp_le0018> created at line 130.
-    Found 10-bit comparator lessequal for signal <tileX$cmp_le0019> created at line 130.
-    Found 11-bit comparator lessequal for signal <tileX$cmp_le0020> created at line 130.
-    Found 10-bit comparator lessequal for signal <tileX$cmp_le0021> created at line 130.
-    Found 11-bit comparator lessequal for signal <tileX$cmp_le0022> created at line 130.
-    Found 10-bit comparator lessequal for signal <tileX$cmp_le0023> created at line 130.
-    Found 11-bit comparator lessequal for signal <tileX$cmp_le0024> created at line 130.
-    Found 10-bit comparator lessequal for signal <tileX$cmp_le0025> created at line 130.
-    Found 11-bit comparator lessequal for signal <tileX$cmp_le0026> created at line 130.
-    Found 10-bit comparator lessequal for signal <tileX$cmp_le0027> created at line 130.
-    Found 11-bit comparator lessequal for signal <tileX$cmp_le0028> created at line 130.
-    Found 10-bit comparator lessequal for signal <tileX$cmp_le0029> created at line 130.
-    Found 11-bit comparator lessequal for signal <tileX$cmp_le0030> created at line 130.
-    Found 10-bit comparator lessequal for signal <tileX$cmp_le0031> created at line 130.
+    Found 10-bit adder carry out for signal <tileX$addsub0000> created at line 133.
+    Found 9-bit adder carry out for signal <tileX$addsub0001> created at line 133.
+    Found 10-bit adder carry out for signal <tileX$addsub0002> created at line 133.
+    Found 9-bit adder carry out for signal <tileX$addsub0003> created at line 133.
+    Found 10-bit adder carry out for signal <tileX$addsub0004> created at line 133.
+    Found 9-bit adder carry out for signal <tileX$addsub0005> created at line 133.
+    Found 10-bit adder carry out for signal <tileX$addsub0006> created at line 133.
+    Found 9-bit adder carry out for signal <tileX$addsub0007> created at line 133.
+    Found 10-bit adder carry out for signal <tileX$addsub0008> created at line 133.
+    Found 9-bit adder carry out for signal <tileX$addsub0009> created at line 133.
+    Found 10-bit adder carry out for signal <tileX$addsub0010> created at line 133.
+    Found 9-bit adder carry out for signal <tileX$addsub0011> created at line 133.
+    Found 10-bit adder carry out for signal <tileX$addsub0012> created at line 133.
+    Found 9-bit adder carry out for signal <tileX$addsub0013> created at line 133.
+    Found 10-bit adder carry out for signal <tileX$addsub0014> created at line 133.
+    Found 9-bit adder carry out for signal <tileX$addsub0015> created at line 133.
+    Found 10-bit adder carry out for signal <tileX$addsub0016> created at line 133.
+    Found 9-bit adder carry out for signal <tileX$addsub0017> created at line 133.
+    Found 10-bit adder carry out for signal <tileX$addsub0018> created at line 133.
+    Found 9-bit adder carry out for signal <tileX$addsub0019> created at line 133.
+    Found 10-bit adder carry out for signal <tileX$addsub0020> created at line 133.
+    Found 9-bit adder carry out for signal <tileX$addsub0021> created at line 133.
+    Found 10-bit adder carry out for signal <tileX$addsub0022> created at line 133.
+    Found 9-bit adder carry out for signal <tileX$addsub0023> created at line 133.
+    Found 10-bit adder carry out for signal <tileX$addsub0024> created at line 133.
+    Found 9-bit adder carry out for signal <tileX$addsub0025> created at line 133.
+    Found 10-bit adder carry out for signal <tileX$addsub0026> created at line 133.
+    Found 9-bit adder carry out for signal <tileX$addsub0027> created at line 133.
+    Found 10-bit adder carry out for signal <tileX$addsub0028> created at line 133.
+    Found 9-bit adder carry out for signal <tileX$addsub0029> created at line 133.
+    Found 10-bit adder carry out for signal <tileX$addsub0030> created at line 133.
+    Found 9-bit adder carry out for signal <tileX$addsub0031> created at line 133.
+    Found 11-bit comparator greatequal for signal <tileX$cmp_ge0000> created at line 133.
+    Found 10-bit comparator greatequal for signal <tileX$cmp_ge0001> created at line 133.
+    Found 11-bit comparator greatequal for signal <tileX$cmp_ge0002> created at line 133.
+    Found 10-bit comparator greatequal for signal <tileX$cmp_ge0003> created at line 133.
+    Found 11-bit comparator greatequal for signal <tileX$cmp_ge0004> created at line 133.
+    Found 10-bit comparator greatequal for signal <tileX$cmp_ge0005> created at line 133.
+    Found 11-bit comparator greatequal for signal <tileX$cmp_ge0006> created at line 133.
+    Found 10-bit comparator greatequal for signal <tileX$cmp_ge0007> created at line 133.
+    Found 11-bit comparator greatequal for signal <tileX$cmp_ge0008> created at line 133.
+    Found 10-bit comparator greatequal for signal <tileX$cmp_ge0009> created at line 133.
+    Found 11-bit comparator greatequal for signal <tileX$cmp_ge0010> created at line 133.
+    Found 10-bit comparator greatequal for signal <tileX$cmp_ge0011> created at line 133.
+    Found 11-bit comparator greatequal for signal <tileX$cmp_ge0012> created at line 133.
+    Found 10-bit comparator greatequal for signal <tileX$cmp_ge0013> created at line 133.
+    Found 11-bit comparator greatequal for signal <tileX$cmp_ge0014> created at line 133.
+    Found 10-bit comparator greatequal for signal <tileX$cmp_ge0015> created at line 133.
+    Found 11-bit comparator greatequal for signal <tileX$cmp_ge0016> created at line 133.
+    Found 10-bit comparator greatequal for signal <tileX$cmp_ge0017> created at line 133.
+    Found 11-bit comparator greatequal for signal <tileX$cmp_ge0018> created at line 133.
+    Found 10-bit comparator greatequal for signal <tileX$cmp_ge0019> created at line 133.
+    Found 11-bit comparator greatequal for signal <tileX$cmp_ge0020> created at line 133.
+    Found 10-bit comparator greatequal for signal <tileX$cmp_ge0021> created at line 133.
+    Found 11-bit comparator greatequal for signal <tileX$cmp_ge0022> created at line 133.
+    Found 10-bit comparator greatequal for signal <tileX$cmp_ge0023> created at line 133.
+    Found 11-bit comparator greatequal for signal <tileX$cmp_ge0024> created at line 133.
+    Found 10-bit comparator greatequal for signal <tileX$cmp_ge0025> created at line 133.
+    Found 11-bit comparator greatequal for signal <tileX$cmp_ge0026> created at line 133.
+    Found 10-bit comparator greatequal for signal <tileX$cmp_ge0027> created at line 133.
+    Found 11-bit comparator greatequal for signal <tileX$cmp_ge0028> created at line 133.
+    Found 10-bit comparator greatequal for signal <tileX$cmp_ge0029> created at line 133.
+    Found 11-bit comparator greatequal for signal <tileX$cmp_ge0030> created at line 133.
+    Found 10-bit comparator greatequal for signal <tileX$cmp_ge0031> created at line 133.
+    Found 11-bit comparator lessequal for signal <tileX$cmp_le0000> created at line 133.
+    Found 10-bit comparator lessequal for signal <tileX$cmp_le0001> created at line 133.
+    Found 11-bit comparator lessequal for signal <tileX$cmp_le0002> created at line 133.
+    Found 10-bit comparator lessequal for signal <tileX$cmp_le0003> created at line 133.
+    Found 11-bit comparator lessequal for signal <tileX$cmp_le0004> created at line 133.
+    Found 10-bit comparator lessequal for signal <tileX$cmp_le0005> created at line 133.
+    Found 11-bit comparator lessequal for signal <tileX$cmp_le0006> created at line 133.
+    Found 10-bit comparator lessequal for signal <tileX$cmp_le0007> created at line 133.
+    Found 11-bit comparator lessequal for signal <tileX$cmp_le0008> created at line 133.
+    Found 10-bit comparator lessequal for signal <tileX$cmp_le0009> created at line 133.
+    Found 11-bit comparator lessequal for signal <tileX$cmp_le0010> created at line 133.
+    Found 10-bit comparator lessequal for signal <tileX$cmp_le0011> created at line 133.
+    Found 11-bit comparator lessequal for signal <tileX$cmp_le0012> created at line 133.
+    Found 10-bit comparator lessequal for signal <tileX$cmp_le0013> created at line 133.
+    Found 11-bit comparator lessequal for signal <tileX$cmp_le0014> created at line 133.
+    Found 10-bit comparator lessequal for signal <tileX$cmp_le0015> created at line 133.
+    Found 11-bit comparator lessequal for signal <tileX$cmp_le0016> created at line 133.
+    Found 10-bit comparator lessequal for signal <tileX$cmp_le0017> created at line 133.
+    Found 11-bit comparator lessequal for signal <tileX$cmp_le0018> created at line 133.
+    Found 10-bit comparator lessequal for signal <tileX$cmp_le0019> created at line 133.
+    Found 11-bit comparator lessequal for signal <tileX$cmp_le0020> created at line 133.
+    Found 10-bit comparator lessequal for signal <tileX$cmp_le0021> created at line 133.
+    Found 11-bit comparator lessequal for signal <tileX$cmp_le0022> created at line 133.
+    Found 10-bit comparator lessequal for signal <tileX$cmp_le0023> created at line 133.
+    Found 11-bit comparator lessequal for signal <tileX$cmp_le0024> created at line 133.
+    Found 10-bit comparator lessequal for signal <tileX$cmp_le0025> created at line 133.
+    Found 11-bit comparator lessequal for signal <tileX$cmp_le0026> created at line 133.
+    Found 10-bit comparator lessequal for signal <tileX$cmp_le0027> created at line 133.
+    Found 11-bit comparator lessequal for signal <tileX$cmp_le0028> created at line 133.
+    Found 10-bit comparator lessequal for signal <tileX$cmp_le0029> created at line 133.
+    Found 11-bit comparator lessequal for signal <tileX$cmp_le0030> created at line 133.
+    Found 10-bit comparator lessequal for signal <tileX$cmp_le0031> created at line 133.
 INFO:Xst:738 - HDL ADVISOR - 1024 flip-flops were inferred for signal <movingBlocksTransparencyMap>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
     Summary:
 	inferred 1367 D-type flip-flop(s).
@@ -492,19 +492,16 @@ Design Statistics
 # IOs                              : 44
 
 Cell Usage :
-# BELS                             : 4903
+# BELS                             : 4893
 #      GND                         : 3
-#      INV                         : 132
+#      INV                         : 133
 #      LUT1                        : 230
 #      LUT2                        : 646
-#      LUT2_D                      : 1
-#      LUT2_L                      : 3
 #      LUT3                        : 213
-#      LUT3_D                      : 6
-#      LUT3_L                      : 2
-#      LUT4                        : 1743
-#      LUT4_D                      : 4
-#      LUT4_L                      : 4
+#      LUT3_D                      : 8
+#      LUT4                        : 1737
+#      LUT4_D                      : 5
+#      LUT4_L                      : 2
 #      MULT_AND                    : 3
 #      MUXCY                       : 1038
 #      MUXF5                       : 290
@@ -531,9 +528,9 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-4 
 
- Number of Slices:                     1686  out of   4656    36%  
+ Number of Slices:                     1682  out of   4656    36%  
  Number of Slice Flip Flops:           1419  out of   9312    15%  
- Number of 4 input LUTs:               2984  out of   9312    32%  
+ Number of 4 input LUTs:               2974  out of   9312    31%  
  Number of IOs:                          44
  Number of bonded IOBs:                   0  out of    232     0%  
  Number of BRAMs:                         5  out of     20    25%  
@@ -562,7 +559,7 @@ Clock Information:
 Clock Signal                       | Clock buffer(FF name)                        | Load  |
 -----------------------------------+----------------------------------------------+-------+
 VGA_Module_0/clock25MHz/slow_clk1  | BUFG                                         | 50    |
-clk50Mhz                           | NONE(VGA_Module_0/clock25MHz/slow_clk)       | 8     |
+clk50Mhz                           | NONE(VGA_Module_0/clock25MHz/slow_clk)       | 10    |
 instructionClk                     | NONE(VGA_Module_0/videoRam/blockSetWrAddr_12)| 1367  |
 -----------------------------------+----------------------------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
@@ -575,7 +572,7 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 10.040ns (Maximum Frequency: 99.601MHz)
+   Minimum period: 10.395ns (Maximum Frequency: 96.202MHz)
    Minimum input arrival time before clock: 7.440ns
    Maximum output required time after clock: 0.591ns
    Maximum combinational path delay: No path found
@@ -586,10 +583,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'VGA_Module_0/clock25MHz/slow_clk1'
-  Clock period: 10.040ns (frequency: 99.601MHz)
-  Total number of paths / destination ports: 13726 / 95
+  Clock period: 10.395ns (frequency: 96.202MHz)
+  Total number of paths / destination ports: 14186 / 95
 -------------------------------------------------------------------------
-Delay:               10.040ns (Levels of Logic = 6)
+Delay:               10.395ns (Levels of Logic = 7)
   Source:            VGA_Module_0/hCount_2 (FF)
   Destination:       VGA_Module_0/videoRam/Mmult_blockSetReAddr_mult0000 (MULT)
   Source Clock:      VGA_Module_0/clock25MHz/slow_clk1 rising
@@ -600,27 +597,28 @@ Delay:               10.040ns (Levels of Logic = 6)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDR:C->Q              2   0.591   0.622  VGA_Module_0/hCount_2 (VGA_Module_0/hCount_2)
-     LUT4:I0->O            1   0.704   0.424  VGA_Module_0/vCount_cmp_eq000012 (VGA_Module_0/vCount_cmp_eq000012)
-     LUT4:I3->O           60   0.704   1.306  VGA_Module_0/vCount_cmp_eq000024 (VGA_Module_0/vCount_cmp_eq0000)
-     LUT3:I2->O            1   0.704   0.424  VGA_Module_0/pixelX_cmp_le0001117_SW1_SW0 (N65)
-     LUT4_L:I3->LO         1   0.704   0.104  VGA_Module_0/pixelX_cmp_le0001117 (VGA_Module_0/pixelX_cmp_le0001117)
-     LUT4:I3->O            2   0.704   0.482  VGA_Module_0/pixelX_cmp_le0001132 (VGA_Module_0/pixelX_cmp_le00012)
-     LUT3:I2->O           21   0.704   1.128  VGA_Module_0/pixelX_and00001 (VGA_Module_0/pixelX_and0000)
-     MULT18X18SIO:CEA          0.735          VGA_Module_0/videoRam/Mmult_blockSetReAddr_mult0000
+     LUT4:I0->O            1   0.704   0.455  VGA_Module_0/vCount_cmp_eq000012 (VGA_Module_0/vCount_cmp_eq000012)
+     LUT4:I2->O           56   0.704   1.305  VGA_Module_0/vCount_cmp_eq000024 (VGA_Module_0/vCount_cmp_eq0000)
+     LUT3:I2->O            3   0.704   0.535  VGA_Module_0/vCount_mux0000<0>1 (VGA_Module_0/vCount_mux0000<0>)
+     LUT4_L:I3->LO         1   0.704   0.104  VGA_Module_0/pixelY_mux0002<0>115 (VGA_Module_0/pixelY_mux0002<0>115)
+     LUT4:I3->O            1   0.704   0.424  VGA_Module_0/pixelY_mux0002<0>129 (VGA_Module_0/pixelY_mux0002<0>129)
+     LUT4_D:I3->O          8   0.704   0.761  VGA_Module_0/pixelY_mux0002<0>146 (VGA_Module_0/N33)
+     LUT4:I3->O            2   0.704   0.447  VGA_Module_0/pixelY_mux0002<4>1 (VGA_Module_0/pixelY_mux0002<4>)
+     MULT18X18SIO:A1           0.223          VGA_Module_0/videoRam/Mmult_blockSetReAddr_mult0000
     ----------------------------------------
-    Total                     10.040ns (5.550ns logic, 4.490ns route)
-                                       (55.3% logic, 44.7% route)
+    Total                     10.395ns (5.742ns logic, 4.653ns route)
+                                       (55.2% logic, 44.8% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk50Mhz'
-  Clock period: 4.827ns (frequency: 207.168MHz)
+  Clock period: 9.654ns (frequency: 103.584MHz)
   Total number of paths / destination ports: 49 / 13
 -------------------------------------------------------------------------
 Delay:               4.827ns (Levels of Logic = 3)
   Source:            VGA_Module_0/videoRam/blockSetBRAM/BU2/U0/blk_mem_generator/valid.cstr/ramloop[2].ram.r/s3_noinit.ram/dpram.dp4x4.ram (RAM)
   Destination:       VGA_Module_0/videoRam/tileSetBRAM/BU2/U0/blk_mem_generator/valid.cstr/ramloop[1].ram.r/s3_noinit.ram/dpram.dp4x4.ram (RAM)
   Source Clock:      clk50Mhz rising
-  Destination Clock: clk50Mhz rising
+  Destination Clock: clk50Mhz falling
 
   Data Path: VGA_Module_0/videoRam/blockSetBRAM/BU2/U0/blk_mem_generator/valid.cstr/ramloop[2].ram.r/s3_noinit.ram/dpram.dp4x4.ram to VGA_Module_0/videoRam/tileSetBRAM/BU2/U0/blk_mem_generator/valid.cstr/ramloop[1].ram.r/s3_noinit.ram/dpram.dp4x4.ram
                                 Gate     Net
@@ -653,7 +651,7 @@ Delay:               2.169ns (Levels of Logic = 1)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDS:C->Q              3   0.591   0.531  VGA_Module_0/videoRam/blockSetInputData_5 (VGA_Module_0/videoRam/blockSetInputData_5)
-     MUXF5:S->O            1   0.739   0.000  VGA_Module_0/videoRam/blockSetInputData_mux0000<5>351 (VGA_Module_0/videoRam/blockSetInputData_mux0000<5>35)
+     MUXF5:S->O            1   0.739   0.000  VGA_Module_0/videoRam/blockSetInputData_mux0000<5>321 (VGA_Module_0/videoRam/blockSetInputData_mux0000<5>32)
      FDS:D                     0.308          VGA_Module_0/videoRam/blockSetInputData_5
     ----------------------------------------
     Total                      2.169ns (1.638ns logic, 0.531ns route)
@@ -703,12 +701,12 @@ Offset:              0.591ns (Levels of Logic = 0)
 =========================================================================
 
 
-Total REAL time to Xst completion: 1083.00 secs
-Total CPU time to Xst completion: 1083.04 secs
+Total REAL time to Xst completion: 1347.00 secs
+Total CPU time to Xst completion: 1347.51 secs
  
 --> 
 
-Total memory usage is 299020 kilobytes
+Total memory usage is 556608 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   33 (   0 filtered)

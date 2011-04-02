@@ -93,15 +93,18 @@ signal movingBlocksY : moving_blocks_y := (others => "000000000");
 signal tileX : STD_LOGIC_VECTOR(2 downto 0);
 signal tileY : STD_LOGIC_VECTOR(2 downto 0);
 
+signal invClk50Mhz : STD_LOGIC;
+
 begin
-			
+invClk50Mhz <= Not clk50Mhz;
+
 tileSetBRAM : tile_graphics_bram
 		port map (
 			clka => clk50Mhz,
 			wea => WEA,
 			addra => tileSetWrAddr,
 			dina => tileSetInputData,
-			clkb => clk50Mhz,
+			clkb => invClk50Mhz,
 			addrb => tileSetReAddr,
 			doutb => currentPixel);
 
@@ -143,9 +146,7 @@ end process;
 
 process (blockSetOutputData)
 begin
-	IF (blockSetOutputData'EVENT) THEN
-		tileSetReAddr <= blockSetOutputData & tileX(2 downto 0) & tileY(2 downto 0);
-	END IF;
+	tileSetReAddr <= blockSetOutputData & tileX(2 downto 0) & tileY(2 downto 0);
 end process;
 
 
