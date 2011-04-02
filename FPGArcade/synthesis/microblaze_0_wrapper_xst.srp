@@ -1,4 +1,4 @@
-Release 12.4 - xst M.81d (nt)
+Release 12.4 - xst M.81d (nt64)
 Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 --> 
 TABLE OF CONTENTS
@@ -3458,12 +3458,12 @@ Delay:               3.644ns (Levels of Logic = 3)
 =========================================================================
 
 
-Total REAL time to Xst completion: 45.00 secs
-Total CPU time to Xst completion: 44.85 secs
+Total REAL time to Xst completion: 55.00 secs
+Total CPU time to Xst completion: 54.71 secs
  
 --> 
 
-Total memory usage is 227596 kilobytes
+Total memory usage is 446312 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  623 (   0 filtered)

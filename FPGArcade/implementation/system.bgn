@@ -1,4 +1,4 @@
-Release 12.4 - Bitgen M.81d (nt)
+Release 12.4 - Bitgen M.81d (nt64)
 Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 PMSPEC -- Overriding Xilinx file
 <C:/Xilinx/12.4/ISE_DS/EDK/spartan3e/data/spartan3e.acd> with local file
@@ -8,9 +8,9 @@ C:\Xilinx\12.4\ISE_DS\ISE\;C:\Xilinx\12.4\ISE_DS\EDK.
    "system" is an NCD, version 3.2, device xc3s500e, package fg320, speed -4
 Opened constraints file system.pcf.
 
-Wed Mar 30 19:10:49 2011
+Fri Apr 01 20:45:09 2011
 
-C:\Xilinx\12.4\ISE_DS\ISE\bin\nt\unwrapped\bitgen.exe -w -g CclkPin:PULLUP -g TdoPin:PULLNONE -g M1Pin:PULLDOWN -g DonePin:PULLUP -g StartUpClk:CCLK -g M0Pin:PULLUP -g M2Pin:PULLUP -g ProgPin:PULLUP -g TckPin:PULLUP -g TdiPin:PULLUP -g TmsPin:PULLUP -g LCK_cycle:NoWait -g Security:NONE -g Persist:No system.ncd 
+C:\Xilinx\12.4\ISE_DS\ISE\bin\nt64\unwrapped\bitgen.exe -w -g CclkPin:PULLUP -g TdoPin:PULLNONE -g M1Pin:PULLDOWN -g DonePin:PULLUP -g StartUpClk:CCLK -g M0Pin:PULLUP -g M2Pin:PULLUP -g ProgPin:PULLUP -g TckPin:PULLUP -g TdiPin:PULLUP -g TmsPin:PULLUP -g LCK_cycle:NoWait -g Security:NONE -g Persist:No system.ncd 
 
 Summary of Bitgen Options:
 +----------------------+----------------------+
