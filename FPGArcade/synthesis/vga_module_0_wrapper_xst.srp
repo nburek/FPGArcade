@@ -1,4 +1,4 @@
-Release 12.4 - xst M.81d (nt64)
+Release 12.4 - xst M.81d (nt)
 Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 --> 
 TABLE OF CONTENTS
@@ -345,6 +345,7 @@ WARNING:Xst:1780 - Signal <counter> is never used or assigned. This unconnected 
     Found 11-bit comparator lessequal for signal <pixelX$cmp_le0000> created at line 104.
     Found 10-bit comparator lessequal for signal <pixelX$cmp_le0001> created at line 104.
     Found 9-bit register for signal <pixelY>.
+    Found 9-bit adder for signal <pixelY$addsub0000> created at line 123.
     Found 9-bit register for signal <vCount>.
     Found 9-bit adder for signal <vCount$addsub0000> created at line 97.
     Found 11-bit comparator greater for signal <VGA_Blue$cmp_gt0000> created at line 104.
@@ -353,7 +354,7 @@ WARNING:Xst:1780 - Signal <counter> is never used or assigned. This unconnected 
     Found 10-bit comparator lessequal for signal <VSync$cmp_le0000> created at line 84.
     Summary:
 	inferred  48 D-type flip-flop(s).
-	inferred   2 Adder/Subtractor(s).
+	inferred   3 Adder/Subtractor(s).
 	inferred   8 Comparator(s).
 Unit <vga_module> synthesized.
 
@@ -370,12 +371,12 @@ HDL Synthesis Report
 Macro Statistics
 # Multipliers                                          : 2
  6x7-bit multiplier                                    : 2
-# Adders/Subtractors                                   : 68
+# Adders/Subtractors                                   : 69
  10-bit adder                                          : 1
  10-bit adder carry out                                : 16
  10-bit subtractor                                     : 16
  13-bit adder                                          : 2
- 9-bit adder                                           : 1
+ 9-bit adder                                           : 2
  9-bit adder carry out                                 : 16
  9-bit subtractor                                      : 16
 # Registers                                            : 1070
@@ -423,12 +424,12 @@ Macro Statistics
 # Multipliers                                          : 2
  6x7-bit multiplier                                    : 1
  6x7-bit registered multiplier                         : 1
-# Adders/Subtractors                                   : 68
+# Adders/Subtractors                                   : 69
  10-bit adder                                          : 1
  10-bit adder carry out                                : 16
  13-bit adder                                          : 2
  3-bit subtractor                                      : 32
- 9-bit adder                                           : 1
+ 9-bit adder                                           : 2
  9-bit adder carry out                                 : 16
 # Registers                                            : 1416
  Flip-Flops                                            : 1416
@@ -491,26 +492,27 @@ Design Statistics
 # IOs                              : 44
 
 Cell Usage :
-# BELS                             : 4861
+# BELS                             : 4903
 #      GND                         : 3
 #      INV                         : 132
 #      LUT1                        : 230
-#      LUT2                        : 647
-#      LUT2_L                      : 2
-#      LUT3                        : 209
-#      LUT3_D                      : 3
-#      LUT3_L                      : 1
-#      LUT4                        : 1732
-#      LUT4_D                      : 2
-#      LUT4_L                      : 1
+#      LUT2                        : 646
+#      LUT2_D                      : 1
+#      LUT2_L                      : 3
+#      LUT3                        : 213
+#      LUT3_D                      : 6
+#      LUT3_L                      : 2
+#      LUT4                        : 1743
+#      LUT4_D                      : 4
+#      LUT4_L                      : 4
 #      MULT_AND                    : 3
-#      MUXCY                       : 1030
+#      MUXCY                       : 1038
 #      MUXF5                       : 290
 #      MUXF6                       : 128
 #      MUXF7                       : 64
 #      MUXF8                       : 32
 #      VCC                         : 3
-#      XORCY                       : 349
+#      XORCY                       : 358
 # FlipFlops/Latches                : 1419
 #      FDE                         : 1392
 #      FDR                         : 21
@@ -529,9 +531,9 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-4 
 
- Number of Slices:                     1673  out of   4656    35%  
+ Number of Slices:                     1686  out of   4656    36%  
  Number of Slice Flip Flops:           1419  out of   9312    15%  
- Number of 4 input LUTs:               2959  out of   9312    31%  
+ Number of 4 input LUTs:               2984  out of   9312    32%  
  Number of IOs:                          44
  Number of bonded IOBs:                   0  out of    232     0%  
  Number of BRAMs:                         5  out of     20    25%  
@@ -573,8 +575,8 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 9.545ns (Maximum Frequency: 104.764MHz)
-   Minimum input arrival time before clock: 7.518ns
+   Minimum period: 10.040ns (Maximum Frequency: 99.601MHz)
+   Minimum input arrival time before clock: 7.440ns
    Maximum output required time after clock: 0.591ns
    Maximum combinational path delay: No path found
 
@@ -584,29 +586,30 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'VGA_Module_0/clock25MHz/slow_clk1'
-  Clock period: 9.545ns (frequency: 104.764MHz)
-  Total number of paths / destination ports: 8753 / 95
+  Clock period: 10.040ns (frequency: 99.601MHz)
+  Total number of paths / destination ports: 13726 / 95
 -------------------------------------------------------------------------
-Delay:               9.545ns (Levels of Logic = 5)
-  Source:            VGA_Module_0/hCount_1 (FF)
+Delay:               10.040ns (Levels of Logic = 6)
+  Source:            VGA_Module_0/hCount_2 (FF)
   Destination:       VGA_Module_0/videoRam/Mmult_blockSetReAddr_mult0000 (MULT)
   Source Clock:      VGA_Module_0/clock25MHz/slow_clk1 rising
   Destination Clock: VGA_Module_0/clock25MHz/slow_clk1 rising
 
-  Data Path: VGA_Module_0/hCount_1 to VGA_Module_0/videoRam/Mmult_blockSetReAddr_mult0000
+  Data Path: VGA_Module_0/hCount_2 to VGA_Module_0/videoRam/Mmult_blockSetReAddr_mult0000
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              2   0.591   0.622  VGA_Module_0/hCount_1 (VGA_Module_0/hCount_1)
-     LUT4:I0->O            1   0.704   0.455  VGA_Module_0/vCount_cmp_eq00007 (VGA_Module_0/vCount_cmp_eq00007)
-     LUT4:I2->O           48   0.704   1.302  VGA_Module_0/vCount_cmp_eq000024 (VGA_Module_0/vCount_cmp_eq0000)
-     LUT3:I2->O            4   0.704   0.666  VGA_Module_0/vCount_mux0000<4>1 (VGA_Module_0/vCount_mux0000<4>)
-     LUT4:I1->O            2   0.704   0.526  VGA_Module_0/pixelX_cmp_le00011 (VGA_Module_0/pixelX_cmp_le00012)
-     LUT3:I1->O           21   0.704   1.128  VGA_Module_0/pixelX_and00001 (VGA_Module_0/pixelX_and0000)
+     FDR:C->Q              2   0.591   0.622  VGA_Module_0/hCount_2 (VGA_Module_0/hCount_2)
+     LUT4:I0->O            1   0.704   0.424  VGA_Module_0/vCount_cmp_eq000012 (VGA_Module_0/vCount_cmp_eq000012)
+     LUT4:I3->O           60   0.704   1.306  VGA_Module_0/vCount_cmp_eq000024 (VGA_Module_0/vCount_cmp_eq0000)
+     LUT3:I2->O            1   0.704   0.424  VGA_Module_0/pixelX_cmp_le0001117_SW1_SW0 (N65)
+     LUT4_L:I3->LO         1   0.704   0.104  VGA_Module_0/pixelX_cmp_le0001117 (VGA_Module_0/pixelX_cmp_le0001117)
+     LUT4:I3->O            2   0.704   0.482  VGA_Module_0/pixelX_cmp_le0001132 (VGA_Module_0/pixelX_cmp_le00012)
+     LUT3:I2->O           21   0.704   1.128  VGA_Module_0/pixelX_and00001 (VGA_Module_0/pixelX_and0000)
      MULT18X18SIO:CEA          0.735          VGA_Module_0/videoRam/Mmult_blockSetReAddr_mult0000
     ----------------------------------------
-    Total                      9.545ns (4.846ns logic, 4.699ns route)
-                                       (50.8% logic, 49.2% route)
+    Total                     10.040ns (5.550ns logic, 4.490ns route)
+                                       (55.3% logic, 44.7% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk50Mhz'
@@ -660,25 +663,24 @@ Delay:               2.169ns (Levels of Logic = 1)
 Timing constraint: Default OFFSET IN BEFORE for Clock 'instructionClk'
   Total number of paths / destination ports: 21967 / 2734
 -------------------------------------------------------------------------
-Offset:              7.518ns (Levels of Logic = 6)
-  Source:            graphicsInstruction<12> (PAD)
+Offset:              7.440ns (Levels of Logic = 5)
+  Source:            graphicsInstruction<7> (PAD)
   Destination:       VGA_Module_0/videoRam/blockSetWrAddr_12 (FF)
   Destination Clock: instructionClk rising
 
-  Data Path: graphicsInstruction<12> to VGA_Module_0/videoRam/blockSetWrAddr_12
+  Data Path: graphicsInstruction<7> to VGA_Module_0/videoRam/blockSetWrAddr_12
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     MULT18X18SIO:A5->P9    1   4.525   0.595  VGA_Module_0/videoRam/Mmult_blockSetWrAddr_mult0000 (VGA_Module_0/videoRam/blockSetWrAddr_mult0000<9>)
-     LUT4:I0->O            1   0.704   0.000  VGA_Module_0/videoRam/blockSetWrAddr_mux0002<3>1 (VGA_Module_0/videoRam/blockSetWrAddr_mux0002<3>)
-     MUXCY:S->O            1   0.464   0.000  VGA_Module_0/videoRam/Madd_blockSetWrAddr_mux0000_cy<9> (VGA_Module_0/videoRam/Madd_blockSetWrAddr_mux0000_cy<9>)
-     MUXCY:CI->O           1   0.059   0.000  VGA_Module_0/videoRam/Madd_blockSetWrAddr_mux0000_cy<10> (VGA_Module_0/videoRam/Madd_blockSetWrAddr_mux0000_cy<10>)
+     MULT18X18SIO:A0->P10    1   4.602   0.499  VGA_Module_0/videoRam/Mmult_blockSetWrAddr_mult0000 (VGA_Module_0/videoRam/blockSetWrAddr_mult0000<10>)
+     LUT4:I1->O            1   0.704   0.000  VGA_Module_0/videoRam/blockSetWrAddr_mux0002<2>1 (VGA_Module_0/videoRam/blockSetWrAddr_mux0002<2>)
+     MUXCY:S->O            1   0.464   0.000  VGA_Module_0/videoRam/Madd_blockSetWrAddr_mux0000_cy<10> (VGA_Module_0/videoRam/Madd_blockSetWrAddr_mux0000_cy<10>)
      MUXCY:CI->O           0   0.059   0.000  VGA_Module_0/videoRam/Madd_blockSetWrAddr_mux0000_cy<11> (VGA_Module_0/videoRam/Madd_blockSetWrAddr_mux0000_cy<11>)
      XORCY:CI->O           1   0.804   0.000  VGA_Module_0/videoRam/Madd_blockSetWrAddr_mux0000_xor<12> (VGA_Module_0/videoRam/blockSetWrAddr_mux0000<12>)
      FDE:D                     0.308          VGA_Module_0/videoRam/blockSetWrAddr_12
     ----------------------------------------
-    Total                      7.518ns (6.923ns logic, 0.595ns route)
-                                       (92.1% logic, 7.9% route)
+    Total                      7.440ns (6.941ns logic, 0.499ns route)
+                                       (93.3% logic, 6.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'VGA_Module_0/clock25MHz/slow_clk1'
@@ -701,12 +703,12 @@ Offset:              0.591ns (Levels of Logic = 0)
 =========================================================================
 
 
-Total REAL time to Xst completion: 1355.00 secs
-Total CPU time to Xst completion: 1355.25 secs
+Total REAL time to Xst completion: 1083.00 secs
+Total CPU time to Xst completion: 1083.04 secs
  
 --> 
 
-Total memory usage is 556712 kilobytes
+Total memory usage is 299020 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   33 (   0 filtered)

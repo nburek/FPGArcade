@@ -5,10 +5,10 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="Par" num="288" delta="new" >The signal <arg fmt="%s" index="1">dlmb_LMB_ABus&lt;30&gt;</arg> has no load.  PAR will not attempt to route this signal.
+<msg type="warning" file="Par" num="288" delta="new" >The signal <arg fmt="%s" index="1">dlmb_LMB_ABus&lt;31&gt;</arg> has no load.  PAR will not attempt to route this signal.
 </msg>
 
-<msg type="warning" file="Par" num="288" delta="new" >The signal <arg fmt="%s" index="1">dlmb_LMB_ABus&lt;31&gt;</arg> has no load.  PAR will not attempt to route this signal.
+<msg type="warning" file="Par" num="288" delta="new" >The signal <arg fmt="%s" index="1">dlmb_LMB_ABus&lt;30&gt;</arg> has no load.  PAR will not attempt to route this signal.
 </msg>
 
 <msg type="warning" file="Route" num="455" delta="new" >CLK Net:<arg fmt="%s" index="1">PmodJSTK_Module_1_SCK_pin_OBUF</arg> may have excessive skew because 
@@ -16,7 +16,7 @@
 </msg>
 
 <msg type="warning" file="Route" num="455" delta="new" >CLK Net:<arg fmt="%s" index="1">VGA_Module_0_instructionClk</arg> may have excessive skew because 
-   <arg fmt="%d" index="2">14</arg> CLK pins and <arg fmt="%d" index="3">0</arg> NON_CLK pins failed to route using a CLK template.
+   <arg fmt="%d" index="2">7</arg> CLK pins and <arg fmt="%d" index="3">0</arg> NON_CLK pins failed to route using a CLK template.
 </msg>
 
 <msg type="warning" file="Route" num="455" delta="new" >CLK Net:<arg fmt="%s" index="1">PmodJSTK_Module_0_SCK_pin_OBUF</arg> may have excessive skew because 

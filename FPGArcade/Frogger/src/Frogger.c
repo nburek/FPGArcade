@@ -67,7 +67,7 @@ int main(void)
 		for (ii = 0; ii<8; ++ii)
 		{
 			setPixel(4,i,ii,WHITE);
-			setPixel(4,i+1,ii,BLACK);
+			setPixel(4,i+1,ii,RED);
 		}
 	
 	setMoveableBlock(5,4);
@@ -109,7 +109,19 @@ int main(void)
 	//setMoveableBlockPosition(15,500,400);
 
 	outputFrogger(0);
-	moveFrog(49,79);
+//	moveFrog(49,79);
+	setMoveableBlockPosition(FROG_BLOCK_1,2,24);
+	
+	setPixel(5,0,0,WHITE);
+	setPixel(5,0,2,RED);
+	setPixel(5,0,4,BLUE);
+	setPixel(5,0,6,GREEN);
+	setPixel(5,1,7,WHITE);
+	setPixel(5,3,7,WHITE);
+	setPixel(5,5,7,WHITE);
+	setPixel(5,7,7,WHITE);
+	setMoveableBlock(8,5);
+	setMoveableBlockPosition(8,0,2);
 	
 	while (1)
 	{

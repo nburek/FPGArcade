@@ -1,11 +1,12 @@
 Release 12.4 - libgen Xilinx EDK 12.4 Build EDK_MS4.81d
- (nt64)
+ (nt)
 Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 
-Command Line: libgen -mhs system.mhs -p xc3s500efg320-4 -msg
+Command Line: libgen -mhs system.mhs -p xc3s500efg320-4 -lp
+C:/Xilinx/12.4/ISE_DS/ISE/Digilent_Nexys_EDK_Board_Support_Files_V_2_1/lib/ -msg
 __xps/ise/xmsgprops.lst system.mss 
 
-Release 12.4 - psf2Edward EDK_MS4.81d (nt64)
+Release 12.4 - psf2Edward EDK_MS4.81d (nt)
 Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 
 Checking platform configuration ...

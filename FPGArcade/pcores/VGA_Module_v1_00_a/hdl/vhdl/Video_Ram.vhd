@@ -143,7 +143,9 @@ end process;
 
 process (blockSetOutputData)
 begin
-	tileSetReAddr <= blockSetOutputData & tileX(2 downto 0) & tileY(2 downto 0);
+	IF (blockSetOutputData'EVENT) THEN
+		tileSetReAddr <= blockSetOutputData & tileX(2 downto 0) & tileY(2 downto 0);
+	END IF;
 end process;
 
 

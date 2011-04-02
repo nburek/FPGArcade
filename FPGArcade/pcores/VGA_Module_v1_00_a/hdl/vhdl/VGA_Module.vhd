@@ -112,17 +112,20 @@ begin
 				VGA_Blue <= currentPixel(7 downto 6);
 			END IF;
 			
+			pixelX <= hCount;
+			pixelY <= vCount;
+			
 			IF (hCount=640) THEN 
 				pixelX <= "0000000000";
-			ELSE
-				pixelX <= hCount;
+				IF (vCount=479) THEN
+					pixelY <= "000000000";
+				ELSE
+					pixelY <= vCount + 1;
+				END IF;
 			END IF;
 			
-			IF (vCount=480) THEN
-				pixelY <= "000000000";
-			ELSE
-				pixelY <= vCount;
-			END IF;
+			
+			
 		ELSE
 			-- turn off the pixel out data because it is either on the front/back porch or the pulse signal
 			VGA_Red <= "000";
