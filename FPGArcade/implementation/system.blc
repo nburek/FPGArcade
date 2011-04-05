@@ -1,7 +1,7 @@
-Release 12.4 ngcbuild M.81d (nt)
+Release 12.4 ngcbuild M.81d (nt64)
 Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 
-Command Line: C:\Xilinx\12.4\ISE_DS\ISE\bin\nt\unwrapped\ngcbuild.exe
+Command Line: C:\Xilinx\12.4\ISE_DS\ISE\bin\nt64\unwrapped\ngcbuild.exe
 ./system.ngc ../implementation/system.ngc -sd ../implementation -i
 
 Reading NGO file "C:/FPGArcade/FPGArcade/synthesis/system.ngc" ...
@@ -32,10 +32,10 @@ NGCBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 98372 kilobytes
+Total memory usage is 170536 kilobytes
 
 Writing NGC file "../implementation/system.ngc" ...
 Total REAL time to NGCBUILD completion:  4 sec
-Total CPU time to NGCBUILD completion:   3 sec
+Total CPU time to NGCBUILD completion:   4 sec
 
 Writing NGCBUILD log file "../implementation/system.blc"...

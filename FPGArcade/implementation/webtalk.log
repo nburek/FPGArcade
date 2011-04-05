@@ -3,8 +3,8 @@ Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 
 Project Information
 --------------------
-ProjectID=8ced504a707c43d2a824498c753b2efd
-ProjectIteration=3
+ProjectID=e889085ec6364e0a957484580aeaf6d6
+ProjectIteration=2
 
 WebTalk Summary
 ----------------
@@ -13,4 +13,4 @@ INFO:WebTalk:2 - WebTalk is enabled.
 INFO:WebTalk:8 - WebTalk Install setting is ON.
 INFO:WebTalk:6 - WebTalk User setting is ON.
 
-INFO:WebTalk:4 - C:/FPGArcade/FPGArcade/implementation/usage_statistics_webtalk.html WebTalk report has been successfully sent to Xilinx on 2011-04-02T21:10:28.  For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/12.4/ISE_DS/ISE/data/reports/webtalk_introduction.html
+INFO:WebTalk:4 - C:/FPGArcade/FPGArcade/implementation/usage_statistics_webtalk.html WebTalk report has been successfully sent to Xilinx on 2011-04-05T15:10:40.  For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/12.4/ISE_DS/ISE/data/reports/webtalk_introduction.html

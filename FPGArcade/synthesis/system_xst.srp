@@ -1,4 +1,4 @@
-Release 12.4 - xst M.81d (nt)
+Release 12.4 - xst M.81d (nt64)
 Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 --> 
 TABLE OF CONTENTS
@@ -684,7 +684,7 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-4 
 
- Number of Slices:                     3345  out of   4656    71%  
+ Number of Slices:                     3346  out of   4656    71%  
  Number of Slice Flip Flops:           3440  out of   9312    36%  
  Number of 4 input LUTs:               5777  out of   9312    62%  
     Number used as logic:              5329
@@ -1214,12 +1214,12 @@ Offset:              9.063ns (Levels of Logic = 10)
 =========================================================================
 
 
-Total REAL time to Xst completion: 23.00 secs
-Total CPU time to Xst completion: 22.44 secs
+Total REAL time to Xst completion: 35.00 secs
+Total CPU time to Xst completion: 35.05 secs
  
 --> 
 
-Total memory usage is 177864 kilobytes
+Total memory usage is 354560 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  434 (   0 filtered)

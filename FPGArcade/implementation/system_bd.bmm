@@ -21,14 +21,14 @@ ADDRESS_MAP microblaze_0 MICROBLAZE 100
 
     ADDRESS_SPACE lmb_bram_combined RAMB16 [0x00000000:0x00003FFF]
         BUS_BLOCK
-            lmb_bram/lmb_bram/ramb16_s4_s4_0 [31:28] PLACED = X1Y6;
-            lmb_bram/lmb_bram/ramb16_s4_s4_1 [27:24] PLACED = X1Y9;
-            lmb_bram/lmb_bram/ramb16_s4_s4_2 [23:20] PLACED = X1Y3;
-            lmb_bram/lmb_bram/ramb16_s4_s4_3 [19:16] PLACED = X1Y7;
-            lmb_bram/lmb_bram/ramb16_s4_s4_4 [15:12] PLACED = X1Y2;
-            lmb_bram/lmb_bram/ramb16_s4_s4_5 [11:8] PLACED = X1Y4;
-            lmb_bram/lmb_bram/ramb16_s4_s4_6 [7:4] PLACED = X1Y5;
-            lmb_bram/lmb_bram/ramb16_s4_s4_7 [3:0] PLACED = X1Y8;
+            lmb_bram/lmb_bram/ramb16_s4_s4_0 [31:28] PLACED = X0Y2;
+            lmb_bram/lmb_bram/ramb16_s4_s4_1 [27:24] PLACED = X0Y9;
+            lmb_bram/lmb_bram/ramb16_s4_s4_2 [23:20] PLACED = X0Y6;
+            lmb_bram/lmb_bram/ramb16_s4_s4_3 [19:16] PLACED = X0Y7;
+            lmb_bram/lmb_bram/ramb16_s4_s4_4 [15:12] PLACED = X0Y3;
+            lmb_bram/lmb_bram/ramb16_s4_s4_5 [11:8] PLACED = X0Y5;
+            lmb_bram/lmb_bram/ramb16_s4_s4_6 [7:4] PLACED = X0Y4;
+            lmb_bram/lmb_bram/ramb16_s4_s4_7 [3:0] PLACED = X0Y8;
         END_BUS_BLOCK;
     END_ADDRESS_SPACE;
 
