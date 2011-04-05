@@ -33,7 +33,7 @@ void moveFrog(int x, int y);
 int main(void)
 {
 	u32 Data;
-	
+	volatile int Delay;
 	Joystick joy1, joy2;
 
 	initJoysticks();
@@ -70,14 +70,11 @@ int main(void)
 			setPixel(4,i+1,ii,RED);
 		}
 	
-	setMoveableBlock(5,4);
-	setMoveableBlockPosition(5,0,400);
+	//setMoveableBlock(5,4);
+	//setMoveableBlockPosition(5,50,50);
+	//setMoveableBlockRowTransparency(5,0,0xAA);
 	
-	setBackgroundBlock(10,10,1);
-	setBackgroundBlock(10,9,2);
-	setBackgroundBlock(10,8,2);
-	setBackgroundBlock(1,1,2);
-	
+		
 	for (i = 56; i<60; ++i)
 		for (ii = 0; ii<80; ++ii)
 			setBackgroundBlock(ii,i,3);
@@ -89,42 +86,29 @@ int main(void)
 	for (i = 1; i<80; i = i+2)
 		setBackgroundBlock(i,1,4);
 	
-	setBackgroundBlock(40,40,60);
-	setBackgroundBlock(42,42,61);
-	setBackgroundBlock(44,44,62);
-	setBackgroundBlock(46,46,63);
-	/*
-	setMoveableBlock(0,1);
-	setMoveableBlockRowTransparency(0,0,0xE7);
-	setMoveableBlockRowTransparency(0,1,0xC3);
-	setMoveableBlockRowTransparency(0,2,0x81);
-	setMoveableBlockRowTransparency(0,3,0x00);
-	setMoveableBlockRowTransparency(0,4,0x00);
-	setMoveableBlockRowTransparency(0,5,0x81);
-	setMoveableBlockRowTransparency(0,6,0xC3);
-	setMoveableBlockRowTransparency(0,7,0xE7);
-	setMoveableBlockPosition(0,11,11);
-	*/
-	//setMoveableBlock(15,4);
-	//setMoveableBlockPosition(15,500,400);
 
 	outputFrogger(0);
-//	moveFrog(49,79);
-	setMoveableBlockPosition(FROG_BLOCK_1,2,24);
 	
-	setPixel(5,0,0,WHITE);
-	setPixel(5,0,2,RED);
-	setPixel(5,0,4,BLUE);
-	setPixel(5,0,6,GREEN);
-	setPixel(5,1,7,WHITE);
-	setPixel(5,3,7,WHITE);
-	setPixel(5,5,7,WHITE);
-	setPixel(5,7,7,WHITE);
-	setMoveableBlock(8,5);
-	setMoveableBlockPosition(8,0,2);
 	
+	
+	int x = 8;
+	int y = 8;
 	while (1)
 	{
+		
+		moveFrog(x,y);
+		
+		x = x + 1;
+		y = y + 1;
+		
+		if (x>=640)
+			x = 8;
+			
+		if (y>=480)
+			y = 8;
+			
+		
+		for (Delay = 0; Delay < 100000; ++Delay); //delay for a while
 		
 		
 	}
@@ -197,6 +181,24 @@ void outputFrogger(int direction)
 			}
 			++arrayY;
 		}
+		setMoveableBlockRowTransparency(FROG_BLOCK_1,0,0xFF);
+		setMoveableBlockRowTransparency(FROG_BLOCK_1,1,0xFF);
+		setMoveableBlockRowTransparency(FROG_BLOCK_1,2,0xF7);
+		setMoveableBlockRowTransparency(FROG_BLOCK_1,3,0x33);
+		setMoveableBlockRowTransparency(FROG_BLOCK_1,4,0x17);
+		setMoveableBlockRowTransparency(FROG_BLOCK_1,5,0x17);
+		setMoveableBlockRowTransparency(FROG_BLOCK_1,6,0x0F);
+		setMoveableBlockRowTransparency(FROG_BLOCK_1,7,0x1F);
+		
+		setMoveableBlockRowTransparency(FROG_BLOCK_2,0,0xFF);
+		setMoveableBlockRowTransparency(FROG_BLOCK_2,1,0xFF);
+		setMoveableBlockRowTransparency(FROG_BLOCK_2,2,0xEF);
+		setMoveableBlockRowTransparency(FROG_BLOCK_2,3,0xCC);
+		setMoveableBlockRowTransparency(FROG_BLOCK_2,4,0xE8);
+		setMoveableBlockRowTransparency(FROG_BLOCK_2,5,0xE8);
+		setMoveableBlockRowTransparency(FROG_BLOCK_2,6,0xF0);
+		setMoveableBlockRowTransparency(FROG_BLOCK_2,7,0xF8);
+		
 	}
 	else if (direction == 1)
 	{
@@ -227,8 +229,8 @@ void outputFrogger(int direction)
 
 void moveFrog(int x, int y)
 {
-	setMoveableBlockPosition(FROG_BLOCK_1,x-9,y-9);
-	setMoveableBlockPosition(FROG_BLOCK_2,x,y-9);
-	setMoveableBlockPosition(FROG_BLOCK_3,x-9,y);
+	setMoveableBlockPosition(FROG_BLOCK_1,x-8,y-8);
+	setMoveableBlockPosition(FROG_BLOCK_2,x,y-8);
+	setMoveableBlockPosition(FROG_BLOCK_3,x-8,y);
 	setMoveableBlockPosition(FROG_BLOCK_4,x,y);
 }

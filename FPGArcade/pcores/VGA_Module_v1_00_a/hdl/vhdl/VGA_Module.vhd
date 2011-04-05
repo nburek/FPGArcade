@@ -54,8 +54,6 @@ signal clk25 : STD_LOGIC;
 signal pixelX : STD_LOGIC_VECTOR (9 downto 0);
 signal pixelY : STD_LOGIC_VECTOR (8 downto 0);
 signal currentPixel : STD_LOGIC_VECTOR(7 downto 0);
-signal tempInstruct : STD_LOGIC_VECTOR(31 downto 0);
-signal counter: std_logic_vector(5 downto 0);
 
 begin 
 	clock25MHz: clk25MHz port map (clk50Mhz,clk25);
@@ -87,7 +85,7 @@ begin
 			VSync <= '1';
 		END IF;
 		
-		IF (hCount = 799) THEN -- +1
+		IF (hCount = 799) THEN 
 			-- done with this row, move down to the next one
 			hCount := "0000000000"; 
 			
@@ -98,23 +96,26 @@ begin
 			END IF;
 			
 		ELSE
-			hCount := hCount + 1;
+			hCount := hCount + 1; -- move to the next pixel
 		END IF;
 		
-		IF ((hCount<=640) AND (vCount<=480)) THEN -- are we within the valid pixel range
-			IF (hCount=0) THEN
+		IF ((hCount<=640) AND (vCount<=480)) THEN -- are we within the valid pixel display range
+			IF (hCount=0) THEN -- don't output anything on the first iteration
 				VGA_Red <= "000";
 				VGA_Green <= "000";
 				VGA_Blue <= "00";
-			ELSE
+			ELSE -- output the pixel data from the Video_Ram
 				VGA_Red <= currentPixel(2 downto 0);
 				VGA_Green <= currentPixel(5 downto 3);
 				VGA_Blue <= currentPixel(7 downto 6);
 			END IF;
 			
+			-- change the pixel coordinates so that the Video_Ram will start loading the
+			-- value for the next pixel
 			pixelX <= hCount;
 			pixelY <= vCount;
 			
+			-- if you're at the end of the visible row start loading the first pixel for the next visible row
 			IF (hCount=640) THEN 
 				pixelX <= "0000000000";
 				IF (vCount=479) THEN
@@ -137,20 +138,6 @@ begin
 	
 	
 	end process;
-	
-	
-	
-	--process (clk50Mhz)
-	--begin
-	--	if (counter<64) then
-			--tempInstruct <= "00000000000000000000000000000111";
-			--tempInstruct <= "000000000000000000" & counter & "00000111";
-			
-			--counter <= counter + 9;
-	--	end if;
-	
-	--end process; 
-	
 
 
 end Behavioral;

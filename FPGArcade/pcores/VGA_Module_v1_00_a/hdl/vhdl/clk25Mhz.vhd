@@ -6,7 +6,7 @@
 -- Design Name: 
 -- Module Name:    clk25MHz - Behavioral 
 -- Project Name: FPGArcade
--- Target Devices: Nexys2
+-- Target Devices: Nexys2 Board
 -- Tool versions: 
 -- Description: This module reduces a 50Mhz clock signal to a 25Mhz clock signal.
 --

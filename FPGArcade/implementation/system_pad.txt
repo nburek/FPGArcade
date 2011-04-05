@@ -1,7 +1,7 @@
-Release 12.4 - par M.81d (nt64)
+Release 12.4 - par M.81d (nt)
 Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 
-Sat Apr 02 15:36:57 2011
+Sat Apr 02 21:09:39 2011
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:

@@ -1,4 +1,4 @@
-Release 12.4 Map M.81d (nt64)
+Release 12.4 Map M.81d (nt)
 Xilinx Map Application Log File for Design 'system'
 
 Design Information
@@ -9,7 +9,7 @@ Target Device  : xc3s500e
 Target Package : fg320
 Target Speed   : -4
 Mapper Version : spartan3e -- $Revision: 1.52.76.2 $
-Mapped Date    : Sat Apr 02 15:35:12 2011
+Mapped Date    : Sat Apr 02 21:07:42 2011
 
 Mapping design into LUTs...
 Writing file system_map.ngm...
@@ -17,45 +17,45 @@ Running directed packing...
 Running delay-based LUT packing...
 Updating timing models...
 Running timing-driven placement...
-Total REAL time at the beginning of Placer: 17 secs 
-Total CPU  time at the beginning of Placer: 17 secs 
+Total REAL time at the beginning of Placer: 15 secs 
+Total CPU  time at the beginning of Placer: 12 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:e58266f4) REAL time: 19 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:e58266f4) REAL time: 22 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:e58266f4) REAL time: 19 secs 
+Phase 2.7  Design Feasibility Check (Checksum:e58266f4) REAL time: 22 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:9ebd56aa) REAL time: 19 secs 
+Phase 3.31  Local Placement Optimization (Checksum:9ebd56aa) REAL time: 22 secs 
 
 Phase 4.2  Initial Clock and IO Placement
 
-Phase 4.2  Initial Clock and IO Placement (Checksum:fe80361) REAL time: 20 secs 
+Phase 4.2  Initial Clock and IO Placement (Checksum:fe80361) REAL time: 22 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:fe80361) REAL time: 20 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:fe80361) REAL time: 22 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:fe80361) REAL time: 20 secs 
+Phase 6.36  Local Placement Optimization (Checksum:fe80361) REAL time: 22 secs 
 
 Phase 7.8  Global Placement
 .............................
 ...................................................................................
 ...
 .........................
-Phase 7.8  Global Placement (Checksum:5bc0bf40) REAL time: 43 secs 
+Phase 7.8  Global Placement (Checksum:5bc0bf40) REAL time: 49 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:5bc0bf40) REAL time: 44 secs 
+Phase 8.5  Local Placement Optimization (Checksum:5bc0bf40) REAL time: 49 secs 
 
 Phase 9.18  Placement Optimization
-Phase 9.18  Placement Optimization (Checksum:cc4761f7) REAL time: 1 mins 
+Phase 9.18  Placement Optimization (Checksum:cc4761f7) REAL time: 1 mins 6 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:cc4761f7) REAL time: 1 mins 
+Phase 10.5  Local Placement Optimization (Checksum:cc4761f7) REAL time: 1 mins 7 secs 
 
-Total REAL time to Placer completion: 1 mins 
+Total REAL time to Placer completion: 1 mins 7 secs 
 Total CPU  time to Placer completion: 1 mins 
 Running post-placement packing...
 WARNING:PhysDesignRules:367 - The signal <dlmb_LMB_ABus<30>> is incomplete. The
@@ -97,9 +97,9 @@ Logic Distribution:
 
 Average Fanout of Non-Clock Nets:                3.68
 
-Peak Memory Usage:  402 MB
-Total REAL time to MAP completion:  1 mins 5 secs 
-Total CPU time to MAP completion:   1 mins 5 secs 
+Peak Memory Usage:  228 MB
+Total REAL time to MAP completion:  1 mins 11 secs 
+Total CPU time to MAP completion:   1 mins 4 secs 
 
 Mapping completed.
 See MAP report file "system_map.mrp" for details.

@@ -85,7 +85,7 @@ void setMoveableBlockRowTransparency(u8 tileNumber, u8 tileRow, u8 transparency)
 	
 	XGpio_DiscreteWrite(&graphicsGPIO, GRAPHICS_CLOCK_CHANNEL, 0);
 	
-	Data = tileRow | (tileNumber<<4) | (transparency<<7) | (0x20000000);
+	Data = tileRow | (tileNumber<<3) | (transparency<<7) | (0x20000000);
 	
 	XGpio_DiscreteWrite(&graphicsGPIO, GRAPHICS_OUTPUT_CHANNEL, Data);
 	

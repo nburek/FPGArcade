@@ -22,7 +22,7 @@ DEVICE = xc3s500efg320-4
 
 LANGUAGE = vhdl
 GLOBAL_SEARCHPATHOPT = 
-PROJECT_SEARCHPATHOPT = 
+PROJECT_SEARCHPATHOPT =  -lp C:/Xilinx/12.4/ISE_DS/ISE/Digilent_Nexys_EDK_Board_Support_Files_V_2_1/lib/
 
 SEARCHPATHOPT = $(PROJECT_SEARCHPATHOPT) $(GLOBAL_SEARCHPATHOPT)
 
@@ -211,7 +211,7 @@ FROGGER_HEADERS = Frogger/lib/joystickLibrary.h Frogger/lib/graphicsLibrary.h
 
 FROGGER_CC = mb-gcc
 FROGGER_CC_SIZE = mb-size
-FROGGER_CC_OPT = -O2
+FROGGER_CC_OPT = -O0
 FROGGER_CFLAGS = 
 FROGGER_CC_SEARCH = # -B
 FROGGER_LIBPATH = -L./microblaze_0/lib/ # -L

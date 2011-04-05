@@ -68,10 +68,10 @@ Executable: Frogger/executable.elf
 Source: Frogger/src/Frogger.c
 Header: Frogger/lib/joystickLibrary.h
 Header: Frogger/lib/graphicsLibrary.h
-DefaultInit: executable
+DefaultInit: EXECUTABLE
 InitBram: 1
 Active: 1
-CompilerOptLevel: 2
+CompilerOptLevel: 0
 GlobPtrOpt: 0
 DebugSym: 1
 ProfileFlag: 0
