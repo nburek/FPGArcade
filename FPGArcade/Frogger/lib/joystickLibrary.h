@@ -14,10 +14,23 @@ typedef struct joystick_struct{
 	u8 btn2;
 	u8 btn3;
 	
+	u8 enable;
+	
 }Joystick;
 
 XGpio joystickGPIO;
 
+void enableJoystick(Joystick* joystick){
+	
+	(*joystick).enable = 1;
+	
+	(*joystick).x = 0;
+	(*joystick).y = 0;
+	
+	(*joystick).btn1 = 0;
+	(*joystick).btn2 = 0;
+	(*joystick).btn3 = 0;
+}
 
 /*****************************************************************************/
 /**
@@ -57,7 +70,7 @@ void initJoysticks()
 * @note		None
 *
 ****************************************************************************/
-void getJoystickData(Joystick *jstkData, int joystickChannel)
+void updateJoystick(Joystick *jstkData, int joystickChannel)
 {
 	u32 Data;
 	u8 Buttons;
@@ -73,6 +86,9 @@ void getJoystickData(Joystick *jstkData, int joystickChannel)
 	(*jstkData).btn2 = (Data >> 21) & 0x1;
 	
 	(*jstkData).btn3 = (Data >> 22) & 0x1;
+	
+
+	
 }
 
 

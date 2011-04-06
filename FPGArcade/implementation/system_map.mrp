@@ -1,4 +1,4 @@
-Release 12.4 Map M.81d (nt64)
+Release 12.4 Map M.81d (nt)
 Xilinx Mapping Report File for Design 'system'
 
 Design Information
@@ -9,7 +9,7 @@ Target Device  : xc3s500e
 Target Package : fg320
 Target Speed   : -4
 Mapper Version : spartan3e -- $Revision: 1.52.76.2 $
-Mapped Date    : Tue Apr 05 15:07:58 2011
+Mapped Date    : Tue Apr 05 17:52:11 2011
 
 Design Summary
 --------------
@@ -43,9 +43,9 @@ Logic Distribution:
 
 Average Fanout of Non-Clock Nets:                3.68
 
-Peak Memory Usage:  404 MB
-Total REAL time to MAP completion:  1 mins 10 secs 
-Total CPU time to MAP completion:   1 mins 6 secs 
+Peak Memory Usage:  228 MB
+Total REAL time to MAP completion:  1 mins 8 secs 
+Total CPU time to MAP completion:   1 mins 
 
 Table of Contents
 -----------------
