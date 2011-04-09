@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="Bitmap to Ascii Converter">
+</Property><Property Name="Solution File" Value="C:\FPGArcade\Bitmap to Ascii Converter\Bitmap to Ascii Converter.sln">
+</Property><Property Name="Date" Value="Friday, April 08, 2011">
+</Property><Property Name="Time" Value="10:04 AM">
+</Property></Properties><Event ErrorLevel="0" Project="Bitmap to Ascii Converter" Source="Bitmap to Ascii Converter.vcproj" Description="Web deployment to the local IIS server is no longer supported. The Web Deployment build tool has been removed from your project settings.">
+</Event><Event ErrorLevel="1" Project="Bitmap to Ascii Converter" Source="Bitmap to Ascii Converter.vcproj" Description="This application has been updated to include settings related to the User Account Control (UAC) feature of Windows Vista. By default, when run on Windows Vista with UAC enabled, this application is marked to run with the same privileges as the process that launched it. This marking also disables the application from running with virtualization. You can change UAC related settings from the Property Pages of the project.">
+</Event><Event ErrorLevel="0" Project="Bitmap to Ascii Converter" Source="Bitmap to Ascii Converter.vcproj" Description="Project upgraded successfully.">
+</Event><Event ErrorLevel="3" Project="Bitmap to Ascii Converter" Source="Bitmap to Ascii Converter.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="Bitmap to Ascii Converter.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="Bitmap to Ascii Converter.sln" Description="Converted">
+</Event></UpgradeLog>

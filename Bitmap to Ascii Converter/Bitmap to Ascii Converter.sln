@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual C++ Express 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Bitmap to Ascii Converter", "Bitmap to Ascii Converter.vcproj", "{FB5B4B9A-33D1-44EF-BB37-1D86705E875A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FB5B4B9A-33D1-44EF-BB37-1D86705E875A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FB5B4B9A-33D1-44EF-BB37-1D86705E875A}.Debug|Win32.Build.0 = Debug|Win32
+		{FB5B4B9A-33D1-44EF-BB37-1D86705E875A}.Release|Win32.ActiveCfg = Release|Win32
+		{FB5B4B9A-33D1-44EF-BB37-1D86705E875A}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
