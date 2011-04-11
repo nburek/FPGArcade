@@ -72,6 +72,7 @@ Header: Frogger/lib/frog_graphics.h
 Header: Frogger/lib/collisions.h
 Header: Frogger/lib/enemies.h
 Header: Frogger/lib/frog.h
+Header: Frogger/lib/output_tileset.h
 DefaultInit: EXECUTABLE
 InitBram: 1
 Active: 1

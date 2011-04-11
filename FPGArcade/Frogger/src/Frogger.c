@@ -50,37 +50,31 @@ int main(void)
 	
 	initFrog(&frogger);
 	
-	//Do we really need these?
-	enableJoystick(&joy1);
-	enableJoystick(&joy2);
+	outputCarTiles();
 	
-	//I don't think we need to call these here either
-	updateJoystick(&joy1, JOYSTICK_1_CHANNEL);
-	updateJoystick(&joy2, JOYSTICK_2_CHANNEL);
+	setBackgroundBlock(0,0,raceCarTile1);
+	setBackgroundBlock(1,0,raceCarTile2);
+	setBackgroundBlock(0,1,raceCarTile3);
+	setBackgroundBlock(1,1,raceCarTile4);
 	
-	int i = 0;
-	int ii = 0;
+	setBackgroundBlock(2,0,bullDozerTile1);
+	setBackgroundBlock(3,0,bullDozerTile2);
+	setBackgroundBlock(2,1,bullDozerTile3);
+	setBackgroundBlock(3,1,bullDozerTile4);
 	
-	for (i = 0; i<8; ++i)
-		for (ii = 0; ii<8; ++ii)
-			setPixel(1,i,ii,WHITE);
-			
-	for (i = 0; i<8; i=i+2)
-		for (ii = 0; ii<8; ++ii)
-		{
-			setPixel(2,i,ii,WHITE);
-			setPixel(2,i+1,ii,RED);
-		}
-			
-	for (i = 1; i<80; i = i+2)
-		setBackgroundBlock(i,0,2);
-		
-	for (i = 26; i<54; ++i)
-		for (ii = 19; ii<41; ++ii)
-			setBackgroundBlock(i,ii,1);
+	setBackgroundBlock(4,0,purpleCarTile1);
+	setBackgroundBlock(5,0,purpleCarTile2);
+	setBackgroundBlock(4,1,purpleCarTile3);
+	setBackgroundBlock(5,1,purpleCarTile4);
 	
-	
-	
+	setBackgroundBlock(6,0,truckTile1);
+	setBackgroundBlock(7,0,truckTile2);
+	setBackgroundBlock(8,0,truckTile3);
+	setBackgroundBlock(9,0,truckTile4);
+	setBackgroundBlock(6,1,truckTile5);
+	setBackgroundBlock(7,1,truckTile6);
+	setBackgroundBlock(8,1,truckTile7);
+	setBackgroundBlock(9,1,truckTile8);
 	
 	u8 joystickLocation = 0;
 	u8 frogFrame = 0;
@@ -108,7 +102,7 @@ int main(void)
 			switch(joystickLocation)
 			{
 				case RIGHT:
-					if(frogger.x + frogger.x_spd <= STAGE_MAXX){
+					if(frogger.x + frogger.x_spd < STAGE_MAXX){
 						frogger.x += frogger.x_spd;
 					}else{
 						frogger.x = STAGE_MAXX-8;
@@ -117,7 +111,7 @@ int main(void)
 					frogFrame = 1-frogFrame;
 					break;
 				case UP:
-					if(frogger.y - frogger.y_spd >= STAGE_MINY){
+					if(frogger.y - frogger.y_spd > STAGE_MINY){
 						frogger.y -= frogger.y_spd;
 						
 					}else{
@@ -127,7 +121,7 @@ int main(void)
 					frogFrame = 1-frogFrame;
 					break;
 				case DOWN:
-					if(frogger.y + frogger.y_spd <= STAGE_MAXY){
+					if(frogger.y + frogger.y_spd < STAGE_MAXY){
 						frogger.y += frogger.y_spd;				
 					}else{
 						frogger.y = STAGE_MAXY-8;
@@ -136,7 +130,7 @@ int main(void)
 					frogFrame = 1-frogFrame;
 					break;
 				case LEFT:
-					if(frogger.x - frogger.x_spd >= STAGE_MINX){
+					if(frogger.x - frogger.x_spd > STAGE_MINX){
 						frogger.x -= frogger.x_spd;
 					}else{
 						frogger.x = STAGE_MINX+8;

@@ -14,23 +14,11 @@ typedef struct joystick_struct{
 	u8 btn2;
 	u8 btn3;
 	
-	u8 enable;
 	
 }Joystick;
 
 XGpio joystickGPIO;
 
-void enableJoystick(Joystick* joystick){
-	
-	(*joystick).enable = 1;
-	
-	(*joystick).x = 0;
-	(*joystick).y = 0;
-	
-	(*joystick).btn1 = 0;
-	(*joystick).btn2 = 0;
-	(*joystick).btn3 = 0;
-}
 
 /*****************************************************************************/
 /**
