@@ -68,7 +68,6 @@ Executable: Frogger/executable.elf
 Source: Frogger/src/Frogger.c
 Header: Frogger/lib/joystickLibrary.h
 Header: Frogger/lib/graphicsLibrary.h
-Header: Frogger/lib/frog_graphics.h
 Header: Frogger/lib/collisions.h
 Header: Frogger/lib/enemies.h
 Header: Frogger/lib/frog.h

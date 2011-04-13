@@ -6,24 +6,16 @@
 #include "frog.h"
 #include "enemies.h"
 #include "collisions.h"
-#include "frog_graphics.h"
+#include "output_tileset.h"
 
 #define STAGE_MINX 208
 #define STAGE_MINY 152
 #define STAGE_MAXX 432
 #define STAGE_MAXY 328
 
-
-void DELAY(unsigned time){
-	volatile unsigned i;
-	for(i = 0; i < time; ++i);
-}
-
 u32 frogMovementCounter = 0;
-#define FROG_MOVEMENT_DELAY 600000
+#define FROG_MOVEMENT_DELAY 550000
 u32 carMovementCounter = 0;
-
-
 
 
 /*****************************************************************************/
@@ -49,6 +41,12 @@ int main(void)
 	initGraphics();
 	
 	initFrog(&frogger);
+	
+	drawBackground();
+	
+	
+	u8 joystickLocation = 0;
+	u8 frogFrame = 0;
 	
 	outputCarTiles();
 	
@@ -76,8 +74,6 @@ int main(void)
 	setBackgroundBlock(8,1,truckTile7);
 	setBackgroundBlock(9,1,truckTile8);
 	
-	u8 joystickLocation = 0;
-	u8 frogFrame = 0;
 	
 	//start game loop
 	while (1)

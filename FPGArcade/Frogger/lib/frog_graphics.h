@@ -3,38 +3,38 @@
 #define UP 1
 #define DOWN 2
 
-u8 movingFrog1[8][8] = {{0,0,0,0,0,0,0,0},
-								{0,0,0,0,0,0,0,0},
-								{0,0,0,1,0,0,0,0},
-								{0,0,1,1,0,0,2,1},
-								{0,0,0,1,0,3,1,2},
-								{0,0,0,1,0,1,1,2},
-								{0,0,0,0,1,2,2,2},
-								{0,0,0,0,0,2,1,2}};
-u8 movingFrog2[8][8] = {{0,0,0,0,0,0,0,0},
-								{0,0,0,0,0,0,0,0},
-								{0,0,0,0,1,0,0,0},
-								{2,2,0,0,1,1,0,0},
-								{2,1,3,0,1,0,0,0},
-								{2,1,1,0,1,0,0,0},
-								{2,2,2,1,0,0,0,0},
-								{2,2,2,0,0,0,0,0}};
-u8 movingFrog3[8][8] = {{0,0,0,0,0,2,1,2},
-								{0,0,0,0,0,1,2,1},
-								{0,0,0,0,1,1,1,2},
-								{0,0,0,1,1,0,0,0},
-								{0,0,0,1,0,0,0,0},
-								{0,0,1,1,0,0,0,0},
-								{0,0,0,1,0,0,0,0},
-								{0,0,0,0,0,0,0,0}};
-u8 movingFrog4[8][8] = {{2,2,2,0,0,0,0,0},
-								{2,2,1,0,0,0,0,0},
-								{2,1,1,1,0,0,0,0},
-								{0,0,0,1,1,0,0,0},
-								{0,0,0,0,1,0,0,0},
-								{0,0,0,0,1,1,0,0},
-								{0,0,0,0,1,0,0,0},
-								{0,0,0,0,0,0,0,0}};
+u32 movingFrog1[8] = {	0x00000000,
+								0x00000000,
+								0x00010000,
+								0x00110021,
+								0x00010312,
+								0x00010112,
+								0x00001222,
+								0x00000212};
+u32 movingFrog2[8] = {	0x00000000,
+								0x00000000,
+								0x00001000,
+								0x22001100,
+								0x21301000,
+								0x21101000,
+								0x22210000,
+								0x22200000};
+u32 movingFrog3[8] = {	0x00000212,
+								0x00000121,
+								0x00001112,
+								0x00011000,
+								0x00010000,
+								0x00110000,
+								0x00010000,
+								0x00000000};
+u32 movingFrog4[8] = {	0x22200000,
+								0x22100000,
+								0x21110000,
+								0x00011000,
+								0x00001000,
+								0x00001100,
+								0x00001000,
+								0x00000000};
 								
 u8 movingTransparencyMapUp1[8] = {0xFF,0xFF,0xEF,0xCC,0xE8,0xE8,0xF0,0xF8};
 u8 movingTransparencyMapUp2[8] = {0xFF,0xFF,0xF7,0x33,0x17,0x17,0x0F,0x1F};
@@ -56,40 +56,40 @@ u8 movingTransparencyMapLeft2[8] = {0xFF,0xFF,0xFB,0xE1,0xCF,0x1F,0x1F,0x1F};
 u8 movingTransparencyMapLeft3[8] = {0xE0,0xE0,0xF0,0xFD,0xC3,0xEF,0xFF,0xFF};
 u8 movingTransparencyMapLeft4[8] = {0x1F,0x1F,0x1F,0xCF,0xE1,0xFB,0xFF,0xFF};
 
-u8 sittingFrog1[8][8] = {{0, 0, 0, 0, 0, 0, 0, 0},
-								{0, 0, 0, 0, 0, 0, 0, 0},
-								{0, 0, 0, 0, 0, 0, 0, 0},
-								{0, 0, 0, 1, 0, 0, 2, 1},
-								{0, 0, 1, 1, 0, 3, 1, 2},
-								{0, 0, 0, 1, 0, 1, 1, 2},
-								{0, 0, 0, 1, 1, 2, 2, 2},
-								{0, 0, 0, 0, 0, 2, 1, 2}};
+u32 sittingFrog1[8] = {	0x00000000,
+								0x00000000,
+								0x00000000,
+								0x00010021,
+								0x00110312,
+								0x00010112,
+								0x00011222,
+								0x00000212};
 
-u8 sittingFrog2[8][8] = {{0, 0, 0, 0, 0, 0, 0, 0},
-								{0, 0, 0, 0, 0, 0, 0, 0},
-								{0, 0, 0, 0, 0, 0, 0, 0},
-								{2, 2, 0, 0, 1, 0, 0, 0},
-								{2, 1, 3, 0, 1, 1, 0, 0},
-								{2, 1, 1, 0, 1, 0, 0, 0},
-								{2, 2, 2, 1, 1, 0, 0, 0},
-								{2, 2, 2, 0, 0, 0, 0, 0}};
-u8 sittingFrog3[8][8] = {{0, 0, 0, 1, 1, 2, 1, 2},
-								{0, 0, 0, 1, 0, 1, 2, 1},
-								{0, 0, 1, 1, 0, 0, 1, 2},
-								{0, 0, 0, 1, 0, 0, 0, 0},
-								{0, 0, 0, 0, 0, 0, 0, 0},
-								{0, 0, 0, 0, 0, 0, 0, 0},
-								{0, 0, 0, 0, 0, 0, 0, 0},
-								{0, 0, 0, 0, 0, 0, 0, 0}};
+u32 sittingFrog2[8] = {	0x00000000,
+								0x00000000,
+								0x00000000,
+								0x22001000,
+								0x21301100,
+								0x21101000,
+								0x22211000,
+								0x22200000};
+u32 sittingFrog3[8] = {	0x00011212,
+								0x00010121,
+								0x00110012,
+								0x00010000,
+								0x00000000,
+								0x00000000,
+								0x00000000,
+								0x00000000};
 
-u8 sittingFrog4[8][8] = {{2, 2, 2, 1, 1, 0, 0, 0},
-								{2, 2, 1, 0, 1, 0, 0, 0},
-								{2, 1, 0, 0, 1, 1, 0, 0},
-								{0, 0, 0, 0, 1, 0, 0, 0},
-								{0, 0, 0, 0, 0, 0, 0, 0},
-								{0, 0, 0, 0, 0, 0, 0, 0},
-								{0, 0, 0, 0, 0, 0, 0, 0},
-								{0, 0, 0, 0, 0, 0, 0, 0}};
+u32 sittingFrog4[8] = {	0x22211000,
+								0x22101000,
+								0x21001100,
+								0x00001000,
+								0x00000000,
+								0x00000000,
+								0x00000000,
+								0x00000000};
 								
 u8 sittingTransparencyMapUp1[8] = {0xFF,0xFF,0xFF,0xEC,0xC8,0xE8,0xE0,0xF8};
 u8 sittingTransparencyMapUp2[8] = {0xFF,0xFF,0xFF,0x37,0x13,0x17,0x07,0x1F};
@@ -126,10 +126,10 @@ void outputFrogger(u8 animationFrame, u8 direction, u8 player)
 	
 	int arrayX, arrayY, tileX, tileY;
 	
-	u8 (*frog1)[8];
-	u8 (*frog2)[8];
-	u8 (*frog3)[8];
-	u8 (*frog4)[8];
+	u32 *frog1;
+	u32 *frog2;
+	u32 *frog3;
+	u32 *frog4;
 	
 	u8 *transparencyMap1;
 	u8 *transparencyMap2;
@@ -167,14 +167,14 @@ void outputFrogger(u8 animationFrame, u8 direction, u8 player)
 		arrayY = 0;
 		for (tileY = 0; tileY<8; ++tileY)
 		{
-			arrayX = 0;
+			arrayX = 28;
 			for (tileX = 0; tileX<8; ++tileX)
 			{
-				setPixel(FROG_TILE_1,tileX,tileY,colors[frog1[arrayY][arrayX]]);
-				setPixel(FROG_TILE_2,tileX,tileY,colors[frog2[arrayY][arrayX]]);
-				setPixel(FROG_TILE_3,tileX,tileY,colors[frog3[arrayY][arrayX]]);
-				setPixel(FROG_TILE_4,tileX,tileY,colors[frog4[arrayY][arrayX]]);
-				++arrayX;
+				setPixel(FROG_TILE_1,tileX,tileY,colors[(frog1[arrayY]>>arrayX) & 0xF]);
+				setPixel(FROG_TILE_2,tileX,tileY,colors[(frog2[arrayY]>>arrayX) & 0xF]);
+				setPixel(FROG_TILE_3,tileX,tileY,colors[(frog3[arrayY]>>arrayX) & 0xF]);
+				setPixel(FROG_TILE_4,tileX,tileY,colors[(frog4[arrayY]>>arrayX) & 0xF]);
+				arrayX-=4;
 			}
 			++arrayY;
 		}
@@ -197,19 +197,19 @@ void outputFrogger(u8 animationFrame, u8 direction, u8 player)
 	}
 	else if (direction == RIGHT)
 	{
-		arrayX = 0;
+		arrayX = 28;
 		for (tileY = 0; tileY<8; ++tileY)
 		{
 			arrayY = 7;
 			for (tileX = 0; tileX<8; ++tileX)
 			{
-				setPixel(FROG_TILE_1,tileX,tileY,colors[frog3[arrayY][arrayX]]);
-				setPixel(FROG_TILE_2,tileX,tileY,colors[frog1[arrayY][arrayX]]);
-				setPixel(FROG_TILE_3,tileX,tileY,colors[frog4[arrayY][arrayX]]);
-				setPixel(FROG_TILE_4,tileX,tileY,colors[frog2[arrayY][arrayX]]);
+				setPixel(FROG_TILE_1,tileX,tileY,colors[(frog3[arrayY]>>arrayX)&0xF]);
+				setPixel(FROG_TILE_2,tileX,tileY,colors[(frog1[arrayY]>>arrayX)&0xF]);
+				setPixel(FROG_TILE_3,tileX,tileY,colors[(frog4[arrayY]>>arrayX)&0xF]);
+				setPixel(FROG_TILE_4,tileX,tileY,colors[(frog2[arrayY]>>arrayX)&0xF]);
 				--arrayY;
 			}
-			++arrayX;
+			arrayX-=4;
 		}
 		
 		if (animationFrame == 0 )
@@ -233,14 +233,14 @@ void outputFrogger(u8 animationFrame, u8 direction, u8 player)
 		arrayY = 7;
 		for (tileY = 0; tileY<8; ++tileY)
 		{
-			arrayX = 0;
+			arrayX = 28;
 			for (tileX = 0; tileX<8; ++tileX)
 			{
-				setPixel(FROG_TILE_1,tileX,tileY,colors[frog3[arrayY][arrayX]]);
-				setPixel(FROG_TILE_2,tileX,tileY,colors[frog4[arrayY][arrayX]]);
-				setPixel(FROG_TILE_3,tileX,tileY,colors[frog1[arrayY][arrayX]]);
-				setPixel(FROG_TILE_4,tileX,tileY,colors[frog2[arrayY][arrayX]]);
-				++arrayX;
+				setPixel(FROG_TILE_1,tileX,tileY,colors[(frog3[arrayY]>>arrayX)&0xF]);
+				setPixel(FROG_TILE_2,tileX,tileY,colors[(frog4[arrayY]>>arrayX)&0xF]);
+				setPixel(FROG_TILE_3,tileX,tileY,colors[(frog1[arrayY]>>arrayX)&0xF]);
+				setPixel(FROG_TILE_4,tileX,tileY,colors[(frog2[arrayY]>>arrayX)&0xF]);
+				arrayX-=4;
 			}
 			--arrayY;
 		}
@@ -263,19 +263,19 @@ void outputFrogger(u8 animationFrame, u8 direction, u8 player)
 	}
 	else if (direction == LEFT)
 	{
-		arrayX = 7;
+		arrayX = 0;
 		for (tileY = 0; tileY<8; ++tileY)
 		{
 			arrayY = 0;
 			for (tileX = 0; tileX<8; ++tileX)
 			{
-				setPixel(FROG_TILE_1,tileX,tileY,colors[frog2[arrayY][arrayX]]);
-				setPixel(FROG_TILE_2,tileX,tileY,colors[frog4[arrayY][arrayX]]);
-				setPixel(FROG_TILE_3,tileX,tileY,colors[frog1[arrayY][arrayX]]);
-				setPixel(FROG_TILE_4,tileX,tileY,colors[frog3[arrayY][arrayX]]);
+				setPixel(FROG_TILE_1,tileX,tileY,colors[(frog2[arrayY]>>arrayX)&0xF]);
+				setPixel(FROG_TILE_2,tileX,tileY,colors[(frog4[arrayY]>>arrayX)&0xF]);
+				setPixel(FROG_TILE_3,tileX,tileY,colors[(frog1[arrayY]>>arrayX)&0xF]);
+				setPixel(FROG_TILE_4,tileX,tileY,colors[(frog3[arrayY]>>arrayX)&0xF]);
 				++arrayY;
 			}
-			--arrayX;
+			arrayX+=4;
 		}
 		
 		if (animationFrame == 0 )

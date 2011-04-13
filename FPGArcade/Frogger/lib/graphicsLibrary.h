@@ -1,4 +1,4 @@
-			#include "xparameters.h"
+	#include "xparameters.h"
 #include "xgpio.h"
 
 //void setPixel(u8 tileNumber, u8 x, u8 y, u8 color);
@@ -104,15 +104,18 @@ void initGraphics()
 	XGpio_SetDataDirection(&graphicsGPIO, GRAPHICS_CLOCK_CHANNEL, 0x0);
 }
 
-void mapArrayToTile(u8 ary[][8], u8 color_palette[], u8 tile_num)
-{
- 
-	int i;
-	for(i = 0; i < 8; ++i){
-		int j;
-		for(j = 0; j < 8; ++j){
-			setPixel(tile_num, i, j, color_palette[ary[i][j]]);
+void mapArrayToTile(u32 storage[], u8 color_palette[], u8 tile_num, u8 dir){
+
+	unsigned i, j;
+	for(j = 0; j < 8; ++j){
+
+		unsigned shift = 28;
+		for(i = 0; i < 8; ++i){
+
+			u8 color = (storage[j] >> shift)  &0x0000000F;
+			setPixel(tile_num, i, j, color_palette[color]);
+			shift -= 4;
+
 		}
 	}
-
 }

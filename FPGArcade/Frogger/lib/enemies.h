@@ -75,135 +75,139 @@ void outputCarTiles()
 {
 	u8 carColors[8] = {BLACK,PURPLE,RED,YELLOW,GREY,GREEN,CYAN,PURPLE};
 	int x, y;
+/*
+	u32 raceCar1[8] = {
+				0x03232323,
+				0x11111133,
+				0x00333333,
+				0x00010000,
+				0x02222200,
+				0x02222200,
+				0x02222200,
+				0x00000000};
 
-	u8 raceCar1[8][8] = {
-				{0, 3, 2, 3, 2, 3, 2, 3},
-				{1, 1, 1, 1, 1, 1, 3, 3},
-				{0, 0, 3, 3, 3, 3, 3, 3},
-				{0, 0, 0, 1, 0, 0, 0, 0},
-				{0, 2, 2, 2, 2, 2, 0, 0},
-				{0, 2, 2, 2, 2, 2, 0, 0},
-				{0, 2, 2, 2, 2, 2, 0, 0},
-				{0, 0, 0, 0, 0, 0, 0, 0}};
+	u32 raceCar2[8] = {
+				0x31113333,
+				0x11133330,
+				0x33333300,
+				0x00010000,
+				0x02222200,
+				0x02222200,
+				0x00000000,
+				0x00000000};
 
-	u8 raceCar2[8][8] = {
-				{3, 1, 1, 1, 3, 3, 3, 3},
-				{1, 1, 1, 3, 3, 3, 3, 0},
-				{3, 3, 3, 3, 3, 3, 0, 0},
-				{0, 0, 0, 1, 0, 0, 0, 0},
-				{0, 2, 2, 2, 2, 2, 0, 0},
-				{0, 2, 2, 2, 2, 2, 0, 0},
-				{0, 0, 0, 0, 0, 0, 0, 0},
-				{0, 0, 0, 0, 0, 0, 0, 0}};
+	u32 bullDozer1[8] = {
+				0x04455545,
+				0x04444455,
+				0x00444444,
+				0x00500050,
+				0x04242424,
+				0x04242424,
+				0x00000000,
+				0x00000000};
 
-	u8 bullDozer1[8][8] = {
-				{0, 4, 4, 5, 5, 5, 4, 5},
-				{0, 4, 4, 4, 4, 4, 5, 5},
-				{0, 0, 4, 4, 4, 4, 4, 4},
-				{0, 0, 5, 0, 0, 0, 5, 0},
-				{0, 4, 2, 4, 2, 4, 2, 4},
-				{0, 4, 2, 4, 2, 4, 2, 4},
-				{0, 0, 0, 0, 0, 0, 0, 0},
-				{0, 0, 0, 0, 0, 0, 0, 0}};
+	u32 bullDozer2[8] = {
+				0x44004200,
+				0x45004440,
+				0x44004200,
+				0x05554440,
+				0x00004200,
+				0x00004440,
+				0x00000000,
+				0x00000000};	
+	
+	u32 truck1[8] = {
+				0x00024444,
+				0x00024444,
+				0x00024444,
+				0x00002444,
+				0x00000055,
+				0x00000000,
+				0x00000000,
+				0x00000000};
 
-	u8 bullDozer2[8][8] = {
-				{4, 4, 0, 0, 4, 2, 0, 0},
-				{4, 5, 0, 0, 4, 4, 4, 0},
-				{4, 4, 0, 0, 4, 2, 0, 0},
-				{0, 5, 5, 5, 4, 4, 4, 0},
-				{0, 0, 0, 0, 4, 2, 0, 0},
-				{0, 0, 0, 0, 4, 4, 4, 0},
-				{0, 0, 0, 0, 0, 0, 0, 0},
-				{0, 0, 0, 0, 0, 0, 0, 0}};	
+	u32 truck2[8] = {
+				0x42444444,
+				0x42444444,
+				0x40444444,
+				0x40444444,
+				0x50055500,
+				0x00000000,
+				0x00000000,
+				0x00000000};
+
+	u32 truck3[8] = {
+				0x44444444,
+				0x44444444,
+				0x44444444,
+				0x44444444,
+				0x00000000,
+				0x00000000,
+				0x00000000,
+				0x00000000};
+
+	u32 truck4[8] = {
+				0x44444400,
+				0x44444400,
+				0x44444400,
+				0x44444400,
+				0x00555000,
+				0x00000000,
+				0x00000000,
+				0x00000000};
 				
-	u8 truck1[8][8] = {
-				{0, 0, 0, 2, 4, 4, 4, 4},
-				{0, 0, 0, 2, 4, 4, 4, 4},
-				{0, 0, 0, 2, 4, 4, 4, 4},
-				{0, 0, 0, 0, 2, 4, 4, 4},
-				{0, 0, 0, 0, 0, 0, 5, 5},
-				{0, 0, 0, 0, 0, 0, 0, 0},
-				{0, 0, 0, 0, 0, 0, 0, 0},
-				{0, 0, 0, 0, 0, 0, 0, 0}};
 
-	u8 truck2[8][8] = {
-				{4, 2, 4, 4, 4, 4, 4, 4},
-				{4, 2, 4, 4, 4, 4, 4, 4},
-				{4, 0, 4, 4, 4, 4, 4, 4},
-				{4, 0, 4, 4, 4, 4, 4, 4},
-				{5, 0, 0, 5, 5, 5, 0, 0},
-				{0, 0, 0, 0, 0, 0, 0, 0},
-				{0, 0, 0, 0, 0, 0, 0, 0},
-				{0, 0, 0, 0, 0, 0, 0, 0}};
+	u32 purpleCar1[8] = {
+				0x67776677,
+				0x63776677,
+				0x67777667,
+				0x06777770,
+				0x00033000,
+				0x00000000,
+				0x00000000,
+				0x00000000};
 
-	u8 truck3[8][8] = {
-				{4, 4, 4, 4, 4, 4, 4, 4},
-				{4, 4, 4, 4, 4, 4, 4, 4},
-				{4, 4, 4, 4, 4, 4, 4, 4},
-				{4, 4, 4, 4, 4, 4, 4, 4},
-				{0, 0, 0, 0, 0, 0, 0, 0},
-				{0, 0, 0, 0, 0, 0, 0, 0},
-				{0, 0, 0, 0, 0, 0, 0, 0},
-				{0, 0, 0, 0, 0, 0, 0, 0}};
-
-	u8 truck4[8][8] = {
-				{4, 4, 4, 4, 4, 4, 0, 0},
-				{4, 4, 4, 4, 4, 4, 0, 0},
-				{4, 4, 4, 4, 4, 4, 0, 0},
-				{4, 4, 4, 4, 4, 4, 0, 0},
-				{0, 0, 5, 5, 5, 0, 0, 0},
-				{0, 0, 0, 0, 0, 0, 0, 0},
-				{0, 0, 0, 0, 0, 0, 0, 0},
-				{0, 0, 0, 0, 0, 0, 0, 0}};
+	u32 purpleCar2[8] = {
+				0x77666700,
+				0x77666700,
+				0x67777760,
+				0x07777700,
+				0x00333000,
+				0x00000000,
+				0x00000000,
+				0x00000000};
+	*/
 				
-
-	u8 purpleCar1[8][8] = {
-				{6, 7, 7, 7, 6, 6, 7, 7},
-				{6, 3, 7, 7, 6, 6, 7, 7},
-				{6, 7, 7, 7, 7, 6, 6, 7},
-				{0, 6, 7, 7, 7, 7, 7, 0},
-				{0, 0, 0, 3, 3, 0, 0, 0},
-				{0, 0, 0, 0, 0, 0, 0, 0},
-				{0, 0, 0, 0, 0, 0, 0, 0},
-				{0, 0, 0, 0, 0, 0, 0, 0}};
-
-	u8 purpleCar2[8][8] = {
-				{7, 7, 6, 6, 6, 7, 0, 0},
-				{7, 7, 6, 6, 6, 7, 0, 0},
-				{6, 7, 7, 7, 7, 7, 6, 0},
-				{0, 7, 7, 7, 7, 7, 0, 0},
-				{0, 0, 3, 3, 3, 0, 0, 0},
-				{0, 0, 0, 0, 0, 0, 0, 0},
-				{0, 0, 0, 0, 0, 0, 0, 0},
-				{0, 0, 0, 0, 0, 0, 0, 0}};
-				
-	for (x = 0; x<8; ++x)
+	u8 bitX = 28;
+	for (x = 0; x<8; ++x,bitX-=4)
+	{
 		for (y = 0; y<8; ++y)
 		{
-			setPixel(raceCarTile1,x,y,carColors[raceCar1[7-y][x]]);
-			setPixel(raceCarTile2,x,y,carColors[raceCar2[7-y][x]]);
-			setPixel(raceCarTile3,x,y,carColors[raceCar1[y][x]]);
-			setPixel(raceCarTile4,x,y,carColors[raceCar2[y][x]]);
+			/*setPixel(raceCarTile1,x,y,carColors[(raceCar1[7-y] >> bitX) & 0xF]);
+			setPixel(raceCarTile2,x,y,carColors[(raceCar2[7-y] >> bitX) & 0xF]);
+			setPixel(raceCarTile3,x,y,carColors[(raceCar1[y] >> bitX) & 0xF]);
+			setPixel(raceCarTile4,x,y,carColors[(raceCar2[y] >> bitX) & 0xF]);
 			
-			setPixel(bullDozerTile1,x,y,carColors[bullDozer1[7-y][x]]);
-			setPixel(bullDozerTile2,x,y,carColors[bullDozer2[7-y][x]]);
-			setPixel(bullDozerTile3,x,y,carColors[bullDozer1[y][x]]);
-			setPixel(bullDozerTile4,x,y,carColors[bullDozer2[y][x]]);
+			setPixel(bullDozerTile1,x,y,carColors[(bullDozer1[7-y] >> bitX) & 0xF]);
+			setPixel(bullDozerTile2,x,y,carColors[(bullDozer2[7-y] >> bitX) & 0xF]);
+			setPixel(bullDozerTile3,x,y,carColors[(bullDozer1[y] >> bitX) & 0xF]);
+			setPixel(bullDozerTile4,x,y,carColors[(bullDozer2[y] >> bitX) & 0xF]);
 			
-			setPixel(purpleCarTile1,x,y,carColors[purpleCar1[7-y][x]]);
-			setPixel(purpleCarTile2,x,y,carColors[purpleCar2[7-y][x]]);
-			setPixel(purpleCarTile3,x,y,carColors[purpleCar1[y][x]]);
-			setPixel(purpleCarTile4,x,y,carColors[purpleCar2[y][x]]);
+			setPixel(purpleCarTile1,x,y,carColors[(purpleCar1[7-y] >> bitX) & 0xF]);
+			setPixel(purpleCarTile2,x,y,carColors[(purpleCar2[7-y] >> bitX) & 0xF]);
+			setPixel(purpleCarTile3,x,y,carColors[(purpleCar1[y] >> bitX) & 0xF]);
+			setPixel(purpleCarTile4,x,y,carColors[(purpleCar2[y] >> bitX) & 0xF]);
 			
-			setPixel(truckTile1,x,y,carColors[truck1[7-y][x]]);
-			setPixel(truckTile2,x,y,carColors[truck2[7-y][x]]);
-			setPixel(truckTile3,x,y,carColors[truck3[7-y][x]]);
-			setPixel(truckTile4,x,y,carColors[truck4[7-y][x]]);
-			setPixel(truckTile5,x,y,carColors[truck1[y][x]]);
-			setPixel(truckTile6,x,y,carColors[truck2[y][x]]);
-			setPixel(truckTile7,x,y,carColors[truck3[y][x]]);
-			setPixel(truckTile8,x,y,carColors[truck4[y][x]]);
+			setPixel(truckTile1,x,y,carColors[(truck1[7-y] >> bitX) & 0xF]);
+			setPixel(truckTile2,x,y,carColors[(truck2[7-y] >> bitX) & 0xF]);
+			setPixel(truckTile3,x,y,carColors[(truck3[7-y] >> bitX) & 0xF]);
+			setPixel(truckTile4,x,y,carColors[(truck4[7-y] >> bitX) & 0xF]);
+			setPixel(truckTile5,x,y,carColors[(truck1[y] >> bitX) & 0xF]);
+			setPixel(truckTile6,x,y,carColors[(truck2[y] >> bitX) & 0xF]);
+			setPixel(truckTile7,x,y,carColors[(truck3[y] >> bitX) & 0xF]);
+			setPixel(truckTile8,x,y,carColors[(truck4[y] >> bitX) & 0xF]);*/
 		}
+	}
 	
 }
 

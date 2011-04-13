@@ -207,7 +207,7 @@ TESTAPP_PERIPHERAL_MICROBLAZE_0_OTHER_CC_FLAGS= $(TESTAPP_PERIPHERAL_MICROBLAZE_
 
 FROGGER_SOURCES = Frogger/src/Frogger.c 
 
-FROGGER_HEADERS = Frogger/lib/joystickLibrary.h Frogger/lib/graphicsLibrary.h Frogger/lib/frog_graphics.h Frogger/lib/collisions.h Frogger/lib/enemies.h Frogger/lib/frog.h Frogger/lib/output_tileset.h 
+FROGGER_HEADERS = Frogger/lib/joystickLibrary.h Frogger/lib/graphicsLibrary.h Frogger/lib/collisions.h Frogger/lib/enemies.h Frogger/lib/frog.h Frogger/lib/output_tileset.h 
 
 FROGGER_CC = mb-gcc
 FROGGER_CC_SIZE = mb-size
