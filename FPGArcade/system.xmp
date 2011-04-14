@@ -75,9 +75,9 @@ Header: Frogger/lib/output_tileset.h
 DefaultInit: EXECUTABLE
 InitBram: 1
 Active: 1
-CompilerOptLevel: 0
+CompilerOptLevel: 4
 GlobPtrOpt: 0
-DebugSym: 1
+DebugSym: 0
 ProfileFlag: 0
 ProgStart: 
 StackSize: 

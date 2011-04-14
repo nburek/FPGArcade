@@ -25,7 +25,7 @@ typedef struct frog_struct{
 }Frog;
 
 void initFrog(Frog* frog){
-	(*frog).x = 270;
+	(*frog).x = 320;
 	(*frog).y = 320;
 	(*frog).width = 16;
 	(*frog).height = 16;
@@ -201,24 +201,15 @@ void outputFrogger(u8 animationFrame, u8 direction, u8 player)
 		frog3 = movingFrog3;
 		frog4 = movingFrog4;
 	}
-
+	
+	u32 temp[8];
+	
 	if (direction == UP)
 	{
-		
-		arrayY = 0;
-		for (tileY = 0; tileY<8; ++tileY)
-		{
-			arrayX = 28;
-			for (tileX = 0; tileX<8; ++tileX)
-			{
-				setPixel(FROG_TILE_1,tileX,tileY,colors[(frog1[arrayY]>>arrayX) & 0xF]);
-				setPixel(FROG_TILE_2,tileX,tileY,colors[(frog2[arrayY]>>arrayX) & 0xF]);
-				setPixel(FROG_TILE_3,tileX,tileY,colors[(frog3[arrayY]>>arrayX) & 0xF]);
-				setPixel(FROG_TILE_4,tileX,tileY,colors[(frog4[arrayY]>>arrayX) & 0xF]);
-				arrayX-=4;
-			}
-			++arrayY;
-		}
+		mapArrayToTile(frog1,colors,FROG_TILE_1);
+		mapArrayToTile(frog2,colors,FROG_TILE_2);
+		mapArrayToTile(frog3,colors,FROG_TILE_3);
+		mapArrayToTile(frog4,colors,FROG_TILE_4);
 		
 		if (animationFrame == 0 )
 		{
@@ -238,20 +229,14 @@ void outputFrogger(u8 animationFrame, u8 direction, u8 player)
 	}
 	else if (direction == RIGHT)
 	{
-		arrayX = 28;
-		for (tileY = 0; tileY<8; ++tileY)
-		{
-			arrayY = 7;
-			for (tileX = 0; tileX<8; ++tileX)
-			{
-				setPixel(FROG_TILE_1,tileX,tileY,colors[(frog3[arrayY]>>arrayX)&0xF]);
-				setPixel(FROG_TILE_2,tileX,tileY,colors[(frog1[arrayY]>>arrayX)&0xF]);
-				setPixel(FROG_TILE_3,tileX,tileY,colors[(frog4[arrayY]>>arrayX)&0xF]);
-				setPixel(FROG_TILE_4,tileX,tileY,colors[(frog2[arrayY]>>arrayX)&0xF]);
-				--arrayY;
-			}
-			arrayX-=4;
-		}
+		rotate(frog3,temp);
+		mapArrayToTile(temp,colors,FROG_TILE_1);
+		rotate(frog1,temp);
+		mapArrayToTile(temp,colors,FROG_TILE_2);
+		rotate(frog4,temp);
+		mapArrayToTile(temp,colors,FROG_TILE_3);
+		rotate(frog2,temp);
+		mapArrayToTile(temp,colors,FROG_TILE_4);
 		
 		if (animationFrame == 0 )
 		{
@@ -271,21 +256,15 @@ void outputFrogger(u8 animationFrame, u8 direction, u8 player)
 	}
 	else if (direction == DOWN)
 	{
-		arrayY = 7;
-		for (tileY = 0; tileY<8; ++tileY)
-		{
-			arrayX = 28;
-			for (tileX = 0; tileX<8; ++tileX)
-			{
-				setPixel(FROG_TILE_1,tileX,tileY,colors[(frog3[arrayY]>>arrayX)&0xF]);
-				setPixel(FROG_TILE_2,tileX,tileY,colors[(frog4[arrayY]>>arrayX)&0xF]);
-				setPixel(FROG_TILE_3,tileX,tileY,colors[(frog1[arrayY]>>arrayX)&0xF]);
-				setPixel(FROG_TILE_4,tileX,tileY,colors[(frog2[arrayY]>>arrayX)&0xF]);
-				arrayX-=4;
-			}
-			--arrayY;
-		}
-		
+		multipleRotate(frog4,temp,2);
+		mapArrayToTile(temp,colors,FROG_TILE_1);
+		multipleRotate(frog3,temp,2);
+		mapArrayToTile(temp,colors,FROG_TILE_2);
+		multipleRotate(frog2,temp,2);
+		mapArrayToTile(temp,colors,FROG_TILE_3);
+		multipleRotate(frog1,temp,2);
+		mapArrayToTile(temp,colors,FROG_TILE_4);
+
 		if (animationFrame == 0 )
 		{
 			transparencyMap1 = sittingTransparencyMapDown1;
@@ -304,21 +283,15 @@ void outputFrogger(u8 animationFrame, u8 direction, u8 player)
 	}
 	else if (direction == LEFT)
 	{
-		arrayX = 0;
-		for (tileY = 0; tileY<8; ++tileY)
-		{
-			arrayY = 0;
-			for (tileX = 0; tileX<8; ++tileX)
-			{
-				setPixel(FROG_TILE_1,tileX,tileY,colors[(frog2[arrayY]>>arrayX)&0xF]);
-				setPixel(FROG_TILE_2,tileX,tileY,colors[(frog4[arrayY]>>arrayX)&0xF]);
-				setPixel(FROG_TILE_3,tileX,tileY,colors[(frog1[arrayY]>>arrayX)&0xF]);
-				setPixel(FROG_TILE_4,tileX,tileY,colors[(frog3[arrayY]>>arrayX)&0xF]);
-				++arrayY;
-			}
-			arrayX+=4;
-		}
-		
+		multipleRotate(frog2,temp,3);
+		mapArrayToTile(temp,colors,FROG_TILE_1);
+		multipleRotate(frog4,temp,3);
+		mapArrayToTile(temp,colors,FROG_TILE_2);
+		multipleRotate(frog1,temp,3);
+		mapArrayToTile(temp,colors,FROG_TILE_3);
+		multipleRotate(frog3,temp,3);
+		mapArrayToTile(temp,colors,FROG_TILE_4);
+
 		if (animationFrame == 0 )
 		{
 			transparencyMap1 = sittingTransparencyMapLeft1;

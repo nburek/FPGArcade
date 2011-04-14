@@ -1,4 +1,4 @@
-	#include "xparameters.h"
+#include "xparameters.h"
 #include "xgpio.h"
 
 //void setPixel(u8 tileNumber, u8 x, u8 y, u8 color);
@@ -104,12 +104,12 @@ void initGraphics()
 	XGpio_SetDataDirection(&graphicsGPIO, GRAPHICS_CLOCK_CHANNEL, 0x0);
 }
 
-void mapArrayToTile(u32 storage[], u8 color_palette[], u8 tile_num, u8 dir){
+void mapArrayToTile(u32 storage[], u8 color_palette[], u8 tile_num){
 
-	unsigned i, j;
+	u8 i, j;
 	for(j = 0; j < 8; ++j){
 
-		unsigned shift = 28;
+		u8 shift = 28;
 		for(i = 0; i < 8; ++i){
 
 			u8 color = (storage[j] >> shift)  &0x0000000F;
@@ -119,3 +119,89 @@ void mapArrayToTile(u32 storage[], u8 color_palette[], u8 tile_num, u8 dir){
 		}
 	}
 }
+
+//rotates a tile clockwise
+void rotate(u32 source_ary[], u32 storage[])
+{
+
+	int i, j;
+
+	for(i = 0; i < 8; ++i)
+	{
+		storage[i] = 0;
+		for(j = 7; j >= 0; --j)
+		{
+			u32 value = (source_ary[j] >> (7 - i)*4)  &0x0000000F;
+
+			storage[i] |= ((value) << j*4);
+		}
+
+	}
+
+
+}
+
+void crotate(u32 storage[])
+{
+
+	u32 t_ary[8];
+	u8 i;
+	for(i = 0; i < 8; ++i){
+		t_ary[i] = storage[i];
+	}
+
+	rotate(t_ary, storage);
+}
+
+void multipleRotate(u32 source_ary[], u32 storage[], u8 timesToRotate)
+{
+	u8 i;
+	for (i = 0; i<timesToRotate; ++i)
+	{
+		if (i==0)
+			rotate(source_ary,storage);
+		else
+			crotate(storage);
+	}
+}
+
+
+//flips the graphics array
+//treat x and y as booleans
+void flip(u32 source_ary[], u32 storage[], u8 x, u8 y)
+{
+
+	int i, j;
+
+	for (i = 0; i<8; ++i)
+	{
+		storage[i] = (y==1)?source_ary[7-i]:source_ary[i];
+	}
+	
+	if (x==1)
+	{
+		for (i = 0; i<8; ++i)
+		{
+			u32 temp = 0;
+			for (j = 0; j<28; j+= 4)
+			{
+				temp = temp | (((storage[i] >> j) & 0xF)<<(28-0));
+			}
+			storage[i] = temp;
+		}
+	}
+
+}
+
+
+void cflip(u32 storage[], int x, int y)
+{
+	u32 t_ary[8];
+	int i;
+	for(i = 0; i < 8; ++i){
+		t_ary[i] = storage[i];
+	}
+
+	flip(t_ary, storage, x, y);
+}
+

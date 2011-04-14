@@ -17,12 +17,10 @@
 60-63: Frog
 */
 
-void createDirt();
+void createDirtTile();
 void drawDirt();
-void createGrass();
+void createGrassTile();
 void drawGrass();
-void drawGrassPatch(int x, int y);
-void drawPond(int x, int y);
 void createLoggy();
 void drawLoggy(int x, int y);
 void drawBackground();
@@ -57,12 +55,12 @@ void drawBackground(){
 			
 	//top/bottom border
 	for (i = 25; i<55; ++i){
-		setBackgroundBlock(i,18,12);
+		setBackgroundBlock(i,17,12);
 		setBackgroundBlock(i,41,12);
 	}
 	
 	//left/right border
-	for (i = 18; i<42; ++i){
+	for (i = 17; i<42; ++i){
 		setBackgroundBlock(25,i,12);
 		setBackgroundBlock(54,i,12);
 	}
@@ -74,17 +72,18 @@ void drawBackground(){
 			setBackgroundBlock(i,ii,11);
 		}
 	}
-	createGrass();
+	createGrassTile();
 	drawGrass();
 	
-	createDirt();
+	createDirtTile();
 	drawDirt();
 	
 	createLoggy();
 	drawLoggy(0, 0);
 }
 
-void createGrass(){
+void createGrassTile()
+{
 
 	//green grass -31
 
@@ -99,46 +98,28 @@ void createGrass(){
 						  0x20220112, 
 						  0x22222022};
 						  
-	mapArrayToTile(ary1, color_palette, 31, 0);
+	mapArrayToTile(ary1, color_palette, 31);
 
 }
-void drawGrass(){
+void drawGrass()
+{
 	
-	int i;
 	int x;
-	for(i = 0, x = 26; i<5; ++i, x += 6){
-		drawPond(x, 19);
-	}
-	for(i = 0, x = 30; i<4; ++i, x += 6){
-		drawGrassPatch(x, 19);
+	for (x = 26; x<54; ++x)
+	{
+		setBackgroundBlock(x,18,31);
+		if ((x%6!=3) && (x%6!= 4))
+		{
+			setBackgroundBlock(x,19,31);
+			setBackgroundBlock(x,20,31);
+		}
 	}
 
 }
-void drawPond(int x, int y){
-	
-	setBackgroundBlock(x,y,31);
-	setBackgroundBlock(x,y+1,31);
-	setBackgroundBlock(x,y+2,31);
-	
-	setBackgroundBlock(x+1,y,31);
-	setBackgroundBlock(x+2,y,31);
-	
-	setBackgroundBlock(x+3,y,31);
-	setBackgroundBlock(x+3,y+1,31);
-	setBackgroundBlock(x+3,y+2,31);
-	
-}
-void drawGrassPatch(int x, int y){
-	
-	setBackgroundBlock(x,y,31);
-	setBackgroundBlock(x,y+1,31);
-	setBackgroundBlock(x,y+2,31);
-	
-	setBackgroundBlock(x+1,y,31);
-	setBackgroundBlock(x+1,y+1,31);
-	setBackgroundBlock(x+1,y+2,31);
-}
-void createDirt(){
+
+
+void createDirtTile()
+{
 
 	//13 - 16
 
@@ -188,10 +169,10 @@ void createDirt(){
 
 					  
 
-	mapArrayToTile(ary1, color_palette, 13, 0);
-	mapArrayToTile(ary2, color_palette, 14, 0);
-	mapArrayToTile(ary3, color_palette, 15, 0);
-	mapArrayToTile(ary4, color_palette, 16, 0);
+	mapArrayToTile(ary1, color_palette, 13);
+	mapArrayToTile(ary2, color_palette, 14);
+	mapArrayToTile(ary3, color_palette, 15);
+	mapArrayToTile(ary4, color_palette, 16);
 
 }
 

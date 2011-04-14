@@ -211,7 +211,7 @@ FROGGER_HEADERS = Frogger/lib/joystickLibrary.h Frogger/lib/graphicsLibrary.h Fr
 
 FROGGER_CC = mb-gcc
 FROGGER_CC_SIZE = mb-size
-FROGGER_CC_OPT = -O0
+FROGGER_CC_OPT = -Os
 FROGGER_CFLAGS = 
 FROGGER_CC_SEARCH = # -B
 FROGGER_LIBPATH = -L./microblaze_0/lib/ # -L
@@ -219,7 +219,7 @@ FROGGER_INCLUDES = -I./microblaze_0/include/  -IFrogger/lib/ # -I
 FROGGER_LFLAGS = # -l
 FROGGER_LINKER_SCRIPT = Frogger/Frogger_linker_script.ld
 FROGGER_LINKER_SCRIPT_FLAG = -T $(FROGGER_LINKER_SCRIPT) 
-FROGGER_CC_DEBUG_FLAG =  -g 
+FROGGER_CC_DEBUG_FLAG = # -[g|gstabs]
 FROGGER_CC_PROFILE_FLAG = # -pg
 FROGGER_CC_GLOBPTR_FLAG= # -mxl-gp-opt
 FROGGER_MODE = executable

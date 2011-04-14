@@ -71,11 +71,23 @@ void initCar(Car newCar, enum CAR_TYPES carType, u8 position)
 		newCar.positionY = purpleCarY;
 }
 
-void outputCarTiles()
+void writeOutCar(u32 graphic1[], u32 graphic2[], u8 tile1, u8 tile2, u8 tile3, u8 tile4)
 {
 	u8 carColors[8] = {BLACK,PURPLE,RED,YELLOW,GREY,GREEN,CYAN,PURPLE};
+	
+	u32 temp[8];
+	mapArrayToTile(graphic1, carColors, tile3);
+	mapArrayToTile(graphic2, carColors, tile4);
+	flip(graphic1, temp, 0, 1);
+	mapArrayToTile(temp, carColors, tile1);
+	flip(graphic2, temp, 0, 1);
+	mapArrayToTile(temp, carColors, tile2);
+}
+
+void outputCarTiles()
+{
 	int x, y;
-/*
+
 	u32 raceCar1[8] = {
 				0x03232323,
 				0x11111133,
@@ -176,38 +188,14 @@ void outputCarTiles()
 				0x00000000,
 				0x00000000,
 				0x00000000};
-	*/
-				
-	u8 bitX = 28;
-	for (x = 0; x<8; ++x,bitX-=4)
-	{
-		for (y = 0; y<8; ++y)
-		{
-			/*setPixel(raceCarTile1,x,y,carColors[(raceCar1[7-y] >> bitX) & 0xF]);
-			setPixel(raceCarTile2,x,y,carColors[(raceCar2[7-y] >> bitX) & 0xF]);
-			setPixel(raceCarTile3,x,y,carColors[(raceCar1[y] >> bitX) & 0xF]);
-			setPixel(raceCarTile4,x,y,carColors[(raceCar2[y] >> bitX) & 0xF]);
-			
-			setPixel(bullDozerTile1,x,y,carColors[(bullDozer1[7-y] >> bitX) & 0xF]);
-			setPixel(bullDozerTile2,x,y,carColors[(bullDozer2[7-y] >> bitX) & 0xF]);
-			setPixel(bullDozerTile3,x,y,carColors[(bullDozer1[y] >> bitX) & 0xF]);
-			setPixel(bullDozerTile4,x,y,carColors[(bullDozer2[y] >> bitX) & 0xF]);
-			
-			setPixel(purpleCarTile1,x,y,carColors[(purpleCar1[7-y] >> bitX) & 0xF]);
-			setPixel(purpleCarTile2,x,y,carColors[(purpleCar2[7-y] >> bitX) & 0xF]);
-			setPixel(purpleCarTile3,x,y,carColors[(purpleCar1[y] >> bitX) & 0xF]);
-			setPixel(purpleCarTile4,x,y,carColors[(purpleCar2[y] >> bitX) & 0xF]);
-			
-			setPixel(truckTile1,x,y,carColors[(truck1[7-y] >> bitX) & 0xF]);
-			setPixel(truckTile2,x,y,carColors[(truck2[7-y] >> bitX) & 0xF]);
-			setPixel(truckTile3,x,y,carColors[(truck3[7-y] >> bitX) & 0xF]);
-			setPixel(truckTile4,x,y,carColors[(truck4[7-y] >> bitX) & 0xF]);
-			setPixel(truckTile5,x,y,carColors[(truck1[y] >> bitX) & 0xF]);
-			setPixel(truckTile6,x,y,carColors[(truck2[y] >> bitX) & 0xF]);
-			setPixel(truckTile7,x,y,carColors[(truck3[y] >> bitX) & 0xF]);
-			setPixel(truckTile8,x,y,carColors[(truck4[y] >> bitX) & 0xF]);*/
-		}
-	}
+	
+	writeOutCar(raceCar1,raceCar2,raceCarTile1,raceCarTile2,raceCarTile3,raceCarTile4);
+	writeOutCar(bullDozer1,bullDozer2,bullDozerTile1,bullDozerTile2,bullDozerTile3,bullDozerTile4);
+	writeOutCar(purpleCar1,purpleCar2,purpleCarTile1,purpleCarTile2,purpleCarTile3,purpleCarTile4);
+	writeOutCar(truck1,truck2,truckTile1,truckTile2,truckTile5,truckTile6);
+	writeOutCar(truck3,truck4,truckTile3,truckTile4,truckTile7,truckTile8);
+	
+	
 	
 }
 
