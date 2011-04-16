@@ -167,25 +167,27 @@ void multipleRotate(u32 source_ary[], u32 storage[], u8 timesToRotate)
 
 
 //flips the graphics array
-//treat x and y as booleans
+//treat x and y as booleans, where x is flip over x axis and y is flip over y axis
 void flip(u32 source_ary[], u32 storage[], u8 x, u8 y)
 {
 
 	int i, j;
 
+	//flip over x axis
 	for (i = 0; i<8; ++i)
 	{
-		storage[i] = (y==1)?source_ary[7-i]:source_ary[i];
+		storage[i] = (x==1)?source_ary[7-i]:source_ary[i];
 	}
 	
-	if (x==1)
+	//flip over y axis
+	if (y==1)
 	{
 		for (i = 0; i<8; ++i)
 		{
 			u32 temp = 0;
-			for (j = 0; j<28; j+= 4)
+			for (j = 0; j<=28; j+= 4)
 			{
-				temp = temp | (((storage[i] >> j) & 0xF)<<(28-0));
+				temp = temp | (((storage[i] >> j) & 0xF)<<(28-j));
 			}
 			storage[i] = temp;
 		}

@@ -78,9 +78,9 @@ void writeOutCar(u32 graphic1[], u32 graphic2[], u8 tile1, u8 tile2, u8 tile3, u
 	u32 temp[8];
 	mapArrayToTile(graphic1, carColors, tile3);
 	mapArrayToTile(graphic2, carColors, tile4);
-	flip(graphic1, temp, 0, 1);
+	flip(graphic1, temp, 1,0);
 	mapArrayToTile(temp, carColors, tile1);
-	flip(graphic2, temp, 0, 1);
+	flip(graphic2, temp, 1,0);
 	mapArrayToTile(temp, carColors, tile2);
 }
 

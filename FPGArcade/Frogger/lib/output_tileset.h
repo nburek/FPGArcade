@@ -216,6 +216,6 @@ void createLoggy(){
 }
 void drawLoggy(int x, int y){
 	
-		setBackgroundBlock(x,30,14);
+		//setBackgroundBlock(x,30,14);
 	
 }
