@@ -14,19 +14,19 @@
 #define STAGE_MAXY 328
 
 u32 frogMovementCounter = 10000;
-#define FROG_MOVEMENT_DELAY 25000
+#define FROG_MOVEMENT_DELAY 50000
 u32 raceCarMovementCounter = 5000;
-#define RACE_CAR_MOVEMENT_DELAY 25000
+#define RACE_CAR_MOVEMENT_DELAY 50000
 u32 truckMovementCounter = 0;
-#define TRUCK_MOVEMENT_DELAY 35000
+#define TRUCK_MOVEMENT_DELAY 70000
 u32 bullDozerMovementCounter = 15000;
-#define BULL_DOZER_MOVEMENT_DELAY 30000
+#define BULL_DOZER_MOVEMENT_DELAY 60000
 u32 purpleCarMovementCounter = 20000;
-#define PURPLE_CAR_MOVEMENT_DELAY 20000
+#define PURPLE_CAR_MOVEMENT_DELAY 40000
 u32 turtleMovementCounter = 17000;
-#define TURTLE_MOVEMENT_DELAY 20000
+#define TURTLE_MOVEMENT_DELAY 40000
 u32 logMovementCounter = 28000;
-#define LOG_MOVEMENT_DELAY 30000
+#define LOG_MOVEMENT_DELAY 60000
 
 
 /*****************************************************************************/

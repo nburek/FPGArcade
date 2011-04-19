@@ -21,7 +21,7 @@
 #define PURPLE 0xC7
 #define GREY 0xAD
 #define CYAN 0xE8
-#define BROWN 0x00
+#define BROWN 0x5B
 
 XGpio graphicsGPIO;
 
