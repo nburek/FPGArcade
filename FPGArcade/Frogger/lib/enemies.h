@@ -56,18 +56,31 @@ enum MOVING_TYPES
 s8 direction[9] = {1,-1,1,-1,0,-1,1,-1,1};
 u16 movingObjectsX[9][4];
 
+/*****************************************************************************/
+/**
+*
+* This function is used to give all the moving objects an initial position
+*
+****************************************************************************/
 void initMovingObjects()
 {
-	int i, ii, iii;
-	for (i = 0; i<9; ++i)
+	int row, xPos, obj;
+	for (row = 0; row<9; ++row)
 	{
-		for (iii = 0,ii=22; iii<4; ++iii,ii+=10)
+		for (obj = 0,xPos=22; obj<4; ++obj,xPos+=10)
 		{
-			movingObjectsX[i][iii] = ii;
+			movingObjectsX[row][obj] = xPos;
 		}
 	}
 	
 }
+
+/*****************************************************************************/
+/**
+*
+* This function is used to draw one 2x2 block image on the screen. It is used
+*
+****************************************************************************/
 void drawObjectOnScreen(u8 x, u8 y, u8 tile1, u8 tile2, u8 tile3, u8 tile4)
 {
 	if (x>=minXTile && x<maxXTile-1)
@@ -84,8 +97,13 @@ void drawObjectOnScreen(u8 x, u8 y, u8 tile1, u8 tile2, u8 tile3, u8 tile4)
 }
 
 
-
-//moves all the objects on that row and then redraws the row
+/*****************************************************************************/
+/**
+*
+* This function will move all the objects in that row in their respective 
+* direction. It will then erase the row and re-draw it.
+*
+****************************************************************************/
 void moveRow(u8 row)
 {
 	int x;
@@ -141,7 +159,15 @@ void moveRow(u8 row)
 }
 
 
-
+/*****************************************************************************/
+/**
+*
+* This function will write out the two graphics arrays to the stored tiles in 
+* memory. It writes them out as is to tiles 3 and 4 and then flips them over 
+* the X axis and writes them out to tiles 1 and 2. It is used to output objects 
+* that are symmetrical over the X axis.
+*
+****************************************************************************/
 void writeOutCarTile(u32 graphic1[], u32 graphic2[], u8 tile1, u8 tile2, u8 tile3, u8 tile4)
 {
 	u8 carColors[10] = {BLACK,PURPLE,RED,YELLOW,GREY,GREEN,CYAN,PURPLE,BLUE,BROWN};
@@ -155,6 +181,14 @@ void writeOutCarTile(u32 graphic1[], u32 graphic2[], u8 tile1, u8 tile2, u8 tile
 	mapArrayToTile(temp, carColors, tile2);
 }
 
+
+/*****************************************************************************/
+/**
+*
+* This function will write out all of the graphics arrays for the cars, 
+* turtles, and logs to their respective stored tiles in memory. 
+*
+****************************************************************************/
 void outputCarTiles()
 {
 	int x, y;
