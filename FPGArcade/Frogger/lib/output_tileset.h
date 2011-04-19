@@ -17,13 +17,60 @@
 60-63: Frog
 */
 
-void createDirtTile();
-void createGrassTile();
 void drawBackground();
 
 
-void drawBackground(){
+void drawBackground()
+{
 
+	u8 color_palette[5] = {PURPLE,BLUE,RED,BLACK,GREEN};
+	
+	u32 dirt1[8] = {0x00010012, 
+					  0x00000001, 
+					  0x01000000, 
+					  0x12100000, 
+					  0x01001001, 
+					  0x00012100, 
+					  0x00001000, 
+					  0x00100330};
+
+	u32 dirt2[8] = {0x10000000, 
+					  0x00001000, 
+					  0x20012100, 
+					  0x30001000, 
+					  0x21000000, 
+					  0x10000000, 
+					  0x00000000, 
+					  0x33033333};
+
+	u32 dirt3[8] = {0x30330033, 
+					  0x00000000, 
+					  0x00100001, 
+					  0x01210012, 
+					  0x00100001, 
+					  0x00000000, 
+					  0x00010000, 
+					  0x00121001};
+
+	u32 dirt4[8] = {0x03300333, 
+					  0x03000000, 
+					  0x00000100, 
+					  0x10001210, 
+					  0x00000100, 
+					  0x20100000, 
+					  0x21210000, 
+					  0x20100000};
+					  
+	u32 grass[8] =  {0x34444443, 
+						  0x44444344, 
+						  0x44444444, 
+						  0x43224444, 
+						  0x44344443, 
+						  0x44444444, 
+						  0x43443224, 
+						  0x44444344};
+	
+	
 	int i = 0;
 	int ii = 0;
 
@@ -68,7 +115,9 @@ void drawBackground(){
 			setBackgroundBlock(i,ii,11);
 		}
 	}
-	createGrassTile();
+	
+	//create grass tile
+	mapArrayToTile(grass, color_palette, 31);
 	//draw grass on screen
 	int x;
 	for (x = 26; x<54; ++x)
@@ -81,9 +130,15 @@ void drawBackground(){
 		}
 	}
 	
-	createDirtTile();
+	//create dirt tile
+	mapArrayToTile(dirt1, color_palette, 13);
+	mapArrayToTile(dirt2, color_palette, 14);
+	mapArrayToTile(dirt3, color_palette, 15);
+	mapArrayToTile(dirt4, color_palette, 16);
+	
 	//draw dirt on screen
-	for (x = 26; x<53; ++x){
+	for (x = 26; x<53; ++x)
+	{
 		setBackgroundBlock(x,40,14);
 		setBackgroundBlock(x+1,40,13);
 		setBackgroundBlock(x,39,16);
@@ -97,84 +152,6 @@ void drawBackground(){
 	
 }
 
-void createGrassTile()
-{
-
-	//green grass -31
-
-	u8 color_palette[3] = {BLACK,RED,GREEN};
-	
-	u32 ary1[8] = 	 {0x02222220, 
-						  0x22222022, 
-						  0x22222222, 
-						  0x20112222, 
-						  0x22022220, 
-						  0x22222222, 
-						  0x20220112, 
-						  0x22222022};
-						  
-	mapArrayToTile(ary1, color_palette, 31);
-
-}
-
-
-void createDirtTile()
-{
-
-	//13 - 16
-
-	/*Value: 0         Index Value: 3
-	Value: ff        Index Value: 2
-	Value: f70000    Index Value: 1
-	Value: f70097    Index Value: 0*/
-
-	u8 color_palette[4] = {PURPLE,BLUE,RED, BLACK};
-	
-	
-	u32 ary1[8] = 	 {0x00010012, 
-					  0x00000001, 
-					  0x01000000, 
-					  0x12100000, 
-					  0x01001001, 
-					  0x00012100, 
-					  0x00001000, 
-					  0x00100330};
-
-	u32 ary2[8] = 	 {0x10000000, 
-					  0x00001000, 
-					  0x20012100, 
-					  0x30001000, 
-					  0x21000000, 
-					  0x10000000, 
-					  0x00000000, 
-					  0x33033333};
-
-	u32 ary3[8] = 	 {0x30330033, 
-					  0x00000000, 
-					  0x00100001, 
-					  0x01210012, 
-					  0x00100001, 
-					  0x00000000, 
-					  0x00010000, 
-					  0x00121001};
-
-	u32 ary4[8] = 	 {0x03300333, 
-					  0x03000000, 
-					  0x00000100, 
-					  0x10001210, 
-					  0x00000100, 
-					  0x20100000, 
-					  0x21210000, 
-					  0x20100000};
-
-					  
-
-	mapArrayToTile(ary1, color_palette, 13);
-	mapArrayToTile(ary2, color_palette, 14);
-	mapArrayToTile(ary3, color_palette, 15);
-	mapArrayToTile(ary4, color_palette, 16);
-
-}
 
 
 

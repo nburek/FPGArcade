@@ -136,130 +136,14 @@ void moveRow(u8 row)
 			
 		}
 		
-		/*
-		if (row == Race_Car)
-		{
-			drawObjectOnScreen(movingObjectsX[row][x],row,raceCarTile1,raceCarTile2,raceCarTile3,raceCarTile4);
-		}
-		else if (row == Truck)
-		{
-			drawObjectOnScreen(movingObjectsX[row][x],row,truckTile1,truckTile2,truckTile5,truckTile6);
-			drawObjectOnScreen(movingObjectsX[row][x]+2,row,truckTile3,truckTile4,truckTile7,truckTile8);
-		}*/
-		
-	}
-}
-
-/*
-typedef struct moving_object{
-	enum MOVING_TYPES type;
-	u16 positionX;
-	u16 positionY;
-	u8 direction; // 0 = left, 1 = right
-}MovingObject;
-
-
-
-
-#define raceCarY 37
-#define bullDozerY 33
-#define truckY 35
-#define purpleCarY 31
-#define logY 25
-#define turtleY 27
-
-void initObject(MovingObject *newObject, enum MOVING_TYPES objType, u16 position)
-{
-	(*newObject).positionX = position;
-	(*newObject).type = objType;
-
-	if (objType == race_car)
-	{
-		(*newObject).positionY = raceCarY;
-		(*newObject).direction = 0;
-	}
-	else if (objType == bull_dozer)
-	{
-		(*newObject).positionY = bullDozerY;
-		(*newObject).direction = 1;
-	}
-	else if (objType == truck)
-	{
-		(*newObject).positionY = truckY;
-		(*newObject).direction = 0;
-	}
-	else if (objType == purple_car)
-	{
-		(*newObject).positionY = purpleCarY;
-		(*newObject).direction = 1;
-	}
-	else if (objType == log)
-	{
-		(*newObject).positionY = purpleCarY;
-	}
-	else if (objType == turtle)
-	{
-		(*newObject).positionY = purpleCarY;
-	}
-}
-
-void drawRow(u8 rowNumber)
-{
-	int i; 
-	if (rowNumber == 0)
-	{
-		for (i = 0; i<1; ++i)
-		{
-			
-		}
 	}
 }
 
 
-void displayObject(u8 x, u8 y, u8 tile1, u8 tile2, u8 tile3, u8 tile4)
-{
-	if (x>minXTile+1 && x<maxXTile+1)
-	{
-		setBackgroundBlock( x-1, y, tile1);
-		setBackgroundBlock( x-1, y+1, tile3);
-	}
-	
-	if (x<maxXTile&&x>minXTile)
-	{
-		setBackgroundBlock( x, y, tile2);
-		setBackgroundBlock( x, y+1, tile4);
-	}
-}
-
-void drawFoo(MovingObject obj)
-{
-	u8 i;
-	for (i = minXTile+1 ;i<maxXTile;++i)
-	{
-		setBackgroundBlock(i,obj.positionY,0);
-		setBackgroundBlock(i,obj.positionY+1,0);
-	}
-	
-	displayObject(obj.positionX,obj.positionY,raceCarTile1,raceCarTile2,raceCarTile3,raceCarTile4);
-}
-
-void drawBar(MovingObject obj)
-{
-	u8 i;
-	for (i = minXTile+1 ;i<maxXTile;++i)
-	{
-		setBackgroundBlock(i,obj.positionY,0);
-		setBackgroundBlock(i,obj.positionY+1,0);
-	}
-	
-	displayObject(obj.positionX+2,obj.positionY,truckTile1,truckTile2,truckTile5,truckTile6);
-	displayObject(obj.positionX+4,obj.positionY,truckTile3,truckTile4,truckTile7,truckTile8);
-}
-*/
 
 void writeOutCarTile(u32 graphic1[], u32 graphic2[], u8 tile1, u8 tile2, u8 tile3, u8 tile4)
 {
-	u8 carColors[9] = {BLACK,PURPLE,RED,YELLOW,GREY,GREEN,CYAN,PURPLE,BLUE};
+	u8 carColors[10] = {BLACK,PURPLE,RED,YELLOW,GREY,GREEN,CYAN,PURPLE,BLUE,BROWN};
 	
 	u32 temp[8];
 	mapArrayToTile(graphic1, carColors, tile3);
@@ -394,13 +278,45 @@ void outputCarTiles()
 				0x22228888,
 				0x22222885,
 				0x22222258};
-	
+				
+	u32 log1[8] = {
+				0x88888888, 
+				0x88888888, 
+				0x88888888, 
+				0x88899999, 
+				0x89999994, 
+				0x89944999, 
+				0x99999999, 
+				0x99999999};
+
+	u32 log2[8] = {
+				0x88888888, 
+				0x88888888, 
+				0x88888888, 
+				0x99899998, 
+				0x99999499, 
+				0x99999999, 
+				0x99999999, 
+				0x99944999};
+
+	u32 log3[8] = {
+				0x88888888, 
+				0x88888888, 
+				0x88888888, 
+				0x99944488, 
+				0x99444448, 
+				0x99499948, 
+				0x99499944, 
+				0x94999994};
+		  
 	writeOutCarTile(raceCar1,raceCar2,raceCarTile1,raceCarTile2,raceCarTile3,raceCarTile4);
 	writeOutCarTile(bullDozer1,bullDozer2,bullDozerTile1,bullDozerTile2,bullDozerTile3,bullDozerTile4);
 	writeOutCarTile(purpleCar1,purpleCar2,purpleCarTile1,purpleCarTile2,purpleCarTile3,purpleCarTile4);
 	writeOutCarTile(truck1,truck2,truckTile1,truckTile2,truckTile5,truckTile6);
 	writeOutCarTile(truck3,truck4,truckTile3,truckTile4,truckTile7,truckTile8);
 	writeOutCarTile(turtle1,turtle2,turtleTile3,turtleTile4,turtleTile1,turtleTile2);
+	writeOutCarTile(log1,log2,logTile1,logTile2,logTile4,logTile5);
+	writeOutCarTile(log3,log3,logTile3,logTile3,logTile6,logTile6);
 	
 	
 	

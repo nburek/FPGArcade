@@ -52,14 +52,7 @@ u32 movingFrog1[8] = {	0x00000000,
 								0x00010112,
 								0x00001222,
 								0x00000212};
-/*u32 movingFrog2[8] = {	0x00000000,
-								0x00000000,
-								0x00001000,
-								0x22001100,
-								0x21301000,
-								0x21101000,
-								0x22210000,
-								0x22200000};*/
+								
 u32 movingFrog3[8] = {	0x00000212,
 								0x00000121,
 								0x00001112,
@@ -68,14 +61,6 @@ u32 movingFrog3[8] = {	0x00000212,
 								0x00110000,
 								0x00010000,
 								0x00000000};
-/*u32 movingFrog4[8] = {	0x22200000,
-								0x22100000,
-								0x21110000,
-								0x00011000,
-								0x00001000,
-								0x00001100,
-								0x00001000,
-								0x00000000};*/
 								
 u8 movingTransparencyMapUp1[8] = {0xFF,0xFF,0xEF,0xCC,0xE8,0xE8,0xF0,0xF8};
 u8 movingTransparencyMapUp2[8] = {0xFF,0xFF,0xF7,0x33,0x17,0x17,0x0F,0x1F};
@@ -105,15 +90,7 @@ u32 sittingFrog1[8] = {	0x00000000,
 								0x00010112,
 								0x00011222,
 								0x00000212};
-
-/*u32 sittingFrog2[8] = {	0x00000000,
-								0x00000000,
-								0x00000000,
-								0x22001000,
-								0x21301100,
-								0x21101000,
-								0x22211000,
-								0x22200000};*/
+								
 u32 sittingFrog3[8] = {	0x00011212,
 								0x00010121,
 								0x00110012,
@@ -123,14 +100,6 @@ u32 sittingFrog3[8] = {	0x00011212,
 								0x00000000,
 								0x00000000};
 
-/*u32 sittingFrog4[8] = {	0x22211000,
-								0x22101000,
-								0x21001100,
-								0x00001000,
-								0x00000000,
-								0x00000000,
-								0x00000000,
-								0x00000000};*/
 								
 u8 sittingTransparencyMapUp1[8] = {0xFF,0xFF,0xFF,0xEC,0xC8,0xE8,0xE0,0xF8};
 u8 sittingTransparencyMapUp2[8] = {0xFF,0xFF,0xFF,0x37,0x13,0x17,0x07,0x1F};
@@ -168,9 +137,7 @@ void outputFrogger(u8 animationFrame, u8 direction, u8 player)
 	int arrayX, arrayY, tileX, tileY;
 	
 	u32 *frog1;
-	//u32 *frog2;
 	u32 *frog3;
-	//u32 *frog4;
 	
 	u8 *transparencyMap1;
 	u8 *transparencyMap2;
@@ -190,16 +157,12 @@ void outputFrogger(u8 animationFrame, u8 direction, u8 player)
 	if (animationFrame == 0) // sitting image
 	{
 		frog1 = sittingFrog1;
-		//frog2 = sittingFrog2;
 		frog3 = sittingFrog3;
-		//frog4 = sittingFrog4;
 	}
 	else if (animationFrame == 1) //moving image
 	{
 		frog1 = movingFrog1;
-		//frog2 = movingFrog2;
 		frog3 = movingFrog3;
-		//frog4 = movingFrog4;
 	}
 	
 	u32 temp[8];
@@ -209,11 +172,9 @@ void outputFrogger(u8 animationFrame, u8 direction, u8 player)
 		mapArrayToTile(frog1,colors,FROG_TILE_1);
 		flip(frog1,temp,0,1);
 		mapArrayToTile(temp,colors,FROG_TILE_2);
-		//mapArrayToTile(frog2,colors,FROG_TILE_2);
 		mapArrayToTile(frog3,colors,FROG_TILE_3);
 		flip(frog3,temp,0,1);
 		mapArrayToTile(temp,colors,FROG_TILE_4);
-		//mapArrayToTile(frog4,colors,FROG_TILE_4);
 		
 		if (animationFrame == 0 )
 		{
@@ -241,10 +202,6 @@ void outputFrogger(u8 animationFrame, u8 direction, u8 player)
 		mapArrayToTile(temp,colors,FROG_TILE_2);
 		cflip(temp,1,0);
 		mapArrayToTile(temp,colors,FROG_TILE_4);
-		//rotate(frog4,temp);
-		//mapArrayToTile(temp,colors,FROG_TILE_3);
-		//rotate(frog2,temp);
-		//mapArrayToTile(temp,colors,FROG_TILE_4);
 		
 		if (animationFrame == 0 )
 		{
@@ -264,14 +221,10 @@ void outputFrogger(u8 animationFrame, u8 direction, u8 player)
 	}
 	else if (direction == DOWN)
 	{
-		//multipleRotate(frog4,temp,2);
-		//mapArrayToTile(temp,colors,FROG_TILE_1);
 		multipleRotate(frog3,temp,2);
 		mapArrayToTile(temp,colors,FROG_TILE_2);
 		cflip(temp,0,1);
 		mapArrayToTile(temp,colors,FROG_TILE_1);
-		//multipleRotate(frog2,temp,2);
-		//mapArrayToTile(temp,colors,FROG_TILE_3);
 		multipleRotate(frog1,temp,2);
 		mapArrayToTile(temp,colors,FROG_TILE_4);
 		cflip(temp,0,1);
@@ -295,10 +248,6 @@ void outputFrogger(u8 animationFrame, u8 direction, u8 player)
 	}
 	else if (direction == LEFT)
 	{
-		//multipleRotate(frog2,temp,3);
-		//mapArrayToTile(temp,colors,FROG_TILE_1);
-		//multipleRotate(frog4,temp,3);
-		//mapArrayToTile(temp,colors,FROG_TILE_2);
 		multipleRotate(frog1,temp,3);
 		mapArrayToTile(temp,colors,FROG_TILE_3);
 		cflip(temp,1,0);

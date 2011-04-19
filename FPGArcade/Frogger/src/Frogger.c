@@ -44,7 +44,7 @@ int main(void)
 {
 	u32 Data;
 	
-	Joystick joy1, joy2;
+	Joystick joy1;
 	Frog frogger;
 
 	initJoysticks();
