@@ -137,8 +137,6 @@ void rotate(u32 source_ary[], u32 storage[])
 		}
 
 	}
-
-
 }
 
 void crotate(u32 storage[])
@@ -170,7 +168,6 @@ void multipleRotate(u32 source_ary[], u32 storage[], u8 timesToRotate)
 //treat x and y as booleans, where x is flip over x axis and y is flip over y axis
 void flip(u32 source_ary[], u32 storage[], u8 x, u8 y)
 {
-
 	int i, j;
 
 	//flip over x axis
@@ -192,7 +189,6 @@ void flip(u32 source_ary[], u32 storage[], u8 x, u8 y)
 			storage[i] = temp;
 		}
 	}
-
 }
 
 

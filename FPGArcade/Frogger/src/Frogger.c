@@ -13,9 +13,20 @@
 #define STAGE_MAXX 432
 #define STAGE_MAXY 328
 
-u32 frogMovementCounter = 0;
-#define FROG_MOVEMENT_DELAY 550000
-u32 carMovementCounter = 0;
+u32 frogMovementCounter = 10000;
+#define FROG_MOVEMENT_DELAY 25000
+u32 raceCarMovementCounter = 5000;
+#define RACE_CAR_MOVEMENT_DELAY 25000
+u32 truckMovementCounter = 0;
+#define TRUCK_MOVEMENT_DELAY 35000
+u32 bullDozerMovementCounter = 15000;
+#define BULL_DOZER_MOVEMENT_DELAY 30000
+u32 purpleCarMovementCounter = 20000;
+#define PURPLE_CAR_MOVEMENT_DELAY 20000
+u32 turtleMovementCounter = 17000;
+#define TURTLE_MOVEMENT_DELAY 20000
+u32 logMovementCounter = 28000;
+#define LOG_MOVEMENT_DELAY 30000
 
 
 /*****************************************************************************/
@@ -74,15 +85,22 @@ int main(void)
 	setBackgroundBlock(8,1,truckTile7);
 	setBackgroundBlock(9,1,truckTile8);
 	
+	initMovingObjects();
+	
+	//u8 branchExecuted;
 	
 	//start game loop
 	while (1)
 	{
 		++frogMovementCounter;
-		++carMovementCounter;
+		++raceCarMovementCounter;
+		++truckMovementCounter;
+		++bullDozerMovementCounter;
+		++purpleCarMovementCounter;
+		++turtleMovementCounter;
+		++logMovementCounter;
 		
-		
-		if(frogMovementCounter == FROG_MOVEMENT_DELAY)
+		if(frogMovementCounter > FROG_MOVEMENT_DELAY)
 		{
 			frogMovementCounter = 0;
 			
@@ -142,6 +160,57 @@ int main(void)
 			moveFrog(&frogger);
 		} //if(frogMovementCounter == FROG_MOVEMENT_DELAY)
 	
+	
+		if (raceCarMovementCounter > RACE_CAR_MOVEMENT_DELAY)
+		{
+			raceCarMovementCounter = 0;
+			moveRow(Race_Car);
+		}
+		
+		if (truckMovementCounter > TRUCK_MOVEMENT_DELAY)
+		{
+			truckMovementCounter = 0;
+			moveRow(Truck);
+		}
+		
+		if (bullDozerMovementCounter > BULL_DOZER_MOVEMENT_DELAY)
+		{
+			bullDozerMovementCounter = 0;
+			moveRow(Bull_Dozer);
+		}
+		
+		if (purpleCarMovementCounter > PURPLE_CAR_MOVEMENT_DELAY)
+		{
+			purpleCarMovementCounter = 0;
+			moveRow(Purple_Car);
+		}
+		
+		if (turtleMovementCounter > TURTLE_MOVEMENT_DELAY)
+		{
+			turtleMovementCounter = 0;
+			moveRow(Turtle);
+			moveRow(Turtle2);
+		}
+		
+		if (logMovementCounter > LOG_MOVEMENT_DELAY)
+		{
+			logMovementCounter = 0;
+			moveRow(Log);
+			moveRow(Log2);
+		}
+		
+		/*while (branchExecuted>0)
+		{
+			frogMovementCounter+=100;
+			raceCarMovementCounter+=100;
+			truckMovementCounter+=100;
+			bullDozerMovementCounter+=100;
+			purpleCarMovementCounter+=100;
+			turtleMovementCounter+=100;
+			logMovementCounter+=100;
+			--branchExecuted;
+		}*/
+		
 	} //end infinite game loop
 
 	return XST_SUCCESS;

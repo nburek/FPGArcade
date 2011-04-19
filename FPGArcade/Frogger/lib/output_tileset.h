@@ -18,11 +18,7 @@
 */
 
 void createDirtTile();
-void drawDirt();
 void createGrassTile();
-void drawGrass();
-void createLoggy();
-void drawLoggy(int x, int y);
 void drawBackground();
 
 
@@ -73,13 +69,32 @@ void drawBackground(){
 		}
 	}
 	createGrassTile();
-	drawGrass();
+	//draw grass on screen
+	int x;
+	for (x = 26; x<54; ++x)
+	{
+		setBackgroundBlock(x,18,31);
+		if ((x%6!=3) && (x%6!= 4))
+		{
+			setBackgroundBlock(x,19,31);
+			setBackgroundBlock(x,20,31);
+		}
+	}
 	
 	createDirtTile();
-	drawDirt();
+	//draw dirt on screen
+	for (x = 26; x<53; ++x){
+		setBackgroundBlock(x,40,14);
+		setBackgroundBlock(x+1,40,13);
+		setBackgroundBlock(x,39,16);
+		setBackgroundBlock(x+1,39,15);
+		
+		setBackgroundBlock(x,30,14);
+		setBackgroundBlock(x+1,30,13);
+		setBackgroundBlock(x,29,16);
+		setBackgroundBlock(x+1,29,15);
+	}
 	
-	createLoggy();
-	drawLoggy(0, 0);
 }
 
 void createGrassTile()
@@ -99,21 +114,6 @@ void createGrassTile()
 						  0x22222022};
 						  
 	mapArrayToTile(ary1, color_palette, 31);
-
-}
-void drawGrass()
-{
-	
-	int x;
-	for (x = 26; x<54; ++x)
-	{
-		setBackgroundBlock(x,18,31);
-		if ((x%6!=3) && (x%6!= 4))
-		{
-			setBackgroundBlock(x,19,31);
-			setBackgroundBlock(x,20,31);
-		}
-	}
 
 }
 
@@ -176,46 +176,5 @@ void createDirtTile()
 
 }
 
-void drawDirt(){
-	
-	
-	int i;
-	for (i = 26; i<53; ++i){
-		setBackgroundBlock(i,40,14);
-		setBackgroundBlock(i+1,40,13);
-		setBackgroundBlock(i,39,16);
-		setBackgroundBlock(i+1,39,15);
-		
-		setBackgroundBlock(i,30,14);
-		setBackgroundBlock(i+1,30,13);
-		setBackgroundBlock(i,29,16);
-		setBackgroundBlock(i+1,29,15);
-	}
-	
-}
 
-void createLoggy(){
 
-	/*Value: 470000    Index Value: 1
-	Value: 4f68de    Index Value: 0
-	Value: f7dede    Index Value: 2
-	*/
-
-//	u8 color_palette[4] = {RED,BLUE, WHITE};
-
-	/*mapArrayToTile(ary1, color_palette, 17, 0);
-	mapArrayToTile(ary2, color_palette, 18, 0);
-	mapArrayToTile(ary3, color_palette, 19, 0);
-	
-	mapArrayToTile(ary1, color_palette, 20, 0);
-	mapArrayToTile(ary2, color_palette, 21, 0);
-	mapArrayToTile(ary3, color_palette, 22, 0);*/
-	
-	
-
-}
-void drawLoggy(int x, int y){
-	
-		//setBackgroundBlock(x,30,14);
-	
-}

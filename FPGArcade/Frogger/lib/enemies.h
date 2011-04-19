@@ -22,58 +22,244 @@
 #define truckTile7 58
 #define truckTile8 59
 
-typedef struct enemy_struct{
+#define turtleTile1 23
+#define turtleTile2 24
+#define turtleTile3 25
+#define turtleTile4 26
 
-	u16 x, x0, x1;
-	u16 y, y0, y1;
-	u16 width, height;
-	u8 x_spd;
-	u8 y_spd;
-	
-	u8 dir;
-	u8 alive;
-	
-	u16 jump_delay;
+#define logTile1 17
+#define logTile2 18
+#define logTile3 19
+#define logTile4 20
+#define logTile5 21
+#define logTile6 22
 
-}Enemy;
 
-enum CAR_TYPES
+#define minXTile 25
+#define maxXTile 54
+
+#define FIRST_ROW_Y 37
+
+enum MOVING_TYPES
 {
-	race_car,
-	bull_dozer,
-	truck,
-	purple_car
+	Race_Car,
+	Truck,
+	Bull_Dozer,
+	Purple_Car,
+	Blank_Row,
+	Turtle,
+	Log,
+	Turtle2,
+	Log2
 };
 
-typedef struct Car
-{
-	enum CAR_TYPES type;
-	u8 positionX;
-	u8 positionY;
-}Car;
+s8 direction[9] = {1,-1,1,-1,0,-1,1,-1,1};
+u16 movingObjectsX[9][4];
 
-#define raceCarY 38
-#define bullDozerY 34
-#define truckY 36
-#define purpleCarY 32
-
-void initCar(Car newCar, enum CAR_TYPES carType, u8 position)
+void initMovingObjects()
 {
-	newCar.positionX = position;
-	newCar.type = carType;
-	if (carType == race_car)
-		newCar.positionY = raceCarY;
-	else if (carType == bull_dozer)
-		newCar.positionY = bullDozerY;
-	else if (carType == truck)
-		newCar.positionY = truckY;
-	else if (carType == purple_car)
-		newCar.positionY = purpleCarY;
+	int i, ii, iii;
+	for (i = 0; i<9; ++i)
+	{
+		for (iii = 0,ii=22; iii<4; ++iii,ii+=10)
+		{
+			movingObjectsX[i][iii] = ii;
+		}
+	}
+	
+}
+void drawObjectOnScreen(u8 x, u8 y, u8 tile1, u8 tile2, u8 tile3, u8 tile4)
+{
+	if (x>=minXTile && x<maxXTile-1)
+	{
+		setBackgroundBlock( x+1, y, tile2);
+		setBackgroundBlock( x+1, y+1, tile4);
+	}
+	
+	if (x>minXTile && x<maxXTile)
+	{
+		setBackgroundBlock( x, y, tile1);
+		setBackgroundBlock( x, y+1, tile3);
+	}
 }
 
-void writeOutCar(u32 graphic1[], u32 graphic2[], u8 tile1, u8 tile2, u8 tile3, u8 tile4)
+
+
+//moves all the objects on that row and then redraws the row
+void moveRow(u8 row)
 {
-	u8 carColors[8] = {BLACK,PURPLE,RED,YELLOW,GREY,GREEN,CYAN,PURPLE};
+	int x;
+	u8 y = FIRST_ROW_Y - 2*row;
+	
+	//set all tiles in row to blue or black
+	u8 backgroundColorTile = (y<29)?11:0;
+	for (x = minXTile+1; x<maxXTile; ++x)
+	{
+		setBackgroundBlock(x,y,backgroundColorTile);
+		setBackgroundBlock(x,y+1,backgroundColorTile);
+	}
+		
+	for (x = 0; x<4; ++x)
+	{
+		movingObjectsX[row][x] += direction[row];
+		
+		if (movingObjectsX[row][x] < 20)
+			movingObjectsX[row][x] = 59;
+		else if (movingObjectsX[row][x] > 59)
+			movingObjectsX[row][x] = 20;
+		
+		switch (row)
+		{
+			case Race_Car:
+				drawObjectOnScreen(movingObjectsX[row][x],y,raceCarTile1,raceCarTile2,raceCarTile3,raceCarTile4);
+				break;
+			case Truck:
+				drawObjectOnScreen(movingObjectsX[row][x],y,truckTile1,truckTile2,truckTile5,truckTile6);
+				drawObjectOnScreen(movingObjectsX[row][x]+2,y,truckTile3,truckTile4,truckTile7,truckTile8);
+				break;
+			case Bull_Dozer:
+				drawObjectOnScreen(movingObjectsX[row][x],y,bullDozerTile1,bullDozerTile2,bullDozerTile3,bullDozerTile4);
+				break;
+			case Purple_Car:
+				drawObjectOnScreen(movingObjectsX[row][x],y,purpleCarTile1,purpleCarTile2,purpleCarTile3,purpleCarTile4);
+				break;
+			case Turtle:
+			case Turtle2:
+				drawObjectOnScreen(movingObjectsX[row][x],y,turtleTile1,turtleTile2,turtleTile3,turtleTile4);
+				drawObjectOnScreen(movingObjectsX[row][x]+2,y,turtleTile1,turtleTile2,turtleTile3,turtleTile4);
+				break;
+			case Log:
+				drawObjectOnScreen(movingObjectsX[row][x],y,logTile1,logTile2,logTile4,logTile5);
+				drawObjectOnScreen(movingObjectsX[row][x]+2,y,logTile2,logTile2,logTile5,logTile5);
+				drawObjectOnScreen(movingObjectsX[row][x]+4,y,logTile2,logTile3,logTile5,logTile6);
+				break;
+			
+		}
+		
+		/*
+		if (row == Race_Car)
+		{
+			drawObjectOnScreen(movingObjectsX[row][x],row,raceCarTile1,raceCarTile2,raceCarTile3,raceCarTile4);
+		}
+		else if (row == Truck)
+		{
+			drawObjectOnScreen(movingObjectsX[row][x],row,truckTile1,truckTile2,truckTile5,truckTile6);
+			drawObjectOnScreen(movingObjectsX[row][x]+2,row,truckTile3,truckTile4,truckTile7,truckTile8);
+		}*/
+		
+	}
+}
+
+/*
+typedef struct moving_object{
+	enum MOVING_TYPES type;
+	u16 positionX;
+	u16 positionY;
+	u8 direction; // 0 = left, 1 = right
+}MovingObject;
+
+
+
+
+#define raceCarY 37
+#define bullDozerY 33
+#define truckY 35
+#define purpleCarY 31
+#define logY 25
+#define turtleY 27
+
+void initObject(MovingObject *newObject, enum MOVING_TYPES objType, u16 position)
+{
+	(*newObject).positionX = position;
+	(*newObject).type = objType;
+
+	if (objType == race_car)
+	{
+		(*newObject).positionY = raceCarY;
+		(*newObject).direction = 0;
+	}
+	else if (objType == bull_dozer)
+	{
+		(*newObject).positionY = bullDozerY;
+		(*newObject).direction = 1;
+	}
+	else if (objType == truck)
+	{
+		(*newObject).positionY = truckY;
+		(*newObject).direction = 0;
+	}
+	else if (objType == purple_car)
+	{
+		(*newObject).positionY = purpleCarY;
+		(*newObject).direction = 1;
+	}
+	else if (objType == log)
+	{
+		(*newObject).positionY = purpleCarY;
+	}
+	else if (objType == turtle)
+	{
+		(*newObject).positionY = purpleCarY;
+	}
+}
+
+void drawRow(u8 rowNumber)
+{
+	int i; 
+	if (rowNumber == 0)
+	{
+		for (i = 0; i<1; ++i)
+		{
+			
+		}
+	}
+}
+
+
+void displayObject(u8 x, u8 y, u8 tile1, u8 tile2, u8 tile3, u8 tile4)
+{
+	if (x>minXTile+1 && x<maxXTile+1)
+	{
+		setBackgroundBlock( x-1, y, tile1);
+		setBackgroundBlock( x-1, y+1, tile3);
+	}
+	
+	if (x<maxXTile&&x>minXTile)
+	{
+		setBackgroundBlock( x, y, tile2);
+		setBackgroundBlock( x, y+1, tile4);
+	}
+}
+
+void drawFoo(MovingObject obj)
+{
+	u8 i;
+	for (i = minXTile+1 ;i<maxXTile;++i)
+	{
+		setBackgroundBlock(i,obj.positionY,0);
+		setBackgroundBlock(i,obj.positionY+1,0);
+	}
+	
+	displayObject(obj.positionX,obj.positionY,raceCarTile1,raceCarTile2,raceCarTile3,raceCarTile4);
+}
+
+void drawBar(MovingObject obj)
+{
+	u8 i;
+	for (i = minXTile+1 ;i<maxXTile;++i)
+	{
+		setBackgroundBlock(i,obj.positionY,0);
+		setBackgroundBlock(i,obj.positionY+1,0);
+	}
+	
+	displayObject(obj.positionX+2,obj.positionY,truckTile1,truckTile2,truckTile5,truckTile6);
+	displayObject(obj.positionX+4,obj.positionY,truckTile3,truckTile4,truckTile7,truckTile8);
+}
+*/
+
+void writeOutCarTile(u32 graphic1[], u32 graphic2[], u8 tile1, u8 tile2, u8 tile3, u8 tile4)
+{
+	u8 carColors[9] = {BLACK,PURPLE,RED,YELLOW,GREY,GREEN,CYAN,PURPLE,BLUE};
 	
 	u32 temp[8];
 	mapArrayToTile(graphic1, carColors, tile3);
@@ -188,12 +374,33 @@ void outputCarTiles()
 				0x00000000,
 				0x00000000,
 				0x00000000};
+				
+	u32 turtle1[8] = {
+				0x88888888,
+				0x88888888,
+				0x88885888,
+				0x88855588,
+				0x88888522,
+				0x88888222,
+				0x88452222,
+				0x85552222};
+				
+	u32 turtle2[8] = {
+				0x88888888,
+				0x88888888,
+				0x88885888,
+				0x88855588,
+				0x22258888,
+				0x22228888,
+				0x22222885,
+				0x22222258};
 	
-	writeOutCar(raceCar1,raceCar2,raceCarTile1,raceCarTile2,raceCarTile3,raceCarTile4);
-	writeOutCar(bullDozer1,bullDozer2,bullDozerTile1,bullDozerTile2,bullDozerTile3,bullDozerTile4);
-	writeOutCar(purpleCar1,purpleCar2,purpleCarTile1,purpleCarTile2,purpleCarTile3,purpleCarTile4);
-	writeOutCar(truck1,truck2,truckTile1,truckTile2,truckTile5,truckTile6);
-	writeOutCar(truck3,truck4,truckTile3,truckTile4,truckTile7,truckTile8);
+	writeOutCarTile(raceCar1,raceCar2,raceCarTile1,raceCarTile2,raceCarTile3,raceCarTile4);
+	writeOutCarTile(bullDozer1,bullDozer2,bullDozerTile1,bullDozerTile2,bullDozerTile3,bullDozerTile4);
+	writeOutCarTile(purpleCar1,purpleCar2,purpleCarTile1,purpleCarTile2,purpleCarTile3,purpleCarTile4);
+	writeOutCarTile(truck1,truck2,truckTile1,truckTile2,truckTile5,truckTile6);
+	writeOutCarTile(truck3,truck4,truckTile3,truckTile4,truckTile7,truckTile8);
+	writeOutCarTile(turtle1,turtle2,turtleTile3,turtleTile4,turtleTile1,turtleTile2);
 	
 	
 	

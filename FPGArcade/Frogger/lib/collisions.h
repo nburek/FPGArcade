@@ -12,7 +12,7 @@ void reCalcFrogBounds(Frog *frog)
 	(*frog).x1 = (*frog).x + (*frog).width /2;
 	(*frog).y1 = (*frog).y + (*frog).height /2;
 }
-
+/*
 void reCalcEnemyBounds(Enemy *enemy)
 {
 	(*enemy).x0 = (*enemy).x - (*enemy).width /2;
@@ -53,4 +53,4 @@ u16 find_hitBound(Frog *frog, Enemy *enemy)
 	}
 
 }
-
+*/
