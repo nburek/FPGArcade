@@ -129,6 +129,7 @@ void moveRow(u8 row)
 				drawObjectOnScreen(movingObjectsX[row][x]+2,y,turtleTile1,turtleTile2,turtleTile3,turtleTile4);
 				break;
 			case Log:
+			case Log2:
 				drawObjectOnScreen(movingObjectsX[row][x],y,logTile1,logTile2,logTile4,logTile5);
 				drawObjectOnScreen(movingObjectsX[row][x]+2,y,logTile2,logTile2,logTile5,logTile5);
 				drawObjectOnScreen(movingObjectsX[row][x]+4,y,logTile2,logTile3,logTile5,logTile6);
@@ -315,8 +316,8 @@ void outputCarTiles()
 	writeOutCarTile(truck1,truck2,truckTile1,truckTile2,truckTile5,truckTile6);
 	writeOutCarTile(truck3,truck4,truckTile3,truckTile4,truckTile7,truckTile8);
 	writeOutCarTile(turtle1,turtle2,turtleTile3,turtleTile4,turtleTile1,turtleTile2);
-	writeOutCarTile(log1,log2,logTile1,logTile2,logTile4,logTile5);
-	writeOutCarTile(log3,log3,logTile3,logTile3,logTile6,logTile6);
+	writeOutCarTile(log1,log2,logTile4,logTile5,logTile1,logTile2);
+	writeOutCarTile(log3,log3,logTile6,logTile6,logTile3,logTile3);
 	
 	
 	
