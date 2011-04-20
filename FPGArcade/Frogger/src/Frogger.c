@@ -1,3 +1,6 @@
+#define RESX 640
+#define RESY 480
+
 #include "xparameters.h"
 #include "xgpio.h"
 #include "xstatus.h"
@@ -8,10 +11,13 @@
 #include "collisions.h"
 #include "output_tileset.h"
 
+
 #define STAGE_MINX 208
 #define STAGE_MINY 152
 #define STAGE_MAXX 432
 #define STAGE_MAXY 328
+
+#define WATER_LINE 240
 
 u32 frogMovementCounter = 10000;
 #define FROG_MOVEMENT_DELAY 50000
@@ -61,37 +67,20 @@ int main(void)
 	
 	outputCarTiles();
 	
-	setBackgroundBlock(0,0,raceCarTile1);
-	setBackgroundBlock(1,0,raceCarTile2);
-	setBackgroundBlock(0,1,raceCarTile3);
-	setBackgroundBlock(1,1,raceCarTile4);
-	
-	setBackgroundBlock(2,0,bullDozerTile1);
-	setBackgroundBlock(3,0,bullDozerTile2);
-	setBackgroundBlock(2,1,bullDozerTile3);
-	setBackgroundBlock(3,1,bullDozerTile4);
-	
-	setBackgroundBlock(4,0,purpleCarTile1);
-	setBackgroundBlock(5,0,purpleCarTile2);
-	setBackgroundBlock(4,1,purpleCarTile3);
-	setBackgroundBlock(5,1,purpleCarTile4);
-	
-	setBackgroundBlock(6,0,truckTile1);
-	setBackgroundBlock(7,0,truckTile2);
-	setBackgroundBlock(8,0,truckTile3);
-	setBackgroundBlock(9,0,truckTile4);
-	setBackgroundBlock(6,1,truckTile5);
-	setBackgroundBlock(7,1,truckTile6);
-	setBackgroundBlock(8,1,truckTile7);
-	setBackgroundBlock(9,1,truckTile8);
-	
 	initMovingObjects();
+	
+	drawLives(frogger.lives);
 	
 	//u8 branchExecuted;
 	
+	u8 win = 0;
 	//start game loop
 	while (1)
 	{
+	
+		if(frogger.lives <= 0 || win == 1){
+			break;
+		}
 		++frogMovementCounter;
 		++raceCarMovementCounter;
 		++truckMovementCounter;
@@ -100,8 +89,38 @@ int main(void)
 		++turtleMovementCounter;
 		++logMovementCounter;
 		
+		
+		
 		if(frogMovementCounter > FROG_MOVEMENT_DELAY)
 		{
+		
+			//u16 froggerBX = (frogger.x -8) /8;
+			s16 froggerBY = (frogger.y -8) /8;
+			s16 lane = (FIRST_ROW_Y - froggerBY) /2;
+			
+			if(lane >= 0 && lane < 9){
+			
+				u8 cCheck = checkCollision(movingObjectsX[lane], movingObjectsWidth[lane], frogger.x);
+				if(cCheck){
+					if(frogger.y < WATER_LINE){
+						if((frogger.x +  8*direction[lane] < STAGE_MAXX) || (frogger.x +  8*direction[lane] < STAGE_MINX))
+							frogger.x += 8*direction[lane]; //safe on log or turtle, move with object
+					}else{
+						dieFrog(&frogger);
+						drawLives(frogger.lives);
+						//break;
+					}						
+				}else{
+					if(cCheck){
+						dieFrog(&frogger);
+						drawLives(frogger.lives);
+						//break;
+					}
+				}
+			}else if(lane == 9){
+				win = 1;
+			}
+			
 			frogMovementCounter = 0;
 			
 			if (frogFrame == 0) //if you're not in the middle of moving already
@@ -212,6 +231,20 @@ int main(void)
 		}*/
 		
 	} //end infinite game loop
+	
+	//fill screen with x's
+	
+	int i, j;
+	for (i = 25; i<55; ++i){
+		for (j = 17; j<42; ++j){
+
+			if(win == 1){
+				setBackgroundBlock(i,j,29);
+			}else{
+				setBackgroundBlock(i,j,27);
+			}
+		}
+	}
 
 	return XST_SUCCESS;
 }

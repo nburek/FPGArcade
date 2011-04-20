@@ -11,32 +11,32 @@
 
 typedef struct frog_struct{
 
-	u16 x, x0, x1;
-	u16 y, y0, y1;
-	u16 width, height;
+	u16 x;
+	u16 y;
 	u8 x_spd;
 	u8 y_spd;
 	
 	u8 dir;
-	u8 alive;
+	u8 lives;
 	
-	u16 jump_delay;
 
 }Frog;
 
 void initFrog(Frog* frog){
 	(*frog).x = 320;
 	(*frog).y = 320;
-	(*frog).width = 16;
-	(*frog).height = 16;
 	
 	(*frog).x_spd = 8;
 	(*frog).y_spd = 8;
 	
 	(*frog).dir = 1;
-	(*frog).alive = 1;
-	
-	(*frog).jump_delay = 30;
+	(*frog).lives = 3;
+
+}
+void dieFrog(Frog* frog){
+	--(*frog).lives;
+	(*frog).x = 320;
+	(*frog).y = 320;
 }
 
 #define LEFT 3
@@ -81,7 +81,6 @@ u8 movingTransparencyMapLeft1[8] = {0xFF,0xFF,0xEF,0xC3,0xFD,0xF0,0xE0,0xE0};
 u8 movingTransparencyMapLeft2[8] = {0xFF,0xFF,0xFB,0xE1,0xCF,0x1F,0x1F,0x1F};
 u8 movingTransparencyMapLeft3[8] = {0xE0,0xE0,0xF0,0xFD,0xC3,0xEF,0xFF,0xFF};
 u8 movingTransparencyMapLeft4[8] = {0x1F,0x1F,0x1F,0xCF,0xE1,0xFB,0xFF,0xFF};
-
 
 u32 sittingFrog1[8] = {	0x00000000,
 								0x00000000,
@@ -291,4 +290,18 @@ void moveFrog(Frog* frog)
 	setMoveableBlockPosition(	FROG_BLOCK_2,	(*frog).x,		(*frog).y-8);
 	setMoveableBlockPosition(	FROG_BLOCK_3,	(*frog).x-8,	(*frog).y);
 	setMoveableBlockPosition(	FROG_BLOCK_4,	(*frog).x,		(*frog).y);
+}
+
+void drawLives(u8 lives){
+	
+	int i;
+	for(i = 0; i < 3; ++i){
+		if(i +1 > lives){
+			setBackgroundBlock(25 + i,16, 0);
+		}
+		else{
+			setBackgroundBlock(25 + i,16, 28);
+		}
+	}
+
 }

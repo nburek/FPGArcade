@@ -91,6 +91,31 @@ void drawBackground()
 		}
 	}
 	
+	// x tile
+	for (i = 1; i<7; ++i){
+	
+		setPixel(27,i,i,RED);
+		setPixel(27,(6 - i),i,RED);
+	}
+	
+	for (i = 1; i<7; ++i){
+	
+		setPixel(29,i,i,BLUE);
+		setPixel(29,(6 - i),i,BLUE);
+	}
+
+	u8 life_palette[] = {BLACK,GREEN,YELLOW,PURPLE};
+	//create life
+	u32 life[8] = 	 {0x00000000, 
+						  0x01032301, 
+						  0x01222221, 
+						  0x00222220, 
+						  0x00222220, 
+						  0x01122211, 
+						  0x01000001, 
+						  0x01000001};
+	mapArrayToTile(life, life_palette, 28);
+	
 	//create black border
 	for (i = 26; i<54; ++i)
 		for (ii = 19; ii<41; ++ii)

@@ -4,13 +4,24 @@
 #define HIT_BBOUND	4
 #define MISS			0
 
+u8 checkCollision(u16 carRow[],u16 objW, u16 frogX){
+	
+	int i, j;
+	
+	u16 bFrogX = frogX /8;
+	for(i = 0; i < 4; ++i){
 
-void reCalcFrogBounds(Frog *frog)
-{
-	(*frog).x0 = (*frog).x - (*frog).width /2;
-	(*frog).y0 = (*frog).y - (*frog).height /2;
-	(*frog).x1 = (*frog).x + (*frog).width /2;
-	(*frog).y1 = (*frog).y + (*frog).height /2;
+		for(j = 0; j <= objW; ++j){
+			if( bFrogX == (carRow[i] + j))
+			{
+				return 1;
+			}
+		}
+
+	}
+	
+	return 0;
+
 }
 /*
 void reCalcEnemyBounds(Enemy *enemy)
@@ -52,5 +63,5 @@ u16 find_hitBound(Frog *frog, Enemy *enemy)
 		return MISS;//no collision
 	}
 
-}
-*/
+}*/
+
