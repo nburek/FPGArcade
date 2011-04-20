@@ -13037,3 +13037,1813 @@ mb-size Frogger/executable.elf
   10798	    760	   2202	  13760	   35c0	Frogger/executable.elf
 
 Done!
+
+********************************************************************************
+At Local date and time: Tue Apr 19 15:37:07 2011
+ make -f system.make Frogger_program started...
+mb-gcc -Os Frogger/src/Frogger.c  -o Frogger/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b  -T Frogger/Frogger_linker_script.ld     -I./microblaze_0/include/  -IFrogger/lib/  -L./microblaze_0/lib/  \
+	  
+In file included from Frogger/src/Frogger.c:5:
+Frogger/lib/graphicsLibrary.h:316:2: warning: no newline at end of file
+mb-size Frogger/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10798	    760	   2202	  13760	   35c0	Frogger/executable.elf
+
+WARNING:EDK:3915 - Process successfully completed but error message(s) were generated. Please verify that the messages are only warnings.Done!
+
+********************************************************************************
+At Local date and time: Tue Apr 19 15:37:36 2011
+ make -f system.make Frogger_program started...
+mb-gcc -Os Frogger/src/Frogger.c  -o Frogger/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b  -T Frogger/Frogger_linker_script.ld     -I./microblaze_0/include/  -IFrogger/lib/  -L./microblaze_0/lib/  \
+	  
+mb-size Frogger/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10798	    760	   2202	  13760	   35c0	Frogger/executable.elf
+
+Done!
+
+********************************************************************************
+At Local date and time: Tue Apr 19 16:39:10 2011
+ make -f system.make init_bram started...
+mb-gcc -O2 Pong/src/Pong.c  -o Pong/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b   -g    -I./microblaze_0/include/  -IPong/lib/  -L./microblaze_0/lib/  \
+	  
+Pong/src/Pong.c:9: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before numeric constant
+Pong/src/Pong.c: In function ‘main’:
+Pong/src/Pong.c:60: error: ‘paddleMovementCounter’ undeclared (first use in this function)
+Pong/src/Pong.c:60: error: (Each undeclared identifier is reported only once
+Pong/src/Pong.c:60: error: for each function it appears in.)
+Pong/src/Pong.c:62: error: ‘BALL_MOVEMENT_DELAY’ undeclared (first use in this function)
+Pong/src/Pong.c:75: error: incompatible type for argument 1 of ‘updateJoystick’
+Pong/src/Pong.c:79: error: ‘paddle1’ undeclared (first use in this function)
+Pong/src/Pong.c:90: error: incompatible type for argument 1 of ‘updateJoystick’
+Pong/src/Pong.c:94: error: ‘paddle2’ undeclared (first use in this function)
+make: *** [Pong/executable.elf] Error 1
+Done!
+
+********************************************************************************
+At Local date and time: Tue Apr 19 16:40:09 2011
+ make -f system.make Pong_program started...
+mb-gcc -O2 Pong/src/Pong.c  -o Pong/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b   -g    -I./microblaze_0/include/  -IPong/lib/  -L./microblaze_0/lib/  \
+	  
+Pong/src/Pong.c: In function ‘main’:
+Pong/src/Pong.c:75: error: incompatible type for argument 1 of ‘updateJoystick’
+Pong/src/Pong.c:79: error: ‘paddle1’ undeclared (first use in this function)
+Pong/src/Pong.c:79: error: (Each undeclared identifier is reported only once
+Pong/src/Pong.c:79: error: for each function it appears in.)
+Pong/src/Pong.c:90: error: incompatible type for argument 1 of ‘updateJoystick’
+Pong/src/Pong.c:94: error: ‘paddle2’ undeclared (first use in this function)
+make: *** [Pong/executable.elf] Error 1
+Done!
+
+********************************************************************************
+At Local date and time: Tue Apr 19 16:40:42 2011
+ make -f system.make Pong_program started...
+mb-gcc -O2 Pong/src/Pong.c  -o Pong/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b   -g    -I./microblaze_0/include/  -IPong/lib/  -L./microblaze_0/lib/  \
+	  
+Pong/src/Pong.c: In function ‘main’:
+Pong/src/Pong.c:79: error: ‘paddle1’ undeclared (first use in this function)
+Pong/src/Pong.c:79: error: (Each undeclared identifier is reported only once
+Pong/src/Pong.c:79: error: for each function it appears in.)
+Pong/src/Pong.c:94: error: ‘paddle2’ undeclared (first use in this function)
+make: *** [Pong/executable.elf] Error 1
+Done!
+
+********************************************************************************
+At Local date and time: Tue Apr 19 16:46:44 2011
+ make -f system.make Pong_program started...
+mb-gcc -O2 Pong/src/Pong.c  -o Pong/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b   -g    -I./microblaze_0/include/  -IPong/lib/  -L./microblaze_0/lib/  \
+	  
+Pong/src/Pong.c: In function ‘main’:
+Pong/src/Pong.c:80: error: ‘paddle1’ undeclared (first use in this function)
+Pong/src/Pong.c:80: error: (Each undeclared identifier is reported only once
+Pong/src/Pong.c:80: error: for each function it appears in.)
+Pong/src/Pong.c:95: warning: comparison is always false due to limited range of data type
+make: *** [Pong/executable.elf] Error 1
+Done!
+
+********************************************************************************
+At Local date and time: Tue Apr 19 16:47:21 2011
+ make -f system.make Pong_program started...
+mb-gcc -O2 Pong/src/Pong.c  -o Pong/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b   -g    -I./microblaze_0/include/  -IPong/lib/  -L./microblaze_0/lib/  \
+	  
+mb-size Pong/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4786	    356	   1112	   6254	   186e	Pong/executable.elf
+
+Done!
+
+********************************************************************************
+At Local date and time: Tue Apr 19 16:48:12 2011
+ make -f system.make init_bram started...
+*********************************************
+Initializing BRAM contents of the bitstream
+*********************************************
+bitinit -p xc3s500efg320-4 system.mhs -lp C:/Xilinx/12.4/ISE_DS/ISE/Digilent_Nexys_EDK_Board_Support_Files_V_2_1/lib/  -pe microblaze_0 Pong/executable.elf  \
+	-bt implementation/system.bit -o implementation/download.bit
+
+bitinit version Xilinx EDK 12.4 Build EDK_MS4.81d
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+
+Overriding IP level properties ...
+
+Computing clock values...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) dlmb_cntlr	dlmb
+  (0000000000-0x00003fff) ilmb_cntlr	ilmb
+  (0x81400000-0x8140ffff) Joystick_GPIO	mb_plb
+  (0x81420000-0x8142ffff) Graphics_GPIO	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 69 - tool is overriding PARAMETER
+   C_PLBV46_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 70 - tool is overriding PARAMETER
+   C_PLBV46_NUM_SLAVES value to 3
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 71 - tool is overriding PARAMETER C_PLBV46_MID_WIDTH
+   value to 1
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 73 - tool is overriding PARAMETER C_PLBV46_DWIDTH
+   value to 32
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:ilmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:dlmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:lmb_bram -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 67 - tool is overriding PARAMETER C_MEMSIZE
+   value to 0x4000
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 83 - tool is overriding PARAMETER C_SPLB_MID_WIDTH value to
+   1
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 84 - tool is overriding PARAMETER C_SPLB_NUM_MASTERS value
+   to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Joystick_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Graphics_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+
+Checking platform address map ...
+
+Initializing Memory...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -p xc3s500efg320-4 -bt
+"implementation/system.bit"  -bd "Pong/executable.elf" tag microblaze_0  -o b
+implementation/download.bit 
+Memory Initialization completed successfully.
+
+Done!
+
+********************************************************************************
+At Local date and time: Tue Apr 19 16:56:40 2011
+ make -f system.make init_bram started...
+mb-gcc -O2 Pong/src/Pong.c  -o Pong/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b   -g    -I./microblaze_0/include/  -IPong/lib/  -L./microblaze_0/lib/  \
+	  
+mb-size Pong/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4786	    356	   1112	   6254	   186e	Pong/executable.elf
+
+*********************************************
+Initializing BRAM contents of the bitstream
+*********************************************
+bitinit -p xc3s500efg320-4 system.mhs -lp C:/Xilinx/12.4/ISE_DS/ISE/Digilent_Nexys_EDK_Board_Support_Files_V_2_1/lib/  -pe microblaze_0 Pong/executable.elf  \
+	-bt implementation/system.bit -o implementation/download.bit
+
+bitinit version Xilinx EDK 12.4 Build EDK_MS4.81d
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+
+Overriding IP level properties ...
+
+Computing clock values...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) dlmb_cntlr	dlmb
+  (0000000000-0x00003fff) ilmb_cntlr	ilmb
+  (0x81400000-0x8140ffff) Joystick_GPIO	mb_plb
+  (0x81420000-0x8142ffff) Graphics_GPIO	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 69 - tool is overriding PARAMETER
+   C_PLBV46_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 70 - tool is overriding PARAMETER
+   C_PLBV46_NUM_SLAVES value to 3
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 71 - tool is overriding PARAMETER C_PLBV46_MID_WIDTH
+   value to 1
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 73 - tool is overriding PARAMETER C_PLBV46_DWIDTH
+   value to 32
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:ilmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:dlmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:lmb_bram -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 67 - tool is overriding PARAMETER C_MEMSIZE
+   value to 0x4000
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 83 - tool is overriding PARAMETER C_SPLB_MID_WIDTH value to
+   1
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 84 - tool is overriding PARAMETER C_SPLB_NUM_MASTERS value
+   to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Joystick_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Graphics_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+
+Checking platform address map ...
+
+Initializing Memory...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -p xc3s500efg320-4 -bt
+"implementation/system.bit"  -bd "Pong/executable.elf" tag microblaze_0  -o b
+implementation/download.bit 
+Memory Initialization completed successfully.
+
+Done!
+
+********************************************************************************
+At Local date and time: Tue Apr 19 16:58:15 2011
+ make -f system.make init_bram started...
+mb-gcc -O2 Pong/src/Pong.c  -o Pong/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b   -g    -I./microblaze_0/include/  -IPong/lib/  -L./microblaze_0/lib/  \
+	  
+mb-size Pong/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4706	    356	   1112	   6174	   181e	Pong/executable.elf
+
+*********************************************
+Initializing BRAM contents of the bitstream
+*********************************************
+bitinit -p xc3s500efg320-4 system.mhs -lp C:/Xilinx/12.4/ISE_DS/ISE/Digilent_Nexys_EDK_Board_Support_Files_V_2_1/lib/  -pe microblaze_0 Pong/executable.elf  \
+	-bt implementation/system.bit -o implementation/download.bit
+
+bitinit version Xilinx EDK 12.4 Build EDK_MS4.81d
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+
+Overriding IP level properties ...
+
+Computing clock values...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) dlmb_cntlr	dlmb
+  (0000000000-0x00003fff) ilmb_cntlr	ilmb
+  (0x81400000-0x8140ffff) Joystick_GPIO	mb_plb
+  (0x81420000-0x8142ffff) Graphics_GPIO	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 69 - tool is overriding PARAMETER
+   C_PLBV46_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 70 - tool is overriding PARAMETER
+   C_PLBV46_NUM_SLAVES value to 3
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 71 - tool is overriding PARAMETER C_PLBV46_MID_WIDTH
+   value to 1
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 73 - tool is overriding PARAMETER C_PLBV46_DWIDTH
+   value to 32
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:ilmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:dlmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:lmb_bram -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 67 - tool is overriding PARAMETER C_MEMSIZE
+   value to 0x4000
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 83 - tool is overriding PARAMETER C_SPLB_MID_WIDTH value to
+   1
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 84 - tool is overriding PARAMETER C_SPLB_NUM_MASTERS value
+   to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Joystick_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Graphics_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+
+Checking platform address map ...
+
+Initializing Memory...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -p xc3s500efg320-4 -bt
+"implementation/system.bit"  -bd "Pong/executable.elf" tag microblaze_0  -o b
+implementation/download.bit 
+Memory Initialization completed successfully.
+
+Done!
+
+********************************************************************************
+At Local date and time: Tue Apr 19 17:00:46 2011
+ make -f system.make init_bram started...
+mb-gcc -O2 Pong/src/Pong.c  -o Pong/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b   -g    -I./microblaze_0/include/  -IPong/lib/  -L./microblaze_0/lib/  \
+	  
+mb-size Pong/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4710	    356	   1112	   6178	   1822	Pong/executable.elf
+
+*********************************************
+Initializing BRAM contents of the bitstream
+*********************************************
+bitinit -p xc3s500efg320-4 system.mhs -lp C:/Xilinx/12.4/ISE_DS/ISE/Digilent_Nexys_EDK_Board_Support_Files_V_2_1/lib/  -pe microblaze_0 Pong/executable.elf  \
+	-bt implementation/system.bit -o implementation/download.bit
+
+bitinit version Xilinx EDK 12.4 Build EDK_MS4.81d
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+
+Overriding IP level properties ...
+
+Computing clock values...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) dlmb_cntlr	dlmb
+  (0000000000-0x00003fff) ilmb_cntlr	ilmb
+  (0x81400000-0x8140ffff) Joystick_GPIO	mb_plb
+  (0x81420000-0x8142ffff) Graphics_GPIO	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 69 - tool is overriding PARAMETER
+   C_PLBV46_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 70 - tool is overriding PARAMETER
+   C_PLBV46_NUM_SLAVES value to 3
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 71 - tool is overriding PARAMETER C_PLBV46_MID_WIDTH
+   value to 1
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 73 - tool is overriding PARAMETER C_PLBV46_DWIDTH
+   value to 32
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:ilmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:dlmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:lmb_bram -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 67 - tool is overriding PARAMETER C_MEMSIZE
+   value to 0x4000
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 83 - tool is overriding PARAMETER C_SPLB_MID_WIDTH value to
+   1
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 84 - tool is overriding PARAMETER C_SPLB_NUM_MASTERS value
+   to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Joystick_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Graphics_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+
+Checking platform address map ...
+
+Initializing Memory...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -p xc3s500efg320-4 -bt
+"implementation/system.bit"  -bd "Pong/executable.elf" tag microblaze_0  -o b
+implementation/download.bit 
+Memory Initialization completed successfully.
+
+Done!
+
+********************************************************************************
+At Local date and time: Tue Apr 19 17:04:40 2011
+ make -f system.make init_bram started...
+mb-gcc -O2 Pong/src/Pong.c  -o Pong/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b   -g    -I./microblaze_0/include/  -IPong/lib/  -L./microblaze_0/lib/  \
+	  
+mb-size Pong/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4794	    356	   1112	   6262	   1876	Pong/executable.elf
+
+*********************************************
+Initializing BRAM contents of the bitstream
+*********************************************
+bitinit -p xc3s500efg320-4 system.mhs -lp C:/Xilinx/12.4/ISE_DS/ISE/Digilent_Nexys_EDK_Board_Support_Files_V_2_1/lib/  -pe microblaze_0 Pong/executable.elf  \
+	-bt implementation/system.bit -o implementation/download.bit
+
+bitinit version Xilinx EDK 12.4 Build EDK_MS4.81d
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+
+Overriding IP level properties ...
+
+Computing clock values...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) dlmb_cntlr	dlmb
+  (0000000000-0x00003fff) ilmb_cntlr	ilmb
+  (0x81400000-0x8140ffff) Joystick_GPIO	mb_plb
+  (0x81420000-0x8142ffff) Graphics_GPIO	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 69 - tool is overriding PARAMETER
+   C_PLBV46_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 70 - tool is overriding PARAMETER
+   C_PLBV46_NUM_SLAVES value to 3
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 71 - tool is overriding PARAMETER C_PLBV46_MID_WIDTH
+   value to 1
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 73 - tool is overriding PARAMETER C_PLBV46_DWIDTH
+   value to 32
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:ilmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:dlmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:lmb_bram -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 67 - tool is overriding PARAMETER C_MEMSIZE
+   value to 0x4000
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 83 - tool is overriding PARAMETER C_SPLB_MID_WIDTH value to
+   1
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 84 - tool is overriding PARAMETER C_SPLB_NUM_MASTERS value
+   to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Joystick_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Graphics_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+
+Checking platform address map ...
+
+Initializing Memory...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -p xc3s500efg320-4 -bt
+"implementation/system.bit"  -bd "Pong/executable.elf" tag microblaze_0  -o b
+implementation/download.bit 
+Memory Initialization completed successfully.
+
+Done!
+Writing filter settings....
+Done writing filter settings to:
+	C:\FPGArcade\FPGArcade\etc\system.filters
+Done writing Tab View settings to:
+	C:\FPGArcade\FPGArcade\etc\system.gui
+Xilinx Platform Studio (XPS)
+Xilinx EDK 12.4 Build EDK_MS4.81d
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+
+********************************************************************************
+At Local date and time: Tue Apr 19 22:41:07 2011
+ make -f system.make Pong_program started...
+mb-gcc -O2 Pong/src/Pong.c  -o Pong/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b   -g    -I./microblaze_0/include/  -IPong/lib/  -L./microblaze_0/lib/  \
+	  
+mb-size Pong/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4994	    356	   1112	   6462	   193e	Pong/executable.elf
+
+Done!
+
+********************************************************************************
+At Local date and time: Tue Apr 19 22:42:28 2011
+ make -f system.make Pong_program started...
+mb-gcc -O2 Pong/src/Pong.c  -o Pong/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b   -g    -I./microblaze_0/include/  -IPong/lib/  -L./microblaze_0/lib/  \
+	  
+Pong/src/Pong.c: In function ‘main’:
+Pong/src/Pong.c:56: error: expected ‘;’ before ‘setMoveableBlockPosition’
+make: *** [Pong/executable.elf] Error 1
+Done!
+
+********************************************************************************
+At Local date and time: Tue Apr 19 22:42:44 2011
+ make -f system.make Pong_program started...
+mb-gcc -O2 Pong/src/Pong.c  -o Pong/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b   -g    -I./microblaze_0/include/  -IPong/lib/  -L./microblaze_0/lib/  \
+	  
+Pong/src/Pong.c: In function ‘main’:
+Pong/src/Pong.c:56: error: expected ‘;’ before ‘setMoveableBlockPosition’
+make: *** [Pong/executable.elf] Error 1
+Done!
+
+********************************************************************************
+At Local date and time: Tue Apr 19 22:42:56 2011
+ make -f system.make Pong_program started...
+mb-gcc -O2 Pong/src/Pong.c  -o Pong/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b   -g    -I./microblaze_0/include/  -IPong/lib/  -L./microblaze_0/lib/  \
+	  
+mb-size Pong/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5030	    356	   1112	   6498	   1962	Pong/executable.elf
+
+Done!
+
+********************************************************************************
+At Local date and time: Tue Apr 19 22:43:16 2011
+ make -f system.make Pong_program started...
+mb-gcc -O2 Pong/src/Pong.c  -o Pong/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b      -I./microblaze_0/include/  -IPong/lib/  -L./microblaze_0/lib/  \
+	  
+mb-size Pong/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5030	    356	   1112	   6498	   1962	Pong/executable.elf
+
+Done!
+
+********************************************************************************
+At Local date and time: Tue Apr 19 22:43:37 2011
+ make -f system.make Pong_program started...
+mb-gcc -O3 Pong/src/Pong.c  -o Pong/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b      -I./microblaze_0/include/  -IPong/lib/  -L./microblaze_0/lib/  \
+	  
+mb-size Pong/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7002	    356	   1112	   8470	   2116	Pong/executable.elf
+
+Done!
+
+********************************************************************************
+At Local date and time: Tue Apr 19 22:43:53 2011
+ make -f system.make Pong_program started...
+mb-gcc -Os Pong/src/Pong.c  -o Pong/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b      -I./microblaze_0/include/  -IPong/lib/  -L./microblaze_0/lib/  \
+	  
+mb-size Pong/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4954	    356	   1112	   6422	   1916	Pong/executable.elf
+
+Done!
+
+********************************************************************************
+At Local date and time: Tue Apr 19 22:46:08 2011
+ make -f system.make init_bram started...
+*********************************************
+Initializing BRAM contents of the bitstream
+*********************************************
+bitinit -p xc3s500efg320-4 system.mhs -lp C:/Xilinx/12.4/ISE_DS/ISE/Digilent_Nexys_EDK_Board_Support_Files_V_2_1/lib/  -pe microblaze_0 Pong/executable.elf  \
+	-bt implementation/system.bit -o implementation/download.bit
+
+bitinit version Xilinx EDK 12.4 Build EDK_MS4.81d
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+
+Overriding IP level properties ...
+
+Computing clock values...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) dlmb_cntlr	dlmb
+  (0000000000-0x00003fff) ilmb_cntlr	ilmb
+  (0x81400000-0x8140ffff) Joystick_GPIO	mb_plb
+  (0x81420000-0x8142ffff) Graphics_GPIO	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 69 - tool is overriding PARAMETER
+   C_PLBV46_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 70 - tool is overriding PARAMETER
+   C_PLBV46_NUM_SLAVES value to 3
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 71 - tool is overriding PARAMETER C_PLBV46_MID_WIDTH
+   value to 1
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 73 - tool is overriding PARAMETER C_PLBV46_DWIDTH
+   value to 32
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:ilmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:dlmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:lmb_bram -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 67 - tool is overriding PARAMETER C_MEMSIZE
+   value to 0x4000
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 83 - tool is overriding PARAMETER C_SPLB_MID_WIDTH value to
+   1
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 84 - tool is overriding PARAMETER C_SPLB_NUM_MASTERS value
+   to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Joystick_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Graphics_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+
+Checking platform address map ...
+
+Initializing Memory...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -p xc3s500efg320-4 -bt
+"implementation/system.bit"  -bd "Pong/executable.elf" tag microblaze_0  -o b
+implementation/download.bit 
+Memory Initialization completed successfully.
+
+Done!
+Writing filter settings....
+Done writing filter settings to:
+	C:\FPGArcade\FPGArcade\etc\system.filters
+Done writing Tab View settings to:
+	C:\FPGArcade\FPGArcade\etc\system.gui
+Xilinx Platform Studio (XPS)
+Xilinx EDK 12.4 Build EDK_MS4.81d
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+
+********************************************************************************
+At Local date and time: Wed Apr 20 08:28:38 2011
+ make -f system.make init_bram started...
+make: Nothing to be done for `init_bram'.
+Done!
+
+********************************************************************************
+At Local date and time: Wed Apr 20 10:10:19 2011
+ make -f system.make Pong_program started...
+mb-gcc -Os Pong/src/Pong.c  -o Pong/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b      -I./microblaze_0/include/  -IPong/lib/  -L./microblaze_0/lib/  \
+	  
+mb-size Pong/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5294	    356	   1120	   6770	   1a72	Pong/executable.elf
+
+Done!
+
+********************************************************************************
+At Local date and time: Wed Apr 20 10:26:15 2011
+ make -f system.make Pong_program started...
+mb-gcc -Os Pong/src/Pong.c  -o Pong/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b      -I./microblaze_0/include/  -IPong/lib/  -L./microblaze_0/lib/  \
+	  
+Pong/src/Pong.c: In function ‘main’:
+Pong/src/Pong.c:132: error: expected expression before ‘else’
+Pong/src/Pong.c: At top level:
+Pong/src/Pong.c:215: warning: conflicting types for ‘drawPaddle1’
+Pong/src/Pong.c:168: warning: previous implicit declaration of ‘drawPaddle1’ was here
+Pong/src/Pong.c: In function ‘drawPaddle1’:
+Pong/src/Pong.c:216: error: ‘i’ undeclared (first use in this function)
+Pong/src/Pong.c:216: error: (Each undeclared identifier is reported only once
+Pong/src/Pong.c:216: error: for each function it appears in.)
+Pong/src/Pong.c: At top level:
+Pong/src/Pong.c:221: warning: conflicting types for ‘drawPaddle2’
+Pong/src/Pong.c:192: warning: previous implicit declaration of ‘drawPaddle2’ was here
+Pong/src/Pong.c: In function ‘drawPaddle2’:
+Pong/src/Pong.c:222: error: ‘i’ undeclared (first use in this function)
+make: *** [Pong/executable.elf] Error 1
+Done!
+
+********************************************************************************
+At Local date and time: Wed Apr 20 10:26:35 2011
+ make -f system.make Pong_program started...
+mb-gcc -Os Pong/src/Pong.c  -o Pong/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b      -I./microblaze_0/include/  -IPong/lib/  -L./microblaze_0/lib/  \
+	  
+Pong/src/Pong.c: In function ‘main’:
+Pong/src/Pong.c:134: error: expected expression before ‘else’
+Pong/src/Pong.c: In function ‘drawPaddle1’:
+Pong/src/Pong.c:218: error: ‘i’ undeclared (first use in this function)
+Pong/src/Pong.c:218: error: (Each undeclared identifier is reported only once
+Pong/src/Pong.c:218: error: for each function it appears in.)
+Pong/src/Pong.c: In function ‘drawPaddle2’:
+Pong/src/Pong.c:224: error: ‘i’ undeclared (first use in this function)
+make: *** [Pong/executable.elf] Error 1
+Done!
+
+********************************************************************************
+At Local date and time: Wed Apr 20 10:27:13 2011
+ make -f system.make Pong_program started...
+mb-gcc -Os Pong/src/Pong.c  -o Pong/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b      -I./microblaze_0/include/  -IPong/lib/  -L./microblaze_0/lib/  \
+	  
+mb-size Pong/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5538	    360	   1120	   7018	   1b6a	Pong/executable.elf
+
+Done!
+
+********************************************************************************
+At Local date and time: Wed Apr 20 10:35:41 2011
+ make -f system.make Pong_program started...
+mb-gcc -Os Pong/src/Pong.c  -o Pong/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b      -I./microblaze_0/include/  -IPong/lib/  -L./microblaze_0/lib/  \
+	  
+mb-size Pong/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5778	    360	   1120	   7258	   1c5a	Pong/executable.elf
+
+Done!
+
+********************************************************************************
+At Local date and time: Wed Apr 20 10:46:55 2011
+ make -f system.make init_bram started...
+mb-gcc -Os Pong/src/Pong.c  -o Pong/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b      -I./microblaze_0/include/  -IPong/lib/  -L./microblaze_0/lib/  \
+	  
+mb-size Pong/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5778	    360	   1120	   7258	   1c5a	Pong/executable.elf
+
+*********************************************
+Initializing BRAM contents of the bitstream
+*********************************************
+bitinit -p xc3s500efg320-4 system.mhs -lp C:/Xilinx/12.4/ISE_DS/ISE/Digilent_Nexys_EDK_Board_Support_Files_V_2_1/lib/  -pe microblaze_0 Pong/executable.elf  \
+	-bt implementation/system.bit -o implementation/download.bit
+
+bitinit version Xilinx EDK 12.4 Build EDK_MS4.81d
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+
+Overriding IP level properties ...
+
+Computing clock values...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) dlmb_cntlr	dlmb
+  (0000000000-0x00003fff) ilmb_cntlr	ilmb
+  (0x81400000-0x8140ffff) Joystick_GPIO	mb_plb
+  (0x81420000-0x8142ffff) Graphics_GPIO	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 69 - tool is overriding PARAMETER
+   C_PLBV46_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 70 - tool is overriding PARAMETER
+   C_PLBV46_NUM_SLAVES value to 3
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 71 - tool is overriding PARAMETER C_PLBV46_MID_WIDTH
+   value to 1
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 73 - tool is overriding PARAMETER C_PLBV46_DWIDTH
+   value to 32
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:ilmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:dlmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:lmb_bram -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 67 - tool is overriding PARAMETER C_MEMSIZE
+   value to 0x4000
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 83 - tool is overriding PARAMETER C_SPLB_MID_WIDTH value to
+   1
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 84 - tool is overriding PARAMETER C_SPLB_NUM_MASTERS value
+   to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Joystick_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Graphics_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+
+Checking platform address map ...
+
+Initializing Memory...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -p xc3s500efg320-4 -bt
+"implementation/system.bit"  -bd "Pong/executable.elf" tag microblaze_0  -o b
+implementation/download.bit 
+Memory Initialization completed successfully.
+
+Done!
+
+********************************************************************************
+At Local date and time: Wed Apr 20 10:57:27 2011
+ make -f system.make init_bram started...
+mb-gcc -Os Pong/src/Pong.c  -o Pong/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b      -I./microblaze_0/include/  -IPong/lib/  -L./microblaze_0/lib/  \
+	  
+mb-size Pong/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5778	    360	   1120	   7258	   1c5a	Pong/executable.elf
+
+*********************************************
+Initializing BRAM contents of the bitstream
+*********************************************
+bitinit -p xc3s500efg320-4 system.mhs -lp C:/Xilinx/12.4/ISE_DS/ISE/Digilent_Nexys_EDK_Board_Support_Files_V_2_1/lib/  -pe microblaze_0 Pong/executable.elf  \
+	-bt implementation/system.bit -o implementation/download.bit
+
+bitinit version Xilinx EDK 12.4 Build EDK_MS4.81d
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+
+Overriding IP level properties ...
+
+Computing clock values...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) dlmb_cntlr	dlmb
+  (0000000000-0x00003fff) ilmb_cntlr	ilmb
+  (0x81400000-0x8140ffff) Joystick_GPIO	mb_plb
+  (0x81420000-0x8142ffff) Graphics_GPIO	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 69 - tool is overriding PARAMETER
+   C_PLBV46_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 70 - tool is overriding PARAMETER
+   C_PLBV46_NUM_SLAVES value to 3
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 71 - tool is overriding PARAMETER C_PLBV46_MID_WIDTH
+   value to 1
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 73 - tool is overriding PARAMETER C_PLBV46_DWIDTH
+   value to 32
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:ilmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:dlmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:lmb_bram -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 67 - tool is overriding PARAMETER C_MEMSIZE
+   value to 0x4000
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 83 - tool is overriding PARAMETER C_SPLB_MID_WIDTH value to
+   1
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 84 - tool is overriding PARAMETER C_SPLB_NUM_MASTERS value
+   to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Joystick_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Graphics_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+
+Checking platform address map ...
+
+Initializing Memory...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -p xc3s500efg320-4 -bt
+"implementation/system.bit"  -bd "Pong/executable.elf" tag microblaze_0  -o b
+implementation/download.bit 
+Memory Initialization completed successfully.
+
+Done!
+
+********************************************************************************
+At Local date and time: Wed Apr 20 10:58:10 2011
+ make -f system.make init_bram started...
+mb-gcc -Os Pong/src/Pong.c  -o Pong/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b      -I./microblaze_0/include/  -IPong/lib/  -L./microblaze_0/lib/  \
+	  
+mb-size Pong/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5778	    360	   1120	   7258	   1c5a	Pong/executable.elf
+
+*********************************************
+Initializing BRAM contents of the bitstream
+*********************************************
+bitinit -p xc3s500efg320-4 system.mhs -lp C:/Xilinx/12.4/ISE_DS/ISE/Digilent_Nexys_EDK_Board_Support_Files_V_2_1/lib/  -pe microblaze_0 Pong/executable.elf  \
+	-bt implementation/system.bit -o implementation/download.bit
+
+bitinit version Xilinx EDK 12.4 Build EDK_MS4.81d
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+
+Overriding IP level properties ...
+
+Computing clock values...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) dlmb_cntlr	dlmb
+  (0000000000-0x00003fff) ilmb_cntlr	ilmb
+  (0x81400000-0x8140ffff) Joystick_GPIO	mb_plb
+  (0x81420000-0x8142ffff) Graphics_GPIO	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 69 - tool is overriding PARAMETER
+   C_PLBV46_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 70 - tool is overriding PARAMETER
+   C_PLBV46_NUM_SLAVES value to 3
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 71 - tool is overriding PARAMETER C_PLBV46_MID_WIDTH
+   value to 1
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 73 - tool is overriding PARAMETER C_PLBV46_DWIDTH
+   value to 32
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:ilmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:dlmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:lmb_bram -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 67 - tool is overriding PARAMETER C_MEMSIZE
+   value to 0x4000
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 83 - tool is overriding PARAMETER C_SPLB_MID_WIDTH value to
+   1
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 84 - tool is overriding PARAMETER C_SPLB_NUM_MASTERS value
+   to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Joystick_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Graphics_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+
+Checking platform address map ...
+
+Initializing Memory...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -p xc3s500efg320-4 -bt
+"implementation/system.bit"  -bd "Pong/executable.elf" tag microblaze_0  -o b
+implementation/download.bit 
+Memory Initialization completed successfully.
+
+Done!
+
+********************************************************************************
+At Local date and time: Wed Apr 20 11:00:39 2011
+ make -f system.make init_bram started...
+mb-gcc -Os Pong/src/Pong.c  -o Pong/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b      -I./microblaze_0/include/  -IPong/lib/  -L./microblaze_0/lib/  \
+	  
+mb-size Pong/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5778	    360	   1120	   7258	   1c5a	Pong/executable.elf
+
+*********************************************
+Initializing BRAM contents of the bitstream
+*********************************************
+bitinit -p xc3s500efg320-4 system.mhs -lp C:/Xilinx/12.4/ISE_DS/ISE/Digilent_Nexys_EDK_Board_Support_Files_V_2_1/lib/  -pe microblaze_0 Pong/executable.elf  \
+	-bt implementation/system.bit -o implementation/download.bit
+
+bitinit version Xilinx EDK 12.4 Build EDK_MS4.81d
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+
+Overriding IP level properties ...
+
+Computing clock values...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) dlmb_cntlr	dlmb
+  (0000000000-0x00003fff) ilmb_cntlr	ilmb
+  (0x81400000-0x8140ffff) Joystick_GPIO	mb_plb
+  (0x81420000-0x8142ffff) Graphics_GPIO	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 69 - tool is overriding PARAMETER
+   C_PLBV46_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 70 - tool is overriding PARAMETER
+   C_PLBV46_NUM_SLAVES value to 3
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 71 - tool is overriding PARAMETER C_PLBV46_MID_WIDTH
+   value to 1
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 73 - tool is overriding PARAMETER C_PLBV46_DWIDTH
+   value to 32
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:ilmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:dlmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:lmb_bram -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 67 - tool is overriding PARAMETER C_MEMSIZE
+   value to 0x4000
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 83 - tool is overriding PARAMETER C_SPLB_MID_WIDTH value to
+   1
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 84 - tool is overriding PARAMETER C_SPLB_NUM_MASTERS value
+   to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Joystick_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Graphics_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+
+Checking platform address map ...
+
+Initializing Memory...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -p xc3s500efg320-4 -bt
+"implementation/system.bit"  -bd "Pong/executable.elf" tag microblaze_0  -o b
+implementation/download.bit 
+Memory Initialization completed successfully.
+
+Done!
+
+********************************************************************************
+At Local date and time: Wed Apr 20 11:08:13 2011
+ make -f system.make init_bram started...
+mb-gcc -Os Pong/src/Pong.c  -o Pong/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b      -I./microblaze_0/include/  -IPong/lib/  -L./microblaze_0/lib/  \
+	  
+mb-size Pong/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5778	    360	   1120	   7258	   1c5a	Pong/executable.elf
+
+*********************************************
+Initializing BRAM contents of the bitstream
+*********************************************
+bitinit -p xc3s500efg320-4 system.mhs -lp C:/Xilinx/12.4/ISE_DS/ISE/Digilent_Nexys_EDK_Board_Support_Files_V_2_1/lib/  -pe microblaze_0 Pong/executable.elf  \
+	-bt implementation/system.bit -o implementation/download.bit
+
+bitinit version Xilinx EDK 12.4 Build EDK_MS4.81d
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+
+Overriding IP level properties ...
+
+Computing clock values...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) dlmb_cntlr	dlmb
+  (0000000000-0x00003fff) ilmb_cntlr	ilmb
+  (0x81400000-0x8140ffff) Joystick_GPIO	mb_plb
+  (0x81420000-0x8142ffff) Graphics_GPIO	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 69 - tool is overriding PARAMETER
+   C_PLBV46_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 70 - tool is overriding PARAMETER
+   C_PLBV46_NUM_SLAVES value to 3
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 71 - tool is overriding PARAMETER C_PLBV46_MID_WIDTH
+   value to 1
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 73 - tool is overriding PARAMETER C_PLBV46_DWIDTH
+   value to 32
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:ilmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:dlmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:lmb_bram -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 67 - tool is overriding PARAMETER C_MEMSIZE
+   value to 0x4000
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 83 - tool is overriding PARAMETER C_SPLB_MID_WIDTH value to
+   1
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 84 - tool is overriding PARAMETER C_SPLB_NUM_MASTERS value
+   to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Joystick_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Graphics_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+
+Checking platform address map ...
+
+Initializing Memory...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -p xc3s500efg320-4 -bt
+"implementation/system.bit"  -bd "Pong/executable.elf" tag microblaze_0  -o b
+implementation/download.bit 
+Memory Initialization completed successfully.
+
+Done!
+
+********************************************************************************
+At Local date and time: Wed Apr 20 12:40:31 2011
+ make -f system.make init_bram started...
+mb-gcc -Os Pong/src/Pong.c  -o Pong/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b      -I./microblaze_0/include/  -IPong/lib/  -L./microblaze_0/lib/  \
+	  
+mb-size Pong/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5770	    360	   1120	   7250	   1c52	Pong/executable.elf
+
+*********************************************
+Initializing BRAM contents of the bitstream
+*********************************************
+bitinit -p xc3s500efg320-4 system.mhs -lp C:/Xilinx/12.4/ISE_DS/ISE/Digilent_Nexys_EDK_Board_Support_Files_V_2_1/lib/  -pe microblaze_0 Pong/executable.elf  \
+	-bt implementation/system.bit -o implementation/download.bit
+
+bitinit version Xilinx EDK 12.4 Build EDK_MS4.81d
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+
+Overriding IP level properties ...
+
+Computing clock values...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) dlmb_cntlr	dlmb
+  (0000000000-0x00003fff) ilmb_cntlr	ilmb
+  (0x81400000-0x8140ffff) Joystick_GPIO	mb_plb
+  (0x81420000-0x8142ffff) Graphics_GPIO	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 69 - tool is overriding PARAMETER
+   C_PLBV46_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 70 - tool is overriding PARAMETER
+   C_PLBV46_NUM_SLAVES value to 3
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 71 - tool is overriding PARAMETER C_PLBV46_MID_WIDTH
+   value to 1
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 73 - tool is overriding PARAMETER C_PLBV46_DWIDTH
+   value to 32
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:ilmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:dlmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:lmb_bram -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 67 - tool is overriding PARAMETER C_MEMSIZE
+   value to 0x4000
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 83 - tool is overriding PARAMETER C_SPLB_MID_WIDTH value to
+   1
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 84 - tool is overriding PARAMETER C_SPLB_NUM_MASTERS value
+   to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Joystick_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Graphics_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+
+Checking platform address map ...
+
+Initializing Memory...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -p xc3s500efg320-4 -bt
+"implementation/system.bit"  -bd "Pong/executable.elf" tag microblaze_0  -o b
+implementation/download.bit 
+Memory Initialization completed successfully.
+
+Done!
+
+********************************************************************************
+At Local date and time: Wed Apr 20 13:53:51 2011
+ make -f system.make init_bram started...
+make: Nothing to be done for `init_bram'.
+Done!
+
+********************************************************************************
+At Local date and time: Wed Apr 20 13:58:01 2011
+ make -f system.make init_bram started...
+mb-gcc -Os Pong/src/Pong.c  -o Pong/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b      -I./microblaze_0/include/  -IPong/lib/  -L./microblaze_0/lib/  \
+	  
+mb-size Pong/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5770	    360	   1120	   7250	   1c52	Pong/executable.elf
+
+*********************************************
+Initializing BRAM contents of the bitstream
+*********************************************
+bitinit -p xc3s500efg320-4 system.mhs -lp C:/Xilinx/12.4/ISE_DS/ISE/Digilent_Nexys_EDK_Board_Support_Files_V_2_1/lib/  -pe microblaze_0 Pong/executable.elf  \
+	-bt implementation/system.bit -o implementation/download.bit
+
+bitinit version Xilinx EDK 12.4 Build EDK_MS4.81d
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+
+Overriding IP level properties ...
+
+Computing clock values...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) dlmb_cntlr	dlmb
+  (0000000000-0x00003fff) ilmb_cntlr	ilmb
+  (0x81400000-0x8140ffff) Joystick_GPIO	mb_plb
+  (0x81420000-0x8142ffff) Graphics_GPIO	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 69 - tool is overriding PARAMETER
+   C_PLBV46_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 70 - tool is overriding PARAMETER
+   C_PLBV46_NUM_SLAVES value to 3
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 71 - tool is overriding PARAMETER C_PLBV46_MID_WIDTH
+   value to 1
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 73 - tool is overriding PARAMETER C_PLBV46_DWIDTH
+   value to 32
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:ilmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:dlmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:lmb_bram -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 67 - tool is overriding PARAMETER C_MEMSIZE
+   value to 0x4000
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 83 - tool is overriding PARAMETER C_SPLB_MID_WIDTH value to
+   1
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 84 - tool is overriding PARAMETER C_SPLB_NUM_MASTERS value
+   to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Joystick_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Graphics_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+
+Checking platform address map ...
+
+Initializing Memory...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -p xc3s500efg320-4 -bt
+"implementation/system.bit"  -bd "Pong/executable.elf" tag microblaze_0  -o b
+implementation/download.bit 
+Memory Initialization completed successfully.
+
+Done!
+
+********************************************************************************
+At Local date and time: Wed Apr 20 13:58:48 2011
+ make -f system.make init_bram started...
+mb-gcc -Os Pong/src/Pong.c  -o Pong/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b      -I./microblaze_0/include/  -IPong/lib/  -L./microblaze_0/lib/  \
+	  
+mb-size Pong/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5770	    360	   1120	   7250	   1c52	Pong/executable.elf
+
+*********************************************
+Initializing BRAM contents of the bitstream
+*********************************************
+bitinit -p xc3s500efg320-4 system.mhs -lp C:/Xilinx/12.4/ISE_DS/ISE/Digilent_Nexys_EDK_Board_Support_Files_V_2_1/lib/  -pe microblaze_0 Pong/executable.elf  \
+	-bt implementation/system.bit -o implementation/download.bit
+
+bitinit version Xilinx EDK 12.4 Build EDK_MS4.81d
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+
+Overriding IP level properties ...
+
+Computing clock values...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) dlmb_cntlr	dlmb
+  (0000000000-0x00003fff) ilmb_cntlr	ilmb
+  (0x81400000-0x8140ffff) Joystick_GPIO	mb_plb
+  (0x81420000-0x8142ffff) Graphics_GPIO	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 69 - tool is overriding PARAMETER
+   C_PLBV46_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 70 - tool is overriding PARAMETER
+   C_PLBV46_NUM_SLAVES value to 3
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 71 - tool is overriding PARAMETER C_PLBV46_MID_WIDTH
+   value to 1
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 73 - tool is overriding PARAMETER C_PLBV46_DWIDTH
+   value to 32
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:ilmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:dlmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:lmb_bram -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 67 - tool is overriding PARAMETER C_MEMSIZE
+   value to 0x4000
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 83 - tool is overriding PARAMETER C_SPLB_MID_WIDTH value to
+   1
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 84 - tool is overriding PARAMETER C_SPLB_NUM_MASTERS value
+   to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Joystick_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Graphics_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+
+Checking platform address map ...
+
+Initializing Memory...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -p xc3s500efg320-4 -bt
+"implementation/system.bit"  -bd "Pong/executable.elf" tag microblaze_0  -o b
+implementation/download.bit 
+Memory Initialization completed successfully.
+
+Done!
+
+********************************************************************************
+At Local date and time: Wed Apr 20 14:01:34 2011
+ make -f system.make init_bram started...
+mb-gcc -Os Pong/src/Pong.c  -o Pong/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b      -I./microblaze_0/include/  -IPong/lib/  -L./microblaze_0/lib/  \
+	  
+mb-size Pong/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5762	    360	   1120	   7242	   1c4a	Pong/executable.elf
+
+*********************************************
+Initializing BRAM contents of the bitstream
+*********************************************
+bitinit -p xc3s500efg320-4 system.mhs -lp C:/Xilinx/12.4/ISE_DS/ISE/Digilent_Nexys_EDK_Board_Support_Files_V_2_1/lib/  -pe microblaze_0 Pong/executable.elf  \
+	-bt implementation/system.bit -o implementation/download.bit
+
+bitinit version Xilinx EDK 12.4 Build EDK_MS4.81d
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+
+Overriding IP level properties ...
+
+Computing clock values...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) dlmb_cntlr	dlmb
+  (0000000000-0x00003fff) ilmb_cntlr	ilmb
+  (0x81400000-0x8140ffff) Joystick_GPIO	mb_plb
+  (0x81420000-0x8142ffff) Graphics_GPIO	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 69 - tool is overriding PARAMETER
+   C_PLBV46_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 70 - tool is overriding PARAMETER
+   C_PLBV46_NUM_SLAVES value to 3
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 71 - tool is overriding PARAMETER C_PLBV46_MID_WIDTH
+   value to 1
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 73 - tool is overriding PARAMETER C_PLBV46_DWIDTH
+   value to 32
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:ilmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:dlmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:lmb_bram -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 67 - tool is overriding PARAMETER C_MEMSIZE
+   value to 0x4000
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 83 - tool is overriding PARAMETER C_SPLB_MID_WIDTH value to
+   1
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 84 - tool is overriding PARAMETER C_SPLB_NUM_MASTERS value
+   to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Joystick_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Graphics_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+
+Checking platform address map ...
+
+Initializing Memory...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -p xc3s500efg320-4 -bt
+"implementation/system.bit"  -bd "Pong/executable.elf" tag microblaze_0  -o b
+implementation/download.bit 
+Memory Initialization completed successfully.
+
+Done!
+
+********************************************************************************
+At Local date and time: Wed Apr 20 14:01:50 2011
+ make -f system.make init_bram started...
+mb-gcc -Os Pong/src/Pong.c  -o Pong/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b      -I./microblaze_0/include/  -IPong/lib/  -L./microblaze_0/lib/  \
+	  
+mb-size Pong/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5762	    360	   1120	   7242	   1c4a	Pong/executable.elf
+
+*********************************************
+Initializing BRAM contents of the bitstream
+*********************************************
+bitinit -p xc3s500efg320-4 system.mhs -lp C:/Xilinx/12.4/ISE_DS/ISE/Digilent_Nexys_EDK_Board_Support_Files_V_2_1/lib/  -pe microblaze_0 Pong/executable.elf  \
+	-bt implementation/system.bit -o implementation/download.bit
+
+bitinit version Xilinx EDK 12.4 Build EDK_MS4.81d
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+
+Overriding IP level properties ...
+
+Computing clock values...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) dlmb_cntlr	dlmb
+  (0000000000-0x00003fff) ilmb_cntlr	ilmb
+  (0x81400000-0x8140ffff) Joystick_GPIO	mb_plb
+  (0x81420000-0x8142ffff) Graphics_GPIO	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 69 - tool is overriding PARAMETER
+   C_PLBV46_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 70 - tool is overriding PARAMETER
+   C_PLBV46_NUM_SLAVES value to 3
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 71 - tool is overriding PARAMETER C_PLBV46_MID_WIDTH
+   value to 1
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 73 - tool is overriding PARAMETER C_PLBV46_DWIDTH
+   value to 32
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:ilmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:dlmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:lmb_bram -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 67 - tool is overriding PARAMETER C_MEMSIZE
+   value to 0x4000
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 83 - tool is overriding PARAMETER C_SPLB_MID_WIDTH value to
+   1
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 84 - tool is overriding PARAMETER C_SPLB_NUM_MASTERS value
+   to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Joystick_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Graphics_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+
+Checking platform address map ...
+
+Initializing Memory...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -p xc3s500efg320-4 -bt
+"implementation/system.bit"  -bd "Pong/executable.elf" tag microblaze_0  -o b
+implementation/download.bit 
+Memory Initialization completed successfully.
+
+Done!
+
+********************************************************************************
+At Local date and time: Wed Apr 20 14:03:58 2011
+ make -f system.make init_bram started...
+mb-gcc -Os Pong/src/Pong.c  -o Pong/executable.elf \
+	    -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b      -I./microblaze_0/include/  -IPong/lib/  -L./microblaze_0/lib/  \
+	  
+mb-size Pong/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5762	    360	   1120	   7242	   1c4a	Pong/executable.elf
+
+*********************************************
+Initializing BRAM contents of the bitstream
+*********************************************
+bitinit -p xc3s500efg320-4 system.mhs -lp C:/Xilinx/12.4/ISE_DS/ISE/Digilent_Nexys_EDK_Board_Support_Files_V_2_1/lib/  -pe microblaze_0 Pong/executable.elf  \
+	-bt implementation/system.bit -o implementation/download.bit
+
+bitinit version Xilinx EDK 12.4 Build EDK_MS4.81d
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+
+Overriding IP level properties ...
+
+Computing clock values...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) dlmb_cntlr	dlmb
+  (0000000000-0x00003fff) ilmb_cntlr	ilmb
+  (0x81400000-0x8140ffff) Joystick_GPIO	mb_plb
+  (0x81420000-0x8142ffff) Graphics_GPIO	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 69 - tool is overriding PARAMETER
+   C_PLBV46_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 70 - tool is overriding PARAMETER
+   C_PLBV46_NUM_SLAVES value to 3
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 71 - tool is overriding PARAMETER C_PLBV46_MID_WIDTH
+   value to 1
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:mb_plb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 73 - tool is overriding PARAMETER C_PLBV46_DWIDTH
+   value to 32
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:ilmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:lmb_v10 INSTANCE:dlmb -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v1_00_a\data
+   \lmb_v10_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_LMB_NUM_SLAVES
+   value to 1
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:lmb_bram -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 67 - tool is overriding PARAMETER C_MEMSIZE
+   value to 0x4000
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 83 - tool is overriding PARAMETER C_SPLB_MID_WIDTH value to
+   1
+INFO:EDK:1560 - IPNAME:mdm INSTANCE:mdm_0 -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_a\data\mdm
+   _v2_1_0.mpd line 84 - tool is overriding PARAMETER C_SPLB_NUM_MASTERS value
+   to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Joystick_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Graphics_GPIO -
+   C:\Xilinx\12.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+
+Checking platform address map ...
+
+Initializing Memory...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -p xc3s500efg320-4 -bt
+"implementation/system.bit"  -bd "Pong/executable.elf" tag microblaze_0  -o b
+implementation/download.bit 
+Memory Initialization completed successfully.
+
+Done!
+Writing filter settings....
+Done writing filter settings to:
+	C:\FPGArcade\FPGArcade\etc\system.filters
+Done writing Tab View settings to:
+	C:\FPGArcade\FPGArcade\etc\system.gui

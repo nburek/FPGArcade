@@ -50,6 +50,11 @@ FROGGER_OUTPUT = $(FROGGER_OUTPUT_DIR)/executable.elf
 CYG_FROGGER_OUTPUT_DIR = Frogger
 CYG_FROGGER_OUTPUT = $(CYG_FROGGER_OUTPUT_DIR)/executable.elf
 
+PONG_OUTPUT_DIR = Pong
+PONG_OUTPUT = $(PONG_OUTPUT_DIR)/executable.elf
+CYG_PONG_OUTPUT_DIR = Pong
+CYG_PONG_OUTPUT = $(CYG_PONG_OUTPUT_DIR)/executable.elf
+
 MICROBLAZE_BOOTLOOP = $(XILINX_EDK_DIR)/sw/lib/microblaze/mb_bootloop.elf
 MICROBLAZE_BOOTLOOP_LE = $(XILINX_EDK_DIR)/sw/lib/microblaze/mb_bootloop_le.elf
 PPC405_BOOTLOOP = $(XILINX_EDK_DIR)/sw/lib/ppc405/ppc_bootloop.elf
@@ -59,10 +64,10 @@ BOOTLOOP_DIR = bootloops
 MICROBLAZE_0_BOOTLOOP = $(BOOTLOOP_DIR)/microblaze_0.elf
 MICROBLAZE_0_XMDSTUB = microblaze_0/code/xmdstub.elf
 
-BRAMINIT_ELF_FILES =  $(CYG_FROGGER_OUTPUT) 
-BRAMINIT_ELF_FILE_ARGS =   -pe microblaze_0 $(FROGGER_OUTPUT) 
+BRAMINIT_ELF_FILES =  $(CYG_PONG_OUTPUT) 
+BRAMINIT_ELF_FILE_ARGS =   -pe microblaze_0 $(PONG_OUTPUT) 
 
-ALL_USER_ELF_FILES = $(CYG_TESTAPP_MEMORY_MICROBLAZE_0_OUTPUT) $(CYG_TESTAPP_PERIPHERAL_MICROBLAZE_0_OUTPUT) $(CYG_FROGGER_OUTPUT) 
+ALL_USER_ELF_FILES = $(CYG_TESTAPP_MEMORY_MICROBLAZE_0_OUTPUT) $(CYG_TESTAPP_PERIPHERAL_MICROBLAZE_0_OUTPUT) $(CYG_FROGGER_OUTPUT) $(CYG_PONG_OUTPUT) 
 
 SIM_CMD = vsim
 
@@ -84,7 +89,7 @@ LIBRARIES =  \
 
 LIBSCLEAN_TARGETS = microblaze_0_libsclean 
 
-PROGRAMCLEAN_TARGETS = TestApp_Memory_microblaze_0_programclean TestApp_Peripheral_microblaze_0_programclean Frogger_programclean 
+PROGRAMCLEAN_TARGETS = TestApp_Memory_microblaze_0_programclean TestApp_Peripheral_microblaze_0_programclean Frogger_programclean Pong_programclean 
 
 CORE_STATE_DEVELOPMENT_FILES = 
 
@@ -232,3 +237,35 @@ FROGGER_OTHER_CC_FLAGS= $(FROGGER_CC_GLOBPTR_FLAG)  \
                   $(FROGGER_CC_START_ADDR_FLAG) $(FROGGER_CC_STACK_SIZE_FLAG) $(FROGGER_CC_HEAP_SIZE_FLAG)  \
                   $(FROGGER_CC_INFERRED_FLAGS)  \
                   $(FROGGER_LINKER_SCRIPT_FLAG) $(FROGGER_CC_DEBUG_FLAG) $(FROGGER_CC_PROFILE_FLAG) 
+
+#################################################################
+# SOFTWARE APPLICATION PONG
+#################################################################
+
+PONG_SOURCES = Pong/src/Pong.c 
+
+PONG_HEADERS = Pong/lib/graphicsLibrary.h Pong/lib/joystickLibrary.h 
+
+PONG_CC = mb-gcc
+PONG_CC_SIZE = mb-size
+PONG_CC_OPT = -Os
+PONG_CFLAGS = 
+PONG_CC_SEARCH = # -B
+PONG_LIBPATH = -L./microblaze_0/lib/ # -L
+PONG_INCLUDES = -I./microblaze_0/include/  -IPong/lib/ # -I
+PONG_LFLAGS = # -l
+PONG_LINKER_SCRIPT = 
+PONG_LINKER_SCRIPT_FLAG = #-T $(PONG_LINKER_SCRIPT) 
+PONG_CC_DEBUG_FLAG = # -[g|gstabs]
+PONG_CC_PROFILE_FLAG = # -pg
+PONG_CC_GLOBPTR_FLAG= # -mxl-gp-opt
+PONG_MODE = executable
+PONG_LIBG_OPT = -$(PONG_MODE) microblaze_0
+PONG_CC_INFERRED_FLAGS= -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b 
+PONG_CC_START_ADDR_FLAG=  # -Wl,-defsym -Wl,_TEXT_START_ADDR=
+PONG_CC_STACK_SIZE_FLAG=  # -Wl,-defsym -Wl,_STACK_SIZE=
+PONG_CC_HEAP_SIZE_FLAG=  # -Wl,-defsym -Wl,_HEAP_SIZE=
+PONG_OTHER_CC_FLAGS= $(PONG_CC_GLOBPTR_FLAG)  \
+                  $(PONG_CC_START_ADDR_FLAG) $(PONG_CC_STACK_SIZE_FLAG) $(PONG_CC_HEAP_SIZE_FLAG)  \
+                  $(PONG_CC_INFERRED_FLAGS)  \
+                  $(PONG_LINKER_SCRIPT_FLAG) $(PONG_CC_DEBUG_FLAG) $(PONG_CC_PROFILE_FLAG) 

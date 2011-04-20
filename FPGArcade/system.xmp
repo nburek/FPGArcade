@@ -73,7 +73,7 @@ Header: Frogger/lib/enemies.h
 Header: Frogger/lib/frog.h
 Header: Frogger/lib/output_tileset.h
 DefaultInit: EXECUTABLE
-InitBram: 1
+InitBram: 0
 Active: 1
 CompilerOptLevel: 4
 GlobPtrOpt: 0
@@ -83,6 +83,26 @@ ProgStart:
 StackSize: 
 HeapSize: 
 LinkerScript: Frogger/Frogger_linker_script.ld
+ProgCCFlags: 
+CompileInXps: 1
+NonXpsApp: 0
+SwProj: Pong
+Processor: microblaze_0
+Executable: Pong/executable.elf
+Source: Pong/src/Pong.c
+Header: Pong/lib/graphicsLibrary.h
+Header: Pong/lib/joystickLibrary.h
+DefaultInit: EXECUTABLE
+InitBram: 1
+Active: 1
+CompilerOptLevel: 4
+GlobPtrOpt: 0
+DebugSym: 0
+ProfileFlag: 0
+ProgStart: 
+StackSize: 
+HeapSize: 
+LinkerScript: 
 ProgCCFlags: 
 CompileInXps: 1
 NonXpsApp: 0

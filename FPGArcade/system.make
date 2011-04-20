@@ -199,6 +199,24 @@ Frogger_programclean:
 	rm -f $(FROGGER_OUTPUT) 
 
 #################################################################
+# SOFTWARE APPLICATION PONG
+#################################################################
+
+Pong_program: $(CYG_PONG_OUTPUT) 
+
+$(CYG_PONG_OUTPUT) : $(PONG_SOURCES) $(PONG_HEADERS) $(PONG_LINKER_SCRIPT) \
+                    $(LIBRARIES) __xps/pong_compiler.opt
+	@mkdir -p $(PONG_OUTPUT_DIR) 
+	$(PONG_CC) $(PONG_CC_OPT) $(PONG_SOURCES) -o $(CYG_PONG_OUTPUT) \
+	$(PONG_OTHER_CC_FLAGS) $(PONG_INCLUDES) $(PONG_LIBPATH) \
+	$(PONG_CFLAGS) $(PONG_LFLAGS) 
+	$(PONG_CC_SIZE) $(CYG_PONG_OUTPUT) 
+	@echo ""
+
+Pong_programclean:
+	rm -f $(PONG_OUTPUT) 
+
+#################################################################
 # BOOTLOOP ELF FILES
 #################################################################
 
