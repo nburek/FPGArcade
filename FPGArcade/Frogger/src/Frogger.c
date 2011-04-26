@@ -24,8 +24,8 @@ u32 frogMovementCounter = 10000;
 u32 raceCarMovementCounter = 5000;
 #define RACE_CAR_MOVEMENT_DELAY 50000
 u32 truckMovementCounter = 0;
-#define TRUCK_MOVEMENT_DELAY 70000
-u32 bullDozerMovementCounter = 15000;
+#define TRUCK_MOVEMENT_DELAY 80000
+u32 bullDozerMovementCounter = 14000;
 #define BULL_DOZER_MOVEMENT_DELAY 60000
 u32 purpleCarMovementCounter = 20000;
 #define PURPLE_CAR_MOVEMENT_DELAY 40000
@@ -33,6 +33,8 @@ u32 turtleMovementCounter = 17000;
 #define TURTLE_MOVEMENT_DELAY 40000
 u32 logMovementCounter = 28000;
 #define LOG_MOVEMENT_DELAY 60000
+u32 collisionDetectionCounter = 500;
+#define COLLISION_DETECTION_DELAY 10000
 
 
 /*****************************************************************************/
@@ -74,6 +76,7 @@ int main(void)
 	//u8 branchExecuted;
 	
 	u8 win = 0;
+	u8 cCheck = 0;
 	//start game loop
 	while (1)
 	{
@@ -81,6 +84,7 @@ int main(void)
 		if(frogger.lives <= 0 || win == 1){
 			break;
 		}
+		
 		++frogMovementCounter;
 		++raceCarMovementCounter;
 		++truckMovementCounter;
@@ -88,39 +92,37 @@ int main(void)
 		++purpleCarMovementCounter;
 		++turtleMovementCounter;
 		++logMovementCounter;
+		++collisionDetectionCounter;
 		
+		//u16 froggerBX = (frogger.x -8) /8;
+		s16 froggerBY = (frogger.y -8) /8;
+		s16 lane = (FIRST_ROW_Y - froggerBY) /2;
 		
-		
+		if (collisionDetectionCounter >= COLLISION_DETECTION_DELAY)
+		{
+			collisionDetectionCounter = 0;
+			if(lane >= 0 && lane < 9 && lane!=4)
+			{
+			
+				cCheck = checkCollision(movingObjectsX[lane], movingObjectsWidth[lane], frogger.x);
+				if((cCheck && frogger.y>WATER_LINE) || (!cCheck && frogger.y<=WATER_LINE))
+				{
+					//if((frogger.x +  8*direction[lane] < STAGE_MAXX) || (frogger.x +  8*direction[lane] < STAGE_MINX))
+						//frogger.x += 8*direction[lane]; //safe on log or turtle, move with object
+					dieFrog(&frogger);
+					frogFrame = 0;
+					drawLives(frogger.lives);
+				}
+			}
+			else
+			{
+				cCheck = 0;
+				if(lane == 9)
+					win = 1;
+			}
+		}
 		if(frogMovementCounter > FROG_MOVEMENT_DELAY)
 		{
-		
-			//u16 froggerBX = (frogger.x -8) /8;
-			s16 froggerBY = (frogger.y -8) /8;
-			s16 lane = (FIRST_ROW_Y - froggerBY) /2;
-			
-			if(lane >= 0 && lane < 9){
-			
-				u8 cCheck = checkCollision(movingObjectsX[lane], movingObjectsWidth[lane], frogger.x);
-				if(cCheck){
-					if(frogger.y < WATER_LINE){
-						if((frogger.x +  8*direction[lane] < STAGE_MAXX) || (frogger.x +  8*direction[lane] < STAGE_MINX))
-							frogger.x += 8*direction[lane]; //safe on log or turtle, move with object
-					}else{
-						dieFrog(&frogger);
-						drawLives(frogger.lives);
-						//break;
-					}						
-				}else{
-					if(cCheck){
-						dieFrog(&frogger);
-						drawLives(frogger.lives);
-						//break;
-					}
-				}
-			}else if(lane == 9){
-				win = 1;
-			}
-			
 			frogMovementCounter = 0;
 			
 			if (frogFrame == 0) //if you're not in the middle of moving already
@@ -206,6 +208,11 @@ int main(void)
 		
 		if (turtleMovementCounter > TURTLE_MOVEMENT_DELAY)
 		{
+			if ((lane == 5 || lane == 7) && (frogFrame==0) && (frogger.x-8)>STAGE_MINX)
+			{
+				frogger.x -= 8;
+				moveFrog(&frogger);
+			}
 			turtleMovementCounter = 0;
 			moveRow(Turtle);
 			moveRow(Turtle2);
@@ -213,6 +220,11 @@ int main(void)
 		
 		if (logMovementCounter > LOG_MOVEMENT_DELAY)
 		{
+			if ((lane == 6 || lane == 8) && (frogFrame==0) && (frogger.x+8)<STAGE_MAXX)
+			{
+				frogger.x += 8;
+				moveFrog(&frogger);
+			}
 			logMovementCounter = 0;
 			moveRow(Log);
 			moveRow(Log2);

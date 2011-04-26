@@ -67,7 +67,7 @@ Checking platform address map ...
 Initializing Memory...
 Running Data2Mem with the following command:
 data2mem -bm "implementation/system_bd" -p xc3s500efg320-4 -bt
-"implementation/system.bit"  -bd "Pong/executable.elf" tag microblaze_0  -o b
+"implementation/system.bit"  -bd "Frogger/executable.elf" tag microblaze_0  -o b
 implementation/download.bit 
 Memory Initialization completed successfully.
 

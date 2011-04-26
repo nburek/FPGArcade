@@ -1,1 +1,1 @@
- -p spartan3e -lang vhdl$(PROJECT_SEARCHPATHOPT) $(GLOBAL_SEARCHPATHOPT)   Pong/executable.elf -msg __xps/ise/xmsgprops.lst -s mti -X C:/FPGArcade/FPGArcade/
+ -p spartan3e -lang vhdl$(PROJECT_SEARCHPATHOPT) $(GLOBAL_SEARCHPATHOPT)   Frogger/executable.elf -msg __xps/ise/xmsgprops.lst -s mti -X C:/FPGArcade/FPGArcade/

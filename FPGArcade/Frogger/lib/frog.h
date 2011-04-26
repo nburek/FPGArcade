@@ -9,6 +9,8 @@
 #define FROG_BLOCK_3 2
 #define FROG_BLOCK_4 3
 
+void outputFrogger(u8 animationFrame, u8 direction, u8 player);
+
 typedef struct frog_struct{
 
 	u16 x;
@@ -33,10 +35,17 @@ void initFrog(Frog* frog){
 	(*frog).lives = 3;
 
 }
-void dieFrog(Frog* frog){
+void dieFrog(Frog* frog)
+{
 	--(*frog).lives;
 	(*frog).x = 320;
 	(*frog).y = 320;
+	int i,j;
+	for (i = 7; i>=0; --i)
+	{
+		for (j=0; j<60;++j)
+			outputFrogger(1,i%4,1);
+	}
 }
 
 #define LEFT 3
