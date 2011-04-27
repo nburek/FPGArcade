@@ -101,24 +101,33 @@ int main(void)
 		if (collisionDetectionCounter >= COLLISION_DETECTION_DELAY)
 		{
 			collisionDetectionCounter = 0;
-			if(lane >= 0 && lane < 9 && lane!=4)
+			if(lane >= 0 && lane <= 9 && lane!=4)
 			{
-			
-				cCheck = checkCollision(movingObjectsX[lane], movingObjectsWidth[lane], frogger.x);
-				if((cCheck && frogger.y>WATER_LINE) || (!cCheck && frogger.y<=WATER_LINE))
+				if (lane == 9)
 				{
-					//if((frogger.x +  8*direction[lane] < STAGE_MAXX) || (frogger.x +  8*direction[lane] < STAGE_MINX))
-						//frogger.x += 8*direction[lane]; //safe on log or turtle, move with object
-					dieFrog(&frogger);
-					frogFrame = 0;
-					drawLives(frogger.lives);
+					if(frogger.x%48 == 32)
+						win = 1;
+					else
+					{
+						dieFrog(&frogger);
+						frogFrame = 0;
+						drawLives(frogger.lives);
+					}
+				}
+				else
+				{
+					cCheck = checkCollision(movingObjectsX[lane], movingObjectsWidth[lane], frogger.x);
+					if((cCheck && frogger.y>WATER_LINE) || (!cCheck && frogger.y<=WATER_LINE && frogFrame==0))
+					{
+						dieFrog(&frogger);
+						frogFrame = 0;
+						drawLives(frogger.lives);
+					}
 				}
 			}
 			else
 			{
 				cCheck = 0;
-				if(lane == 9)
-					win = 1;
 			}
 		}
 		if(frogMovementCounter > FROG_MOVEMENT_DELAY)
@@ -137,9 +146,12 @@ int main(void)
 			switch(joystickLocation)
 			{
 				case RIGHT:
-					if(frogger.x + frogger.x_spd < STAGE_MAXX){
+					if(frogger.x + frogger.x_spd < STAGE_MAXX)
+					{
 						frogger.x += frogger.x_spd;
-					}else{
+					}
+					else
+					{
 						frogger.x = STAGE_MAXX-8;
 					}
 					frogger.dir = RIGHT;
