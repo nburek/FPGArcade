@@ -31,12 +31,15 @@ u32 purpleCarMovementCounter = 20000;
 #define PURPLE_CAR_MOVEMENT_DELAY 40000
 u32 turtleMovementCounter = 17000;
 #define TURTLE_MOVEMENT_DELAY 40000
-u32 logMovementCounter = 28000;
-#define LOG_MOVEMENT_DELAY 60000
+u32 log1MovementCounter = 28000;
+#define LOG1_MOVEMENT_DELAY 40000
+u32 log2MovementCounter = 28000;
+#define LOG2_MOVEMENT_DELAY 60000
 u32 collisionDetectionCounter = 500;
 #define COLLISION_DETECTION_DELAY 10000
 
 void writeHiScore(u32 score);
+void writeScore(u32 score);
 
 /*****************************************************************************/
 /**
@@ -56,10 +59,13 @@ int main(void)
 	
 	//start game loop
 	
+	u32 highScore = 0;
+	
 	while(1) //program loop
 	{ 
-		u8 win = 0;
 		u8 cCheck = 0;
+		u32 currentScore = 0;
+		s8 highestLane = -1;
 	
 		Joystick joy1;
 		Frog frogger;
@@ -80,8 +86,10 @@ int main(void)
 		initMovingObjects();
 		
 		drawLives(frogger.lives);
-	
-		while (frogger.lives > 0 && win != 1) //game loop
+		
+		writeScore(currentScore);
+		writeHiScore(highScore);
+		while (frogger.lives > 0 ) //game loop
 		{
 			++frogMovementCounter;
 			++raceCarMovementCounter;
@@ -89,12 +97,19 @@ int main(void)
 			++bullDozerMovementCounter;
 			++purpleCarMovementCounter;
 			++turtleMovementCounter;
-			++logMovementCounter;
+			++log1MovementCounter;
+			++log2MovementCounter;
 			++collisionDetectionCounter;
 			
 			//u16 froggerBX = (frogger.x -8) /8;
 			s16 froggerBY = (frogger.y -8) /8;
 			s16 lane = (FIRST_ROW_Y - froggerBY) /2;
+			if (lane > highestLane)
+			{
+				highestLane = lane;
+				currentScore += 10;
+				writeScore(currentScore);
+			}
 			
 			if (collisionDetectionCounter >= COLLISION_DETECTION_DELAY)
 			{
@@ -103,8 +118,21 @@ int main(void)
 				{
 					if (lane == 9)
 					{
+						highestLane = -1;
 						if(frogger.x%48 == 32)
-							win = 1;
+						{
+							//reached end, so add to score and reset
+							currentScore += 200;
+							writeScore(currentScore);
+							int i,ii ;
+							for (i = 0; i<4; ++i)
+								for (ii = 0; ii<300; ++ii)
+									outputFrogger(i%2,frogger.dir,2);
+							frogger.x = 320;
+							frogger.y = 320;
+							outputFrogger(0,frogger.dir,1);
+							moveFrog(&frogger);
+						}
 						else
 						{
 							dieFrog(&frogger);
@@ -120,6 +148,7 @@ int main(void)
 							dieFrog(&frogger);
 							frogFrame = 0;
 							drawLives(frogger.lives);
+							highestLane = -1;
 						}
 					}
 				}
@@ -128,6 +157,7 @@ int main(void)
 					cCheck = 0;
 				}
 			}
+			
 			if(frogMovementCounter > FROG_MOVEMENT_DELAY)
 			{
 				frogMovementCounter = 0;
@@ -228,29 +258,27 @@ int main(void)
 				moveRow(Turtle2);
 			}
 			
-			if (logMovementCounter > LOG_MOVEMENT_DELAY)
+			if (log1MovementCounter > LOG1_MOVEMENT_DELAY)
 			{
-				if ((lane == 6 || lane == 8) && (frogFrame==0) && (frogger.x+8)<STAGE_MAXX)
+				if (lane == 6  && (frogFrame==0) && (frogger.x+8)<STAGE_MAXX)
 				{
 					frogger.x += 8;
 					moveFrog(&frogger);
 				}
-				logMovementCounter = 0;
+				log1MovementCounter = 0;
 				moveRow(Log);
-				moveRow(Log2);
 			}
 			
-			/*while (branchExecuted>0)
+			if (log2MovementCounter > LOG2_MOVEMENT_DELAY)
 			{
-				frogMovementCounter+=100;
-				raceCarMovementCounter+=100;
-				truckMovementCounter+=100;
-				bullDozerMovementCounter+=100;
-				purpleCarMovementCounter+=100;
-				turtleMovementCounter+=100;
-				logMovementCounter+=100;
-				--branchExecuted;
-			}*/
+				if (lane == 8 && (frogFrame==0) && (frogger.x+8)<STAGE_MAXX)
+				{
+					frogger.x += 8;
+					moveFrog(&frogger);
+				}
+				log2MovementCounter = 0;
+				moveRow(Log2);
+			}
 			
 		} //end infinite game loop
 		
@@ -259,16 +287,19 @@ int main(void)
 		int i, j;
 		for (i = 25; i<55; ++i){
 			for (j = 17; j<42; ++j){
-
-				if(win == 1){
-					setBackgroundBlock(i,j,29);
-				}else{
-					setBackgroundBlock(i,j,27);
-				}
+				setBackgroundBlock(i,j,27);
 			}
 		}
 		
-		while(joy1.btn2 != 1){
+		if (currentScore>highScore)
+		{
+			highScore = currentScore;
+			writeHiScore(highScore);
+		}
+		
+		currentScore = 0;
+		
+		while(joy1.btn1 != 1){
 			updateJoystick(&joy1, JOYSTICK_1_CHANNEL);
 		}
 	
@@ -284,13 +315,32 @@ void writeHiScore(u32 score){
 	u32 temp = score;
 	
 	u32 i = 0;
-	while(temp != 0){
+	do {
 		u32 digit = temp%10;
 		temp /= 10;
 		
-		setBackgroundBlock(53 - i,16,digit);
+		setBackgroundBlock(54 - i,15,digit);
 		
 		++i;
-	}
+	} while(temp != 0);
 
+}
+
+void writeScore(u32 score)
+{
+	u32 temp = score;
+	
+	u32 i;
+	for (i = 40; i<80; ++i)
+		setBackgroundBlock(i,16,10);
+	
+	i = 0;
+	do {
+		u32 digit = temp%10;
+		temp /= 10;
+		
+		setBackgroundBlock(54 - i,16,digit);
+		
+		++i;
+	} while(temp != 0);
 }
