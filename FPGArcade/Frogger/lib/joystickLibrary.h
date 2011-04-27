@@ -69,11 +69,11 @@ void updateJoystick(Joystick *jstkData, int joystickChannel)
 	
 	(*jstkData).y = (Data>>10) & 0x3FF;
 	
-	(*jstkData).btn1 = (Data >> 20) & 0x1;
+	(*jstkData).btn1 = (Data >> 21) & 0x1;
 	
-	(*jstkData).btn2 = (Data >> 21) & 0x1;
+	(*jstkData).btn2 = (Data >> 22) & 0x1;
 	
-	(*jstkData).btn3 = (Data >> 22) & 0x1;
+	(*jstkData).btn3 = (Data >> 20) & 0x1;
 	
 
 	
