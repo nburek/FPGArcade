@@ -304,13 +304,13 @@ void moveFrog(Frog* frog)
 void drawLives(u8 lives){
 	
 	int i;
-	for(i = 0; i < 3; ++i){
-		if(i +1 > lives){
-			setBackgroundBlock(25 + i,16, 0);
-		}
-		else{
-			setBackgroundBlock(25 + i,16, 28);
-		}
+	
+	setBackgroundBlock(24 + lives,16, 0); // fill black
+	
+	for(i = 0; i < lives -1; ++i){
+	
+		setBackgroundBlock(25 + i,16, 28); // fill with froggy life
+		
 	}
 
 }

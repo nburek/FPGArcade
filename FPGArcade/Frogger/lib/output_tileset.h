@@ -19,7 +19,6 @@
 
 void drawBackground();
 
-
 void drawBackground()
 {
 
@@ -116,7 +115,7 @@ void drawBackground()
 						  0x01000001};
 	mapArrayToTile(life, life_palette, 28);
 	
-	//create black border
+	//create red border
 	for (i = 26; i<54; ++i)
 		for (ii = 19; ii<41; ++ii)
 			setBackgroundBlock(i,ii,1);

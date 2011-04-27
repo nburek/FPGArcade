@@ -36,6 +36,7 @@ u32 logMovementCounter = 28000;
 u32 collisionDetectionCounter = 500;
 #define COLLISION_DETECTION_DELAY 10000
 
+void writeHiScore(u32 score);
 
 /*****************************************************************************/
 /**
@@ -50,225 +51,246 @@ u32 collisionDetectionCounter = 500;
 ******************************************************************************/
 int main(void)
 {
-	u32 Data;
 	
-	Joystick joy1;
-	Frog frogger;
-
-	initJoysticks();
-
-	initGraphics();
+	//hi-score info need to go here
 	
-	initFrog(&frogger);
-	
-	drawBackground();
-	
-	
-	u8 joystickLocation = 0;
-	u8 frogFrame = 0;
-	
-	outputCarTiles();
-	
-	initMovingObjects();
-	
-	drawLives(frogger.lives);
-	
-	//u8 branchExecuted;
-	
-	u8 win = 0;
-	u8 cCheck = 0;
 	//start game loop
-	while (1)
-	{
 	
-		if(frogger.lives <= 0 || win == 1){
-			break;
-		}
+	while(1) //program loop
+	{ 
+		u8 win = 0;
+		u8 cCheck = 0;
+	
+		Joystick joy1;
+		Frog frogger;
+
+		initJoysticks();
+
+		initGraphics();
 		
-		++frogMovementCounter;
-		++raceCarMovementCounter;
-		++truckMovementCounter;
-		++bullDozerMovementCounter;
-		++purpleCarMovementCounter;
-		++turtleMovementCounter;
-		++logMovementCounter;
-		++collisionDetectionCounter;
+		initFrog(&frogger);
 		
-		//u16 froggerBX = (frogger.x -8) /8;
-		s16 froggerBY = (frogger.y -8) /8;
-		s16 lane = (FIRST_ROW_Y - froggerBY) /2;
+		drawBackground();
 		
-		if (collisionDetectionCounter >= COLLISION_DETECTION_DELAY)
+		u8 joystickLocation = 0;
+		u8 frogFrame = 0;
+		
+		outputCarTiles();
+		
+		initMovingObjects();
+		
+		drawLives(frogger.lives);
+	
+		while (frogger.lives > 0 && win != 1) //game loop
 		{
-			collisionDetectionCounter = 0;
-			if(lane >= 0 && lane <= 9 && lane!=4)
+			++frogMovementCounter;
+			++raceCarMovementCounter;
+			++truckMovementCounter;
+			++bullDozerMovementCounter;
+			++purpleCarMovementCounter;
+			++turtleMovementCounter;
+			++logMovementCounter;
+			++collisionDetectionCounter;
+			
+			//u16 froggerBX = (frogger.x -8) /8;
+			s16 froggerBY = (frogger.y -8) /8;
+			s16 lane = (FIRST_ROW_Y - froggerBY) /2;
+			
+			if (collisionDetectionCounter >= COLLISION_DETECTION_DELAY)
 			{
-				if (lane == 9)
+				collisionDetectionCounter = 0;
+				if(lane >= 0 && lane <= 9 && lane!=4)
 				{
-					if(frogger.x%48 == 32)
-						win = 1;
+					if (lane == 9)
+					{
+						if(frogger.x%48 == 32)
+							win = 1;
+						else
+						{
+							dieFrog(&frogger);
+							frogFrame = 0;
+							drawLives(frogger.lives);
+						}
+					}
 					else
 					{
-						dieFrog(&frogger);
-						frogFrame = 0;
-						drawLives(frogger.lives);
+						cCheck = checkCollision(movingObjectsX[lane], movingObjectsWidth[lane], frogger.x);
+						if((cCheck && frogger.y>WATER_LINE) || (!cCheck && frogger.y<=WATER_LINE && frogFrame==0))
+						{
+							dieFrog(&frogger);
+							frogFrame = 0;
+							drawLives(frogger.lives);
+						}
 					}
 				}
 				else
 				{
-					cCheck = checkCollision(movingObjectsX[lane], movingObjectsWidth[lane], frogger.x);
-					if((cCheck && frogger.y>WATER_LINE) || (!cCheck && frogger.y<=WATER_LINE && frogFrame==0))
-					{
-						dieFrog(&frogger);
-						frogFrame = 0;
-						drawLives(frogger.lives);
-					}
+					cCheck = 0;
 				}
 			}
-			else
+			if(frogMovementCounter > FROG_MOVEMENT_DELAY)
 			{
-				cCheck = 0;
-			}
-		}
-		if(frogMovementCounter > FROG_MOVEMENT_DELAY)
-		{
-			frogMovementCounter = 0;
-			
-			if (frogFrame == 0) //if you're not in the middle of moving already
-			{
-				//find new joystick location
-				updateJoystick(&joy1, JOYSTICK_1_CHANNEL);
-				joystickLocation = (joy1.x<joy1.y)?1:0; //if above the first line
-				joystickLocation += (joy1.y<1023-joy1.x)?2:0; //if below the second line
-				joystickLocation = ((joy1.x-511)*(joy1.x-511) + (joy1.y-511)*(joy1.y-511) < 10000)?5:joystickLocation; //if the joystick is inside the circular deadband
-			}
+				frogMovementCounter = 0;
+				
+				if (frogFrame == 0) //if you're not in the middle of moving already
+				{
+					//find new joystick location
+					updateJoystick(&joy1, JOYSTICK_1_CHANNEL);
+					joystickLocation = (joy1.x<joy1.y)?1:0; //if above the first line
+					joystickLocation += (joy1.y<1023-joy1.x)?2:0; //if below the second line
+					joystickLocation = ((joy1.x-511)*(joy1.x-511) + (joy1.y-511)*(joy1.y-511) < 10000)?5:joystickLocation; //if the joystick is inside the circular deadband
+				}
 
-			switch(joystickLocation)
+				switch(joystickLocation)
+				{
+					case RIGHT:
+						if(frogger.x + frogger.x_spd < STAGE_MAXX)
+						{
+							frogger.x += frogger.x_spd;
+						}
+						else
+						{
+							frogger.x = STAGE_MAXX-8;
+						}
+						frogger.dir = RIGHT;
+						frogFrame = 1-frogFrame;
+						break;
+					case UP:
+						if(frogger.y - frogger.y_spd > STAGE_MINY){
+							frogger.y -= frogger.y_spd;
+							
+						}else{
+							frogger.y = STAGE_MINY+8;
+						}
+						frogger.dir = UP;
+						frogFrame = 1-frogFrame;
+						break;
+					case DOWN:
+						if(frogger.y + frogger.y_spd < STAGE_MAXY){
+							frogger.y += frogger.y_spd;				
+						}else{
+							frogger.y = STAGE_MAXY-8;
+						}
+						frogger.dir = DOWN;
+						frogFrame = 1-frogFrame;
+						break;
+					case LEFT:
+						if(frogger.x - frogger.x_spd > STAGE_MINX){
+							frogger.x -= frogger.x_spd;
+						}else{
+							frogger.x = STAGE_MINX+8;
+						}
+						frogger.dir = LEFT;
+						frogFrame = 1-frogFrame;
+						break;
+					case 5: default: //deadband
+						break;
+				}
+				
+				outputFrogger(frogFrame,frogger.dir,1);
+				moveFrog(&frogger);
+			} //if(frogMovementCounter == FROG_MOVEMENT_DELAY)
+		
+		
+			if (raceCarMovementCounter > RACE_CAR_MOVEMENT_DELAY)
 			{
-				case RIGHT:
-					if(frogger.x + frogger.x_spd < STAGE_MAXX)
-					{
-						frogger.x += frogger.x_spd;
-					}
-					else
-					{
-						frogger.x = STAGE_MAXX-8;
-					}
-					frogger.dir = RIGHT;
-					frogFrame = 1-frogFrame;
-					break;
-				case UP:
-					if(frogger.y - frogger.y_spd > STAGE_MINY){
-						frogger.y -= frogger.y_spd;
-						
-					}else{
-						frogger.y = STAGE_MINY+8;
-					}
-					frogger.dir = UP;
-					frogFrame = 1-frogFrame;
-					break;
-				case DOWN:
-					if(frogger.y + frogger.y_spd < STAGE_MAXY){
-						frogger.y += frogger.y_spd;				
-					}else{
-						frogger.y = STAGE_MAXY-8;
-					}
-					frogger.dir = DOWN;
-					frogFrame = 1-frogFrame;
-					break;
-				case LEFT:
-					if(frogger.x - frogger.x_spd > STAGE_MINX){
-						frogger.x -= frogger.x_spd;
-					}else{
-						frogger.x = STAGE_MINX+8;
-					}
-					frogger.dir = LEFT;
-					frogFrame = 1-frogFrame;
-					break;
-				case 5: default: //deadband
-					break;
+				raceCarMovementCounter = 0;
+				moveRow(Race_Car);
 			}
 			
-			outputFrogger(frogFrame,frogger.dir,1);
-			moveFrog(&frogger);
-		} //if(frogMovementCounter == FROG_MOVEMENT_DELAY)
-	
-	
-		if (raceCarMovementCounter > RACE_CAR_MOVEMENT_DELAY)
-		{
-			raceCarMovementCounter = 0;
-			moveRow(Race_Car);
-		}
-		
-		if (truckMovementCounter > TRUCK_MOVEMENT_DELAY)
-		{
-			truckMovementCounter = 0;
-			moveRow(Truck);
-		}
-		
-		if (bullDozerMovementCounter > BULL_DOZER_MOVEMENT_DELAY)
-		{
-			bullDozerMovementCounter = 0;
-			moveRow(Bull_Dozer);
-		}
-		
-		if (purpleCarMovementCounter > PURPLE_CAR_MOVEMENT_DELAY)
-		{
-			purpleCarMovementCounter = 0;
-			moveRow(Purple_Car);
-		}
-		
-		if (turtleMovementCounter > TURTLE_MOVEMENT_DELAY)
-		{
-			if ((lane == 5 || lane == 7) && (frogFrame==0) && (frogger.x-8)>STAGE_MINX)
+			if (truckMovementCounter > TRUCK_MOVEMENT_DELAY)
 			{
-				frogger.x -= 8;
-				moveFrog(&frogger);
+				truckMovementCounter = 0;
+				moveRow(Truck);
 			}
-			turtleMovementCounter = 0;
-			moveRow(Turtle);
-			moveRow(Turtle2);
-		}
-		
-		if (logMovementCounter > LOG_MOVEMENT_DELAY)
-		{
-			if ((lane == 6 || lane == 8) && (frogFrame==0) && (frogger.x+8)<STAGE_MAXX)
+			
+			if (bullDozerMovementCounter > BULL_DOZER_MOVEMENT_DELAY)
 			{
-				frogger.x += 8;
-				moveFrog(&frogger);
+				bullDozerMovementCounter = 0;
+				moveRow(Bull_Dozer);
 			}
-			logMovementCounter = 0;
-			moveRow(Log);
-			moveRow(Log2);
-		}
+			
+			if (purpleCarMovementCounter > PURPLE_CAR_MOVEMENT_DELAY)
+			{
+				purpleCarMovementCounter = 0;
+				moveRow(Purple_Car);
+			}
+			
+			if (turtleMovementCounter > TURTLE_MOVEMENT_DELAY)
+			{
+				if ((lane == 5 || lane == 7) && (frogFrame==0) && (frogger.x-8)>STAGE_MINX)
+				{
+					frogger.x -= 8;
+					moveFrog(&frogger);
+				}
+				turtleMovementCounter = 0;
+				moveRow(Turtle);
+				moveRow(Turtle2);
+			}
+			
+			if (logMovementCounter > LOG_MOVEMENT_DELAY)
+			{
+				if ((lane == 6 || lane == 8) && (frogFrame==0) && (frogger.x+8)<STAGE_MAXX)
+				{
+					frogger.x += 8;
+					moveFrog(&frogger);
+				}
+				logMovementCounter = 0;
+				moveRow(Log);
+				moveRow(Log2);
+			}
+			
+			/*while (branchExecuted>0)
+			{
+				frogMovementCounter+=100;
+				raceCarMovementCounter+=100;
+				truckMovementCounter+=100;
+				bullDozerMovementCounter+=100;
+				purpleCarMovementCounter+=100;
+				turtleMovementCounter+=100;
+				logMovementCounter+=100;
+				--branchExecuted;
+			}*/
+			
+		} //end infinite game loop
 		
-		/*while (branchExecuted>0)
-		{
-			frogMovementCounter+=100;
-			raceCarMovementCounter+=100;
-			truckMovementCounter+=100;
-			bullDozerMovementCounter+=100;
-			purpleCarMovementCounter+=100;
-			turtleMovementCounter+=100;
-			logMovementCounter+=100;
-			--branchExecuted;
-		}*/
+		//fill screen with x's
 		
-	} //end infinite game loop
-	
-	//fill screen with x's
-	
-	int i, j;
-	for (i = 25; i<55; ++i){
-		for (j = 17; j<42; ++j){
+		int i, j;
+		for (i = 25; i<55; ++i){
+			for (j = 17; j<42; ++j){
 
-			if(win == 1){
-				setBackgroundBlock(i,j,29);
-			}else{
-				setBackgroundBlock(i,j,27);
+				if(win == 1){
+					setBackgroundBlock(i,j,29);
+				}else{
+					setBackgroundBlock(i,j,27);
+				}
 			}
 		}
+		
+		while(joy1.btn2 != 1){
+			updateJoystick(&joy1, JOYSTICK_1_CHANNEL);
+		}
+	
 	}
+	
 
 	return XST_SUCCESS;
+}
+
+
+void writeHiScore(u32 score){
+
+	u32 temp = score;
+	
+	u32 i = 0;
+	while(temp != 0){
+		u32 digit = temp%10;
+		temp /= 10;
+		
+		setBackgroundBlock(53 - i,16,digit);
+		
+		++i;
+	}
+
 }
