@@ -305,7 +305,7 @@ void drawLives(u8 lives){
 	
 	int i;
 	
-	setBackgroundBlock(24 + lives,16, 0); // fill black
+	setBackgroundBlock(24 + lives,16, 10); // fill black
 	
 	for(i = 0; i < lives -1; ++i){
 	
