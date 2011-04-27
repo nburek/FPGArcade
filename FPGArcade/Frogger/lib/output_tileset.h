@@ -22,8 +22,20 @@ void drawBackground();
 void drawBackground()
 {
 
-	u8 color_palette[5] = {PURPLE,BLUE,RED,BLACK,GREEN};
-	
+	u8 color_palette[6] = {PURPLE,BLUE,RED,BLACK,GREEN,GREY};
+
+	u32 digits[10][8] = {
+		{0x33555333,0x35335533,0x55333553,0x55333553,0x55333553,0x35533533,0x33555333,0x33333333}, 
+		{0x33553333,0x35553333,0x33553333,0x33553333,0x33553333,0x33553333,0x55555533,0x33333333}, 
+		{0x35555533,0x55333553,0x33335553,0x33555533,0x35555333,0x55533333,0x55555553,0x33333333}, 
+		{0x35555553,0x33335533,0x33355333,0x33555533,0x33333553,0x55333553,0x35555533,0x33333333}, 
+		{0x33355533,0x33555533,0x35535533,0x55335533,0x55555553,0x33335533,0x33335533,0x33333333}, 
+		{0x55555533,0x55333333,0x55555533,0x33333553,0x33333553,0x55333553,0x35555533,0x33333333}, 
+		{0x33555533,0x35533333,0x55333333,0x55555533,0x55333553,0x55333553,0x35555533,0x33333333}, 
+		{0x55555553,0x55333553,0x33335533,0x33355333,0x33553333,0x33553333,0x33553333,0x33333333}, 
+		{0x35555333,0x55333533,0x55533533,0x35555333,0x53355553,0x53333553,0x35555533,0x33333333}, 
+		{0x35555533,0x55333553,0x55333553,0x35555553,0x33333553,0x33335533,0x35555333,0x33333333}};
+
 	u32 dirt1[8] = {0x00010012, 
 					  0x00000001, 
 					  0x01000000, 
@@ -72,6 +84,17 @@ void drawBackground()
 	
 	int i = 0;
 	int ii = 0;
+	
+	//set the entire background to the black tile
+	for (i = 0; i<80; ++i)
+		for (ii = 0; ii<60; ++ii)
+			setBackgroundBlock(i,ii,10);
+	
+	//output numbers
+	for (i = 0; i<10; ++i)
+		mapArrayToTile(digits[i], color_palette, i);
+			
+	
 
 	//border tile
 	for (i = 0; i<8; ++i){
@@ -115,10 +138,10 @@ void drawBackground()
 						  0x01000001};
 	mapArrayToTile(life, life_palette, 28);
 	
-	//create red border
+	//create road
 	for (i = 26; i<54; ++i)
 		for (ii = 19; ii<41; ++ii)
-			setBackgroundBlock(i,ii,1);
+			setBackgroundBlock(i,ii,10);
 			
 	//top/bottom border
 	for (i = 25; i<55; ++i){
