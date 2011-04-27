@@ -53,7 +53,7 @@ enum MOVING_TYPES
 	Log2
 };
 
-s8 movingObjectsWidth[9] = {2,4,2,2,0,4,6,4, 6};
+s8 movingObjectsWidth[9] = {2,4,2,2,0,4,4,4, 6};
 s8 direction[9] = {1,-1,1,-1,0,-1,1,-1,1};
 u16 movingObjectsX[9][4];
 
@@ -93,7 +93,7 @@ void moveRow(u8 row)
 	u8 y = FIRST_ROW_Y - 2*row;
 	
 	//set all tiles in row to blue or black
-	u8 backgroundColorTile = (y<29)?11:0;
+	u8 backgroundColorTile = (y<29)?11:10;
 	for (x = minXTile+1; x<maxXTile; ++x)
 	{
 		setBackgroundBlock(x,y,backgroundColorTile);
@@ -130,6 +130,9 @@ void moveRow(u8 row)
 				drawObjectOnScreen(movingObjectsX[row][x]+2,y,turtleTile1,turtleTile2,turtleTile3,turtleTile4);
 				break;
 			case Log:
+				drawObjectOnScreen(movingObjectsX[row][x],y,logTile1,logTile2,logTile4,logTile5);
+				drawObjectOnScreen(movingObjectsX[row][x]+2,y,logTile2,logTile3,logTile5,logTile6);
+				break;
 			case Log2:
 				drawObjectOnScreen(movingObjectsX[row][x],y,logTile1,logTile2,logTile4,logTile5);
 				drawObjectOnScreen(movingObjectsX[row][x]+2,y,logTile2,logTile2,logTile5,logTile5);
