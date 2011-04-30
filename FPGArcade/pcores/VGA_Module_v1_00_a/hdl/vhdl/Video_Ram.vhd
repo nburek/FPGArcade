@@ -104,8 +104,9 @@ signal tileY : STD_LOGIC_VECTOR(2 downto 0);
 signal invClk50Mhz : STD_LOGIC; -- used for the tileSet BRAM so that it updates after the data is available on the dataOut signal of the block BRAM
 
 begin
-invClk50Mhz <= Not clk50Mhz;
+invClk50Mhz <= Not clk50Mhz; -- an inverted 50Mhz clock used to tell the tileSetBRAM when to update
 
+-- Block RAM that holds the data for the tile set
 tileSetBRAM : tile_graphics_bram
 		port map (
 			clka => clk50Mhz,
@@ -116,6 +117,7 @@ tileSetBRAM : tile_graphics_bram
 			addrb => tileSetReAddr,
 			doutb => currentPixel);
 
+-- Block RAM that holds the data saying which tiles the blocks are mapped to
 blockSetBRAM : block_graphics_bram
 		port map (
 			clka => clk50Mhz,
@@ -176,7 +178,7 @@ end process;
 -- about the OP codes.
 process (instructionClk)
 begin
-		if (instructionClk'EVENT AND instructionClk = '1') then
+		if (instructionClk'EVENT AND instructionClk = '1') then -- ready clock acts kind of like a ready bit to tell when the instruction is ready
 			if instruction(31 downto 29) = "000" then -- set pixel in tile
 				tileSetWrAddr <= instruction(19 downto 8);
 				tileSetInputData <= instruction(7 downto 0);

@@ -4,11 +4,13 @@
 #include "joystickLibrary.h"
 #include "graphicsLibrary.h"
 
+//start function prototypes
 void drawPaddle1();
 void erasePaddle1();
 void drawPaddle2();
 void erasePaddle2();
 
+//start declaring counters for timing
 int ballMovementCounter = 0;
 int BALL_MOVEMENT_DELAY = 5000;
 int paddleMovementCounter = 10000;

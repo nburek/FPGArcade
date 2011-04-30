@@ -7,8 +7,9 @@
 
 typedef struct joystick_struct{
 
+	// will have a value between 0 and 1023
 	u16 x;
-	u16 y;//centered at upper left corner
+	u16 y;
 
 	u8 btn1;
 	u8 btn2;
@@ -76,7 +77,6 @@ void updateJoystick(Joystick *jstkData, int joystickChannel)
 	(*jstkData).btn3 = (Data >> 20) & 0x1;
 	
 
-	
 }
 
 

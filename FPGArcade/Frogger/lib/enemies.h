@@ -1,3 +1,4 @@
+//start defining which tiles the moving object's graphics are stored in
 #define raceCarTile1 40
 #define raceCarTile2 41
 #define raceCarTile3 42
@@ -53,10 +54,30 @@ enum MOVING_TYPES
 	Log2
 };
 
-s8 movingObjectsWidth[9] = {2,4,2,2,0,4,4,4, 6};
-s8 direction[9] = {1,-1,1,-1,0,-1,1,-1,1};
-u16 movingObjectsX[9][4];
+//start function prototypes
+void initMovingObjects();
+void drawObjectOnScreen(u8 x, u8 y, u8 tile1, u8 tile2, u8 tile3, u8 tile4);
+void moveRow(u8 row);
+void writeOutCarTile(u32 graphic1[], u32 graphic2[], u8 tile1, u8 tile2, u8 tile3, u8 tile4);
+void outputCarTiles();
 
+s8 movingObjectsWidth[9] = {2,4,2,2,0,4,4,4, 6}; //width of moving objects (in blocks)
+s8 direction[9] = {1,-1,1,-1,0,-1,1,-1,1}; //which direction objects in a row are moving
+u16 movingObjectsX[9][4]; //x position of the moving objects in each row
+
+/*****************************************************************************/
+/**
+*
+* Initializes all the moving objects by assigning an x position to each
+*
+*
+* @param		None
+*
+* @return	None
+*
+* @note		None
+*
+****************************************************************************/
 void initMovingObjects()
 {
 	int row, xPos, obj;
@@ -69,6 +90,24 @@ void initMovingObjects()
 	}
  
 }
+
+/*****************************************************************************/
+/**
+*
+* Sets the blocks starting at the specified x,y position to display the tiles
+* for the moving object. Used to draw objects that are 2x2 blocks in size.
+*
+*
+* @param		u8 x - Specifies where the left side of the graphic should be
+* @param		u8 y - Specifies where the top of the graphic should be
+* @param		u8 tile[1-4] - Specifies the tile to use when outputting the 
+*					corresponding blocks.
+*
+* @return	None
+*
+* @note		None
+*
+****************************************************************************/
 void drawObjectOnScreen(u8 x, u8 y, u8 tile1, u8 tile2, u8 tile3, u8 tile4)
 {
 	if (x>=minXTile && x<maxXTile-1)
@@ -86,22 +125,40 @@ void drawObjectOnScreen(u8 x, u8 y, u8 tile1, u8 tile2, u8 tile3, u8 tile4)
 
 
 
-//moves all the objects on that row and then redraws the row
+/*****************************************************************************/
+/**
+*
+* Will move all the moving objects in the specified row and then redraw that
+* row.
+*
+*
+* @param		u8 row - which row you want to move
+*
+* @return	None
+*
+* @note		None
+*
+****************************************************************************/
 void moveRow(u8 row)
 {
 	int x;
 	u8 y = FIRST_ROW_Y - 2*row;
 	
-	//set all tiles in row to blue or black
-	u8 backgroundColorTile = (y<29)?11:10;
+	
+	u8 backgroundColorTile = (y<29)?11:10; //select color for water or road
+	
+	//blank out the row to either blue or black
 	for (x = minXTile+1; x<maxXTile; ++x)
 	{
 		setBackgroundBlock(x,y,backgroundColorTile);
 		setBackgroundBlock(x,y+1,backgroundColorTile);
 	}
 		
+	//start moving and redrawing all the moving objects in the row
 	for (x = 0; x<4; ++x)
 	{
+	
+		//start moving the object
 		movingObjectsX[row][x] += direction[row];
 		
 		if (movingObjectsX[row][x] < 20)
@@ -109,6 +166,7 @@ void moveRow(u8 row)
 		else if (movingObjectsX[row][x] > 59)
 			movingObjectsX[row][x] = 20;
 		
+		//redraw the object
 		switch (row)
 		{
 			case Race_Car:
@@ -145,7 +203,25 @@ void moveRow(u8 row)
 }
 
 
-
+/*****************************************************************************/
+/**
+*
+* This function is used to output the moving object graphics to the tiles 
+* that they need to be stored in.
+*
+*
+* @param		u32 graphic1[] - The first graphic to be output
+* @param		u32 graphic2[] - The second graphic to be output
+* @param		u8 tile1 - The tile to output the flipped graphic 1 to
+* @param		u8 tile2 - The tile to output the flipped graphic 2 to
+* @param		u8 tile3 - The tile to output graphic 1 to
+* @param		u8 tile4 - The tile to output graphic 2 to
+*
+* @return	None
+*
+* @note		None
+*
+****************************************************************************/
 void writeOutCarTile(u32 graphic1[], u32 graphic2[], u8 tile1, u8 tile2, u8 tile3, u8 tile4)
 {
 	u8 carColors[10] = {BLACK,PURPLE,RED,YELLOW,GREY,GREEN,CYAN,PURPLE,BLUE,BROWN};
@@ -159,6 +235,20 @@ void writeOutCarTile(u32 graphic1[], u32 graphic2[], u8 tile1, u8 tile2, u8 tile
 	mapArrayToTile(temp, carColors, tile2);
 }
 
+/*****************************************************************************/
+/**
+*
+* Outputs all the moving objects graphics data to the tiles they need to be
+* stored in.
+*
+*
+* @param		none
+*
+* @return	None
+*
+* @note		None
+*
+****************************************************************************/
 void outputCarTiles()
 {
 	int x, y;

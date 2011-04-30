@@ -9,7 +9,10 @@
 #define FROG_BLOCK_3 2
 #define FROG_BLOCK_4 3
 
-void outputFrogger(u8 animationFrame, u8 direction, u8 player);
+#define LEFT 3
+#define RIGHT 0
+#define UP 1
+#define DOWN 2
 
 typedef struct frog_struct{
 
@@ -24,35 +27,15 @@ typedef struct frog_struct{
 
 }Frog;
 
-void initFrog(Frog* frog){
-	(*frog).x = 320;
-	(*frog).y = 320;
-	
-	(*frog).x_spd = 8;
-	(*frog).y_spd = 8;
-	
-	(*frog).dir = 1;
-	(*frog).lives = 3;
+//start function prototypes
+void initFrog(Frog* frog);
+void dieFrog(Frog* frog);
+void outputFrogger(u8 animationFrame, u8 direction, u8 player);
+void moveFrog(Frog* frog);
+void drawLives(u8 lives);
 
-}
-void dieFrog(Frog* frog)
-{
-	--(*frog).lives;
-	(*frog).x = 320;
-	(*frog).y = 320;
-	int i,j;
-	for (i = 7; i>=0; --i)
-	{
-		for (j=0; j<60;++j)
-			outputFrogger(1,i%4,1);
-	}
-}
 
-#define LEFT 3
-#define RIGHT 0
-#define UP 1
-#define DOWN 2
-
+//start the graphic data for the first frog frame
 u32 movingFrog1[8] = {	0x00000000,
 								0x00000000,
 								0x00010000,
@@ -62,7 +45,7 @@ u32 movingFrog1[8] = {	0x00000000,
 								0x00001222,
 								0x00000212};
 								
-u32 movingFrog3[8] = {	0x00000212,
+u32 movingFrog2[8] = {	0x00000212,
 								0x00000121,
 								0x00001112,
 								0x00011000,
@@ -91,6 +74,7 @@ u8 movingTransparencyMapLeft2[8] = {0xFF,0xFF,0xFB,0xE1,0xCF,0x1F,0x1F,0x1F};
 u8 movingTransparencyMapLeft3[8] = {0xE0,0xE0,0xF0,0xFD,0xC3,0xEF,0xFF,0xFF};
 u8 movingTransparencyMapLeft4[8] = {0x1F,0x1F,0x1F,0xCF,0xE1,0xFB,0xFF,0xFF};
 
+//start the graphic data for the second frog frame
 u32 sittingFrog1[8] = {	0x00000000,
 								0x00000000,
 								0x00000000,
@@ -100,7 +84,7 @@ u32 sittingFrog1[8] = {	0x00000000,
 								0x00011222,
 								0x00000212};
 								
-u32 sittingFrog3[8] = {	0x00011212,
+u32 sittingFrog2[8] = {	0x00011212,
 								0x00010121,
 								0x00110012,
 								0x00010000,
@@ -133,11 +117,75 @@ u8 sittingTransparencyMapLeft4[8] = {0x1F,0x1F,0x3F,0x7F,0x0F,0xDF,0xFF,0xFF};
 u8 playerOneColors[] = {BLACK,GREEN,YELLOW,PURPLE};
 u8 playerTwoColors[] = {BLACK,YELLOW,PURPLE,RED};
 
-/*
-	animationFrame: 0 - sitting still, 1 - jumping
-	Directions: 0 - up, 1 - right, 2 - down, 3 - left
-	Player: 1 - first player, 2 - second player
-*/
+/*****************************************************************************/
+/**
+*
+* Sets the frogs initial position, speed, direction, and life count
+*
+*
+* @param		None
+*
+* @return	None
+*
+* @note		None
+*
+****************************************************************************/
+void initFrog(Frog* frog){
+	(*frog).x = 320;
+	(*frog).y = 320;
+	
+	(*frog).x_spd = 8;
+	(*frog).y_spd = 8;
+	
+	(*frog).dir = 1;
+	(*frog).lives = 3;
+
+}
+
+/*****************************************************************************/
+/**
+*
+* Handles reseting the frog and decreasing his lives when he is killed
+*
+*
+* @param		Frog* frog - The frog object that was killed
+*
+* @return	None
+*
+* @note		None
+*
+****************************************************************************/
+void dieFrog(Frog* frog)
+{
+	--(*frog).lives;
+	(*frog).x = 320;
+	(*frog).y = 320;
+	int i,j;
+	for (i = 7; i>=0; --i)
+	{
+		for (j=0; j<60;++j)
+			outputFrogger(1,i%4,1);
+	}
+}
+
+
+/*****************************************************************************/
+/**
+*
+* Handles outputting the frog graphic, using the proper animation frame, 
+* direction and color.
+*
+* @param		u8 animationFrame - Which frame you want to be outputted
+* @param		u8 direction - Which direction the frog is facing
+* @param		u8 player - Which frog you want to output (selects different colors)
+*
+* @return	None
+*
+* @note		animationFrame: 0 - sitting still, 1 - jumping
+*				Directions: 0 - up, 1 - right, 2 - down, 3 - left
+*				Player: 1 - first player, 2 - second player
+*
+****************************************************************************/
 void outputFrogger(u8 animationFrame, u8 direction, u8 player)
 {
 
@@ -146,7 +194,7 @@ void outputFrogger(u8 animationFrame, u8 direction, u8 player)
 	int arrayX, arrayY, tileX, tileY;
 	
 	u32 *frog1;
-	u32 *frog3;
+	u32 *frog2;
 	
 	u8 *transparencyMap1;
 	u8 *transparencyMap2;
@@ -158,31 +206,34 @@ void outputFrogger(u8 animationFrame, u8 direction, u8 player)
 	setMoveableBlock(FROG_BLOCK_3, FROG_TILE_3);
 	setMoveableBlock(FROG_BLOCK_4, FROG_TILE_4);
 	
+	//select which color palette to use
 	if (player == 1)
 		colors = playerOneColors;
 	else
 		colors = playerTwoColors;
 	
+	//select which animation graphic to use
 	if (animationFrame == 0) // sitting image
 	{
 		frog1 = sittingFrog1;
-		frog3 = sittingFrog3;
+		frog2 = sittingFrog2;
 	}
 	else if (animationFrame == 1) //moving image
 	{
 		frog1 = movingFrog1;
-		frog3 = movingFrog3;
+		frog2 = movingFrog2;
 	}
 	
 	u32 temp[8];
 	
+	//start outputting graphics
 	if (direction == UP)
 	{
 		mapArrayToTile(frog1,colors,FROG_TILE_1);
 		flip(frog1,temp,0,1);
 		mapArrayToTile(temp,colors,FROG_TILE_2);
-		mapArrayToTile(frog3,colors,FROG_TILE_3);
-		flip(frog3,temp,0,1);
+		mapArrayToTile(frog2,colors,FROG_TILE_3);
+		flip(frog2,temp,0,1);
 		mapArrayToTile(temp,colors,FROG_TILE_4);
 		
 		if (animationFrame == 0 )
@@ -203,7 +254,7 @@ void outputFrogger(u8 animationFrame, u8 direction, u8 player)
 	}
 	else if (direction == RIGHT)
 	{
-		rotate(frog3,temp);
+		rotate(frog2,temp);
 		mapArrayToTile(temp,colors,FROG_TILE_1);
 		cflip(temp,1,0);
 		mapArrayToTile(temp,colors,FROG_TILE_3);
@@ -230,7 +281,7 @@ void outputFrogger(u8 animationFrame, u8 direction, u8 player)
 	}
 	else if (direction == DOWN)
 	{
-		multipleRotate(frog3,temp,2);
+		multipleRotate(frog2,temp,2);
 		mapArrayToTile(temp,colors,FROG_TILE_2);
 		cflip(temp,0,1);
 		mapArrayToTile(temp,colors,FROG_TILE_1);
@@ -261,7 +312,7 @@ void outputFrogger(u8 animationFrame, u8 direction, u8 player)
 		mapArrayToTile(temp,colors,FROG_TILE_3);
 		cflip(temp,1,0);
 		mapArrayToTile(temp,colors,FROG_TILE_1);
-		multipleRotate(frog3,temp,3);
+		multipleRotate(frog2,temp,3);
 		mapArrayToTile(temp,colors,FROG_TILE_4);
 		cflip(temp,1,0);
 		mapArrayToTile(temp,colors,FROG_TILE_2);
@@ -282,7 +333,7 @@ void outputFrogger(u8 animationFrame, u8 direction, u8 player)
 		}
 	}
 	
-	
+	//start outputting the transparency map
 	int i = 0;
 	for (i=0; i<8; ++i)
 	{
@@ -293,6 +344,19 @@ void outputFrogger(u8 animationFrame, u8 direction, u8 player)
 	}
 }
 
+/*****************************************************************************/
+/**
+*
+* Moves the frog blocks to the position stored in the frog structure
+*
+*
+* @param		Frog* frog - The frog structure to get the position from
+*
+* @return	None
+*
+* @note		None
+*
+****************************************************************************/
 void moveFrog(Frog* frog)
 {
 	setMoveableBlockPosition(	FROG_BLOCK_1,	(*frog).x-8,	(*frog).y-8);
@@ -301,7 +365,21 @@ void moveFrog(Frog* frog)
 	setMoveableBlockPosition(	FROG_BLOCK_4,	(*frog).x,		(*frog).y);
 }
 
-void drawLives(u8 lives){
+/*****************************************************************************/
+/**
+*
+* Draws the specified number of lives out to the screen
+*
+*
+* @param		u8 lives - the number of lives to draw
+*
+* @return	None
+*
+* @note		None
+*
+****************************************************************************/
+void drawLives(u8 lives)
+{
 	
 	int i;
 	

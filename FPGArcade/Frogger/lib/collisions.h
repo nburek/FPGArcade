@@ -1,67 +1,38 @@
-#define HIT_LBOUND	1
-#define HIT_RBOUND	2
-#define HIT_TBOUND	3
-#define HIT_BBOUND	4
-#define MISS			0
 
-u8 checkCollision(u16 carRow[],u16 objW, u16 frogX){
+/*****************************************************************************/
+/**
+*
+* Checks if the frog has collided with one of the moving objects in a row
+*
+*
+* @param		u16 carRow[] - The block X positions of the moving objects in the row
+* @param		u8 objW - specifies the width of each object (in blocks)
+* @param		u16 frogX - the X position (in pixels) of the frog
+*
+* @return	Returns 1 if the frog is hitting an object in the row or 0 if it isn't
+*
+* @note		None
+*
+****************************************************************************/
+u8 checkCollision(u16 carRow[],u8 objW, u16 frogX)
+{
 	
 	int i, j;
 	
-	u16 bFrogX = frogX /8;
-	for(i = 0; i < 4; ++i){
+	u16 bFrogX = frogX /8; //find which block the frog is on
+	
+	for(i = 0; i < 4; ++i) //for each of the moving objects in the array
+	{
 
-		for(j = 0; j <= objW; ++j){
+		//check for a collision with the current object
+		for(j = 0; j <= objW; ++j)
+		{
 			if( bFrogX == (carRow[i] + j))
-			{
 				return 1;
-			}
 		}
-
 	}
 	
-	return 0;
+	return 0; //the frog isn't hitting anything
 
 }
-/*
-void reCalcEnemyBounds(Enemy *enemy)
-{
-	(*enemy).x0 = (*enemy).x - (*enemy).width /2;
-	(*enemy).y0 = (*enemy).y - (*enemy).height /2;
-	(*enemy).x1 = (*enemy).x + (*enemy).width /2;
-	(*enemy).y1 = (*enemy).y + (*enemy).height /2;
-}
-
-//Determines if the x and y coordinates are inside the paddle
-int classify_point(u16 x, u16 y, Enemy *e)
-{
-
-	if((x > (*e).x0) && (x < (*e).x1) && (y > (*e).y0) && (y < (*e).y1)){
-		return 1;
-	}else{
-		return 0;
-	}
-}
-
-//determines if the frog has hit a car and how
-u16 find_hitBound(Frog *frog, Enemy *enemy)
-{
-	//recalculate lower right points for the ball and given paddle
-	reCalcFrogBounds(frog);
-	reCalcEnemyBounds(enemy);
-	
-	if(classify_point((*frog).x0, (*frog).y0, enemy) && classify_point((*frog).x0, (*frog).y1, enemy)){
-		return HIT_LBOUND; //left bound collision
-	}
-	else if(classify_point((*frog).x1, (*frog).y0, enemy) && classify_point((*frog).x1, (*frog).y1, enemy)){
-		return HIT_RBOUND; // right bound collision
-	}else if(classify_point((*frog).x0, (*frog).y0, enemy) && classify_point((*frog).x1, (*frog).y0, enemy)){
-		return HIT_TBOUND; // top bound collision
-	}else if(classify_point((*frog).x0, (*frog).y1, enemy) && classify_point((*frog).x1, (*frog).y1, enemy)){
-		return HIT_BBOUND; // bottom bound collision
-	}else{
-		return MISS;//no collision
-	}
-
-}*/
 

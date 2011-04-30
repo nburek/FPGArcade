@@ -1,24 +1,50 @@
 #include "xparameters.h"
 #include "xgpio.h"
 
+//begin core output prototypes
+void initGraphics();
 void setPixel(u8 tileNumber, u8 x, u8 y, u8 color);
 void setBackgroundBlock(u8 x, u8 y, u8 tileNumber);
 void setMoveableBlock(u8 blockNumber, u8 tileNumber);
 void setMoveableBlockPosition(u8 blockNumber, u16 x, u16 y);
 void setMoveableBlockRowTransparency(u8 tileNumber, u8 tileRow, u8 transparency);
-void initGraphics();
-
 void mapArrayToTile(u32 storage[], u8 color_palette[], u8 tile_num);
+
+//begin pixel array manipulation prototypes
 void crotate(u32 storage[]);
 void rotate(u32 source_ary[], u32 storage[]);
 void cflip(u32 storage[], int x, int y);
 void flip(u32 source_ary[], u32 storage[], u8 x, u8 y);
 void multipleRotate(u32 source_ary[], u32 storage[], u8 timesToRotate);
+/************************************************************************
+*	For these functions to work you must store your tile graphics using
+*	our standard of four bit indexed color in an array of size 8, storing
+*	a u32 variable to specify the colors in a single row. An example is 
+*	shown below of a blue diamond on a black background with a red center.
+*
+*	u8 color_palette[3] = {BLACK,BLUE,RED};
+*	u32 circleGraphic[8] = {	0x00011000,
+*										0x00111100,
+*										0x01111110,
+*										0x11122111,
+*										0x11122111,
+*										0x01111110,
+*										0x00111100,
+*										0x00011000
+*									};
+*
+*	When written out as a hex value, each digit in the u32 value specifies
+*	the indexed color for one pixel in that row. These functions are 
+*	included because it can be simpler to store complex images in this format
+*	than writting individual setPixel commands to output it.
+*
+************************************************************************/
 
 
 #define GRAPHICS_OUTPUT_CHANNEL 1
 #define GRAPHICS_CLOCK_CHANNEL 2
 
+//begin core color definitions
 #define RED 0x07
 #define GREEN 0x38
 #define BLUE 0xC0
@@ -35,8 +61,40 @@ XGpio graphicsGPIO;
 /*****************************************************************************/
 /**
 *
-* sets a pixel in a stored tile in hardware
+* This function initializes the graphics GPIO device and channels
 *
+*
+* @param		None
+*
+* @return	None
+*
+* @note		None
+*
+****************************************************************************/
+void initGraphics()
+{
+	//initialize GPIO
+	XGpio_Initialize(&graphicsGPIO, XPAR_GRAPHICS_GPIO_DEVICE_ID);
+
+	//Set the direction to be outputs
+	XGpio_SetDataDirection(&graphicsGPIO, GRAPHICS_OUTPUT_CHANNEL, 0x0);
+	XGpio_SetDataDirection(&graphicsGPIO, GRAPHICS_CLOCK_CHANNEL, 0x0);
+}
+
+/*****************************************************************************/
+/**
+*
+* This function is used to change a single pixel inside one of the 64 tiles 
+*
+*
+* @param		u8 tileNumber - the tile who's pixel you're changing (0-63)
+* @param		u8 x - the x position of the pixel you're changing within the tile (0-7)
+* @param		u8 y - the y position of the pixel you're changing within the tile (0-7)
+* @param		u8 color - the color you want to set the pixel to
+*
+* @return	None
+*
+* @note		None
 *
 ****************************************************************************/
 void setPixel(u8 tileNumber, u8 x, u8 y, u8 color)
@@ -53,11 +111,20 @@ void setPixel(u8 tileNumber, u8 x, u8 y, u8 color)
 	
 	
 }
+
 /*****************************************************************************/
 /**
 *
-* assigns a stored tile to be a background block
+* Used to set a background block to  display a certain tile
 *
+*
+* @param		u8 x - the x position of the background block you want to change (0-79)
+* @param		u8 y - the y position of the background block you want to change (0-59)
+* @param		u8 tileNumber - which tile you want this block to display (0-63)
+*
+* @return	None
+*
+* @note		None
 *
 ****************************************************************************/
 void setBackgroundBlock(u8 x, u8 y, u8 tileNumber)
@@ -72,11 +139,19 @@ void setBackgroundBlock(u8 x, u8 y, u8 tileNumber)
 	
 	XGpio_DiscreteWrite(&graphicsGPIO, GRAPHICS_CLOCK_CHANNEL, 1);
 }
+
 /*****************************************************************************/
 /**
 *
-* assigns a stored tile to be a moveable block
+* Used to set a moveable block to display a certain tile
 *
+*
+* @param		u8 blockNumber - which moving block you're changing (0-15)
+* @param		u8 tileNumber - which tile you want this block to display (0-63)
+*
+* @return	None
+*
+* @note		None
 *
 ****************************************************************************/
 void setMoveableBlock(u8 blockNumber, u8 tileNumber)
@@ -93,11 +168,20 @@ void setMoveableBlock(u8 blockNumber, u8 tileNumber)
 	
 	
 }
+
 /*****************************************************************************/
 /**
 *
-* sets the coordinates for a moveable block
+* Used to set the position of a moveable block on the screen
 *
+*
+* @param		u8 blockNumber - which moving block you're changing (0-15)
+* @param		u8 x - the x position the move the tile to
+* @param		u8 y - the y position the move the tile to
+*
+* @return	None
+*
+* @note		The position (0,0) is the upper left corner of the screen
 *
 ****************************************************************************/
 void setMoveableBlockPosition(u8 blockNumber, u16 x, u16 y)
@@ -112,43 +196,40 @@ void setMoveableBlockPosition(u8 blockNumber, u16 x, u16 y)
 	
 	XGpio_DiscreteWrite(&graphicsGPIO, GRAPHICS_CLOCK_CHANNEL, 1);
 }
+
 /*****************************************************************************/
 /**
 *
-* sets the transparency mask for a moveable tile
+* Used to set the transparency of a row on a moving block
 *
+*
+* @param		u8 blockNumber - which moving block you're changing (0-15)
+* @param		u8 tileRow - which row on the block you're changing (0-7)
+* @param		u8 transparency - the transparency for the row
+*
+* @return	None
+*
+* @note		Each of the 8 pixels in the block's row uses one bit of transparency.
+*				Each of the bits in the transparency value maps to a single pixel. 
+*				The most significant bit maps to the left most pixel and the least
+*				significant bit maps to the right most pixel. A value of 1 specifies 
+*				the bit should be transparent and a value of 0 specifies that it 
+*				should be visible.
 *
 ****************************************************************************/
-void setMoveableBlockRowTransparency(u8 tileNumber, u8 tileRow, u8 transparency)
+void setMoveableBlockRowTransparency(u8 blockNumber, u8 tileRow, u8 transparency)
 {
 	u32 Data;
 	
 	XGpio_DiscreteWrite(&graphicsGPIO, GRAPHICS_CLOCK_CHANNEL, 0);
 	
-	Data = tileRow | (tileNumber<<3) | (transparency<<7) | (0x20000000);
+	Data = tileRow | (blockNumber<<3) | (transparency<<7) | (0x20000000);
 	
 	XGpio_DiscreteWrite(&graphicsGPIO, GRAPHICS_OUTPUT_CHANNEL, Data);
 	
 	XGpio_DiscreteWrite(&graphicsGPIO, GRAPHICS_CLOCK_CHANNEL, 1);
 }
 
-/*****************************************************************************/
-/**
-*
-* initializes the memory-mapped I/O for the graphic instruction blocks
-*
-*
-****************************************************************************/
-
-void initGraphics()
-{
-	//initialize GPIO
-	XGpio_Initialize(&graphicsGPIO, XPAR_GRAPHICS_GPIO_DEVICE_ID);
-
-	//Set the direction to be outputs
-	XGpio_SetDataDirection(&graphicsGPIO, GRAPHICS_OUTPUT_CHANNEL, 0x0);
-	XGpio_SetDataDirection(&graphicsGPIO, GRAPHICS_CLOCK_CHANNEL, 0x0);
-}
 /*****************************************************************************/
 /**
 *
@@ -177,6 +258,7 @@ void mapArrayToTile(u32 storage[], u8 color_palette[], u8 tile_num){
 		}
 	}
 }
+
 /*****************************************************************************/
 /**
 *
@@ -186,7 +268,7 @@ void mapArrayToTile(u32 storage[], u8 color_palette[], u8 tile_num){
 *
 * @return	None
 *
-* @note		None
+* @note		returns the rotated array back through the parameter
 *
 ****************************************************************************/
 void crotate(u32 storage[])
@@ -200,6 +282,7 @@ void crotate(u32 storage[])
 
 	rotate(t_ary, storage);
 }
+
 /*****************************************************************************/
 /**
 *
@@ -209,7 +292,7 @@ void crotate(u32 storage[])
 *
 * @return	None
 *
-* @note		None
+* @note		Do not try to copy the source_ary back into itself
 *
 ****************************************************************************/
 void rotate(u32 source_ary[], u32 storage[])
@@ -229,17 +312,18 @@ void rotate(u32 source_ary[], u32 storage[])
 
 	}
 }
+
 /*****************************************************************************/
 /**
 *
 * flips the graphics array across the x and/or y axis
 *
-* @param		source_ary[] - the packed graphical array, x - whether to flip on the x-axis,
+* @param		storage[] - the packed graphical array, x - whether to flip on the x-axis,
 							y - whether to flip on the y-axis,
 *
 * @return	None
 *
-* @note		None
+* @note		Returns the flipped array back through the storage parameter
 *
 ****************************************************************************/
 void cflip(u32 storage[], int x, int y)
@@ -252,6 +336,7 @@ void cflip(u32 storage[], int x, int y)
 
 	flip(t_ary, storage, x, y);
 }
+
 /*****************************************************************************/
 /**
 *
@@ -263,7 +348,7 @@ void cflip(u32 storage[], int x, int y)
 *
 * @return	None
 *
-* @note		None
+* @note		Do not try to copy the source_ary back into itself
 *
 ****************************************************************************/
 void flip(u32 source_ary[], u32 storage[], u8 x, u8 y)
@@ -290,6 +375,7 @@ void flip(u32 source_ary[], u32 storage[], u8 x, u8 y)
 		}
 	}
 }
+
 /*****************************************************************************/
 /**
 *
@@ -300,7 +386,7 @@ void flip(u32 source_ary[], u32 storage[], u8 x, u8 y)
 *
 * @return	None
 *
-* @note		None
+* @note		Do not try to copy the source_ary back into itself
 *
 ****************************************************************************/
 void multipleRotate(u32 source_ary[], u32 storage[], u8 timesToRotate)
@@ -314,3 +400,7 @@ void multipleRotate(u32 source_ary[], u32 storage[], u8 timesToRotate)
 			crotate(storage);
 	}
 }
+
+
+
+

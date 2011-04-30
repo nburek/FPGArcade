@@ -21,8 +21,8 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 entity clk25MHz is
-    Port ( clk : in  STD_LOGIC;
-           sclk : out  STD_LOGIC);
+    Port ( clk : in  STD_LOGIC; -- input clock signal (50Mhz)
+           sclk : out  STD_LOGIC); -- output clock signal (25Mhz)
 end clk25MHz;
 
 architecture Behavioral of clk25MHz is
@@ -43,7 +43,7 @@ begin
 		
 	end process;
 	
-	sclk <= slow_clk;
+	sclk <= slow_clk; -- connect the slow_clk signal to the 25Mhz out signal
 	
 end Behavioral;
 

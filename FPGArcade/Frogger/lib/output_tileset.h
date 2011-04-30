@@ -1,4 +1,4 @@
-/*
+/* Which tiles are used to store which images:
 0 - 9 : Numbers
 10: Black Tile
 11: Blue/water
@@ -17,8 +17,24 @@
 60-63: Frog
 */
 
+
+//start function prototypes
 void drawBackground();
 
+/*****************************************************************************/
+/**
+*
+* Outputs all of the graphics needed for the background and other misc things.
+* It also draws the background.
+*
+*
+* @param		None
+*
+* @return	None
+*
+* @note		None
+*
+****************************************************************************/
 void drawBackground()
 {
 
@@ -106,6 +122,7 @@ void drawBackground()
 			}
 		}
 	}
+	
 	//water tile
 	for (i = 0; i<8; ++i){
 		for (ii = 0; ii<8; ++ii){
@@ -113,21 +130,22 @@ void drawBackground()
 		}
 	}
 	
-	// x tile
+	// Red X tile
 	for (i = 1; i<7; ++i){
 	
 		setPixel(27,i,i,RED);
 		setPixel(27,(6 - i),i,RED);
 	}
 	
+	// Blue X tile
 	for (i = 1; i<7; ++i){
 	
 		setPixel(29,i,i,BLUE);
 		setPixel(29,(6 - i),i,BLUE);
 	}
 
+	//create life graphic
 	u8 life_palette[] = {BLACK,GREEN,YELLOW,PURPLE};
-	//create life
 	u32 life[8] = 	 {0x00000000, 
 						  0x01032301, 
 						  0x01222221, 
