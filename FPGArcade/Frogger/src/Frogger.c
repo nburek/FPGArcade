@@ -1,13 +1,14 @@
 #include "xparameters.h"
 #include "xgpio.h"
 #include "xstatus.h"
+
 #include "macros.h"
 #include "joystickLibrary.h"
 #include "graphicsLibrary.h"
 #include "frog.h"
 #include "enemies.h"
 #include "collisions.h"
-#include "output_tileset.h"
+
 
 //the limits for the frogger game stage
 #define STAGE_MINX 208
@@ -150,8 +151,10 @@ int main(void)
 					}
 					else
 					{
+					
 						//check for collision with objects in the current row
-						cCheck = checkCollision(movingObjectsX[lane], movingObjectsWidth[lane], frogger.x);
+						u16* temp = getMovingObjectsX(lane);
+						cCheck = checkCollision(temp, getMovingObjectsWidth(lane), frogger.x);
 						
 						//if you're in the water and not on top of something or you're hit by a car
 						if((cCheck && frogger.y>WATER_LINE) || (!cCheck && frogger.y<=WATER_LINE && frogFrame==0))
