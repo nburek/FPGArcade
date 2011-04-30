@@ -1,5 +1,5 @@
 microblaze_0
-PONG_SOURCES = Pong/src/Pong.c 
+PONG_SOURCES = Pong/src/Pong.c Pong/lib/joystickLibrary.c Pong/lib/graphicsLibrary.c 
 PONG_HEADERS = Pong/lib/graphicsLibrary.h Pong/lib/joystickLibrary.h 
 PONG_CC = mb-gcc
 PONG_CC_SIZE = mb-size

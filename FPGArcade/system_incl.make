@@ -210,7 +210,7 @@ TESTAPP_PERIPHERAL_MICROBLAZE_0_OTHER_CC_FLAGS= $(TESTAPP_PERIPHERAL_MICROBLAZE_
 # SOFTWARE APPLICATION FROGGER
 #################################################################
 
-FROGGER_SOURCES = Frogger/src/Frogger.c 
+FROGGER_SOURCES = Frogger/src/Frogger.c Frogger/src/output_tileset.c Frogger/src/collisions.c Frogger/src/enemies.c Frogger/src/frog.c Frogger/lib/joystickLibrary.c Frogger/lib/graphicsLibrary.c 
 
 FROGGER_HEADERS = Frogger/lib/joystickLibrary.h Frogger/lib/graphicsLibrary.h Frogger/lib/collisions.h Frogger/lib/enemies.h Frogger/lib/frog.h Frogger/lib/output_tileset.h 
 
@@ -242,7 +242,7 @@ FROGGER_OTHER_CC_FLAGS= $(FROGGER_CC_GLOBPTR_FLAG)  \
 # SOFTWARE APPLICATION PONG
 #################################################################
 
-PONG_SOURCES = Pong/src/Pong.c 
+PONG_SOURCES = Pong/src/Pong.c Pong/lib/joystickLibrary.c Pong/lib/graphicsLibrary.c 
 
 PONG_HEADERS = Pong/lib/graphicsLibrary.h Pong/lib/joystickLibrary.h 
 

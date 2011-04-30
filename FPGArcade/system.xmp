@@ -66,6 +66,12 @@ SwProj: Frogger
 Processor: microblaze_0
 Executable: Frogger/executable.elf
 Source: Frogger/src/Frogger.c
+Source: Frogger/src/output_tileset.c
+Source: Frogger/src/collisions.c
+Source: Frogger/src/enemies.c
+Source: Frogger/src/frog.c
+Source: Frogger/lib/joystickLibrary.c
+Source: Frogger/lib/graphicsLibrary.c
 Header: Frogger/lib/joystickLibrary.h
 Header: Frogger/lib/graphicsLibrary.h
 Header: Frogger/lib/collisions.h
@@ -90,6 +96,8 @@ SwProj: Pong
 Processor: microblaze_0
 Executable: Pong/executable.elf
 Source: Pong/src/Pong.c
+Source: Pong/lib/joystickLibrary.c
+Source: Pong/lib/graphicsLibrary.c
 Header: Pong/lib/graphicsLibrary.h
 Header: Pong/lib/joystickLibrary.h
 DefaultInit: EXECUTABLE
