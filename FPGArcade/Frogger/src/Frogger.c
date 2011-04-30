@@ -303,6 +303,7 @@ int main(void)
 			
 		} //end game loop
 		
+		clearFrog(&frogger);
 		//fill screen with x's
 		int i, j;
 		for (i = 25; i<55; ++i){
