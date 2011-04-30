@@ -17,6 +17,14 @@
 60-63: Frog
 */
 
+#define waterTILE 11
+#define borderTILE 12
+#define dirtTILE1 13
+#define dirtTILE2 14
+#define dirtTILE3 15
+#define dirtTILE4 16
+
+
 
 //start function prototypes
 void drawBackground();
@@ -163,21 +171,21 @@ void drawBackground()
 			
 	//top/bottom border
 	for (i = 25; i<55; ++i){
-		setBackgroundBlock(i,17,12);
-		setBackgroundBlock(i,41,12);
+		setBackgroundBlock(i,17,borderTILE);
+		setBackgroundBlock(i,41,borderTILE);
 	}
 	
 	//left/right border
 	for (i = 17; i<42; ++i){
-		setBackgroundBlock(25,i,12);
-		setBackgroundBlock(54,i,12);
+		setBackgroundBlock(25,i,borderTILE);
+		setBackgroundBlock(54,i,borderTILE);
 	}
 	
 	//draw water
 	for (i = 26; i<54; ++i){
 		for (ii = 19; ii<30; ++ii){
-			setBackgroundBlock(i,ii,11);
-			setBackgroundBlock(i,ii,11);
+			setBackgroundBlock(i,ii,waterTILE);
+			setBackgroundBlock(i,ii,waterTILE);
 		}
 	}
 	
@@ -196,23 +204,23 @@ void drawBackground()
 	}
 	
 	//create dirt tile
-	mapArrayToTile(dirt1, color_palette, 13);
-	mapArrayToTile(dirt2, color_palette, 14);
-	mapArrayToTile(dirt3, color_palette, 15);
-	mapArrayToTile(dirt4, color_palette, 16);
+	mapArrayToTile(dirt1, color_palette, dirtTILE1);
+	mapArrayToTile(dirt2, color_palette, dirtTILE2);
+	mapArrayToTile(dirt3, color_palette, dirtTILE3);
+	mapArrayToTile(dirt4, color_palette, dirtTILE4);
 	
 	//draw dirt on screen
 	for (x = 26; x<53; ++x)
 	{
-		setBackgroundBlock(x,40,14);
-		setBackgroundBlock(x+1,40,13);
-		setBackgroundBlock(x,39,16);
-		setBackgroundBlock(x+1,39,15);
+		setBackgroundBlock(x,40,dirtTILE2);
+		setBackgroundBlock(x+1,40,dirtTILE1);
+		setBackgroundBlock(x,39,dirtTILE4);
+		setBackgroundBlock(x+1,39,dirtTILE3);
 		
-		setBackgroundBlock(x,30,14);
-		setBackgroundBlock(x+1,30,13);
-		setBackgroundBlock(x,29,16);
-		setBackgroundBlock(x+1,29,15);
+		setBackgroundBlock(x,30,dirtTILE2);
+		setBackgroundBlock(x+1,30,dirtTILE1);
+		setBackgroundBlock(x,29,dirtTILE4);
+		setBackgroundBlock(x+1,29,dirtTILE3);
 	}
 	
 }

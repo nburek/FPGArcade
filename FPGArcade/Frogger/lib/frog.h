@@ -1,4 +1,3 @@
-
 #define FROG_TILE_1 60
 #define FROG_TILE_2 61
 #define FROG_TILE_3 62
@@ -13,6 +12,8 @@
 #define RIGHT 0
 #define UP 1
 #define DOWN 2
+
+#define frogLifeTILE 28
 
 typedef struct frog_struct{
 
@@ -412,7 +413,7 @@ void drawLives(u8 lives)
 	
 	for(i = 0; i < lives -1; ++i){
 	
-		setBackgroundBlock(25 + i,16, 28); // fill with froggy life
+		setBackgroundBlock(25 + i,16, frogLifeTILE); // fill with froggy life
 		
 	}
 

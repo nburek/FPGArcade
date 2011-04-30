@@ -1,4 +1,15 @@
-//start defining which tiles the moving object's graphics are stored in
+#define logTile1 17
+#define logTile2 18
+#define logTile3 19
+#define logTile4 20
+#define logTile5 21
+#define logTile6 22
+
+#define turtleTile1 23
+#define turtleTile2 24
+#define turtleTile3 25
+#define turtleTile4 26
+
 #define raceCarTile1 40
 #define raceCarTile2 41
 #define raceCarTile3 42
@@ -22,18 +33,6 @@
 #define truckTile6 57
 #define truckTile7 58
 #define truckTile8 59
-
-#define turtleTile1 23
-#define turtleTile2 24
-#define turtleTile3 25
-#define turtleTile4 26
-
-#define logTile1 17
-#define logTile2 18
-#define logTile3 19
-#define logTile4 20
-#define logTile5 21
-#define logTile6 22
 
 //starting and ending borders tiles
 #define minXTile 25

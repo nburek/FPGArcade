@@ -1,6 +1,7 @@
 #include "xparameters.h"
 #include "xgpio.h"
 #include "xstatus.h"
+#include "macros.h"
 #include "joystickLibrary.h"
 #include "graphicsLibrary.h"
 #include "frog.h"
@@ -17,24 +18,25 @@
 //where the water starts at
 #define WATER_LINE 240
 
-//the variables and constants used for timing
+//the variables used for timing
 u32 frogMovementCounter = 10000;
-#define FROG_MOVEMENT_DELAY 50000
 u32 raceCarMovementCounter = 5000;
-#define RACE_CAR_MOVEMENT_DELAY 50000
 u32 truckMovementCounter = 0;
-#define TRUCK_MOVEMENT_DELAY 80000
 u32 bullDozerMovementCounter = 14000;
-#define BULL_DOZER_MOVEMENT_DELAY 60000
 u32 purpleCarMovementCounter = 20000;
-#define PURPLE_CAR_MOVEMENT_DELAY 40000
 u32 turtleMovementCounter = 17000;
-#define TURTLE_MOVEMENT_DELAY 40000
 u32 log1MovementCounter = 28000;
-#define LOG1_MOVEMENT_DELAY 40000
 u32 log2MovementCounter = 28000;
-#define LOG2_MOVEMENT_DELAY 60000
 u32 collisionDetectionCounter = 500;
+
+#define FROG_MOVEMENT_DELAY 50000
+#define RACE_CAR_MOVEMENT_DELAY 50000
+#define TRUCK_MOVEMENT_DELAY 80000
+#define BULL_DOZER_MOVEMENT_DELAY 60000
+#define PURPLE_CAR_MOVEMENT_DELAY 40000
+#define TURTLE_MOVEMENT_DELAY 40000
+#define LOG1_MOVEMENT_DELAY 40000
+#define LOG2_MOVEMENT_DELAY 60000
 #define COLLISION_DETECTION_DELAY 10000
 
 //Begin Function Prototypes
