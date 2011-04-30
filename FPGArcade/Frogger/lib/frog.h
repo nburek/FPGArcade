@@ -141,7 +141,32 @@ void initFrog(Frog* frog){
 	(*frog).lives = 3;
 
 }
-
+/*****************************************************************************/
+/**
+*
+* Places the frog off screen and clears visible map
+*
+*
+* @param		Frog* frog - The frog object needs to be cleared from window frame
+*
+* @return	None
+*
+* @note		None
+*
+****************************************************************************/
+void clearFrog(Frog* frog)
+{
+	setMoveableBlock(FROG_BLOCK_1, 10);
+	setMoveableBlock(FROG_BLOCK_2, 10);
+	setMoveableBlock(FROG_BLOCK_3, 10);
+	setMoveableBlock(FROG_BLOCK_4, 10);
+	
+	setMoveableBlockPosition(	FROG_BLOCK_1,	0,	0);
+	setMoveableBlockPosition(	FROG_BLOCK_2,	0,	0);
+	setMoveableBlockPosition(	FROG_BLOCK_3,	0,	0);
+	setMoveableBlockPosition(	FROG_BLOCK_4,	0,	0);
+	
+}
 /*****************************************************************************/
 /**
 *
