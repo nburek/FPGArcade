@@ -19,6 +19,17 @@
 //where the water starts at
 #define WATER_LINE 240
 
+#define FROG_MOVEMENT_DELAY 50000
+#define RACE_CAR_MOVEMENT_DELAY 50000
+#define TRUCK_MOVEMENT_DELAY 80000
+#define BULL_DOZER_MOVEMENT_DELAY 60000
+#define PURPLE_CAR_MOVEMENT_DELAY 40000
+#define TURTLE_MOVEMENT_DELAY 40000
+#define LOG1_MOVEMENT_DELAY 40000
+#define LOG2_MOVEMENT_DELAY 60000
+#define COLLISION_DETECTION_DELAY 10000
+
+
 //the variables used for timing
 u32 frogMovementCounter = 10000;
 u32 raceCarMovementCounter = 5000;
@@ -30,19 +41,10 @@ u32 log1MovementCounter = 28000;
 u32 log2MovementCounter = 28000;
 u32 collisionDetectionCounter = 500;
 
-#define FROG_MOVEMENT_DELAY 50000
-#define RACE_CAR_MOVEMENT_DELAY 50000
-#define TRUCK_MOVEMENT_DELAY 80000
-#define BULL_DOZER_MOVEMENT_DELAY 60000
-#define PURPLE_CAR_MOVEMENT_DELAY 40000
-#define TURTLE_MOVEMENT_DELAY 40000
-#define LOG1_MOVEMENT_DELAY 40000
-#define LOG2_MOVEMENT_DELAY 60000
-#define COLLISION_DETECTION_DELAY 10000
-
 //Begin Function Prototypes
-void writeHiScore(u32 score);
-void writeScore(u32 score);
+void outputDigits(u32 digit, u8 x, u8 y);
+
+u8 calcJoyCode(Joystick* joy1);
 
 /*****************************************************************************/
 /**
@@ -64,6 +66,8 @@ int main(void)
 
 	initGraphics(); //initialize graphics communication
 		
+	u8 konami_code = 0;
+		
 	while(1) //program loop
 	{ 
 		u8 cCheck = 0; //used with collision detection
@@ -76,6 +80,9 @@ int main(void)
 		Frog frogger; //the data for the frog
 		
 		initFrog(&frogger); 
+		if(konami_code){
+			frogger.lives = 30;
+		}
 		
 		drawBackground(); //ouput tiles needed for background and other graphics
 		
@@ -86,8 +93,21 @@ int main(void)
 		drawLives(frogger.lives);
 		
 		//draw the scores
-		writeScore(currentScore);
-		writeHiScore(highScore);
+		int i, j;
+		for (i = 40; i<80; ++i)
+			setBackgroundBlock(i,16,10);
+		outputDigits(currentScore, 54, 16);
+		outputDigits(highScore, 54, 15);
+		
+		//konami code vars
+		u8 code_sequence[] = {UP, UP, DOWN, DOWN, LEFT, RIGHT, LEFT, RIGHT};
+		u8 cc_seq  = 0;
+		u8 seq_end = 8;
+		u8 prev_key = 5;
+		konami_code = 0;
+		
+		//total ponds gone to
+		u8 ponds = 0;
 		
 		while (frogger.lives > 0 ) //game loop
 		{
@@ -110,7 +130,7 @@ int main(void)
 			{
 				highestLane = lane;
 				currentScore += 10;
-				writeScore(currentScore);
+				outputDigits(currentScore, 54, 16);
 			}
 			
 			// collision detection event
@@ -128,7 +148,9 @@ int main(void)
 						{
 							//reached end, so add to score and reset
 							currentScore += 200;
-							writeScore(currentScore);
+							++frogger.lives;
+							
+							outputDigits(currentScore, 54, 16);
 							
 							//do a flashing animation
 							int i,ii ;
@@ -181,9 +203,8 @@ int main(void)
 				{
 					//find new joystick location
 					updateJoystick(&joy1, JOYSTICK_1_CHANNEL);
-					joystickLocation = (joy1.x<joy1.y)?1:0; //if above the first diagonal line
-					joystickLocation += (joy1.y<1023-joy1.x)?2:0; //if below the second diagonal line
-					joystickLocation = ((joy1.x-511)*(joy1.x-511) + (joy1.y-511)*(joy1.y-511) < 10000)?5:joystickLocation; //if the joystick is inside the circular deadband
+					joystickLocation = calcJoyCode(&joy1);
+					
 				}
 
 				//handle the joystick input
@@ -310,7 +331,7 @@ int main(void)
 		
 		clearFrog(&frogger);
 		//fill screen with x's
-		int i, j;
+		
 		for (i = 25; i<55; ++i){
 			for (j = 17; j<42; ++j){
 				setBackgroundBlock(i,j,27);
@@ -321,7 +342,7 @@ int main(void)
 		if (currentScore>highScore)
 		{
 			highScore = currentScore;
-			writeHiScore(highScore);
+			outputDigits(highScore, 54, 15);
 		}
 		
 		currentScore = 0; //reset current game score
@@ -329,6 +350,15 @@ int main(void)
 		//wait for button 1 to be pressed on the joystick
 		while(joy1.btn1 != 1){
 			updateJoystick(&joy1, JOYSTICK_1_CHANNEL);
+			u8 joystickLocation = calcJoyCode(&joy1);
+
+			if(joystickLocation == code_sequence[cc_seq] && prev_key == 5){
+				++cc_seq;
+				if(cc_seq == seq_end){
+					konami_code = 1;
+				}
+			}
+			prev_key = joystickLocation;
 		}
 	
 	} // end program loop
@@ -337,63 +367,37 @@ int main(void)
 	return XST_SUCCESS;
 }
 
-/*****************************************************************************/
-/**
-*
-* Displays the score on the screen in the high score spot.
-*
-*
-* @param		u32 score - the value you want to display
-*
-* @return	None
-*
-* @note		None
-*
-****************************************************************************/
-void writeHiScore(u32 score){
 
-	u32 temp = score;
-	
-	u32 i = 0;
+void outputDigits(u32 number, u8 x, u8 y){
+	volatile u32 i = 0;
 	do {
-		u32 digit = temp%10;
-		temp /= 10;
-		
-		setBackgroundBlock(54 - i,15,digit);
-		
-		++i;
-	} while(temp != 0);
+		setBackgroundBlock(x - i,y,number%10);
 
+		number /= 10;
+
+		++i;
+	} while(number != 0);
 }
 
+
 /*****************************************************************************/
 /**
 *
-* Displays the score on the screen in the current score spot.
+* Classifies the analog movement into discrete states based on direction
 *
 *
-* @param		u32 score - the value you want to display
+* @param		Joystick joy1 - the stick data
 *
 * @return	None
 *
 * @note		None
 *
 ****************************************************************************/
-void writeScore(u32 score)
-{
-	u32 temp = score;
-	
-	u32 i;
-	for (i = 40; i<80; ++i)
-		setBackgroundBlock(i,16,10);
-	
-	i = 0;
-	do {
-		u32 digit = temp%10;
-		temp /= 10;
-		
-		setBackgroundBlock(54 - i,16,digit);
-		
-		++i;
-	} while(temp != 0);
+u8 calcJoyCode(Joystick* joy1){
+	u8 joystickLocation;
+	joystickLocation = ((*joy1).x<(*joy1).y)?1:0; //if above the first diagonal line
+	joystickLocation += ((*joy1).y<1023-(*joy1).x)?2:0; //if below the second diagonal line
+	joystickLocation = (((*joy1).x-511)*((*joy1).x-511) + ((*joy1).y-511)*((*joy1).y-511) < 10000)?5:joystickLocation; //if the joystick is inside the circular deadband
+
+	return joystickLocation;
 }

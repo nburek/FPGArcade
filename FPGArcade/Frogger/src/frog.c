@@ -103,7 +103,7 @@ void initFrog(Frog* frog){
 	(*frog).y_spd = 8;
 	
 	(*frog).dir = 1;
-	(*frog).lives = 6;
+	(*frog).lives = 3;
 
 }
 /*****************************************************************************/
@@ -121,16 +121,11 @@ void initFrog(Frog* frog){
 ****************************************************************************/
 void clearFrog(Frog* frog)
 {
-	setMoveableBlock(FROG_BLOCK_1, 10);
-	setMoveableBlock(FROG_BLOCK_2, 10);
-	setMoveableBlock(FROG_BLOCK_3, 10);
-	setMoveableBlock(FROG_BLOCK_4, 10);
-	
-	setMoveableBlockPosition(	FROG_BLOCK_1,	0,	0);
-	setMoveableBlockPosition(	FROG_BLOCK_2,	0,	0);
-	setMoveableBlockPosition(	FROG_BLOCK_3,	0,	0);
-	setMoveableBlockPosition(	FROG_BLOCK_4,	0,	0);
-	
+	u8 i;
+	for (i = 0; i<4; ++i){
+		setMoveableBlockPosition(	FROG_BLOCK_1 +i,	640,	0);
+	}
+
 }
 /*****************************************************************************/
 /**
@@ -191,10 +186,13 @@ void outputFrogger(u8 animationFrame, u8 direction, u8 player)
 	u8 *transparencyMap3;
 	u8 *transparencyMap4;
 	
+	for (arrayX = 0; arrayX<4; ++arrayX)
+		setMoveableBlock(FROG_BLOCK_1+arrayX,FROG_TILE_1+arrayX);
+	/*
 	setMoveableBlock(FROG_BLOCK_1, FROG_TILE_1);
 	setMoveableBlock(FROG_BLOCK_2, FROG_TILE_2);
 	setMoveableBlock(FROG_BLOCK_3, FROG_TILE_3);
-	setMoveableBlock(FROG_BLOCK_4, FROG_TILE_4);
+	setMoveableBlock(FROG_BLOCK_4, FROG_TILE_4);*/
 	
 	//select which color palette to use
 	if (player == 1)
@@ -373,12 +371,22 @@ void drawLives(u8 lives)
 	
 	int i;
 	
-	setBackgroundBlock(24 + lives,16, 10); // fill black
+	if(lives <= 6){
 	
-	for(i = 0; i < lives -1; ++i){
-	
-		setBackgroundBlock(25 + i,16, frogLifeTILE); // fill with froggy life
+		setBackgroundBlock(24 + lives,16, 10); // fill black
 		
+		for(i = 1; i < lives; ++i){
+		
+			setBackgroundBlock(24 + i,16, frogLifeTILE); // fill with froggy life
+			
+		}
+	}else{
+	
+		setBackgroundBlock(25,16, frogLifeTILE);
+		setBackgroundBlock(26,16, 30); //white x
+		outputDigits(lives, 28, 16);
 	}
 
 }
+
+

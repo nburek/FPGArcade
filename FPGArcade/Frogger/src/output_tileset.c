@@ -128,18 +128,14 @@ void drawBackground()
 		}
 	}
 	
-	// Red X tile
+	// Red and White Xs tile
 	for (i = 1; i<7; ++i){
 	
 		setPixel(27,i,i,RED);
 		setPixel(27,(6 - i),i,RED);
-	}
-	
-	// Blue X tile
-	for (i = 1; i<7; ++i){
-	
-		setPixel(29,i,i,BLUE);
-		setPixel(29,(6 - i),i,BLUE);
+		
+		setPixel(30,i,i,WHITE);
+		setPixel(30,(6 - i),i,WHITE);
 	}
 
 	//create life graphic
