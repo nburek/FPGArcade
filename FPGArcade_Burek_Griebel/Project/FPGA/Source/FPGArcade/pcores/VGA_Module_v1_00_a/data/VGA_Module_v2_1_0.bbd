@@ -1,0 +1,9 @@
+##############################################################################
+## Filename:          C:\FPGArcade\FPGArcade\pcores/VGA_Module_v1_00_a/data/VGA_Module_v2_1_0.bbd
+## Description:       Black Box Definition
+## Date:              Tue Mar 29 15:30:30 2011 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+Files
+################################################################################
+VGA_Module.ngc,tile_graphics_bram.ngc,block_graphics_bram.ngc

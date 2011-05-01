@@ -1,0 +1,22 @@
+microblaze_0
+FROGGER_SOURCES = Frogger/src/Frogger.c Frogger/src/output_tileset.c Frogger/src/collisions.c Frogger/src/enemies.c Frogger/src/frog.c Frogger/lib/joystickLibrary.c Frogger/lib/graphicsLibrary.c 
+FROGGER_HEADERS = Frogger/lib/joystickLibrary.h Frogger/lib/graphicsLibrary.h Frogger/lib/collisions.h Frogger/lib/enemies.h Frogger/lib/frog.h Frogger/lib/output_tileset.h 
+FROGGER_CC = mb-gcc
+FROGGER_CC_SIZE = mb-size
+FROGGER_CC_OPT = -Os
+FROGGER_CFLAGS = 
+FROGGER_CC_SEARCH = # -B
+FROGGER_LIBPATH = -L./microblaze_0/lib/ # -L
+FROGGER_INCLUDES = -I./microblaze_0/include/  -IFrogger/lib/ # -I
+FROGGER_LFLAGS = # -l
+FROGGER_LINKER_SCRIPT = Frogger/Frogger_linker_script.ld
+FROGGER_CC_DEBUG_FLAG = # -[g|gstabs]
+FROGGER_CC_PROFILE_FLAG = # -pg
+FROGGER_CC_GLOBPTR_FLAG= # -mxl-gp-opt
+FROGGER_MODE = executable
+FROGGER_LIBG_OPT = -$(FROGGER_MODE) microblaze_0
+FROGGER_CC_INFERRED_FLAGS= -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b 
+FROGGER_CC_START_ADDR_FLAG=  #  # -Wl,-defsym -Wl,_TEXT_START_ADDR=
+FROGGER_CC_STACK_SIZE_FLAG=  #  # -Wl,-defsym -Wl,_STACK_SIZE=
+FROGGER_CC_HEAP_SIZE_FLAG=  #  # -Wl,-defsym -Wl,_HEAP_SIZE=
+                  $(FROGGER_CC_INFERRED_FLAGS)  \

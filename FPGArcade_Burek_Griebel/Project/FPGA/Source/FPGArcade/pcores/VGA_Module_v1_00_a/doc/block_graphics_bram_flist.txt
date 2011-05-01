@@ -1,0 +1,16 @@
+# Output products list for <block_graphics_bram>
+_xmsgs\pn_parser.xmsgs
+blk_mem_gen_ds512.pdf
+blk_mem_gen_readme.txt
+block_graphics_bram.asy
+block_graphics_bram.gise
+block_graphics_bram.ngc
+block_graphics_bram.sym
+block_graphics_bram.v
+block_graphics_bram.veo
+block_graphics_bram.vhd
+block_graphics_bram.vho
+block_graphics_bram.xco
+block_graphics_bram.xise
+block_graphics_bram_flist.txt
+block_graphics_bram_xmdf.tcl

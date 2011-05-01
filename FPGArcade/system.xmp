@@ -79,7 +79,7 @@ Header: Frogger/lib/enemies.h
 Header: Frogger/lib/frog.h
 Header: Frogger/lib/output_tileset.h
 DefaultInit: EXECUTABLE
-InitBram: 1
+InitBram: 0
 Active: 1
 CompilerOptLevel: 4
 GlobPtrOpt: 0
@@ -101,7 +101,7 @@ Source: Pong/lib/graphicsLibrary.c
 Header: Pong/lib/graphicsLibrary.h
 Header: Pong/lib/joystickLibrary.h
 DefaultInit: EXECUTABLE
-InitBram: 0
+InitBram: 1
 Active: 1
 CompilerOptLevel: 4
 GlobPtrOpt: 0

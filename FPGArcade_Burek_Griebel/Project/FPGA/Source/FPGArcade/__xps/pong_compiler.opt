@@ -1,0 +1,22 @@
+microblaze_0
+PONG_SOURCES = Pong/src/Pong.c Pong/lib/joystickLibrary.c Pong/lib/graphicsLibrary.c 
+PONG_HEADERS = Pong/lib/graphicsLibrary.h Pong/lib/joystickLibrary.h 
+PONG_CC = mb-gcc
+PONG_CC_SIZE = mb-size
+PONG_CC_OPT = -Os
+PONG_CFLAGS = 
+PONG_CC_SEARCH = # -B
+PONG_LIBPATH = -L./microblaze_0/lib/ # -L
+PONG_INCLUDES = -I./microblaze_0/include/  -IPong/lib/ # -I
+PONG_LFLAGS = # -l
+PONG_LINKER_SCRIPT = 
+PONG_CC_DEBUG_FLAG = # -[g|gstabs]
+PONG_CC_PROFILE_FLAG = # -pg
+PONG_CC_GLOBPTR_FLAG= # -mxl-gp-opt
+PONG_MODE = executable
+PONG_LIBG_OPT = -$(PONG_MODE) microblaze_0
+PONG_CC_INFERRED_FLAGS= -mxl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b 
+PONG_CC_START_ADDR_FLAG=  # -Wl,-defsym -Wl,_TEXT_START_ADDR=
+PONG_CC_STACK_SIZE_FLAG=  # -Wl,-defsym -Wl,_STACK_SIZE=
+PONG_CC_HEAP_SIZE_FLAG=  # -Wl,-defsym -Wl,_HEAP_SIZE=
+                  $(PONG_CC_INFERRED_FLAGS)  \
